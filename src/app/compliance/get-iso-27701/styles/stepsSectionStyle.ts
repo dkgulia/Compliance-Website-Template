@@ -1,0 +1,108 @@
+import theme from '../../../../theme'; // Update this path to match your project structure
+
+const stepsSectionStyle = {
+	box: {
+		paddingTop: { sm: '1.5rem', xs: '1rem' },
+		paddingBottom: { sm: '2rem', xs: '1.5rem' },
+		marginTop: '0rem',
+		marginX: { xs: '1rem', sm: '0rem' },
+        background: theme.palette.background.default,
+	},
+	container: {
+		maxWidth: '75rem',
+		marginX: 'auto',
+	},
+	title: {
+		fontWeight: '700',
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+		marginBottom: '0.5rem',
+		textAlign: 'center',
+		color: theme.palette.text.primary,
+	},
+	subtitle: {
+		fontWeight: '500',
+		fontSize: { xs: '1.1rem', sm: '1.2rem' },
+		marginBottom: '1.5rem',
+		textAlign: 'center',
+		color: theme.palette.primary.main,
+	},
+    stepsIndicator: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '1.5rem',
+        gap: '3rem',
+        flexWrap: 'wrap',
+    },
+    stepDot: {
+        width: '2rem',
+        height: '2rem',
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '0.9rem',
+        fontWeight: 'bold',
+        color: theme.palette.text.primary,
+    },
+	gridContainer: {
+		marginTop: '0.5rem',
+		justifyContent: 'center',
+	},
+	card: {
+		borderRadius: '2rem',
+		background: theme.palette.background.paper,
+		height: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+		border: `1px solid ${theme.palette.divider}`,
+        boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.15)',
+	},
+	cardContent: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		textAlign: 'center',
+		padding: '1.5rem 1.25rem',
+		height: '100%',
+	},
+	cardStep: {
+		fontWeight: 'bold',
+		fontSize: '0.9rem',
+		color: theme.palette.primary.main,
+		marginBottom: '0.75rem',
+		textAlign: 'center',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05rem',
+	},
+	iconContainer: {
+		width: '3rem',
+		height: '3rem',
+		borderRadius: '0.5rem',
+		background: theme.palette.secondary.main,
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginBottom: '1rem',
+	},
+	icon: {
+		fontSize: '1.8rem',
+		color: theme.palette.text.primary,
+	},
+	cardTitle: {
+		fontWeight: '600',
+		fontSize: '1.1rem',
+		color: theme.palette.primary.light,
+		marginBottom: '0.75rem',
+		textAlign: 'center',
+	},
+	cardDescription: {
+		fontSize: '0.9rem',
+		color: theme.palette.text.secondary,
+		lineHeight: 1.5,
+		textAlign: 'center',
+		flexGrow: 1,
+	},
+};
+
+export default stepsSectionStyle;

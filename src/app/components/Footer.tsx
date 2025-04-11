@@ -1,105 +1,266 @@
+'use client';
 
-import Image from "next/image";
-import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { TbLocationPin } from "react-icons/tb";
-
+import * as React from 'react';
+import { Box, Container, Link, Typography, Grid } from '@mui/material';
+import MapIcon from '@mui/icons-material/Map';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import Image from 'next/image';
+import NextLink from 'next/link';
+import { LinkedIn, Twitter, Facebook, Instagram, YouTube } from '@mui/icons-material';
+import {
+	ABOUT_US,
+	CONTACT_US,
+	PRIVACY_POLICY,
+	REFUND_POLICY,
+	TERMS_AND_CONDITIONS,
+} from '../constants/routes';
+import { complianceItems } from '../constants/complianceData';
+import { usePathname } from 'next/navigation';
+import footerStyles from '../components/styles/footerStyles';
+import { industryData } from '../../app/components/Navbar/constants/industrialists';
+import solutionData from '../../app/components/Navbar/constants/solutionsMob';
 
 export default function Footer() {
-  return (
-    <>
-      {/* Footer Section */}
-      <section id="footer">
-        <div className="flex flex-col mt-20 bg-kite-dark-2 border-t border-neutral-800 bg-opacity-60 px-4 sm:px-6 md:px-48 2xl:px-72 py-6 sm:py-8 md:py-14">
-          <div className="flex flex-col md:flex-row md:justify-between space-y-6 md:space-y-0">
-            <div className="flex flex-col gap-4 items-center md:items-start">
-              <div>
-                <Image
-                  src="/images/hexafort-white-cropped.png"
-                  alt="Hexafort Logo Full"
-                  // className="h-6 sm:h-8 md:h-6"
-                  width={100}
-                  height={100}
-                />
-              </div>
-              <p className="text-xs sm:text-sm text-center md:text-left max-w-md">
-                Hexafort is a global leader in enterprise security management,
-                with strong presence in the US, UK, and India.
-              </p>
-            </div>
+	const pathname = usePathname();
+	const isAdminRoute = pathname.startsWith('/admin');
 
-            <div className="flex flex-col gap-4 items-center md:items-start">
-              <p className="text-xs sm:text-sm">Follow us on</p>
-              <div className="flex justify-center md:justify-start text-xl sm:text-2xl space-x-4">
-                <a
-                  href="https://www.linkedin.com/company/hexafort"
-                  aria-label="LinkedIn"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://www.instagram.com/hexafort.io/"
-                  aria-label="Instagram"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaInstagramSquare />
-                </a>
-                <a
-                  href="https://x.com/hexafortsecure"
-                  aria-label="Twitter"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaSquareXTwitter />
-                </a>
-              </div>
-            </div>
-          </div>
+	return (
+		<>
+			{!isAdminRoute && (
+				<Box sx={footerStyles.mainContainer}>
+					<Container maxWidth="lg">
+						<Grid container spacing={0}>
+							<Grid size={{ xs: 12, md: 4 }} sx={footerStyles.logoSection}>
+								<Box sx={footerStyles.logoContainer}>
+									<Image
+										src="/images/IgniPC-logo-rectangle.svg"
+										alt="logo of IgniPC"
+										width={140}
+										height={60}
+										style={footerStyles.logo}
+									/>
+								</Box>
+								<Box sx={footerStyles.addressContainer}>
+									<MapIcon sx={footerStyles.icon} />
+									<Box>
+										<Typography variant="body2" sx={footerStyles.companyName}>
+										Hexafort, Inc.
+										</Typography>
+										<Typography variant="body2" sx={footerStyles.addressLine}>
+										Newark, Delaware, US, 19713
+										</Typography>
 
-          <div className="flex flex-col space-y-4 mt-10 text-sm">
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort, Inc.</p>
-                <p className="text-xs">Newark, Delaware, US, 19713</p>
-              </div>
-            </div>
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort Secure UK Ltd</p>
-                <p className="text-xs">
-                  Old Gloucester Street, London, UK, WC1N 3AX
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort Secure Private Limited</p>
-                <p className="text-xs">Idukki, Kerala, IN, 685505</p>
-              </div>
-            </div>
-          </div>
+									</Box>
+								</Box>
 
-          <div className="flex flex-col md:flex-row items-center md:justify-between mt-14 space-y-4 md:space-y-0">
-            <span className="text-xs">
-              © {new Date().getFullYear()} Hexafort, Inc. All rights reserved.
-            </span>
-            <div className="flex items-center gap-1 text-xs">
-              <MdEmail />
-              <span>hello@hexafort.io</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+								{/* <Box sx={footerStyles.contactItem}>
+									<PhoneIcon sx={footerStyles.icon} />
+									<Link
+										component={NextLink}
+										href={`tel:${PHONE_NUMBER}`}
+										color="inherit"
+										sx={footerStyles.contactLink}
+									>
+										<Typography variant="body2">+91-{PHONE_NUMBER}</Typography>
+									</Link>
+								</Box>
+
+								<Box sx={footerStyles.contactItem}>
+									<EmailIcon sx={footerStyles.emailIcon} />
+									<Link
+										component={NextLink}
+										href={`mailto:${SALES_MAIL}`}
+										sx={footerStyles.emailLink}
+									>
+										<Typography variant="body2">{SALES_MAIL}</Typography>
+									</Link>
+								</Box> */}
+
+								<Box sx={footerStyles.socialContainer}>
+									<Link
+										href="https://www.linkedin.com/company/hexafort/"
+										target="_blank"
+										aria-label="LinkedIn"
+										sx={footerStyles.socialLink}
+									>
+										<LinkedIn />
+									</Link>
+
+									<Link
+										href="https://www.instagram.com/hexafort.io/"
+										target="_blank"
+										aria-label="Instagram"
+										sx={footerStyles.socialLink}
+									>
+										<Instagram />
+									</Link>
+									<Link href="https://x.com/hexafortsecure" target="_blank" aria-label="Twitter" sx={footerStyles.socialLink}>
+										<Twitter />
+									</Link>
+
+								</Box>
+							</Grid>
+
+							<Grid size={{ xs: 12, md: 8 }}>
+								<Grid container spacing={5}>
+									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>
+											Compliance
+										</Typography>
+										{complianceItems.map((item) => (
+											<Box key={item.title} sx={footerStyles.linkItem}>
+												<Link
+													color="inherit"
+													href={`/compliance${item.url}`}
+													component={NextLink}
+													sx={footerStyles.navLink}
+												>
+													<Typography variant="body2">{item.title}</Typography>
+												</Link>
+											</Box>
+										))}
+									</Grid>
+
+
+									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>
+											Solutions
+										</Typography>
+
+
+										{solutionData.map((solution) => (
+											<Box key={solution.id} sx={footerStyles.linkItem}>
+												<Link
+													color="inherit"
+													href={`/solutions/${solution.id}`}
+													component={NextLink}
+													sx={footerStyles.navLink}
+												>
+													<Typography variant="body2">{solution.title}</Typography>
+												</Link>
+											</Box>
+										))}
+									</Grid>
+
+									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>
+											Industries
+										</Typography>
+
+										{industryData.left.map((industry) => (
+											<Box key={industry.text} sx={footerStyles.linkItem}>
+												<Link
+													color="inherit"
+													component={NextLink}
+													href={industry.href}
+													sx={footerStyles.navLink}
+												>
+													<Typography variant="body2">{industry.text}</Typography>
+												</Link>
+											</Box>
+										))}
+
+										{industryData.right.map((industry) => (
+											<Box key={industry.text} sx={footerStyles.linkItem}>
+												<Link
+													color="inherit"
+													component={NextLink}
+													href={industry.href}
+													sx={footerStyles.navLink}
+												>
+													<Typography variant="body2">{industry.text}</Typography>
+												</Link>
+											</Box>
+										))}
+									</Grid>
+
+									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>
+											About Us
+										</Typography>
+										<Box sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												component={NextLink}
+												href={ABOUT_US}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">About us</Typography>
+											</Link>
+										</Box>
+										<Box sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												component={NextLink}
+												href={CONTACT_US}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">Contact Us</Typography>
+											</Link>
+										</Box>
+										<Box sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												component={NextLink}
+												href={TERMS_AND_CONDITIONS}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">Terms & Conditions</Typography>
+											</Link>
+										</Box>
+										<Box sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												component={NextLink}
+												href={PRIVACY_POLICY}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">Privacy Policy</Typography>
+											</Link>
+										</Box>
+										<Box sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												component={NextLink}
+												href={REFUND_POLICY}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">Refund Policy</Typography>
+											</Link>
+										</Box>
+									</Grid>
+								</Grid>
+							</Grid>
+						</Grid>
+
+						<Box sx={footerStyles.footerBottom}>
+							<Box sx={footerStyles.footerLinks}>
+								<Link
+									href={PRIVACY_POLICY}
+									component={NextLink}
+									sx={footerStyles.bottomLink}
+								>
+									<Typography variant="body2">Privacy Policy</Typography>
+								</Link>
+								<Typography variant="body2" sx={footerStyles.divider}>
+									•
+								</Typography>
+								<Link
+									href={TERMS_AND_CONDITIONS}
+									component={NextLink}
+									sx={footerStyles.bottomLink}
+								>
+									<Typography variant="body2">Terms & Conditions</Typography>
+								</Link>
+							</Box>
+							<Typography variant="body2" sx={footerStyles.copyright}>
+								Copyright © <span style={footerStyles.blueText}>Hexafort</span> 2025
+							</Typography>
+						</Box>
+					</Container>
+				</Box>
+			)}
+		</>
+	);
 }

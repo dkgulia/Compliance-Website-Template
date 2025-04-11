@@ -1,0 +1,10 @@
+export const CONTACT_US = '/contact-us';
+export const ABOUT_US = '/about-us';
+export const REFUND_POLICY = '/refund-policy';
+export const PRIVACY_POLICY = '/privacy-policy';
+export const TERMS_AND_CONDITIONS = '/terms-conditions';
+export const HOME = '/';
+export const WORKSTATION = '/workstations';
+export const SERVICES = '/services';
+export const BLOG = '/blog';
+export const TALK_TO_AN_EXPERT = '/talk-to-an-expert';

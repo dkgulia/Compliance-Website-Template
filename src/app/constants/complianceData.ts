@@ -1,0 +1,115 @@
+import iso27001 from '../../../public/images/compliances/iso27001-logo.webp';
+import iso27018 from '../../../public/images/compliances/iso27018-logo.webp';
+import soc2 from '../../../public/images/compliances/soc2-logo.webp';
+import gdpr from '../../../public/images/compliances/gdpr-logo.webp';
+import hipaa from '../../../public/images/compliances/hipaa-logo.webp';
+import ccpa from '../../../public/images/compliances/ccpa-logo.webp';
+import nist from '../../../public/images/compliances/nist-logo.webp';
+import pcidss from '../../../public/images/compliances/pcidss-logo.webp';
+import iso22301 from '../../../public/images/compliances/iso22301-logo.webp';
+import iso20000 from '../../../public/images/compliances/iso20000-1-logo.webp';
+import iso27701 from '../../../public/images/compliances/iso27701-logo.webp';
+import dora from '../../../public/images/compliances/dora-logo.webp';
+
+import { StaticImageData } from 'next/image';
+
+export interface ComplianceFramework {
+	title: string;
+	description: string;
+	logo: string | StaticImageData;
+	url: string;
+}
+
+export const complianceItems: ComplianceFramework[] = [
+	{
+		title: 'ISO 27001',
+		description: 'International standard for managing information security, protecting sensitive data.',
+		logo: iso27001,
+		url: '/get-iso-27001',
+	},
+	{
+		title: 'ISO 27018',
+		description: 'Protects PII in cloud services by ensuring compliance with privacy and data protection standards.',
+		logo: iso27018,
+		url: '/get-iso-27018',
+	},
+	{
+		title: 'SOC 2',
+		description: 'Manages customer data security, availability, confidentiality, and privacy.',
+		logo: soc2,
+		url: '/get-soc-2',
+	},
+	{
+		title: 'GDPR',
+		description: 'Protects personal data privacy, ensuring strict data handling rules and user control.',
+		logo: gdpr,
+		url: '/get-gdpr',
+	},
+	{
+		title: 'HIPAA',
+		description: 'Ensures confidentiality and security for healthcare data.',
+		logo: hipaa,
+		url: '/get-hipaa',
+	},
+	{
+		title: 'CCPA',
+		description: 'Protects California residents’ rights over their personal data with transparency and deletion.',
+		logo: ccpa,
+		url: '/ccpa-compliance',
+	},
+	{
+		title: 'NIST Frameworks',
+		description:
+			'Secures controlled unclassified information (CUI) in non-federal systems, ensuring cybersecurity in critical infrastructure.',
+		logo: nist,
+		url: '/get-nist-frameworks',
+	},
+	{
+		title: 'PCI DSS',
+		description:
+			'Protects cardholder data by enforcing strict security measures for organizations handling payment cards to prevent data breaches.',
+		logo: pcidss,
+		url: '/get-pci-dss',
+	},
+	{
+		title: 'ISO 22301',
+		description: 'Ensures business continuity through disaster preparedness and ISO certification.',
+		logo: iso22301,
+		url: '/get-iso-22301',
+	},
+	{
+		title: 'ISO 20000-1',
+		description: 'Provides a framework for effective IT service management for businesses.',
+		logo: iso20000,
+		url: '/get-iso-20000-1',
+	},
+	{
+		title: 'ISO 27701',
+		description: 'Enhances transparency and accountability in data processing to facilitate compliance.',
+		logo: iso27701,
+		url: '/get-iso-27701',
+	},
+	{
+		title: 'Dora',
+		description: 'Digital Operations Resilience Act (DORA) compliance for IT.',
+		logo: dora,
+		url: '/get-dora',
+	},
+];
+
+export enum ComplianceOptions {
+	ISO27001 = 'ISO 27001',
+	ISO27018 = 'ISO 27018',
+	SOC2 = 'SOC 2',
+	GDPR = 'GDPR',
+	HIPAA = 'HIPAA',
+	CCPA = 'CCPA',
+	PCI_DSS = 'PCI DSS',
+	NIST = 'NIST Frameworks',
+	ISO22301 = 'ISO 22301',
+	ISO20000_1 = 'ISO 20000-1',
+	ISO27701 = 'ISO 27701',
+	DORA = 'DORA',
+}
+
+export const complianceOptionsArray = Object.values(ComplianceOptions);

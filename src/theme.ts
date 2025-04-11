@@ -1,4 +1,22 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { Theme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' {
+	interface Theme {
+		customShadows?: {
+			card: string;
+			button: string;
+			navbar: string;
+		};
+	}
+	interface ThemeOptions {
+		customShadows?: {
+			card: string;
+			button: string;
+			navbar: string;
+		};
+	}
+}
 
 const theme = responsiveFontSizes(
 	createTheme({
@@ -110,25 +128,12 @@ const theme = responsiveFontSizes(
 		shape: {
 			borderRadius: 8,
 		},
+		customShadows: {
+			card: '0 10px 30px rgba(0, 0, 0, 0.3)',
+			button: '0 4px 10px rgba(0, 0, 0, 0.25)',
+			navbar: '0 1px 2px rgba(0, 0, 0, 0.3)',
+		},
 		components: {
-			MuiButton: {
-				styleOverrides: {
-					root: {
-						textTransform: 'none',
-						borderRadius: 8,
-						padding: '6px 16px',
-						backgroundColor: '#0d9488',
-						'&:hover': {
-							backgroundColor: '#0f766e',
-						},
-						border: '1px solid #14b8a6',
-					},
-					sizeSmall: {
-						padding: '4px 10px',
-						fontSize: '0.8125rem',
-					},
-				},
-			},
 			MuiCard: {
 				styleOverrides: {
 					root: {
