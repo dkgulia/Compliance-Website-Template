@@ -1,0 +1,88 @@
+import theme from '../../../../theme';
+
+const bannerStyle = {
+	box: {
+		paddingTop: { sm: '1.5rem', xs: '1rem' },
+		paddingBottom: { sm: '2rem', xs: '1.5rem' },
+		marginTop: '0rem',
+		marginX: { xs: '1rem', sm: '0rem' },
+		backgroundColor: theme.palette.background.default,
+	},
+	bannerContainer: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		background: theme.palette.background.paper,
+		borderRadius: '2rem',
+		width: '100%',
+		maxWidth: '75rem',
+		marginX: 'auto',
+		px: { xs: '1rem', sm: '2rem' },
+		py: '2rem',
+		position: 'relative' as const,
+		flexDirection: { xs: 'column', sm: 'row' } as const,
+		textAlign: { xs: 'center', sm: 'left' } as const,
+		gap: '1rem',
+		padding: '5rem',
+		border: `1px solid ${theme.palette.divider}`,
+		boxShadow: theme.customShadows?.card,
+	},
+	content: {
+		display: 'flex',
+		flexDirection: 'column' as const,
+		alignItems: { xs: 'center', sm: 'flex-start' },
+		width: '100%',
+	},
+	heading: {
+		fontWeight: '600',
+		color: theme.palette.text.primary,
+		marginBottom: '1rem',
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+	},
+	description: {
+		color: theme.palette.text.secondary,
+		marginBottom: '1.5rem',
+		fontSize: { xs: '1rem', md: '1.1rem' },
+		lineHeight: '1.6',
+		width: { xs: '100%', sm: '90%' },
+	},
+	button: {
+		marginTop: '1rem',
+		color: theme.palette.text.primary,
+		fontWeight: 'bold',
+		padding: '0.8rem 1.5rem',
+		borderRadius: '0.5rem',
+		background: theme.palette.primary.main,
+		boxShadow: theme.customShadows?.button,
+		'&:hover': {
+			background: theme.palette.primary.dark,
+			boxShadow: '0 6px 15px rgba(0, 0, 0, 0.3)',
+			transform: 'translateY(-0.125rem)',
+		},
+		width: { xs: '90%', sm: 'auto' },
+		textAlign: 'center' as const,
+	},
+	iconWrapper: {
+		width: '20rem',
+		height: '20rem',
+		borderRadius: '50%',
+		display: {
+		    xs: 'none',
+		    sm: 'flex',
+		},
+		alignItems: 'center',
+		justifyContent: 'center',
+		position: { xs: 'static', sm: 'absolute' },
+		right: { xs: 'auto', sm: '2rem' },
+		top: { xs: 'auto', sm: '50%' },
+		transform: { xs: 'none', sm: 'translateY(-50%)' },
+	},
+	icon: {
+		fontSize: '2.5rem',
+		color: theme.palette.text.primary,
+		width: '100%',
+		height: '100%',
+	},
+};
+
+export default bannerStyle;
