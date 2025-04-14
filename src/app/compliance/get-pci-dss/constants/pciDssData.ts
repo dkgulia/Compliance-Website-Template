@@ -14,15 +14,17 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import secureTransactionsIcon from '../images/secure-transactions-.webp';
-import boostCustomerTrustIcon from '../images/boost-customer-trust.webp';
-import unifiedComplianceIcon from '../images/unified-compliance.webp';
-import reducedLiabilityIcon from '../images/reduced-liability-.webp';
-import scopeGapAnalysisIcon from '../images/a-flat-design-icon-of-a-document-with-a-checklist-.webp';
-import remediateDocumentIcon from '../images/a-padlock-icon-inside-symbolizing-strong-security-.webp';
-import implementControlsIcon from '../images/a-shield-shaped-symbol-conveying-protection-or-sec.webp';
-import externalScanTestingIcon from '../images/a-streamlined-icon-of-a-browser-window--suggesting.webp';
-import attestationReportingIcon from '../images/reporting-icon.webp';
+
+import secureTransactionsIcon from '../images/a-minimalist-padlock-with-a-credit-card-behind-it-.png';
+import boostCustomerTrustIcon from '../images/a-handshake-between-a-business-and-customer-with-a.png';
+import unifiedComplianceIcon from '../images/multiple-security-framework-icons-or-documents-con.png';
+import reducedLiabilityIcon from '../images/a-shield-with-a-downward-trending-arrow-or-a-credi.png';
+
+import scopeGapAnalysisIcon from '../images/a-magnifying-glass-examining-a-document-with-check.png';
+import remediateDocumentIcon from '../images/a-padlock-or-security-icon-next-to-a-document-with.png';
+import implementControlsIcon from '../images/a-shield-with-a-checkmark-and-security-elements-li.png';
+import externalScanTestingIcon from '../images/a-computer-screen-or-network-diagram-with-scan-lin.png';
+import attestationReportingIcon from '../images/a-document-with-a-seal-or-signature-and-a-checkmar.png';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import { StaticImageData } from 'next/image';
 
@@ -31,11 +33,13 @@ interface PciDssFeature {
 	title: string;
 	description: string;
 	icon: StaticImageData;
+	iconPrompt?: string;
 }
 
 interface PciDssWorkflow {
 	title: string;
 	icon: StaticImageData;
+	iconPrompt?: string;
 }
 
 interface PciDssFaq {
@@ -62,15 +66,15 @@ interface PciDssHubItem {
 }
 
 const pciDssData = {
-	// Updated hero section for new layout with form on left
+
 	heroTitle: '🔒 PCI DSS Compliance, Made Easy',
 	heroSubtitle: 'Ensure Payment Card Data Security',
 	highlightText: 'Protect Cardholder Data',
 	heroDescription: [
 		'Payment Card Industry Data Security Standard (PCI DSS) sets the requirements for securely storing, processing, and transmitting cardholder data.',
-		'Protect your reputation and reduce data breach risks by complying with PCI DSS. IgniPC helps automate tasks, track controls, and streamline your path to certification.',
+		'Protect your reputation and reduce data breach risks by complying with PCI DSS. Hexafort helps automate tasks, track controls, and streamline your path to certification.',
 	],
-	// Updated heroBullets to match SOC 2 format with specific icons
+
 	heroBullets: [
 		{
 			icon: VideoCallIcon,
@@ -89,7 +93,7 @@ const pciDssData = {
 		},
 	],
 
-	// Original data preserved below
+
 	bannerTitle: 'Safeguard Payment Data',
 	bannerDescription:
 		'Protect cardholder data and build trust. PCI DSS compliance \n is essential for any business processing credit or debit card information.',
@@ -97,7 +101,7 @@ const pciDssData = {
 
 	featuresHeading: 'Key Benefits of PCI DSS Compliance',
 
-	howIgniPCHelpsTitle: 'How IgniPC Helps You Get PCI DSS Compliant',
+	howIgniPCHelpsTitle: 'How Hexafort Helps You Get PCI DSS Compliant',
 	howIgniPCHelpsSubtitle:
 		'Our structured approach streamlines complex PCI DSS mandates, ensuring a secure environment for handling payment data.',
 	howIgniPCHelpsSteps: [
@@ -168,7 +172,7 @@ const pciDssData = {
 		},
 	],
 
-	workflowChip: 'Succeed with IgniPC',
+	workflowChip: 'Succeed with Hexafort',
 	workflowTitle: 'PCI DSS Roadmap',
 	workflowDescription:
 		'Achieve PCI DSS compliance by following a structured path—scope your environment, close security gaps, strengthen controls, and complete the required self-assessment or external audit.',
@@ -188,12 +192,14 @@ const pciDssData = {
 			title: 'Secure Transactions',
 			description: 'Minimize cardholder data exposure and ensure encryption of sensitive payment information.',
 			icon: secureTransactionsIcon,
+			iconPrompt: "A minimalist padlock with a credit card behind it and a small shield with a checkmark on a dark circular background. The design should convey data protection and encryption of payment information."
 		},
 		{
 			id: 2,
 			title: 'Boost Customer Trust',
 			description: 'Demonstrate a proactive approach to data protection, reassuring customers of secure payments.',
 			icon: boostCustomerTrustIcon,
+			iconPrompt: "A handshake between a business and customer with a small shield or padlock above on a dark circular background. The image should represent trust, partnership, and secure payment processing."
 		},
 		{
 			id: 3,
@@ -201,34 +207,41 @@ const pciDssData = {
 			description:
 				'Integrate PCI DSS with other security frameworks, reducing overlap and auditing burdens for your company.',
 			icon: unifiedComplianceIcon,
+			iconPrompt: "Multiple security framework icons or documents connected by linking nodes or a central hub on a dark circular background. The design should illustrate integration of different security standards with minimal overlap."
 		},
 		{
 			id: 4,
 			title: 'Reduced Liability',
 			description: 'Meet card brand requirements and lower your financial exposure in case of security incidents.',
 			icon: reducedLiabilityIcon,
+			iconPrompt: "A shield with a downward trending arrow or a credit card with a protective dome over it on a dark circular background. The icon should represent financial protection and reduced exposure to security incidents."
 		},
 	],
 	workflow: [
 		{
 			title: 'Scope & Gap Analysis',
 			icon: scopeGapAnalysisIcon,
+			iconPrompt: "A magnifying glass examining a document with checkboxes or a clipboard with a partial network diagram on a circular background. The design should represent analysis and identification of systems within scope."
 		},
 		{
 			title: 'Remediate & Document',
 			icon: remediateDocumentIcon,
+			iconPrompt: "A padlock or security icon next to a document with lines of text or a checklist, on a circular background. The image should convey fixing security issues and documenting the process."
 		},
 		{
-			title: 'Implement Strong Controls',
+			title: 'Implement Controls',
 			icon: implementControlsIcon,
+			iconPrompt: "A shield with a checkmark and security elements like a lock or firewall represented as stacked cards or layers on a circular background. The design should illustrate implementing robust security measures."
 		},
 		{
 			title: 'External Scan & Testing',
 			icon: externalScanTestingIcon,
+			iconPrompt: "A computer screen or network diagram with scan lines or a radar-like element searching for vulnerabilities on a circular background. The icon should represent security testing and vulnerability scanning."
 		},
 		{
 			title: 'Attestation & Reporting',
 			icon: attestationReportingIcon,
+			iconPrompt: "A document with a seal or signature and a checkmark or graph/chart element on a circular background. The design should convey final certification and compliance reporting."
 		},
 	],
 	faq: [

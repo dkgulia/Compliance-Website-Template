@@ -10,9 +10,9 @@ import PciDssHowIgniPCHelps from './components/PciDssHowIgniPCHelps';
 import PciDssBookADemo from './components/PciDssBookADemo';
 
 export const metadata: Metadata = {
-	title: 'PCI DSS Compliance | IgniPC',
+	title: 'PCI DSS Compliance | Hexafort',
 	description:
-		'Learn how IgniPC can streamline PCI DSS compliance, secure payment card data, and protect customer trust through an automated platform.',
+		'Learn how Hexafort can streamline PCI DSS compliance, secure payment card data, and protect customer trust through an automated platform.',
 	keywords: [
 		'pci dss compliance',
 		'payment card industry data security standard',
@@ -29,25 +29,18 @@ const Page = () => {
 		<>
 			<PciDssHeroSection />
 
-			{/* Key Benefits */}
 			<PciDssFeaturesSection />
 
-			{/* Middle Banner */}
 			<PciDssBanner />
 
-			{/* How IgniPC Helps - New Section */}
 			<PciDssHowIgniPCHelps />
 
-			{/* Compliance Hub */}
 			<PciDssComplianceHub />
 
-			{/* Workflow */}
 			<PciDssWorkflowSection />
 
-			{/* Book a Demo - PCI-specific */}
 			{/* <PciDssBookADemo /> */}
 
-			{/* FAQs */}
 			<PciDssFaqSection />
 		</>
 	);

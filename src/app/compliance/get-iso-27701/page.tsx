@@ -12,9 +12,9 @@ import Iso27701FaqSection from './components/Iso27701FaqSection';
 import iso27701Data from './constants/iso27701Data';
 
 export const metadata: Metadata = {
-	title: 'ISO 27701 | IgniPC',
+	title: 'ISO 27701 | Hexafort',
 	description:
-		'Explore how IgniPC can help you extend your ISMS with ISO 27701 for robust data privacy and security compliance.',
+		'Explore how Hexafort can help you extend your ISMS with ISO 27701 for robust data privacy and security compliance.',
 	keywords: iso27701Data.keywords,
 };
 

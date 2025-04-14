@@ -150,7 +150,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
 					<Grid size={{ xs: 12 }}>
 						<Typography color={theme.palette.text.secondary}>
-							By clicking submit below, you consent to allow IgniPC to store and process the Personal Data submitted by
+							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted by
 							you above as per our{' '}
 							{/* <Link href="/privacy-policy" target="_blank" style={{ color: theme.palette.primary.main }}>
 								Privacy Policy

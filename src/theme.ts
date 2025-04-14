@@ -155,24 +155,24 @@ const theme = responsiveFontSizes(
       buttonHover: 'linear-gradient(to right, #0f766e, #14b8a6)',
     },
     components: {
-      MuiButton: {
-        styleOverrides: {
-          root: {
-            textTransform: 'none',
-            borderRadius: 8,
-            padding: '6px 16px',
-            backgroundColor: '#0d9488',
-            '&:hover': {
-              backgroundColor: '#0f766e',
-            },
-            border: '1px solid #14b8a6',
-          },
-          sizeSmall: {
-            padding: '4px 10px',
-            fontSize: '0.8125rem',
-          },
-        },
-      },
+      // MuiButton: {
+      //   styleOverrides: {
+      //     root: {
+      //       textTransform: 'none',
+      //       borderRadius: 8,
+      //       padding: '6px 16px',
+      //       backgroundColor: '#0d9488',
+      //       '&:hover': {
+      //         backgroundColor: '#0f766e',
+      //       },
+      //       border: '1px solid #14b8a6',
+      //     },
+      //     sizeSmall: {
+      //       padding: '4px 10px',
+      //       fontSize: '0.8125rem',
+      //     },
+      //   },
+      // },
       MuiCard: {
         styleOverrides: {
           root: {

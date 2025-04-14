@@ -15,7 +15,7 @@ const bannerStyle = {
 		background: theme.palette.background.paper,
 		borderRadius: '2rem',
 		width: '100%',
-		maxWidth: '75rem',
+		maxWidth: '72rem',
 		marginX: 'auto',
 		px: { xs: '1rem', sm: '2rem' },
 		py: '2rem',

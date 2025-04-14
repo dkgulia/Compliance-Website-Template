@@ -20,7 +20,7 @@ const heroSectionStyle = {
 		padding: { xs: '1rem', md: '2rem' },
 	},
 	formBox: {
-		marginTop: { xs: '2rem', md: '0' },
+		marginTop: { xs: '2rem', md: '3' },
 		flex: 1,
 		background: theme.palette.background.paper,
 		borderRadius: '1.5rem',
@@ -59,12 +59,12 @@ const heroSectionStyle = {
 	featuresContainer: {
 		display: 'flex',
 		flexDirection: 'row',
-		justifyContent: { xs: 'center', md: 'flex-start' },
+		justifyContent: { xs: 'space-between', md: 'space-between' },
 		alignItems: 'flex-start',
-		gap: { xs: '2rem', md: '2.5rem' },
+		gap: { xs: '1rem', md: '1rem' },
 		marginTop: '2rem',
 		width: '100%',
-		flexWrap: 'wrap',
+		flexWrap: 'nowrap',
 	},
 	featureItem: {
 		display: 'flex',
@@ -72,8 +72,8 @@ const heroSectionStyle = {
 		alignItems: 'center',
 		textAlign: 'center',
 		gap: '0.5rem',
-		flex: { xs: '1 1 auto', sm: '1 1 30%' },
-		maxWidth: { xs: '100%', sm: '30%' },
+		flex: '1 1 33%',
+		maxWidth: '33%',
 	},
 	iconWrapper: {
 		display: 'flex',
@@ -83,7 +83,7 @@ const heroSectionStyle = {
 		minHeight: '2.5rem',
 	},
 	featureIcon: {
-		fontSize: { xs: '1.8rem', md: '2rem' },
+		fontSize: { xs: '1.8rem', md: '2.5rem' },
 		color: theme.palette.primary.main,
 	},
 	featureTextWrapper: {
@@ -95,12 +95,12 @@ const heroSectionStyle = {
 		width: '100%',
 	},
 	featureTitle: {
-		fontSize: { xs: '0.9rem', md: '1rem' },
+		fontSize: { xs: '0.9rem', md: '1.2rem' },
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
 	},
 	featureSubtitle: {
-		fontSize: { xs: '0.8rem', md: '0.8rem' },
+		fontSize: { xs: '0.8rem', md: '0.9rem' },
 		color: theme.palette.text.secondary,
 	},
 	button: {

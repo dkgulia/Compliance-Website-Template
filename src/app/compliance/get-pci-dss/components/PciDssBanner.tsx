@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import bannerStyle from '../styles/bannerStyle';
 import { ArrowForward } from '@mui/icons-material';
 import pciDssData from '../constants/pciDssData';
-import pciDssLockIcon from '../images/this-image-visually-represents-pci-compliance--emp.svg';
+import pciDssLockIcon from '../images/create-a-professional-illustration-for-an-iso-2000 (4).png';
 import Image from 'next/image';
 
 const PciDssBanner: React.FC = () => {
