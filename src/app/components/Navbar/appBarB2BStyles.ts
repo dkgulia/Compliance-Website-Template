@@ -1,126 +1,129 @@
 const appBarB2BStyles = {
 	appBar: {
-		backgroundColor: '#0F172A',
+		backgroundColor: '#0a0a0a',
 		position: 'fixed',
 		zIndex: 10,
 		boxShadow: 'none',
-		borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+		borderBottom: '1px solid rgba(38, 38, 38, 0.6)',
 	},
 	toolbar: {
 		padding: { xs: '0 1rem', md: '0 2rem' },
-		minHeight: '4rem',
+		minHeight: '1rem',
+	},
+	navContainer: {
 		display: 'flex',
-		justifyContent: 'space-between', // This ensures space between logo, nav, and action buttons
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		width: '100%',
+		height: '4rem',
 	},
 	logoContainer: {
 		display: 'flex',
 		alignItems: 'center',
+		flex: { xs: '1', md: '0 0 auto' },
 	},
 	logo: {
-		color: '#ffffff',
+		color: '#f9fafb',
 		fontWeight: 700,
 		fontSize: { xs: '1rem', md: '1rem' },
 		display: 'flex',
 		alignItems: 'center',
 	},
 	logoImage: {
-		maxWidth: '90px',
-		height: '45px',
-		marginRight: '1.5rem',
+		maxWidth: '50px',
+		height: '50px',
 	},
 	logoPlus: {
-		color: '#3275B8',
+		color: '#14b8a6',
 		fontSize: { xs: '1.25rem', md: '1.5rem' },
 		fontWeight: 'bold',
 		marginLeft: '0.25rem',
 	},
 	navItems: {
-		display: 'flex',
+		display: { xs: 'none', md: 'flex' },
 		alignItems: 'center',
-		justifyContent: 'center', // Center the nav items
-		flexGrow: 0, // Don't allow the nav to grow and push the action buttons
-		marginLeft: '2rem',
-		position: 'absolute', // Use absolute positioning
-		left: '50%', // Position at 50% from the left
-		transform: 'translateX(-50%)', // Pull back by 50% of its own width to center
+		justifyContent: 'center',
+		flex: '1 1 auto',
+	},
+	navItem: {
+		marginLeft: '0.5rem',
+		marginRight: '0.5rem',
 	},
 	navButton: {
-		color: '#ffffff',
-		fontSize: { xs: '0.875rem', md: '1rem' },
+		color: '#f9fafb',
+		fontSize: { xs: '0.875rem', md: '1.2rem' },
 		textTransform: 'none',
 		borderBottom: '0.25rem solid transparent',
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
-		marginX: '0.25rem',
+		transition: 'all 0.2s ease',
 		'&:hover': {
 			backgroundColor: 'transparent',
 			borderBottom: '0.25rem solid rgba(255, 255, 255, 0.5)',
 		},
 	},
 	activeNavButton: {
-		color: '#ffffff',
+		color: '#f9fafb',
 		fontSize: { xs: '0.875rem', md: '1rem' },
 		textTransform: 'none',
-		borderBottom: '0.25rem solid #3275B8',
+		borderBottom: '0.25rem solid #14b8a6',
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
-		marginX: '0.25rem',
+		transition: 'all 0.2s ease',
 		'&:hover': {
 			backgroundColor: 'transparent',
-			borderBottom: '0.25rem solid #3275B8',
+			borderBottom: '0.25rem solid #5eead4',
 		},
 	},
+	dropdownIcon: {
+		fontSize: '1.2rem',
+		marginLeft: '0.25rem',
+		transition: 'transform 0.2s ease',
+	},
+	activeDropdownIcon: {
+		fontSize: '1.2rem',
+		marginLeft: '0.25rem',
+		transform: 'rotate(180deg)',
+		transition: 'transform 0.2s ease',
+	},
 	actionButtons: {
-		display: 'flex',
+		display: { xs: 'none', md: 'flex' },
 		alignItems: 'center',
 		gap: { xs: '0.5rem', md: '0.75rem' },
+		flex: '0 0 auto',
 	},
 	talkButton: {
-		color: '#ffffff',
+		color: '#f9fafb',
 		borderRadius: '0.5rem',
 		padding: { xs: '0.375rem 0.75rem', md: '0.5rem 1rem' },
 		textTransform: 'none',
 		fontSize: { xs: '0.75rem', md: '0.875rem' },
 		whiteSpace: 'nowrap',
+		border: '1px solid #262626',
 		'&:hover': {
-			borderColor: '#ffffff',
+			borderColor: '#f9fafb',
 			backgroundColor: 'rgba(255, 255, 255, 0.1)',
 		},
 	},
 	shopButton: {
-		backgroundColor: '#3275B8',
-		color: '#ffffff',
-		borderRadius: '0.7rem',
+		backgroundColor: '#14b8a6',
+		color: '#f9fafb',
+		borderRadius: '0.5rem',
 		padding: { xs: '0.375rem 0.75rem', md: '0.4rem 1rem' },
 		textTransform: 'none',
 		fontSize: { xs: '0.75rem', md: '0.875rem' },
 		whiteSpace: 'nowrap',
 		'&:hover': {
-			backgroundColor: '#2c67a5',
+			backgroundColor: '#0f766e',
 		},
 	},
-	logoGridItem: {
-		xs: 6,
-		md: 'auto',
-	},
-	navGridItem: {
-		xs: 12,
-		md: 'auto',
-		display: { xs: 'none', md: 'block' },
-	},
-	actionGridItem: {
-		xs: 12,
-		md: 'auto',
-		display: { xs: 'none', md: 'flex' },
-	},
-	mobileMenuGridItem: {
-		xs: 6,
-		md: 'auto',
+	mobileMenuContainer: {
 		display: { xs: 'flex', md: 'none' },
 		justifyContent: 'flex-end',
+		flex: '1 0 auto',
 	},
 	menuIcon: {
-		color: '#ffffff',
+		color: '#f9fafb',
 		padding: '0.5rem',
 	},
 	drawer: {
@@ -140,7 +143,7 @@ const appBarB2BStyles = {
 		flexDirection: 'column',
 		height: 'auto',
 		minHeight: '100%',
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#121212',
 		overflowY: 'auto',
 		'&::-webkit-scrollbar': {
 			display: 'none',
@@ -153,15 +156,15 @@ const appBarB2BStyles = {
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		padding: '0.75rem 1rem',
-		borderBottom: '1px solid #E5E7EB',
-		backgroundColor: '#1d1f21',
+		borderBottom: '1px solid #262626',
+		backgroundColor: '#0a0a0a',
 	},
 	mobileLogoContainer: {
 		display: 'flex',
 		alignItems: 'center',
 	},
 	mobileLogo: {
-		color: '#FFFFFF',
+		color: '#f9fafb',
 		fontWeight: 700,
 		fontSize: '1rem',
 		display: 'flex',
@@ -178,32 +181,32 @@ const appBarB2BStyles = {
 		gap: '0.75rem',
 	},
 	mobileShopButton: {
-		backgroundColor: '#3275B8',
-		color: '#ffffff',
+		backgroundColor: '#14b8a6',
+		color: '#f9fafb',
 		borderRadius: '0.7rem',
 		padding: { xs: '0.375rem 0.75rem', md: '0.4rem 1rem' },
 		textTransform: 'none',
 		fontSize: { xs: '0.75rem', md: '0.875rem' },
 		whiteSpace: 'nowrap',
 		'&:hover': {
-			backgroundColor: '#2c67a5',
+			backgroundColor: '#0f766e',
 		},
 	},
 	closeButton: {
-		color: '#FFFFFF',
+		color: '#f9fafb',
 		padding: '0.375rem',
 	},
 	mobileMenuList: {
 		padding: 1,
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#121212',
 	},
 	mobileMenuItem: {
 		padding: '1.5rem',
-		borderBottom: '1px solid #E5E7EB',
+		borderBottom: '1px solid #262626',
 		'& .MuiListItemText-primary': {
 			fontWeight: 700,
 			fontSize: '1.2rem',
-			color: '#000000',
+			color: '#f9fafb',
 		},
 		cursor: 'pointer',
 	},
@@ -211,22 +214,21 @@ const appBarB2BStyles = {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#f5f5f5',
+		backgroundColor: '#1f1f1f',
 		borderRadius: '6px',
 		width: '40px',
 		height: '40px',
 	},
 	mobileMenuArrow: {
-		color: 'black',
+		color: '#f9fafb',
 		fontSize: '1.5rem',
-
 	},
 	mobileTalkButtonContainer: {
 		padding: '1rem',
 	},
 	mobileTalkButton: {
-		borderColor: '#000000',
-		color: '#000000',
+		borderColor: '#262626',
+		color: '#f9fafb',
 		width: '100%',
 		padding: '0.625rem 1rem',
 		textTransform: 'none',
@@ -235,7 +237,7 @@ const appBarB2BStyles = {
 	},
 	mobileDivider: {
 		height: '1px',
-		backgroundColor: '#E5E7EB',
+		backgroundColor: '#262626',
 		width: '100%',
 		margin: '0.5rem 0',
 	},
@@ -251,7 +253,7 @@ const appBarB2BStyles = {
 		marginBottom: '1rem',
 		borderRadius: '8px',
 		overflow: 'hidden',
-		backgroundColor: '#F1F5F9',
+		backgroundColor: '#1f1f1f',
 	},
 	mobilePlaceholder: {
 		display: 'none',
@@ -259,16 +261,16 @@ const appBarB2BStyles = {
 	mobileFeatureText: {
 		fontSize: '1rem',
 		fontWeight: 500,
-		color: '#000000',
+		color: '#f9fafb',
 		marginBottom: '0.25rem',
 	},
 	mobileFeatureSubtext: {
 		fontSize: '0.875rem',
-		color: '#6B7280',
+		color: '#9ca3af',
 		marginBottom: '1rem',
 	},
 	knowMoreButton: {
-		color: '#3275B8',
+		color: '#14b8a6',
 		textTransform: 'none',
 		padding: 0,
 		fontSize: '0.9375rem',
@@ -285,21 +287,21 @@ const appBarB2BStyles = {
 	mobileMenuTitle: {
 		fontWeight: 500,
 		fontSize: '1rem',
-		color: '#FFFFFF',
+		color: '#f9fafb',
 	},
 	backButton: {
-		color: '#FFFFFF',
+		color: '#f9fafb',
 		padding: '0.375rem',
 	},
 	mobileSubmenuItem: {
 		padding: '1rem',
-		borderBottom: '1px solid #E5E7EB',
+		borderBottom: '1px solid #262626',
 		cursor: 'pointer',
 	},
 	mobileSubmenuText: {
 		fontWeight: 500,
 		fontSize: '0.9375rem',
-		color: '#000000',
+		color: '#f9fafb',
 	},
 	serviceItemContainer: {
 		display: 'flex',
@@ -312,7 +314,7 @@ const appBarB2BStyles = {
 		border: 'none',
 	},
 	serviceIconWrapper: {
-		color: '#3275B8',
+		color: '#14b8a6',
 		width: '2.5rem',
 		height: '2.5rem',
 		marginRight: '1rem',
@@ -330,46 +332,45 @@ const appBarB2BStyles = {
 	serviceTitle: {
 		fontSize: '0.875rem',
 		fontWeight: 500,
-		color: '#111827',
+		color: '#f9fafb',
 		marginBottom: '0.25rem',
 	},
 	serviceDescription: {
 		fontSize: '0.875rem',
-		color: '#6B7280',
+		color: '#9ca3af',
 		lineHeight: 1.5,
 	},
 	mobileServiceList: {
 		padding: '1rem',
 		overflow: 'auto',
 		flex: 1,
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#121212',
 	},
 	mobileFeatureCard: {
 		padding: '1.5rem',
-		backgroundColor: '#0F172A',
+		backgroundColor: '#121212',
 		margin: '1rem',
 		borderRadius: '0.25rem',
 	},
 	featureCardHeading: {
 		fontSize: '1.125rem',
 		fontWeight: 500,
-		color: '#FFFFFF',
+		color: '#f9fafb',
 		marginBottom: '0.5rem',
 	},
 	featureCardText: {
 		fontSize: '0.875rem',
-		color: '#E5E7EB',
+		color: '#9ca3af',
 		marginBottom: '1.5rem',
 	},
-
 	dropdownContainer: {
 		position: 'fixed',
 		top: '4rem',
 		left: 0,
 		right: 0,
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#121212',
 		zIndex: 5,
-		boxShadow: '0 0.25rem 0.5rem rgba(0, 0, 0, 0.1)',
+		boxShadow: '0 0.25rem 0.5rem rgba(0, 0, 0, 0.3)',
 		maxHeight: 'calc(100vh - 8rem)',
 		overflowY: 'auto',
 		'&::-webkit-scrollbar': {
@@ -381,10 +382,13 @@ const appBarB2BStyles = {
 		margin: 0,
 		display: 'flex',
 		flexDirection: { xs: 'column', md: 'row' },
+		transition: 'opacity 0.2s ease, transform 0.2s ease',
+		transform: 'translateY(0)',
+		opacity: 1,
 	},
 	sidebarContainer: {
 		width: { xs: '100%', md: '280px' },
-		backgroundColor: '#0F172A',
+		backgroundColor: '#0a0a0a',
 		minHeight: { xs: 'auto', md: '400px' },
 		flexShrink: 0,
 	},
@@ -402,21 +406,13 @@ const appBarB2BStyles = {
 	},
 	rightSideContainer: {
 		width: { xs: '100%', md: '280px' },
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#121212',
 		padding: { xs: '0 1.5rem 1.5rem', md: '0 1.5rem 1.5rem' },
 		flexGrow: 1,
 	},
 	headerSpacer: {
 		flexGrow: 1,
 	},
-	// New style for the parent container that holds logo, nav, and action buttons
-	toolbarInner: {
-		display: 'flex',
-		width: '100%',
-		alignItems: 'center',
-		justifyContent: 'space-between',
-		position: 'relative', // Important for absolute positioning of navItems
-	}
 };
 
 export default appBarB2BStyles;

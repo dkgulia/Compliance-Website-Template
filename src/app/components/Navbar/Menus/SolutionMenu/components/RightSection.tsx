@@ -26,7 +26,7 @@ const RightSection: React.FC = () => {
 					<Typography sx={rightSectionStyles.cardHeading}>Book a Demo</Typography>
 
 					<Typography sx={rightSectionStyles.cardDescription}>
-						Experience igniPC in action with a personalized demo
+						Experience Hexafort in action with a personalized demo
 					</Typography>
 
 					<Link href="/demo" passHref style={{ textDecoration: 'none' }}>

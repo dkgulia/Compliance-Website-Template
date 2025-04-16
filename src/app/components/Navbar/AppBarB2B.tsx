@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
 	AppBar,
 	Toolbar,
@@ -9,6 +9,7 @@ import {
 	Typography,
 	Drawer,
 	IconButton,
+	Grid,
 	useMediaQuery,
 	useTheme,
 	List,
@@ -19,6 +20,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useRouter } from 'next/navigation';
 import CategorySidebar from './Menus/SolutionMenu/components/CategorySidebar';
 import ServiceList from './Menus/SolutionMenu/components/ServiceList';
@@ -30,7 +32,7 @@ import Image from 'next/image';
 import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
 
 import styles from './appBarB2BStyles';
-import LogoImage from './Images/igniPC_Logo.png';
+import LogoImage from './Images/dual-hex-white.png';
 
 const AppBarB2B: React.FC = () => {
 	const router = useRouter();
@@ -41,6 +43,8 @@ const AppBarB2B: React.FC = () => {
 	const [activeMenu, setActiveMenu] = useState<string | null>(null);
 	const [drawerOpen, setDrawerOpen] = useState(false);
 	const [mobileSubMenu, setMobileSubMenu] = useState<string | null>(null);
+	const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+	const menuRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (isMobile && activeMenu) {
@@ -48,7 +52,43 @@ const AppBarB2B: React.FC = () => {
 		}
 	}, [isMobile, activeMenu]);
 
-	const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (menuRef.current && !menuRef.current.contains(event.target as Node) && activeMenu) {
+				setActiveMenu(null);
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [activeMenu]);
+
+	const handleMenuHover = (menu: string) => {
+		if (isMobile) return;
+		if (hoverTimeoutRef.current) {
+			clearTimeout(hoverTimeoutRef.current);
+		}
+		hoverTimeoutRef.current = setTimeout(() => {
+			setActiveMenu(menu);
+		}, 100);
+	};
+
+	const handleMenuLeave = () => {
+		if (isMobile) return;
+		if (hoverTimeoutRef.current) {
+			clearTimeout(hoverTimeoutRef.current);
+		}
+
+		hoverTimeoutRef.current = setTimeout(() => {
+			setActiveMenu(null);
+		}, 300);
+	};
+
+	const handleMenuClick = (event: React.MouseEvent<HTMLElement>, menu: string) => {
+		if (!isMobile) return;
+
 		if (activeMenu === menu) {
 			setActiveMenu(null);
 		} else {
@@ -116,7 +156,7 @@ const AppBarB2B: React.FC = () => {
 			<Box sx={styles.mobileMenuHeader}>
 				<Box sx={styles.mobileLogoContainer}>
 					<Typography sx={styles.mobileLogo}>
-						<Image src={LogoImage} alt="igniPC Logo" width={70} height={40} style={styles.mobileLogoImage} />
+						<Image src={LogoImage} alt="hexafort Logo" width={70} height={40} style={styles.mobileLogoImage} />
 					</Typography>
 				</Box>
 				<Box sx={styles.mobileHeaderActions}>
@@ -155,7 +195,7 @@ const AppBarB2B: React.FC = () => {
 
 			<Box sx={styles.mobileTalkButtonContainer}>
 				<Button variant="outlined" onClick={() => navigateTo(TALK_TO_AN_EXPERT)}>
-					Talk to an Expert
+					Book a Demo
 				</Button>
 			</Box>
 		</>
@@ -208,71 +248,108 @@ const AppBarB2B: React.FC = () => {
 		<>
 			<AppBar position="fixed" sx={styles.appBar}>
 				<Toolbar sx={styles.toolbar}>
-					{/* This is the container that will position everything properly */}
-					<Box sx={styles.toolbarInner}>
-						{/* Logo on the left */}
+					<Box sx={styles.navContainer}>
 						<Box sx={styles.logoContainer}>
-							<Image src={LogoImage} alt="igniPC Logo" width={90} height={45} style={styles.logoImage} />
+							<Image src={LogoImage} alt="hexafort Logo" width={90} height={45} style={styles.logoImage} />
 						</Box>
 
-						{/* Navigation in the center (absolutely positioned) */}
-						{!isMobile && (
-							<Box sx={styles.navItems}>
+						<Box sx={styles.navItems}>
+							{/* <Box
+								onMouseEnter={() => handleMenuHover('solutions')}
+								onMouseLeave={handleMenuLeave}
+								onClick={(e) => handleMenuClick(e, 'solutions')}
+								sx={styles.navItem}
+							>
 								<Button
 									data-menu-button="solutions"
 									sx={activeMenu === 'solutions' ? styles.activeNavButton : styles.navButton}
-									onClick={(e) => handleMenuOpen(e, 'solutions')}
+									endIcon={<KeyboardArrowDownIcon sx={activeMenu === 'solutions' ? styles.activeDropdownIcon : styles.dropdownIcon} />}
 								>
-									Framework
+									Solutions
 								</Button>
+							</Box>
+							<Box
+								onMouseEnter={() => handleMenuHover('industries')}
+								onMouseLeave={handleMenuLeave}
+								onClick={(e) => handleMenuClick(e, 'industries')}
+								sx={styles.navItem}
+							>
 								<Button
 									data-menu-button="industries"
 									sx={activeMenu === 'industries' ? styles.activeNavButton : styles.navButton}
-									onClick={(e) => handleMenuOpen(e, 'industries')}
+									endIcon={<KeyboardArrowDownIcon sx={activeMenu === 'industries' ? styles.activeDropdownIcon : styles.dropdownIcon} />}
 								>
-									Platform
+									Industries
 								</Button>
+							</Box> */}
+							<Box
+								onMouseEnter={() => handleMenuHover('compliance')}
+								onMouseLeave={handleMenuLeave}
+								onClick={(e) => handleMenuClick(e, 'compliance')}
+								sx={styles.navItem}
+							>
 								<Button
 									data-menu-button="compliance"
 									sx={activeMenu === 'compliance' ? styles.activeNavButton : styles.navButton}
-									onClick={(e) => handleMenuOpen(e, 'compliance')}
+									endIcon={
+										<KeyboardArrowDownIcon
+											sx={activeMenu === 'compliance' ? styles.activeDropdownIcon : styles.dropdownIcon}
+										/>
+									}
 								>
-									Resources
+									Compliance
 								</Button>
+							</Box>
+							<Box
+								onMouseEnter={() => handleMenuHover('about')}
+								onMouseLeave={handleMenuLeave}
+								onClick={(e) => handleMenuClick(e, 'about')}
+								sx={styles.navItem}
+							>
 								<Button
 									data-menu-button="about"
 									sx={activeMenu === 'about' ? styles.activeNavButton : styles.navButton}
-									onClick={(e) => handleMenuOpen(e, 'about')}
+									endIcon={
+										<KeyboardArrowDownIcon
+											sx={activeMenu === 'about' ? styles.activeDropdownIcon : styles.dropdownIcon}
+										/>
+									}
 								>
-									Company
+									About
 								</Button>
 							</Box>
-						)}
+						</Box>
 
-						{/* Action buttons on the right */}
 						<Box sx={styles.actionButtons}>
-							{!isMobile && (
-								<>
-									<Button variant="outlined" sx={styles.talkButton} onClick={() => navigateTo(TALK_TO_AN_EXPERT)}>
-										Talk to an expert
-									</Button>
-									<Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
-										Shop Now
-									</Button>
-								</>
-							)}
-							{isMobile && (
-								<IconButton color="inherit" aria-label="menu" onClick={toggleDrawer(true)} sx={styles.menuIcon}>
-									<MenuIcon />
-								</IconButton>
-							)}
+							<Button variant="outlined" sx={styles.talkButton} onClick={() => navigateTo(TALK_TO_AN_EXPERT)}>
+								Book a Demo
+							</Button>
+							<Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
+								Login
+							</Button>
+						</Box>
+
+						<Box sx={styles.mobileMenuContainer}>
+							<IconButton color="inherit" aria-label="menu" onClick={toggleDrawer(true)} sx={styles.menuIcon}>
+								<MenuIcon />
+							</IconButton>
 						</Box>
 					</Box>
 				</Toolbar>
 			</AppBar>
 
 			{activeMenu && !isMobile && (
-				<Box data-menu={activeMenu} sx={styles.dropdownContainer}>
+				<Box
+					ref={menuRef}
+					data-menu={activeMenu}
+					sx={styles.dropdownContainer}
+					onMouseEnter={() => {
+						if (hoverTimeoutRef.current) {
+							clearTimeout(hoverTimeoutRef.current);
+						}
+					}}
+					onMouseLeave={handleMenuLeave}
+				>
 					{activeMenu === 'solutions' && (
 						<>
 							<Box sx={styles.sidebarContainer}>
@@ -296,9 +373,34 @@ const AppBarB2B: React.FC = () => {
 				anchor="right"
 				open={drawerOpen}
 				onClose={toggleDrawer(false)}
-				sx={styles.drawer}
+				sx={{
+					'& .MuiDrawer-paper': {
+						width: '100%',
+						height: '100%',
+						overflowY: 'auto',
+						'&::-webkit-scrollbar': {
+							display: 'none',
+						},
+						msOverflowStyle: 'none',
+						scrollbarWidth: 'none',
+					},
+				}}
 			>
-				<Box sx={styles.drawerContent}>
+				<Box
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						height: 'auto',
+						minHeight: '100%',
+						backgroundColor: '#FFFFFF',
+						overflowY: 'auto',
+						'&::-webkit-scrollbar': {
+							display: 'none',
+						},
+						msOverflowStyle: 'none',
+						scrollbarWidth: 'none',
+					}}
+				>
 					{mobileSubMenu ? renderSolutionsSubMenu() : renderMobileMainMenu()}
 				</Box>
 			</Drawer>

@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import bannerStyle from '../styles/bannerStyle';
 import { ArrowForward } from '@mui/icons-material';
 import pciDssData from '../constants/pciDssData';
-import pciDssLockIcon from '../images/create-a-professional-illustration-for-an-iso-2000 (4).png';
+import pciDssLockIcon from '../images/p99b2sofk5nhbo4hemr5.webp';;
 import Image from 'next/image';
 
 const PciDssBanner: React.FC = () => {
@@ -36,7 +36,7 @@ const PciDssBanner: React.FC = () => {
                 </Box>
 
                 <Box sx={bannerStyle.iconWrapper}>
-                    <Image src={pciDssLockIcon} alt="PCI DSS Lock" width={350} height={350} />
+                    <Image src={pciDssLockIcon} alt="PCI DSS Lock" width={400} height={400} />
                 </Box>
             </Box>
         </Box>

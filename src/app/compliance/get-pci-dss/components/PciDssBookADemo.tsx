@@ -4,25 +4,27 @@ import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import pciDssBookADemoStyle from '../styles/pciDssBookADemoStyle';
-//import { COMPLIANCE } from '../../../../constants/routes';
+import { COMPLIANCE } from '../../../constants/routes';
 import pciDssData from '../constants/pciDssData';
-import bookDemoImage from '../images/create-a-professional--high-quality-image-depictin.png';
+import bookDemoImage from '../images/ChatGPT Image Apr 16, 2025, 04_19_47 PM.png';
 
 const PciDssBookADemo = () => {
     return (
         <Box sx={pciDssBookADemoStyle.box}>
             <Container sx={pciDssBookADemoStyle.container}>
-                <Box>
+                <Box sx={pciDssBookADemoStyle.imageBox}>
                     <Image
                         src={bookDemoImage}
                         alt="PCI DSS Demo"
                         priority
-                        fill
-                        sizes="(max-width: 700px) 90vwhvw, 50vw"
+                        width={500}
+                        height={400}
+                        style={pciDssBookADemoStyle.image}
+                        sizes="(max-width: 700px) 90vw, 50vw"
                     />
                 </Box>
                 <Box sx={pciDssBookADemoStyle.textBox}>
-                    <Grid >
+                    <Grid>
                         <Typography sx={pciDssBookADemoStyle.tagline}>
                             {pciDssData.bookADemoTagline}
                         </Typography>
@@ -44,9 +46,8 @@ const PciDssBookADemo = () => {
                     <Box sx={pciDssBookADemoStyle.buttonContainer}>
                         <Button
                             type="button"
-                            fullWidth
                             sx={pciDssBookADemoStyle.button}
-                            // href={COMPLIANCE}
+                            href={COMPLIANCE}
                         >
                             {pciDssData.bookADemoButtonLabel}
                         </Button>

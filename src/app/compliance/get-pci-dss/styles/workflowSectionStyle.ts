@@ -107,7 +107,7 @@ const workflowSectionStyle = {
 		flex: 1,
 	},
 	iconContainer: {
-		width: '5rem',
+		width: '6rem',
 		height: '5rem',
 		display: 'flex',
 		justifyContent: 'center',

@@ -63,8 +63,8 @@ const bannerStyle = {
 		textAlign: 'center' as const,
 	},
 	iconWrapper: {
-		width: '20rem',
-		height: '20rem',
+		width: '25rem',
+		height: '25rem',
 		borderRadius: '50%',
 		display: {
 		    xs: 'none',

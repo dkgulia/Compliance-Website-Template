@@ -6,7 +6,7 @@ import PciDssBanner from './components/PciDssBanner';
 import PciDssComplianceHub from './components/PciDssComplianceHub';
 import PciDssWorkflowSection from './components/PciDssWorkflowSection';
 import PciDssFaqSection from './components/PciDssFaqSection';
-import PciDssHowIgniPCHelps from './components/PciDssHowIgniPCHelps';
+import PciDssHowHexafortHelpsStyle from './components/PciDssHowHexafortHelps';
 import PciDssBookADemo from './components/PciDssBookADemo';
 
 export const metadata: Metadata = {
@@ -33,13 +33,13 @@ const Page = () => {
 
 			<PciDssBanner />
 
-			<PciDssHowIgniPCHelps />
+			<PciDssHowHexafortHelpsStyle />
 
 			<PciDssComplianceHub />
 
 			<PciDssWorkflowSection />
 
-			{/* <PciDssBookADemo /> */}
+			<PciDssBookADemo />
 
 			<PciDssFaqSection />
 		</>

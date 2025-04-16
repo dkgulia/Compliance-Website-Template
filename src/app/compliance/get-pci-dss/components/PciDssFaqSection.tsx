@@ -22,11 +22,11 @@ const PciDssFaqSection: React.FC = () => {
                 id={`panel${index}-header`}
                 sx={faqSectionStyle.accordionSummary}
               >
-                <Typography>{item.question}</Typography>
+                <Typography sx={faqSectionStyle.questionTypography}>{item.question}</Typography>
               </AccordionSummary>
 
               <AccordionDetails sx={faqSectionStyle.accordionDetails}>
-                <Typography>{item.answer}</Typography>
+                <Typography sx={faqSectionStyle.answerTypography}>{item.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}

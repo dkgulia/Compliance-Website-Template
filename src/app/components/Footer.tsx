@@ -20,7 +20,7 @@ import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
 import { industryData } from '../../app/components/Navbar/constants/industrialists';
 import solutionData from '../../app/components/Navbar/constants/solutionsMob';
-
+import logo from '../components/Navbar/Images/dual-hex-white.png'
 export default function Footer() {
 	const pathname = usePathname();
 	const isAdminRoute = pathname.startsWith('/admin');
@@ -34,10 +34,10 @@ export default function Footer() {
 							<Grid size={{ xs: 12, md: 4 }} sx={footerStyles.logoSection}>
 								<Box sx={footerStyles.logoContainer}>
 									<Image
-										src="/images/IgniPC-logo-rectangle.svg"
-										alt="logo of IgniPC"
-										width={140}
-										height={60}
+										src={logo}
+										alt="logo of Hexafort"
+										width={80}
+										height={80}
 										style={footerStyles.logo}
 									/>
 								</Box>
@@ -123,7 +123,7 @@ export default function Footer() {
 									</Grid>
 
 
-									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+									{/* <Grid size={{ xs: 12, sm: 6, md: 3 }}>
 										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>
 											Solutions
 										</Typography>
@@ -173,7 +173,7 @@ export default function Footer() {
 												</Link>
 											</Box>
 										))}
-									</Grid>
+									</Grid> */}
 
 									<Grid size={{ xs: 12, sm: 6, md: 3 }}>
 										<Typography variant="subtitle1" sx={footerStyles.columnTitle} gutterBottom>

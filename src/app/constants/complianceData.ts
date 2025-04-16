@@ -1,15 +1,15 @@
-import iso27001 from '../../../public/images/compliances/iso27001-logo.webp';
+import iso27001 from '../compliance/images/iso-27001-new.png';
 import iso27018 from '../../../public/images/compliances/iso27018-logo.webp';
-import soc2 from '../../../public/images/compliances/soc2-logo.webp';
-import gdpr from '../../../public/images/compliances/gdpr-logo.webp';
-import hipaa from '../../../public/images/compliances/hipaa-logo.webp';
-import ccpa from '../../../public/images/compliances/ccpa-logo.webp';
-import nist from '../../../public/images/compliances/nist-logo.webp';
-import pcidss from '../../../public/images/compliances/pcidss-logo.webp';
-import iso22301 from '../../../public/images/compliances/iso22301-logo.webp';
-import iso20000 from '../../../public/images/compliances/iso20000-1-logo.webp';
+import soc2 from '../compliance/images/SOC2.png';
+import gdpr from '../compliance/images/GDPR.png';
+import hipaa from '../compliance/images/HIPAA-COMPLIANT.png';
+import ccpa from '../compliance/images/CCPA.png';
+import nist from '../compliance/images/NIST-171.png';
+import pcidss from '../compliance/images/PCI-DSS.png';
+import iso22301 from '../compliance/images/ISO-20000.png';
+import iso20000 from '../compliance/images/ISO-20000.png';
 import iso27701 from '../../../public/images/compliances/iso27701-logo.webp';
-import dora from '../../../public/images/compliances/dora-logo.webp';
+import dora from '../../../public/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
 
 import { StaticImageData } from 'next/image';
 

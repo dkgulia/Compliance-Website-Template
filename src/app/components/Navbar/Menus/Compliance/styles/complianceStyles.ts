@@ -3,7 +3,7 @@ const complianceStyles = {
 		display: 'flex',
 		flexDirection: 'column',
 		width: '100%',
-		backgroundColor: 'white',
+		backgroundColor: '#121212',
 		padding: '1rem',
 		maxHeight: 'calc(100vh - 8rem)',
 		overflowY: 'auto',
@@ -16,12 +16,12 @@ const complianceStyles = {
 	sectionTitle: {
 		fontSize: '1.3rem',
 		fontWeight: 600,
-		color: '#333333',
+		color: '#f9fafb',
 		marginBottom: '1rem',
 	},
 	sectionDescription: {
 		fontSize: '0.875rem',
-		color: '#666666',
+		color: '#9ca3af',
 		lineHeight: 1.5,
 		maxWidth: '800px',
 	},
@@ -37,15 +37,15 @@ const complianceStyles = {
 		height: '100%',
 		transition: 'all 0.2s ease',
 		'&:hover': {
-			backgroundColor: '#EBF5FF',
-			boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+			backgroundColor: '#1f1f1f',
+			boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
 		},
 	},
 	iconContainer: {
 		width: '3rem',
 		height: '3rem',
 		display: 'flex',
-		backgroundColor: '#f5f7fa',
+		backgroundColor: '#1f1f1f',
 		borderRadius: '0.25rem',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -59,7 +59,7 @@ const complianceStyles = {
 	itemTitle: {
 		fontSize: '0.9rem',
 		fontWeight: 500,
-		color: '#333',
+		color: '#f9fafb',
 	},
 };
 

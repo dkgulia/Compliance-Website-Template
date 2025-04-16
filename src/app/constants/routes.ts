@@ -8,3 +8,4 @@ export const WORKSTATION = '/workstations';
 export const SERVICES = '/services';
 export const BLOG = '/blog';
 export const TALK_TO_AN_EXPERT = '/talk-to-an-expert';
+export const COMPLIANCE = '/compliance';

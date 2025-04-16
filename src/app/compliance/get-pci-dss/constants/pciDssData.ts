@@ -15,16 +15,16 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-import secureTransactionsIcon from '../images/a-minimalist-padlock-with-a-credit-card-behind-it-.png';
-import boostCustomerTrustIcon from '../images/a-handshake-between-a-business-and-customer-with-a.png';
-import unifiedComplianceIcon from '../images/multiple-security-framework-icons-or-documents-con.png';
-import reducedLiabilityIcon from '../images/a-shield-with-a-downward-trending-arrow-or-a-credi.png';
+import secureTransactionsIcon from '../images/a-shield-with-a-credit-card-or-padlock-symbol.png';
+import boostCustomerTrustIcon from '../images/a-handshake-or-trust-badge-with-a-checkmark-.png';
+import unifiedComplianceIcon from '../images/connected-documents-or-unified-framework-symbols.png';
+import reducedLiabilityIcon from '../images/a-downward-arrow-with-a-dollar-sign-or-reduced-ris.png';
 
-import scopeGapAnalysisIcon from '../images/a-magnifying-glass-examining-a-document-with-check.png';
-import remediateDocumentIcon from '../images/a-padlock-or-security-icon-next-to-a-document-with.png';
-import implementControlsIcon from '../images/a-shield-with-a-checkmark-and-security-elements-li.png';
-import externalScanTestingIcon from '../images/a-computer-screen-or-network-diagram-with-scan-lin.png';
-import attestationReportingIcon from '../images/a-document-with-a-seal-or-signature-and-a-checkmar.png';
+import scopeGapAnalysisIcon from '../images/a-magnifying-glass-examining-a-network-diagram-or-.png';
+import remediateDocumentIcon from '../images/a-wrench-tool-fixing-a-document-or-a-patched-docum.png';
+import implementControlsIcon from '../images/-shield-with-settings-sliders-or-security-controls (1).png';
+import externalScanTestingIcon from '../images/a-radar-scan-symbol-with-checkmarks-or-a-testing-v (1).png';
+import attestationReportingIcon from '../images/checklist.png';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import { StaticImageData } from 'next/image';
 
@@ -53,7 +53,7 @@ interface PciDssHeroBullet {
 	title?: string;
 }
 
-interface PciDssHowIgniPCHelpsStep {
+interface PciDssHowHexafortHelpsStep {
 	text: string;
 	icon: SvgIconComponent;
 	color: string;
@@ -101,10 +101,10 @@ const pciDssData = {
 
 	featuresHeading: 'Key Benefits of PCI DSS Compliance',
 
-	howIgniPCHelpsTitle: 'How Hexafort Helps You Get PCI DSS Compliant',
-	howIgniPCHelpsSubtitle:
+	PciDssHowHexafortHelps: 'How Hexafort Helps You Get PCI DSS Compliant',
+	howHexafortHelpsSubtitle:
 		'Our structured approach streamlines complex PCI DSS mandates, ensuring a secure environment for handling payment data.',
-	howIgniPCHelpsSteps: [
+		howHexafortHelpsSteps: [
 		{
 			text: 'Identify and scope your cardholder data environment',
 			icon: CreditCardIcon,
