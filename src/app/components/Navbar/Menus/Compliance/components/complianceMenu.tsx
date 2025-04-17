@@ -46,8 +46,8 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 								<Image
 									src={item.logo}
 									alt={item.title}
-									width={24}
-									height={24}
+									width={35}
+									height={35}
 									style={{ maxWidth: '100%', height: 'auto' }}
 								/>
 							</Box>

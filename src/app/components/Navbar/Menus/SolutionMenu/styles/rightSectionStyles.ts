@@ -42,9 +42,7 @@ const rightSectionStyles = {
 		display: 'flex',
 		alignItems: 'center',
 		fontWeight: 500,
-		'&:hover': {
-			textDecoration: 'underline',
-		},
+		
 	},
 	linkIcon: {
 		fontSize: '1.25rem',

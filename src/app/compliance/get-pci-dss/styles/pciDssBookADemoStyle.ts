@@ -2,8 +2,10 @@ import theme from '../../../../theme';
 
 const pciDssBookADemoStyle = {
 	box: {
-	    padding: { xs: '2rem 0', sm: '4rem 0' },
+	    padding: { xs: '2rem 0', sm: '3rem 0' },
 	    backgroundColor: theme.palette.background.default,
+	    paddingTop: { sm: '3rem', xs: '2rem',md:'1rem' },
+
 	},
 	container: {
 	    display: 'flex',
@@ -45,7 +47,7 @@ const pciDssBookADemoStyle = {
 	tagline: {
 	    display: 'inline-block',
 	    background: theme.palette.primary.main,
-	    color: theme.palette.text.primary,
+	    color: '#fffff',
 	    fontWeight: 'bold',
 	    padding: '0.5rem 1.5rem',
 	    borderRadius: '2rem',
@@ -79,7 +81,7 @@ const pciDssBookADemoStyle = {
 	},
 	button: {
 	    background: theme.palette.primary.main,
-	    color: theme.palette.text.primary,
+	    color: '#fffff',
 	    fontWeight: 'bold',
 	    padding: '0.75rem 2rem',
 	    borderRadius: '0.5rem',

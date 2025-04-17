@@ -10,7 +10,7 @@ const painPointStyle = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		margin: '0',
-		background: theme.customGradients?.heroBackground || 'linear-gradient(180deg, #000000 0%, #050505 100%)',
+		background: theme.palette.background.default,
 	},
 	contentBox: {
 		maxWidth: '50rem',
@@ -22,11 +22,11 @@ const painPointStyle = {
 	headline: {
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
-		textShadow: '1px 1px 2px rgba(0,0,0,0.6)',
 		fontSize: { xs: '1.5rem', sm: '2rem' },
 		marginBottom: '1.5rem',
 	},
 	bulletList: {
+
 		paddingLeft: 0,
 		listStyle: 'none',
 		marginBottom: '2rem',
@@ -35,10 +35,9 @@ const painPointStyle = {
 		display: 'flex',
 		flexDirection: { xs: 'column', sm: 'row' },
 		alignItems: { xs: 'flex-start', sm: 'center' },
-		background: theme.palette.background.paper,
+		backgroundColor: theme.palette.background.paper,
 		padding: '1rem',
 		borderRadius: '0.5rem',
-		boxShadow: theme.customShadows?.card || '0px 2px 6px rgba(0, 0, 0, 0.2)',
 		textAlign: 'left',
 		gap: '0.8rem',
 		marginBottom: '1rem',

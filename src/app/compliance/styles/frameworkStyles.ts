@@ -2,13 +2,13 @@ import theme from '../../../theme';
 
 const frameworkStyles = {
 	container: {
-		backgroundColor: theme.palette.background.default,
+		backgroundColor: theme.palette.background.default, 
 		color: theme.palette.text.primary,
 		padding: '2rem 0',
 		fontFamily: '"Roboto", sans-serif',
 	},
 	heroSection: {
-		background: theme.customGradients?.primary || 'linear-gradient(to right, #14b8a6, #5eead4)',
+		background: theme.palette.background.default,
 		textAlign: 'center',
 		padding: '4rem 2rem',
 	},
@@ -39,23 +39,22 @@ const frameworkStyles = {
 	},
 	hurdlesSection: {
 		padding: '2rem 0',
-		backgroundColor: theme.palette.background.paper,
+		backgroundColor: theme.palette.background.default,
 	},
 	hurdlesGrid: {
 		justifyContent: 'center',
 	},
 	hurdleCard: {
-		backgroundColor: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		padding: '1.5rem',
 		borderRadius: '8px',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.3)',
+		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
 		textAlign: 'center',
-		backdropFilter: 'blur(10px)',
-		border: '1px solid rgba(38, 38, 38, 0.6)',
+		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.02)',
-			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.4)',
+			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.15)',
 		},
 	},
 	hurdleTitle: {
@@ -73,17 +72,16 @@ const frameworkStyles = {
 		backgroundColor: theme.palette.background.default,
 	},
 	costCard: {
-		backgroundColor: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		padding: '1.5rem',
 		borderRadius: '8px',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.3)',
+		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
 		textAlign: 'center',
-		backdropFilter: 'blur(10px)',
-		border: '1px solid rgba(38, 38, 38, 0.6)',
+		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.02)',
-			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.4)',
+			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.15)',
 		},
 	},
 	costIcon: {
@@ -99,17 +97,16 @@ const frameworkStyles = {
 		padding: '2rem 0',
 	},
 	relatedCard: {
-		backgroundColor: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		padding: '1.5rem',
 		borderRadius: '8px',
 		textAlign: 'center',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.3)',
-		backdropFilter: 'blur(10px)',
-		border: '1px solid rgba(38, 38, 38, 0.6)',
+		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
+		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.02)',
-			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.4)',
+			boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.15)',
 		},
 	},
 	relatedLogo: {
@@ -132,13 +129,12 @@ const frameworkStyles = {
 		fontWeight: 'bold',
 		borderRadius: '24px',
 		textTransform: 'none',
-		background: theme.customGradients?.button || 'linear-gradient(to right, #14b8a6, #2dd4bf)',
-		color: theme.palette.text.primary,
+		background: theme.customGradients?.button || 'linear-gradient(to right, #000000, #212121)',
+		color: '#ffffff',
 		'&:hover': {
-			background: theme.customGradients?.buttonHover || 'linear-gradient(to right, #0f766e, #14b8a6)',
+			background: theme.customGradients?.buttonHover || 'linear-gradient(to right, #212121, #000000)',
 			boxShadow: theme.customShadows?.button,
 		},
 	},
 };
-
 export default frameworkStyles;

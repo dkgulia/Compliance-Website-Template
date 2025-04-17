@@ -97,8 +97,8 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								sx={heroSectionStyle.formInput}
 							/>
 							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                                {touched.fullName && errors.fullName}
-                            </FormHelperText>
+								{touched.fullName && errors.fullName}
+							</FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -114,9 +114,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								value={values.email}
 								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                                {touched.email && errors.email}
-                            </FormHelperText>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.email && errors.email}</FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -130,18 +128,14 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 									sx={heroSectionStyle.checkbox}
 								/>
 							}
-							label={
-								<Typography>
-									I agree to the terms and conditions.
-								</Typography>
-							}
+							label={<Typography sx={{ color: theme.palette.text.primary }}>I agree to the terms and conditions.</Typography>}
 						/>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
 						<Typography sx={heroSectionStyle.secondaryText}>
-							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted by
-							you above as per our{' '}
+							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted
+							by you above as per our{' '}
 							{/* <Link href="/privacy-policy" target="_blank" style={{ color: theme.palette.primary.main }}>
 								Privacy Policy
 							</Link> */}
@@ -150,11 +144,13 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
 					<Grid size={{ xs: 12 }}>
 						<Button
-							type="button"
+							type="submit"
 							fullWidth
+							variant="contained"
 							sx={heroSectionStyle.button}
 							// onClick={handleClick}
 							disabled={loading || !isChecked}
+							disableElevation
 						>
 							{loading ? 'Submitting...' : 'Submit'}
 						</Button>

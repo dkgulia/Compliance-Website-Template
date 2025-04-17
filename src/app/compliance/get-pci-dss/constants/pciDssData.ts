@@ -108,42 +108,42 @@ const pciDssData = {
 		{
 			text: 'Identify and scope your cardholder data environment',
 			icon: CreditCardIcon,
-			color: '#FF9800',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Analyze existing security controls and remediate gaps',
 			icon: SecurityIcon,
-			color: '#F44336',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Implement robust encryption and secure network segments',
 			icon: LockIcon,
-			color: '#4CAF50',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Leverage continuous monitoring & automated checks',
 			icon: VerifiedUserIcon,
-			color: '#2196F3',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Conduct periodic assessments, scanning, and testing',
 			icon: AssessmentIcon,
-			color: '#3F51B5',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Prepare QSA or SAQ documentation for validation',
 			icon: AssignmentTurnedInIcon,
-			color: '#673AB7',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Attain PCI DSS certification & maintain compliance',
 			icon: CheckCircleIcon,
-			color: '#009688',
+			color: '#14b8a6',
 		},
 		{
 			text: 'Establish an incident response plan for breach readiness',
 			icon: ReportProblemIcon,
-			color: '#E91E63',
+			color: '#14b8a6',
 		},
 	],
 

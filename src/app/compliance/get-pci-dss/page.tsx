@@ -31,15 +31,15 @@ const Page = () => {
 
 			<PciDssFeaturesSection />
 
-			<PciDssBanner />
-
 			<PciDssHowHexafortHelpsStyle />
+
+			<PciDssBanner />
 
 			<PciDssComplianceHub />
 
-			<PciDssWorkflowSection />
-
 			<PciDssBookADemo />
+
+			<PciDssWorkflowSection />
 
 			<PciDssFaqSection />
 		</>

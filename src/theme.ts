@@ -17,8 +17,8 @@ declare module '@mui/material/styles' {
 			heroBackground: string;
 			cardGradient: string;
 			formBackground: string;
-			darkToBlack: string;
-			blackToDark: string;
+			lightToWhite: string;
+			whiteToLight: string;
 		};
 	}
 	interface ThemeOptions {
@@ -36,8 +36,8 @@ declare module '@mui/material/styles' {
 			heroBackground: string;
 			cardGradient: string;
 			formBackground: string;
-			darkToBlack: string;
-			blackToDark: string;
+			lightToWhite: string;
+			whiteToLight: string;
 		};
 	}
 }
@@ -45,41 +45,41 @@ declare module '@mui/material/styles' {
 const theme = responsiveFontSizes(
 	createTheme({
 		palette: {
-			mode: 'dark',
+			mode: 'light',
 			primary: {
-				main: '#14b8a6',
-				light: '#5eead4',
-				dark: '#0f766e',
+				main: '#000000',
+				light: '#424242',
+				dark: '#000000',
 			},
 			secondary: {
-				main: '#0d9488',
-				light: '#2dd4bf',
-				dark: '#0f766e',
+				main: '#424242',
+				light: '#757575',
+				dark: '#212121',
 			},
 			error: {
-				main: '#f43f5e',
+				main: '#f44336',
 			},
 			warning: {
 				main: '#f59e0b',
 			},
 			info: {
-				main: '#3b82f6',
+				main: '#2196f3',
 			},
 			success: {
-				main: '#10b981',
+				main: '#212121',
 			},
 			background: {
-				default: '#0a0a0a',
-				paper: '#121212',
+				default: '#ffffff',
+				paper: '#f5f5f5',
 			},
 			text: {
-				primary: '#f9fafb',
-				secondary: '#9ca3af',
+				primary: '#000000',
+				secondary: '#424242',
 			},
-			divider: '#262626',
+			divider: '#e0e0e0',
 		},
 		typography: {
-			fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+			fontFamily: '"Figtree", sans-serif',
 			h1: {
 				fontSize: '2.5rem',
 				fontWeight: 500,
@@ -153,28 +153,28 @@ const theme = responsiveFontSizes(
 			borderRadius: 8,
 		},
 		customShadows: {
-			card: '0 10px 30px rgba(0, 0, 0, 0.3)',
-			button: '0 4px 10px rgba(0, 0, 0, 0.25)',
-			navbar: '0 1px 2px rgba(0, 0, 0, 0.3)',
+			card: '0 4px 12px rgba(0, 0, 0, 0.1)',
+			button: '0 2px 8px rgba(0, 0, 0, 0.15)',
+			navbar: '0 1px 3px rgba(0, 0, 0, 0.1)',
 		},
 		customGradients: {
-			primary: 'linear-gradient(to right, #14b8a6, #5eead4)',
-			secondary: 'linear-gradient(to right, #0d9488, #2dd4bf)',
-			main: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
-			button: 'linear-gradient(to right, #14b8a6, #2dd4bf)',
-			buttonHover: 'linear-gradient(to right, #0f766e, #14b8a6)',
-			heroBackground: 'linear-gradient(180deg, #000000 0%, #050505 100%)',
-			cardGradient: 'linear-gradient(145deg, rgba(24, 24, 27, 0.8), rgba(17, 17, 17, 0.8))',
-			formBackground: 'linear-gradient(145deg, rgba(18, 18, 18, 0.7), rgba(10, 10, 10, 0.7))',
-			darkToBlack: 'linear-gradient(to bottom, #0a0a0a, #000000)',
-			blackToDark: 'linear-gradient(to top, #0a0a0a, #000000)',
+			primary: 'linear-gradient(to right, #000000, #424242)',
+			secondary: 'linear-gradient(to right, #212121, #424242)',
+			main: 'linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%)',
+			button: 'linear-gradient(to right, #000000, #212121)',
+			buttonHover: 'linear-gradient(to right, #212121, #000000)',
+			heroBackground: 'linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%)',
+			cardGradient: 'linear-gradient(145deg, rgba(250, 250, 250, 0.8), rgba(245, 245, 245, 0.8))',
+			formBackground: 'linear-gradient(145deg, rgba(250, 250, 250, 0.7), rgba(240, 240, 240, 0.7))',
+			lightToWhite: 'linear-gradient(to bottom, #f5f5f5, #ffffff)',
+			whiteToLight: 'linear-gradient(to top, #f5f5f5, #ffffff)',
 		},
 		components: {
 			MuiCard: {
 				styleOverrides: {
 					root: {
-						backgroundColor: 'transparent',
-						border: '1px solid rgba(38, 38, 38, 0.6)',
+						backgroundColor: '#f5f5f5',
+						border: '1px solid rgba(224, 224, 224, 0.8)',
 						borderRadius: 8,
 						padding: 16,
 					},
@@ -218,12 +218,19 @@ const theme = responsiveFontSizes(
 					},
 				},
 			},
+			MuiButton: {
+				styleOverrides: {
+					root: {
+						color: '#ffffff',
+					},
+				},
+			},
 		},
 	})
 );
 
 export const monoTextStyle = {
-	fontFamily: '"Roboto Mono", monospace',
+	fontFamily: '"Atkinson Hyperlegible Mono", monospace',
 	fontSize: '0.75rem',
 	fontWeight: 400,
 	lineHeight: 1.66,

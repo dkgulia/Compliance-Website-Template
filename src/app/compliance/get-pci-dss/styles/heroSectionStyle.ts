@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const heroSectionStyle = {
   container: {
-    padding: '5rem 1rem',
+    padding: '4rem 1rem',
     background: theme.palette.background.default,
   },
   containerBox: {
@@ -29,6 +29,7 @@ const heroSectionStyle = {
     width: '100%',
     padding: '2rem',
     border: `1px solid ${theme.palette.divider}`,
+    color: theme.palette.text.primary
   },
   tag: {
     display: 'inline-block',
@@ -38,7 +39,7 @@ const heroSectionStyle = {
     marginBottom: '1rem',
   },
   tagText: {
-    color: theme.palette.text.primary,
+    color: '#ffffff',
     fontWeight: 'bold',
   },
   mainTitle: {
@@ -48,7 +49,7 @@ const heroSectionStyle = {
     color: theme.palette.text.primary,
   },
   highlightText: {
-    color: theme.palette.primary.light,
+    color: theme.palette.text.primary,
   },
   description: {
     fontSize: { xs: '1rem', md: '1.1rem' },
@@ -61,8 +62,8 @@ const heroSectionStyle = {
     flexDirection: 'row',
     justifyContent: { xs: 'space-between', md: 'space-between' },
     alignItems: 'flex-start',
-    gap: { xs: '1rem', md: '1rem' },
-    marginTop: '2rem',
+    gap: { xs: '1rem', md: '5.5rem' },
+    marginTop: '0.5rem',
     width: '100%',
     flexWrap: 'nowrap',
   },
@@ -84,7 +85,7 @@ const heroSectionStyle = {
   },
   featureIcon: {
     fontSize: { xs: '1.8rem', md: '2.5rem' },
-    color: theme.palette.primary.main,
+    color: "#14b8a6",
   },
   featureTextWrapper: {
     display: 'flex',
@@ -105,18 +106,22 @@ const heroSectionStyle = {
   },
   button: {
     marginTop: '1.5rem',
-    color: theme.palette.text.primary,
+    color: '#ffffff',
     fontWeight: 'bold',
     border: 'none',
     padding: '0.8rem 1.5rem',
     borderRadius: '0.5rem',
-    background: theme.palette.primary.main,
+    background: theme.palette.primary.dark,
     '&:hover': {
       background: theme.palette.primary.dark,
       boxShadow: theme.customShadows?.button,
     },
+    '&.Mui-disabled': {
+      color: '#ffffff',
+      opacity: 0.9,
+      backgroundColor: '#000000',
+    }
   },
-  // New styles for form elements
   formLabel: {
     color: theme.palette.text.primary,
     marginBottom: '8px',
@@ -137,6 +142,8 @@ const heroSectionStyle = {
   },
   secondaryText: {
     color: theme.palette.text.secondary,
+    fontSize: '0.875rem',
+    marginTop: '8px',
   },
   gridItem: {
     marginBottom: '16px',

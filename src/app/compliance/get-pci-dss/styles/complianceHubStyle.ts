@@ -1,11 +1,13 @@
 import theme from '../../../../theme';
 
+
 const complianceHubStyle = {
 	box: {
-		paddingTop: { sm: '1.5rem', xs: '1rem' },
-		paddingBottom: { sm: '2rem', xs: '1.5rem' },
+		paddingTop: { sm: '3rem', xs: '2rem',md:'1rem' },
+		paddingBottom: { sm: '2rem', xs: '1.5rem' ,md:'2rem' },
 		marginTop: '0rem',
 		backgroundColor: theme.palette.background.default,
+
 	},
 	container: {
 		position: 'relative' as const,
@@ -15,12 +17,14 @@ const complianceHubStyle = {
 		maxWidth: '75rem',
 		marginX: 'auto',
 		px: { xs: '1rem', sm: '2rem' },
+
 	},
 	containerBox: {
 		width: '100%',
 		textAlign: 'center' as const,
 		marginX: 'auto',
 		marginBottom: '1rem',
+
 	},
 	heading: {
 		fontWeight: '600',
@@ -30,7 +34,7 @@ const complianceHubStyle = {
 	},
 	subHeading: {
 		color: theme.palette.text.secondary,
-		fontSize: '1.1rem',
+		fontSize: '1rem',
 		marginBottom: '1rem',
 	},
 	stepContainer: {
@@ -50,23 +54,25 @@ const complianceHubStyle = {
 		'&:hover': {
 			transform: 'scale(1.03)',
 			boxShadow: '0rem 0.5rem 1.5625rem rgba(0, 0, 0, 0.6)',
-		},
+		}
 	},
 	iconContainer: {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginBottom: '0.5rem',
+
 	},
 	icon: {
 		fontSize: '3rem',
-		color: theme.palette.primary.main,
+		color: "#14b8a6",
 	},
 	textContainer: {
 		display: 'flex',
 		flexDirection: 'column' as const,
 		alignItems: 'center',
 		gap: '0.5rem',
+
 	},
 	title: {
 		fontWeight: 'bold' as const,
@@ -74,6 +80,7 @@ const complianceHubStyle = {
 		fontSize: '1.1rem',
 	},
 	description: {
+
 		color: theme.palette.text.secondary,
 		fontSize: '0.9rem',
 		lineHeight: 1.5,

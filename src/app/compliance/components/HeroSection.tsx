@@ -39,6 +39,10 @@ const HeroSection = () => {
 									width={40}
 									height={40}
 									priority
+									style={{
+										filter: 'invert(1)', 
+										height: 'auto',
+									}}
 								/>
 							</Box>
 						</Box>

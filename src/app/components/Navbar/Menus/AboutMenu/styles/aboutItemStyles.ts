@@ -18,7 +18,7 @@ const aboutItemStyles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginRight: '0.75rem',
-		backgroundColor: '#1f1f1f',
+		backgroundColor: '#f5f5f5',
 		borderRadius: '0.25rem',
 		'& svg': {
 			color: '#14b8a6',
@@ -28,7 +28,7 @@ const aboutItemStyles = {
 	itemText: {
 		fontSize: '0.95rem',
 		fontWeight: 500,
-		color: '#f9fafb',
+		color: 'black',
 	},
 	knowMoreButton: {
 		marginTop: 'auto',
@@ -38,10 +38,7 @@ const aboutItemStyles = {
 		fontSize: '0.875rem',
 		padding: '0.5rem 0',
 		justifyContent: 'flex-start',
-		'&:hover': {
-			backgroundColor: 'transparent',
-			color: '#5eead4',
-		},
+		
 	},
 };
 

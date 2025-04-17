@@ -2,7 +2,6 @@ import theme from '../../../../theme';
 
 const featuresSectionStyle = {
 	box: {
-		paddingTop: { sm: '1.5rem', xs: '1rem' },
 		paddingBottom: { sm: '2rem', xs: '1.5rem' },
 		marginTop: '0rem',
 		backgroundColor: theme.palette.background.default,
@@ -35,7 +34,7 @@ const featuresSectionStyle = {
 		backgroundColor: theme.palette.background.paper,
 		borderRadius: '1rem',
 		boxShadow: theme.customShadows?.card,
-		height: { sm: '18rem', xs: '14rem' },
+		height: { sm: '18rem', xs: '14rem',md:'19rem' },
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		justifyContent: 'space-between',
 		border: `1px solid ${theme.palette.divider}`,

@@ -2,8 +2,8 @@ import theme from '../../../../theme';
 
 const faqSectionStyle = {
   box: {
-    paddingTop: { sm: '3rem', xs: '2rem' },
-    paddingBottom: { sm: '4rem', xs: '3rem' },
+    paddingTop: { sm: '3rem', xs: '2rem',md:'1rem' },
+    paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
   section: {

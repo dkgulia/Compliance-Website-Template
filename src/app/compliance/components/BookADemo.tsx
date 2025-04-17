@@ -58,7 +58,7 @@ const BookADemo = () => {
 							maxWidth: '100%',
 							height: 'auto',
 							borderRadius: '16px',
-							boxShadow: '0px 6px 20px rgba(0, 0, 0, 0.4)',
+							
 						}}
 						priority
 					/>

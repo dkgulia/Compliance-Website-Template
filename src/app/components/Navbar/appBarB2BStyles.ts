@@ -1,6 +1,6 @@
 const appBarB2BStyles = {
 	appBar: {
-		backgroundColor: '#0a0a0a',
+		backgroundColor: '#fffff',
 		position: 'fixed',
 		zIndex: 10,
 		boxShadow: 'none',
@@ -57,23 +57,23 @@ const appBarB2BStyles = {
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
 		transition: 'all 0.2s ease',
-		'&:hover': {
-			backgroundColor: 'transparent',
-			borderBottom: '0.25rem solid rgba(255, 255, 255, 0.5)',
-		},
+		// '&:hover': {
+		// 	backgroundColor: 'white',
+		// 	borderBottom: '0.25rem solid rgba(255, 255, 255, 0.5)',
+		// },
 	},
 	activeNavButton: {
-		color: '#f9fafb',
+		color: 'white',
 		fontSize: { xs: '0.875rem', md: '1rem' },
 		textTransform: 'none',
-		borderBottom: '0.25rem solid #14b8a6',
+		borderBottom: '0.25rem solid white',
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
 		transition: 'all 0.2s ease',
-		'&:hover': {
-			backgroundColor: 'transparent',
-			borderBottom: '0.25rem solid #5eead4',
-		},
+		// '&:hover': {
+		// 	backgroundColor: 'transparent',
+		// 	borderBottom: '0.25rem solid white',
+		// },
 	},
 	dropdownIcon: {
 		fontSize: '1.2rem',

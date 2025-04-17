@@ -1,5 +1,6 @@
 import theme from '../../../../theme';
 
+
 const PciDssHowHexafortHelpsStyle = {
 	box: {
 		paddingTop: { sm: '1.5rem', xs: '1rem' },
@@ -22,7 +23,7 @@ const PciDssHowHexafortHelpsStyle = {
 	},
 	subtitle: {
 		color: theme.palette.text.secondary,
-		fontSize: '1.1rem',
+		fontSize: '1rem',
 		marginBottom: '2rem',
 		lineHeight: '1.6rem',
 		maxWidth: '40rem',
@@ -50,7 +51,7 @@ const PciDssHowHexafortHelpsStyle = {
 		display: 'flex',
 		alignItems: 'center',
 		textAlign: 'left' as const,
-		padding: '1rem',
+		padding: '0rem',
 	},
 	cardText: {
 		fontSize: '1rem',

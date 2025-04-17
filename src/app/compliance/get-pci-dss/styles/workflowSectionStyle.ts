@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const workflowSectionStyle = {
 	box: {
-		paddingTop: { sm: '1.5rem', xs: '1rem' },
+		paddingTop: { sm: '3rem', xs: '2rem',md:'1rem' },
 		paddingBottom: { sm: '2rem', xs: '1.5rem' },
 		marginTop: '0rem',
 		backgroundColor: theme.palette.background.default,
@@ -51,7 +51,7 @@ const workflowSectionStyle = {
 	},
 	chip: {
 		background: theme.palette.primary.main,
-		color: theme.palette.text.primary,
+		color: '#fffff',
 		fontWeight: 'bold',
 		borderRadius: '1rem',
 		padding: '0.4rem 1rem',
@@ -90,7 +90,7 @@ const workflowSectionStyle = {
 		backgroundColor: theme.palette.background.default,
 		borderRadius: '1rem',
 		boxShadow: theme.customShadows?.card,
-		padding: '1.5rem',
+		padding: '2rem',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
 		'&:hover': {

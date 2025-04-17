@@ -6,7 +6,7 @@ const whyUsStyles = {
 		color: theme.palette.text.primary,
 		paddingTop: '1rem',
 		paddingBottom: '1rem',
-		background: theme.customGradients?.heroBackground || 'linear-gradient(180deg, #000000 0%, #050505 100%)',
+		background: theme.palette.background.default,
 	},
 	container: {
 		display: 'flex',
@@ -18,7 +18,7 @@ const whyUsStyles = {
 	card: {
 		padding: '1.5rem',
 		textAlign: 'center',
-		background: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		backdropFilter: 'blur(10px)',
 		borderRadius: '12px',
 		boxShadow: theme.customShadows?.card || '0px 4px 8px rgba(0, 0, 0, 0.3)',
@@ -51,7 +51,6 @@ const whyUsStyles = {
 		alignItems: 'center',
 	},
 	iconContainer: {
-		backgroundColor: theme.palette.background.default,
 		borderRadius: '50%',
 		width: 70,
 		height: 70,
@@ -59,7 +58,6 @@ const whyUsStyles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginBottom: '1rem',
-		boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.3)',
 	},
 	typography: {
 		title: {

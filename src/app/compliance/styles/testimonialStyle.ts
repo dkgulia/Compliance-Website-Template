@@ -2,7 +2,7 @@ import theme from '../../../theme';
 
 const testimonialsCarouselStyles = {
 	box:{
-		background: theme.customGradients?.blackToDark || 'linear-gradient(to top, #0a0a0a, #000000)',
+		background: theme.palette.background.default,
 		paddingTop: '1.5rem',
 		paddingBottom: '3rem',
 	},
@@ -16,7 +16,6 @@ const testimonialsCarouselStyles = {
 	sectionTitle: {
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
-		textShadow: '1px 1px 2px rgba(0,0,0,0.4)',
 		textAlign: 'center',
 		fontSize: { xs: '1.5rem', sm: '2rem' },
 		marginBottom: '1.5rem',
@@ -35,22 +34,18 @@ const testimonialsCarouselStyles = {
 	testimonialCard: {
 		width: '100%',
 		maxWidth: 320,
-		height: 600,
+		height: 650,
 		borderRadius: '16px',
-		background: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		backdropFilter: 'blur(10px)',
 		padding: '2rem',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		boxShadow: theme.customShadows?.card || '0px 4px 10px rgba(0, 0, 0, 0.3)',
 		textAlign: 'center',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-		'&:hover': {
-			transform: 'scale(1.05)',
-			boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.6)',
-		},
+	
 	},
 	quoteIcon: {
 		fontSize: '2.5rem',

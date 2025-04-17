@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const complianceStyles = {
 	box: {
 		py: { xs: 2, sm: 2 },
-		background: theme.customGradients?.heroBackground || 'linear-gradient(180deg, #000000 0%, #050505 100%)',
+		background: theme.palette.background.default,
 		color: theme.palette.text.primary,
 		paddingTop: '2rem',
 		paddingBottom: '2rem',
@@ -23,7 +23,6 @@ const complianceStyles = {
 	heading: {
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
-		textShadow: '1px 1px 2px rgba(0,0,0,0.4)',
 		fontSize: { xs: '1.5rem', sm: '2rem' },
 	},
 	card: {
@@ -35,7 +34,7 @@ const complianceStyles = {
 		height: '100%',
 		width: '100%',
 		minHeight: 160,
-		background: 'rgba(18, 18, 18, 0.6)',
+		backgroundColor: theme.palette.background.paper,
 		backdropFilter: 'blur(10px)',
 		borderRadius: '15px',
 		boxShadow: theme.customShadows?.card || '0px 6px 20px rgba(0, 0, 0, 0.4)',
@@ -43,9 +42,9 @@ const complianceStyles = {
 		'&:hover': {
 			transform: 'scale(1.05)',
 			boxShadow: '0rem 0.5rem 1.25rem rgba(0, 0, 0, 0.6)',
-			background: 'rgba(24, 24, 27, 0.6)',
+
 		},
-		border: '1px solid rgba(38, 38, 38, 0.6)',
+
 	},
 	logoImageWrapper: {
 		position: 'relative',
@@ -61,7 +60,7 @@ const complianceStyles = {
 			fontWeight: 'bold',
 			fontSize: '1.2rem',
 			color: theme.palette.text.primary,
-			textShadow: '1px 1px 2px rgba(0, 0, 0, 0.4)',
+			
 		},
 		body: {
 			color: theme.palette.text.secondary,
