@@ -1,16 +1,14 @@
 import theme from '../../../../theme';
 
-
 const bannerStyle = {
 	box: {
 		paddingTop: { sm: '1.5rem', xs: '1rem' },
 		paddingBottom: { sm: '2rem', xs: '1.5rem' },
 		marginTop: '0rem',
-		// marginX: { xs: '1rem', sm: '0rem' },
 		backgroundColor: theme.palette.background.default,
 	},
 	bannerContainer: {
-		background: theme.palette.background.paper,
+		background: '#17171799',
 		borderRadius: '2rem',
 		width: '100%',
 		maxWidth: '72rem',
@@ -18,6 +16,7 @@ const bannerStyle = {
 		padding: { xs: '2rem', sm: '3rem' },
 		boxShadow: theme.customShadows?.card,
 		overflow: 'hidden',
+		border: `1px solid ${theme.palette.divider}`,
 	},
 	imageContainer: {
 		display: 'flex',
@@ -31,7 +30,7 @@ const bannerStyle = {
 	},
 	titleSection: {
 		width: '100%',
-		marginTop:'1rem'
+		marginTop: '1rem',
 	},
 	descriptionSection: {
 		width: '100%',
@@ -47,26 +46,38 @@ const bannerStyle = {
 		lineHeight: 1.3,
 	},
 	description: {
-
-		color: theme.palette.text.secondary,
+		color: '#6b7280',
 		fontSize: { xs: '1rem', md: '1rem' },
 		lineHeight: '1.6',
 		width: '100%',
 		marginBottom: { xs: '1.5rem', md: '0' },
 	},
 	button: {
-		fontWeight: 'bold',
-		padding: '0.8rem 1.5rem',
-		borderRadius: '0.5rem',
-		color: '#ffffff',
-		background: theme.palette.primary.main,
-		boxShadow: theme.customShadows?.button,
-		'&:hover': {
-			background: theme.palette.primary.dark,
-			boxShadow: '0 6px 15px rgba(0, 0, 0, 0.15)',
-			transform: 'translateY(-0.125rem)',
+		marginTop: '1.5rem',
+		color: '#f9fafb',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
 		},
-		width: { xs: '100%', sm: 'auto' },
+		borderRadius: '0.5rem',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		textTransform: 'none',
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
+		'&:hover': {
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
+		},
+		'&.Mui-disabled': {
+			color: '#f9fafb',
+			opacity: 0.5,
+			backgroundColor: '#1f2937',
+			border: '1px solid #374151',
+		},
 	},
 	iconWrapper: {
 		width: { xs: '180px', md: '450px' },
@@ -75,6 +86,7 @@ const bannerStyle = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+		filter: 'brightness(0.9) contrast(1.1)',
 	},
 	icon: {
 		fontSize: '2.5rem',

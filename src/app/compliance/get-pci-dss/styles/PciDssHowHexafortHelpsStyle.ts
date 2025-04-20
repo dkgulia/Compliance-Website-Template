@@ -1,5 +1,5 @@
 import theme from '../../../../theme';
-
+import { monoTextStyle } from '../../../../theme';
 
 const PciDssHowHexafortHelpsStyle = {
 	box: {
@@ -17,12 +17,12 @@ const PciDssHowHexafortHelpsStyle = {
 		fontWeight: '600',
 		fontSize: { xs: '1.6rem', sm: '2rem' },
 		marginTop: '1rem',
-		marginBottom: '1.5rem',
+		marginBottom: '1rem',
 		letterSpacing: '-0.5px',
 		color: theme.palette.text.primary,
 	},
 	subtitle: {
-		color: theme.palette.text.secondary,
+		color: "#6b7280",
 		fontSize: '1rem',
 		marginBottom: '2rem',
 		lineHeight: '1.6rem',
@@ -35,29 +35,40 @@ const PciDssHowHexafortHelpsStyle = {
 	card: {
 		display: 'flex',
 		alignItems: 'center',
-		background: theme.palette.background.paper,
+		background: '#17171799',
 		borderRadius: '12px',
 		border: `1px solid ${theme.palette.divider}`,
 		boxShadow: theme.customShadows?.card,
 		transition: 'transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease',
 		marginBottom: '1rem',
-		'&:hover': {
-			transform: 'translateY(-0.25rem)',
-			boxShadow: '0rem 0.5rem 1.5625rem rgba(0, 0, 0, 0.5)',
-		},
+		padding: '1rem',
 	},
 	cardContent: {
 		width: '100%',
 		display: 'flex',
 		alignItems: 'center',
 		textAlign: 'left' as const,
-		padding: '0rem',
+	},
+	iconContainer: {
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#115e59',
+		borderRadius: '6px',
+		width: '38px',
+		height: '38px',
+		minWidth: '38px',
+		marginRight: '1rem',
+	},
+	icon: {
+		fontSize: '20px',
+		color: '#ffffff',
 	},
 	cardText: {
 		fontSize: '1rem',
 		fontWeight: 500,
 		lineHeight: '1.4rem',
-		color: theme.palette.text.secondary,
+		color: "#6b7280",
 	},
 };
 

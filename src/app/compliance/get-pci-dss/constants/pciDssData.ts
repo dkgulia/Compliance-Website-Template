@@ -15,10 +15,10 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-import secureTransactionsIcon from '../images/a-shield-with-a-credit-card-or-padlock-symbol.png';
+import secureTransactionsIcon from '../images/classic-shield-bearing-a-padlock--indicating-gener.png';
 import boostCustomerTrustIcon from '../images/a-handshake-or-trust-badge-with-a-checkmark-.png';
-import unifiedComplianceIcon from '../images/connected-documents-or-unified-framework-symbols.png';
-import reducedLiabilityIcon from '../images/a-downward-arrow-with-a-dollar-sign-or-reduced-ris.png';
+import unifiedComplianceIcon from '../images/dotted-workflow-line-ending-at-a-shield-with-a-use.png';
+import reducedLiabilityIcon from '../images/a-downward-arrow-with-a-dollar-sign-or-reduced-ris (1).png';
 
 import scopeGapAnalysisIcon from '../images/a-magnifying-glass-examining-a-network-diagram-or-.png';
 import remediateDocumentIcon from '../images/a-wrench-tool-fixing-a-document-or-a-patched-docum.png';
@@ -108,42 +108,42 @@ const pciDssData = {
 		{
 			text: 'Identify and scope your cardholder data environment',
 			icon: CreditCardIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Analyze existing security controls and remediate gaps',
 			icon: SecurityIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Implement robust encryption and secure network segments',
 			icon: LockIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Leverage continuous monitoring & automated checks',
 			icon: VerifiedUserIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Conduct periodic assessments, scanning, and testing',
 			icon: AssessmentIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Prepare QSA or SAQ documentation for validation',
 			icon: AssignmentTurnedInIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Attain PCI DSS certification & maintain compliance',
 			icon: CheckCircleIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 		{
 			text: 'Establish an incident response plan for breach readiness',
 			icon: ReportProblemIcon,
-			color: '#14b8a6',
+			color: 'white',
 		},
 	],
 
@@ -161,7 +161,7 @@ const pciDssData = {
 			icon: VerifiedUserIcon,
 		},
 		{
-			title: 'Implement Access Controls',
+			title: 'Access Controls',
 			description: 'Enforce strong user authentication, least privilege, and proper segmentation.',
 			icon: PolicyIcon,
 		},

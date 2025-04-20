@@ -250,7 +250,7 @@ const AppBarB2B: React.FC = () => {
 				<Toolbar sx={styles.toolbar}>
 					<Box sx={styles.navContainer}>
 						<Box sx={styles.logoContainer}>
-							<Image src={LogoImage} alt="hexafort Logo" width={90} height={45} style={styles.logoImage} />
+							<Image src={LogoImage} alt="hexafort Logo" width={32} height={32} style={styles.logoImage} />
 						</Box>
 
 						<Box sx={styles.navItems}>

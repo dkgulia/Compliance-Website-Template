@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Container, Grid, Typography, Card, Stack } from '@mui/material';
+import { Box, Container, Grid, Typography, Card } from '@mui/material';
 import PciDssHowHexafortHelpsStyle from '../styles/PciDssHowHexafortHelpsStyle';
 import pciDssData from '../constants/pciDssData';
 
@@ -20,20 +20,15 @@ const PciDssHowHexafortHelps = () => {
 					{pciDssData.howHexafortHelpsSteps.map((step, index) => (
 						<Grid size={{ xs: 12, sm: 6, md: 6 }} key={index}>
 							<Card variant="outlined" sx={PciDssHowHexafortHelpsStyle.card}>
-								<Stack
-									direction="row"
-									alignItems="center"
-									justifyContent="flex-start"
-									spacing={2}
-									sx={PciDssHowHexafortHelpsStyle.cardContent}
-								>
-									<Box sx={{ color: step.color, fontSize: '2rem', minWidth: '32px' }}>
-										<step.icon />
+								<Box sx={PciDssHowHexafortHelpsStyle.cardContent}>
+									<Box sx={PciDssHowHexafortHelpsStyle.iconContainer}>
+										<step.icon sx={PciDssHowHexafortHelpsStyle.icon} />
 									</Box>
+
 									<Typography variant="body1" sx={PciDssHowHexafortHelpsStyle.cardText}>
 										{step.text}
 									</Typography>
-								</Stack>
+								</Box>
 							</Card>
 						</Grid>
 					))}

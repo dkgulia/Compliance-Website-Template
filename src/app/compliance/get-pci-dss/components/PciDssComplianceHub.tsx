@@ -17,7 +17,7 @@ const PciDssComplianceHub: React.FC = () => {
 					</Typography>
 				</Box>
 
-				<Grid container spacing={4}>
+				<Grid container spacing={2}>
 					{pciDssData.complianceHubItems.map((item, i) => {
 						const IconComp = item.icon;
 						return (
@@ -26,6 +26,7 @@ const PciDssComplianceHub: React.FC = () => {
 									<Box sx={complianceHubStyle.iconContainer}>
 										<IconComp sx={complianceHubStyle.icon} />
 									</Box>
+
 									<Box sx={complianceHubStyle.textContainer}>
 										<Typography variant="body1" sx={complianceHubStyle.title}>
 											{item.title}

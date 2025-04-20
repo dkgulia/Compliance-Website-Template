@@ -45,16 +45,16 @@ declare module '@mui/material/styles' {
 const theme = responsiveFontSizes(
 	createTheme({
 		palette: {
-			mode: 'light',
+			mode: 'dark',
 			primary: {
-				main: '#000000',
-				light: '#424242',
-				dark: '#000000',
+				main: '#ffffff',
+				light: '#e0e0e0',
+				dark: '#cccccc',
 			},
 			secondary: {
-				main: '#424242',
-				light: '#757575',
-				dark: '#212121',
+				main: '#5eead4',
+				light: '#115e59',
+				dark: '#42c6b2',
 			},
 			error: {
 				main: '#f44336',
@@ -66,17 +66,17 @@ const theme = responsiveFontSizes(
 				main: '#2196f3',
 			},
 			success: {
-				main: '#212121',
+				main: '#14b8a6',
 			},
 			background: {
-				default: '#ffffff',
-				paper: '#f5f5f5',
+				default: '#101010',
+				paper: '#262626',
 			},
 			text: {
-				primary: '#000000',
-				secondary: '#424242',
+				primary: '#ffffff',
+				secondary: '#a3a3a3',
 			},
-			divider: '#e0e0e0',
+			divider: '#404040',
 		},
 		typography: {
 			fontFamily: '"Figtree", sans-serif',
@@ -153,28 +153,28 @@ const theme = responsiveFontSizes(
 			borderRadius: 8,
 		},
 		customShadows: {
-			card: '0 4px 12px rgba(0, 0, 0, 0.1)',
-			button: '0 2px 8px rgba(0, 0, 0, 0.15)',
-			navbar: '0 1px 3px rgba(0, 0, 0, 0.1)',
+			card: '0 4px 12px rgba(0, 0, 0, 0.4)',
+			button: '0 2px 8px rgba(0, 0, 0, 0.5)',
+			navbar: '0 1px 3px rgba(0, 0, 0, 0.3)',
 		},
 		customGradients: {
-			primary: 'linear-gradient(to right, #000000, #424242)',
-			secondary: 'linear-gradient(to right, #212121, #424242)',
-			main: 'linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%)',
-			button: 'linear-gradient(to right, #000000, #212121)',
-			buttonHover: 'linear-gradient(to right, #212121, #000000)',
-			heroBackground: 'linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%)',
-			cardGradient: 'linear-gradient(145deg, rgba(250, 250, 250, 0.8), rgba(245, 245, 245, 0.8))',
-			formBackground: 'linear-gradient(145deg, rgba(250, 250, 250, 0.7), rgba(240, 240, 240, 0.7))',
-			lightToWhite: 'linear-gradient(to bottom, #f5f5f5, #ffffff)',
-			whiteToLight: 'linear-gradient(to top, #f5f5f5, #ffffff)',
+			primary: 'linear-gradient(to right, #ffffff, #e0e0e0)',
+			secondary: 'linear-gradient(to right, #a3a3a3, #737373)',
+			main: 'linear-gradient(180deg, #171717 0%, #1c1c1c 100%)',
+			button: 'linear-gradient(to right, #ffffff, #e0e0e0)',
+			buttonHover: 'linear-gradient(to right, #e0e0e0, #ffffff)',
+			heroBackground: 'linear-gradient(180deg, #171717 0%, #1f1f1f 100%)',
+			cardGradient: 'linear-gradient(145deg, rgba(38, 38, 38, 0.8), rgba(30, 30, 30, 0.8))',
+			formBackground: 'linear-gradient(145deg, rgba(38, 38, 38, 0.7), rgba(30, 30, 30, 0.7))',
+			lightToWhite: 'linear-gradient(to bottom, #333333, #262626)',
+			whiteToLight: 'linear-gradient(to top, #333333, #262626)',
 		},
 		components: {
 			MuiCard: {
 				styleOverrides: {
 					root: {
-						backgroundColor: '#f5f5f5',
-						border: '1px solid rgba(224, 224, 224, 0.8)',
+						backgroundColor: '#262626',
+						border: '1px solid rgba(64, 64, 64, 0.8)',
 						borderRadius: 8,
 						padding: 16,
 					},
@@ -221,7 +221,7 @@ const theme = responsiveFontSizes(
 			MuiButton: {
 				styleOverrides: {
 					root: {
-						color: '#ffffff',
+						color: '#171717',
 					},
 				},
 			},

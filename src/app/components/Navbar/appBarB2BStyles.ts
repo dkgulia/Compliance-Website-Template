@@ -1,6 +1,6 @@
 const appBarB2BStyles = {
 	appBar: {
-		backgroundColor: '#fffff',
+		backgroundColor: '#101010',
 		position: 'fixed',
 		zIndex: 10,
 		boxShadow: 'none',
@@ -30,8 +30,8 @@ const appBarB2BStyles = {
 		alignItems: 'center',
 	},
 	logoImage: {
-		maxWidth: '50px',
-		height: '50px',
+		maxWidth: '32px',
+		height: '32px',
 	},
 	logoPlus: {
 		color: '#14b8a6',
@@ -51,16 +51,12 @@ const appBarB2BStyles = {
 	},
 	navButton: {
 		color: '#f9fafb',
-		fontSize: { xs: '0.875rem', md: '1.2rem' },
+		fontSize: { xs: '0.875rem', md: '1rem' },
 		textTransform: 'none',
 		borderBottom: '0.25rem solid transparent',
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
 		transition: 'all 0.2s ease',
-		// '&:hover': {
-		// 	backgroundColor: 'white',
-		// 	borderBottom: '0.25rem solid rgba(255, 255, 255, 0.5)',
-		// },
 	},
 	activeNavButton: {
 		color: 'white',
@@ -70,10 +66,6 @@ const appBarB2BStyles = {
 		borderRadius: 0,
 		padding: { xs: '0.75rem 1rem', md: '1rem 1.5rem' },
 		transition: 'all 0.2s ease',
-		// '&:hover': {
-		// 	backgroundColor: 'transparent',
-		// 	borderBottom: '0.25rem solid white',
-		// },
 	},
 	dropdownIcon: {
 		fontSize: '1.2rem',
@@ -95,24 +87,36 @@ const appBarB2BStyles = {
 	talkButton: {
 		color: '#f9fafb',
 		borderRadius: '0.5rem',
-		padding: { xs: '0.375rem 0.75rem', md: '0.5rem 1rem' },
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.25rem 0.5rem',
+		},
 		textTransform: 'none',
-		fontSize: { xs: '0.75rem', md: '0.875rem' },
+		fontSize: '0.75rem',
 		whiteSpace: 'nowrap',
-		border: '1px solid #262626',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		transition: 'background-color 150ms ease',
 		'&:hover': {
-			borderColor: '#f9fafb',
-			backgroundColor: 'rgba(255, 255, 255, 0.1)',
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
 		},
 	},
 	shopButton: {
-		backgroundColor: '#14b8a6',
+		backgroundColor: '#115e59',
 		color: '#f9fafb',
 		borderRadius: '0.5rem',
-		padding: { xs: '0.375rem 0.75rem', md: '0.4rem 1rem' },
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.25rem 0.5rem',
+		},
 		textTransform: 'none',
-		fontSize: { xs: '0.75rem', md: '0.875rem' },
+		fontSize: '0.75rem',
 		whiteSpace: 'nowrap',
+		border: '1px solid #0d9488',
+		transition: 'all 150ms ease',
 		'&:hover': {
 			backgroundColor: '#0f766e',
 		},

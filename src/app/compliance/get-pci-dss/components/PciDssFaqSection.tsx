@@ -1,7 +1,13 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {
+  Box,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
+} from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 import pciDssData from '../constants/pciDssData';
 import faqSectionStyle from '../styles/faqSectionStyle';
 
@@ -13,11 +19,20 @@ const PciDssFaqSection: React.FC = () => {
           Frequently Asked Questions
         </Typography>
 
+        <Typography variant="subtitle1" sx={faqSectionStyle.subtitle}>
+          Your Questions, Our Commitment
+        </Typography>
+
         <Box sx={faqSectionStyle.accordionContainer}>
           {pciDssData.faq.map((item, index) => (
-            <Accordion key={index}>
+            <Accordion
+              key={index}
+              disableGutters
+              elevation={0}
+              sx={faqSectionStyle.accordion}
+            >
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<AddIcon sx={faqSectionStyle.expandIcon} />}
                 aria-controls={`panel${index}-content`}
                 id={`panel${index}-header`}
                 sx={faqSectionStyle.accordionSummary}

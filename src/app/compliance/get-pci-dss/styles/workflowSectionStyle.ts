@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const workflowSectionStyle = {
 	box: {
-		paddingTop: { sm: '3rem', xs: '2rem',md:'1rem' },
+		paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
 		paddingBottom: { sm: '2rem', xs: '1.5rem' },
 		marginTop: '0rem',
 		backgroundColor: theme.palette.background.default,
@@ -20,7 +20,7 @@ const workflowSectionStyle = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		textAlign: 'center' as const,
-		background: theme.palette.background.paper,
+		backgroundColor: "#17171799",
 		borderRadius: '2rem',
 		width: '100%',
 		maxWidth: '72rem',
@@ -50,12 +50,12 @@ const workflowSectionStyle = {
 		textAlign: 'left' as const,
 	},
 	chip: {
-		background: theme.palette.primary.main,
-		color: '#fffff',
+		background: theme.palette.secondary.light,
+		color: 'white',
 		fontWeight: 'bold',
 		borderRadius: '1rem',
 		padding: '0.4rem 1rem',
-		boxShadow: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1)',
+		boxShadow: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.3)',
 		fontSize: '0.9rem',
 	},
 	title: {
@@ -64,7 +64,7 @@ const workflowSectionStyle = {
 		fontSize: { xs: '1.6rem', sm: '2rem' },
 	},
 	description: {
-		color: theme.palette.text.secondary,
+		color: '#6B7280',
 		fontSize: { xs: '1rem', md: '1.1rem' },
 		lineHeight: '1.6',
 		maxWidth: '100%',
@@ -87,7 +87,7 @@ const workflowSectionStyle = {
 		flexDirection: 'column' as const,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: theme.palette.background.default,
+		backgroundColor: "#17171799",
 		borderRadius: '1rem',
 		boxShadow: theme.customShadows?.card,
 		padding: '2rem',
@@ -95,7 +95,8 @@ const workflowSectionStyle = {
 		border: `1px solid ${theme.palette.divider}`,
 		'&:hover': {
 			transform: 'scale(1.05)',
-			boxShadow: '0rem 0.5rem 1.25rem rgba(0, 0, 0, 0.6)',
+			boxShadow: '0rem 0.5rem 1.25rem rgba(94, 234, 212, 0.15)',
+			backgroundColor: '#262626',
 		},
 	},
 	cardContent: {
@@ -114,6 +115,13 @@ const workflowSectionStyle = {
 		alignItems: 'center',
 		borderRadius: '50%',
 		padding: '0.5rem',
+	},
+	iconImage: {
+		objectFit: 'contain' as const,
+		width: '4rem',
+		height: '4rem',
+		// Apply invert filter to make icons white
+		filter: 'brightness(0) invert(1)',
 	},
 	icon: {
 		fontSize: '3rem',
