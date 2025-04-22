@@ -47,7 +47,7 @@ const heroSectionStyles = {
 		padding: '2rem',
 		borderRadius: '1.5rem',
 		background: theme.palette.background.paper,
-		boxShadow: theme.customShadows?.card || '0 4px 10px rgba(0, 0, 0, 0.1)',
+		boxShadow: theme.customShadows?.card,
 		width: '100%',
 		maxWidth: '600px',
 		marginTop: { xs: '2rem', sm: '1.5rem' },
@@ -65,19 +65,18 @@ const heroSectionStyles = {
 		color: theme.palette.text.primary,
 	},
 	tagline: {
-		color: 'white',
+		background: '#115e59',
 		display: 'inline-block',
 		padding: '0.5rem 1.2rem',
 		borderRadius: '2rem',
 		fontSize: '0.9rem',
 		marginBottom: '1rem',
 		fontWeight: 'bold',
-		background: theme.customGradients?.button || 'linear-gradient(to right, #000000, #212121)',
 		transition: 'transform 0.2s ease, box-shadow 0.2s ease',
 		'&:hover': {
 			transform: 'translateY(-3px)',
-			background: theme.customGradients?.buttonHover || 'linear-gradient(to right, #212121, #000000)',
-			boxShadow: theme.customShadows?.button || '0px 4px 10px rgba(0, 0, 0, 0.15)',
+			background: theme.customGradients?.buttonHover,
+			boxShadow: theme.customShadows?.button,
 		},
 		'&:active': {
 			transform: 'translateY(-1px)',
@@ -91,7 +90,7 @@ const heroSectionStyles = {
 		lineHeight: 1.2,
 	},
 	highlight: {
-		background: theme.customGradients?.primary || 'linear-gradient(to right, #000000, #424242)',
+		background: theme.customGradients?.primary,
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent',
 		display: 'inline',
@@ -105,21 +104,29 @@ const heroSectionStyles = {
 	},
 	button: {
 		marginTop: '1.5rem',
-		color: 'white',
-		fontWeight: 700,
-		fontSize: '1rem',
-		border: 'none',
-		padding: '0.9rem 2rem',
-		borderRadius: '2.5rem',
-		background: theme.customGradients?.button || 'linear-gradient(to right, #000000, #212121)',
-		transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-		'&:hover': {
-			transform: 'translateY(-3px)',
-			background: theme.customGradients?.buttonHover || 'linear-gradient(to right, #212121, #000000)',
-			boxShadow: theme.customShadows?.button || '0px 4px 10px rgba(0, 0, 0, 0.15)',
+		color: '#f9fafb',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
 		},
-		'&:active': {
-			transform: 'translateY(-1px)',
+		borderRadius: '0.5rem',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		textTransform: 'none',
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
+		'&:hover': {
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
+		},
+		'&.Mui-disabled': {
+			color: '#f9fafb',
+			opacity: 0.5,
+			backgroundColor: '#1f2937',
+			border: '1px solid #374151',
 		},
 	},
 	highlightWrapper: {
@@ -138,9 +145,9 @@ const heroSectionStyles = {
 		},
 	},
 	checkboxLabel: {
-		color: '#000000', 
+		color: '#000000',
 		'& .MuiFormControlLabel-label': {
-			color: '#000000',
+			color: '#ffffff',
 			fontSize: '0.9rem',
 		}
 	}

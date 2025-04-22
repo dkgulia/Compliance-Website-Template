@@ -43,7 +43,7 @@ const complianceHubStyle = {
 		minHeight: '220px',
 		textAlign: 'left' as const,
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-		border: `1px solid ${theme.palette.divider}`,
+				border: `1px solid ${theme.palette.divider}`,
 		padding: '1.5rem',
 
 	},

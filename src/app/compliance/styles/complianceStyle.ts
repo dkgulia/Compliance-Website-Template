@@ -18,7 +18,6 @@ const complianceStyles = {
 	containerBox: {
 		width: { sm: '100%', md: '60%' },
 		textAlign: { xs: 'center', sm: 'left', md: 'center' },
-
 	},
 	heading: {
 		fontWeight: 'bold',
@@ -37,14 +36,12 @@ const complianceStyles = {
 		backgroundColor: theme.palette.background.paper,
 		backdropFilter: 'blur(10px)',
 		borderRadius: '15px',
-		boxShadow: theme.customShadows?.card || '0px 6px 20px rgba(0, 0, 0, 0.4)',
+		boxShadow: theme.customShadows?.card,
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.05)',
 			boxShadow: '0rem 0.5rem 1.25rem rgba(0, 0, 0, 0.6)',
-
 		},
-
 	},
 	logoImageWrapper: {
 		position: 'relative',
@@ -60,7 +57,6 @@ const complianceStyles = {
 			fontWeight: 'bold',
 			fontSize: '1.2rem',
 			color: theme.palette.text.primary,
-			
 		},
 		body: {
 			color: theme.palette.text.secondary,

@@ -1,0 +1,69 @@
+import theme from '../../../../theme';
+
+const iso27001ComplianceWorkflowStyle = {
+  box: {
+    paddingTop: { xs: "2rem", sm: "3rem" },
+    paddingBottom: { xs: "2rem", sm: "3rem" },
+    backgroundColor: theme.palette.background.default,
+  },
+  workflowContainer: {
+    maxWidth: "75rem",
+    marginX: "auto",
+    px: { xs: "1rem", sm: "2rem" },
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    gap: "2rem",
+  },
+  headerBox: {
+    textAlign: "center" as const,
+    maxWidth: "50rem",
+  },
+  heading: {
+    fontWeight: '600',
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+    color: 'white',
+    marginBottom: "1rem",
+  },
+  subHeading: {
+    color: '#6B7280',
+    lineHeight: "1.6",
+    marginBottom: "1.5rem",
+  },
+  gridContainer: {
+    alignItems: "stretch",
+  },
+  card: {
+    backgroundColor: theme.palette.background.darkTransparent,
+    borderRadius: "1rem",
+    padding: "2rem",
+    textAlign: "center" as const,
+    boxShadow: theme.customShadows?.card,
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    gap: "1rem",
+    '&:hover': {
+			transform: 'scale(1.05)',
+			boxShadow: '0rem 0.5rem 1.25rem rgba(94, 234, 212, 0.15)',
+			backgroundColor: '#262626',
+		},
+  },
+  iconContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "3.5rem",
+    height: "3.5rem",
+
+    borderRadius: "50%",
+  },
+  cardTitle: {
+    color: '#6B7280',
+    fontWeight: "bold",
+    fontSize:'1rem'
+  },
+};
+
+export default iso27001ComplianceWorkflowStyle;

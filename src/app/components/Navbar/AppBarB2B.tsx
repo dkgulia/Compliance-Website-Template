@@ -28,6 +28,7 @@ import RightSection from './Menus/SolutionMenu/components/RightSection';
 import IndustryMenu from './Menus/IndustryMenu/page';
 import AboutMenu from './Menus/AboutMenu/page';
 import ComplianceMenu from './Menus/Compliance/page';
+import PlatformMenu from './Menus/PlatformMenu/page';
 import Image from 'next/image';
 import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
 
@@ -179,6 +180,12 @@ const AppBarB2B: React.FC = () => {
 						<ArrowForwardIosIcon sx={styles.mobileMenuArrow} />
 					</div>
 				</ListItem>
+				<ListItem sx={styles.mobileMenuItem} onClick={() => openMobileSubMenu('platform')}>
+					<ListItemText primary="Platform" />
+					<div style={styles.arrowContainer}>
+						<ArrowForwardIosIcon sx={styles.mobileMenuArrow} />
+					</div>
+				</ListItem>
 				<ListItem sx={styles.mobileMenuItem} onClick={() => openMobileSubMenu('compliance')}>
 					<ListItemText primary="Compliance" />
 					<div style={styles.arrowContainer}>
@@ -230,6 +237,12 @@ const AppBarB2B: React.FC = () => {
 				</Box>
 			)}
 
+			{mobileSubMenu === 'platform' && (
+				<Box>
+					<PlatformMenu />
+				</Box>
+			)}
+
 			{mobileSubMenu === 'compliance' && (
 				<Box>
 					<ComplianceMenu />
@@ -254,34 +267,26 @@ const AppBarB2B: React.FC = () => {
 						</Box>
 
 						<Box sx={styles.navItems}>
-							{/* <Box
-								onMouseEnter={() => handleMenuHover('solutions')}
+							
+							<Box
+								onMouseEnter={() => handleMenuHover('platform')}
 								onMouseLeave={handleMenuLeave}
-								onClick={(e) => handleMenuClick(e, 'solutions')}
+								onClick={(e) => handleMenuClick(e, 'platform')}
 								sx={styles.navItem}
 							>
 								<Button
-									data-menu-button="solutions"
-									sx={activeMenu === 'solutions' ? styles.activeNavButton : styles.navButton}
-									endIcon={<KeyboardArrowDownIcon sx={activeMenu === 'solutions' ? styles.activeDropdownIcon : styles.dropdownIcon} />}
+									data-menu-button="platform"
+									sx={activeMenu === 'platform' ? styles.activeNavButton : styles.navButton}
+									endIcon={
+										<KeyboardArrowDownIcon
+											sx={activeMenu === 'platform' ? styles.activeDropdownIcon : styles.dropdownIcon}
+										/>
+									}
 								>
-									Solutions
+									Platform
 								</Button>
 							</Box>
-							<Box
-								onMouseEnter={() => handleMenuHover('industries')}
-								onMouseLeave={handleMenuLeave}
-								onClick={(e) => handleMenuClick(e, 'industries')}
-								sx={styles.navItem}
-							>
-								<Button
-									data-menu-button="industries"
-									sx={activeMenu === 'industries' ? styles.activeNavButton : styles.navButton}
-									endIcon={<KeyboardArrowDownIcon sx={activeMenu === 'industries' ? styles.activeDropdownIcon : styles.dropdownIcon} />}
-								>
-									Industries
-								</Button>
-							</Box> */}
+
 							<Box
 								onMouseEnter={() => handleMenuHover('compliance')}
 								onMouseLeave={handleMenuLeave}
@@ -300,6 +305,7 @@ const AppBarB2B: React.FC = () => {
 									Compliance
 								</Button>
 							</Box>
+
 							<Box
 								onMouseEnter={() => handleMenuHover('about')}
 								onMouseLeave={handleMenuLeave}
@@ -364,6 +370,7 @@ const AppBarB2B: React.FC = () => {
 						</>
 					)}
 					{activeMenu === 'industries' && <IndustryMenu />}
+					{activeMenu === 'platform' && <PlatformMenu />}
 					{activeMenu === 'compliance' && <ComplianceMenu />}
 					{activeMenu === 'about' && <AboutMenu />}
 				</Box>

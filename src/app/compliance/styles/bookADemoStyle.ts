@@ -28,7 +28,6 @@ const bookADemoStyles = {
 		marginTop: '0.5rem',
 	},
 	points: {
-
 		display: 'flex',
 		flexDirection: 'column',
 		gap: 2,
@@ -42,22 +41,35 @@ const bookADemoStyles = {
 			borderRadius: '2rem',
 			fontSize: '1rem',
 			fontWeight: 500,
-			boxShadow: theme.customShadows?.card || '0px 6px 20px rgba(0, 0, 0, 0.4)',
+			boxShadow: theme.customShadows?.card,
 		},
 	},
 	button: {
 		marginTop: '1.5rem',
-		color: 'white',
-		fontWeight: 'bold',
-		border: 'none',
-		padding: '0.8rem 1.5rem',
-		borderRadius: '2rem',
-		background: theme.customGradients?.button || 'linear-gradient(to right, #14b8a6, #2dd4bf)',
-		'&:hover': {
-			background: theme.customGradients?.buttonHover || 'linear-gradient(to right, #0f766e, #14b8a6)',
-			boxShadow: theme.customShadows?.button || '0px 4px 10px rgba(0, 0, 0, 0.25)',
+		color: '#f9fafb',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
 		},
-		fontSize: '1rem',
+		borderRadius: '0.5rem',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		textTransform: 'none',
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
+		'&:hover': {
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
+		},
+		'&.Mui-disabled': {
+			color: '#f9fafb',
+			opacity: 0.5,
+			backgroundColor: '#1f2937',
+			border: '1px solid #374151',
+		},
 	},
 	imageBox: {
 		flex: 1,
@@ -70,17 +82,15 @@ const bookADemoStyles = {
 		maxWidth: '500px',
 		height: 'auto',
 		borderRadius: '16px',
-		boxShadow: theme.customShadows?.card || '0px 6px 20px rgba(0, 0, 0, 0.4)',
+		boxShadow: theme.customShadows?.card,
 	},
 	tagline: {
 		display: 'inline-block',
 		padding: '0.4rem 0.8rem',
 		borderRadius: '1rem',
 		fontSize: '0.9rem',
-		background:
-			theme.customGradients?.primary ||
-			`linear-gradient(to right, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
-		color: 'white',
+		background: '#115e59',
+		color: theme.palette.text.primary,
 		fontWeight: 'bold',
 		boxShadow: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1)',
 		width: 'fit-content',
@@ -90,10 +100,9 @@ const bookADemoStyles = {
 		alignItems: 'center',
 		marginBottom: '0.5rem',
 		backgroundColor: theme.palette.background.paper,
-
 	},
 	icon: {
-		color: theme.palette.primary.light,
+		color: 'white',
 		marginRight: '0.5rem',
 		fontSize: '1.2rem',
 	},

@@ -53,7 +53,7 @@ export const complianceItems: ComplianceFramework[] = [
 	},
 	{
 		title: 'CCPA',
-		description: 'Protects California residents’ rights over their personal data with transparency and deletion.',
+		description: 'Protects California residents rights over their personal data with transparency and deletion.',
 		logo: ccpa,
 		url: '/ccpa-compliance',
 	},
@@ -111,5 +111,18 @@ export enum ComplianceOptions {
 	ISO27701 = 'ISO 27701',
 	DORA = 'DORA',
 }
+
+export const primaryCompliance = [
+	'ISO 27001:2022',
+	'ISO 42001:2023',
+	'GDPR',
+	'HIPAA',
+	'SOC2 Type1',
+	'SOC2 Type2',
+	'PCI DSS',
+	'DORA',
+	'PDPA',
+	'CMMC'
+];
 
 export const complianceOptionsArray = Object.values(ComplianceOptions);

@@ -40,7 +40,7 @@ const HeroSection = () => {
 									height={40}
 									priority
 									style={{
-										filter: 'invert(1)', 
+									
 										height: 'auto',
 									}}
 								/>

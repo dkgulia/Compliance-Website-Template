@@ -81,8 +81,8 @@ const workflowSectionStyle = {
 	},
 	card: {
 		flex: '1 1 auto',
-		minWidth: '12rem',
-		maxWidth: '13rem',
+		minWidth: { xs: '90%', sm: '12rem' },
+		maxWidth: { xs: '90%', sm: '13rem' },
 		display: 'flex',
 		flexDirection: 'column' as const,
 		justifyContent: 'center',
@@ -93,6 +93,7 @@ const workflowSectionStyle = {
 		padding: '2rem',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
+		margin: { xs: '0 auto', sm: '0' },
 		'&:hover': {
 			transform: 'scale(1.05)',
 			boxShadow: '0rem 0.5rem 1.25rem rgba(94, 234, 212, 0.15)',
@@ -120,8 +121,7 @@ const workflowSectionStyle = {
 		objectFit: 'contain' as const,
 		width: '4rem',
 		height: '4rem',
-		// Apply invert filter to make icons white
-		filter: 'brightness(0) invert(1)',
+	
 	},
 	icon: {
 		fontSize: '3rem',

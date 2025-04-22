@@ -21,7 +21,7 @@ const whyUsStyles = {
 		backgroundColor: theme.palette.background.paper,
 		backdropFilter: 'blur(10px)',
 		borderRadius: '12px',
-		boxShadow: theme.customShadows?.card || '0px 4px 8px rgba(0, 0, 0, 0.3)',
+		boxShadow: theme.customShadows?.card,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',

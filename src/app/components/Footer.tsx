@@ -12,8 +12,7 @@ import { ABOUT_US, CONTACT_US, PRIVACY_POLICY, REFUND_POLICY, TERMS_AND_CONDITIO
 import { complianceItems } from '../constants/complianceData';
 import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
-import { industryData } from '../../app/components/Navbar/constants/industrialists';
-import solutionData from '../../app/components/Navbar/constants/solutionsMob';
+
 import logo from '../components/Navbar/Images/dual-hex-white.png';
 
 export default function Footer() {

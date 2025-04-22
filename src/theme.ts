@@ -40,6 +40,34 @@ declare module '@mui/material/styles' {
 			whiteToLight: string;
 		};
 	}
+	// Add custom background properties
+	interface TypeBackground {
+		darkPaper?: string;
+		darkTransparent?: string;
+	}
+	// Add text color types
+	interface TypeText {
+		muted?: string;
+	}
+	// Add UI specific colors
+	interface Palette {
+		ui?: {
+			buttonText: string;
+			buttonPrimary: string;
+			buttonHover: string;
+			buttonBorder: string;
+			border: string;
+		};
+	}
+	interface PaletteOptions {
+		ui?: {
+			buttonText: string;
+			buttonPrimary: string;
+			buttonHover: string;
+			buttonBorder: string;
+			border: string;
+		};
+	}
 }
 
 const theme = responsiveFontSizes(
@@ -71,12 +99,23 @@ const theme = responsiveFontSizes(
 			background: {
 				default: '#101010',
 				paper: '#262626',
+				darkPaper: '#171717',
+				darkTransparent: '#17171799',
 			},
 			text: {
 				primary: '#ffffff',
 				secondary: '#a3a3a3',
+				muted: '#6B7280',
 			},
 			divider: '#404040',
+			// UI specific colors
+			ui: {
+				buttonText: '#f9fafb',
+				buttonPrimary: '#1f2937',
+				buttonHover: '#374151',
+				buttonBorder: '#4b5563',
+				border: '#333333',
+			},
 		},
 		typography: {
 			fontFamily: '"Figtree", sans-serif',

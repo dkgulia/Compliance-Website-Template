@@ -100,7 +100,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 						<Typography variant="h4" sx={heroSectionStyles.formHeading}>
 							Book Your Demo Today!
 						</Typography>
-						<Typography sx={{ marginBottom: '1rem', color: '#000000' }}>Get answers to all your questions.</Typography>
+						<Typography sx={{ marginBottom: '1rem', color: 'white' }}>Get answers to all your questions.</Typography>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
@@ -113,7 +113,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.fullName}
-								sx={{ color: '#000000' }}
+								sx={{ color: 'white' }}
 							/>
 							<FormHelperText>{touched.fullName && errors.fullName}</FormHelperText>
 						</FormControl>
@@ -129,7 +129,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.email}
-								sx={{ color: '#000000' }}
+								sx={{ color: 'white' }}
 							/>
 							<FormHelperText>{touched.email && errors.email}</FormHelperText>
 						</FormControl>
@@ -145,7 +145,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 											<Checkbox
 												checked={selectedOptions.includes(option)}
 												onChange={() => toggleOption(option)}
-												color="primary"
+
 											/>
 										}
 										label={option}

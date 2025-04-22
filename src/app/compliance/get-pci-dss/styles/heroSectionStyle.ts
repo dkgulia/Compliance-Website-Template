@@ -20,7 +20,7 @@ const heroSectionStyle = {
 		padding: { xs: '1rem', md: '2rem' },
 	},
 	formBox: {
-		marginTop: { xs: '2rem', md: '4' },
+		marginTop: { xs: '1rem', md: '3' },
 		flex: 1,
 		background: '#17171799',
 		borderRadius: '1.5rem',

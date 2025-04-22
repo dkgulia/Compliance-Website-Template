@@ -16,15 +16,15 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 import secureTransactionsIcon from '../images/classic-shield-bearing-a-padlock--indicating-gener.png';
-import boostCustomerTrustIcon from '../images/a-handshake-or-trust-badge-with-a-checkmark-.png';
+import boostCustomerTrustIcon from '../images/handshake (1).png';
 import unifiedComplianceIcon from '../images/dotted-workflow-line-ending-at-a-shield-with-a-use.png';
 import reducedLiabilityIcon from '../images/a-downward-arrow-with-a-dollar-sign-or-reduced-ris (1).png';
 
-import scopeGapAnalysisIcon from '../images/a-magnifying-glass-examining-a-network-diagram-or-.png';
-import remediateDocumentIcon from '../images/a-wrench-tool-fixing-a-document-or-a-patched-docum.png';
-import implementControlsIcon from '../images/-shield-with-settings-sliders-or-security-controls (1).png';
-import externalScanTestingIcon from '../images/a-radar-scan-symbol-with-checkmarks-or-a-testing-v (1).png';
-import attestationReportingIcon from '../images/checklist.png';
+import scopeGapAnalysisIcon from '../images/examining-document.png';
+import remediateDocumentIcon from'../images/a-wrench-tool-fixing-a-document-or-a-patched-docum.png';
+import implementControlsIcon from '../images/signed-policy-sheet-topped-with-a-shield--denoting.png';
+import externalScanTestingIcon from '../images/a-radar-scan-symbol-with-checkmarks-or-a-testing-v.png';
+import attestationReportingIcon from '../images/a-document-with-a-checkmark-or-certificate-with-re.png';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import { StaticImageData } from 'next/image';
 

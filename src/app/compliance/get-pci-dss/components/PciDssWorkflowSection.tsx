@@ -27,28 +27,30 @@ const PciDssWorkflowSection: React.FC = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid container spacing={2} sx={workflowSectionStyle.gridContainer}>
-                        {pciDssData.workflow.map((item, i) => (
-                            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2.4 }} key={i}>
-                                <Box sx={workflowSectionStyle.card}>
-                                    <Box sx={workflowSectionStyle.cardContent}>
-                                        <Box sx={workflowSectionStyle.iconContainer}>
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.title}
-                                                width={80}
-                                                height={80}
-                                                style={{ objectFit: 'contain' }}
-                                            />
+                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                        <Grid container spacing={2} sx={workflowSectionStyle.gridContainer}>
+                            {pciDssData.workflow.map((item, i) => (
+                                <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2.4 }} key={i} sx={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Box sx={workflowSectionStyle.card}>
+                                        <Box sx={workflowSectionStyle.cardContent}>
+                                            <Box sx={workflowSectionStyle.iconContainer}>
+                                                <Image
+                                                    src={item.icon}
+                                                    alt={item.title}
+                                                    width={70}
+                                                    height={70}
+                                                    style={{ objectFit: 'contain' }}
+                                                />
+                                            </Box>
+                                            <Typography variant="body1" sx={workflowSectionStyle.cardTitle}>
+                                                {item.title}
+                                            </Typography>
                                         </Box>
-                                        <Typography variant="body1" sx={workflowSectionStyle.cardTitle}>
-                                            {item.title}
-                                        </Typography>
                                     </Box>
-                                </Box>
-                            </Grid>
-                        ))}
-                    </Grid>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Box>
                 </Box>
             </Box>
         </Box>

@@ -32,15 +32,15 @@ const featuresStyles = {
 		alignItems: 'center',
 		backgroundColor: theme.palette.background.paper,
 		borderRadius: '12px',
-		boxShadow: theme.customShadows?.card || '0px 6px 15px rgba(0, 0, 0, 0.1)',
+		boxShadow: theme.customShadows?.card,
 		padding: '2rem',
 		height: '100%',
-		border: '1px solid #e0e0e0',
+		border: `1px solid ${theme.palette.divider}`,
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.05)',
 			boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.2)',
-			backgroundColor: '#f9f9f9',
+			backgroundColor: theme.palette.background.paper,
 		},
 	},
 	iconContainer: {
@@ -51,8 +51,7 @@ const featuresStyles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginBottom: '1rem',
-		color: '#14b8a6',
-
+		color: theme.palette.success.main,
 	},
 	typography: {
 		title: {

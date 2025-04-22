@@ -26,7 +26,6 @@ const painPointStyle = {
 		marginBottom: '1.5rem',
 	},
 	bulletList: {
-
 		paddingLeft: 0,
 		listStyle: 'none',
 		marginBottom: '2rem',

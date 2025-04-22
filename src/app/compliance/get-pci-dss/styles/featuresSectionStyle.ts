@@ -34,10 +34,10 @@ const featuresSectionStyle = {
 		borderRadius: '1rem',
 		boxShadow: theme.customShadows?.card,
 		height: { sm: 'auto', xs: 'auto' },
-		minHeight: '220px',
+		minHeight: '210px',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
-		padding: '1.5rem',
+		padding: '1rem',
 
 	},
 	iconContainer: {
@@ -56,7 +56,7 @@ const featuresSectionStyle = {
 		objectFit: 'contain' as const,
 		width: '3.5rem',
 		height: '3.5rem',
-		filter: 'brightness(0) invert(1)', 
+		filter: 'brightness(0) invert(1)',
 	      },
 	contentWrapper: {
 		display: 'flex',

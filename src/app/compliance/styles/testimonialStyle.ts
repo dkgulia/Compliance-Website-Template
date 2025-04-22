@@ -45,7 +45,6 @@ const testimonialsCarouselStyles = {
 		alignItems: 'center',
 		textAlign: 'center',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-	
 	},
 	quoteIcon: {
 		fontSize: '2.5rem',
@@ -90,7 +89,7 @@ const testimonialsCarouselStyles = {
 		},
 		borderRadius: '50%',
 		padding: '0.5rem',
-		boxShadow: theme.customShadows?.card || '0px 4px 10px rgba(0, 0, 0, 0.3)',
+		boxShadow: theme.customShadows?.card,
 	},
 };
 

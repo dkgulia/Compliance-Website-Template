@@ -6,14 +6,17 @@ const bannerStyle = {
 		paddingBottom: { sm: '2rem', xs: '1.5rem' },
 		marginTop: '0rem',
 		backgroundColor: theme.palette.background.default,
+		px: { xs: 2, sm: 4 },
 	},
 	bannerContainer: {
 		background: '#17171799',
-		borderRadius: '2rem',
+		borderRadius: { xs: '0.75rem', sm: '12px' },
 		width: '100%',
-		maxWidth: '72rem',
+		maxWidth: '75rem',
 		marginX: 'auto',
-		padding: { xs: '2rem', sm: '3rem' },
+		padding: { xs: '1.5rem', sm: '3rem' },
+		paddingLeft: { xs: '1rem', sm: '3rem' },
+		paddingRight: { xs: '1rem', sm: '3rem' },
 		boxShadow: theme.customShadows?.card,
 		overflow: 'hidden',
 		border: `1px solid ${theme.palette.divider}`,
@@ -22,6 +25,7 @@ const bannerStyle = {
 		display: 'flex',
 		justifyContent: { xs: 'center', md: 'flex-start' },
 		alignItems: 'center',
+		marginTop: { xs: '1rem', md: '0' },
 	},
 	content: {
 		display: 'flex',
@@ -30,7 +34,7 @@ const bannerStyle = {
 	},
 	titleSection: {
 		width: '100%',
-		marginTop: '1rem',
+		marginTop: { xs: '0.5rem', sm: '1rem' },
 	},
 	descriptionSection: {
 		width: '100%',
@@ -41,19 +45,19 @@ const bannerStyle = {
 	heading: {
 		fontWeight: '600',
 		color: theme.palette.text.primary,
-		fontSize: { xs: '1.6rem', sm: '2rem' },
-		marginBottom: { xs: '1rem', md: '0' },
+		fontSize: { xs: '1.4rem', sm: '2rem' },
+		marginBottom: { xs: '0.75rem', md: '0' },
 		lineHeight: 1.3,
 	},
 	description: {
 		color: '#6b7280',
-		fontSize: { xs: '1rem', md: '1rem' },
-		lineHeight: '1.6',
+		fontSize: { xs: '0.9rem', md: '1rem' },
+		lineHeight: '1.5',
 		width: '100%',
-		marginBottom: { xs: '1.5rem', md: '0' },
+		marginBottom: { xs: '1rem', md: '0' },
 	},
 	button: {
-		marginTop: '1.5rem',
+		marginTop: { xs: '1rem', sm: '1.5rem' },
 		color: '#f9fafb',
 		fontWeight: 800,
 		padding: {
@@ -65,7 +69,7 @@ const bannerStyle = {
 		backgroundColor: '#1f2937',
 		border: '1px solid #4b5563',
 		textTransform: 'none',
-		fontSize: '0.9rem',
+		fontSize: { xs: '0.85rem', sm: '0.9rem' },
 		whiteSpace: 'nowrap',
 		transition: 'background-color 150ms ease',
 		'&:hover': {
@@ -80,8 +84,8 @@ const bannerStyle = {
 		},
 	},
 	iconWrapper: {
-		width: { xs: '180px', md: '450px' },
-		height: { xs: '180px', md: '200px' },
+		width: { xs: '120px', sm: '200px', md: '450px' },
+		height: { xs: '120px', sm: '200px', md: '200px' },
 		borderRadius: '50%',
 		display: 'flex',
 		alignItems: 'center',
