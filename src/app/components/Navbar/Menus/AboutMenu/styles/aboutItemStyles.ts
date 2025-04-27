@@ -6,7 +6,7 @@ const aboutItemStyles = {
 		alignItems: 'center',
 		height: '3rem',
 		'&:hover': {
-			backgroundColor: '#1f1f1f',
+			backgroundColor: '#121212',
 			cursor: 'pointer',
 		},
 	},
@@ -18,17 +18,17 @@ const aboutItemStyles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		marginRight: '0.75rem',
-		backgroundColor: '#f5f5f5',
+		backgroundColor: '#115e59',
 		borderRadius: '0.25rem',
 		'& svg': {
-			color: '#14b8a6',
+			color: '#ffffff',
 			fontSize: '2rem',
 		},
 	},
 	itemText: {
 		fontSize: '0.95rem',
 		fontWeight: 500,
-		color: 'black',
+		color: 'white',
 	},
 	knowMoreButton: {
 		marginTop: 'auto',
@@ -38,7 +38,7 @@ const aboutItemStyles = {
 		fontSize: '0.875rem',
 		padding: '0.5rem 0',
 		justifyContent: 'flex-start',
-		
+
 	},
 };
 

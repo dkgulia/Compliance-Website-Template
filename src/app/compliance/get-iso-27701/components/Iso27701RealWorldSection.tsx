@@ -16,9 +16,9 @@ const Iso27701RealWorldSection: React.FC = () => {
 					How Organizations Benefit from ISO 27701
 				</Typography>
 
-				<Grid container spacing={2} sx={realWorldSectionStyle.gridContainer}>
+				<Grid container spacing={3} sx={realWorldSectionStyle.gridContainer}>
 					{iso27701Data.section7.map((item) => (
-						<Grid size={{ xs: 12, sm: 6 }} key={item.title}>
+						   <Grid size={{ xs: 12, sm: 6 }} key={item.title}>
 							<Card sx={realWorldSectionStyle.card}>
 								<CardContent sx={realWorldSectionStyle.cardContent}>
 									<Box sx={realWorldSectionStyle.iconContainer}>
@@ -33,8 +33,10 @@ const Iso27701RealWorldSection: React.FC = () => {
 											}}
 										/>
 									</Box>
-									<Typography sx={realWorldSectionStyle.cardTitle}>{item.title}</Typography>
-									<Typography sx={realWorldSectionStyle.cardDesc}>{item.description}</Typography>
+									<Box sx={realWorldSectionStyle.textContainer}>
+										<Typography sx={realWorldSectionStyle.cardTitle}>{item.title}</Typography>
+										<Typography sx={realWorldSectionStyle.cardDesc}>{item.description}</Typography>
+									</Box>
 								</CardContent>
 							</Card>
 						</Grid>

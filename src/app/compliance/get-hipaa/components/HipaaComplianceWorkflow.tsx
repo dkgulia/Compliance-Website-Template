@@ -24,7 +24,7 @@ const HipaaComplianceWorkFlow = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container spacing={2} sx={hipaaComplianceWorkFlowStyles.gridContainer}>
+          <Grid container spacing={1} sx={hipaaComplianceWorkFlowStyles.gridContainer}>
             {hipaaWorkflowData.map((item, index) => (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <HipaaComplianceWorkFlowCard title={item.title} icon={item.icon} />

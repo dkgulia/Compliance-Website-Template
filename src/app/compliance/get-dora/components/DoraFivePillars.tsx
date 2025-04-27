@@ -21,19 +21,19 @@ export default function DoraFivePillars() {
 
         <Grid container spacing={3} sx={DoraFivePillarsStyle.gridContainer}>
           {pillarsSection.subSections?.map((pillar, index) => (
-            <Grid
-              size={{ xs: 12, sm: 6, md: 4 }}
+            <Grid size ={{xs:12,sm:6,md:4}}
               key={index}
               sx={DoraFivePillarsStyle.gridItem}
             >
               <Box sx={DoraFivePillarsStyle.pillarCard}>
-                <Image
-                  src={pillar.image}
-                  alt={pillar.title}
-                  width={50}
-                  height={50}
-                  style={{ marginRight: "1rem" }}
-                />
+                <Box sx={DoraFivePillarsStyle.iconContainer}>
+                  <Image
+                    src={pillar.image}
+                    alt={pillar.title}
+                    width={40}
+                    height={40}
+                  />
+                </Box>
                 <Box sx={DoraFivePillarsStyle.pillarContent}>
                   <Typography variant="h6" sx={DoraFivePillarsStyle.cardTitle}>
                     {pillar.title}

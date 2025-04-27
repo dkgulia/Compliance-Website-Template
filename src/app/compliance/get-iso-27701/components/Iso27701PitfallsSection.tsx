@@ -16,25 +16,27 @@ const Iso27701PitfallsSection: React.FC = () => {
 					Avoiding Mistakes & Implementing Effective Solutions
 				</Typography>
 
-				<Grid container spacing={2} sx={pitfallsSectionStyle.gridContainer}>
+				<Grid container spacing={3} sx={pitfallsSectionStyle.gridContainer}>
 					{iso27701Data.section6.map((item) => (
-						<Grid size={{ xs: 12, sm: 6 }} key={item.title}>
+						    <Grid size={{ xs: 12, sm: 6 }} key={item.title}>
 							<Card sx={pitfallsSectionStyle.card}>
 								<CardContent sx={pitfallsSectionStyle.cardContent}>
 									<Box sx={pitfallsSectionStyle.iconContainer}>
 										<Image
 											src={item.image}
 											alt={item.title}
-											width={70}
-											height={70}
+											width={60}
+											height={60}
 											style={{
 												filter: 'brightness(0) invert(1)',
 												opacity: 0.9,
 											}}
 										/>
 									</Box>
-									<Typography sx={pitfallsSectionStyle.cardTitle}>{item.title}</Typography>
-									<Typography sx={pitfallsSectionStyle.cardDesc}>{item.description}</Typography>
+									<Box sx={pitfallsSectionStyle.textContainer}>
+										<Typography sx={pitfallsSectionStyle.cardTitle}>{item.title}</Typography>
+										<Typography sx={pitfallsSectionStyle.cardDesc}>{item.description}</Typography>
+									</Box>
 								</CardContent>
 							</Card>
 						</Grid>

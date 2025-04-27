@@ -3,7 +3,8 @@ const pageStyles = {
 		display: 'flex',
 		flexDirection: 'column',
 		width: '100%',
-		backgroundColor: 'white',
+		backgroundColor: '#121212',
+
 		padding: '1rem',
 		maxHeight: 'calc(100vh - 8rem)',
 		overflowY: 'auto',
@@ -16,12 +17,12 @@ const pageStyles = {
 	title: {
 		fontSize: '1.3rem',
 		fontWeight: 600,
-		color: 'black',
+		color: 'white',
 		marginBottom: '0.5rem',
 	},
 	description: {
 		fontSize: '0.875rem',
-		color: 'black',
+		color: 'white',
 		marginBottom: '1.5rem',
 		lineHeight: 1.5,
 	},
@@ -55,13 +56,13 @@ const pageStyles = {
 	featuredTitle: {
 		fontSize: '1.125rem',
 		fontWeight: 600,
-		color: 'black',
+		color: 'white',
 		marginBottom: '0.5rem',
 		marginTop: '0.5rem',
 	},
 	featuredDescription: {
 		fontSize: '0.875rem',
-		color: 'black',
+		color: 'white',
 		marginBottom: '1rem',
 		lineHeight: 1.5,
 	},
@@ -70,6 +71,7 @@ const pageStyles = {
 		marginBottom: '0.5rem',
 		borderRadius: '0.5rem',
 		overflow: 'hidden',
+		
 	},
 };
 

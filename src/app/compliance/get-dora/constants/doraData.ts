@@ -2,12 +2,12 @@
    JSON-based content for the DORA page, derived from the user prompt.
    We rely on the local JSON data for all text used in the page.
 </ai_context> */
-import ICTRiskManagement from "../images/ICT Risk Management .webp";
-import IncidentReporting from "../images/Incident Reporting.webp";
-import OperationalResilience from "../images/Operational Resilience Testing.webp";
-import ThirdPartyRisk from "../images/Third-Party ICT Risk Oversight.webp";
-import InformationSharing from "../images/Information Sharing .webp";
-import BusinessContinuity from "../images/Business Continuity Planning .webp";
+import ICTRiskManagement from "../images/risk-management.png";
+import IncidentReporting from "../images/reporting.png";
+import OperationalResilience from "../images/testing-operational.png";
+import ThirdPartyRisk from "../images/third-party-risk.png";
+import InformationSharing from "../images/information-sharing.png";
+import BusinessContinuity from "../images/planning.png";
 
 
 export const complianceData = {

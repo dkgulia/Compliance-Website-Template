@@ -135,6 +135,7 @@ const appBarB2BStyles = {
 			width: '100%',
 			height: '100%',
 			overflowY: 'auto',
+			backgroundColor: '#0a0a0a',
 			'&::-webkit-scrollbar': {
 				display: 'none',
 			},
@@ -147,7 +148,7 @@ const appBarB2BStyles = {
 		flexDirection: 'column',
 		height: 'auto',
 		minHeight: '100%',
-		backgroundColor: '#121212',
+		backgroundColor: '#0a0a0a',
 		overflowY: 'auto',
 		'&::-webkit-scrollbar': {
 			display: 'none',
@@ -175,7 +176,7 @@ const appBarB2BStyles = {
 		alignItems: 'center',
 	},
 	mobileLogoImage: {
-		maxWidth: '70px',
+		maxWidth: '40px',
 		height: '40px',
 		marginRight: '0.5rem',
 	},
@@ -184,25 +185,13 @@ const appBarB2BStyles = {
 		alignItems: 'center',
 		gap: '0.75rem',
 	},
-	mobileShopButton: {
-		backgroundColor: '#14b8a6',
-		color: '#f9fafb',
-		borderRadius: '0.7rem',
-		padding: { xs: '0.375rem 0.75rem', md: '0.4rem 1rem' },
-		textTransform: 'none',
-		fontSize: { xs: '0.75rem', md: '0.875rem' },
-		whiteSpace: 'nowrap',
-		'&:hover': {
-			backgroundColor: '#0f766e',
-		},
-	},
 	closeButton: {
 		color: '#f9fafb',
 		padding: '0.375rem',
 	},
 	mobileMenuList: {
 		padding: 1,
-		backgroundColor: '#121212',
+		backgroundColor: '#0a0a0a',
 	},
 	mobileMenuItem: {
 		padding: '1.5rem',
@@ -225,10 +214,13 @@ const appBarB2BStyles = {
 	},
 	mobileMenuArrow: {
 		color: '#f9fafb',
-		fontSize: '1.5rem',
+		fontSize: '1.2rem',
 	},
-	mobileTalkButtonContainer: {
-		padding: '1rem',
+	mobileLoginButtonContainer: {
+		padding: '1.5rem',
+		backgroundColor: '#0a0a0a',
+		display: 'flex',
+		justifyContent: 'center',
 	},
 	mobileTalkButton: {
 		borderColor: '#262626',
@@ -348,11 +340,11 @@ const appBarB2BStyles = {
 		padding: '1rem',
 		overflow: 'auto',
 		flex: 1,
-		backgroundColor: '#121212',
+		backgroundColor: '#0a0a0a',
 	},
 	mobileFeatureCard: {
 		padding: '1.5rem',
-		backgroundColor: '#121212',
+		backgroundColor: '#0a0a0a',
 		margin: '1rem',
 		borderRadius: '0.25rem',
 	},

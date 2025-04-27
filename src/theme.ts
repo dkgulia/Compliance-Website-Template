@@ -40,16 +40,13 @@ declare module '@mui/material/styles' {
 			whiteToLight: string;
 		};
 	}
-	// Add custom background properties
 	interface TypeBackground {
 		darkPaper?: string;
 		darkTransparent?: string;
 	}
-	// Add text color types
 	interface TypeText {
 		muted?: string;
 	}
-	// Add UI specific colors
 	interface Palette {
 		ui?: {
 			buttonText: string;
@@ -80,7 +77,7 @@ const theme = responsiveFontSizes(
 				dark: '#cccccc',
 			},
 			secondary: {
-				main: '#5eead4',
+				main: '#115e59',
 				light: '#115e59',
 				dark: '#42c6b2',
 			},
@@ -104,7 +101,7 @@ const theme = responsiveFontSizes(
 			},
 			text: {
 				primary: '#ffffff',
-				secondary: '#a3a3a3',
+				secondary: '#6b7280',
 				muted: '#6B7280',
 			},
 			divider: '#404040',

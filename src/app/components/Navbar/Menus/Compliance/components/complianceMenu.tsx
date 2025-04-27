@@ -40,15 +40,19 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 
 			<Grid container spacing={2} sx={styles.itemsGrid}>
 				{complianceItems.map((item, index) => (
-					<Grid size={{ xs: 6, sm: 4, md: 3 }} key={index}>
+					<Grid size={{xs:6,sm:4,md:3}}key={index}>
 						<Box sx={styles.complianceItem} onClick={() => handleNavigate(item.url)}>
 							<Box sx={styles.iconContainer}>
 								<Image
 									src={item.logo}
 									alt={item.title}
-									width={35}
-									height={35}
-									style={{ maxWidth: '100%', height: 'auto' }}
+									width={45}
+									height={45}
+									style={{
+										maxWidth: '100%',
+										height: 'auto',
+										filter: 'brightness(0) invert(1)' 
+									}}
 								/>
 							</Box>
 							<Typography sx={styles.itemTitle}>{item.title}</Typography>

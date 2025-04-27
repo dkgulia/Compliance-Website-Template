@@ -18,7 +18,7 @@ const hipaaComplianceWorkFlowStyles = {
 		justifyContent: 'center',
 		textAlign: 'center',
 		background: '#17171799',
-		borderRadius: '2rem',
+		borderRadius: { xs: '0rem', sm: '12px' },
 		padding: { xs: '3rem', sm: '4rem 5rem' },
 		width: '95%',
 		maxWidth: '75rem',

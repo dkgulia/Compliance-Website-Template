@@ -17,7 +17,7 @@ const ctaSectionStyle = {
 
 	},
 	title: {
-		fontWeight: '700',
+		fontWeight: '600',
 		fontSize: { xs: '1.8rem', sm: '2.2rem' },
 		color: theme.palette.text.primary,
 		marginBottom: '1rem',
@@ -30,17 +30,20 @@ const ctaSectionStyle = {
 		maxWidth: '600px',
 	},
 	button: {
-		color: theme.palette.text.primary,
-		fontSize:'1.2rem',
-		background: theme.palette.primary.main,
-		fontWeight: 'bold',
-		padding: '0.8rem 2rem',
+		color: '#f9fafb',
+		fontWeight: 600,
+		padding: '0.75rem 1.5rem',
 		borderRadius: '0.5rem',
-		boxShadow: theme.customShadows?.button || '0 0.25rem 0.5rem rgba(0, 0, 0, 0.2)',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		textTransform: 'none',
+		fontSize: '1rem',
+		whiteSpace: 'nowrap',
+		transition: 'all 150ms ease',
 		'&:hover': {
-			background: theme.palette.primary.dark,
+			backgroundColor: '#374151',
+			transform: 'translateY(-2px)',
 		},
-		transition: 'all 0.3s ease',
 	},
 	imageContainer: {
 		display: 'flex',

@@ -1,4 +1,4 @@
-import theme from '../../../../theme'; 
+import theme from '../../../../theme';
 
 const comparisonSectionStyle = {
 	box: {
@@ -13,7 +13,7 @@ const comparisonSectionStyle = {
 		marginX: 'auto',
 	},
 	title: {
-		fontWeight: '700',
+		fontWeight: '600',
 		fontSize: { xs: '1.6rem', sm: '2rem' },
 		color: theme.palette.text.primary,
 		textAlign: 'center' as const,
@@ -21,8 +21,8 @@ const comparisonSectionStyle = {
 	},
 	subtitle: {
 		fontWeight: '500',
-		fontSize: { xs: '1.1rem', sm: '1.2rem' },
-		color: theme.palette.primary.main,
+		fontSize: { xs: '1.1rem', sm: '1.1rem' },
+		color: '#6B7280',
 		textAlign: 'center' as const,
 		marginBottom: '1.5rem',
 	},
@@ -30,10 +30,10 @@ const comparisonSectionStyle = {
 		marginTop: '0.5rem',
 	},
 	card: {
-		borderRadius: '2rem',
+		borderRadius: '1rem',
 		border: `1px solid ${theme.palette.divider}`,
 		padding: '1.5rem',
-		backgroundColor: theme.palette.background.paper,
+		backgroundColor: '#17171799',
 		marginBottom: '0.5rem',
 		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.15)',
 		height: '100%',

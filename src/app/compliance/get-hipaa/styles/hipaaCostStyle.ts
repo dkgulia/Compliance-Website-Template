@@ -3,7 +3,7 @@ import theme from '../../../../theme';
 export const hipaaComplianceStyles = {
   section: {
     paddingTop: '1rem',
-    paddingBottom: 'rem',
+    paddingBottom: '1rem',
   },
   containerBox: {
     textAlign: 'center',
@@ -13,9 +13,8 @@ export const hipaaComplianceStyles = {
   },
   heading: {
     fontWeight: '600',
-		fontSize: { xs: '1.6rem', sm: '2rem' },
-		color: theme.palette.text.primary,
-
+    fontSize: { xs: '1.6rem', sm: '2rem' },
+    color: theme.palette.text.primary,
   },
   subheading: {
     fontSize: '1.1rem',
@@ -27,36 +26,40 @@ export const hipaaComplianceStyles = {
   },
   card: {
     display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		background: '#17171799',
-		backdropFilter: 'blur(10px)',
-		borderRadius: '1rem',
-		boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.2)',
-		padding: { xs: '1.5rem', sm: '2.5rem' },
-		height: '70%',
-		minHeight: { xs: '12.5rem', sm: '15.625rem' },
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: '#17171799',
+    backdropFilter: 'blur(10px)',
+    borderRadius: '1rem',
+    boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.2)',
+    padding: { xs: '1.5rem', sm: '2.5rem' },
+    height: '70%',
+    minHeight: { xs: '12.5rem', sm: '15.625rem' },
     border: `1px solid ${theme.palette.divider}`,
-		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-		'&:hover': {
-			transform: 'scale(1.05)',
-			boxShadow: '0rem 0.5rem 1.25rem rgba(0, 0, 0, 0.6)',
-		},
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0rem 0.5rem 1.25rem rgba(0, 0, 0, 0.6)',
+    },
   },
   iconContainer: {
-    width: '3.5rem',
-    height: '3.5rem',
+    width: '70px',
+    height: '70px',
     backgroundColor: '#115e59',
-    borderRadius: '50%',
+    borderRadius: '6px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: '1.5rem',
+    padding: '12px',
   },
-  icon: {
-    fontSize: '1.8rem',
-    color: theme.palette.text.primary,
+  iconImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'contain'as const,
+    maxWidth: '46px',
+    maxHeight: '46px'
   },
   textContainer: {
     display: 'flex',
@@ -76,10 +79,10 @@ export const hipaaComplianceStyles = {
     textAlign: 'center',
   },
   description: {
-    color: theme.palette.text.muted,
+    color: '#6B7280',
     textAlign: 'center',
     fontSize: '1rem',
-    lineHeight: 1.6,
+    lineHeight: 1,
     width: '100%',
     padding: '0 0.5rem',
   },

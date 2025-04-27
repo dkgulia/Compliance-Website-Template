@@ -10,10 +10,8 @@ import stepsSectionStyle from '../styles/stepsSectionStyle';
 import iso27701Data from '../constants/iso27701Data';
 
 const Iso27701StepsSection: React.FC = () => {
-	// Use existing steps data from iso27701Data
-	const steps = iso27701Data.steps;
 
-	// Function to get icon based on step number
+	const steps = iso27701Data.steps;
 	const getIconForStep = (stepNumber: number) => {
 		switch (stepNumber) {
 			case 1:

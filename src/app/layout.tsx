@@ -1,9 +1,12 @@
+
 import type { Metadata } from 'next';
 import { Figtree, Atkinson_Hyperlegible } from 'next/font/google';
 import './globals.css';
 import ThemeRegistry from '../themeRegistry';
 import Footer from './components/Footer';
 import AppBarB2B from './components/Navbar/AppBarB2B';
+import CookieBanner from './components/CookieBanner';
+
 const figtree = Figtree({
   variable: '--font-figtree-sans',
   subsets: ['latin'],
@@ -26,14 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${figtree.variable} ${atkinsonMono.variable} antialiased`}>
+    <html lang="en" className={`${figtree.variable} ${atkinsonMono.variable}`}>
+      <body>
         <ThemeRegistry>
-         <AppBarB2B/>
-          <main>{children}</main>
+          <AppBarB2B />
+          {children}
+         <CookieBanner/>
           <Footer />
         </ThemeRegistry>
       </body>
     </html>
   );
 }
+

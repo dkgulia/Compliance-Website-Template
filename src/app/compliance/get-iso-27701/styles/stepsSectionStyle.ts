@@ -1,4 +1,4 @@
-import theme from '../../../../theme'; // Update this path to match your project structure
+import theme from '../../../../theme';
 
 const stepsSectionStyle = {
 	box: {
@@ -21,10 +21,10 @@ const stepsSectionStyle = {
 	},
 	subtitle: {
 		fontWeight: '500',
-		fontSize: { xs: '1.1rem', sm: '1.2rem' },
+		fontSize: { xs: '1.1rem', sm: '1.1rem' },
 		marginBottom: '1.5rem',
 		textAlign: 'center',
-		color: theme.palette.primary.main,
+		color: '#6B7280',
 	},
     stepsIndicator: {
         display: 'flex',
@@ -50,8 +50,8 @@ const stepsSectionStyle = {
 		justifyContent: 'center',
 	},
 	card: {
-		borderRadius: '2rem',
-		background: theme.palette.background.paper,
+		borderRadius: '1rem',
+		backgroundColor: '#17171799',
 		height: '100%',
 		display: 'flex',
 		flexDirection: 'column',
@@ -68,7 +68,7 @@ const stepsSectionStyle = {
 	},
 	cardStep: {
 		fontWeight: 'bold',
-		fontSize: '0.9rem',
+		fontSize: '0.8rem',
 		color: theme.palette.primary.main,
 		marginBottom: '0.75rem',
 		textAlign: 'center',

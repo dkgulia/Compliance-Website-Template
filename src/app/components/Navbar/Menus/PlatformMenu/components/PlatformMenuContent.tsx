@@ -50,20 +50,26 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 						border: 'none',
 						'&:before': { display: 'none' },
 						backgroundColor: 'transparent',
+						color: '#f9fafb',
+						marginTop: '0',
 					}}
 				>
 					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						sx={{ padding: '0.5rem 0', borderBottom: '1px solid #E5E7EB' }}
+						expandIcon={<ExpandMoreIcon sx={{ color: '#f9fafb' }} />}
+						sx={{
+							padding: '0.5rem 0',
+							borderBottom: '1px solid #262626',
+							minHeight: '48px',
+						}}
 					>
-						<Typography sx={{ fontWeight: 600 }}>ALL FEATURES</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>ALL FEATURES</Typography>
 					</AccordionSummary>
-					<AccordionDetails sx={{ padding: '1rem 0' }}>
+					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Box sx={styles.mobileFeaturesList}>
 							{platformFeatures.map((feature, index) => (
 								<Box
 									key={`mobile-feature-${index}`}
-									sx={styles.featureItem}
+									sx={styles.mobileFeatureItem}
 									onClick={() => handleNavigate(feature.href)}
 								>
 									<Box sx={styles.featureIcon}>{feature.icon}</Box>
@@ -87,19 +93,24 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 						border: 'none',
 						'&:before': { display: 'none' },
 						backgroundColor: 'transparent',
+						color: '#f9fafb',
 					}}
 				>
 					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						sx={{ padding: '0.5rem 0', borderBottom: '1px solid #E5E7EB' }}
+						expandIcon={<ExpandMoreIcon sx={{ color: '#f9fafb' }} />}
+						sx={{
+							padding: '0.5rem 0',
+							borderBottom: '1px solid #262626',
+							minHeight: '48px',
+						}}
 					>
-						<Typography sx={{ fontWeight: 600 }}>BY COMPANY SIZE</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>BY COMPANY SIZE</Typography>
 					</AccordionSummary>
-					<AccordionDetails sx={{ padding: '1rem 0' }}>
+					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						{companySizeOptions.map((option, index) => (
 							<Box
 								key={`mobile-size-${index}`}
-								sx={styles.sizeOptionContainer}
+								sx={styles.mobileSizeOptionContainer}
 								onClick={() => handleNavigate(option.href)}
 							>
 								<Box sx={styles.sizeOptionIcon}>{option.icon}</Box>
@@ -119,19 +130,24 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 						border: 'none',
 						'&:before': { display: 'none' },
 						backgroundColor: 'transparent',
+						color: '#f9fafb',
 					}}
 				>
 					<AccordionSummary
-						expandIcon={<ExpandMoreIcon />}
-						sx={{ padding: '0.5rem 0', borderBottom: '1px solid #E5E7EB' }}
+						expandIcon={<ExpandMoreIcon sx={{ color: '#f9fafb' }} />}
+						sx={{
+							padding: '0.5rem 0',
+							borderBottom: '1px solid #262626',
+							minHeight: '48px',
+						}}
 					>
-						<Typography sx={{ fontWeight: 600 }}>ALL SOLUTIONS</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>ALL SOLUTIONS</Typography>
 					</AccordionSummary>
-					<AccordionDetails sx={{ padding: '1rem 0' }}>
+					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						{solutionItems.map((solution, index) => (
 							<Box
 								key={`mobile-solution-${index}`}
-								sx={styles.solutionItem}
+								sx={styles.mobileSolutionItem}
 								onClick={() => handleNavigate(solution.href)}
 							>
 								<Typography sx={styles.solutionItemText}>{solution.title}</Typography>
