@@ -29,7 +29,7 @@ const Iso27001ComplianceWorkflow: React.FC = () => {
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <Box sx={iso27001ComplianceWorkflowStyle.card}>
                 <Box sx={iso27001ComplianceWorkflowStyle.iconContainer}>
-                  <Image src={item.image} alt={item.title} width={70} height={70} />
+                  <Image src={item.image} alt={item.title} width={50} height={50} />
                 </Box>
                 <Typography variant="body1" sx={iso27001ComplianceWorkflowStyle.cardTitle}>
                   {item.title}

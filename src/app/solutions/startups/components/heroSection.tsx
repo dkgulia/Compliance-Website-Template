@@ -2,21 +2,14 @@
 import React from 'react';
 import { Box, Container, Typography, Button, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ShieldIcon from '@mui/icons-material/Shield';
-import SecurityIcon from '@mui/icons-material/Security';
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import hexafortData from '../constant/dataFile';
+import Image from 'next/image';
+import heroImage from '../images/heroSection-startup.png'
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
   const { description, callToAction } = hexafortData.heroSection;
-
-  // const metrics = [
-  //   { value: '3', label: 'Certifications' },
-  //   { value: '8', label: 'Weeks' },
-  //   { value: '$7K', label: 'Investment' }
-  // ];
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -56,39 +49,17 @@ const HeroSection: React.FC = () => {
             >
               {callToAction || 'Schedule a consultation'}
             </Button>
-
-            {/* <Box sx={heroSectionStyle.metricsContainer}>
-              {metrics.map((metric, index) => (
-                <Box key={metric.label} sx={heroSectionStyle.metricItem}>
-                  <Typography sx={heroSectionStyle.metricValue}>
-                    {metric.value}
-                  </Typography>
-                  <Typography sx={heroSectionStyle.metricLabel}>
-                    {metric.label}
-                  </Typography>
-                </Box>
-              ))}
-            </Box> */}
           </Box>
 
           <Box sx={heroSectionStyle.visualContainer}>
             <Box sx={heroSectionStyle.coreVisual}>
-              <Box sx={heroSectionStyle.gridPattern} />
-              <Box sx={{...heroSectionStyle.certIcons, ...heroSectionStyle.certIcon1}}>
-                <ShieldIcon fontSize="large" sx={{ color: theme.palette.secondary.main }} />
-              </Box>
-
-              <Box sx={{...heroSectionStyle.certIcons, ...heroSectionStyle.certIcon2}}>
-                <SecurityIcon fontSize="large" sx={{ color: theme.palette.secondary.main }} />
-              </Box>
-
-              <Box sx={{...heroSectionStyle.certIcons, ...heroSectionStyle.certIcon3}}>
-                <VerifiedUserIcon fontSize="large" sx={{ color: theme.palette.secondary.main }} />
-              </Box>
-
-              <Typography variant="body1" sx={heroSectionStyle.placeholderText}>
-                Streamlined compliance certification for your startup's growth and security
-              </Typography>
+              <Image
+                src={heroImage}
+                alt="Compliance certification for startups"
+                layout="fill"
+                objectFit="contain"
+                priority
+              />
             </Box>
           </Box>
         </Box>

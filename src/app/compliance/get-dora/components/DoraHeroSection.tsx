@@ -4,7 +4,7 @@ import { Box, Container, Typography, Button } from '@mui/material';
 import { complianceData } from '../constants/doraData';
 import DoraHeroStyle from '../styles/doraHeroStyle';
 import Image from 'next/image';
-import heroSection2 from '../images/heroSection2.webp';
+import heroSection2 from '../images/dora-heroSection.png';
 
 export default function DoraHeroSection() {
   return (
@@ -36,8 +36,8 @@ export default function DoraHeroSection() {
           <Image
             src={heroSection2}
             alt="DORA compliance hero"
-            width={500}
-            height={500}
+            width={550}
+            height={550}
             style={{ objectFit: 'cover' }}
           />
         </Box>

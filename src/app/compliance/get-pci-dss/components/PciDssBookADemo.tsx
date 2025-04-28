@@ -6,7 +6,7 @@ import Image from 'next/image';
 import pciDssBookADemoStyle from '../styles/pciDssBookADemoStyle';
 import { COMPLIANCE } from '../../../constants/routes';
 import pciDssData from '../constants/pciDssData';
-import bookDemoImage from '../images/ChatGPT Image Apr 16, 2025, 04_19_47 PM.png';
+import bookDemoImage from '../images/pci-book-a-demo.png';
 
 const PciDssBookADemo = () => {
     return (

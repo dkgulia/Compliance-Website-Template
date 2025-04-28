@@ -92,12 +92,10 @@ const hipaaBannerStyles = {
 	},
 	circularImageContainer: {
 		position: 'relative',
-		width: { xs: '180px', md: '280px' },
-		height: { xs: '180px', md: '280px' },
-		borderRadius: '50%',
+		width: { xs: '180px', md: '300px' },
+		height: { xs: '180px', md: '300px' },
 		overflow: 'hidden',
-		boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)',
-		margin: { xs: '0', md: '0 2rem 0 0' },
+		margin: { xs: '0', md: '0 0rem 0 0' },
 	},
 	circularImage: {
 		objectFit: 'cover',

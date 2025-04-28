@@ -42,8 +42,6 @@ const Iso27001HeroSection: React.FC = () => {
 							</Button>
 						</Box>
 					</Grid>
-
-					{/* Image Section (Right on Desktop, Center on Mobile) */}
 					<Grid size={{ xs: 12, md: 6 }}>
 						<Box sx={heroSectionStyle.imageBox}>
 							{heroContent.content.heroImage && (

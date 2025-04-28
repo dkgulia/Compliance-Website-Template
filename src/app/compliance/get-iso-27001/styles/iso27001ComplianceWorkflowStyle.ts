@@ -54,13 +54,13 @@ const iso27001ComplianceWorkflowStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "3.5rem",
-    height: "3.5rem",
-
-    borderRadius: "50%",
+    width: "4.5rem",
+    height: "4.5rem",
+    background: theme.palette.secondary.light,
+    borderRadius: "6px",
   },
   cardTitle: {
-    color: '#6B7280',
+    color: '#ffff',
     fontWeight: "bold",
     fontSize:'1rem'
   },

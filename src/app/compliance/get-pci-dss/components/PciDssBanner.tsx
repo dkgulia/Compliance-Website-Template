@@ -4,7 +4,7 @@ import { Box, Typography, Button, Grid } from '@mui/material';
 import bannerStyle from '../styles/bannerStyle';
 import { ArrowForward } from '@mui/icons-material';
 import pciDssData from '../constants/pciDssData';
-import pciDssLockIcon from '../images/p99b2sofk5nhbo4hemr5.webp';
+import pciDssLockIcon from '../images/pci-dss-demo.png';
 import Image from 'next/image';
 
 const PciDssBanner: React.FC = () => {
@@ -50,7 +50,7 @@ const PciDssBanner: React.FC = () => {
 								src={pciDssLockIcon}
 								alt="PCI DSS Lock"
 								width={450}
-								height={400}
+								height={450}
 								style={{ maxWidth: '100%', height: 'auto' }}
 							/>
 						</Box>

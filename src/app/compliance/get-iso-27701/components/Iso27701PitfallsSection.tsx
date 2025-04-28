@@ -25,8 +25,8 @@ const Iso27701PitfallsSection: React.FC = () => {
 										<Image
 											src={item.image}
 											alt={item.title}
-											width={60}
-											height={60}
+											width={50}
+											height={50}
 											style={{
 												filter: 'brightness(0) invert(1)',
 												opacity: 0.9,

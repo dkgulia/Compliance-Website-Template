@@ -4,7 +4,7 @@ import { Box, Typography, Button, Grid, useMediaQuery, useTheme } from '@mui/mat
 import { ArrowForward } from '@mui/icons-material';
 import Image from 'next/image';
 import hipaaBannerStyles from '../styles/hipaaBannerStyle';
-import healthcareComplianceImg from '../images/dual-hex-white.png';
+import healthcareComplianceImg from '../images/ hipaa-banner.png';
 
 const HipaaBanner = () => {
 	const theme = useTheme();

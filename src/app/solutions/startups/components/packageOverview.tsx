@@ -52,7 +52,6 @@ const PackageOverview: React.FC = () => {
           <Box sx={packageOverviewStyle.descriptionContainer}>
             <Typography sx={packageOverviewStyle.description}>
               {description.split(' ').map((word, index) => {
-                // Highlight key terms
                 if (['confidence', 'international', 'efficiency', 'standards'].includes(word.toLowerCase().replace(/[.,]/g, ''))) {
                   return <Box component="span" key={index} sx={packageOverviewStyle.accentText}> {word} </Box>;
                 }

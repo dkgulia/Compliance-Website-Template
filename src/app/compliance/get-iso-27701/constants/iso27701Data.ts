@@ -8,14 +8,14 @@ import InfoIcon from '@mui/icons-material/Info';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import DashboardImage from '../images/a-golden-award-ribbon-with-a-central-star--outline.webp';
-import DocumentImage from '../images/a-detailed-document-illustration-in--251757--conta.webp';
-import RiskImage from '../images/a-rising-trend-graph-with-adjustable-sliders--rend.webp';
-import EfficiencyImage from '../images/a-stylized-factory-silhouette-in-deep--251757-navy.webp';
-import riskAssessmentImage from '../images/create-a-minimal--professional-icon-representing-t.png'
-import privacyByDesignImage from '../images/create-a-light-blue---3e9ed1--icon-representing-an.png';
-import implementationTimelineImage from '../images/create-a-light-blue---3e9ed1--icon-representing-an.png';
-import teamAlignmentImage from '../images/design-a-light-blue---3e9ed1--icon-representing-pr.png';
+import DashboardImage from '../images/trust.png';
+import DocumentImage from '../images/streamlined-regulatory-compliance.png';
+import RiskImage from '../images/-risk-management.png';
+import EfficiencyImage from '../images/improved-operational-efficiency.png';
+import riskAssessmentImage from '../images/-risk-management.png'
+import privacyByDesignImage from '../images/privacy-by-design-.png';
+import implementationTimelineImage from '../images/implementation-timeline.png';
+import teamAlignmentImage from '../images/team-alignment.png';
 import { StaticImageData } from 'next/image'
 
 

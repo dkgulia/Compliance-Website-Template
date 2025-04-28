@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Box, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import iso27001BannerStyle from "../styles/iso27001BannerStyle";
-import { iso27001Data } from "../constants/iso27001Data"; 
+import { iso27001Data } from "../constants/iso27001Data";
 
 const Iso27001Banner = () => {
   const section = iso27001Data.sections.find((sec) => sec.Sno === "8");
@@ -32,7 +32,7 @@ const Iso27001Banner = () => {
             <Image
               src={image.src}
               alt={image.alt}
-              width={220}
+              width={300}
               height={230}
               style={{ borderRadius: "8px" }}
             />

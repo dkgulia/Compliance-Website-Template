@@ -4,7 +4,7 @@ const heroSectionStyle = {
   mainContainer: {
     width: '100%',
     paddingTop: '5rem',
-    paddingBottom: '5rem',
+    paddingBottom: '1rem',
     position: 'relative',
     overflow: 'hidden',
     background: theme.palette.background.default,

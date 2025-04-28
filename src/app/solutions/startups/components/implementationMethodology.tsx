@@ -11,29 +11,27 @@ import hexafortData from '../constant/dataFile';
 const ImplementationMethodology: React.FC = () => {
   const { implementationMethodology } = hexafortData;
 
-  // Map icons to approach titles
-  const getIcon = (title: string) => {
+  const renderIcon = (title: string) => {
     switch (title) {
       case "Integrated Approach":
-        return <IntegrationInstructionsIcon sx={implementationMethodologyStyle.methodologyIcon} />;
+        return <IntegrationInstructionsIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
       case "Expert Team":
-        return <PeopleIcon sx={implementationMethodologyStyle.methodologyIcon} />;
+        return <PeopleIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
       case "Proven Tools":
-        return <BuildIcon sx={implementationMethodologyStyle.methodologyIcon} />;
+        return <BuildIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
       case "Knowledge Transfer":
-        return <SchoolIcon sx={implementationMethodologyStyle.methodologyIcon} />;
+        return <SchoolIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
       default:
-        return <IntegrationInstructionsIcon sx={implementationMethodologyStyle.methodologyIcon} />;
+        return <IntegrationInstructionsIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
     }
   };
 
   return (
     <Box sx={implementationMethodologyStyle.container}>
-      {/* Background elements */}
       <Box sx={implementationMethodologyStyle.backgroundElements}>
         <Box sx={implementationMethodologyStyle.gridPattern} />
-        <Box sx={{...implementationMethodologyStyle.glowEffect, ...implementationMethodologyStyle.glowEffect1}} />
-        <Box sx={{...implementationMethodologyStyle.glowEffect, ...implementationMethodologyStyle.glowEffect2}} />
+        <Box sx={implementationMethodologyStyle.glowEffect1} />
+        <Box sx={implementationMethodologyStyle.glowEffect2} />
       </Box>
 
       <Container maxWidth="xl" disableGutters>
@@ -51,7 +49,9 @@ const ImplementationMethodology: React.FC = () => {
             <Box sx={implementationMethodologyStyle.methodologiesGrid}>
               {implementationMethodology.approaches.map((approach, index) => (
                 <Box key={index} sx={implementationMethodologyStyle.methodologyCard}>
-                  {getIcon(approach.title)}
+                  <Box sx={implementationMethodologyStyle.methodologyIconContainer}>
+                    {renderIcon(approach.title)}
+                  </Box>
                   <Typography sx={implementationMethodologyStyle.methodologyTitle}>
                     {approach.title}
                   </Typography>
@@ -65,7 +65,6 @@ const ImplementationMethodology: React.FC = () => {
             <Box sx={implementationMethodologyStyle.descriptionContainer}>
               <Typography sx={implementationMethodologyStyle.description}>
                 {implementationMethodology.description.split(' ').map((word, index) => {
-                  // Highlight key terms
                   if (['practical', 'sustainable', 'integrated', 'knowledge', 'capability', 'maintain'].includes(word.toLowerCase().replace(/[.,]/g, ''))) {
                     return <Box component="span" key={index} sx={implementationMethodologyStyle.highlightedText}> {word} </Box>;
                   }

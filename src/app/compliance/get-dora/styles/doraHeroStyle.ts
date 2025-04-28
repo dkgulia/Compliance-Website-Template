@@ -97,7 +97,7 @@ const DoraHeroStyle = {
 
     img: {
       width: { xs: '80%', sm: '100%' },
-      maxWidth: '400px',
+      maxWidth: '450px',
       height: 'auto',
     },
   },

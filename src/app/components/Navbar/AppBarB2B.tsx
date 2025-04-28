@@ -118,10 +118,6 @@ const AppBarB2B: React.FC = () => {
     resetMobileMenuState();
   };
 
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   return (
     <>
       <AppBar position="fixed" sx={styles.appBar}>
