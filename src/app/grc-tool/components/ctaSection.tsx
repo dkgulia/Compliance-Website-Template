@@ -5,21 +5,10 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 
 const CTASection: React.FC = () => {
-	const formFeatures = [
-		"No credit card required",
-		"Full-featured 14-day trial",
-		"Easy setup, cancel anytime"
-	];
+	const formFeatures = ['No credit card required', 'Full-featured 14-day trial', 'Cancel anytime'];
 
 	return (
 		<Box sx={ctaSectionStyle.section}>
-			<Box sx={ctaSectionStyle.backgroundGradient} />
-
-			<Box sx={ctaSectionStyle.shapesContainer}>
-				<Box sx={ctaSectionStyle.shape1} />
-				<Box sx={ctaSectionStyle.shape2} />
-			</Box>
-
 			<Container sx={ctaSectionStyle.container}>
 				<Box sx={ctaSectionStyle.content}>
 					<Box sx={ctaSectionStyle.textContent}>
@@ -27,13 +16,9 @@ const CTASection: React.FC = () => {
 							Ready to Revolutionize Your GRC Strategy?
 						</Typography>
 						<Typography variant="body1" sx={ctaSectionStyle.description}>
-							Join forward-thinking organizations that are transforming their security posture with HexaFort's AI-powered platform.
+							Join forward-thinking organizations that are transforming their security posture with HexaFort's
+							AI-powered platform.
 						</Typography>
-						<Box sx={ctaSectionStyle.buttonContainer}>
-							<Button variant="contained" sx={ctaSectionStyle.primaryButton}>
-								Schedule a Demo
-							</Button>
-						</Box>
 					</Box>
 
 					<Box sx={ctaSectionStyle.formContainer}>
@@ -81,9 +66,9 @@ const CTASection: React.FC = () => {
 								/>
 							</Box>
 
-							<button type="submit" style={ctaSectionStyle.formButton as React.CSSProperties}>
+							<Button type="submit" sx={ctaSectionStyle.formButton}>
 								Get Started
-							</button>
+							</Button>
 						</form>
 
 						<Box sx={ctaSectionStyle.featuresContainer}>

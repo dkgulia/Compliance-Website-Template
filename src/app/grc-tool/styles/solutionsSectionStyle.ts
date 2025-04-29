@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const solutionsSectionStyle = {
 	section: {
 		padding: { xs: '4rem 1rem', md: '6rem 2rem' },
-		background: '#101010',
+		background: theme.palette.background.default,
 		position: 'relative',
 		overflow: 'hidden',
 	},
@@ -15,8 +15,8 @@ const solutionsSectionStyle = {
 	},
 	title: {
 		color: 'white',
-		fontSize: { xs: '2rem', sm: '2.5rem', md: '2.8rem' },
-		fontWeight: '700',
+		fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2.8rem' },
+		fontWeight: '600',
 		marginBottom: '3rem',
 		textAlign: 'center',
 	},
@@ -160,7 +160,7 @@ const solutionsSectionStyle = {
 		marginBottom: '0.5rem',
 	},
 	featureDescription: {
-		color: theme.palette.text.secondary,
+		color: '#6B7280',
 		fontSize: '0.95rem',
 		lineHeight: 1.6,
 	},

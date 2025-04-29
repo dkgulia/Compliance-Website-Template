@@ -5,7 +5,7 @@ import { SxProps } from '@mui/system';
 const benefitsSectionStyle: Record<string, SxProps<Theme>> = {
   container: {
     position: 'relative',
-    padding: { xs: '4rem 1rem', md: '3rem 2rem' },
+    padding: { xs: '1rem 1rem', md: '3rem 2rem' },
     background: (theme) => theme.palette.background.default,
     overflow: 'hidden',
 
@@ -21,7 +21,7 @@ const benefitsSectionStyle: Record<string, SxProps<Theme>> = {
     mb: { xs: 5, md: 6 },
   },
   title: {
-    fontSize: { xs: '2rem', md: '2.5rem' },
+    fontSize: { xs: '1.8rem', md: '2.5rem' },
     fontWeight: 600,
     mb: 2,
     color: (theme) => theme.palette.text.primary,

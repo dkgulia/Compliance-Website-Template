@@ -25,13 +25,10 @@ const SolutionsSection: React.FC = () => {
 		}
 	];
 
-	// Chart bars data (height percentage values)
 	const chartData = [40, 55, 70, 65, 75, 90, 92];
 
 	return (
 		<Box sx={solutionsSectionStyle.section}>
-			<Box sx={solutionsSectionStyle.backgroundGradient} />
-
 			<Container sx={solutionsSectionStyle.container}>
 				<Typography variant="h2" sx={solutionsSectionStyle.title}>
 					HexaFort's Solution: A Unified GRC Platform

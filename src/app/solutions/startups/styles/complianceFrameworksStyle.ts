@@ -1,14 +1,12 @@
-
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 
 const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
   container: {
     position: 'relative',
-    padding: { xs: '4rem 1rem', md: '3rem 2rem' },
+    padding: { xs: '2rem 1rem', md: '3rem 2rem' },
     background: (theme) => theme.palette.background.default,
     overflow: 'hidden',
-
   },
   contentContainer: {
     width: '100%',
@@ -21,7 +19,7 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     mb: { xs: 5, md: 6 },
   },
   title: {
-    fontSize: { xs: '2rem', md: '2.5rem' },
+    fontSize: { xs: '1.8rem', md: '2.5rem' },
     fontWeight: 600,
     mb: 2,
     color: (theme) => theme.palette.text.primary,
@@ -31,7 +29,7 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     maxWidth: '800px',
     mx: 'auto',
     color: '#6b7280',
-    mb: 6,
+    mb: 3,
   },
   highlightedText: {
     color: '#115e59',
@@ -52,6 +50,33 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     color: 'white',
     '&.Mui-selected': {
       color: (theme) => theme.palette.secondary.main,
+    },
+  },
+
+  mobileSelectContainer: {
+    mb:0,
+    width: '100%',
+  },
+  mobileSelect: {
+    color: 'white',
+    backgroundColor: 'rgba(23, 23, 23, 0.6)',
+    borderRadius: '8px',
+    '.MuiOutlinedInput-notchedOutline': {
+      borderColor: 'rgba(255, 255, 255, 0.2)',
+    },
+    '&:hover .MuiOutlinedInput-notchedOutline': {
+      borderColor: 'rgba(255, 255, 255, 0.3)',
+    },
+    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+      borderColor: '#115e59',
+    },
+    '.MuiSvgIcon-root': {
+      color: 'white',
+    },
+    '.MuiSelect-select': {
+      fontWeight: 600,
+      fontSize: '1rem',
+      padding: '12px 16px',
     },
   },
   frameworkContainer: {
@@ -111,6 +136,8 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     p: 3,
     border: (theme) => `1px solid ${theme.palette.divider}`,
     background: '#17171799',
+    // Make pricing card full width on mobile
+    width: { xs: '100%', md: 'auto' },
   },
   pricingHeader: {
     borderBottom: (theme) => `1px solid ${theme.palette.divider}`,

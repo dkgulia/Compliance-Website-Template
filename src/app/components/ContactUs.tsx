@@ -139,6 +139,7 @@ const ContactUsComponent = () => {
 								</Box>
 							</Box>
 						</Grid>
+
 						<Grid size={{ xs: 12, md: 7 }}>
 							<Box component="form" onSubmit={handleSubmit} sx={contactStyle.formContainer}>
 								<Typography variant="h6" sx={contactStyle.formTitle}>
@@ -153,7 +154,7 @@ const ContactUsComponent = () => {
 										{ name: 'company', label: 'Company Name' },
 										{ name: 'phone', label: 'Phone Number' },
 									].map((field) => (
-										<Grid size={{ xs: 12, md: 7 }} key={field.name}>
+										<Grid size={{xs:12,sm:6}}  key={field.name}>
 											<TextField
 												{...field}
 												fullWidth
@@ -165,7 +166,26 @@ const ContactUsComponent = () => {
 										</Grid>
 									))}
 
-									<Grid size={{ xs: 7 }}>
+									<Grid size={{xs:12,sm:6}}>
+										<TextField
+											select
+											fullWidth
+											name="inquiryType"
+											label="Inquiry Type"
+											variant="outlined"
+											value={formData.inquiryType}
+											onChange={handleChange}
+											sx={contactStyle.textField}
+										>
+											{inquiryTypes.map((option) => (
+												<MenuItem key={option.value} value={option.value}>
+													{option.label}
+												</MenuItem>
+											))}
+										</TextField>
+									</Grid>
+
+									<Grid size={{xs:12}}>
 										<TextField
 											required
 											fullWidth

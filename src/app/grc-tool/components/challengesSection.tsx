@@ -33,8 +33,6 @@ const ChallengesSection: React.FC = () => {
 
 	return (
 		<Box sx={challengesSectionStyle.section}>
-			<Box sx={challengesSectionStyle.backgroundGradient} />
-
 			<Container sx={challengesSectionStyle.container}>
 				<Typography variant="h2" sx={challengesSectionStyle.title}>
 					The Challenge: Unmanageable Compliance

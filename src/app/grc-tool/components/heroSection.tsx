@@ -7,28 +7,9 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import heroSectionStyle from '../styles/heroSectionStyle';
 
 const HeroSection: React.FC = () => {
-	const features = [
-		{
-			icon: ShieldIcon,
-			title: 'Complete Security',
-			description: 'Comprehensive GRC coverage'
-		},
-		{
-			icon: AutoAwesomeIcon,
-			title: 'AI-Powered',
-			description: 'Intelligent risk management'
-		},
-		{
-			icon: SpeedIcon,
-			title: 'Fast Implementation',
-			description: 'Quick time to value'
-		}
-	];
-
+	
 	return (
 		<Box sx={heroSectionStyle.section}>
-			<Box sx={heroSectionStyle.backgroundGradient} />
-
 			<Container maxWidth="lg" sx={heroSectionStyle.container}>
 				<Box sx={heroSectionStyle.content}>
 					<Typography variant="h1" sx={heroSectionStyle.title}>
@@ -52,21 +33,6 @@ const HeroSection: React.FC = () => {
 						</Button>
 					</Box>
 
-					<Box sx={heroSectionStyle.featuresContainer}>
-						{features.map((feature, index) => (
-							<Box key={index} sx={heroSectionStyle.featureItem}>
-								<Box sx={heroSectionStyle.featureIconContainer}>
-									<feature.icon sx={heroSectionStyle.featureIcon} />
-								</Box>
-								<Typography variant="h6" sx={heroSectionStyle.featureTitle}>
-									{feature.title}
-								</Typography>
-								<Typography variant="body2" sx={heroSectionStyle.featureDescription}>
-									{feature.description}
-								</Typography>
-							</Box>
-						))}
-					</Box>
 				</Box>
 			</Container>
 		</Box>

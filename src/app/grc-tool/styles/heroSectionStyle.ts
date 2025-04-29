@@ -2,8 +2,8 @@ import theme from '../../../theme';
 
 const heroSectionStyle = {
 	section: {
-		padding: { xs: '8rem 1rem 6rem', md: '10rem 2rem 8rem' },
-		background: '#101010',
+		padding: { xs: '6rem 1rem 0rem', md: '8rem 2rem 1rem' },
+		background: theme.palette.background.default,
 		position: 'relative',
 		overflow: 'hidden',
 		minHeight: '90vh',
@@ -24,14 +24,14 @@ const heroSectionStyle = {
 	},
 	title: {
 		color: 'white',
-		fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
-		fontWeight: '700',
+		fontSize: { xs: '2rem', sm: '3.5rem', md: '4.5rem' },
+		fontWeight: '600',
 		marginBottom: '1.5rem',
 		lineHeight: 1.1,
 		maxWidth: '900px',
 	},
 	description: {
-		color: theme.palette.text.secondary,
+		color: '#6B7280',
 		fontSize: { xs: '1.1rem', md: '1.25rem' },
 		marginBottom: '3rem',
 		maxWidth: '800px',
@@ -45,19 +45,30 @@ const heroSectionStyle = {
 		marginBottom: '5rem',
 	},
 	primaryButton: {
-		background: '#5eead4',
-		color: '#171717',
-		padding: '0.75rem 2rem',
-		borderRadius: '0.375rem',
-		fontWeight: 'bold',
+		bmarginTop: '1.5rem',
+		color: '#f9fafb',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
+		},
+		borderRadius: '0.5rem',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
 		textTransform: 'none',
 		fontSize: '1rem',
-		boxShadow: '0 4px 14px rgba(94, 234, 212, 0.4)',
-		transition: 'all 0.3s ease',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
 		'&:hover': {
-			background: '#42c6b2',
-			transform: 'translateY(-2px)',
-			boxShadow: '0 6px 20px rgba(94, 234, 212, 0.5)',
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
+		},
+		'&.Mui-disabled': {
+			color: '#f9fafb',
+			opacity: 0.5,
+			backgroundColor: '#1f2937',
+			border: '1px solid #374151',
 		},
 	},
 	secondaryButton: {
@@ -108,12 +119,12 @@ const heroSectionStyle = {
 	featureTitle: {
 		color: 'white',
 		fontWeight: 'bold',
-		fontSize: '1.1rem',
+		fontSize: '1rem',
 		marginBottom: '0.5rem',
 	},
 	featureDescription: {
 		color: theme.palette.text.secondary,
-		fontSize: '0.9rem',
+		fontSize: '0.8rem',
 	},
 	backgroundGradient: {
 		position: 'absolute',

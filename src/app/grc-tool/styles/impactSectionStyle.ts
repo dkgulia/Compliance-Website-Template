@@ -15,8 +15,8 @@ const impactSectionStyle = {
 	},
 	title: {
 		color: 'white',
-		fontSize: { xs: '2rem', sm: '2.5rem', md: '2.8rem' },
-		fontWeight: '700',
+		fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2.8rem' },
+		fontWeight: '600',
 		marginBottom: '3rem',
 		textAlign: 'center',
 	},
@@ -42,10 +42,10 @@ const impactSectionStyle = {
 		},
 	},
 	iconContainer: {
-		width: '3.5rem',
-		height: '3.5rem',
-		borderRadius: '50%',
-		background: 'rgba(94, 234, 212, 0.1)',
+		width: '4rem',
+		height: '4rem',
+		borderRadius: '6px',
+		background: '#115e59',
 		border: '1px solid rgba(94, 234, 212, 0.2)',
 		display: 'flex',
 		alignItems: 'center',
@@ -53,8 +53,8 @@ const impactSectionStyle = {
 		marginBottom: '1.5rem',
 	},
 	icon: {
-		color: '#5eead4',
-		fontSize: '1.75rem',
+		color: '#ffff',
+		fontSize: '2rem',
 	},
 	impactTitle: {
 		color: 'white',
@@ -63,7 +63,7 @@ const impactSectionStyle = {
 		marginBottom: '0.75rem',
 	},
 	impactDescription: {
-		color: theme.palette.text.secondary,
+		color: '#6B7280',
 		fontSize: '0.95rem',
 		lineHeight: 1.6,
 	},
@@ -87,7 +87,7 @@ const impactSectionStyle = {
 		textAlign: 'center',
 	},
 	metricValue: {
-		color: '#5eead4',
+		color: '#115e59',
 		fontSize: { xs: '2.5rem', md: '3.5rem' },
 		fontWeight: 'bold',
 		lineHeight: 1,

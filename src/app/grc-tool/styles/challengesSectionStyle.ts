@@ -2,8 +2,8 @@ import theme from '../../../theme';
 
 const challengesSectionStyle = {
 	section: {
-		padding: { xs: '4rem 1rem', md: '6rem 2rem' },
-		background: '#101010',
+		padding: { xs: '1rem 1rem', md: '0rem 2rem' },
+		background: theme.palette.background.default,
 		position: 'relative',
 		overflow: 'hidden',
 	},
@@ -15,8 +15,8 @@ const challengesSectionStyle = {
 	},
 	title: {
 		color: 'white',
-		fontSize: { xs: '2rem', sm: '2.5rem', md: '2.8rem' },
-		fontWeight: '700',
+		fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2.8rem' },
+		fontWeight: '600',
 		marginBottom: '3rem',
 		textAlign: 'center',
 	},
@@ -41,9 +41,9 @@ const challengesSectionStyle = {
 		},
 	},
 	iconContainer: {
-		width: '3rem',
-		height: '3rem',
-		borderRadius: '50%',
+		width: '4rem',
+		height: '4rem',
+		borderRadius: '6px',
 		background: '#115e59',
 		display: 'flex',
 		alignItems: 'center',
@@ -52,7 +52,7 @@ const challengesSectionStyle = {
 	},
 	icon: {
 		color: 'white',
-		fontSize: '1.5rem',
+		fontSize: '2rem',
 	},
 	challengeTitle: {
 		color: 'white',

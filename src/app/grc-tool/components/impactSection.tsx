@@ -9,44 +9,42 @@ import impactSectionStyle from '../styles/impactSectionStyle';
 const ImpactSection: React.FC = () => {
 	const impacts = [
 		{
-			title: "Reduced Compliance Costs",
-			description: "Streamline processes and minimize manual effort, saving valuable time and resources.",
-			icon: SavingsIcon
+			title: 'Reduced Compliance Costs',
+			description: 'Streamline processes and minimize manual effort, saving valuable time and resources.',
+			icon: SavingsIcon,
 		},
 		{
-			title: "Improved Operational Efficiency",
-			description: "Increase productivity and agility by automating tasks and gaining real-time insights.",
-			icon: SpeedIcon
+			title: 'Improved Operational Efficiency',
+			description: 'Increase productivity and agility by automating tasks and gaining real-time insights.',
+			icon: SpeedIcon,
 		},
 		{
-			title: "Enhanced Data Security",
-			description: "Protect sensitive data and minimize the risk of breaches with robust security measures.",
-			icon: SecurityIcon
-		}
+			title: 'Enhanced Data Security',
+			description: 'Protect sensitive data and minimize the risk of breaches with robust security measures.',
+			icon: SecurityIcon,
+		},
 	];
 
 	const metrics = [
 		{
-			value: "14",
-			label: "Customers",
-			description: "Satisfied clients across various industries"
+			value: '14',
+			label: 'Customers',
+			description: 'Satisfied clients across various industries',
 		},
 		{
-			value: "$50,000",
-			label: "ARR",
-			description: "Current annual recurring revenue"
+			value: '$50,000',
+			label: 'ARR',
+			description: 'Current annual recurring revenue',
 		},
 		{
-			value: "32",
-			label: "Certifications",
-			description: "Compliance standards supported"
-		}
+			value: '32',
+			label: 'Certifications',
+			description: 'Compliance standards supported',
+		},
 	];
 
 	return (
 		<Box sx={impactSectionStyle.section}>
-			<Box sx={impactSectionStyle.backgroundGradient} />
-
 			<Container sx={impactSectionStyle.container}>
 				<Typography variant="h2" sx={impactSectionStyle.title}>
 					HexaFort's Impact: Measurable Value for Businesses

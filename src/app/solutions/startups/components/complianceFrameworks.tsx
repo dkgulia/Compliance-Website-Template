@@ -1,6 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { Box, Container, Typography, Tabs, Tab, Button } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Container, Typography, Tabs, Tab, Button, useMediaQuery, MenuItem, FormControl, Select, SelectChangeEvent } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import complianceFrameworksStyle from '../styles/complianceFrameworksStyle';
@@ -42,9 +43,16 @@ function a11yProps(index: number) {
 const ComplianceFrameworks: React.FC = () => {
   const [value, setValue] = useState(0);
   const { complianceFrameworks } = hexafortData;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+  };
+
+  // Handle dropdown select change for mobile
+  const handleSelectChange = (event: SelectChangeEvent<number>) => {
+    setValue(event.target.value as number);
   };
 
   return (
@@ -72,25 +80,49 @@ const ComplianceFrameworks: React.FC = () => {
             </Typography>
           </Box>
 
-          <Box sx={complianceFrameworksStyle.tabsContainer}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              variant="scrollable"
-              scrollButtons="auto"
-              indicatorColor="secondary"
-              aria-label="compliance frameworks tabs"
-            >
-              {complianceFrameworks.map((framework, index) => (
-                <Tab
-                  key={framework.id}
-                  label={framework.name}
-                  sx={complianceFrameworksStyle.tab}
-                  {...a11yProps(index)}
-                />
-              ))}
-            </Tabs>
-          </Box>
+          {/* Desktop Tabs */}
+          {!isMobile && (
+            <Box sx={complianceFrameworksStyle.tabsContainer}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                indicatorColor="secondary"
+                aria-label="compliance frameworks tabs"
+              >
+                {complianceFrameworks.map((framework, index) => (
+                  <Tab
+                    key={framework.id}
+                    label={framework.name}
+                    sx={complianceFrameworksStyle.tab}
+                    {...a11yProps(index)}
+                  />
+                ))}
+              </Tabs>
+            </Box>
+          )}
+
+          {/* Mobile Dropdown */}
+          {isMobile && (
+            <Box sx={complianceFrameworksStyle.mobileSelectContainer}>
+              <FormControl fullWidth>
+                <Select
+                  value={value}
+                  onChange={handleSelectChange}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Select compliance framework' }}
+                  sx={complianceFrameworksStyle.mobileSelect}
+                >
+                  {complianceFrameworks.map((framework, index) => (
+                    <MenuItem key={framework.id} value={index}>
+                      {framework.name}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Box>
+          )}
 
           {complianceFrameworks.map((framework, index) => (
             <TabPanel key={framework.id} value={value} index={index}>

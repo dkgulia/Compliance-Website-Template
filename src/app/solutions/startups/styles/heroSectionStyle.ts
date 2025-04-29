@@ -11,7 +11,7 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		minHeight: { xs: 'auto', md: '80vh' },
 		display: 'flex',
 		alignItems: 'center',
-		pt: { xs: 3, md: 10 },
+		pt: { xs: 3, md: 10},
 		marginTop: '3rem',
 
 	},

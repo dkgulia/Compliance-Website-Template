@@ -7,9 +7,10 @@ const contactStyle = {
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
-		padding: '3rem 2rem',
+		padding: { xs: '5rem 1rem', sm: '3rem 1.5rem', md: '3rem 2rem' },
 		position: 'relative',
 		overflow: 'hidden',
+		background: '#101010',
 	},
 	backgroundGradient: {
 		position: 'absolute',
@@ -17,6 +18,7 @@ const contactStyle = {
 		left: 0,
 		width: '100%',
 		height: '100%',
+		background: 'radial-gradient(50% 50% at 50% 50%, rgba(17, 94, 89, 0.15) 0%, rgba(0, 0, 0, 0) 100%)',
 		zIndex: 1,
 	},
 	container: {
@@ -26,12 +28,13 @@ const contactStyle = {
 		zIndex: 5,
 	},
 	contentBox: {
-		padding: { xs: '2rem', md: '3rem' },
+		padding: { xs: '1.5rem', sm: '2rem', md: '3rem' },
 		borderRadius: '16px',
 		backdropFilter: 'blur(10px)',
+		
 	},
 	title: {
-		fontSize: { xs: '2.5rem', md: '3.5rem' },
+		fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem' },
 		fontWeight: 600,
 		color: 'white',
 		mb: 2,
@@ -41,25 +44,25 @@ const contactStyle = {
 		color: '#115e59',
 	},
 	description: {
-		fontSize: { xs: '1rem', md: '1.1rem' },
+		fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
 		color: '#a3a3a3',
-		mb: 5,
+		mb: { xs: 3, md: 5 },
 		maxWidth: '800px',
 	},
 	mainContent: {
-		mt: 4,
+		mt: { xs: 2, md: 4 },
 	},
 	contactInfoContainer: {
 		background: '#17171799',
 		borderRadius: '12px',
-		padding: '2rem',
+		padding: { xs: '1.5rem', md: '2rem' },
 		height: '100%',
 		display: 'flex',
 		flexDirection: 'column',
 		border: '1px solid rgba(255, 255, 255, 0.1)',
 	},
 	infoTitle: {
-		fontSize: '1.25rem',
+		fontSize: { xs: '1.1rem', md: '1.25rem' },
 		fontWeight: 600,
 		color: 'white',
 		mb: 3,
@@ -71,8 +74,8 @@ const contactStyle = {
 		gap: 2,
 	},
 	contactIcon: {
-		color: '#fffff',
-		fontSize: '1.5rem',
+		color: '#ffff',
+		fontSize: { xs: '1.25rem', md: '1.5rem' },
 	},
 	contactLabel: {
 		color: '#a3a3a3',
@@ -81,17 +84,17 @@ const contactStyle = {
 	},
 	contactValue: {
 		color: 'white',
-		fontSize: '1rem',
+		fontSize: { xs: '0.9rem', md: '1rem' },
 	},
 	reachOutBox: {
 		marginTop: 'auto',
 		background: 'rgba(17, 94, 89, 0.2)',
 		borderRadius: '8px',
-		padding: '1.5rem',
+		padding: { xs: '1.25rem', md: '1.5rem' },
 		mt: 4,
 	},
 	reachOutTitle: {
-		fontSize: '1.1rem',
+		fontSize: { xs: '1rem', md: '1.1rem' },
 		fontWeight: 600,
 		color: 'white',
 		mb: 1,
@@ -131,12 +134,12 @@ const contactStyle = {
 	formContainer: {
 		background: '#17171799',
 		borderRadius: '12px',
-		padding: '2rem',
+		padding: { xs: '1.5rem', md: '2rem' },
 		border: '1px solid rgba(255, 255, 255, 0.1)',
 		height: '100%',
 	},
 	formTitle: {
-		fontSize: '1.25rem',
+		fontSize: { xs: '1.1rem', md: '1.25rem' },
 		fontWeight: 600,
 		color: 'white',
 		mb: 3,
@@ -203,11 +206,12 @@ const contactStyle = {
 		height: '100%',
 		zIndex: 1,
 		pointerEvents: 'none',
+		display: { xs: 'none', md: 'block' }, // Hide decorations on mobile for better performance
 	},
 	circle1: {
 		position: 'absolute',
-		width: '300px',
-		height: '300px',
+		width: { sm: '200px', md: '300px' },
+		height: { sm: '200px', md: '300px' },
 		borderRadius: '50%',
 		background: 'rgba(17, 94, 89, 0.1)',
 		top: '10%',
@@ -215,8 +219,8 @@ const contactStyle = {
 	},
 	circle2: {
 		position: 'absolute',
-		width: '400px',
-		height: '400px',
+		width: { sm: '250px', md: '400px' },
+		height: { sm: '250px', md: '400px' },
 		borderRadius: '50%',
 		background: 'rgba(17, 94, 89, 0.05)',
 		bottom: '5%',
@@ -244,7 +248,7 @@ const contactStyle = {
 	},
 	glowLine1: {
 		position: 'absolute',
-		width: '200px',
+		width: { sm: '150px', md: '200px' },
 		height: '1px',
 		background: 'linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.5), transparent)',
 		transform: 'rotate(45deg)',
@@ -253,7 +257,7 @@ const contactStyle = {
 	},
 	glowLine2: {
 		position: 'absolute',
-		width: '250px',
+		width: { sm: '180px', md: '250px' },
 		height: '1px',
 		background: 'linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.5), transparent)',
 		transform: 'rotate(-30deg)',
