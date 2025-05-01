@@ -24,25 +24,6 @@ const ImpactSection: React.FC = () => {
 			icon: SecurityIcon,
 		},
 	];
-
-	const metrics = [
-		{
-			value: '14',
-			label: 'Customers',
-			description: 'Satisfied clients across various industries',
-		},
-		{
-			value: '$50,000',
-			label: 'ARR',
-			description: 'Current annual recurring revenue',
-		},
-		{
-			value: '32',
-			label: 'Certifications',
-			description: 'Compliance standards supported',
-		},
-	];
-
 	return (
 		<Box sx={impactSectionStyle.section}>
 			<Container sx={impactSectionStyle.container}>
@@ -61,26 +42,6 @@ const ImpactSection: React.FC = () => {
 							</Typography>
 							<Typography variant="body2" sx={impactSectionStyle.impactDescription}>
 								{impact.description}
-							</Typography>
-						</Box>
-					))}
-				</Box>
-
-				<Typography variant="h3" sx={impactSectionStyle.metricsTitle}>
-					Our Traction
-				</Typography>
-
-				<Box sx={impactSectionStyle.metricsRow}>
-					{metrics.map((metric, index) => (
-						<Box key={index} sx={impactSectionStyle.metricItem}>
-							<Typography variant="h3" sx={impactSectionStyle.metricValue}>
-								{metric.value}
-							</Typography>
-							<Typography variant="h6" sx={impactSectionStyle.metricLabel}>
-								{metric.label}
-							</Typography>
-							<Typography variant="body2" sx={impactSectionStyle.metricDescription}>
-								{metric.description}
 							</Typography>
 						</Box>
 					))}

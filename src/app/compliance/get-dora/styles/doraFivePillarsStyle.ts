@@ -23,22 +23,23 @@ const DoraFivePillarsStyle = {
   },
   gridContainer: {
     marginTop: '1rem',
-  },
-  gridItem: {
-    display: 'flex',
     justifyContent: 'center',
+    width: '100%',
   },
   pillarCard: {
     display: 'flex',
     alignItems: 'flex-start',
     width: '100%',
+    height: '100%',
     background: '#17171799',
     borderRadius: '1rem',
     padding: '1rem',
     border: `2px solid ${theme.palette.divider}`,
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     '&:hover': {
-      transform: 'scale(1.05)',
+      transform: 'translateY(-8px)',
+      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+      borderColor: '#115e59',
     },
   },
   iconContainer: {
@@ -52,10 +53,12 @@ const DoraFivePillarsStyle = {
     marginRight: '1rem',
     padding: '0.5rem',
     flexShrink: 0,
-    marginTop:'1rem'
+    marginTop: '0',
   },
   pillarContent: {
     flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
   },
   cardTitle: {
     fontWeight: 'bold',
@@ -63,7 +66,6 @@ const DoraFivePillarsStyle = {
     marginBottom: '0.5rem',
     fontSize: '1.1rem',
     textAlign: 'left',
-    marginTop:'1rem'
   },
   cardDescription: {
     color: '#6B7280',

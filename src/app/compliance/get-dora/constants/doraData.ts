@@ -1,7 +1,4 @@
-/* <ai_context>
-   JSON-based content for the DORA page, derived from the user prompt.
-   We rely on the local JSON data for all text used in the page.
-</ai_context> */
+
 import ICTRiskManagement from "../images/risk-management.png";
 import IncidentReporting from "../images/reporting.png";
 import OperationalResilience from "../images/testing-operational.png";
@@ -236,46 +233,3 @@ export const complianceData = {
   ]
 };
 
-
-
-export const colors = {
-  primary: {
-    main: '#003399',
-    light: '#0062A7',
-    dark: '#003776',
-    darkest: '#002B7F',
-    contrastText: '#ffffff',
-    gradient: 'linear-gradient(0deg, #003776, #000000)',
-    buttonGradient: 'linear-gradient(135deg, #FFCC00, #FCF4B8)',
-    buttonHoverGradient: 'linear-gradient(135deg, #FCF4B8, #FFCC00)',
-  },
-  secondary: {
-    main: '#FFCC00',
-    light: '#FCF4B8',
-    medium: '#FFF7CC',
-    dark: '#F4BD00',
-    contrastText: '#000000',
-    gradient: 'linear-gradient(135deg, #FFCC00, #FCF4B8)',
-  },
-  highlight: {
-    main: '#00D4FD',
-    light: '#70E4FF',
-    dark: '#00A8CA',
-  },
-  background: {
-    default: '#003776',
-    dark: '#131A2A',
-    card: '#FFF7CC',
-    paper: '#FFFFFF',
-  },
-  imagePrompts: {
-    riskManagement: "A handheld magnifying glass with a focus on its magnifying lens, which prominently features a stylized, graphic representation of a trend increase symbol. The magnifying glass is designed with a detailed, graphic style, featuring a combination of lines and shading that gives it a sense of depth and realism. The lens, which is the focal point of the magnifying glass, contains a symbol that represents a positive trend, indicated by an arrow pointing upwards. The illustration is rendered in a graphic, cartoon-like style.",
-    incidentReporting: "A digital illustration of a triangular warning sign with a rough, hand-drawn style. The sign is primarily composed of a combination of blue and yellow colors, with a central exclamation symbol serving as the main warning element. The sign has a grungy texture, suggesting an aged and hand-drawn aesthetic. The illustration is rendered with a sketch-like quality, emphasizing the urgency and alertness of the warning symbol. The background is a stark white.",
-    thirdPartyRisk: "A creative illustration featuring a stylized eye with a growth chart in its iris. The eye is detailed with lines representing the texture of the eye lashes and the surrounding area. The chart within the eye has a line graph-like appearance with bars that show a positive trend, represented by a sharp, upward-pointing arrow. The overall theme of the image is growth and progress. The color palette is a mix of blues for the iris and a golden-yellow for the chart and arrow.",
-    testing: "A digital illustration featuring a cartoon-like depiction of a hand, rendered with bold lines and a limited color palette. The hand, with a cartoon-like representation of skin tones and a hint of a bluish element, is interacting with a smartphone. The smartphone screen displays a stylized blue gear-like graphic, symbolizing technology and mechanics. The overall image style is flat with a comic book aesthetic, using a limited color palette and bold, clear lines. The background is plain white.",
-    governance: "A hand, with a detailed illustration of the hand's texture and form, is holding a blue megaphone. The hand is positioned in the foreground, exerting force to project sound. The megaphone, designed with a large, curved horn, is a prominent object in the image. The illustration is in a sketch-like style, with a focus on line work and a limited color palette primarily featuring shades of blue and a highlight of a yellow splash. The background is a simple, white backdrop.",
-    resilience: "A hand, with a detailed illustration of the hand's texture and form, is holding a blue megaphone. The hand is positioned in the foreground, exerting force to project sound. The megaphone, designed with a large, curved horn, is a prominent object in the image. The illustration is in a sketch-like style, with a focus on line work and a limited color palette primarily featuring shades of blue and a highlight of a yellow splash. The background is a simple, white backdrop."
-  }
-};
-
-export default colors;

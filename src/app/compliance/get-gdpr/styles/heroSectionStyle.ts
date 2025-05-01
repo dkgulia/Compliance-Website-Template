@@ -23,7 +23,6 @@ const heroSectionStyle = {
         fontWeight: 500,
         marginBottom: '1.5rem',
         color: '#115e59',
-
     },
     heroDescription: {
         fontSize: '1rem',
@@ -84,8 +83,8 @@ const heroSectionStyle = {
     },
     card1: {
         backgroundColor: theme.palette.background.darkTransparent,
-        height: '100%',
-        borderRadius: '8px',
+        height: '90%',
+        borderRadius: '6px',
         transition: 'all 0.3s ease',
         border: `1px solid ${theme.palette.divider}`,
         boxShadow: theme.customShadows?.card,
@@ -93,12 +92,15 @@ const heroSectionStyle = {
             borderColor: theme.palette.secondary.main,
             transform: 'translateY(-5px)',
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+            '& .MuiBox-root': {
+                backgroundColor: '#115e59',
+            }
         }
     },
     card2: {
         backgroundColor: theme.palette.background.darkTransparent,
-        height: '100%',
-        borderRadius: '8px',
+        height: '90%',
+        borderRadius: '6px',
         transition: 'all 0.3s ease',
         border: `1px solid ${theme.palette.divider}`,
         boxShadow: theme.customShadows?.card,
@@ -106,12 +108,15 @@ const heroSectionStyle = {
             borderColor: theme.palette.secondary.main,
             transform: 'translateY(-5px)',
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+            '& .MuiBox-root': {
+                backgroundColor: '#115e59',
+            }
         }
     },
     card3: {
         backgroundColor: theme.palette.background.darkTransparent,
-        height: '100%',
-        borderRadius: '8px',
+        height: '90%',
+        borderRadius: '6px',
         transition: 'all 0.3s ease',
         border: `1px solid ${theme.palette.divider}`,
         boxShadow: theme.customShadows?.card,
@@ -119,21 +124,44 @@ const heroSectionStyle = {
             borderColor: theme.palette.secondary.main,
             transform: 'translateY(-5px)',
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+            '& .MuiBox-root': {
+                backgroundColor: '#115e59',
+            }
         }
     },
     cardContent: {
-        padding: '1.5rem',
+        padding: '0.3rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+    },
+    iconContainer: {
+        width: '38px',
+        height: '38px',
+        borderRadius: '8px',
+        backgroundColor: '#134e4a',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '1rem',
+        transition: 'background-color 0.3s ease',
+    },
+    cardIcon: {
+        fontSize: '20px',
+        color: 'white',
     },
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 600,
         marginBottom: '0.75rem',
         color: '#fffff',
+        textAlign: 'left',
     },
     cardDescription: {
         fontSize: '0.9rem',
         color: '#6B7280',
         lineHeight: 1.6,
+        textAlign: 'left',
     },
 };
 

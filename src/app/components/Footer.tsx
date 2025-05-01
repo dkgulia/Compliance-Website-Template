@@ -1,15 +1,16 @@
 'use client';
 
 import * as React from 'react';
-import { Box, Container, Link, Typography, Grid } from '@mui/material';
+import { Box, Typography, Link } from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { LinkedIn, Twitter, Facebook, Instagram, YouTube } from '@mui/icons-material';
+import { LinkedIn, Twitter, Instagram } from '@mui/icons-material';
 import { ABOUT_US, CONTACT_US, PRIVACY_POLICY, REFUND_POLICY, TERMS_AND_CONDITIONS } from '../constants/routes';
 import { complianceItems } from '../constants/complianceData';
+import { platformFeatures } from './Navbar/constants/platformData'; 
 import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
 
@@ -87,6 +88,24 @@ export default function Footer() {
 											<Link
 												color="inherit"
 												href={`/compliance${item.url}`}
+												component={NextLink}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">{item.title}</Typography>
+											</Link>
+										</Box>
+									))}
+								</Box>
+
+								<Box sx={footerStyles.menuColumn}>
+									<Typography variant="subtitle1" sx={footerStyles.columnTitle}>
+										Platform
+									</Typography>
+									{platformFeatures.map((item) => (
+										<Box key={item.title} sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												href={item.href}
 												component={NextLink}
 												sx={footerStyles.navLink}
 											>

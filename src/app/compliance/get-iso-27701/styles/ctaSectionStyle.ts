@@ -30,19 +30,21 @@ const ctaSectionStyle = {
 		maxWidth: '600px',
 	},
 	button: {
+		backgroundColor: '#115e59',
 		color: '#f9fafb',
-		fontWeight: 600,
-		padding: '0.75rem 1.5rem',
 		borderRadius: '0.5rem',
-		backgroundColor: '#1f2937',
-		border: '1px solid #4b5563',
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.25rem 1rem',
+		},
 		textTransform: 'none',
-		fontSize: '1rem',
+		fontSize: '1.2rem',
 		whiteSpace: 'nowrap',
+		border: '1px solid #0d9488',
 		transition: 'all 150ms ease',
 		'&:hover': {
-			backgroundColor: '#374151',
-			transform: 'translateY(-2px)',
+			backgroundColor: '#0f766e',
 		},
 	},
 	imageContainer: {

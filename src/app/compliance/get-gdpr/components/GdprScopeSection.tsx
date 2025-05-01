@@ -3,6 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
+import BusinessIcon from '@mui/icons-material/Business';
+import PublicIcon from '@mui/icons-material/Public';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import gdprData from '../constants/gdprData';
 import scopeSectionStyle from '../styles/scopeSectionStyle';
 import gdprGlobeImage from '../images/create-a-minimalist-digital-illustration-represent.png';
@@ -46,7 +49,6 @@ export default function GdprScopeSection() {
                                     priority
                                 />
                             </Box>
-        
                         </Box>
                     </Grid>
 
@@ -59,12 +61,6 @@ export default function GdprScopeSection() {
                             <Typography variant="subtitle1" sx={scopeSectionStyle.sectionSubtitle}>
                                 {section.subtitle}
                             </Typography>
-
-                            {content.heading && (
-                                <Typography variant="h4" sx={scopeSectionStyle.contentHeading}>
-                                    {content.heading}
-                                </Typography>
-                            )}
 
                             {content.subheading && (
                                 <Typography variant="body1" sx={scopeSectionStyle.contentDescription}>
@@ -80,6 +76,9 @@ export default function GdprScopeSection() {
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Card elevation={0} sx={scopeSectionStyle.applicabilityCard}>
                                 <CardContent sx={scopeSectionStyle.cardContent}>
+                                    <Box sx={scopeSectionStyle.iconContainer}>
+                                        <BusinessIcon sx={scopeSectionStyle.cardIcon} />
+                                    </Box>
                                     <Typography variant="h6" sx={scopeSectionStyle.applicabilityTitle}>
                                         EU Organizations
                                     </Typography>
@@ -93,6 +92,9 @@ export default function GdprScopeSection() {
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Card elevation={0} sx={scopeSectionStyle.applicabilityCard}>
                                 <CardContent sx={scopeSectionStyle.cardContent}>
+                                    <Box sx={scopeSectionStyle.iconContainer}>
+                                        <PublicIcon sx={scopeSectionStyle.cardIcon} />
+                                    </Box>
                                     <Typography variant="h6" sx={scopeSectionStyle.applicabilityTitle}>
                                         Non-EU Organizations
                                     </Typography>
@@ -106,6 +108,9 @@ export default function GdprScopeSection() {
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Card elevation={0} sx={scopeSectionStyle.applicabilityCard}>
                                 <CardContent sx={scopeSectionStyle.cardContent}>
+                                    <Box sx={scopeSectionStyle.iconContainer}>
+                                        <VisibilityIcon sx={scopeSectionStyle.cardIcon} />
+                                    </Box>
                                     <Typography variant="h6" sx={scopeSectionStyle.applicabilityTitle}>
                                         Monitoring Activities
                                     </Typography>

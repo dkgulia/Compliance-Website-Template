@@ -49,10 +49,10 @@ const Page = () => {
             <main style={{ backgroundColor: "#000000" }}>
                 <Iso27001HeroSection />
                 <Iso27001FeaturesSection />
-                <Iso27001Banner />
                 <Iso27001ComplianceHub />
                 <Iso27001ComplianceWorkflow />
                 <Iso27001ControlsSection />
+                <Iso27001Banner />
                 <Iso27001FaqSection />
             </main>
         </>

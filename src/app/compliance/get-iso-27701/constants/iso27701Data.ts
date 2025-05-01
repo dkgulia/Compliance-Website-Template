@@ -1,13 +1,8 @@
-/* <ai_context>
-   Constants for the ISO 27701 page (features, steps, FAQs, extended content, etc.)
-   Color palette / limit: #000000, #ffffff, #b429f9, #26c5f3
-</ai_context> */
 
 import { SvgIconComponent } from '@mui/icons-material';
 import InfoIcon from '@mui/icons-material/Info';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import DashboardImage from '../images/trust.png';
 import DocumentImage from '../images/streamlined-regulatory-compliance.png';
 import RiskImage from '../images/-risk-management.png';
@@ -17,7 +12,9 @@ import privacyByDesignImage from '../images/privacy-by-design-.png';
 import implementationTimelineImage from '../images/implementation-timeline.png';
 import teamAlignmentImage from '../images/team-alignment.png';
 import { StaticImageData } from 'next/image'
-
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 interface Iso27701Step {
 	step: number;
@@ -62,8 +59,8 @@ interface Iso27701Faq {
 }
 
 const iso27701Data = {
-	heroTitle: 'ISO 27701: Your Blueprint for Advanced Privacy Information Management',
-	heroSubtitle: 'Extend Your ISMS for Cutting-Edge Data Security and Privacy Compliance',
+	heroTitle: '🔒 ISO 27701 Compliance, Made Easy',
+	heroSubtitle: 'Extend Your ISMS for Cutting Edge Data Security and Privacy Compliance',
 	heroDescription: [
 		'ISO 27701 is an international standard that extends ISO 27001 and ISO 27002 for privacy information management. It helps organizations establish, implement, and continuously improve a Privacy Information Management System (PIMS). By aligning data security practices with privacy requirements, you can safeguard personal data, reduce breach risks, and build greater trust among stakeholders.',
 		'In this pillar page, we’ll explore the core principles of ISO 27701, highlight its benefits, outline an implementation roadmap, and provide answers to frequently asked questions—ensuring you’re well-equipped to meet modern privacy demands.',
@@ -228,6 +225,23 @@ const iso27701Data = {
 		'Flowchart indicating how ISO 27701 extends ISO 27001 controls',
 		'Team working together on privacy risk assessment, highlighting synergy',
 	],
+	heroBullets: [
+		{
+		    icon: AssignmentIcon,
+		    title: '1:1',
+		    text: 'Platform Setup'
+		},
+		{
+		    icon: AccessTimeIcon,
+		    title: '10X',
+		    text: 'Faster Audits'
+		},
+		{
+		    icon: CheckCircleIcon,
+		    title: '100%',
+		    text: 'Success Rate'
+		}
+	    ]
 };
 
 export default iso27701Data;

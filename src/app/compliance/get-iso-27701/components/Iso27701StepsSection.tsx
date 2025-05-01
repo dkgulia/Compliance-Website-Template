@@ -48,9 +48,9 @@ const Iso27701StepsSection: React.FC = () => {
 							<Grid size={{ xs: 12, sm: 6, md: index < 3 ? 4 : 6 }} key={index}>
 								<Card sx={stepsSectionStyle.card}>
 									<CardContent sx={stepsSectionStyle.cardContent}>
-										<Typography sx={stepsSectionStyle.cardStep}>
+										{/* <Typography sx={stepsSectionStyle.cardStep}>
 											Step {stepItem.step}
-										</Typography>
+										</Typography> */}
 										<Box sx={stepsSectionStyle.iconContainer}>
 											<IconComponent sx={stepsSectionStyle.icon} />
 										</Box>

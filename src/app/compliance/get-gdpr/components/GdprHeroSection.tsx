@@ -4,6 +4,9 @@ import React from 'react';
 import Image from 'next/image';
 import gdprImage from '../images/ChatGPT Image Apr 28, 2025, 01_48_19 PM.png';
 import { Box, Container, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
+import ShieldIcon from '@mui/icons-material/Shield';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 import gdprData from '../constants/gdprData';
 import heroSectionStyle from '../styles/heroSectionStyle';
 
@@ -51,7 +54,6 @@ export default function GdprHeroSection() {
 								fill
 								style={{
 									objectFit: 'contain',
-
 								}}
 								priority
 							/>
@@ -63,6 +65,9 @@ export default function GdprHeroSection() {
 					<Grid size={{ xs: 12, md: 4 }}>
 						<Card elevation={0} sx={heroSectionStyle.card1}>
 							<CardContent sx={heroSectionStyle.cardContent}>
+								<Box sx={heroSectionStyle.iconContainer}>
+									<VerifiedUserIcon sx={heroSectionStyle.cardIcon} />
+								</Box>
 								<Typography variant="h6" sx={heroSectionStyle.cardTitle}>
 									Simplified Compliance
 								</Typography>
@@ -76,6 +81,9 @@ export default function GdprHeroSection() {
 					<Grid size={{ xs: 12, md: 4 }}>
 						<Card elevation={0} sx={heroSectionStyle.card2}>
 							<CardContent sx={heroSectionStyle.cardContent}>
+								<Box sx={heroSectionStyle.iconContainer}>
+									<ShieldIcon sx={heroSectionStyle.cardIcon} />
+								</Box>
 								<Typography variant="h6" sx={heroSectionStyle.cardTitle}>
 									Data Protection
 								</Typography>
@@ -89,6 +97,9 @@ export default function GdprHeroSection() {
 					<Grid size={{ xs: 12, md: 4 }}>
 						<Card elevation={0} sx={heroSectionStyle.card3}>
 							<CardContent sx={heroSectionStyle.cardContent}>
+								<Box sx={heroSectionStyle.iconContainer}>
+									<HandshakeIcon sx={heroSectionStyle.cardIcon} />
+								</Box>
 								<Typography variant="h6" sx={heroSectionStyle.cardTitle}>
 									Build Customer Trust
 								</Typography>

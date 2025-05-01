@@ -1,3 +1,4 @@
+// Updated styles to better support the hexagon animation
 import theme from '../../../theme';
 
 const aiFeaturesSectionStyle = {
@@ -22,7 +23,7 @@ const aiFeaturesSectionStyle = {
   },
   content: {
     display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
+    flexDirection: { xs: 'column-reverse', md: 'row' }, // Changed to column-reverse on mobile
     gap: { xs: '3rem', md: '4rem' },
     position: 'relative',
   },
@@ -42,11 +43,8 @@ const aiFeaturesSectionStyle = {
     background: 'rgba(23, 23, 23, 0.4)',
     backdropFilter: 'blur(5px)',
     border: `1px solid ${theme.palette.divider}`,
-    transition: 'transform 0.3s ease, border-color 0.3s ease',
-    '&:hover': {
-      transform: 'translateY(-5px)',
-      borderColor: '#115e59',
-    },
+    position: 'relative',
+    zIndex: 2,
   },
   featureNumberContainer: {
     width: '2.5rem',
@@ -83,16 +81,10 @@ const aiFeaturesSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '400px',
+    minHeight: { xs: '350px', md: '400px' },
+    marginBottom: { xs: '1rem', md: 0 },
   },
-  logoContainer: {
-    width: '120px',
-    height: '120px',
-    borderRadius: '50%',
-    border: '2px solid white',
-    position: 'relative',
-    zIndex: 2,
-  },
+
 };
 
 export default aiFeaturesSectionStyle;

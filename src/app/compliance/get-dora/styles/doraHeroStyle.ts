@@ -8,7 +8,7 @@ const DoraHeroStyle = {
   },
   containerBox: {
     display: 'flex',
-    flexDirection: { xs: 'column-reverse', md: 'row' },
+    flexDirection: { xs: 'column', md: 'row' },
     justifyContent: 'space-between',
     alignItems: 'center',
     maxWidth: '75rem',
@@ -40,13 +40,13 @@ const DoraHeroStyle = {
   },
   title: {
     fontSize: { xs: '1.6rem', sm: '2rem' },
-		fontWeight: '600',
+    fontWeight: '600',
     color: theme.palette.text.primary,
     lineHeight: 1.3,
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
-    color: 'white',
+    color: '#115e59',
     lineHeight: 1.6,
   },
   listContainer: {
@@ -62,50 +62,96 @@ const DoraHeroStyle = {
   },
   ctaButton: {
     marginTop: '1.5rem',
-		color: '#f9fafb',
-		fontWeight: 800,
-		padding: {
-			xs: '0.25rem 0.5rem',
-			sm: '0.375rem 0.75rem',
-			md: '0.7rem 1rem',
-		},
-		borderRadius: '0.5rem',
-		backgroundColor: '#1f2937',
-		border: '1px solid #4b5563',
-		textTransform: 'none',
-		fontSize: '0.9rem',
-		whiteSpace: 'nowrap',
-		transition: 'background-color 150ms ease',
-		'&:hover': {
-			backgroundColor: '#374151',
-			borderColor: '#4b5563',
-		},
-		'&.Mui-disabled': {
-			color: '#f9fafb',
-			opacity: 0.5,
-			backgroundColor: '#1f2937',
-			border: '1px solid #374151',
-		},
-  },
-  imageBox: {
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: { xs: '1rem', sm: '2rem' },
-    marginTop: { xs: '2rem', sm: '2rem' },
-
-    img: {
-      width: { xs: '80%', sm: '100%' },
-      maxWidth: '450px',
-      height: 'auto',
+    color: '#f9fafb',
+    fontWeight: 800,
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.7rem 1rem',
+    },
+    borderRadius: '0.5rem',
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
+    textTransform: 'none',
+    fontSize: '0.9rem',
+    whiteSpace: 'nowrap',
+    transition: 'background-color 150ms ease',
+    '&:hover': {
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
+    },
+    '&.Mui-disabled': {
+      color: '#f9fafb',
+      opacity: 0.5,
+      backgroundColor: '#1f2937',
+      border: '1px solid #374151',
     },
   },
-  image: {
+  // Form styling
+  formBox: {
+    flex: 1,
+    maxWidth: '500px',
     width: '100%',
-    maxWidth: '28rem',
+    background: '#17171799',
     borderRadius: '1rem',
-
+    boxShadow: theme.customShadows?.card,
+    padding: '2rem',
+    border: `1px solid ${theme.palette.divider}`,
+    color: theme.palette.text.primary,
+  },
+  gridItem: {
+    marginBottom: '16px',
+  },
+  formLabel: {
+    color: theme.palette.text.primary,
+    marginBottom: '8px',
+    display: 'block',
+  },
+  formInput: {
+    backgroundColor: 'rgba(38, 38, 38, 0.5)',
+    color: theme.palette.text.primary,
+    '& .MuiOutlinedInput-notchedOutline': {
+      borderColor: theme.palette.divider,
+    },
+  },
+  formHelperText: {
+    marginTop: '4px',
+    color: theme.palette.error.main,
+  },
+  checkbox: {
+    color: theme.palette.secondary.main,
+  },
+  secondaryText: {
+    color: theme.palette.text.secondary,
+    fontSize: '0.875rem',
+    marginTop: '8px',
+  },
+  formButton: {
+    marginTop: '1.5rem',
+    color: '#f9fafb',
+    fontWeight: 800,
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.7rem 1rem',
+    },
+    borderRadius: '0.5rem',
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
+    textTransform: 'none',
+    fontSize: '0.9rem',
+    whiteSpace: 'nowrap',
+    transition: 'background-color 150ms ease',
+    '&:hover': {
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
+    },
+    '&.Mui-disabled': {
+      color: '#f9fafb',
+      opacity: 0.5,
+      backgroundColor: '#1f2937',
+      border: '1px solid #374151',
+    },
   },
 };
 

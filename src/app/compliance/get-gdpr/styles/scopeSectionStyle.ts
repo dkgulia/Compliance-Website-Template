@@ -70,8 +70,8 @@ const scopeSectionStyle = {
     },
     applicabilityCard: {
         backgroundColor: theme.palette.background.darkTransparent,
-        height: '100%',
-        borderRadius: '8px',
+        height: '90%',
+        borderRadius: '6px',
         transition: 'all 0.3s ease',
         border: `1px solid ${theme.palette.divider}`,
         boxShadow: theme.customShadows?.card,
@@ -79,21 +79,44 @@ const scopeSectionStyle = {
             borderColor: theme.palette.secondary.main,
             transform: 'translateY(-5px)',
             boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+            '& .MuiBox-root': {
+                backgroundColor: '#115e59',
+            }
         }
     },
     cardContent: {
-        padding: '1.5rem',
+        padding: '0.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+    },
+    iconContainer: {
+        width: '38px',
+        height: '38px',
+        borderRadius: '8px',
+        backgroundColor: '#134e4a',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '1rem',
+        transition: 'background-color 0.3s ease',
+    },
+    cardIcon: {
+        fontSize: '20px',
+        color: 'white',
     },
     applicabilityTitle: {
         color: theme.palette.text.primary,
         fontSize: '1.25rem',
         fontWeight: 600,
         marginBottom: '0.75rem',
+        textAlign: 'left',
     },
     applicabilityText: {
         color: '#6B7280',
         fontSize: '0.95rem',
         lineHeight: 1.6,
+        textAlign: 'left',
     },
 };
 

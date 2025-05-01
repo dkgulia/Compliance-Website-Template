@@ -1,6 +1,4 @@
-/* <ai_context>
-   JSON-based content for the GDPR compliance page
-</ai_context> */
+
 
 const gdprData = {
 	heroTitle: 'GDPR Compliance Safeguard Personal Data & Build Trust',
@@ -240,33 +238,3 @@ const gdprData = {
 
 export default gdprData;
 
-export const colors = {
-	primary: {
-		main: '#003776',
-		dark: '#040e25',
-		darker: '#1a2634',
-		blue: '#203e5f',
-		deepBlue: '#1a365d',
-		midBlue: '#2a4365',
-	},
-	accent: {
-		yellow: {
-			main: '#ffcc00',
-			light: '#fee5b1',
-		},
-		teal: '#64ffda',
-		blue: '#3f91eb',
-	},
-	text: {
-		light: '#e6f1ff',
-		secondary: '#a8b2d1',
-		subtle: '#eaeaea',
-		blue: '#b5c2e0',
-		white: '#ffffff',
-	},
-	ui: {
-		card: 'rgba(255, 255, 255, 0.05)',
-		highlight: '#153e75',
-		iconBg: 'rgba(63, 145, 235, 0.1)',
-	},
-};

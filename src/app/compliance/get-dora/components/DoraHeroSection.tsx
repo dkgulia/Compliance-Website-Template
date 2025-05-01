@@ -3,8 +3,7 @@ import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { complianceData } from '../constants/doraData';
 import DoraHeroStyle from '../styles/doraHeroStyle';
-import Image from 'next/image';
-import heroSection2 from '../images/dora-heroSection.png';
+import EnhancedDoraHeroSectionForm from '../components/EnhancedDoraHeroSectionForm';
 
 export default function DoraHeroSection() {
   return (
@@ -32,14 +31,8 @@ export default function DoraHeroSection() {
           </Button>
         </Box>
 
-        <Box sx={DoraHeroStyle.imageBox}>
-          <Image
-            src={heroSection2}
-            alt="DORA compliance hero"
-            width={550}
-            height={550}
-            style={{ objectFit: 'cover' }}
-          />
+        <Box sx={DoraHeroStyle.formBox}>
+          <EnhancedDoraHeroSectionForm />
         </Box>
       </Container>
     </Box>

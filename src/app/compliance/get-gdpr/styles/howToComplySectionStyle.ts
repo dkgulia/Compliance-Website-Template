@@ -30,15 +30,20 @@ const howToComplySectionStyle = {
         margin: '0.5rem auto 0',
     },
     phaseCard: {
-        display: 'flex',
-        alignItems: 'center',
         padding: { xs: '1.25rem', md: '1.75rem' },
         backgroundColor: theme.palette.background.darkTransparent,
         borderRadius: '8px',
         border: `1px solid ${theme.palette.divider}`,
         boxShadow: theme.customShadows?.card,
         transition: 'all 0.2s ease',
-      
+        '&:hover': {
+            borderColor: '#115e59',
+            transform: 'translateY(-3px)',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)',
+            '& .MuiSvgIcon-root': {
+                color: '#14b8a6',
+            }
+        }
     },
     phaseNumberContainer: {
         width: { xs: '40px', md: '44px' },
@@ -48,7 +53,6 @@ const howToComplySectionStyle = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight: { xs: '1rem', md: '1.5rem' },
         flexShrink: 0,
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
     },
@@ -57,16 +61,8 @@ const howToComplySectionStyle = {
         fontSize: { xs: '1.6rem', md: '1.8rem' },
         fontWeight: 'bold',
     },
-    phaseContent: {
-        display: 'flex',
-        alignItems: 'flex-start',
-        width: '100%',
-        position: 'relative',
-    },
     phaseTextContainer: {
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
+        padding: { xs: '0 0.5rem', md: '0 1rem' },
     },
     phaseTitle: {
         color: theme.palette.text.primary,
@@ -74,14 +70,22 @@ const howToComplySectionStyle = {
         fontWeight: 600,
         marginBottom: '0.5rem',
     },
+    checkIconGridItem: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
     phaseIconContainer: {
         display: 'flex',
-        alignItems: 'flex-start',
-        marginLeft: '1rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '40px',
+        height: '40px',
     },
     phaseIcon: {
-        color: 'white',
-        fontSize: { xs: '1.5rem', md: '1.8rem' },
+        color: '#fffff',
+        fontSize: { xs: '1.8rem', md: '2rem' },
+        transition: 'color 0.2s ease',
     },
     phaseText: {
 		color: '#6B7280',
@@ -116,7 +120,6 @@ const howToComplySectionStyle = {
         cursor: 'pointer',
         boxShadow: 'none',
         transition: 'all 0.2s ease',
-
     },
 };
 
