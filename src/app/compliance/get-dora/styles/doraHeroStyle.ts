@@ -94,7 +94,7 @@ const DoraHeroStyle = {
     width: '100%',
     background: '#17171799',
     borderRadius: '1rem',
-    boxShadow: theme.customShadows?.card,
+
     padding: '2rem',
     border: `1px solid ${theme.palette.divider}`,
     color: theme.palette.text.primary,

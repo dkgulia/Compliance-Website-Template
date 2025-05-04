@@ -12,7 +12,9 @@ import {
   Alert,
   FormControlLabel,
   Checkbox,
+  Link,
 } from '@mui/material';
+import NextLink from 'next/link';
 import { ArrowForward } from '@mui/icons-material';
 import heroSectionStyles from '../styles/heroSectionStyle';
 import { FormikProps } from 'formik';
@@ -157,9 +159,14 @@ const HipaaHeroSectionForm: React.FC<HipaaHeroSectionFormProps> = ({
             <Typography sx={{ color: '#ffffff', fontSize: '0.8rem', opacity: 0.8 }}>
               By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted by
               you above as per our{' '}
-              <a href="/privacy-policy" target="_blank" style={{ color: '#00C6FF' }}>
-                Privacy Policy
-              </a>
+              <Link 
+                color="primary"
+                href="/privacy-policy" 
+                component={NextLink}
+                sx={{ color: '#00C6FF' }}
+              >
+                <Typography variant="body2" component="span">Privacy Policy</Typography>
+              </Link>
               .
             </Typography>
           </Grid>

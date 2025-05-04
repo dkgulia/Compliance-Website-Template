@@ -10,6 +10,8 @@ import iso22301 from '../compliance/images/ISO-20000.png';
 import iso20000 from '../compliance/images/ISO-20000.png';
 import iso27701 from '../compliance/images/ISO-27701 (1).png';
 import dora from '../../../public/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
+// Placeholder for ISO 42001 image
+import iso42001 from '../../../public/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
 
 import { StaticImageData } from 'next/image';
 
@@ -26,6 +28,12 @@ export const complianceItems: ComplianceFramework[] = [
 		description: 'International standard for managing information security, protecting sensitive data.',
 		logo: iso27001,
 		url: '/get-iso-27001',
+	},
+	{
+		title: 'ISO 42001',
+		description: 'First international standard for AI Management Systems (AIMS) to ensure responsible AI.',
+		logo: iso42001,
+		url: '/get-iso-42001',
 	},
 	{
 		title: 'ISO 27018',
@@ -99,6 +107,7 @@ export const complianceItems: ComplianceFramework[] = [
 
 export enum ComplianceOptions {
 	ISO27001 = 'ISO 27001',
+	ISO42001 = 'ISO 42001',
 	ISO27018 = 'ISO 27018',
 	SOC2 = 'SOC 2',
 	GDPR = 'GDPR',

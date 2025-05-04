@@ -22,8 +22,8 @@ const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 						{item.description}
 					</Typography>
 					<br />
-					<Link underline="hover" color="primary" href={`${COMPLIANCE}${item.url}`} component={NextLink}>
-						{'Learn more ->'}
+					<Link color="primary" href={`${COMPLIANCE}${item.url}`} component={NextLink} sx={complianceStyles.navLink}>
+						<Typography variant="body2">{'Learn more ->'}</Typography>
 					</Link>
 				</Box>
 			</Stack>

@@ -1,0 +1,118 @@
+import theme from '../../../theme';
+
+const useCasesSectionStyle = {
+  box: {
+    paddingTop: { sm: '1rem', xs: '0.5rem' },
+    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+    backgroundColor: theme.palette.background.default,
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginX: 'auto',
+    maxWidth: '75rem',
+    px: { xs: '1rem', sm: '2rem' },
+  },
+  contentWrapper: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    gap: '3rem',
+    width: '100%',
+  },
+  textContent: {
+    flex: 1,
+  },
+  containerBox: {
+    textAlign: 'center',
+    width: '100%',
+    maxWidth: '60rem',
+    marginX: 'auto',
+    marginBottom: '1rem',
+  },
+  heading: {
+    fontWeight: '600',
+    fontSize: { xs: '1.6rem', sm: '2rem' },
+    color: theme.palette.text.primary,
+    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+    textAlign: 'center',
+  },
+  subheading: {
+    color: theme.palette.text.secondary,
+    fontSize: '1rem',
+    marginBottom: '2rem',
+    lineHeight: '1.6',
+    maxWidth: '40rem',
+    marginX: 'auto',
+    textAlign: 'center',
+  },
+  list: {
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+  },
+  listItem: {
+    display: 'flex',
+    marginBottom: '2rem',
+    padding: '1.5rem',
+    backgroundColor: theme.palette.background.darkTransparent,
+    borderRadius: '0.75rem',
+    border: `1px solid ${theme.palette.divider}`,
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'translateX(5px)',
+      borderColor: theme.palette.primary.main,
+    },
+  },
+  numberContainer: {
+    width: '2.5rem',
+    height: '2.5rem',
+    borderRadius: '50%',
+    backgroundColor: theme.palette.secondary.main,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    fontSize: '1.25rem',
+    marginRight: '1.5rem',
+    flexShrink: 0,
+  },
+  itemContent: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  itemHeading: {
+    color: theme.palette.text.primary,
+    fontSize: '1.25rem',
+    fontWeight: '600',
+    marginBottom: '0.5rem',
+  },
+  itemSubheading: {
+    color: theme.palette.text.secondary,
+    fontSize: '1rem',
+    lineHeight: 1.6,
+  },
+  imageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  placeholderImage: {
+    width: '100%',
+    maxWidth: '500px',
+    height: '400px',
+    borderRadius: '0.75rem',
+    backgroundColor: theme.palette.background.paper,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.palette.text.disabled,
+    fontSize: '1rem',
+    border: `1px solid ${theme.palette.divider}`,
+  },
+};
+
+export default useCasesSectionStyle;

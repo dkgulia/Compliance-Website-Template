@@ -23,7 +23,6 @@ import { useRouter } from 'next/navigation';
 import CategorySidebar from './Menus/SolutionMenu/components/CategorySidebar';
 import ServiceList from './Menus/SolutionMenu/components/ServiceList';
 import RightSection from './Menus/SolutionMenu/components/RightSection';
-import IndustryMenu from './Menus/IndustryMenu/page';
 import AboutMenu from './Menus/AboutMenu/page';
 import ComplianceMenu from './Menus/Compliance/page';
 import PlatformMenu from './Menus/PlatformMenu/page';
@@ -32,7 +31,13 @@ import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
 import styles from './appBarB2BStyles';
 import LogoImage from './Images/dual-hex-white.png';
 
-type MenuType = 'solutions' | 'industries' | 'platform' | 'compliance' | 'about' | null;
+type MenuType =
+  | 'solutions'
+  | 'industries'
+  | 'platform'
+  | 'compliance'
+  | 'about'
+  | null;
 type SelectedItemType = 'item1' | 'item2' | 'item3' | 'item4';
 
 const AppBarB2B: React.FC = () => {
@@ -65,7 +70,11 @@ const AppBarB2B: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node) && activeMenu) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        activeMenu
+      ) {
         setActiveMenu(null);
       }
     };
@@ -93,19 +102,27 @@ const AppBarB2B: React.FC = () => {
     hoverTimeoutRef.current = setTimeout(() => setActiveMenu(null), 300);
   };
 
-  const handleMenuClick = (event: React.MouseEvent<HTMLElement>, menu: MenuType) => {
+  const handleMenuClick = (
+    event: React.MouseEvent<HTMLElement>,
+    menu: MenuType
+  ) => {
     if (!isMobile) return;
 
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
-  const toggleDrawer = (open: boolean) => (event?: React.KeyboardEvent | React.MouseEvent) => {
-    if (event?.type === 'keydown' && ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')) {
-      return;
-    }
-    setDrawerOpen(open);
-    if (!open) resetMobileMenuState();
-  };
+  const toggleDrawer =
+    (open: boolean) => (event?: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event?.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
+      setDrawerOpen(open);
+      if (!open) resetMobileMenuState();
+    };
 
   const resetMobileMenuState = () => setMobileSubMenu(null);
   const openMobileSubMenu = (menu: MenuType) => setMobileSubMenu(menu);
@@ -143,10 +160,18 @@ const AppBarB2B: React.FC = () => {
               >
                 <Button
                   data-menu-button="platform"
-                  sx={activeMenu === 'platform' ? styles.activeNavButton : styles.navButton}
+                  sx={
+                    activeMenu === 'platform'
+                      ? styles.activeNavButton
+                      : styles.navButton
+                  }
                   endIcon={
                     <KeyboardArrowDownIcon
-                      sx={activeMenu === 'platform' ? styles.activeDropdownIcon : styles.dropdownIcon}
+                      sx={
+                        activeMenu === 'platform'
+                          ? styles.activeDropdownIcon
+                          : styles.dropdownIcon
+                      }
                     />
                   }
                 >
@@ -162,10 +187,18 @@ const AppBarB2B: React.FC = () => {
               >
                 <Button
                   data-menu-button="compliance"
-                  sx={activeMenu === 'compliance' ? styles.activeNavButton : styles.navButton}
+                  sx={
+                    activeMenu === 'compliance'
+                      ? styles.activeNavButton
+                      : styles.navButton
+                  }
                   endIcon={
                     <KeyboardArrowDownIcon
-                      sx={activeMenu === 'compliance' ? styles.activeDropdownIcon : styles.dropdownIcon}
+                      sx={
+                        activeMenu === 'compliance'
+                          ? styles.activeDropdownIcon
+                          : styles.dropdownIcon
+                      }
                     />
                   }
                 >
@@ -181,10 +214,18 @@ const AppBarB2B: React.FC = () => {
               >
                 <Button
                   data-menu-button="about"
-                  sx={activeMenu === 'about' ? styles.activeNavButton : styles.navButton}
+                  sx={
+                    activeMenu === 'about'
+                      ? styles.activeNavButton
+                      : styles.navButton
+                  }
                   endIcon={
                     <KeyboardArrowDownIcon
-                      sx={activeMenu === 'about' ? styles.activeDropdownIcon : styles.dropdownIcon}
+                      sx={
+                        activeMenu === 'about'
+                          ? styles.activeDropdownIcon
+                          : styles.dropdownIcon
+                      }
                     />
                   }
                 >
@@ -194,16 +235,29 @@ const AppBarB2B: React.FC = () => {
             </Box>
 
             <Box sx={styles.actionButtons}>
-              <Button variant="outlined" sx={styles.talkButton} onClick={() => navigateTo(TALK_TO_AN_EXPERT)}>
+              <Button
+                variant="outlined"
+                sx={styles.talkButton}
+                onClick={() => navigateTo(TALK_TO_AN_EXPERT)}
+              >
                 Book a Demo
               </Button>
-              <Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
+              <Button
+                variant="contained"
+                sx={styles.shopButton}
+                onClick={() => navigateTo(WORKSTATION)}
+              >
                 Login
               </Button>
             </Box>
 
             <Box sx={styles.mobileMenuContainer}>
-              <IconButton color="inherit" aria-label="menu" onClick={toggleDrawer(true)} sx={styles.menuIcon}>
+              <IconButton
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(true)}
+                sx={styles.menuIcon}
+              >
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -215,16 +269,24 @@ const AppBarB2B: React.FC = () => {
             ref={menuRef}
             data-menu={activeMenu}
             sx={styles.dropdownContainer}
-            onMouseEnter={() => hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)}
+            onMouseEnter={() =>
+              hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)
+            }
             onMouseLeave={handleMenuLeave}
           >
             {activeMenu === 'solutions' && (
               <>
                 <Box sx={styles.sidebarContainer}>
-                  <CategorySidebar selectedItem={selectedItem} onSelectCategory={setSelectedItem} />
+                  <CategorySidebar
+                    selectedItem={selectedItem}
+                    onSelectCategory={setSelectedItem}
+                  />
                 </Box>
                 <Box sx={styles.contentContainer}>
-                  <ServiceList selectedItem={selectedItem} onClose={() => setActiveMenu(null)} />
+                  <ServiceList
+                    selectedItem={selectedItem}
+                    onClose={() => setActiveMenu(null)}
+                  />
                 </Box>
                 <Box sx={styles.rightSideContainer}>
                   <RightSection />
@@ -253,15 +315,17 @@ const AppBarB2B: React.FC = () => {
           },
         }}
       >
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: 'auto',
-          minHeight: '100%',
-          backgroundColor: '#0a0a0a',
-          overflowY: 'auto',
-          '&::-webkit-scrollbar': { display: 'none' },
-        }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            height: 'auto',
+            minHeight: '100%',
+            backgroundColor: '#0a0a0a',
+            overflowY: 'auto',
+            '&::-webkit-scrollbar': { display: 'none' },
+          }}
+        >
           {mobileSubMenu ? (
             <>
               <Box sx={styles.mobileMenuHeader}>
@@ -269,7 +333,10 @@ const AppBarB2B: React.FC = () => {
                   <ArrowBackIcon />
                 </IconButton>
                 <Box sx={styles.headerSpacer} />
-                <IconButton onClick={() => setDrawerOpen(false)} sx={styles.closeButton}>
+                <IconButton
+                  onClick={() => setDrawerOpen(false)}
+                  sx={styles.closeButton}
+                >
                   <CloseIcon />
                 </IconButton>
               </Box>
@@ -303,26 +370,38 @@ const AppBarB2B: React.FC = () => {
                   </Typography>
                 </Box>
                 <Box sx={styles.mobileHeaderActions}>
-                  <IconButton onClick={() => setDrawerOpen(false)} sx={styles.closeButton}>
+                  <IconButton
+                    onClick={() => setDrawerOpen(false)}
+                    sx={styles.closeButton}
+                  >
                     <CloseIcon />
                   </IconButton>
                 </Box>
               </Box>
 
               <List sx={styles.mobileMenuList}>
-                <ListItem sx={styles.mobileMenuItem} onClick={() => openMobileSubMenu('platform')}>
+                <ListItem
+                  sx={styles.mobileMenuItem}
+                  onClick={() => openMobileSubMenu('platform')}
+                >
                   <ListItemText primary="Platform" />
                   <Box sx={styles.arrowContainer}>
                     <ArrowForwardIosIcon sx={styles.mobileMenuArrow} />
                   </Box>
                 </ListItem>
-                <ListItem sx={styles.mobileMenuItem} onClick={() => openMobileSubMenu('compliance')}>
+                <ListItem
+                  sx={styles.mobileMenuItem}
+                  onClick={() => openMobileSubMenu('compliance')}
+                >
                   <ListItemText primary="Compliance" />
                   <Box sx={styles.arrowContainer}>
                     <ArrowForwardIosIcon sx={styles.mobileMenuArrow} />
                   </Box>
                 </ListItem>
-                <ListItem sx={styles.mobileMenuItem} onClick={() => openMobileSubMenu('about')}>
+                <ListItem
+                  sx={styles.mobileMenuItem}
+                  onClick={() => openMobileSubMenu('about')}
+                >
                   <ListItemText primary="About" />
                   <Box sx={styles.arrowContainer}>
                     <ArrowForwardIosIcon sx={styles.mobileMenuArrow} />
@@ -331,7 +410,11 @@ const AppBarB2B: React.FC = () => {
               </List>
 
               <Box sx={styles.mobileLoginButtonContainer}>
-                <Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
+                <Button
+                  variant="contained"
+                  sx={styles.shopButton}
+                  onClick={() => navigateTo(WORKSTATION)}
+                >
                   Login
                 </Button>
               </Box>

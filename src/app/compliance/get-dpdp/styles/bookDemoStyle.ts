@@ -1,0 +1,120 @@
+import { Theme } from '@mui/material';
+
+const createBookDemoStyle = (theme: Theme) => ({
+  section: {
+    paddingTop: { sm: '4rem', xs: '3rem' },
+    paddingBottom: { sm: '4rem', xs: '3rem' },
+    backgroundColor: theme.palette.background.paper,
+    position: 'relative',
+    overflow: 'hidden',
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      width: '40%',
+      height: '100%',
+      background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`, // Replaced hardcoded alpha
+      opacity: 0.5,
+      borderTopLeftRadius: '50%',
+      borderBottomLeftRadius: '50%',
+      display: { xs: 'none', md: 'block' },
+    },
+  },
+  container: {
+    position: 'relative',
+    zIndex: 1,
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: { xs: '0 1rem', sm: '0 2rem' },
+  },
+  contentBox: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    gap: '3rem',
+  },
+  textContainer: {
+    flex: { xs: '1', md: '0.6' },
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  tagline: {
+    display: 'inline-block',
+    padding: '0.5rem 1rem',
+    borderRadius: '1rem',
+    backgroundColor: theme.palette.secondary.dark,
+    color: theme.palette.common.white,
+    fontWeight: 'bold',
+    marginBottom: '1.5rem',
+    fontSize: '0.9rem',
+  },
+  title: {
+    fontSize: { xs: '1.6rem', sm: '2rem' },
+    fontWeight: 700,
+    marginBottom: '1.5rem',
+    color: theme.palette.text.primary,
+  },
+  bulletPoints: {
+    marginBottom: '2rem',
+  },
+  bulletItem: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    marginBottom: '1rem',
+    textAlign: 'left',
+  },
+  bulletIcon: {
+    color: theme.palette.secondary.main,
+    marginRight: '0.75rem',
+    fontSize: '1.25rem',
+    marginTop: '0.1rem',
+  },
+  bulletText: {
+    fontSize: '1rem',
+    color: theme.palette.text.secondary,
+    lineHeight: 1.6,
+  },
+  button: {
+    padding: '0.8rem 2rem',
+    fontSize: '1rem',
+    fontWeight: 600,
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.common.white,
+    borderRadius: '0.5rem',
+    textTransform: 'none',
+    transition: 'all 0.2s ease',
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.dark,
+      transform: 'translateY(-3px)',
+      boxShadow: theme.shadows[2],
+    },
+  },
+  imageContainer: {
+    flex: { xs: '1', md: '0.4' },
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: '100%',
+    maxWidth: '400px',
+    height: 'auto',
+    borderRadius: '1rem',
+    boxShadow: theme.shadows[4],
+  },
+  imagePlaceholder: {
+    width: '100%',
+    maxWidth: '400px',
+    height: '300px',
+    borderRadius: '1rem',
+    backgroundColor: theme.palette.background.default,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: theme.palette.text.secondary,
+    border: `1px solid ${theme.palette.divider}`,
+  },
+});
+
+export default createBookDemoStyle;

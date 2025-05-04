@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Box, Container, Typography, Tabs, Tab, Button, useMediaQuery, MenuItem, FormControl, Select, SelectChangeEvent } from '@mui/material';
+import { Box, Container, Typography, Tabs, Tab, Button, useMediaQuery, MenuItem, FormControl, Select, SelectChangeEvent, Link } from '@mui/material';
+import NextLink from 'next/link';
 import { useTheme } from '@mui/material/styles';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -199,13 +200,17 @@ const ComplianceFrameworks: React.FC = () => {
                     </Box>
                   )}
 
-                  <Button
-                    variant="text"
-                    endIcon={<ArrowForwardIcon />}
+                  <Link
+                    color="primary"
+                    href={`/compliance/get-${framework.id}`}
+                    component={NextLink}
                     sx={complianceFrameworksStyle.viewMoreButton}
                   >
-                    Learn more about {framework.name}
-                  </Button>
+                    <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center' }}>
+                      Learn more about {framework.name}
+                      <ArrowForwardIcon sx={{ ml: 1, fontSize: '1rem' }} />
+                    </Typography>
+                  </Link>
                 </Box>
 
                 <Box sx={complianceFrameworksStyle.pricingCard}>
