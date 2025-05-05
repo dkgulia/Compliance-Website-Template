@@ -290,7 +290,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 						)}
 
 						{/* View All Button */}
-						<Grid size ={{xs:12gi}}>
+						<Grid size ={{xs:12}}>
 							<Box sx={styles.viewFullButtonContainer} onClick={viewAllFrameworks}>
 								<Box sx={styles.viewButtonIcon}>
 									<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.25rem' }} />
