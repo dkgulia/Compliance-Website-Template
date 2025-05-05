@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { Box, Typography, Grid, useMediaQuery, useTheme, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { primaryFrameworks, secondaryFrameworks } from '../../../../../constants/complianceData';
 import styles from '../styles/complianceStyles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface ComplianceMenuProps {
@@ -21,7 +21,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	const [expandedPanels, setExpandedPanels] = useState<string[]>(['primary']);
 	const [activeCategory, setActiveCategory] = useState<'primary' | 'secondary'>('primary');
 
-	// Display 9 frameworks for each category
+	// Display frameworks (9 for each category)
 	const displayPrimaryFrameworks = primaryFrameworks.slice(0, 8);
 	const displaySecondaryFrameworks = secondaryFrameworks.slice(0, 9);
 
@@ -90,7 +90,17 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										onClick={() => handleNavigate(item.url)}
 									>
 										<Box sx={styles.iconContainer}>
-											<DescriptionOutlinedIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
+											<Image
+												src={item.logo}
+												alt={item.title}
+												width={32}
+												height={32}
+												style={{
+													maxWidth: '100%',
+													height: 'auto',
+													filter: 'brightness(0) invert(1)'
+												}}
+											/>
 										</Box>
 										<Box>
 											<Typography sx={styles.itemTitle}>{item.title}</Typography>
@@ -150,7 +160,17 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										onClick={() => handleNavigate(item.url)}
 									>
 										<Box sx={styles.iconContainer}>
-											<DescriptionOutlinedIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
+											<Image
+												src={item.logo}
+												alt={item.title}
+												width={32}
+												height={32}
+												style={{
+													maxWidth: '100%',
+													height: 'auto',
+													filter: 'brightness(0) invert(1)'
+												}}
+											/>
 										</Box>
 										<Box>
 											<Typography sx={styles.itemTitle}>{item.title}</Typography>
@@ -222,7 +242,17 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 									onClick={() => handleNavigate(item.url)}
 								>
 									<Box sx={styles.featureIcon}>
-										<DescriptionOutlinedIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
+										<Image
+											src={item.logo}
+											alt={item.title}
+											width={32}
+											height={32}
+											style={{
+												maxWidth: '100%',
+												height: 'auto',
+												filter: 'brightness(0) invert(1)'
+											}}
+										/>
 									</Box>
 									<Box sx={styles.featureContent}>
 										<Typography sx={styles.featureTitle}>{item.title}</Typography>
@@ -239,7 +269,17 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 									onClick={() => handleNavigate(frameworks[8].url)}
 								>
 									<Box sx={styles.featureIcon}>
-										<DescriptionOutlinedIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
+										<Image
+											src={frameworks[8].logo}
+											alt={frameworks[8].title}
+											width={32}
+											height={32}
+											style={{
+												maxWidth: '100%',
+												height: 'auto',
+												filter: 'brightness(0) invert(1)'
+											}}
+										/>
 									</Box>
 									<Box sx={styles.featureContent}>
 										<Typography sx={styles.featureTitle}>{frameworks[8].title}</Typography>
@@ -250,7 +290,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 						)}
 
 						{/* View All Button */}
-						<Grid size ={{xs:12}}>
+						<Grid size ={{xs:12gi}}>
 							<Box sx={styles.viewFullButtonContainer} onClick={viewAllFrameworks}>
 								<Box sx={styles.viewButtonIcon}>
 									<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.25rem' }} />

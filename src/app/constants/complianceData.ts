@@ -1,15 +1,15 @@
-import iso27001 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import iso27018 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import soc2 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import gdpr from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import hipaa from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import ccpa from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import nist from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import pcidss from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import iso22301 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import iso20000 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import iso27701 from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
-import dora from  '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
+import iso27001 from '../compliance/images/iso-27001-new.png';
+import iso27018 from '../compliance/images/ISO-27018.png';
+import soc2 from '../compliance/images/SOC2.png';
+import gdpr from '../compliance/images/GDPR.png';
+import hipaa from '../compliance/images/HIPAA-COMPLIANT.png';
+import ccpa from '../compliance/images/CCPA.png';
+import nist from '../compliance/images/NIST-171.png';
+import pcidss from '../compliance/images/PCI-DSS.png';
+import iso22301 from '../compliance/images/ISO-20000.png';
+import iso20000 from '../compliance/images/ISO-20000.png';
+import iso27701 from '../compliance/images/ISO-27701 (1).png';
+import dora from '../../../public/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
 
 import placeholderImage from '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
 
