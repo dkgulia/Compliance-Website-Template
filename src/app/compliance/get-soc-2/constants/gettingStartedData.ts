@@ -5,15 +5,15 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 
 const stepsData = [
   {
-    icon: IntegrationInstructionsIcon, 
+    icon: IntegrationInstructionsIcon,
     stepNumber: "STEP 1",
-    title: "Plug IgniPC into your tech stack with easy integrations",
+    title: "Plug HexaFort into your tech stack with easy integrations",
 
   },
   {
     icon: EditNoteIcon,
     stepNumber: "STEP 2",
-    title: "Lean back as IgniPC experts drive gap assessment and pen-testing",
+    title: "Lean back as HexaFort experts drive gap assessment and pen-testing",
 
   },
   {

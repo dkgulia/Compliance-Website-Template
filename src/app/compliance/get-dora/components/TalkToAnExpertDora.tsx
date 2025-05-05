@@ -32,7 +32,7 @@ export default function TalkToAnExpertDora() {
 								<Button
 									variant="outlined"
 									fullWidth
-									href="mailto:sales@ignipc.com"
+									href="mailto:sales@HexaFort.com"
 									sx={talkToExpertDoraStyle.buttonOutlined}
 								>
 									Email Us

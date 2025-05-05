@@ -10,16 +10,16 @@ const HipaaComplianceWorkFlow = () => {
         <Box sx={hipaaComplianceWorkFlowStyles.workflowContainer}>
           <Grid container spacing={4} sx={hipaaComplianceWorkFlowStyles.gridWrapper}>
             <Grid size={{ xs: 12, md: 5 }} sx={hipaaComplianceWorkFlowStyles.leftSection}>
-              <Box sx={hipaaComplianceWorkFlowStyles.chip}>Succeed with IgniPC</Box>
+              <Box sx={hipaaComplianceWorkFlowStyles.chip}>Succeed with HexaFort</Box>
               <Typography variant="h4" sx={hipaaComplianceWorkFlowStyles.title}>
                 Do work that translates into true HIPAA compliance
               </Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 7 }} sx={hipaaComplianceWorkFlowStyles.rightSection}>
               <Typography variant="body1" sx={hipaaComplianceWorkFlowStyles.description}>
-                Leverage IgniPC to seamlessly implement HIPAA essentials in a structured and business-specific
+                Leverage HexaFort to seamlessly implement HIPAA essentials in a structured and business-specific
                 approach. Our experts will guide you every step of the way, eliminating the need for complex
-                checklists. With IgniPC, you can ensure a thorough compliance program backed by continuous
+                checklists. With HexaFort, you can ensure a thorough compliance program backed by continuous
                 monitoring, helping you mitigate risks and avoid penalties.
               </Typography>
             </Grid>

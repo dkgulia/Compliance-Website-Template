@@ -1,8 +1,3 @@
-/* <ai_context>
-   Main Page for the new merged ISO 27001 design
-   Updated to remove certain sections and add the banner, compliance hub, and implementation roadmap.
-   Keep black background, unify color scheme.
-</ai_context> */
 
 import React from "react";
 import { Metadata } from "next";
@@ -19,7 +14,7 @@ import Iso27001ComplianceHub from "./components/Iso27001ComplianceHub";
 import Iso27001ComplianceWorkflow from "./components/Iso27001ComplianceWorkflow";
 
 export const metadata: Metadata = {
-    title: `${iso27001Data.pageTitle} | IgniPC`,
+    title: `${iso27001Data.pageTitle} | HexaFort`,
     description: iso27001Data.pageDescription.join(" "),
     keywords: iso27001Data.keywords
 };
@@ -30,7 +25,7 @@ const Page = () => {
         "@type": "Product",
         name: "ISO 27001 Compliance Services",
         description: iso27001Data.pageDescription.join(" "),
-        brand: "IgniPC",
+        brand: "HexaFort",
         aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "5",
