@@ -203,6 +203,12 @@ const appBarB2BStyles = {
 		},
 		cursor: 'pointer',
 	},
+	activeMobileMenuItem: {
+		backgroundColor: '#1f1f1f',
+		'& .MuiListItemText-primary': {
+			color: '#14b8a6',
+		},
+	},
 	arrowContainer: {
 		display: 'flex',
 		justifyContent: 'center',
@@ -408,6 +414,11 @@ const appBarB2BStyles = {
 	},
 	headerSpacer: {
 		flexGrow: 1,
+	},
+	menuBox: {
+		width: '100%',
+		padding: '1.5rem',
+		backgroundColor: '#121212',
 	},
 };
 

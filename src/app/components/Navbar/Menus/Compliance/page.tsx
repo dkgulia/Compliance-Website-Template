@@ -5,12 +5,14 @@ import { Box } from '@mui/material';
 import ComplianceMenu from './components/complianceMenu';
 import styles from './styles/complianceStyles';
 
-export default function CompliancePage() {
-	const handleClose = () => {};
+interface CompliancePageProps {
+	onClose?: () => void;
+}
 
+export default function CompliancePage({ onClose }: CompliancePageProps = {}) {
 	return (
 		<Box sx={styles.menuBox}>
-			<ComplianceMenu onClose={handleClose} />
+			<ComplianceMenu onClose={onClose} />
 		</Box>
 	);
 }

@@ -19,12 +19,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import CategorySidebar from './Menus/SolutionMenu/components/CategorySidebar';
 import ServiceList from './Menus/SolutionMenu/components/ServiceList';
 import RightSection from './Menus/SolutionMenu/components/RightSection';
 import AboutMenu from './Menus/AboutMenu/page';
-import ComplianceMenu from './Menus/Compliance/page';
+import ComplianceMenu from './Menus/Compliance/components/complianceMenu';
 import PlatformMenu from './Menus/PlatformMenu/page';
 import Image from 'next/image';
 import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
@@ -42,6 +42,7 @@ type SelectedItemType = 'item1' | 'item2' | 'item3' | 'item4';
 
 const AppBarB2B: React.FC = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const theme = useTheme();
   const [isMobile, setIsMobile] = useState(false);
   const [selectedItem, setSelectedItem] = useState<SelectedItemType>('item1');
@@ -51,6 +52,12 @@ const AppBarB2B: React.FC = () => {
 
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+
+  // Check if current path matches a particular section
+  const isPathInSection = (section: string): boolean => {
+    if (!pathname) return false;
+    return pathname.startsWith(`/${section}`);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -140,7 +147,7 @@ const AppBarB2B: React.FC = () => {
       <AppBar position="fixed" sx={styles.appBar}>
         <Toolbar sx={styles.toolbar}>
           <Box sx={styles.navContainer}>
-            <Box sx={styles.logoContainer}>
+            <Box sx={styles.logoContainer} onClick={() => navigateTo('/')} style={{ cursor: 'pointer' }}>
               <Image
                 src={LogoImage}
                 alt="hexafort Logo"
@@ -161,7 +168,7 @@ const AppBarB2B: React.FC = () => {
                 <Button
                   data-menu-button="platform"
                   sx={
-                    activeMenu === 'platform'
+                    activeMenu === 'platform' || isPathInSection('platform')
                       ? styles.activeNavButton
                       : styles.navButton
                   }
@@ -188,7 +195,7 @@ const AppBarB2B: React.FC = () => {
                 <Button
                   data-menu-button="compliance"
                   sx={
-                    activeMenu === 'compliance'
+                    activeMenu === 'compliance' || isPathInSection('compliance')
                       ? styles.activeNavButton
                       : styles.navButton
                   }
@@ -215,7 +222,7 @@ const AppBarB2B: React.FC = () => {
                 <Button
                   data-menu-button="about"
                   sx={
-                    activeMenu === 'about'
+                    activeMenu === 'about' || isPathInSection('about')
                       ? styles.activeNavButton
                       : styles.navButton
                   }
@@ -293,9 +300,9 @@ const AppBarB2B: React.FC = () => {
                 </Box>
               </>
             )}
-            {activeMenu === 'industries' && <IndustryMenu />}
+            {activeMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
             {activeMenu === 'platform' && <PlatformMenu />}
-            {activeMenu === 'compliance' && <ComplianceMenu />}
+            {activeMenu === 'compliance' && <ComplianceMenu onClose={() => setActiveMenu(null)} />}
             {activeMenu === 'about' && <AboutMenu />}
           </Box>
         )}
@@ -304,7 +311,7 @@ const AppBarB2B: React.FC = () => {
       <Drawer
         anchor="right"
         open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
+        onClose={toggleDrawer(false)}
         sx={{
           '& .MuiDrawer-paper': {
             width: '100%',
@@ -334,7 +341,7 @@ const AppBarB2B: React.FC = () => {
                 </IconButton>
                 <Box sx={styles.headerSpacer} />
                 <IconButton
-                  onClick={() => setDrawerOpen(false)}
+                  onClick={toggleDrawer(false)}
                   sx={styles.closeButton}
                 >
                   <CloseIcon />
@@ -346,12 +353,12 @@ const AppBarB2B: React.FC = () => {
                   selectedItem={selectedItem}
                   onSelectCategory={setSelectedItem}
                   isMobile
-                  onClose={() => setDrawerOpen(false)}
+                  onClose={toggleDrawer(false)}
                 />
               )}
-              {mobileSubMenu === 'industries' && <IndustryMenu />}
+              {mobileSubMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
               {mobileSubMenu === 'platform' && <PlatformMenu />}
-              {mobileSubMenu === 'compliance' && <ComplianceMenu />}
+              {mobileSubMenu === 'compliance' && <ComplianceMenu onClose={toggleDrawer(false)} />}
               {mobileSubMenu === 'about' && <AboutMenu />}
             </>
           ) : (
@@ -371,7 +378,7 @@ const AppBarB2B: React.FC = () => {
                 </Box>
                 <Box sx={styles.mobileHeaderActions}>
                   <IconButton
-                    onClick={() => setDrawerOpen(false)}
+                    onClick={toggleDrawer(false)}
                     sx={styles.closeButton}
                   >
                     <CloseIcon />
@@ -381,7 +388,10 @@ const AppBarB2B: React.FC = () => {
 
               <List sx={styles.mobileMenuList}>
                 <ListItem
-                  sx={styles.mobileMenuItem}
+                  sx={{
+                    ...styles.mobileMenuItem,
+                    ...(isPathInSection('platform') ? styles.activeMobileMenuItem : {})
+                  }}
                   onClick={() => openMobileSubMenu('platform')}
                 >
                   <ListItemText primary="Platform" />
@@ -390,7 +400,10 @@ const AppBarB2B: React.FC = () => {
                   </Box>
                 </ListItem>
                 <ListItem
-                  sx={styles.mobileMenuItem}
+                  sx={{
+                    ...styles.mobileMenuItem,
+                    ...(isPathInSection('compliance') ? styles.activeMobileMenuItem : {})
+                  }}
                   onClick={() => openMobileSubMenu('compliance')}
                 >
                   <ListItemText primary="Compliance" />
@@ -399,7 +412,10 @@ const AppBarB2B: React.FC = () => {
                   </Box>
                 </ListItem>
                 <ListItem
-                  sx={styles.mobileMenuItem}
+                  sx={{
+                    ...styles.mobileMenuItem,
+                    ...(isPathInSection('about') ? styles.activeMobileMenuItem : {})
+                  }}
                   onClick={() => openMobileSubMenu('about')}
                 >
                   <ListItemText primary="About" />
