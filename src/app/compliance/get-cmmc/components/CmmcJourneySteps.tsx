@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, Container } from '@mui/material';
 import journeyStepsStyle from '../styles/journeyStepsStyle';
 import { cmmcData } from '../constants/cmmcData';
 import * as Icons from '@mui/icons-material';
@@ -14,8 +14,8 @@ const CmmcJourneySteps: React.FC = () => {
 
   return (
     <Box sx={journeyStepsStyle.box}>
-      <Box sx={journeyStepsStyle.workflowContainer}>
-        <Box sx={journeyStepsStyle.headerBox}>
+      <Container maxWidth="lg">
+        <Box sx={journeyStepsStyle.containerBox}>
           <Typography
             variant="h4"
             component="h2"
@@ -29,7 +29,7 @@ const CmmcJourneySteps: React.FC = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={2} sx={journeyStepsStyle.gridContainer}>
+        <Grid container spacing={4}>
           {stepsSection.content.steps!.map((step: any, index: number) => {
             const IconComp = cmmcData.implementationSteps[index]?.icon
               ? cmmcData.iconMap[
@@ -39,26 +39,28 @@ const CmmcJourneySteps: React.FC = () => {
               : Icons.CheckCircle;
 
             return (
-              <Grid size={{ xs: 6, md: 8 }} key={index}>
+              <Grid size={{xs:12,sm:6,md:3}}  key={index}>
                 <Box sx={journeyStepsStyle.card}>
                   <Box sx={journeyStepsStyle.iconContainer}>
                     <IconComp sx={{ fontSize: '2rem', color: '#FFFFFF' }} />
                   </Box>
-                  <Typography variant="body1" sx={journeyStepsStyle.cardTitle}>
-                    {step.heading}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={journeyStepsStyle.cardDescription}
-                  >
-                    {step.description}
-                  </Typography>
+                  <Box sx={journeyStepsStyle.textContainer}>
+                    <Typography variant="h6" sx={journeyStepsStyle.cardTitle}>
+                      {step.heading}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={journeyStepsStyle.cardDescription}
+                    >
+                      {step.description}
+                    </Typography>
+                  </Box>
                 </Box>
               </Grid>
             );
           })}
         </Grid>
-      </Box>
+      </Container>
     </Box>
   );
 };

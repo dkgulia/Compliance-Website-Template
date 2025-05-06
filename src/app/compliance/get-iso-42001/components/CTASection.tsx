@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
-import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import { iso42001Data } from '../constants/iso42001Data';
 
@@ -11,24 +11,20 @@ const CTASection: React.FC = () => {
     return (
         <Box sx={ctaSectionStyle.container}>
             <Container maxWidth="lg">
-                <Box sx={ctaSectionStyle.innerContainer}>
-                    <AccessTimeIcon sx={ctaSectionStyle.icon} />
-                    
-                    <Typography variant="h2" sx={ctaSectionStyle.title}>
+                <Box sx={ctaSectionStyle.content}>
+                    <Typography variant="h3" sx={ctaSectionStyle.title}>
                         {cta.title}
                     </Typography>
-                    
-                    {cta.subtitle && (
-                        <Typography variant="h6" sx={{ ...ctaSectionStyle.description, mb: 1 }}>
-                            {cta.subtitle}
-                        </Typography>
-                    )}
-                    
-                    <Typography sx={ctaSectionStyle.description}>
+
+                    <Typography variant="body1" sx={ctaSectionStyle.description}>
                         {cta.description}
                     </Typography>
-                    
-                    <Button variant="contained" sx={ctaSectionStyle.button}>
+
+                    <Button
+                        variant="contained"
+                        sx={ctaSectionStyle.button}
+                        endIcon={<ArrowForwardIcon />}
+                    >
                         {cta.ctaText}
                     </Button>
                 </Box>

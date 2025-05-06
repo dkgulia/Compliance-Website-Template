@@ -4,7 +4,7 @@ const createBookDemoStyle = (theme: Theme) => ({
   section: {
     paddingTop: { sm: '4rem', xs: '3rem' },
     paddingBottom: { sm: '4rem', xs: '3rem' },
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
     '&::before': {
@@ -14,7 +14,6 @@ const createBookDemoStyle = (theme: Theme) => ({
       right: 0,
       width: '40%',
       height: '100%',
-      background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`, // Replaced hardcoded alpha
       opacity: 0.5,
       borderTopLeftRadius: '50%',
       borderBottomLeftRadius: '50%',
@@ -42,7 +41,7 @@ const createBookDemoStyle = (theme: Theme) => ({
     display: 'inline-block',
     padding: '0.5rem 1rem',
     borderRadius: '1rem',
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: '#115e59',
     color: theme.palette.common.white,
     fontWeight: 'bold',
     marginBottom: '1.5rem',
@@ -75,18 +74,16 @@ const createBookDemoStyle = (theme: Theme) => ({
     lineHeight: 1.6,
   },
   button: {
-    padding: '0.8rem 2rem',
+    backgroundColor: '#115e59',
+    color: '#f9fafb',
+    fontWeight: '600',
+    padding: '0.75rem 2rem',
     fontSize: '1rem',
-    fontWeight: 600,
-    backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.common.white,
     borderRadius: '0.5rem',
-    textTransform: 'none',
-    transition: 'all 0.2s ease',
+    border: '1px solid #0d9488',
+    textTransform: 'none' as const,
     '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,
-      transform: 'translateY(-3px)',
-      boxShadow: theme.shadows[2],
+      backgroundColor: '#0f766e',
     },
   },
   imageContainer: {

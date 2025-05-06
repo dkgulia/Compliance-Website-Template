@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
 import createProcessSectionStyle from '../styles/processSectionStyle';
 import dpdpData from '../constants/dpdpData';
 
@@ -11,31 +11,37 @@ const DpdpProcessSection: React.FC = () => {
 
   return (
     <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Box sx={styles.header}>
-          <Typography variant="h2" sx={styles.title}>
+      <Container maxWidth="lg">
+        <Box sx={styles.containerBox}>
+          <Typography component="h2" variant="h4" sx={styles.heading}>
             {process.title}
           </Typography>
           {process.subtitle && (
-            <Typography variant="body1" sx={styles.subtitle}>
+            <Typography variant="body1" sx={styles.subHeading}>
               {process.subtitle}
             </Typography>
           )}
         </Box>
 
-        <Box sx={styles.stepsContainer}>
+        <Grid container spacing={4}>
           {process.items.map((step, index) => (
-            <Box key={index} sx={styles.stepCard}>
-              <Box sx={styles.stepNumber}>{index + 1}</Box>
-              <Typography variant="h6" sx={styles.stepTitle}>
-                {step.heading}
-              </Typography>
-              <Typography variant="body2" sx={styles.stepDescription}>
-                {step.description}
-              </Typography>
-            </Box>
+            <Grid size={{xs:12,sm:6,md:3}}  key={index}>
+              <Box sx={styles.stepCard}>
+                <Box sx={styles.stepNumberContainer}>
+                  <Typography sx={styles.stepNumber}>{index + 1}</Typography>
+                </Box>
+                <Box sx={styles.textContainer}>
+                  <Typography variant="h6" sx={styles.stepTitle}>
+                    {step.heading}
+                  </Typography>
+                  <Typography variant="body2" sx={styles.stepDescription}>
+                    {step.description}
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );

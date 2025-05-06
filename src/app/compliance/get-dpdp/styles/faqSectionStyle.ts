@@ -1,90 +1,85 @@
 import { Theme } from '@mui/material';
 
 const createFaqSectionStyle = (theme: Theme) => ({
-  section: {
-    paddingTop: { sm: '4rem', xs: '3rem' },
-    paddingBottom: { sm: '4rem', xs: '3rem' },
+  box: {
+    paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
+    paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
-    position: 'relative',
-    overflow: 'hidden',
   },
-  container: {
-    position: 'relative',
-    zIndex: 1,
-    maxWidth: '1000px',
+  section: {
+    maxWidth: '1200px',
     margin: '0 auto',
     padding: { xs: '0 1rem', sm: '0 2rem' },
   },
-  header: {
-    textAlign: 'center',
-    marginBottom: '3rem',
-  },
   title: {
+    textAlign: 'center',
+    fontWeight: '600',
     fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: 700,
-    marginBottom: '1rem',
     color: theme.palette.text.primary,
+    marginTop: '2.5rem'
   },
   subtitle: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.text.secondary,
-    maxWidth: '800px',
-    margin: '0 auto',
-    lineHeight: 1.6,
+    fontSize: { xs: '1rem', sm: '1.1rem' },
+    textAlign: 'center',
+    marginBottom: '2.5rem',
+    color: '#6B7280',
   },
   accordionContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem',
+    backgroundColor: '#17171799',
+    border: `1px solid #333`,
+    borderRadius: '12px',
+    overflow: 'hidden',
   },
   accordion: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: '#17171799',
     boxShadow: 'none',
-    border: `1px solid ${theme.palette.divider}`,
-    borderRadius: '0.5rem !important',
-    overflow: 'hidden',
-    '&::before': {
+    '&:before': {
       display: 'none',
     },
     '&.Mui-expanded': {
       margin: 0,
-      boxShadow: theme.shadows[3],
+    },
+    borderBottom: '1px solid #333',
+    '&:last-child': {
+      borderBottom: 'none',
     },
   },
   accordionSummary: {
-    padding: '1rem 1.5rem',
-    backgroundColor: theme.palette.background.paper,
+    padding: '1.25rem 1.5rem',
+    backgroundColor: '#17171799',
     minHeight: '64px',
+    '& .MuiAccordionSummary-content': {
+      margin: '0',
+    },
     '&.Mui-expanded': {
       minHeight: '64px',
-      borderBottom: `1px solid ${theme.palette.divider}`,
     },
-    '& .MuiAccordionSummary-content': {
-      margin: 0,
-    },
-  },
-  accordionDetails: {
-    padding: '1rem 1.5rem',
-    backgroundColor: theme.palette.background.paper,
-    borderTop: `1px solid ${theme.palette.divider}`,
-  },
-  question: {
-    fontSize: '1rem',
-    fontWeight: 600,
-    color: theme.palette.text.primary,
-  },
-  answer: {
-    fontSize: '1rem',
-    color: theme.palette.text.secondary,
-    lineHeight: 1.7,
   },
   expandIcon: {
-    color: theme.palette.secondary.main,
+    color: '#ffffff',
     fontSize: '1.25rem',
     transform: 'rotate(0deg)',
     '&.Mui-expanded': {
       transform: 'rotate(45deg)',
     },
+  },
+  questionTypography: {
+    fontSize: '1rem',
+    fontWeight: 500,
+    color: '#ffffff',
+  },
+  accordionDetails: {
+    padding: '1.25rem 1.5rem',
+    backgroundColor: '#171717',
+    color: '#a3a3a3',
+    borderTop: '1px solid #333',
+  },
+  answerTypography: {
+    fontSize: '1rem',
+    lineHeight: 1.6,
+    color: '#a3a3a3',
   },
 });
 

@@ -10,22 +10,19 @@ const WhyUs = () => {
 			<Container sx={whyUsStyles.container}>
 				<Grid container spacing={3}>
 					{whyUsItems.map((item, index) => (
-						<Grid  size={{ xs: 12, sm: 6,md:4}} key={index}>
+						<Grid size ={{xs:12,sm:6,md:4}} key={index}>
 							<Card sx={whyUsStyles.card}>
-								<Stack direction="column" alignItems="center" spacing={2}>
-									<Box sx={whyUsStyles.iconContainer}>
-										<div style={{ position: 'relative', width: '100%', height: '100%' }}>
-											<Image
-												src={item.logo}
-												alt={item.title}
-												fill
-												style={{ objectFit: 'contain' }}
-											/>
-										</div>
-									</Box>
-									<Typography sx={whyUsStyles.cardTitle}>{item.title}</Typography>
-									<Typography variant="body1" sx={whyUsStyles.description}>{item.description}</Typography>
-								</Stack>
+								<Box sx={whyUsStyles.iconContainer}>
+									<Image
+										src={item.logo}
+										alt={item.title}
+										width={34}
+										height={34}
+										style={{ objectFit: 'contain' }}
+									/>
+								</Box>
+								<Typography sx={whyUsStyles.cardTitle}>{item.title}</Typography>
+								<Typography variant="body1" sx={whyUsStyles.description}>{item.description}</Typography>
 							</Card>
 						</Grid>
 					))}

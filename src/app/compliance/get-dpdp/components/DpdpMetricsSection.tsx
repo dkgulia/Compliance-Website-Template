@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
 import createMetricsSectionStyle from '../styles/metricsSectionStyle';
 import dpdpData from '../constants/dpdpData';
 
@@ -10,8 +10,8 @@ const DpdpMetricsSection: React.FC = () => {
   const { metrics } = dpdpData.sections;
 
   return (
-    <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
+    <Box component="section" sx={styles.box}>
+      <Container maxWidth="lg">
         {(metrics.title || metrics.subtitle) && (
           <Box sx={styles.header}>
             {metrics.title && (
@@ -27,18 +27,20 @@ const DpdpMetricsSection: React.FC = () => {
           </Box>
         )}
 
-        <Box sx={styles.metricsGrid}>
+        <Grid container spacing={4} justifyContent="center">
           {metrics.items.map((metric, index) => (
-            <Box key={index} sx={styles.metricCard}>
-              <Typography variant="h2" sx={styles.metricValue}>
-                {metric.value}
-              </Typography>
-              <Typography variant="h6" sx={styles.metricLabel}>
-                {metric.label}
-              </Typography>
-            </Box>
+            <Grid size={{xs:12,sm:4}}  key={index}>
+              <Box sx={styles.metricCard}>
+                <Typography variant="h2" component="p" sx={styles.metricValue}>
+                  {metric.value}
+                </Typography>
+                <Typography variant="h6" sx={styles.metricLabel}>
+                  {metric.label}
+                </Typography>
+              </Box>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );

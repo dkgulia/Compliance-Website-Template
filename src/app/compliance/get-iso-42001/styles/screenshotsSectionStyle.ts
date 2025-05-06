@@ -1,139 +1,102 @@
 import theme from '../../../../theme';
 
 const screenshotsSectionStyle = {
-  container: {
-    paddingTop: { sm: '1rem', xs: '0.5rem' },
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+  box: {
+    paddingTop: { xs: '2rem', sm: '3rem' },
+    paddingBottom: { xs: '2rem', sm: '3rem' },
     backgroundColor: theme.palette.background.default,
   },
-  innerContainer: {
-    display: 'flex',
-    flexDirection: 'column' as const,
-    alignItems: 'center',
-    marginX: 'auto',
-    maxWidth: '75rem',
-    padding: { xs: '1rem', sm: '2rem' },
-  },
-  titleContainer: {
+  headerBox: {
     textAlign: 'center' as const,
-    width: '100%',
-    maxWidth: '60rem',
-    marginX: 'auto',
-    marginBottom: '1rem',
+    maxWidth: '50rem',
+    margin: '0 auto',
+    marginBottom: '2rem',
   },
-  title: {
+  heading: {
     fontWeight: '600',
     fontSize: { xs: '1.6rem', sm: '2rem' },
     color: theme.palette.text.primary,
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+    marginBottom: '1rem',
   },
-  subtitle: {
+  subheading: {
+    fontSize: { xs: '1rem', md: '1.1rem' },
     color: theme.palette.text.secondary,
-    fontSize: '1rem',
-    marginBottom: '2rem',
-    lineHeight: '1.6',
-    maxWidth: '40rem',
-    marginX: 'auto',
+    maxWidth: '800px',
+    margin: '0 auto',
+    lineHeight: 1.6,
   },
   carouselContainer: {
     width: '100%',
-    position: 'relative',
-    marginTop: '2rem',
-  },
-  slideContainer: {
+    maxWidth: '1000px',
+    margin: '0 auto',
     display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: '2rem',
-    padding: { xs: '1rem', sm: '2rem' },
+    flexDirection: 'column' as any,
+    gap: '1.5rem',
   },
-  imageContainer: {
-    flex: 1,
+  navigationArrows: {
     display: 'flex',
     justifyContent: 'center',
-    width: '100%',
+    alignItems: 'center',
+    gap: '1rem',
   },
-  image: {
+  navArrow: {
+    color: theme.palette.text.primary,
+    backgroundColor: '#17171799',
+    border: `1px solid ${theme.palette.divider}`,
+    '&:hover': {
+      backgroundColor: '#262626',
+    },
+  },
+  slidePrevNext: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+  },
+  slideCountText: {
+    color: theme.palette.text.secondary,
+  },
+  slideContent: {
     width: '100%',
-    height: 'auto',
-    maxWidth: '25rem',
-    borderRadius: '0.5rem',
-    boxShadow:
-      '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    position: 'relative' as any,
+    minHeight: '400px',
+  },
+  slide: {
+    display: 'flex',
+    flexDirection: 'column' as any,
+    gap: '1.5rem',
+    alignItems: 'center',
   },
   imagePlaceholder: {
     width: '100%',
-    maxWidth: '25rem',
-    height: '15rem',
-    borderRadius: '0.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    height: '350px',
+    backgroundColor: '#17171799',
+    borderRadius: '0.75rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: theme.palette.text.secondary,
-
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    '&:hover': {
-      transform: 'scale(1.05)',
-
-      backgroundColor: theme.palette.background.paper,
-    },
+    border: `1px solid ${theme.palette.divider}`,
   },
-  contentContainer: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+  captionBox: {
+    width: '100%',
+    textAlign: 'center' as const,
   },
   caption: {
-    fontSize: '1.1rem',
-    fontWeight: 'bold',
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
+    fontWeight: '600',
   },
-  navigationContainer: {
+  dotsContainer: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '2rem',
     gap: '0.5rem',
+    marginTop: '1rem',
   },
-  navDot: {
-    width: '0.75rem',
-    height: '0.75rem',
+  dot: {
+    width: '8px',
+    height: '8px',
     borderRadius: '50%',
-    background: theme.palette.divider,
+    backgroundColor: theme.palette.divider,
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-  },
-  activeNavDot: {
-    background: theme.palette.primary.main,
-  },
-  navButton: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    width: '2.5rem',
-    height: '2.5rem',
-    borderRadius: '50%',
-    background: 'rgba(0, 0, 0, 0.5)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: theme.palette.common.white,
-    cursor: 'pointer',
-    border: 'none',
-    transition: 'background-color 0.3s ease',
-    '&:hover': {
-      background: 'rgba(0, 0, 0, 0.8)',
-    },
-    zIndex: 2,
-  },
-  prevButton: {
-    left: 0,
-  },
-  nextButton: {
-    right: 0,
+    transition: 'all 0.2s',
   },
 };
 

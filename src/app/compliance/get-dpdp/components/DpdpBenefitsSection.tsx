@@ -27,7 +27,7 @@ const DpdpBenefitsSection: React.FC = () => {
           {benefits.items.map((benefit, index) => {
             const Icon = benefit.muiIcon;
             return (
-              <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }} sx={styles.gridItem}>
+              <Grid size={{xs:12,sm:6,md:3}} key={index}>
                 <Card sx={styles.card} elevation={0}>
                   <CardContent sx={{ padding: 0 }}>
                     <Box sx={styles.contentWrapper}>

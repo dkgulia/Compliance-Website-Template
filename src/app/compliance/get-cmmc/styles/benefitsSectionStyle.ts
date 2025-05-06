@@ -2,8 +2,8 @@ import theme from '../../../../theme';
 
 const benefitsSectionStyle = {
     container: {
-        backgroundColor: '#000000',
-        padding: { xs: '3rem 1rem', md: '5rem 2rem' },
+    background: theme.palette.background.default,
+    padding: { xs: '3rem 1rem', md: '5rem 2rem' },
     },
     title: {
         color: '#FFFFFF',

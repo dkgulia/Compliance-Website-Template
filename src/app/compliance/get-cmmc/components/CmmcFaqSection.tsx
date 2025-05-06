@@ -11,7 +11,7 @@ import AddIcon from '@mui/icons-material/Add';
 import faqSectionStyle from '../styles/faqSectionStyle';
 import { cmmcData } from '../constants/cmmcData';
 
-const CmmcFaqSection: React.FC = () => {
+const CmmcFaqSection = () => {
   const faqSection = cmmcData.sections.find(
     (section) => section.Sno === '7' && section.blockType === 'FAQ'
   );
@@ -22,7 +22,7 @@ const CmmcFaqSection: React.FC = () => {
     <Box sx={faqSectionStyle.box}>
       <Box sx={faqSectionStyle.section}>
         <Typography component="h2" variant="h4" sx={faqSectionStyle.title}>
-          {faqSection.content.title}
+          {faqSection.content.title || "Frequently Asked Questions"}
         </Typography>
 
         <Typography variant="subtitle1" sx={faqSectionStyle.subtitle}>

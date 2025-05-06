@@ -4,7 +4,7 @@ import { Box, Container, Typography, Button, Stack, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import bookADemoStyles from '../styles/bookADemoStyle';
-import demoImage from '../images/create-a-professional-illustration-for-an-iso-2000 (5).png';
+import demoImage from '../images/compliance-demo.png';
 
 const BookADemo = () => {
 	const handleScrollToTop = () => {
@@ -58,7 +58,7 @@ const BookADemo = () => {
 							maxWidth: '100%',
 							height: 'auto',
 							borderRadius: '16px',
-							
+							filter: 'invert(1) brightness(1.2)',
 						}}
 						priority
 					/>

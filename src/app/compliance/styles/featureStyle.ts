@@ -23,16 +23,16 @@ const featuresStyles = {
   },
   cardContainer: {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
   },
   card: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
     backgroundColor: theme.palette.background.paper,
     borderRadius: '12px',
-
     padding: '2rem',
     height: '100%',
     border: `1px solid ${theme.palette.divider}`,
@@ -42,25 +42,29 @@ const featuresStyles = {
       boxShadow: '0px 8px 20px rgba(0, 0, 0, 0.2)',
       backgroundColor: theme.palette.background.paper,
     },
+    textAlign: 'left',
   },
   iconContainer: {
     width: '3rem',
     height: '3rem',
-    borderRadius: '50%',
+    borderRadius: '6px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: '1rem',
-    color: theme.palette.success.main,
+    background: '#115e59',
+    color: 'white',
   },
   typography: {
     title: {
       fontWeight: 'bold',
       color: theme.palette.text.primary,
       marginBottom: '0.75rem',
+      textAlign: 'left',
     },
     body: {
       color: theme.palette.text.secondary,
+      textAlign: 'center',
     },
   },
 };

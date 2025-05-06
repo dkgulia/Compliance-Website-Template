@@ -1,25 +1,44 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Typography, Button,useTheme } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Image from 'next/image';
 import createBannerStyle from '../styles/bannerStyle';
+import dpdpBannerImg from '../images/dpdp-cta.png';
 
 const DpdpBanner: React.FC = () => {
   const theme = useTheme();
   const styles = createBannerStyle(theme);
 
   return (
-    <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Typography variant="h2" sx={styles.title}>
-          Safeguard Personal Data
-        </Typography>
-        <Typography variant="body1" sx={styles.description}>
-          Protect user data and build trust. DPDP compliance \n is essential for any business processing personal information in India.
-        </Typography>
-        <Button variant="contained" sx={styles.button}>
-          Book Your Demo
-        </Button>
-      </Container>
+    <Box component="section" sx={styles.box}>
+      <Box sx={styles.container}>
+        <Box sx={styles.content}>
+          <Typography variant="h4" sx={styles.heading}>
+            Safeguard Personal Data
+          </Typography>
+          <Typography variant="body1" sx={styles.description}>
+            Protect user data and build trust. DPDP compliance is essential for any business processing personal information in India.
+          </Typography>
+          <Button
+            variant="contained"
+            sx={styles.button}
+            href="/compliance"
+            endIcon={<ArrowForwardIcon sx={{ ml: 1 }} />}
+          >
+            Book Your Demo
+          </Button>
+        </Box>
+        <Box sx={styles.imageWrapper}>
+          <Image
+            src={dpdpBannerImg}
+            alt="DPDP Compliance"
+            width={300}
+            height={200}
+            style={{ borderRadius: '8px' }}
+          />
+        </Box>
+      </Box>
     </Box>
   );
 };

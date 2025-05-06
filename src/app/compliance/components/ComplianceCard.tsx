@@ -11,7 +11,12 @@ const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 		<Card variant="outlined" sx={complianceStyles.card}>
 			<Stack direction="column" justifyContent="center" spacing={2}>
 				<Box sx={complianceStyles.logoImageWrapper}>
-					<Image src={item.logo} alt={`${item.title} Logo`} fill />
+					<Image
+						src={item.logo}
+						alt={`${item.title} Logo`}
+						fill
+						
+					/>
 				</Box>
 
 				<Box>

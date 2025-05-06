@@ -3,8 +3,10 @@ import React from 'react';
 import { Box, Container, Typography, Button, useTheme } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Image from 'next/image';
 import createBookDemoStyle from '../styles/bookDemoStyle';
 import dpdpData from '../constants/dpdpData';
+import dpdpDemoImg from '../images/dpdp-demo.png';
 
 const DpdpBookDemo: React.FC = () => {
   const theme = useTheme();
@@ -40,9 +42,13 @@ const DpdpBookDemo: React.FC = () => {
           </Box>
 
           <Box sx={styles.imageContainer}>
-            <Box sx={styles.imagePlaceholder}>
-              <Typography>DPDP Compliance Demo</Typography>
-            </Box>
+            <Image
+              src={dpdpDemoImg}
+              alt="DPDP Compliance Demo"
+              width={400}
+              height={300}
+              style={{ borderRadius: '8px' }}
+            />
           </Box>
         </Box>
       </Container>

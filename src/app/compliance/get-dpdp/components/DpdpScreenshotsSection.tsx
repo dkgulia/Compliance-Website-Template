@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Container, Typography, IconButton, useTheme } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import createScreenshotsSectionStyle from '../styles/screenshotsSectionStyle';
@@ -10,72 +10,88 @@ const DpdpScreenshotsSection: React.FC = () => {
   const theme = useTheme();
   const styles = createScreenshotsSectionStyle(theme);
   const { screenshots } = dpdpData.sections;
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handlePrev = () => {
-    setActiveIndex(prev => (prev === 0 ? screenshots.items.length - 1 : prev - 1));
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideCount = screenshots.items.length;
 
   const handleNext = () => {
-    setActiveIndex(prev => (prev === screenshots.items.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slideCount - 1 : prev - 1));
   };
 
   const handleDotClick = (index: number) => {
-    setActiveIndex(index);
+    setCurrentSlide(index);
   };
 
   return (
-    <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Box sx={styles.header}>
-          <Typography variant="h2" sx={styles.title}>
+    <Box sx={styles.box}>
+      <Container maxWidth="lg">
+        <Box sx={styles.headerBox}>
+          <Typography variant="h4" component="h2" sx={styles.heading}>
             {screenshots.title}
           </Typography>
           {screenshots.subtitle && (
-            <Typography variant="body1" sx={styles.subtitle}>
+            <Typography variant="body1" sx={styles.subheading}>
               {screenshots.subtitle}
             </Typography>
           )}
         </Box>
 
         <Box sx={styles.carouselContainer}>
-          <Box sx={styles.carouselItem}>
-            <Box sx={styles.carouselContent}>
-              <Box sx={styles.imageContainer}>
-                <Typography sx={styles.imagePlaceholder}>
-                  {screenshots.items[activeIndex].imagePrompt}
-                </Typography>
-              </Box>
-              <Box sx={styles.textContainer}>
-                <Typography variant="h6" sx={styles.caption}>
-                  Screenshot {activeIndex + 1}: {screenshots.items[activeIndex].caption.split(':')[0]}
-                </Typography>
-                <Typography variant="body2" sx={styles.description}>
-                  {screenshots.items[activeIndex].caption}
-                </Typography>
-              </Box>
+          <Box sx={styles.navigationArrows}>
+            <IconButton onClick={handlePrev} sx={styles.navArrow}>
+              <ArrowBackIosNewIcon />
+            </IconButton>
+
+            <Box sx={styles.slidePrevNext}>
+              <Typography variant="body2" sx={styles.slideCountText}>
+                {currentSlide + 1} / {slideCount}
+              </Typography>
             </Box>
+
+            <IconButton onClick={handleNext} sx={styles.navArrow}>
+              <ArrowForwardIosIcon />
+            </IconButton>
           </Box>
 
-          <Box sx={styles.carouselNav}>
-            <Button variant="outlined" onClick={handlePrev} sx={styles.navButton}>
-              <ArrowBackIosNewIcon fontSize="small" />
-            </Button>
-            <Button variant="outlined" onClick={handleNext} sx={styles.navButton}>
-              <ArrowForwardIosIcon fontSize="small" />
-            </Button>
-          </Box>
-
-          <Box sx={styles.navDots}>
-            {screenshots.items.map((_, index) => (
+          <Box sx={styles.slideContent}>
+            {screenshots.items.map((screenshot, index) => (
               <Box
                 key={index}
                 sx={{
-                  ...styles.dot,
-                  ...(index === activeIndex ? { '&.active': styles.dot['&.active'] } : {}),
+                  ...styles.slide,
+                  display: currentSlide === index ? 'flex' : 'none'
                 }}
-                className={index === activeIndex ? 'active' : ''}
+              >
+                <Box sx={styles.imagePlaceholder}>
+                  <Typography variant="body2" color="textSecondary">
+                    {screenshot.imagePrompt}
+                  </Typography>
+                </Box>
+
+                <Box sx={styles.captionBox}>
+                  <Typography variant="h6" sx={styles.caption}>
+                    {screenshot.caption}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
+
+          <Box sx={styles.dotsContainer}>
+            {screenshots.items.map((_, index) => (
+              <Box
+                key={index}
                 onClick={() => handleDotClick(index)}
+                sx={{
+                  ...styles.dot,
+                  ...(currentSlide === index && {
+                    backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                    transform: 'scale(1.2)'
+                  })
+                }}
               />
             ))}
           </Box>

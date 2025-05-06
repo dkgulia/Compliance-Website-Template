@@ -16,7 +16,7 @@ const Features = () => {
 					</Box>
 					<Grid container spacing={3}>
 						{featuresItems.map((item) => (
-							<Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.title}>
+							<Grid size={{xs:12,sm:6,md:4}} key={item.title}>
 								<FeaturesCard item={item} />
 							</Grid>
 						))}

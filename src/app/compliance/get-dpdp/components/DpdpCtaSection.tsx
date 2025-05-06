@@ -2,7 +2,6 @@
 import React from 'react';
 import { Box, Container, Typography, Button, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import createCtaSectionStyle from '../styles/ctaSectionStyle';
 import dpdpData from '../constants/dpdpData';
 
@@ -12,30 +11,25 @@ const DpdpCtaSection: React.FC = () => {
   const { callToAction } = dpdpData.sections;
 
   return (
-    <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Typography variant="h2" sx={styles.title}>
-          {callToAction.title}
-        </Typography>
-
-        {callToAction.subtitle && (
-          <Typography variant="h6" sx={styles.subtitle}>
-            {callToAction.subtitle}
+    <Box component="section" sx={styles.container}>
+      <Container maxWidth="lg">
+        <Box sx={styles.content}>
+          <Typography variant="h3" sx={styles.title}>
+            {callToAction.title}
           </Typography>
-        )}
 
-        <Typography variant="body1" sx={styles.description}>
-          {callToAction.description}
-        </Typography>
+          <Typography variant="body1" sx={styles.description}>
+            {callToAction.description}
+          </Typography>
 
-        <Button
-          variant="contained"
-          startIcon={<CalendarTodayIcon />}
-          endIcon={<ArrowForwardIcon />}
-          sx={styles.button}
-        >
-          {callToAction.ctaText}
-        </Button>
+          <Button
+            variant="contained"
+            endIcon={<ArrowForwardIcon />}
+            sx={styles.button}
+          >
+            {callToAction.ctaText}
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

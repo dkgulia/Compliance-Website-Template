@@ -23,6 +23,19 @@ const TestimonialsCarousel = () => {
 		}
 	};
 
+	const CustomButtonGroup = ({ next, previous }: { next?: () => void; previous?: () => void }) => {
+		return (
+			<Box sx={testimonialsCarouselStyles.arrowButtons}>
+				<IconButton onClick={goToPrevSlide} sx={testimonialsCarouselStyles.arrowButton}>
+					<ArrowBackIos sx={{ fontSize: '1.5rem' }} />
+				</IconButton>
+				<IconButton onClick={goToNextSlide} sx={testimonialsCarouselStyles.arrowButton}>
+					<ArrowForwardIos sx={{ fontSize: '1.5rem' }} />
+				</IconButton>
+			</Box>
+		);
+	};
+
 	return (
 		<Box sx={testimonialsCarouselStyles.box}>
 			<Container sx={testimonialsCarouselStyles.container}>
@@ -38,16 +51,7 @@ const TestimonialsCarousel = () => {
 						autoPlaySpeed={8000}
 						arrows={false}
 						renderButtonGroupOutside
-						customButtonGroup={
-							<Box sx={testimonialsCarouselStyles.arrowButtons}>
-								<IconButton onClick={goToPrevSlide} sx={testimonialsCarouselStyles.arrowButton}>
-									<ArrowBackIos sx={{ fontSize: '1.5rem' }} />
-								</IconButton>
-								<IconButton onClick={goToNextSlide} sx={testimonialsCarouselStyles.arrowButton}>
-									<ArrowForwardIos sx={{ fontSize: '1.5rem' }} />
-								</IconButton>
-							</Box>
-						}
+						customButtonGroup={<CustomButtonGroup />}
 						showDots={false}
 					>
 						{testimonials.map((testimonial) => (

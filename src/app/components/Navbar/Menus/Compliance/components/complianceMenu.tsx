@@ -19,7 +19,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 	const [expandedPanels, setExpandedPanels] = useState<string[]>(['primary']);
-	const [activeCategory, setActiveCategory] = useState<'primary' | 'secondary'>('primary');
+	const [activeCategory, setActiveCategory] = useState<'essentials' | 'Others'>('essentials');
 
 	// Display frameworks (9 for each category)
 	const displayPrimaryFrameworks = primaryFrameworks.slice(0, 8);
@@ -44,7 +44,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 		return pathname === url;
 	};
 
-	const switchCategory = (category: 'primary' | 'secondary') => {
+	const switchCategory = (category: 'essentials' | 'Others') => {
 		setActiveCategory(category);
 	};
 
@@ -76,7 +76,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 							minHeight: '48px',
 						}}
 					>
-						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>PRIMARY FRAMEWORKS</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Essentials FRAMEWORKS</Typography>
 					</AccordionSummary>
 					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Grid container spacing={2}>
@@ -118,7 +118,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
 									</Box>
 									<Box>
-										<Typography sx={styles.viewAllTitle}>View full primary pages</Typography>
+										<Typography sx={styles.viewAllTitle}>View full essentials pages</Typography>
 										<Typography sx={styles.viewAllDescription}>See all our available compliance frameworks</Typography>
 									</Box>
 								</Box>
@@ -128,8 +128,8 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 				</Accordion>
 
 				<Accordion
-					expanded={isPanelExpanded('secondary')}
-					onChange={handlePanelToggle('secondary')}
+					expanded={isPanelExpanded('Others')}
+					onChange={handlePanelToggle('secoOthersndary')}
 					elevation={0}
 					sx={{
 						border: 'none',
@@ -146,7 +146,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 							minHeight: '48px',
 						}}
 					>
-						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>SECONDARY FRAMEWORKS</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Others FRAMEWORKS</Typography>
 					</AccordionSummary>
 					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Grid container spacing={2}>
@@ -188,7 +188,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
 									</Box>
 									<Box>
-										<Typography sx={styles.viewAllTitle}>View full secondary pages</Typography>
+										<Typography sx={styles.viewAllTitle}>View full Others pages</Typography>
 										<Typography sx={styles.viewAllDescription}>See all our available compliance frameworks</Typography>
 									</Box>
 								</Box>
@@ -201,7 +201,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	};
 
 	const renderDesktopLayout = () => {
-		const frameworks = activeCategory === 'primary' ? displayPrimaryFrameworks : displaySecondaryFrameworks;
+		const frameworks = activeCategory === 'essentials' ? displayPrimaryFrameworks : displaySecondaryFrameworks;
 
 		return (
 			<Box sx={styles.container}>
@@ -211,27 +211,27 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 					<Box
 						sx={{
 							...styles.categoryOption,
-							...(activeCategory === 'primary' ? styles.activeCategoryOption : {})
+							...(activeCategory === 'essentials' ? styles.activeCategoryOption : {})
 						}}
-						onClick={() => switchCategory('primary')}
+						onClick={() => switchCategory('essentials')}
 					>
-						<Typography sx={styles.categoryOptionText}>Primary Frameworks</Typography>
+						<Typography sx={styles.categoryOptionText}>Essentials Frameworks</Typography>
 					</Box>
 
 					<Box
 						sx={{
 							...styles.categoryOption,
-							...(activeCategory === 'secondary' ? styles.activeCategoryOption : {})
+							...(activeCategory === 'Others' ? styles.activeCategoryOption : {})
 						}}
-						onClick={() => switchCategory('secondary')}
+						onClick={() => switchCategory('Others')}
 					>
-						<Typography sx={styles.categoryOptionText}>Secondary Frameworks</Typography>
+						<Typography sx={styles.categoryOptionText}>Others Frameworks</Typography>
 					</Box>
 				</Box>
 
 				<Box sx={styles.mainContent}>
 					<Typography sx={styles.sectionTitle}>
-						{activeCategory === 'primary' ? 'PRIMARY FRAMEWORKS' : 'SECONDARY FRAMEWORKS'}
+						{activeCategory === 'essentials' ? 'Essentials FRAMEWORKS' : 'Others FRAMEWORKS'}
 					</Typography>
 
 					<Grid container spacing={3}>
@@ -245,12 +245,12 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<Image
 											src={item.logo}
 											alt={item.title}
-											width={32}
-											height={32}
+											width={52}
+											height={52}
 											style={{
 												maxWidth: '100%',
 												height: 'auto',
-												filter: 'brightness(0) invert(1)'
+												//filter: 'brightness(0) invert(1)'
 											}}
 										/>
 									</Box>
@@ -297,7 +297,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 								</Box>
 								<Box>
 									<Typography sx={styles.viewButtonText}>
-										View full {activeCategory} pages
+										View all {activeCategory} pages
 									</Typography>
 									<Typography sx={styles.viewButtonSubText}>
 										See all our available compliance frameworks

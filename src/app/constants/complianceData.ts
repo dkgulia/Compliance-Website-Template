@@ -1,17 +1,17 @@
-import iso27001 from '../compliance/images/iso-27001-new.png';
+import iso27001 from '../compliance/images/iso27001.png';
 import iso27018 from '../compliance/images/ISO-27018.png';
-import soc2 from '../compliance/images/SOC2.png';
-import gdpr from '../compliance/images/GDPR.png';
-import hipaa from '../compliance/images/HIPAA-COMPLIANT.png';
+import soc2 from '../compliance/images/soc2-logo.png';
+import gdpr from '../compliance/images/gdpr logo.png';
+import hipaa from '../compliance/images/hipaa-logo.png';
 import ccpa from '../compliance/images/CCPA.png';
 import nist from '../compliance/images/NIST-171.png';
-import pcidss from '../compliance/images/PCI-DSS.png';
+import pcidss from '../compliance/images/pcidss-logo.png';
 import iso22301 from '../compliance/images/ISO-20000.png';
 import iso20000 from '../compliance/images/ISO-20000.png';
-import iso27701 from '../compliance/images/ISO-27701 (1).png';
-import dora from '../../../public/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
-
-import placeholderImage from '../../app/compliance/get-dora/images/Business Continuity Planning .webp'
+import iso27701 from '../compliance/images/iso27701.png';
+import dora from '../compliance/images/dora-logo (1).png';
+import iso42001 from '../compliance/images/iso42001.png'
+import placeholderImage from '../compliance/images/ISO-27701 (1).png';
 
 import { StaticImageData } from 'next/image';
 
@@ -28,49 +28,49 @@ export const primaryFrameworks: ComplianceFramework[] = [
 		title: 'ISO 27001',
 		description: 'International standard for managing information security, protecting sensitive data.',
 		logo: iso27001,
-		url: '/compliance/iso-27001',
+		url: '/compliance/get-iso-27001',
 	},
 	{
 		title: 'ISO 42001',
 		description: 'First international standard for AI Management Systems (AIMS) to ensure responsible AI.',
-		logo: placeholderImage,
-		url: '/compliance/iso-42001',
+		logo: iso42001,
+		url: '/compliance/get-iso-42001',
 	},
 	{
 		title: 'SOC 2',
 		description: 'Manages customer data security, availability, confidentiality, and privacy.',
 		logo: soc2,
-		url: '/compliance/soc-2',
+		url: '/compliance/get-soc-2',
 	},
 	{
 		title: 'PCI DSS',
 		description: 'Protects cardholder data by enforcing strict security measures for payment cards.',
 		logo: pcidss,
-		url: '/compliance/pci-dss',
+		url: '/compliance/get-pci-dss',
 	},
 	{
 		title: 'GDPR',
 		description: 'Protects personal data privacy, ensuring strict data handling rules and user control.',
 		logo: gdpr,
-		url: '/compliance/gdpr',
+		url: '/compliance/get-gdpr',
 	},
 	{
 		title: 'HIPAA',
 		description: 'Ensures confidentiality and security for healthcare data.',
 		logo: hipaa,
-		url: '/compliance/hipaa',
+		url: '/compliance/get-hipaa',
 	},
 	{
 		title: 'CMMC',
 		description: 'Cybersecurity Maturity Model Certification for defense contractors.',
 		logo: placeholderImage,
-		url: '/compliance/cmmc',
+		url: '/compliance/get-cmmc',
 	},
 	{
 		title: 'DORA',
 		description: 'Digital Operations Resilience Act compliance for financial entities.',
 		logo: dora,
-		url: '/compliance/dora',
+		url: '/compliance/get-dora',
 	}
 ];
 
@@ -80,98 +80,98 @@ export const secondaryFrameworks: ComplianceFramework[] = [
 		title: 'ISO 27701',
 		description: 'Enhances transparency and accountability in data processing to facilitate compliance.',
 		logo: iso27701,
-		url: '/compliance/iso-27701',
+		url: '/compliance/get-iso-27701',
 	},
 	{
 		title: 'ISO 27017',
 		description: 'Security controls for cloud services.',
 		logo: placeholderImage,
-		url: '/compliance/iso-27017',
+		url: '/compliance/get-iso-27017',
 	},
 	{
 		title: 'ISO 27018',
 		description: 'Protects PII in cloud services by ensuring compliance with privacy standards.',
 		logo: iso27018,
-		url: '/compliance/iso-27018',
+		url: '/compliance/get-iso-27018',
 	},
 	{
 		title: 'CCPA',
 		description: 'Protects California residents rights over their personal data.',
 		logo: ccpa,
-		url: '/compliance/ccpa',
+		url: '/compliance/ccpa-compliance',
 	},
-	{
-		title: 'PDPA',
-		description: 'Personal Data Protection Act governing data privacy.',
-		logo: placeholderImage,
-		url: '/compliance/pdpa',
-	},
-	{
-		title: 'CSA STAR',
-		description: 'Security assurance in cloud computing.',
-		logo: placeholderImage,
-		url: '/compliance/csa-star',
-	},
-	{
-		title: 'NIST CSF',
-		description: 'Framework for improving critical infrastructure cybersecurity.',
-		logo: nist,
-		url: '/compliance/nist-csf',
-	},
-	{
-		title: 'NIST 800-171',
-		description: 'Protecting controlled unclassified information.',
-		logo: placeholderImage,
-		url: '/compliance/nist-800-171',
-	},
-	{
-		title: 'NIST 800-53',
-		description: 'Security and privacy controls for federal information systems.',
-		logo: placeholderImage,
-		url: '/compliance/nist-800-53',
-	},
-	{
-		title: 'NIST AI RMF',
-		description: 'AI Risk Management Framework.',
-		logo: placeholderImage,
-		url: '/compliance/nist-ai-rmf',
-	},
-	{
-		title: 'CMMI',
-		description: 'Capability Maturity Model Integration.',
-		logo: placeholderImage,
-		url: '/compliance/cmmi',
-	},
-	{
-		title: 'ISO 22301',
-		description: 'Business continuity management systems.',
-		logo: iso22301,
-		url: '/compliance/iso-22301',
-	},
+	// {
+	// 	title: 'PDPA',
+	// 	description: 'Personal Data Protection Act governing data privacy.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/pdpa',
+	// },
+	// {
+	// 	title: 'CSA STAR',
+	// 	description: 'Security assurance in cloud computing.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/csa-star',
+	// },
+	// {
+	// 	title: 'NIST CSF',
+	// 	description: 'Framework for improving critical infrastructure cybersecurity.',
+	// 	logo: nist,
+	// 	url: '/compliance/nist-csf',
+	// },
+	// {
+	// 	title: 'NIST 800-171',
+	// 	description: 'Protecting controlled unclassified information.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/nist-800-171',
+	// },
+	// {
+	// 	title: 'NIST 800-53',
+	// 	description: 'Security and privacy controls for federal information systems.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/nist-800-53',
+	// },
+	// {
+	// 	title: 'NIST AI RMF',
+	// 	description: 'AI Risk Management Framework.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/nist-ai-rmf',
+	// },
+	// {
+	// 	title: 'CMMI',
+	// 	description: 'Capability Maturity Model Integration.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/cmmi',
+	// },
+	// {
+	// 	title: 'ISO 22301',
+	// 	description: 'Business continuity management systems.',
+	// 	logo: iso22301,
+	// 	url: '/compliance/iso-22301',
+	// },
 	{
 		title: 'ISO 20000-1',
 		description: 'IT service management system requirements.',
 		logo: iso20000,
 		url: '/compliance/iso-20000-1',
 	},
-	{
-		title: 'ISO 13485',
-		description: 'Quality management systems for medical devices.',
-		logo: placeholderImage,
-		url: '/compliance/iso-13485',
-	},
-	{
-		title: 'Cyber Essentials',
-		description: 'UK government-backed scheme to protect against cyber attacks.',
-		logo: placeholderImage,
-		url: '/compliance/cyber-essentials',
-	},
-	{
-		title: 'ISO 9001',
-		description: 'Quality management systems standard.',
-		logo: placeholderImage,
-		url: '/compliance/iso-9001',
-	}
+	// {
+	// 	title: 'ISO 13485',
+	// 	description: 'Quality management systems for medical devices.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/iso-13485',
+	// },
+	// {
+	// 	title: 'Cyber Essentials',
+	// 	description: 'UK government-backed scheme to protect against cyber attacks.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/cyber-essentials',
+	// },
+	// {
+	// 	title: 'ISO 9001',
+	// 	description: 'Quality management systems standard.',
+	// 	logo: placeholderImage,
+	// 	url: '/compliance/iso-9001',
+	// }
 ];
 
 

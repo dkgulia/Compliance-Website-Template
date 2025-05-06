@@ -1,9 +1,11 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
-import FindInPageIcon from '@mui/icons-material/FindInPage';
+import { Box, Typography, Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Image from 'next/image';
 import offerBannerStyle from '../styles/offerBannerStyle';
 import { cmmcData } from '../constants/cmmcData';
+import cmmcBannerImg from '../images/cmmc-demo.png';
 
 const CmmcOfferBanner: React.FC = () => {
     const offerContent = cmmcData.sections.find(
@@ -13,26 +15,34 @@ const CmmcOfferBanner: React.FC = () => {
     if (!offerContent) return null;
 
     return (
-        <Box sx={offerBannerStyle.container}>
-            <Container maxWidth="lg">
+        <Box sx={offerBannerStyle.box}>
+            <Box sx={offerBannerStyle.container}>
                 <Box sx={offerBannerStyle.content}>
-                    <Box sx={offerBannerStyle.iconContainer}>
-                        <FindInPageIcon sx={offerBannerStyle.icon} />
-                    </Box>
-                    
-                    <Typography variant="h4" component="h2" sx={offerBannerStyle.heading}>
+                    <Typography variant="h4" sx={offerBannerStyle.heading}>
                         {offerContent.content.title}
                     </Typography>
-                    
-                    <Typography variant="body1" sx={offerBannerStyle.subtitle}>
+                    <Typography variant="body1" sx={offerBannerStyle.description}>
                         {offerContent.content.subtitle}
                     </Typography>
-                    
-                    <Button variant="contained" sx={offerBannerStyle.button}>
-                        Get Started
+                    <Button
+                        variant="contained"
+                        sx={offerBannerStyle.button}
+                        href="/compliance"
+                        endIcon={<ArrowForwardIcon sx={{ ml: 1 }} />}
+                    >
+                        Book Your Demo
                     </Button>
                 </Box>
-            </Container>
+                <Box sx={offerBannerStyle.imageWrapper}>
+                    <Image
+                        src={cmmcBannerImg}
+                        alt="CMMC Compliance"
+                        width={300}
+                        height={150}
+                        style={{ borderRadius: '8px' }}
+                    />
+                </Box>
+            </Box>
         </Box>
     );
 };

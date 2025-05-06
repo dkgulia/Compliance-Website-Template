@@ -1,7 +1,7 @@
 
 import BenefitsSection from './components/benefitsSection';
 import ComplianceFrameworks from './components/complianceFrameworks';
-import CostBreakdown from './components/costBreakdown';
+//import CostBreakdown from './components/costBreakdown';
 import HeroSection from './components/heroSection';
 import ImplementationMethodology from './components/implementationMethodology';
 import ImplementationTimeline from './components/ImplementationTimeline';
@@ -15,7 +15,7 @@ const StartupsPage = () => {
       <ComplianceFrameworks/>
       <ImplementationTimeline/>
       <BenefitsSection/>
-      <CostBreakdown/>
+      {/* <CostBreakdown/> */}
       <ImplementationMethodology/>
     </main>
   );

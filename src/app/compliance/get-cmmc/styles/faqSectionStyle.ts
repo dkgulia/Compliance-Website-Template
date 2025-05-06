@@ -12,11 +12,11 @@ const faqSectionStyle = {
     padding: { xs: '0 1rem', sm: '0 2rem' },
   },
   title: {
+    textAlign: 'center',
     fontWeight: '600',
     fontSize: { xs: '1.6rem', sm: '2rem' },
-    textAlign: 'center',
-    marginBottom: '0.75rem',
     color: theme.palette.text.primary,
+    marginTop: '1rem'
   },
   subtitle: {
     fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -58,7 +58,7 @@ const faqSectionStyle = {
     },
   },
   expandIcon: {
-    color: theme.palette.text.primary,
+    color: '#ffffff',
     fontSize: '1.25rem',
     transform: 'rotate(0deg)',
     '&.Mui-expanded': {
@@ -68,18 +68,18 @@ const faqSectionStyle = {
   questionTypography: {
     fontSize: '1rem',
     fontWeight: 500,
-    color: theme.palette.text.primary,
+    color: '#ffffff',
   },
   accordionDetails: {
     padding: '1.25rem 1.5rem',
     backgroundColor: '#171717',
-    color: theme.palette.text.secondary,
+    color: '#a3a3a3',
     borderTop: '1px solid #333',
   },
   answerTypography: {
     fontSize: '1rem',
     lineHeight: 1.6,
-    color: theme.palette.text.secondary,
+    color: '#a3a3a3',
   },
 };
 

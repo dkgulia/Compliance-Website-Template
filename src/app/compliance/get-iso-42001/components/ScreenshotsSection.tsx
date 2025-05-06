@@ -1,83 +1,96 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Container, Typography, IconButton } from '@mui/material';
-import { ArrowBack as ArrowBackIcon, ArrowForward as ArrowForwardIcon } from '@mui/icons-material';
+import { ArrowForward as ArrowForwardIcon, ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import screenshotsSectionStyle from '../styles/screenshotsSectionStyle';
 import { iso42001Data } from '../constants/iso42001Data';
 
 const ScreenshotsSection: React.FC = () => {
     const { screenshots } = iso42001Data.sections;
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slideCount = screenshots.items.length;
 
     const handleNext = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % screenshots.items.length);
+        setCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
     };
 
     const handlePrev = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + screenshots.items.length) % screenshots.items.length);
+        setCurrentSlide((prev) => (prev === 0 ? slideCount - 1 : prev - 1));
     };
 
     const handleDotClick = (index: number) => {
-        setActiveIndex(index);
+        setCurrentSlide(index);
     };
 
     return (
-        <Box sx={screenshotsSectionStyle.container}>
+        <Box sx={screenshotsSectionStyle.box}>
             <Container maxWidth="lg">
-                <Box sx={screenshotsSectionStyle.innerContainer}>
-                    <Box sx={screenshotsSectionStyle.titleContainer}>
-                        <Typography variant="h2" sx={screenshotsSectionStyle.title}>
-                            {screenshots.title}
+                <Box sx={screenshotsSectionStyle.headerBox}>
+                    <Typography variant="h4" component="h2" sx={screenshotsSectionStyle.heading}>
+                        {screenshots.title}
+                    </Typography>
+                    {screenshots.subtitle && (
+                        <Typography variant="body1" sx={screenshotsSectionStyle.subheading}>
+                            {screenshots.subtitle}
                         </Typography>
-                        {screenshots.subtitle && (
-                            <Typography variant="h6" sx={screenshotsSectionStyle.subtitle}>
-                                {screenshots.subtitle}
-                            </Typography>
-                        )}
-                    </Box>
-                    <Box sx={screenshotsSectionStyle.carouselContainer}>
-                        <IconButton 
-                            onClick={handlePrev} 
-                            sx={{
-                                ...screenshotsSectionStyle.navButton,
-                                ...screenshotsSectionStyle.prevButton,
-                            }}
-                        >
+                    )}
+                </Box>
+
+                <Box sx={screenshotsSectionStyle.carouselContainer}>
+                    <Box sx={screenshotsSectionStyle.navigationArrows}>
+                        <IconButton onClick={handlePrev} sx={screenshotsSectionStyle.navArrow}>
                             <ArrowBackIcon />
                         </IconButton>
-                        <Box sx={screenshotsSectionStyle.slideContainer}>
-                            <Box sx={screenshotsSectionStyle.imageContainer}>
-                                <Box sx={screenshotsSectionStyle.imagePlaceholder}>
-                                    {screenshots.items[activeIndex].imagePrompt}
-                                </Box>
-                            </Box>
-                            <Box sx={screenshotsSectionStyle.contentContainer}>
-                                <Typography sx={screenshotsSectionStyle.caption}>
-                                    {screenshots.items[activeIndex].caption}
-                                </Typography>
-                            </Box>
+
+                        <Box sx={screenshotsSectionStyle.slidePrevNext}>
+                            <Typography variant="body2" sx={screenshotsSectionStyle.slideCountText}>
+                                {currentSlide + 1} / {slideCount}
+                            </Typography>
                         </Box>
-                        <IconButton 
-                            onClick={handleNext} 
-                            sx={{
-                                ...screenshotsSectionStyle.navButton,
-                                ...screenshotsSectionStyle.nextButton,
-                            }}
-                        >
+
+                        <IconButton onClick={handleNext} sx={screenshotsSectionStyle.navArrow}>
                             <ArrowForwardIcon />
                         </IconButton>
-                        <Box sx={screenshotsSectionStyle.navigationContainer}>
-                            {screenshots.items.map((_, index) => (
-                                <Box
-                                    key={index}
-                                    onClick={() => handleDotClick(index)}
-                                    sx={{
-                                        ...screenshotsSectionStyle.navDot,
-                                        ...(index === activeIndex && screenshotsSectionStyle.activeNavDot),
-                                    }}
-                                />
-                            ))}
-                        </Box>
+                    </Box>
+
+                    <Box sx={screenshotsSectionStyle.slideContent}>
+                        {screenshots.items.map((screenshot, index) => (
+                            <Box
+                                key={index}
+                                sx={{
+                                    ...screenshotsSectionStyle.slide,
+                                    display: currentSlide === index ? 'flex' : 'none'
+                                }}
+                            >
+                                <Box sx={screenshotsSectionStyle.imagePlaceholder}>
+                                    <Typography variant="body2" color="textSecondary">
+                                        {screenshot.imagePrompt}
+                                    </Typography>
+                                </Box>
+
+                                <Box sx={screenshotsSectionStyle.captionBox}>
+                                    <Typography variant="h6" sx={screenshotsSectionStyle.caption}>
+                                        {screenshot.caption}
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        ))}
+                    </Box>
+
+                    <Box sx={screenshotsSectionStyle.dotsContainer}>
+                        {screenshots.items.map((_, index) => (
+                            <Box
+                                key={index}
+                                onClick={() => handleDotClick(index)}
+                                sx={{
+                                    ...screenshotsSectionStyle.dot,
+                                    ...(currentSlide === index && {
+                                        backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                                        transform: 'scale(1.2)'
+                                    })
+                                }}
+                            />
+                        ))}
                     </Box>
                 </Box>
             </Container>

@@ -1,8 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
-  Container,
   Typography,
   Accordion,
   AccordionSummary,
@@ -17,51 +16,42 @@ const DpdpFaqSection: React.FC = () => {
   const theme = useTheme();
   const styles = createFaqSectionStyle(theme);
   const { faq } = dpdpData.sections;
-  const [expanded, setExpanded] = useState<string | false>('panel0');
-
-  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
-  };
 
   return (
-    <Box component="section" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Box sx={styles.header}>
-          <Typography variant="h2" sx={styles.title}>
-            {faq.title}
-          </Typography>
-          {faq.subtitle && (
-            <Typography variant="body1" sx={styles.subtitle}>
-              {faq.subtitle}
-            </Typography>
-          )}
-        </Box>
+    <Box component="section" sx={styles.box}>
+      <Box sx={styles.section}>
+        <Typography component="h2" variant="h4" sx={styles.title}>
+          {faq.title}
+        </Typography>
+
+        <Typography variant="subtitle1" sx={styles.subtitle}>
+          Your Questions, Our Commitment
+        </Typography>
 
         <Box sx={styles.accordionContainer}>
           {faq.questions.map((item, index) => (
             <Accordion
               key={index}
-              expanded={expanded === `panel${index}`}
-              onChange={handleChange(`panel${index}`)}
-              sx={styles.accordion}
               disableGutters
               elevation={0}
+              sx={styles.accordion}
             >
               <AccordionSummary
                 expandIcon={<AddIcon sx={styles.expandIcon} />}
-                aria-controls={`panel${index}a-content`}
-                id={`panel${index}a-header`}
+                aria-controls={`panel${index}-content`}
+                id={`panel${index}-header`}
                 sx={styles.accordionSummary}
               >
-                <Typography sx={styles.question}>{item.question}</Typography>
+                <Typography sx={styles.questionTypography}>{item.question}</Typography>
               </AccordionSummary>
+
               <AccordionDetails sx={styles.accordionDetails}>
-                <Typography sx={styles.answer}>{item.answer}</Typography>
+                <Typography sx={styles.answerTypography}>{item.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           ))}
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };

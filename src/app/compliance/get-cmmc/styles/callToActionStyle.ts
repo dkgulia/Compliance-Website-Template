@@ -10,7 +10,7 @@ const callToActionStyle = {
     maxWidth: '75rem',
     marginX: 'auto',
     display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
+    flexDirection: { xs: 'column', md: 'row' } as any,
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: '2rem',
@@ -18,7 +18,7 @@ const callToActionStyle = {
   },
   contentBox: {
     flex: 1,
-    textAlign: { xs: 'center', md: 'left' },
+    textAlign: { xs: 'center', md: 'left' } as any,
   },
   heading: {
     fontSize: { xs: '1.6rem', sm: '2rem' },
@@ -49,10 +49,11 @@ const callToActionStyle = {
     fontWeight: 'bold',
     color: theme.palette.text.primary,
     marginBottom: '1rem',
-    textAlign: 'center',
+    textAlign: 'center' as const,
   },
   formLabel: {
     marginBottom: '0.5rem',
+    color: theme.palette.text.primary,
   },
   formButton: {
     marginTop: '1.5rem',
@@ -64,14 +65,13 @@ const callToActionStyle = {
       md: '0.7rem 1rem',
     },
     borderRadius: '0.5rem',
-    backgroundColor: '#1f2937',
-    border: '1px solid #4b5563',
-    textTransform: 'none',
+    backgroundColor: '#115e59',
+    border: '1px solid #0d9488',
+    textTransform: 'none' as const,
     fontSize: '0.9rem',
     transition: 'background-color 150ms ease',
     '&:hover': {
-      backgroundColor: '#374151',
-      borderColor: '#4b5563',
+      backgroundColor: '#0f766e',
     },
   },
 };

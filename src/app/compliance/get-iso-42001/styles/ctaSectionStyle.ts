@@ -2,57 +2,41 @@ import theme from '../../../../theme';
 
 const ctaSectionStyle = {
   container: {
-    paddingTop: { sm: '3rem', xs: '2rem' },
-    paddingBottom: { sm: '3rem', xs: '2rem' },
-    background:
-      'linear-gradient(135deg, ' +
-      theme.palette.secondary.main +
-      ' 0%, ' +
-      theme.palette.secondary.dark +
-      ' 100%)',
+    padding: { xs: '3rem 1rem', md: '5rem 2rem' },
+    backgroundColor: theme.palette.background.default,
   },
-  innerContainer: {
-    maxWidth: '75rem',
-    marginX: 'auto',
-    textAlign: 'center',
-    padding: { xs: '1rem', sm: '2rem' },
+  content: {
+    display: 'flex',
+    flexDirection: 'column' as any,
+    alignItems: 'center',
+    textAlign: 'center' as const,
+    maxWidth: '800px',
+    margin: '0 auto',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: '600',
     color: theme.palette.text.primary,
-    marginBottom: '0.5rem',
+    fontSize: { xs: '1.875rem', md: '2.25rem' },
+    fontWeight: '700',
+    marginBottom: '1rem',
   },
   description: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.text.primary,
-    opacity: 0.9,
-    maxWidth: '40rem',
-    margin: '0 auto 2rem auto',
+    color: '#6B7280',
+    fontSize: { xs: '1rem', md: '1.125rem' },
+    marginBottom: '2rem',
+    maxWidth: '600px',
   },
   button: {
-    color: theme.palette.common.white,
-    fontWeight: 800,
-    padding: {
-      xs: '0.5rem 1.5rem',
-      sm: '0.75rem 2rem',
-      md: '1rem 2.5rem',
-    },
+    backgroundColor: '#115e59',
+    color: '#f9fafb',
+    fontWeight: '600',
+    padding: '0.75rem 2rem',
+    fontSize: '1rem',
     borderRadius: '0.5rem',
-
-    border: `1px solid ${theme.palette.divider}`,
-    textTransform: 'none',
-    fontSize: '0.9rem',
-    transition: 'all 0.3s ease',
+    border: '1px solid #0d9488',
+    textTransform: 'none' as any,
     '&:hover': {
-      backgroundColor: theme.palette.background.paper,
-      transform: 'translateY(-2px)',
+      backgroundColor: '#0f766e',
     },
-  },
-  icon: {
-    fontSize: '2.5rem',
-    color: theme.palette.text.primary,
-    marginBottom: '1rem',
   },
 };
 

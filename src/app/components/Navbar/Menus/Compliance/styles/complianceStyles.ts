@@ -84,7 +84,7 @@ const complianceStyles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#115e59',
+		//backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
 		marginRight: '1rem',
 		flexShrink: 0,

@@ -14,26 +14,30 @@ const DpdpHowHexafortHelps: React.FC = () => {
       <Container sx={styles.container}>
         <Box sx={styles.header}>
           <Typography variant="h2" sx={styles.title}>
-            {howHexafortHelps.title}
+            {howHexafortHelps.title || "How Hexafort Helps You Achieve DPDP Compliance"}
           </Typography>
           <Typography variant="body1" sx={styles.subtitle}>
-            {howHexafortHelps.subtitle}
+            {howHexafortHelps.subtitle || "Our structured approach streamlines complex DPDP mandates, ensuring personal data protection."}
           </Typography>
         </Box>
 
-        <Box sx={styles.stepsGrid}>
+        <Grid container spacing={3}>
           {howHexafortHelps.steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Box key={index} sx={styles.stepCard}>
-                <Icon sx={styles.stepIcon} />
-                <Typography sx={styles.stepText}>
-                  {step.text}
-                </Typography>
-              </Box>
+              <Grid size={{xs:12,sm:6,md:3}} key={index}>
+                <Box sx={styles.stepCard}>
+                  <Box sx={styles.iconContainer}>
+                    <Icon sx={styles.stepIcon} />
+                  </Box>
+                  <Typography sx={styles.stepText}>
+                    {step.text}
+                  </Typography>
+                </Box>
+              </Grid>
             );
           })}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );

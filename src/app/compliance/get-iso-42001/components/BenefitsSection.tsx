@@ -10,22 +10,22 @@ const BenefitsSection: React.FC = () => {
     return (
         <Box sx={benefitsSectionStyle.container}>
             <Container maxWidth="lg">
-                <Box sx={benefitsSectionStyle.innerContainer}>
-                    <Box sx={benefitsSectionStyle.titleContainer}>
-                        <Typography variant="h2" sx={benefitsSectionStyle.title}>
-                            {benefits.title}
+                <Box sx={benefitsSectionStyle.titleContainer}>
+                    <Typography variant="h2" sx={benefitsSectionStyle.title}>
+                        {benefits.title}
+                    </Typography>
+                    {benefits.subtitle && (
+                        <Typography variant="h6" sx={benefitsSectionStyle.subtitle}>
+                            {benefits.subtitle}
                         </Typography>
-                        {benefits.subtitle && (
-                            <Typography variant="h6" sx={benefitsSectionStyle.subtitle}>
-                                {benefits.subtitle}
-                            </Typography>
-                        )}
-                    </Box>
-                    <Box sx={benefitsSectionStyle.cardsContainer}>
-                        {benefits.items.map((benefit, index) => {
-                            const Icon = benefit.icon;
-                            return (
-                                <Box key={index} sx={benefitsSectionStyle.card}>
+                    )}
+                </Box>
+                <Grid container spacing={3}>
+                    {benefits.items.map((benefit, index) => {
+                        const Icon = benefit.icon;
+                        return (
+                            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                                <Box sx={benefitsSectionStyle.card}>
                                     <Box sx={benefitsSectionStyle.iconContainer}>
                                         <Icon sx={benefitsSectionStyle.icon} />
                                     </Box>
@@ -36,10 +36,10 @@ const BenefitsSection: React.FC = () => {
                                         {benefit.description}
                                     </Typography>
                                 </Box>
-                            );
-                        })}
-                    </Box>
-                </Box>
+                            </Grid>
+                        );
+                    })}
+                </Grid>
             </Container>
         </Box>
     );

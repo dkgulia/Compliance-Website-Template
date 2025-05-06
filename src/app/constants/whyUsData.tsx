@@ -1,11 +1,11 @@
 
 
-import automationLogo from '../compliance/images/a-simple-automation-icon-with-interlocking-gears-o.png';
-import centralizedLogo from '../compliance/images/a-hub-and-spoke-icon-with-a-central-node-connected.png';
-import auditLogo from '../compliance/images/a-checklist-or-document-icon-with-check-marks--min.png';
-import riskLogo from '../compliance/images/a-shield-icon-with-simple-protective-design--minim.png';
-import scalabilityLogo from '../compliance/images/a-simple-growth-chart-or-trend-line-icon--minimali.png';
-import supportLogo from '../compliance/images/a-handshake-or-support-hand-icon--minimalist-desig.png';
+import automationLogo from '../compliance/images/efficiency.png';
+import centralizedLogo from '../compliance/images/management.png';
+import auditLogo from '../compliance/images/audit.png';
+import riskLogo from '../compliance/images/risk-assessment.png';
+import scalabilityLogo from '../compliance/images/growth-.png';
+import supportLogo from '../compliance/images/support.png';
 
 export const whyUsItems = [
 	{

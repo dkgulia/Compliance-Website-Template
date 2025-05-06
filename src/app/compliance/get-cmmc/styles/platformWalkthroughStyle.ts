@@ -22,7 +22,7 @@ const platformWalkthroughStyle = {
   heading: {
     fontWeight: '600',
     fontSize: { xs: '1.6rem', sm: '2rem' },
-    color: 'white',
+    color: theme.palette.text.primary,
     marginBottom: '1rem',
   },
   subheading: {
@@ -45,7 +45,7 @@ const platformWalkthroughStyle = {
   },
   navArrow: {
     color: theme.palette.text.primary,
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: '#17171799',
     border: `1px solid ${theme.palette.divider}`,
     '&:hover': {
       backgroundColor: '#262626',
@@ -61,7 +61,7 @@ const platformWalkthroughStyle = {
   },
   slideContent: {
     width: '100%',
-    position: 'relative',
+    position: 'relative' as const,
   },
   slide: {
     display: 'flex',
@@ -72,7 +72,7 @@ const platformWalkthroughStyle = {
   imagePlaceholder: {
     width: '100%',
     height: '20rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: '#17171799',
     borderRadius: '0.75rem',
     display: 'flex',
     justifyContent: 'center',
@@ -84,7 +84,7 @@ const platformWalkthroughStyle = {
     textAlign: 'center' as const,
   },
   caption: {
-    color: theme.palette.text.primary,
+    color: theme.palette.text.secondary,
     fontWeight: '600',
   },
   dotsContainer: {
