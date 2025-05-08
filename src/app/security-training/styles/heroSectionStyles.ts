@@ -1,61 +1,53 @@
 import theme from '../../../theme';
 
 const heroSectionStyles = {
-  root: {
-    paddingTop: { sm: '4rem', xs: '0.5rem' },
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+  container: {
+    padding: '4rem 1rem',
     background: theme.palette.background.default,
   },
-  container: {
+  containerBox: {
     display: 'flex',
-    flexDirection: { xs: 'column-reverse', md: 'row' },
+    flexDirection: { xs: 'column', md: 'row' },
     justifyContent: 'space-between',
     alignItems: 'center',
-    maxWidth: '75rem',
-    width: '100%',
+    maxWidth: '1200px',
     margin: '0 auto',
-    gap: { xs: '1.5rem', sm: '2rem' },
-    padding: { xs: '2rem 1rem', sm: '3rem 2rem' },
+    gap: '2rem',
   },
-  contentBox: {
+  leftContentBox: {
     flex: 1,
     textAlign: { xs: 'center', md: 'left' },
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
-    alignItems: { xs: 'center', md: 'flex-start' },
-    zIndex: 1,
+    padding: { xs: '1rem', md: '2rem' },
   },
-  tagline: {
+  imageBox: {
+    marginTop: { xs: '2rem', md: '0' },
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    maxWidth: { xs: '100%', md: '600px' },
+  },
+  tag: {
     display: 'inline-block',
-    padding: '0.4rem 1rem',
-    borderRadius: '1.3rem',
-    fontSize: '0.9rem',
-    marginBottom: '1rem',
+    padding: '0.5rem 1rem',
+    borderRadius: '1rem',
     background: '#115e59',
-    color: theme.palette.text.primary,
+    marginBottom: '1rem',
+  },
+  tagText: {
+    color: 'white',
     fontWeight: 'bold',
-    width: { xs: 'auto', sm: '45%' },
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
+    fontSize: '0.9rem',
   },
   title: {
     fontSize: { xs: '1.6rem', sm: '2rem' },
     fontWeight: '600',
-    color: theme.palette.text.primary,
-    lineHeight: 1.3,
     marginBottom: '1rem',
+    color: theme.palette.text.primary,
   },
   subtitle: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.text.secondary,
-    lineHeight: 1.6,
-    marginBottom: '1rem',
-  },
-  description: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.text.primary,
-    lineHeight: 1.6,
+    fontSize: { xs: '1.2rem', md: '1.5rem' },
+    color: theme.palette.primary.light,
     marginBottom: '1rem',
   },
   listContainer: {
@@ -63,11 +55,13 @@ const heroSectionStyles = {
     flexDirection: 'column',
     gap: '0.5rem',
     marginTop: '1rem',
+    alignItems: { xs: 'center', md: 'flex-start' },
   },
   listItem: {
     fontSize: '1rem',
     lineHeight: 1.6,
-    color: theme.palette.text.primary,
+    color: theme.palette.text.secondary,
+    textAlign: { xs: 'center', md: 'left' },
   },
   ctaButton: {
     marginTop: '1.5rem',
@@ -96,19 +90,51 @@ const heroSectionStyles = {
       border: '1px solid #374151',
     },
   },
-  imageBox: {
-    flex: 1,
+  featuresContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: { xs: 'center', md: 'flex-start' },
     alignItems: 'center',
-    marginBottom: { xs: '1rem', sm: '2rem' },
-    marginTop: { xs: '2rem', sm: '2rem' },
-  },
-  heroImage: {
+    gap: { xs: '1rem', md: '3rem' },
+    marginTop: '2rem',
     width: '100%',
-    maxWidth: '28rem',
-    borderRadius: '1rem',
-    boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
+  },
+  featureItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    gap: '0.5rem',
+    flex: '1 1 33%',
+    maxWidth: '33%',
+  },
+  iconWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    minHeight: '2.5rem',
+  },
+  featureIcon: {
+    fontSize: { xs: '1.8rem', md: '2.5rem' },
+    color: '#115e59',
+  },
+  featureTextWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    width: '100%',
+  },
+  featureTitle: {
+    fontSize: { xs: '0.9rem', md: '1.2rem' },
+    fontWeight: 'bold',
+    color: theme.palette.text.primary,
+  },
+  featureSubtitle: {
+    fontSize: { xs: '0.8rem', md: '0.9rem' },
+    color: '#6B7280',
   },
 };
 

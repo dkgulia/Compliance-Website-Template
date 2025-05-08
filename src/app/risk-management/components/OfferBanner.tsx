@@ -16,11 +16,11 @@ const OfferBanner: React.FC = () => {
         <Box sx={offerBannerStyle.container}>
             <Box sx={offerBannerStyle.innerBox}>
                 <AccessTimeIcon sx={offerBannerStyle.icon} />
-                
+
                 <Typography variant="h2" sx={offerBannerStyle.heading}>
                     {offerContent.content.title}
                 </Typography>
-                
+
                 <Typography sx={offerBannerStyle.subtitle}>
                     Lightning Fast Setup in Minutes
                 </Typography>

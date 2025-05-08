@@ -1,8 +1,7 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const featuredIntegrationsStyle = (theme: Theme) => ({
+const featuredIntegrationsStyle = {
   section: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
@@ -55,25 +54,24 @@ const featuredIntegrationsStyle = (theme: Theme) => ({
       xs: '1fr',
       sm: 'repeat(2, 1fr)',
       md: 'repeat(3, 1fr)',
+      lg: 'repeat(4, 1fr)',
     },
-    gap: '2rem',
+    gap: { xs: '1.5rem', sm: '1.5rem', md: '1.5rem' },
     width: '100%',
   },
   integrationCard: {
-    padding: '2rem',
+    padding: '1.5rem',
     borderRadius: '1rem',
-    backgroundColor: theme.palette.background.paper,
+    background: '#17171799',
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-
     border: `1px solid ${theme.palette.divider}`,
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     position: 'relative',
     overflow: 'hidden',
     '&:hover': {
       transform: 'translateY(-5px)',
-      boxShadow: theme.customShadows?.cardHover || theme.customShadows?.card,
     },
   },
   newBadge: {
@@ -99,16 +97,15 @@ const featuredIntegrationsStyle = (theme: Theme) => ({
     fontWeight: 'bold',
   },
   logoContainer: {
-    width: '80px',
-    height: '80px',
-    borderRadius: '1rem',
+    width: '70px',
+    height: '70px',
+    borderRadius: '0.75rem',
     backgroundColor: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: '1.5rem',
-
-    padding: '0.75rem',
+    marginBottom: '1.25rem',
+    padding: '0.5rem',
   },
   logoPlaceholder: {
     width: '100%',
@@ -120,30 +117,30 @@ const featuredIntegrationsStyle = (theme: Theme) => ({
     backgroundColor: theme.palette.background.darkTransparent,
     color: theme.palette.text.primary,
     fontWeight: 'bold',
+    fontSize: '1.5rem',
   },
   integrationName: {
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
     fontWeight: 600,
     marginBottom: '0.75rem',
     color: theme.palette.text.primary,
   },
   integrationDescription: {
-    fontSize: '0.9rem',
+    fontSize: '0.85rem',
     color: theme.palette.text.secondary,
     lineHeight: 1.6,
-    marginBottom: '1.5rem',
+    marginBottom: '1.25rem',
     flex: 1,
   },
   categoryChip: {
     display: 'inline-block',
     padding: '0.25rem 0.75rem',
     borderRadius: '1rem',
-    backgroundColor: 'rgba(17, 94, 89, 0.1)',
     color: theme.palette.secondary.dark,
     fontSize: '0.8rem',
     fontWeight: 500,
     marginTop: 'auto',
   },
-});
+};
 
 export default featuredIntegrationsStyle;

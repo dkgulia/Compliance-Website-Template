@@ -2,40 +2,37 @@
 
 import React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 
 const CTASection: React.FC = () => {
-    const theme = useTheme();
-    const styles = ctaSectionStyle(theme);
     const { callToAction } = controlFrameworkData.sections;
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Box sx={styles.contentBox}>
-                    <Box sx={styles.textContent}>
-                        <Typography variant="h2" sx={styles.title}>
+        <Box component="section" sx={ctaSectionStyle.section}>
+            <Container maxWidth="lg" sx={ctaSectionStyle.container}>
+                <Box sx={ctaSectionStyle.contentBox}>
+                    <Box sx={ctaSectionStyle.textContent}>
+                        <Typography variant="h2" sx={ctaSectionStyle.title}>
                             {callToAction.title}
                         </Typography>
-                        
-                        <Typography sx={styles.description}>
+
+                        <Typography sx={ctaSectionStyle.description}>
                             {callToAction.description}
                         </Typography>
-                        
-                        <Button 
-                            variant="contained" 
+
+                        <Button
+                            variant="contained"
                             endIcon={<ArrowForwardIcon />}
-                            sx={styles.ctaButton}
+                            sx={ctaSectionStyle.ctaButton}
                         >
                             {callToAction.ctaText}
                         </Button>
                     </Box>
-                    
-                    <Box sx={styles.imageContainer}>
-                        <Box sx={styles.imagePlaceholder}>
+
+                    <Box sx={ctaSectionStyle.imageContainer}>
+                        <Box sx={ctaSectionStyle.imagePlaceholder}>
                             {callToAction.imageAlt}
                         </Box>
                     </Box>

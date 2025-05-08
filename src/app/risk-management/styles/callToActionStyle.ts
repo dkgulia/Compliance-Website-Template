@@ -2,8 +2,8 @@ import theme from '../../../theme';
 
 const callToActionStyle = {
   container: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
+    paddingTop: { sm: '3rem', xs: '2rem' },
+    paddingBottom: { sm: '3rem', xs: '2rem' },
     background: theme.palette.background.default,
   },
   innerBox: {
@@ -24,7 +24,7 @@ const callToActionStyle = {
     fontSize: { xs: '1.6rem', sm: '2rem' },
     fontWeight: '600',
     color: theme.palette.text.primary,
-    marginBottom: '0.5rem',
+    marginBottom: '0.75rem',
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
@@ -33,7 +33,7 @@ const callToActionStyle = {
   },
   description: {
     fontSize: '1rem',
-    color: '#6B7280',
+    color: theme.palette.text.secondary,
     lineHeight: 1.6,
   },
   formBox: {
@@ -52,11 +52,12 @@ const callToActionStyle = {
     textAlign: 'center',
   },
   formLabel: {
+    color: theme.palette.text.primary,
     marginBottom: '0.5rem',
   },
   formButton: {
     marginTop: '1.5rem',
-    color: '#f9fafb',
+    color: theme.palette.common.white,
     fontWeight: 800,
     padding: {
       xs: '0.25rem 0.5rem',

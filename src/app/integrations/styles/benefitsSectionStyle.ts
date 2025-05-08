@@ -1,8 +1,8 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const benefitsSectionStyle = (theme: Theme) => ({
+const benefitsSectionStyle = {
   section: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
+
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
@@ -19,7 +19,7 @@ const benefitsSectionStyle = (theme: Theme) => ({
     marginBottom: '3rem',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem' },
     fontWeight: 600,
     marginBottom: '1rem',
     color: theme.palette.text.primary,
@@ -55,7 +55,7 @@ const benefitsSectionStyle = (theme: Theme) => ({
     border: `1px solid ${theme.palette.divider}`,
     '&:hover': {
       transform: 'translateY(-5px)',
-      boxShadow: theme.customShadows?.cardHover || theme.customShadows?.card,
+
       backgroundColor: theme.palette.background.paper,
     },
   },
@@ -85,6 +85,6 @@ const benefitsSectionStyle = (theme: Theme) => ({
     lineHeight: 1.6,
     fontSize: '1rem',
   },
-});
+};
 
 export default benefitsSectionStyle;

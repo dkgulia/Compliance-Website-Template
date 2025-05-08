@@ -1,13 +1,13 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import { cspmData } from '../constants/cspmData';
 
 const FeaturesSection: React.FC = () => {
     return (
         <Box component="section" sx={featuresSectionStyle.box}>
-            <Container sx={featuresSectionStyle.container}>
+            <Container maxWidth="lg" sx={featuresSectionStyle.container}>
                 <Box sx={featuresSectionStyle.containerBox}>
                     <Typography variant="h2" sx={featuresSectionStyle.heading}>
                         {cspmData.features.title}
@@ -16,14 +16,14 @@ const FeaturesSection: React.FC = () => {
                         {cspmData.features.subtitle}
                     </Typography>
                 </Box>
-                
-                <Box sx={featuresSectionStyle.featuresGrid}>
+
+                <Grid container spacing={3}>
                     {cspmData.features.featuresList.map((feature, index) => (
-                        <Box key={index} sx={featuresSectionStyle.featureCard}>
-                            <Box sx={featuresSectionStyle.iconContainer}>
-                                <feature.muiIcon sx={featuresSectionStyle.icon} className="feature-icon" />
-                            </Box>
-                            <Box sx={featuresSectionStyle.typography.container}>
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                            <Box sx={featuresSectionStyle.featureCard}>
+                                <Box sx={featuresSectionStyle.iconContainer}>
+                                    <feature.muiIcon sx={featuresSectionStyle.icon} />
+                                </Box>
                                 <Typography variant="h3" sx={featuresSectionStyle.featureTitle}>
                                     {feature.title}
                                 </Typography>
@@ -31,9 +31,9 @@ const FeaturesSection: React.FC = () => {
                                     {feature.description}
                                 </Typography>
                             </Box>
-                        </Box>
+                        </Grid>
                     ))}
-                </Box>
+                </Grid>
             </Container>
         </Box>
     );

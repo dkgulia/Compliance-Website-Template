@@ -2,22 +2,18 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import introductionStyle from '../styles/introductionStyle';
 import integrationsData from '../constants/integrationsData';
+import theme from '../../../theme';
 
 const IntroductionSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = introductionStyle(theme);
     const { introduction } = integrationsData;
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
-
-    // Function to highlight key phrases
     const highlightPhrases = (text: string, phrases: string[]) => {
         let parts = [text];
         let keyCounter = 0;
-        
+
         phrases.forEach(phrase => {
             parts = parts.flatMap(part => {
                 if (typeof part === 'string') {
@@ -27,11 +23,11 @@ const IntroductionSection: React.FC = () => {
                             if (index < splitParts.length - 1) {
                                 keyCounter++;
                                 return [
-                                    subPart, 
-                                    <Box 
-                                        component="span" 
-                                        key={`highlight-${phrase}-${keyCounter}`} 
-                                        sx={styles.highlightText}
+                                    subPart,
+                                    <Box
+                                        component="span"
+                                        key={`highlight-${phrase}-${keyCounter}`}
+                                        sx={introductionStyle.highlightText}
                                     >
                                         {phrase}
                                     </Box>
@@ -55,8 +51,6 @@ const IntroductionSection: React.FC = () => {
         'not replace',
         'seamless integration'
     ];
-
-    // Intersection Observer to trigger animations when section is in view
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -69,11 +63,11 @@ const IntroductionSection: React.FC = () => {
             },
             { threshold: 0.2 }
         );
-        
+
         if (sectionRef.current) {
             observer.observe(sectionRef.current);
         }
-        
+
         return () => {
             if (sectionRef.current) {
                 observer.disconnect();
@@ -82,13 +76,13 @@ const IntroductionSection: React.FC = () => {
     }, []);
 
     return (
-        <Box component="section" sx={styles.section} ref={sectionRef}>
-            <Container sx={styles.container}>
-                <Box sx={styles.contentContainer}>
-                    <Typography 
-                        variant="h2" 
+        <Box component="section" sx={introductionStyle.section} ref={sectionRef}>
+            <Container sx={introductionStyle.container}>
+                <Box sx={introductionStyle.contentContainer}>
+                    <Typography
+                        variant="h2"
                         sx={{
-                            ...styles.title,
+                            ...introductionStyle.title,
                             opacity: isVisible ? 1 : 0,
                             transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
                             transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
@@ -96,12 +90,12 @@ const IntroductionSection: React.FC = () => {
                     >
                         {introduction.title}
                     </Typography>
-                    
+
                     {introduction.description.map((paragraph, index) => (
-                        <Typography 
-                            key={`intro-paragraph-${index}`} 
+                        <Typography
+                            key={`intro-paragraph-${index}`}
                             sx={{
-                                ...styles.description,
+                                ...introductionStyle.description,
                                 opacity: isVisible ? 1 : 0,
                                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
                                 transition: `opacity 0.8s ease-out ${0.2 + index * 0.2}s, transform 0.8s ease-out ${0.2 + index * 0.2}s`,
@@ -110,7 +104,7 @@ const IntroductionSection: React.FC = () => {
                             {highlightPhrases(paragraph, highlightedPhrases)}
                         </Typography>
                     ))}
-                    
+
                     {/* Animated underline effect for the title */}
                     <Box
                         sx={{
@@ -124,7 +118,7 @@ const IntroductionSection: React.FC = () => {
                     />
                 </Box>
             </Container>
-            
+
             <style jsx global>{`
                 @keyframes highlight-pulse {
                     0%, 100% {

@@ -2,52 +2,49 @@
 
 import React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SettingsIcon from '@mui/icons-material/Settings';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 
 const HeroSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = heroSectionStyle(theme);
     const { hero } = controlFrameworkData.sections;
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Box sx={styles.contentContainer}>
-                    <Box sx={styles.textContent}>
-                        <Typography sx={styles.tagline}>
+        <Box component="section" sx={heroSectionStyle.section}>
+            <Container maxWidth="lg" sx={heroSectionStyle.container}>
+                <Box sx={heroSectionStyle.contentContainer}>
+                    <Box sx={heroSectionStyle.textContent}>
+                        <Box sx={heroSectionStyle.tagline}>
                             <SettingsIcon sx={{ fontSize: '1rem', mr: 0.5 }} />
                             Customizable Framework
-                        </Typography>
-                        
-                        <Typography variant="h1" sx={styles.title}>
+                        </Box>
+
+                        <Typography variant="h1" sx={heroSectionStyle.title}>
                             {hero.title}
                         </Typography>
-                        
-                        <Typography variant="h2" sx={styles.subtitle}>
+
+                        <Typography variant="h2" sx={heroSectionStyle.subtitle}>
                             {hero.subtitle}
                         </Typography>
-                        
+
                         {hero.description.map((paragraph, index) => (
-                            <Typography key={index} sx={styles.description}>
+                            <Typography key={index} sx={heroSectionStyle.description}>
                                 {paragraph}
                             </Typography>
                         ))}
-                        
-                        <Button 
-                            variant="contained" 
+
+                        <Button
+                            variant="contained"
                             endIcon={<ArrowForwardIcon />}
-                            sx={styles.ctaButton}
+                            sx={heroSectionStyle.ctaButton}
                         >
                             {hero.ctaText}
                         </Button>
                     </Box>
 
-                    <Box sx={styles.imageContainer}>
-                        <Box sx={styles.imagePlaceholder}>
+                    <Box sx={heroSectionStyle.imageContainer}>
+                        <Box sx={heroSectionStyle.imagePlaceholder}>
                             {hero.imageAlt}
                         </Box>
                     </Box>

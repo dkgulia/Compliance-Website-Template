@@ -6,12 +6,11 @@ import Image from 'next/image';
 import bookDemoStyle from '../styles/bookDemoStyle';
 import hexafortSecureData from '../constants/hexafortSecureData';
 
-// Using the shield image from the public folder
 const demoImage = '/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
 
 const BookDemo = () => {
     const { bookDemo } = hexafortSecureData;
-    
+
     const handleScrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -49,7 +48,7 @@ const BookDemo = () => {
                     <Image
                         src={demoImage}
                         alt="Book a Demo"
-                        width={500}
+                        width={300}
                         height={320}
                         style={{
                             maxWidth: '100%',

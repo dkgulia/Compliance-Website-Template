@@ -1,43 +1,47 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import infoSectionStyle from '../styles/infoSectionStyle';
-import evidenceCollectionData from '../constants/evidenceCollectionData';
+import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 
 const InfoSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = infoSectionStyle(theme);
-    const { infoSection } = evidenceCollectionData;
+	const { infoSection } = evidenceCollectionData;
 
-    return (
-        <Box component="section" sx={styles.section}>
-            <Container maxWidth="lg" sx={styles.container}>
-                <Box sx={styles.contentBox}>
-                    <Box sx={styles.imageContainer}>
-                        {/* Placeholder for future image */}
-                        <Box sx={styles.placeholderBox}>
-                            <Typography sx={styles.placeholderText}>
-                                {infoSection.imageAlt}
-                            </Typography>
-                        </Box>
-                    </Box>
-                    
-                    <Box sx={styles.textContent}>
-                        <Typography variant="h2" sx={styles.title}>
-                            {infoSection.title}
-                        </Typography>
-                        {infoSection.description.map((paragraph, index) => (
-                            <Typography key={index} sx={styles.description}>
-                                {paragraph}
-                            </Typography>
-                        ))}
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
-    );
+	return (
+		<Box sx={infoSectionStyle.box}>
+			<Box sx={infoSectionStyle.infoContainer}>
+				<Grid container spacing={3}>
+					<Grid size={{ xs: 12, md: 8 }}>
+						<Grid container direction="column" spacing={2}>
+							<Grid size={{ xs: 12 }} sx={infoSectionStyle.titleSection}>
+								<Typography variant="h4" sx={infoSectionStyle.heading}>
+									{infoSection.title}
+								</Typography>
+							</Grid>
+
+							<Grid size={{ xs: 12 }} sx={infoSectionStyle.descriptionSection}>
+								{infoSection.description.map((paragraph, index) => (
+									<Typography key={index} variant="body1" sx={infoSectionStyle.description}>
+										{paragraph}
+									</Typography>
+								))}
+							</Grid>
+						</Grid>
+					</Grid>
+
+					<Grid size={{ xs: 12, md: 4 }} sx={infoSectionStyle.imageContainer}>
+						<Box sx={infoSectionStyle.iconWrapper}>
+							{/* Image would go here */}
+							<Box sx={infoSectionStyle.placeholderBox}>
+								<Typography sx={infoSectionStyle.placeholderText}>{infoSection.imageAlt}</Typography>
+							</Box>
+						</Box>
+					</Grid>
+				</Grid>
+			</Box>
+		</Box>
+	);
 };
 
 export default InfoSection;

@@ -1,6 +1,6 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const categoriesStyle = (theme: Theme) => ({
+const categoriesStyle = {
   section: {
     paddingTop: { sm: '4rem', xs: '2rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
@@ -72,6 +72,6 @@ const categoriesStyle = (theme: Theme) => ({
     color: theme.palette.text.secondary,
     lineHeight: 1.5,
   },
-});
+};
 
 export default categoriesStyle;

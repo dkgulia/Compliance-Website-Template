@@ -1,37 +1,48 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const processSectionStyle = (theme: Theme) => ({
+const processSectionStyle = {
   section: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor:
-      theme.palette.background.darkPaper || theme.palette.background.default,
+    // paddingBottom: { sm: '4rem', xs: '2rem' },
+    backgroundColor: theme.palette.background.default,
+    position: 'relative',
   },
   container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginX: 'auto',
     maxWidth: '1200px',
-    margin: '0 auto',
-    padding: { xs: '0 1rem', sm: '0 2rem' },
+    px: { xs: '1rem', sm: '2rem' },
+    position: 'relative',
+    zIndex: 1,
   },
   header: {
     textAlign: 'center',
+    width: '100%',
+    maxWidth: '60rem',
+    marginX: 'auto',
     marginBottom: '3rem',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: 600,
-    marginBottom: '1rem',
+    fontWeight: '600',
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
     color: theme.palette.text.primary,
+    paddingBottom: { sm: '1rem', xs: '0.75rem' },
+    position: 'relative',
   },
   subtitle: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
     color: theme.palette.text.secondary,
-    maxWidth: '700px',
-    margin: '0 auto',
+    fontSize: { xs: '1rem', md: '1.1rem' },
+    lineHeight: '1.6',
+    maxWidth: '40rem',
+    marginX: 'auto',
   },
   stepsContainer: {
     display: 'flex',
     flexDirection: 'column',
     gap: '2rem',
+    width: '100%',
   },
   stepWrapper: {
     display: 'flex',
@@ -40,8 +51,12 @@ const processSectionStyle = (theme: Theme) => ({
     alignItems: 'center',
     borderRadius: '1rem',
     padding: '2rem',
-    backgroundColor: theme.palette.background.paper,
-    border: `1px solid ${theme.palette.divider}`,
+    transition: 'all 0.35s ease',
+    '&:hover': {
+      transform: 'translateY(-8px)',
+      boxShadow: '0rem 0.75rem 1.5rem rgba(0, 0, 0, 0.15)',
+      backgroundColor: theme.palette.background.paper,
+    },
   },
   stepWrapperAlt: {
     flexDirection: { xs: 'column', md: 'row-reverse' },
@@ -50,9 +65,9 @@ const processSectionStyle = (theme: Theme) => ({
     flex: 1,
   },
   stepNumber: {
-    fontSize: '3rem',
+    fontSize: '2rem',
     fontWeight: 'bold',
-    color: theme.palette.primary.main,
+    color: '#115e59',
     marginRight: '1rem',
     lineHeight: 1,
   },
@@ -75,33 +90,23 @@ const processSectionStyle = (theme: Theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  image: {
-    width: '100%',
-    maxWidth: '400px',
-    height: 'auto',
-    borderRadius: '0.5rem',
-  },
   imagePlaceholder: {
     width: '100%',
-    height: '200px',
-    maxWidth: '400px',
-    borderRadius: '0.5rem',
-    backgroundColor:
-      theme.palette.background.darkPaper || theme.palette.background.default,
+    aspectRatio: '16/9',
+    borderRadius: '0.75rem',
+    backgroundColor: '#115e5920',
+    border: `1px dashed ${theme.palette.secondary.dark}60`,
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '1.5rem',
     color: theme.palette.text.secondary,
-    border: `1px solid ${theme.palette.divider}`,
-    padding: '1rem',
+    fontSize: '0.9rem',
     textAlign: 'center',
+    fontStyle: 'italic',
   },
-  connector: {
-    width: '2px',
-    height: '50px',
-    backgroundColor: theme.palette.primary.main,
-    margin: '0 auto',
-  },
-});
+
+};
 
 export default processSectionStyle;

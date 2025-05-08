@@ -21,7 +21,7 @@ export interface PlatformFeature {
 export const hexafortSecureData = {
     pageTitle: "HexaFort Secure — Enterprise Security, Re-imagined",
     pageSubTitle: "Unified risk, compliance, threat and user-awareness in one AI-driven platform",
-    pageDescription: 
+    pageDescription:
         "HexaFort Secure unifies governance, risk management, real-time threat detection, asset monitoring, compliance automation, and user awareness into a single command center—giving leadership complete visibility and control while slashing overhead.",
     keywords: [
         "enterprise security platform",
@@ -160,7 +160,8 @@ export const hexafortSecureData = {
             description: 'Connect with your existing tools and systems',
             icon: 'link',
             href: '/integrations',
-        }
+        },
+        
     ]
 };
 

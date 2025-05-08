@@ -1,7 +1,7 @@
 import React from 'react';
-import { 
-    LinkRounded, 
-    Settings, 
+import {
+    LinkRounded,
+    Settings,
     Sync,
     SmartToy,
     BarChart,
@@ -124,6 +124,11 @@ const integrationsData: IntegrationsData = {
                 title: "Better Decision-Making",
                 description: "With everything connected, Hexafort empowers you to act quickly, fix what matters, and maintain a strong, informed security posture.",
                 icon: BarChart
+            },
+            {
+                title: "Enhanced Security Posture",
+                description: "Strengthen your overall security posture by connecting disparate systems, eliminating blind spots, and ensuring comprehensive coverage across your entire digital landscape.",
+                icon: Security
             }
         ]
     },

@@ -2,9 +2,8 @@ import theme from '../../../theme';
 
 const quickStartOnboardingStyle = {
   container: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
-    background: theme.palette.background.paper,
+    paddingBottom: { sm: '3rem', xs: '2rem' },
+    backgroundColor: theme.palette.background.default,
   },
   innerBox: {
     maxWidth: '75rem',
@@ -20,7 +19,7 @@ const quickStartOnboardingStyle = {
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
-    color: '#6B7280',
+    color: theme.palette.text.secondary,
     lineHeight: 1.6,
     marginBottom: '2rem',
   },
@@ -46,7 +45,7 @@ const quickStartOnboardingStyle = {
     height: '100%',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     '&:hover': {
-      transform: 'scale(1.03)',
+      transform: 'translateY(-5px)',
       boxShadow: '0rem 0.5rem 1.5625rem rgba(0,0,0,0.6)',
     },
   },
@@ -58,7 +57,7 @@ const quickStartOnboardingStyle = {
     alignItems: 'center',
     borderRadius: '50%',
     backgroundColor: '#115e59',
-    color: theme.palette.text.primary,
+    color: theme.palette.common.white,
     fontWeight: 'bold',
     fontSize: '1.2rem',
     marginBottom: '1rem',
@@ -81,7 +80,7 @@ const quickStartOnboardingStyle = {
   },
   stepDescription: {
     fontSize: '0.95rem',
-    color: '#6B7280',
+    color: theme.palette.text.secondary,
     lineHeight: 1.6,
   },
 };

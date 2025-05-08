@@ -2,38 +2,35 @@
 
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import categoriesStyle from '../styles/categoriesStyle';
 import integrationsData from '../constants/integrationsData';
 
 const CategoriesSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = categoriesStyle(theme);
     const { categories } = integrationsData;
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Typography variant="h2" sx={styles.title} gutterBottom>
+        <Box component="section" sx={categoriesStyle.section}>
+            <Container sx={categoriesStyle.container}>
+                <Typography variant="h2" sx={categoriesStyle.title} gutterBottom>
                     Integration Categories
                 </Typography>
 
-                <Box sx={styles.categoriesGrid}>
+                <Box sx={categoriesStyle.categoriesGrid}>
                     {categories.map((category, index) => {
                         const CategoryIcon = category.icon;
-                        
+
                         return (
-                            <Box key={index} sx={styles.categoryCard}>
-                                <Box sx={styles.iconContainer}>
-                                    <CategoryIcon sx={styles.categoryIcon} />
+                            <Box key={index} sx={categoriesStyle.categoryCard}>
+                                <Box sx={categoriesStyle.iconContainer}>
+                                    <CategoryIcon sx={categoriesStyle.categoryIcon} />
                                 </Box>
-                                
-                                <Box sx={styles.categoryContent}>
-                                    <Typography sx={styles.categoryTitle}>
+
+                                <Box sx={categoriesStyle.categoryContent}>
+                                    <Typography sx={categoriesStyle.categoryTitle}>
                                         {category.title}
                                     </Typography>
-                                    
-                                    <Typography sx={styles.categoryDescription}>
+
+                                    <Typography sx={categoriesStyle.categoryDescription}>
                                         {category.description}
                                     </Typography>
                                 </Box>

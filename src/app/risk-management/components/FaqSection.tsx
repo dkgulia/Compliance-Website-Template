@@ -1,21 +1,29 @@
 'use client';
 import React from 'react';
-import { 
-    Box, 
-    Typography, 
-    Accordion, 
-    AccordionSummary, 
+import {
+    Box,
+    Typography,
+    Accordion,
+    AccordionSummary,
     AccordionDetails,
-    Container,
-    useTheme
+    Container
 } from '@mui/material';
 import { Add as AddIcon } from '@mui/icons-material';
-import createFaqSectionStyle from '../styles/faqSectionStyle';
+import faqSectionStyle from '../styles/faqSectionStyle';
 import { riskManagementData } from '../constants/riskManagementData';
 
+interface FaqQuestion {
+    question: string;
+    answer: string;
+}
+
+interface FaqContent {
+    title: string;
+    subtitle?: string;
+    questions: FaqQuestion[];
+}
+
 const FaqSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = createFaqSectionStyle(theme);
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
     const handleChange =
@@ -27,44 +35,67 @@ const FaqSection: React.FC = () => {
         (section) => section.Sno === '7' && section.blockType === 'FAQ'
     );
 
-    if (!faqContent) return null;
+    if (!faqContent || !faqContent.content) return null;
+
+    const questions: FaqQuestion[] = faqContent.content.questions || [];
+
+    if (questions.length === 0) {
+        return (
+            <Box component="section" sx={faqSectionStyle.section}>
+                <Container sx={faqSectionStyle.container}>
+                    <Box sx={faqSectionStyle.header}>
+                        <Typography variant="h2" sx={faqSectionStyle.title}>
+                            {faqContent.content.title || "FAQs"}
+                        </Typography>
+                        <Typography variant="body1" sx={faqSectionStyle.subtitle}>
+                            No frequently asked questions available at this time.
+                        </Typography>
+                    </Box>
+                </Container>
+            </Box>
+        );
+    }
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Box sx={styles.header}>
-                    <Typography variant="h2" sx={styles.title}>
-                        {faqContent.content.title}
+        <Box component="section" sx={faqSectionStyle.section}>
+            <Container sx={faqSectionStyle.container}>
+                <Box sx={faqSectionStyle.header}>
+                    <Typography variant="h2" sx={faqSectionStyle.title}>
+                        {faqContent.content.title || "FAQs"}
                     </Typography>
 
                     {faqContent.content.subtitle && (
-                        <Typography variant="body1" sx={styles.subtitle}>
+                        <Typography variant="body1" sx={faqSectionStyle.subtitle}>
                             {faqContent.content.subtitle}
                         </Typography>
                     )}
                 </Box>
 
-                <Box sx={styles.accordionContainer}>
-                    {faqContent.content.questions.map((item, index) => (
+                <Box sx={faqSectionStyle.accordionContainer}>
+                    {questions.map((item, index) => (
                         <Accordion
                             key={index}
                             expanded={expanded === `panel${index}`}
                             onChange={handleChange(`panel${index}`)}
                             disableGutters
                             elevation={0}
-                            sx={styles.accordion}
+                            sx={faqSectionStyle.accordion}
                         >
                             <AccordionSummary
-                                expandIcon={<AddIcon sx={styles.expandIcon} />}
+                                expandIcon={<AddIcon sx={faqSectionStyle.expandIcon} />}
                                 aria-controls={`panel${index}-content`}
                                 id={`panel${index}-header`}
-                                sx={styles.accordionSummary}
+                                sx={faqSectionStyle.accordionSummary}
                             >
-                                <Typography sx={styles.question}>{item.question}</Typography>
+                                <Typography sx={faqSectionStyle.questionTypography}>
+                                    {item.question}
+                                </Typography>
                             </AccordionSummary>
 
-                            <AccordionDetails sx={styles.accordionDetails}>
-                                <Typography sx={styles.answer}>{item.answer}</Typography>
+                            <AccordionDetails sx={faqSectionStyle.accordionDetails}>
+                                <Typography sx={faqSectionStyle.answerTypography}>
+                                    {item.answer}
+                                </Typography>
                             </AccordionDetails>
                         </Accordion>
                     ))}

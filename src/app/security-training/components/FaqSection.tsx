@@ -1,39 +1,88 @@
 'use client';
 
 import React from 'react';
-import { 
-  Box, 
-  Typography, 
-  Accordion, 
-  AccordionSummary, 
-  AccordionDetails 
+import {
+  Box,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Container
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { securityTrainingData } from '../constants/securityTrainingData';
 import faqSectionStyles from '../styles/faqSectionStyles';
 
-const FaqSection = () => {
-  const { title, subtitle, questions } = securityTrainingData.sections[5].content;
+// Define TypeScript interfaces for the FAQ data
+interface FaqQuestion {
+  question: string;
+  answer: string;
+}
+
+interface FaqContent {
+  title: string;
+  subtitle?: string;
+  questions: FaqQuestion[];
+}
+
+const FaqSection: React.FC = () => {
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
+  // Safely access FAQ content with proper type checking
+  const faqSection = securityTrainingData.sections.find(
+    (section) => section.Sno === '6' && section.blockType === 'FAQ'
+  );
+
+  if (!faqSection || !faqSection.content) return null;
+
+  const { title, subtitle, questions } = faqSection.content as FaqContent;
+
+  // Handle empty questions array
+  if (!questions || questions.length === 0) {
+    return (
+      <Box sx={faqSectionStyles.box}>
+        <Container sx={faqSectionStyles.section}>
+          <Box sx={faqSectionStyles.header}>
+            <Typography component="h2" variant="h4" sx={faqSectionStyles.title}>
+              {title || "Frequently Asked Questions"}
+            </Typography>
+            <Typography variant="body1" sx={faqSectionStyles.subtitle}>
+              No frequently asked questions available at this time.
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={faqSectionStyles.box}>
-      <Box sx={faqSectionStyles.section}>
-        <Typography component="h2" variant="h4" sx={faqSectionStyles.title}>
-          {title}
-        </Typography>
-        
-        {subtitle && (
-          <Typography variant="subtitle1" sx={faqSectionStyles.subtitle}>
-            {subtitle}
+      <Container sx={faqSectionStyles.section}>
+        <Box sx={faqSectionStyles.header}>
+          <Typography component="h2" variant="h4" sx={faqSectionStyles.title}>
+            {title}
           </Typography>
-        )}
+
+          {subtitle && (
+            <Typography variant="subtitle1" sx={faqSectionStyles.subtitle}>
+              {subtitle}
+            </Typography>
+          )}
+        </Box>
 
         <Box sx={faqSectionStyles.accordionContainer}>
           {questions.map((faq, index) => (
-            <Accordion 
+            <Accordion
               key={index}
-              disableGutters 
-              elevation={0} 
+              expanded={expanded === `panel${index}`}
+              onChange={handleChange(`panel${index}`)}
+              disableGutters
+              elevation={0}
               sx={faqSectionStyles.accordion}
             >
               <AccordionSummary
@@ -42,19 +91,19 @@ const FaqSection = () => {
                 id={`panel${index}-header`}
                 sx={faqSectionStyles.accordionSummary}
               >
-                <Typography sx={faqSectionStyles.questionText}>
+                <Typography sx={faqSectionStyles.questionTypography}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>
               <AccordionDetails sx={faqSectionStyles.accordionDetails}>
-                <Typography sx={faqSectionStyles.answerText}>
+                <Typography sx={faqSectionStyles.answerTypography}>
                   {faq.answer}
                 </Typography>
               </AccordionDetails>
             </Accordion>
           ))}
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 };

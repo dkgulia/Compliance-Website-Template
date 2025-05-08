@@ -1,8 +1,7 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const conclusionStyle = (theme: Theme) => ({
+const conclusionStyle = {
   section: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
     paddingBottom: { sm: '6rem', xs: '4rem' },
     backgroundColor: theme.palette.background.default,
   },
@@ -46,23 +45,24 @@ const conclusionStyle = (theme: Theme) => ({
     color: theme.palette.secondary.dark,
   },
   ctaButton: {
-    color: theme.palette.ui.buttonText,
-    fontWeight: 800,
-    padding: {
-      xs: '0.5rem 1.5rem',
-      sm: '0.7rem 2rem',
-    },
+    marginTop: '1rem',
+    backgroundColor: '#115e59',
+    color: '#f9fafb',
     borderRadius: '0.5rem',
-    backgroundColor: theme.palette.ui.buttonPrimary,
-    border: `1px solid ${theme.palette.ui.buttonBorder}`,
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.25rem 2rem',
+    },
     textTransform: 'none',
-    fontSize: '1rem',
-    marginTop: '1.5rem',
+    fontSize: '1.2rem',
+    whiteSpace: 'nowrap',
+    border: '1px solid #0d9488',
+    transition: 'all 150ms ease',
     '&:hover': {
-      backgroundColor: theme.palette.ui.buttonHover,
-      transform: 'translateY(-2px)',
+      backgroundColor: '#0f766e',
     },
   },
-});
+};
 
 export default conclusionStyle;

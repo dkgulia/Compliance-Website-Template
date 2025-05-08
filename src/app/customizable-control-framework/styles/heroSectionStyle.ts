@@ -1,27 +1,18 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const heroSectionStyle = (theme: Theme) => ({
+const heroSectionStyle = {
   section: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      background: `radial-gradient(circle at 70% 30%, ${theme.palette.primary.light}15, transparent 45%)`,
-      pointerEvents: 'none',
-    },
   },
   container: {
     maxWidth: '1200px',
     margin: '0 auto',
     padding: { xs: '0 1rem', sm: '0 2rem' },
+    position: 'relative',
+    zIndex: 1,
   },
   contentContainer: {
     display: 'flex',
@@ -29,6 +20,10 @@ const heroSectionStyle = (theme: Theme) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: '2rem',
+    backdropFilter: 'blur(6px)',
+    borderRadius: '1rem',
+    padding: '2.5rem',
+
   },
   textContent: {
     flex: 1,
@@ -36,20 +31,20 @@ const heroSectionStyle = (theme: Theme) => ({
   },
   tagline: {
     display: 'inline-block',
-    padding: '0.4rem 1rem',
-    borderRadius: '1.3rem',
-    fontSize: '0.9rem',
+    padding: '0.5rem 1rem',
+    borderRadius: '1rem',
+    background: '#115e59',
     marginBottom: '1rem',
-    background: theme.palette.secondary.light,
-    color: theme.palette.text.primary,
+    color: 'white',
     fontWeight: 'bold',
+    fontSize: '0.9rem',
+
+    alignItems: 'center',
     width: { xs: 'auto', sm: 'fit-content' },
-    textAlign: 'center',
-    whiteSpace: 'nowrap',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: 600,
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+    fontWeight: '600',
     marginBottom: '1rem',
     color: theme.palette.text.primary,
     lineHeight: 1.3,
@@ -58,18 +53,18 @@ const heroSectionStyle = (theme: Theme) => ({
     fontSize: { xs: '1.1rem', sm: '1.3rem' },
     fontWeight: 500,
     marginBottom: '1rem',
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.light,
     lineHeight: 1.4,
   },
   description: {
-    fontSize: '1rem',
+    fontSize: { xs: '1rem', md: '1.1rem' },
     color: theme.palette.text.secondary,
+    lineHeight: '1.5',
     marginBottom: '1.5rem',
-    lineHeight: 1.6,
     maxWidth: '600px',
   },
   ctaButton: {
-    marginTop: '1rem',
+    marginTop: '1.5rem',
     color: theme.palette.common.white,
     fontWeight: 800,
     padding: {
@@ -78,15 +73,15 @@ const heroSectionStyle = (theme: Theme) => ({
       md: '0.7rem 1rem',
     },
     borderRadius: '0.5rem',
-    backgroundColor: theme.palette.grey[900],
-    border: `1px solid ${theme.palette.grey[600]}`,
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
     textTransform: 'none',
     fontSize: '0.9rem',
     whiteSpace: 'nowrap',
-    transition: 'all 150ms ease',
+    transition: 'background-color 150ms ease',
     '&:hover': {
-      backgroundColor: theme.palette.grey[800],
-      borderColor: theme.palette.grey[600],
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
       transform: 'translateY(-2px)',
     },
   },
@@ -101,21 +96,23 @@ const heroSectionStyle = (theme: Theme) => ({
   },
   imagePlaceholder: {
     width: '100%',
-    height: '300px',
-    borderRadius: '1rem',
-    backgroundColor: theme.palette.background.paper,
+    aspectRatio: '16/9',
+    backgroundColor: '#115e5920',
+    borderRadius: '0.75rem',
+    border: `1px dashed ${theme.palette.secondary.dark}60`,
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '1.5rem',
     color: theme.palette.text.secondary,
-    border: `1px solid ${theme.palette.divider}`,
-
-    padding: '1rem',
+    fontSize: '0.9rem',
     textAlign: 'center',
+    fontStyle: 'italic',
   },
   highlightText: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.light,
   },
-});
+};
 
 export default heroSectionStyle;

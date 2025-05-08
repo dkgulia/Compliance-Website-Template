@@ -2,8 +2,7 @@ import theme from '../../../theme';
 
 const platformWalkthroughStyle = {
   container: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
+    paddingBottom: { sm: '2rem', xs: '1.5rem' },
     background: theme.palette.background.default,
   },
   innerBox: {
@@ -20,13 +19,14 @@ const platformWalkthroughStyle = {
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
-    color: '#6B7280',
+    color: theme.palette.text.secondary,
     lineHeight: 1.6,
     marginBottom: '2rem',
   },
   carouselContainer: {
     width: '100%',
     marginTop: '2rem',
+    position: 'relative',
   },
   carouselItem: {
     display: 'flex',
@@ -78,7 +78,7 @@ const platformWalkthroughStyle = {
   },
   description: {
     fontSize: '1rem',
-    color: '#6B7280',
+    color: theme.palette.text.secondary,
     lineHeight: 1.6,
   },
   navigationDots: {

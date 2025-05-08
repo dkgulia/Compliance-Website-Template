@@ -2,46 +2,42 @@
 
 import React from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
-import evidenceCollectionData from '../constants/evidenceCollectionData';
+import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 
 const BenefitsSection: React.FC = () => {
-  const theme = useTheme();
-  const styles = benefitsSectionStyle(theme);
   const { benefits } = evidenceCollectionData;
 
   return (
-    <Box component="section" id="benefits" sx={styles.section}>
-      <Container sx={styles.container}>
-        <Box sx={styles.headerBox}>
-          <Typography component="h2" variant="h4" sx={styles.title}>
+    <Box component="section" id="benefits" sx={benefitsSectionStyle.box}>
+      <Container sx={benefitsSectionStyle.container}>
+        <Box sx={benefitsSectionStyle.containerBox}>
+          <Typography component="h2" variant="h4" sx={benefitsSectionStyle.heading}>
             {benefits.title}
           </Typography>
           {benefits.subtitle && (
-            <Typography sx={styles.subtitle}>{benefits.subtitle}</Typography>
+            <Typography variant="body1" sx={benefitsSectionStyle.subHeading}>
+              {benefits.subtitle}
+            </Typography>
           )}
         </Box>
 
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           {benefits.features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Grid size={{ xs: 12, md: 6 }} key={index}>
-                <Box sx={styles.featureCard}>
-                  <Box sx={styles.contentWrapper}>
-                    <Box sx={styles.iconContainer}>
-                      <IconComponent sx={styles.featureIcon} />
+              <Grid size={{xs:12,sm:6}}  key={index} sx={benefitsSectionStyle.gridItem}>
+                <Box sx={benefitsSectionStyle.card}>
+                  <Box sx={benefitsSectionStyle.contentWrapper}>
+                    <Box sx={benefitsSectionStyle.iconContainer}>
+                      <IconComponent sx={benefitsSectionStyle.icon} />
                     </Box>
 
-                    <Box sx={styles.typographyContainer}>
-                      <Typography variant="h6" sx={styles.featureTitle}>
+                    <Box sx={benefitsSectionStyle.typography.container}>
+                      <Typography variant="h6" sx={benefitsSectionStyle.typography.title}>
                         {feature.title}
                       </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={styles.featureDescription}
-                      >
+                      <Typography variant="body2" sx={benefitsSectionStyle.typography.body}>
                         {feature.description}
                       </Typography>
                     </Box>

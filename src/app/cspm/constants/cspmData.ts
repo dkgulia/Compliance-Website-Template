@@ -13,6 +13,7 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import LinearScaleIcon from '@mui/icons-material/LinearScale';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import SecurityIcon from '@mui/icons-material/Security';
 import MergeIcon from '@mui/icons-material/Merge';
 
 export interface Benefit {
@@ -71,31 +72,37 @@ export const cspmData = {
         title: "What You'll Love About Hexafort CSPM:",
         subtitle: "",
         benefitsList: [
-            {
-                title: "Real-Time Risk Detection",
-                muiIcon: ReportProblemIcon,
-                description: "Know exactly where your cloud stands. Our intelligent engine continuously monitors your setup and flags security gaps, weak IAM policies, exposed storage, and more—before they become real threats."
-            },
-            {
-                title: "Fixes That Make Sense",
-                muiIcon: HandymanIcon,
-                description: "No more cryptic alerts. We translate technical findings into clear, actionable steps your team can actually act on. Whether you're an engineer or a CISO, you'll know what to do next."
-            },
-            {
-                title: "Smart Cloud Cost Optimization",
-                muiIcon: MonetizationOnIcon,
-                description: "Wasting money on unused or misconfigured resources? We'll help you find out. Get practical, data-backed recommendations to reduce your cloud bill without sacrificing performance or security."
-            },
-            {
-                title: "Compliance Without Chaos",
-                muiIcon: PolicyIcon,
-                description: "Stay aligned with industry frameworks like CIS Benchmarks, ISO 27001, and SOC 2—without the paperwork headache. Our checks and reports keep you audit-ready at all times."
-            },
-            {
-                title: "One Unified Experience",
-                muiIcon: DashboardIcon,
-                description: "No switching between tools, no fragmented views. CSPM is fully integrated into the Hexafort Secure platform—so your cloud security, risk, and compliance are always connected."
-            }
+            
+                {
+                    title: "Real-Time Risk Detection",
+                    muiIcon: ReportProblemIcon,
+                    description: "Our intelligent engine monitors your cloud setup and flags security gaps, weak IAM policies, and exposed storage before they become real threats."
+                },
+                {
+                    title: "Fixes That Make Sense",
+                    muiIcon: HandymanIcon,
+                    description: "We translate technical findings into clear, actionable steps your team can implement. Whether you're an engineer or CISO, you'll know what to do next."
+                },
+                {
+                    title: "Smart Cloud Cost Optimization",
+                    muiIcon: MonetizationOnIcon,
+                    description: "Get practical recommendations to reduce your cloud bill without sacrificing performance or security. Stop wasting money on unused resources."
+                },
+                {
+                    title: "Compliance Without Chaos",
+                    muiIcon: PolicyIcon,
+                    description: "Stay aligned with frameworks like CIS, ISO 27001, and SOC 2 without the paperwork headache. Our checks keep you audit-ready at all times."
+                },
+                {
+                    title: "One Unified Experience",
+                    muiIcon: DashboardIcon,
+                    description: "No switching between tools or fragmented views. CSPM is fully integrated into Hexafort Secure—your security, risk, and compliance connected."
+                },
+                {
+                    title: "Automated Threat Intelligence",
+                    muiIcon: SecurityIcon,
+                    description: "We cross-reference your environment against the latest vulnerabilities and attack patterns, providing proactive protection for your cloud assets."
+                }
         ]
     },
     features: {

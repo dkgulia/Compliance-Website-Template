@@ -1,56 +1,68 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-export const infoSectionStyle = (theme: Theme) => ({
-  section: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
+const infoSectionStyle = {
+  box: {
+    paddingTop: { sm: '1.5rem', xs: '1rem' },
+    paddingBottom: { sm: '2rem', xs: '1.5rem' },
+    marginTop: '0rem',
+    backgroundColor: theme.palette.background.default,
+    px: { xs: 2, sm: 4 },
   },
-  container: {
-    position: 'relative',
-    zIndex: 1,
-  },
-  contentBox: {
-    display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
-    alignItems: 'center',
-    gap: '3rem',
+  infoContainer: {
+    background: '#17171799',
+    borderRadius: { xs: '0.75rem', sm: '12px',md:'1rem' },
+    width: '100%',
+    maxWidth: '73rem',
+    marginX: 'auto',
+    padding: { xs: '1.5rem', sm: '3rem' },
+    paddingLeft: { xs: '1rem', sm: '3rem' },
+    paddingRight: { xs: '1rem', sm: '3rem' },
+    overflow: 'hidden',
+    border: `1px solid ${theme.palette.divider}`,
   },
   imageContainer: {
-    flex: 1,
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: { xs: 'center', md: 'flex-end' },
     alignItems: 'center',
+    marginTop: { xs: '1rem', md: '0' },
   },
-  image: {
-    maxWidth: '100%',
-    height: 'auto',
-    borderRadius: '8px',
+  titleSection: {
+    width: '100%',
+    marginTop: { xs: '0.5rem', sm: '1rem' },
   },
-  textContent: {
-    flex: 1,
+  descriptionSection: {
+    width: '100%',
   },
-  title: {
-    fontSize: { xs: '1.4rem', sm: '1.8rem' },
+  heading: {
     fontWeight: '600',
-    marginBottom: '1.5rem',
     color: theme.palette.text.primary,
+    fontSize: { xs: '1.4rem', sm: '2rem' },
+    marginBottom: { xs: '0.75rem', md: '0' },
+    lineHeight: 1.3,
   },
   description: {
-    fontSize: '1rem',
-    color: theme.palette.text.secondary,
-    lineHeight: 1.6,
-    marginBottom: '1.5rem',
+    color: '#6b7280',
+    fontSize: { xs: '0.9rem', md: '1rem' },
+    lineHeight: '1.5',
+    width: '100%',
+    marginBottom: { xs: '1rem', md: '1rem' },
+  },
+  iconWrapper: {
+    width: '100%',
+    height: 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   placeholderBox: {
     width: '100%',
-    aspectRatio: '16/9',
-    backgroundColor: theme.palette.background.paper,
+    aspectRatio: '1/1',
+    backgroundColor: 'rgba(17, 94, 89, 0.1)',
     borderRadius: '8px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-
-    border: `1px dashed ${theme.palette.secondary.main}`,
+    border: '1px dashed #115e59',
     padding: '1rem',
   },
   placeholderText: {
@@ -58,6 +70,6 @@ export const infoSectionStyle = (theme: Theme) => ({
     fontStyle: 'italic',
     textAlign: 'center',
   },
-});
+};
 
 export default infoSectionStyle;

@@ -2,45 +2,42 @@
 
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 
 const FeaturesSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = featuresSectionStyle(theme);
     const { features } = controlFrameworkData.sections;
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Box sx={styles.header}>
-                    <Typography variant="h2" sx={styles.title}>
+        <Box component="section" sx={featuresSectionStyle.section}>
+            <Container maxWidth="lg" sx={featuresSectionStyle.container}>
+                <Box sx={featuresSectionStyle.header}>
+                    <Typography variant="h2" sx={featuresSectionStyle.title}>
                         {features.title}
                     </Typography>
-                    
+
                     {features.subtitle && (
-                        <Typography sx={styles.subtitle}>
+                        <Typography sx={featuresSectionStyle.subtitle}>
                             {features.subtitle}
                         </Typography>
                     )}
                 </Box>
 
-                <Box sx={styles.featuresGrid}>
+                <Box sx={featuresSectionStyle.featuresGrid}>
                     {features.items.map((feature, index) => {
                         const FeatureIcon = feature.icon;
-                        
+
                         return (
-                            <Box key={index} sx={styles.featureCard}>
-                                <Box sx={styles.iconContainer}>
-                                    <FeatureIcon sx={styles.featureIcon} />
+                            <Box key={index} sx={featuresSectionStyle.featureCard}>
+                                <Box sx={featuresSectionStyle.iconContainer}>
+                                    <FeatureIcon sx={featuresSectionStyle.featureIcon} />
                                 </Box>
-                                
-                                <Typography sx={styles.featureTitle}>
+
+                                <Typography sx={featuresSectionStyle.featureTitle}>
                                     {feature.title}
                                 </Typography>
-                                
-                                <Typography sx={styles.featureDescription}>
+
+                                <Typography sx={featuresSectionStyle.featureDescription}>
                                     {feature.description}
                                 </Typography>
                             </Box>

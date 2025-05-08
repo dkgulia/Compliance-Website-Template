@@ -28,7 +28,7 @@ const BenefitsSection: React.FC = () => {
   };
 
   return (
-    <Box sx={benefitsSectionStyle.container}>
+    <Box sx={benefitsSectionStyle.box}>
       <Box sx={benefitsSectionStyle.innerBox}>
         <Typography variant="h2" sx={benefitsSectionStyle.heading}>
           {benefitsContent.content.title}
@@ -40,36 +40,34 @@ const BenefitsSection: React.FC = () => {
           </Typography>
         )}
 
-        <Grid container spacing={3} sx={benefitsSectionStyle.gridContainer}>
+        <Box sx={benefitsSectionStyle.gridContainer}>
           {benefitsContent.content.benefits.map((benefit, index) => (
-            <Grid xs={12} sm={6} md={3} key={index}>
-              <Card variant="outlined" sx={benefitsSectionStyle.card}>
-                <CardContent>
-                  <Stack direction="column" alignItems="center" spacing={2}>
-                    <Box sx={benefitsSectionStyle.iconWrapper}>
-                      {iconMap[benefit.muiIcon] || null}
-                    </Box>
+            <Card key={index} variant="outlined" sx={benefitsSectionStyle.card}>
+              <CardContent>
+                <Stack direction="column" alignItems="center" spacing={2}>
+                  <Box sx={benefitsSectionStyle.iconWrapper}>
+                    {iconMap[benefit.muiIcon] || null}
+                  </Box>
 
-                    <Box>
-                      <Typography
-                        variant="h6"
-                        sx={benefitsSectionStyle.cardTitle}
-                      >
-                        {benefit.title}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        sx={benefitsSectionStyle.cardDescription}
-                      >
-                        {benefit.description}
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
+                  <Box>
+                    <Typography
+                      variant="h6"
+                      sx={benefitsSectionStyle.cardTitle}
+                    >
+                      {benefit.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={benefitsSectionStyle.cardDescription}
+                    >
+                      {benefit.description}
+                    </Typography>
+                  </Box>
+                </Stack>
+              </CardContent>
+            </Card>
           ))}
-        </Grid>
+        </Box>
       </Box>
     </Box>
   );

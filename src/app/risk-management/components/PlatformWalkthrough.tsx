@@ -7,9 +7,9 @@ import { riskManagementData } from '../constants/riskManagementData';
 
 const PlatformWalkthrough: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    
+
     const carouselContent = riskManagementData.sections.find((section) => section.Sno === '3' && section.blockType === 'Screenshots');
-    
+
     if (!carouselContent || !carouselContent.content.screenshots || carouselContent.content.screenshots.length === 0) {
         return null;
     }
@@ -47,7 +47,7 @@ const PlatformWalkthrough: React.FC = () => {
                         <IconButton onClick={prevSlide} sx={{ color: '#fff' }}>
                             <ArrowBackIosIcon />
                         </IconButton>
-                        
+
                         <Box sx={{ flex: 1 }}>
                             {screenshots.map((screenshot, index) => (
                                 <Box
@@ -73,12 +73,12 @@ const PlatformWalkthrough: React.FC = () => {
                                 </Box>
                             ))}
                         </Box>
-                        
+
                         <IconButton onClick={nextSlide} sx={{ color: '#fff' }}>
                             <ArrowForwardIosIcon />
                         </IconButton>
                     </Box>
-                    
+
                     <Box sx={platformWalkthroughStyle.navigationDots}>
                         {screenshots.map((_, index) => (
                             <Box

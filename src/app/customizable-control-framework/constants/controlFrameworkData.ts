@@ -98,6 +98,12 @@ export const controlFrameworkData = {
           description:
             'Make updates with a few clicks through a clean, user-friendly interface—saving time while ensuring full traceability.',
         },
+        {
+          title: 'Enterprise-Grade Security',
+          icon: SecurityIcon,
+          description:
+            'Rest easy knowing your compliance data is protected with advanced encryption, access controls, and regular security audits that meet the highest industry standards.',
+        },
       ],
     },
     features: {

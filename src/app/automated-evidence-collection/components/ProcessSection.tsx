@@ -1,54 +1,55 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container, Card } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import processSectionStyle from '../styles/processSectionStyle';
-import evidenceCollectionData from '../constants/evidenceCollectionData';
+import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 
 const ProcessSection: React.FC = () => {
-  const theme = useTheme();
-  const styles = processSectionStyle(theme);
-  const { process } = evidenceCollectionData;
+	const { process } = evidenceCollectionData;
 
-  return (
-    <Box component="section" sx={styles.section}>
-      <Container maxWidth="lg" sx={styles.container}>
-        <Box sx={styles.headerBox}>
-          <Typography variant="h2" sx={styles.title}>
-            {process.title}
-          </Typography>
-          {process.subtitle && (
-            <Typography sx={styles.subtitle}>{process.subtitle}</Typography>
-          )}
-        </Box>
+	return (
+		<Box id="how-it-works" sx={processSectionStyle.box}>
+			<Box sx={processSectionStyle.workflowOuterContainer}>
+				<Box sx={processSectionStyle.workflowContainer}>
+					<Grid container spacing={2} sx={processSectionStyle.gridWrapper}>
+						<Grid size={{ xs: 12, md: 5 }} sx={processSectionStyle.leftSection}>
+							<Box sx={processSectionStyle.chip}>Process</Box>
+							<Typography variant="h4" sx={processSectionStyle.title}>
+								{process.title}
+							</Typography>
+						</Grid>
 
-        <Box sx={styles.stepsContainer}>
-          {process.steps.map((step, index) => (
-            <Card key={index} sx={styles.stepCard}>
-              <Box sx={styles.stepNumber}>{index + 1}</Box>
-              <Typography sx={styles.stepHeading}>{step.heading}</Typography>
-              <Typography sx={styles.stepDescription}>
-                {step.description}
-              </Typography>
+						<Grid size={{ xs: 12, md: 7 }} sx={processSectionStyle.rightSection}>
+							<Typography variant="body1" sx={processSectionStyle.description}>
+								{process.subtitle || 'How our automated evidence collection works'}
+							</Typography>
+						</Grid>
+					</Grid>
 
-              {/* Placeholder for future images */}
-              <Box sx={styles.placeholderBox}>
-                <Typography sx={styles.placeholderText}>
-                  {step.imageAlt}
-                </Typography>
-              </Box>
-
-              {/* Connecting line between steps (except last) */}
-              {index < process.steps.length - 1 && (
-                <Box sx={styles.connectingLine} />
-              )}
-            </Card>
-          ))}
-        </Box>
-      </Container>
-    </Box>
-  );
+					<Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+						<Grid container spacing={2} sx={processSectionStyle.gridContainer}>
+							{process.steps.map((step, index) => (
+								<Grid size={{ xs: 12, sm: 6, md: 3 }} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
+									<Box sx={processSectionStyle.card}>
+										<Box sx={processSectionStyle.cardContent}>
+											<Box sx={processSectionStyle.stepNumber}>{index + 1}</Box>
+											<Typography variant="body1" sx={processSectionStyle.cardTitle}>
+												{step.heading}
+											</Typography>
+											<Typography variant="body2" sx={processSectionStyle.stepDescription}>
+												{step.description}
+											</Typography>
+										</Box>
+									</Box>
+								</Grid>
+							))}
+						</Grid>
+					</Box>
+				</Box>
+			</Box>
+		</Box>
+	);
 };
 
 export default ProcessSection;

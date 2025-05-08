@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Grid, FormControl, OutlinedInput, FormHelperText } from '@mui/material';
+import { Box, Typography, Grid, FormControl, OutlinedInput, FormHelperText } from '@mui/material';
 import callToActionStyle from '../styles/callToActionStyle';
 import { riskManagementData } from '../constants/riskManagementData';
 import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
@@ -20,11 +20,11 @@ const CallToAction: React.FC = () => {
                     <Typography variant="h2" sx={callToActionStyle.heading}>
                         {ctaContent.content.title}
                     </Typography>
-                    
+
                     <Typography sx={callToActionStyle.subtitle}>
                         {ctaContent.content.subtitle}
                     </Typography>
-                    
+
                     <Typography sx={callToActionStyle.description}>
                         {ctaContent.content.description}
                     </Typography>

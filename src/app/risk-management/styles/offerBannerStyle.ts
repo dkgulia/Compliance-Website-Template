@@ -2,9 +2,8 @@ import theme from '../../../theme';
 
 const offerBannerStyle = {
     container: {
-        paddingTop: { sm: '3rem', xs: '2rem' },
         paddingBottom: { sm: '3rem', xs: '2rem' },
-        background: 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)',
+        backgroundColor: theme.palette.background.default,
     },
     innerBox: {
         maxWidth: '75rem',

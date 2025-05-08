@@ -1,22 +1,13 @@
-import { Theme } from '@mui/material/styles';
+import theme from '../../../theme';
 
-const heroSectionStyle = (theme: Theme) => ({
+const heroSectionStyle = {
   section: {
     paddingTop: { sm: '6rem', xs: '4rem' },
     paddingBottom: { sm: '6rem', xs: '4rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      background: `radial-gradient(circle at 15% 50%, ${theme.palette.primary.light}15, transparent 45%)`,
-      pointerEvents: 'none',
-    },
+
   },
   container: {
     maxWidth: '1200px',
@@ -47,7 +38,7 @@ const heroSectionStyle = (theme: Theme) => ({
     lineHeight: 1.2,
   },
   highlight: {
-    color: theme.palette.secondary.dark,
+    color:'#115e59',
   },
   description: {
     fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -63,23 +54,32 @@ const heroSectionStyle = (theme: Theme) => ({
     marginTop: '2rem',
   },
   button: {
-    color: theme.palette.ui.buttonText,
+    marginTop: '0.5rem',
+    color: '#f9fafb',
     fontWeight: 800,
     padding: {
-      xs: '0.5rem 1.5rem',
-      sm: '0.7rem 2rem',
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.7rem 2rem',
     },
     borderRadius: '0.5rem',
-    backgroundColor: theme.palette.ui.buttonPrimary,
-    border: `1px solid ${theme.palette.ui.buttonBorder}`,
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
     textTransform: 'none',
-    fontSize: '1rem',
+    fontSize: '0.9rem',
+    whiteSpace: 'nowrap',
+    transition: 'background-color 150ms ease',
     '&:hover': {
-      backgroundColor: theme.palette.ui.buttonHover,
-      borderColor: theme.palette.ui.buttonBorder,
-      transform: 'translateY(-2px)',
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
+    },
+    '&.Mui-disabled': {
+      color: '#f9fafb',
+      opacity: 0.5,
+      backgroundColor: '#1f2937',
+      border: '1px solid #374151',
     },
   },
-});
+};
 
 export default heroSectionStyle;

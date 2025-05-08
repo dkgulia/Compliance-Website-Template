@@ -1,45 +1,38 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Typography, Container, Button, Grid } from '@mui/material';
 import featuredIntegrationsStyle from '../styles/featuredIntegrationsStyle';
 import integrationsData from '../constants/integrationsData';
 
 const FeaturedIntegrationsSection: React.FC = () => {
-    const theme = useTheme();
-    const styles = featuredIntegrationsStyle(theme);
     const { featured } = integrationsData;
-    
+
     const [activeCategory, setActiveCategory] = useState<string>('All');
-    
-    // Get unique categories from integrations
     const categories = ['All', ...new Set(featured.integrations.map(int => int.category))];
-    
-    // Filter integrations by active category
-    const filteredIntegrations = activeCategory === 'All' 
-        ? featured.integrations 
+    const filteredIntegrations = activeCategory === 'All'
+        ? featured.integrations
         : featured.integrations.filter(int => int.category === activeCategory);
 
     return (
-        <Box component="section" sx={styles.section}>
-            <Container sx={styles.container}>
-                <Box sx={styles.header}>
-                    <Typography variant="h2" sx={styles.title}>
+        <Box component="section" sx={featuredIntegrationsStyle.section}>
+            <Container sx={featuredIntegrationsStyle.container}>
+                <Box sx={featuredIntegrationsStyle.header}>
+                    <Typography variant="h2" sx={featuredIntegrationsStyle.title}>
                         {featured.title}
                     </Typography>
-                    
-                    <Typography sx={styles.description}>
+
+                    <Typography sx={featuredIntegrationsStyle.description}>
                         {featured.description}
                     </Typography>
                 </Box>
 
-                <Box sx={styles.integrationButtons}>
+                <Box sx={featuredIntegrationsStyle.integrationButtons}>
                     {categories.map((category, index) => (
-                        <Button 
+                        <Button
                             key={index}
                             variant="outlined"
-                            sx={styles.filterButton}
+                            sx={featuredIntegrationsStyle.filterButton}
                             className={activeCategory === category ? 'active' : ''}
                             onClick={() => setActiveCategory(category)}
                         >
@@ -48,32 +41,32 @@ const FeaturedIntegrationsSection: React.FC = () => {
                     ))}
                 </Box>
 
-                <Box sx={styles.integrationsGrid}>
+                <Box sx={featuredIntegrationsStyle.integrationsGrid}>
                     {filteredIntegrations.map((integration, index) => (
-                        <Box key={index} sx={styles.integrationCard}>
+                        <Box key={index} sx={featuredIntegrationsStyle.integrationCard}>
                             {integration.isNew && (
-                                <Box sx={styles.newBadge}>New</Box>
+                                <Box sx={featuredIntegrationsStyle.newBadge}>New</Box>
                             )}
-                            
+
                             {integration.comingSoon && (
-                                <Box sx={styles.comingSoonBadge}>Coming Soon</Box>
+                                <Box sx={featuredIntegrationsStyle.comingSoonBadge}>Coming Soon</Box>
                             )}
-                            
-                            <Box sx={styles.logoContainer}>
-                                <Box sx={styles.logoPlaceholder}>
+
+                            <Box sx={featuredIntegrationsStyle.logoContainer}>
+                                <Box sx={featuredIntegrationsStyle.logoPlaceholder}>
                                     {integration.name.charAt(0)}
                                 </Box>
                             </Box>
-                            
-                            <Typography sx={styles.integrationName}>
+
+                            <Typography sx={featuredIntegrationsStyle.integrationName}>
                                 {integration.name}
                             </Typography>
-                            
-                            <Typography sx={styles.integrationDescription}>
+
+                            <Typography sx={featuredIntegrationsStyle.integrationDescription}>
                                 {integration.description}
                             </Typography>
-                            
-                            <Box sx={styles.categoryChip}>
+
+                            <Box sx={featuredIntegrationsStyle.categoryChip}>
                                 {integration.category}
                             </Box>
                         </Box>

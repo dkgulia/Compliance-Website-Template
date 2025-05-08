@@ -1,4 +1,4 @@
-import { 
+import {
     Tune as TuneIcon,
     Security as SecurityIcon,
     Insights as InsightsIcon,
@@ -246,7 +246,7 @@ export const riskManagementData = {
     ],
     iconMap: {
         "TuneIcon": "TuneIcon",
-        "SecurityIcon": "SecurityIcon", 
+        "SecurityIcon": "SecurityIcon",
         "InsightsIcon": "InsightsIcon",
         "CheckCircleIcon": "CheckCircleIcon",
         "CloudUploadIcon": "CloudUploadIcon",

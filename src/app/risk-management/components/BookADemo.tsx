@@ -15,10 +15,13 @@ const BookADemo = () => {
     return (
         <Box sx={bookADemoStyle.box}>
             <Container sx={bookADemoStyle.container}>
+                <Box sx={bookADemoStyle.imagePlaceholder}>
+                    <Typography variant="body2" color="textSecondary">
+                        Risk Management Dashboard Preview
+                    </Typography>
+                </Box>
                 <Box sx={bookADemoStyle.textBox}>
-                    <Grid>
-                        <Typography sx={bookADemoStyle.tagline}>HexaFort Risk Management</Typography>
-                    </Grid>
+                    <Typography sx={bookADemoStyle.tagline}>HexaFort Risk Management</Typography>
                     <Typography variant="h4" sx={bookADemoStyle.title}>
                         Transform Your Risk Management Approach
                     </Typography>
@@ -36,21 +39,16 @@ const BookADemo = () => {
                             <Typography component="span">Generate audit-ready documentation in one click</Typography>
                         </Box>
                     </Box>
-                    <Button
-                        variant="contained"
-                        type="button"
-                        fullWidth
-                        sx={bookADemoStyle.button}
-                        onClick={handleScrollToTop}
-                    >
-                        Book Your Demo
-                    </Button>
-                </Box>
-                <Box sx={bookADemoStyle.imageBox}>
-                    <Box sx={bookADemoStyle.imagePlaceholder}>
-                        <Typography variant="body2" color="textSecondary">
-                            Risk Management Dashboard Preview
-                        </Typography>
+                    <Box sx={bookADemoStyle.buttonContainer}>
+                        <Button
+                            variant="contained"
+                            type="button"
+                            fullWidth
+                            sx={bookADemoStyle.button}
+                            onClick={handleScrollToTop}
+                        >
+                            Book Your Demo
+                        </Button>
                     </Box>
                 </Box>
             </Container>

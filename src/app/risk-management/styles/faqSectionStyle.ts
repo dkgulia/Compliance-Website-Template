@@ -1,40 +1,30 @@
-import { Theme } from '@mui/material';
+import theme from '../../../theme';
 
-const createFaqSectionStyle = (theme: Theme) => ({
+const faqSectionStyle = {
     section: {
         paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
         paddingBottom: { sm: '6rem', xs: '4rem' },
         backgroundColor: theme.palette.background.default,
         position: 'relative',
         overflow: 'hidden',
-        '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: '10%',
-            right: '-5%',
-            width: '300px',
-            height: '300px',
-            background: `radial-gradient(ellipse at center, ${theme.palette.secondary.main}10, transparent 70%)`,
-            borderRadius: '50%',
-            opacity: 0.5,
-            zIndex: 0,
-        },
+        x: 0,
+
     },
     container: {
-        maxWidth: '1000px',
+        maxWidth: '100px',
         margin: '0 auto',
         padding: { xs: '0 1rem', sm: '0 2rem' },
         position: 'relative',
         zIndex: 1,
     },
     innerBox: {
-        maxWidth: '75rem',
+        maxWidth: '1200px',
         marginX: 'auto',
         textAlign: 'center',
         padding: { xs: '1rem', sm: '2rem' },
     },
     header: {
-        marginBottom: '3rem',
+        marginBottom: '1rem',
         textAlign: 'center',
     },
     title: {
@@ -46,17 +36,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         position: 'relative',
         paddingBottom: '1rem',
         display: 'inline-block',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '4rem',
-            height: '4px',
-            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-            borderRadius: '2px',
-        },
+
     },
     heading: {
         fontSize: { xs: '1.8rem', sm: '32px' },
@@ -67,17 +47,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         position: 'relative',
         paddingBottom: '1rem',
         display: 'inline-block',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '4rem',
-            height: '4px',
-            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-            borderRadius: '2px',
-        },
+
     },
     subtitle: {
         fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -96,8 +66,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         border: `1px solid ${theme.palette.divider}`,
         borderRadius: '12px',
         overflow: 'hidden',
-        boxShadow: theme.customShadows?.card,
-        maxWidth: '48rem',
+        maxWidth: '1200px',
         margin: '0 auto',
         width: '100%',
     },
@@ -162,6 +131,6 @@ const createFaqSectionStyle = (theme: Theme) => ({
             transform: 'rotate(45deg)',
         },
     },
-});
+};
 
-export default createFaqSectionStyle;
+export default faqSectionStyle;
