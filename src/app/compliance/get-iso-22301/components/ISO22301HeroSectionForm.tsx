@@ -7,22 +7,24 @@ import {
 	FormHelperText,
 	Button,
 	Typography,
-	Snackbar,
-	Alert,
 	FormControlLabel,
 	Checkbox,
+	Snackbar,
+	Alert,
 } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { FormikProps } from 'formik';
-import { FormValues } from '../components/EnhancedHeroSectionForm';
+import { FormValues } from './EnhancedHeroSectionForm';
 // import { addDataToGoogleSheetRequest } from '../../../../api/googleSheetRequest';
 // import { sheetNameTypes } from '../../../../constants/interfaces';
 // import { getCurrentTime } from '../../../../utils/getCurrentTime';
-import theme from '../../../../theme';
 
-interface HeroSectionFormProps extends FormikProps<FormValues> {}
+interface HeroSectionFormProps extends FormikProps<FormValues> {
+	selectedOptions: string[];
+	onOptionsChange: (options: string[]) => void;
+}
 
-const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
+const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	values,
 	touched,
 	errors,
@@ -30,26 +32,41 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	handleBlur,
 	handleSubmit,
 	resetForm,
+	selectedOptions,
+	onOptionsChange,
 }) => {
-	const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 	const [loading, setLoading] = useState(false);
-	const [isChecked, setIsChecked] = useState(false);
+	const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+	const toggleOption = (option: string) => {
+		onOptionsChange(
+			selectedOptions.includes(option)
+				? selectedOptions.filter((selected) => selected !== option)
+				: [...selectedOptions, option]
+		);
+	};
 
 	// const handleClick = async () => {
-	// 	if (!isChecked) {
-	// 		setAlert({ type: 'error', message: 'You must agree to the terms before submitting.' });
-	// 		return;
-	// 	}
-
 	// 	if (values.fullName && !errors.fullName && values.email && !errors.email) {
+	// 		if (selectedOptions.length === 0) {
+	// 			setAlert({ type: 'error', message: 'Please select at least one compliance option.' });
+	// 			return;
+	// 		}
+
 	// 		setLoading(true);
 	// 		const sheetName = sheetNameTypes.iso22301Form;
-	// 		const data = [values.fullName, values.email, getCurrentTime()];
+	// 		const data = [
+	// 			values.fullName,
+	// 			values.email,
+	// 			getCurrentTime(),
+	// 			selectedOptions.join(', ')
+	// 		];
 
 	// 		try {
 	// 			await addDataToGoogleSheetRequest(sheetName, data);
 	// 			setAlert({ type: 'success', message: 'Your response has been saved.' });
 	// 			resetForm();
+	// 			onOptionsChange(['ISO 27001', 'ISO 42001', 'ISO 22301']);
 	// 		} catch (err: any) {
 	// 			let errorMessage = 'Network Error';
 	// 			if (err.response?.data?.message) {
@@ -68,7 +85,7 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	};
 
 	return (
-		<Box>
+		<Box sx={heroSectionStyle.formContainer}>
 			{alert && (
 				<Snackbar
 					open={!!alert}
@@ -76,14 +93,22 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 					onClose={handleSnackbarClose}
 					anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
 				>
-					<Alert onClose={handleSnackbarClose} severity={alert.type}>
+					<Alert onClose={handleSnackbarClose} severity={alert.type} sx={{ width: '100%' }}>
 						{alert.message}
 					</Alert>
 				</Snackbar>
 			)}
-
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2}>
+					<Grid size={{ xs: 12 }}>
+						<Typography variant="h4" sx={heroSectionStyle.formHeading}>
+							Book Your ISO 22301 Demo Today!
+						</Typography>
+						<Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
+              Get answers to all your questions about business continuity compliance.
+            </Typography>
+					</Grid>
+
 					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
 						<FormControl fullWidth error={touched.fullName && Boolean(errors.fullName)}>
 							<Typography sx={heroSectionStyle.formLabel}>Full Name</Typography>
@@ -97,8 +122,8 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								sx={heroSectionStyle.formInput}
 							/>
 							<FormHelperText sx={heroSectionStyle.formHelperText}>
-								{touched.fullName && errors.fullName}
-							</FormHelperText>
+                {touched.fullName && errors.fullName}
+              </FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -114,42 +139,224 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								value={values.email}
 								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.email && errors.email}</FormHelperText>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>
+                {touched.email && errors.email}
+              </FormHelperText>
 						</FormControl>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
-						<FormControlLabel
-							control={
-								<Checkbox
-									checked={isChecked}
-									onChange={(e) => setIsChecked(e.target.checked)}
-									color="primary"
-									sx={heroSectionStyle.checkbox}
+						<Typography sx={heroSectionStyle.formLabel}>Compliances Interested In*</Typography>
+						<Grid container spacing={1}>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 27001')}
+											onChange={() => toggleOption('ISO 27001')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 27001"
+									sx={heroSectionStyle.checkboxLabel}
 								/>
-							}
-							label={<Typography sx={{ color: theme.palette.text.primary }}>I agree to the terms and conditions.</Typography>}
-						/>
-					</Grid>
-
-					<Grid size={{ xs: 12 }}>
-						<Typography sx={heroSectionStyle.secondaryText}>
-							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted
-							by you above as per our Privacy Policy
-						</Typography>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 42001')}
+											onChange={() => toggleOption('ISO 42001')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 42001"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 27018')}
+											onChange={() => toggleOption('ISO 27018')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 27018"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('SOC 2')}
+											onChange={() => toggleOption('SOC 2')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="SOC 2"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('GDPR')}
+											onChange={() => toggleOption('GDPR')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="GDPR"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('HIPAA')}
+											onChange={() => toggleOption('HIPAA')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="HIPAA"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('CCPA')}
+											onChange={() => toggleOption('CCPA')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="CCPA"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('PCI DSS')}
+											onChange={() => toggleOption('PCI DSS')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="PCI DSS"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('NIST Frameworks')}
+											onChange={() => toggleOption('NIST Frameworks')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="NIST Frameworks"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 22301')}
+											onChange={() => toggleOption('ISO 22301')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 22301"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 20000-1')}
+											onChange={() => toggleOption('ISO 20000-1')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 20000-1"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('ISO 27701')}
+											onChange={() => toggleOption('ISO 27701')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="ISO 27701"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('DORA')}
+											onChange={() => toggleOption('DORA')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="DORA"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('CMMC')}
+											onChange={() => toggleOption('CMMC')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="CMMC"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+							<Grid size={{ xs: 6, sm: 4 }}>
+								<FormControlLabel
+									control={
+										<Checkbox
+											checked={selectedOptions.includes('PDPA')}
+											onChange={() => toggleOption('PDPA')}
+											sx={heroSectionStyle.checkbox}
+										/>
+									}
+									label="PDPA"
+									sx={heroSectionStyle.checkboxLabel}
+								/>
+							</Grid>
+						</Grid>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
 						<Button
-							type="submit"
+							type="button"
 							fullWidth
 							variant="contained"
 							sx={heroSectionStyle.button}
 							// onClick={handleClick}
-							disabled={loading || !isChecked}
+							disabled={loading}
 							disableElevation
 						>
-							{loading ? 'Submitting...' : 'Submit'}
+							{loading ? 'Submitting...' : 'Book Your Demo'}
 						</Button>
 					</Grid>
 				</Grid>
@@ -158,5 +365,4 @@ const ISO22301HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	);
 };
 
-export default ISO22301HeroSectionForm;
-
+export default HeroSectionForm;

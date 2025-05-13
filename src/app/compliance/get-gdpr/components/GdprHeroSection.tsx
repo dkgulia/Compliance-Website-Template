@@ -1,66 +1,98 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
-import gdprImage from '../images/ChatGPT Image Apr 28, 2025, 01_48_19 PM.png';
-import { Box, Container, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import ShieldIcon from '@mui/icons-material/Shield';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import gdprData from '../constants/gdprData';
 import heroSectionStyle from '../styles/heroSectionStyle';
+import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import { FormValues } from './EnhancedHeroSectionForm';
 
 export default function GdprHeroSection() {
+	const [selectedOptions, setSelectedOptions] = useState<string[]>([
+		'ISO 27001',
+		'ISO 42001',
+		'ISO 27018',
+		'GDPR'
+	]);
+
+	const handleOptionsChange = (newOptions: string[]) => {
+		setSelectedOptions(newOptions);
+	};
+
+	const handleSubmitCallback = (values: FormValues) => {
+		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+	};
+
 	return (
 		<Box sx={heroSectionStyle.container}>
-			<Container maxWidth="lg">
-				<Grid container spacing={4} alignItems="center">
-					<Grid size={{ xs: 12, md: 6 }}>
-						<Box sx={heroSectionStyle.textContent}>
-							<Typography variant="h1" sx={heroSectionStyle.heroTitle}>
-								{gdprData.heroTitle}
-							</Typography>
+			<Container maxWidth="lg" sx={heroSectionStyle.containerBox}>
+				<Box sx={heroSectionStyle.leftContentBox}>
+					<Box sx={heroSectionStyle.tag}>
+						<Typography variant="body2" sx={heroSectionStyle.tagText}>
+							🔒 GDPR compliance made easy
+						</Typography>
+					</Box>
 
-							<Typography variant="subtitle1" sx={heroSectionStyle.heroSubtitle}>
-								{gdprData.heroSubtitle}
-							</Typography>
+					<Typography variant="h1" sx={heroSectionStyle.heroTitle}>
+						{gdprData.heroTitle}
+					</Typography>
 
-							<Typography variant="body1" sx={heroSectionStyle.heroDescription}>
-								The General Data Protection Regulation (GDPR) transformed how organizations handle personal data. Beyond
-								being a legal mandate, GDPR is a framework for protecting individuals' privacy rights in a globalized,
-								data-driven economy.
-							</Typography>
+					<Typography variant="subtitle1" sx={heroSectionStyle.heroSubtitle}>
+						{gdprData.heroSubtitle}
+					</Typography>
 
-							<Button variant="outlined" sx={heroSectionStyle.ctaButton}>
-								{gdprData.ctaText}
-							</Button>
+					<Typography variant="body1" sx={heroSectionStyle.heroDescription}>
+						The General Data Protection Regulation (GDPR) transformed how organizations handle personal data. Beyond
+						being a legal mandate, GDPR is a framework for protecting individuals' privacy rights in a globalized,
+						data-driven economy.
+					</Typography>
+
+					<Box sx={heroSectionStyle.featuresContainer}>
+						<Box sx={heroSectionStyle.featureItem}>
+							<Box sx={heroSectionStyle.iconContainer}>
+								<VerifiedUserIcon sx={heroSectionStyle.cardIcon} />
+							</Box>
+							<Box sx={heroSectionStyle.featureTextWrapper}>
+								<Typography sx={heroSectionStyle.featureTitle}>Simplified</Typography>
+								<Typography sx={heroSectionStyle.featureSubtitle}>Compliance</Typography>
+							</Box>
 						</Box>
-					</Grid>
 
-					<Grid size={{ xs: 12, md: 6 }}>
-						<Box
-							sx={{
-								position: 'relative',
-								width: '100%',
-								height: '400px',
-								display: 'flex',
-								justifyContent: 'center',
-								alignItems: 'center',
-							}}
-						>
-							<Image
-								src={gdprImage}
-								alt="GDPR Compliance Illustration"
-								fill
-								style={{
-									objectFit: 'contain',
-								}}
-								priority
-							/>
+						<Box sx={heroSectionStyle.featureItem}>
+							<Box sx={heroSectionStyle.iconContainer}>
+								<ShieldIcon sx={heroSectionStyle.cardIcon} />
+							</Box>
+							<Box sx={heroSectionStyle.featureTextWrapper}>
+								<Typography sx={heroSectionStyle.featureTitle}>Data</Typography>
+								<Typography sx={heroSectionStyle.featureSubtitle}>Protection</Typography>
+							</Box>
 						</Box>
-					</Grid>
-				</Grid>
 
+						<Box sx={heroSectionStyle.featureItem}>
+							<Box sx={heroSectionStyle.iconContainer}>
+								<HandshakeIcon sx={heroSectionStyle.cardIcon} />
+							</Box>
+							<Box sx={heroSectionStyle.featureTextWrapper}>
+								<Typography sx={heroSectionStyle.featureTitle}>Build</Typography>
+								<Typography sx={heroSectionStyle.featureSubtitle}>Customer Trust</Typography>
+							</Box>
+						</Box>
+					</Box>
+				</Box>
+
+				<Box sx={heroSectionStyle.formBox}>
+					<EnhancedHeroSectionForm
+						selectedOptions={selectedOptions}
+						onOptionsChange={handleOptionsChange}
+						onSubmitCallback={handleSubmitCallback}
+					/>
+				</Box>
+			</Container>
+
+			<Container>
 				<Grid container spacing={4} sx={heroSectionStyle.cardsContainer}>
 					<Grid size={{ xs: 12, md: 4 }}>
 						<Card elevation={0} sx={heroSectionStyle.card1}>

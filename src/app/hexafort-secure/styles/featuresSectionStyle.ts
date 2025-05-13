@@ -48,11 +48,7 @@ const featuresSectionStyle = {
     borderRadius: '1rem',
     padding: '2.5rem',
     transition: 'all 0.35s ease',
-    '&:hover': {
-      transform: 'translateY(-8px)',
-      boxShadow: '0rem 0.75rem 1.5rem rgba(0, 0, 0, 0.15)',
-      backgroundColor: theme.palette.background.paper,
-    },
+   
   },
   featureStepReverse: {
     flexDirection: { xs: 'column', md: 'row-reverse' },
@@ -113,7 +109,7 @@ const featuresSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     color: theme.palette.text.secondary,
-    border: `1px dashed ${theme.palette.secondary.dark}60`,
+
     padding: '1.5rem',
     fontSize: '0.9rem',
     textAlign: 'center',

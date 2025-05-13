@@ -1,29 +1,44 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
+import { ShieldOutlined, VerifiedUser, SecurityOutlined } from '@mui/icons-material';
 import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { iso22301Data } from '../constants/iso22301Data';
-import { ShieldOutlined, VerifiedUser, SecurityOutlined } from '@mui/icons-material';
+import { FormValues } from './EnhancedHeroSectionForm';
 
 const ISO22301HeroSection: React.FC = () => {
 	const heroBullets = [
 		{
 			icon: ShieldOutlined,
-			title: 'Protected Operations',
-			text: 'Safeguard business continuity'
+			title: 'Protected',
+			text: 'Operations'
 		},
 		{
 			icon: VerifiedUser,
-			title: 'Risk Management',
-			text: 'Minimize operational disruptions'
+			title: 'Risk',
+			text: 'Management'
 		},
 		{
 			icon: SecurityOutlined,
-			title: 'International Standard',
-			text: 'Globally recognized compliance'
+			title: 'Global',
+			text: 'Standard'
 		}
 	];
+
+	const [selectedOptions, setSelectedOptions] = useState<string[]>([
+		'ISO 27001',
+		'ISO 42001',
+		'ISO 22301'
+	]);
+
+	const handleOptionsChange = (newOptions: string[]) => {
+		setSelectedOptions(newOptions);
+	};
+
+	const handleSubmitCallback = (values: FormValues) => {
+		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+	};
 
 	return (
 		<Box sx={heroSectionStyle.container}>
@@ -31,14 +46,14 @@ const ISO22301HeroSection: React.FC = () => {
 				<Box sx={heroSectionStyle.leftContentBox}>
 					<Box sx={heroSectionStyle.tag}>
 						<Typography variant="body2" sx={heroSectionStyle.tagText}>
-							{iso22301Data.heroTitle || 'ISO 22301 Compliance'}
+							🔒 ISO 22301 Compliance Made Simple
 						</Typography>
 					</Box>
 
 					<Typography variant="h3" sx={heroSectionStyle.mainTitle}>
-						{iso22301Data.heroSubtitle || 'Business Continuity Management'}
+						Business Continuity Management
 						<Box component="span" display="block" sx={heroSectionStyle.highlightText}>
-							{iso22301Data.highlightText || 'Safeguard Your Organization'}
+							Safeguard Your Organization
 						</Box>
 					</Typography>
 
@@ -70,7 +85,11 @@ const ISO22301HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={heroSectionStyle.formBox}>
-					<EnhancedHeroSectionForm />
+					<EnhancedHeroSectionForm
+						selectedOptions={selectedOptions}
+						onOptionsChange={handleOptionsChange}
+						onSubmitCallback={handleSubmitCallback}
+					/>
 				</Box>
 			</Container>
 		</Box>

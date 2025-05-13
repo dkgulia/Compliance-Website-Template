@@ -1,13 +1,29 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
-import EnhancedHipaaHeroSectionForm from './EnhancedHeroSectionForm';
+import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
 import heroSectionStyles from '../styles/heroSectionStyle';
+import { FormValues } from './EnhancedHeroSectionForm';
 
 const HipaaHeroSection: React.FC = () => {
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+	const [selectedOptions, setSelectedOptions] = useState<string[]>([
+		'ISO 27001',
+		'ISO 42001',
+		'ISO 27018',
+		'HIPAA'
+	]);
+
+	const handleOptionsChange = (newOptions: string[]) => {
+		setSelectedOptions(newOptions);
+	};
+
+	const handleSubmitCallback = (values: FormValues) => {
+		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+	};
 
 	return (
 		<Box sx={heroSectionStyles.box}>
@@ -15,7 +31,7 @@ const HipaaHeroSection: React.FC = () => {
 				<Box sx={heroSectionStyles.leftContentBox}>
 					<Box sx={heroSectionStyles.chip}>
 						<Typography variant="body2" sx={heroSectionStyles.chipTypography}>
-							HIPAA Compliance Made Simple
+							🔒 HIPAA Compliance Made Simple
 						</Typography>
 					</Box>
 
@@ -93,7 +109,11 @@ const HipaaHeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={heroSectionStyles.formBox}>
-					<EnhancedHipaaHeroSectionForm />
+					<EnhancedHeroSectionForm
+						selectedOptions={selectedOptions}
+						onOptionsChange={handleOptionsChange}
+						onSubmitCallback={handleSubmitCallback}
+					/>
 				</Box>
 			</Container>
 		</Box>

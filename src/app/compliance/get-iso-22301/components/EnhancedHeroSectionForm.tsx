@@ -1,28 +1,45 @@
 import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
-import ISO22301HeroSectionForm from './ISO22301HeroSectionForm';
+import HeroSectionForm from '../components/ISO22301HeroSectionForm';
+import { FULL_NAME_REQUIRED, EMAIL_REQUIRED, INVALID_EMAIL } from '../../../constants/formMessages';
 
 export interface FormValues {
 	fullName: string;
 	email: string;
 }
 
-interface FormProps {}
+interface FormProps {
+	selectedOptions: string[];
+	onOptionsChange: (options: string[]) => void;
+	onSubmitCallback?: (values: FormValues) => void;
+	fullName?: string;
+	email?: string;
+}
 
 const EnhancedHeroSectionForm = withFormik<FormProps, FormValues>({
-	mapPropsToValues: () => ({
-		fullName: '',
-		email: '',
+	mapPropsToValues: (props) => ({
+		fullName: props.fullName || '',
+		email: props.email || '',
 	}),
 	validationSchema: Yup.object({
-		fullName: Yup.string().required('Full Name is required'),
-		email: Yup.string().email('Invalid email format').required('Work Email is required'),
+		fullName: Yup.string().required(FULL_NAME_REQUIRED),
+		email: Yup.string().email(INVALID_EMAIL).required(EMAIL_REQUIRED),
 	}),
-	handleSubmit: (values, { setSubmitting }) => {
-		console.log('Submitted Values:', values);
+	handleSubmit: (values, { props, setSubmitting, resetForm }) => {
 		setSubmitting(false);
+		if (props.onSubmitCallback) {
+			props.onSubmitCallback(values);
+		}
+		console.log('Submitted Values:', values);
+		resetForm();
 	},
-})(ISO22301HeroSectionForm);
+})((props) => {
+	return (
+		<HeroSectionForm
+			{...props}
+		/>
+	);
+});
 
 export default EnhancedHeroSectionForm;

@@ -1,8 +1,7 @@
-'use client';
 import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
-import HeroSectionForm from '../components/HeroSection';
+import HeroSectionForm from './HeroSectionForm';
 import { FULL_NAME_REQUIRED, EMAIL_REQUIRED, INVALID_EMAIL } from '../../../constants/formMessages';
 
 export interface FormValues {

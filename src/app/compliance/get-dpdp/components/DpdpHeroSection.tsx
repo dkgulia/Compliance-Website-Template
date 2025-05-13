@@ -1,101 +1,92 @@
 'use client';
-import React from 'react';
-import { Box, Container, Typography, useTheme, useMediaQuery } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
 import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
-import createHeroSectionStyle from '../styles/heroSectionStyle';
+import heroSectionStyle from '../styles/heroSectionStyle';
+import { FormValues } from './EnhancedHeroSectionForm';
 import dpdpData from '../constants/dpdpData';
 
 const DpdpHeroSection: React.FC = () => {
-  const theme = useTheme();
-  const styles = createHeroSectionStyle(theme);
   const { hero } = dpdpData.sections;
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([
+    'ISO 27001',
+    'ISO 42001',
+    'ISO 27018'
+  ]);
+
+  const handleOptionsChange = (newOptions: string[]) => {
+    setSelectedOptions(newOptions);
+  };
+
+  const handleSubmitCallback = (values: FormValues) => {
+    console.log('Submitted with Values and Compliance Options:', {
+      ...values,
+      complianceOptions: selectedOptions
+    });
+  };
 
   return (
-    <Box id="dpdp-hero" component="section" sx={styles.container}>
-      <Container sx={styles.containerBox}>
-        <Box sx={styles.leftContentBox}>
-          <Box sx={styles.chip}>
-            <Typography variant="body2" sx={styles.chipTypography}>
+    <Box sx={heroSectionStyle.container}>
+      <Container sx={heroSectionStyle.containerBox}>
+        <Box sx={heroSectionStyle.leftContentBox}>
+          <Box sx={heroSectionStyle.tag}>
+            <Typography variant="body2" sx={heroSectionStyle.tagText}>
               {dpdpData.heroTag}
             </Typography>
           </Box>
 
-          <Typography variant="h3" sx={styles.mainTitle}>
+          <Typography variant="h3" sx={heroSectionStyle.mainTitle}>
             {hero.title}
-            <Box component="span" display="block" sx={styles.highlightText}>
+            <Box component="span" display="block" sx={heroSectionStyle.highlightText}>
               {hero.subtitle}
             </Box>
           </Typography>
 
-          <Typography sx={styles.description}>
+          <Typography sx={heroSectionStyle.description}>
             {hero.description}
           </Typography>
 
-          {isMobile ? (
-            <Box sx={styles.statsContainer}>
-              <Box sx={styles.statItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Verified sx={styles.featureIcon} />
-                </Box>
-                <Typography sx={styles.statValue}>Automated</Typography>
-                <Typography sx={styles.statLabel}>Consent Engine</Typography>
+          <Box sx={heroSectionStyle.featuresContainer}>
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Verified sx={heroSectionStyle.featureIcon} />
               </Box>
-
-              <Box sx={styles.statItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Security sx={styles.featureIcon} />
-                </Box>
-                <Typography sx={styles.statValue}>Robust</Typography>
-                <Typography sx={styles.statLabel}>Breach Playbooks</Typography>
-              </Box>
-
-              <Box sx={styles.statItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Policy sx={styles.featureIcon} />
-                </Box>
-                <Typography sx={styles.statValue}>Thorough</Typography>
-                <Typography sx={styles.statLabel}>Penalty Dashboard</Typography>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Automated</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Consent Engine</Typography>
               </Box>
             </Box>
-          ) : (
-            <Box sx={styles.featuresContainer}>
-              <Box sx={styles.featureItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Verified sx={styles.featureIcon} />
-                </Box>
-                <Box sx={styles.featureTextWrapper}>
-                  <Typography sx={styles.featureTitle}>Automated</Typography>
-                  <Typography sx={styles.featureSubtitle}>Consent Engine</Typography>
-                </Box>
-              </Box>
 
-              <Box sx={styles.featureItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Security sx={styles.featureIcon} />
-                </Box>
-                <Box sx={styles.featureTextWrapper}>
-                  <Typography sx={styles.featureTitle}>Robust</Typography>
-                  <Typography sx={styles.featureSubtitle}>Breach Playbooks</Typography>
-                </Box>
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Security sx={heroSectionStyle.featureIcon} />
               </Box>
-
-              <Box sx={styles.featureItem}>
-                <Box sx={styles.iconWrapper}>
-                  <Policy sx={styles.featureIcon} />
-                </Box>
-                <Box sx={styles.featureTextWrapper}>
-                  <Typography sx={styles.featureTitle}>Thorough</Typography>
-                  <Typography sx={styles.featureSubtitle}>Penalty Dashboard</Typography>
-                </Box>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Robust</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Breach Playbooks</Typography>
               </Box>
             </Box>
-          )}
+
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Policy sx={heroSectionStyle.featureIcon} />
+              </Box>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Thorough</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Penalty Dashboard</Typography>
+              </Box>
+            </Box>
+          </Box>
         </Box>
 
-        <Box sx={styles.formBox}>
-          <EnhancedHeroSectionForm />
+        <Box sx={heroSectionStyle.formBox}>
+          <EnhancedHeroSectionForm
+            selectedOptions={selectedOptions}
+            onOptionsChange={handleOptionsChange}
+            onSubmitCallback={handleSubmitCallback}
+          />
         </Box>
       </Container>
     </Box>

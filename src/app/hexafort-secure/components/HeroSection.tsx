@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Icon, Container } from '@mui/material';
+import { Box, Typography, Button, Container } from '@mui/material';
+import Image from 'next/image';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { hexafortSecureData } from '../constants/hexafortSecureData';
+import heroImage from '../images/hero.png';
 
 const HeroSection: React.FC = () => {
 	const { hero } = hexafortSecureData;
@@ -33,7 +35,11 @@ const HeroSection: React.FC = () => {
 					</Box>
 
 					<Box sx={heroSectionStyle.imageBox}>
-						<Box sx={heroSectionStyle.imagePlaceholder}>{hero.imagePrompt}</Box>
+						<Image
+							src={heroImage}
+							alt="Hero Illustration"
+							style={{ width: '100%', height: 'auto' }}
+						/>
 					</Box>
 				</Box>
 			</Container>

@@ -1,30 +1,33 @@
 'use client';
 import React, { useState } from 'react';
 import {
+  Grid,
   Box,
-  Typography,
   FormControl,
   OutlinedInput,
   FormHelperText,
   Button,
-  FormControlLabel,
-  Checkbox,
-  Grid,
+  Typography,
   Snackbar,
   Alert,
-  Link,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
-import { ArrowForward } from '@mui/icons-material';
-import NextLink from 'next/link';
 import { FormikProps } from 'formik';
 import heroSectionStyle from '../styles/heroSectionStyle';
+import { complianceOptionsArray } from '../../../constants/complianceData';
 
 export interface FormValues {
   fullName: string;
   email: string;
 }
 
-const HeroSectionForm: React.FC<FormikProps<FormValues>> = ({
+interface HeroSectionFormProps extends FormikProps<FormValues> {
+  selectedOptions: string[];
+  onOptionsChange: (options: string[]) => void;
+}
+
+const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
   values,
   errors,
   touched,
@@ -33,34 +36,18 @@ const HeroSectionForm: React.FC<FormikProps<FormValues>> = ({
   handleSubmit,
   isSubmitting,
   resetForm,
+  selectedOptions,
+  onOptionsChange,
 }) => {
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-  const [isChecked, setIsChecked] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleClick = async () => {
-    if (!isChecked) {
-      setAlert({ type: 'error', message: 'You must agree to the terms before submitting.' });
-      return;
-    }
-
-    if (
-      values.fullName &&
-      !errors.fullName &&
-      values.email &&
-      !errors.email
-    ) {
-      // Simulate API call
-      setTimeout(() => {
-        setAlert({
-          type: 'success',
-          message: 'Thank you for your interest! We\'ll contact you soon to schedule your demo.'
-        });
-        resetForm();
-        setIsChecked(false);
-      }, 1500);
-    } else {
-      setAlert({ type: 'error', message: 'Please fill in all required fields correctly.' });
-    }
+  const toggleOption = (option: string) => {
+    onOptionsChange(
+      selectedOptions.includes(option)
+        ? selectedOptions.filter((selected) => selected !== option)
+        : [...selectedOptions, option]
+    );
   };
 
   const handleSnackbarClose = () => {
@@ -68,7 +55,7 @@ const HeroSectionForm: React.FC<FormikProps<FormValues>> = ({
   };
 
   return (
-    <Box>
+    <Box sx={heroSectionStyle.formContainer}>
       {alert && (
         <Snackbar
           open={!!alert}
@@ -82,105 +69,77 @@ const HeroSectionForm: React.FC<FormikProps<FormValues>> = ({
         </Snackbar>
       )}
 
-      <Typography variant="h6" sx={{ color: '#ffffff', fontWeight: 'bold', mb: 2, textAlign: 'center' }}>
-        Request Your ISO 42001 Demo
-      </Typography>
-
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid size={{ xs: 12 }}>
+            <Typography variant="h4" sx={heroSectionStyle.formHeading}>
+              Book Your Demo Today!
+            </Typography>
+            <Typography sx={{ marginBottom: '1rem', color: 'white' }}>Get answers to all your questions.</Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12 }}>
             <FormControl fullWidth error={touched.fullName && Boolean(errors.fullName)}>
-              <Typography sx={{ color: '#ffffff', mb: 0.5 }}>Full Name*</Typography>
+              <Typography sx={heroSectionStyle.compliancesLabel}>Full Name</Typography>
               <OutlinedInput
                 id="fullName"
                 name="fullName"
-                placeholder="Jordan Lee"
+                placeholder="Enter your full name"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.fullName}
-                sx={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                  color: '#ffffff',
-                  '&:hover': {
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  },
-                }}
+                sx={{ color: 'white' }}
               />
-              <FormHelperText sx={{ color: '#ff6b6b' }}>{touched.fullName && errors.fullName}</FormHelperText>
+              <FormHelperText>{touched.fullName && errors.fullName}</FormHelperText>
             </FormControl>
           </Grid>
 
           <Grid size={{ xs: 12 }}>
             <FormControl fullWidth error={touched.email && Boolean(errors.email)}>
-              <Typography sx={{ color: '#ffffff', mb: 0.5 }}>Work Email*</Typography>
+              <Typography sx={heroSectionStyle.compliancesLabel}>Work Email</Typography>
               <OutlinedInput
                 id="email"
                 name="email"
-                placeholder="jordan@ai-startup.com"
+                placeholder="Enter your email"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
-                sx={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                  color: '#ffffff',
-                  '&:hover': {
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  },
-                }}
+                sx={{ color: 'white' }}
               />
-              <FormHelperText sx={{ color: '#ff6b6b' }}>{touched.email && errors.email}</FormHelperText>
+              <FormHelperText>{touched.email && errors.email}</FormHelperText>
             </FormControl>
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={isChecked}
-                  onChange={(e) => setIsChecked(e.target.checked)}
-                  sx={{
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    '&.Mui-checked': {
-                      color: '#00C6FF',
+            <Typography sx={heroSectionStyle.compliancesLabel}>Compliances Interested In*</Typography>
+            <Grid container spacing={1}>
+              {complianceOptionsArray.map((option, index) => (
+                <Grid size={{ xs: 6, sm: 4 }} key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={selectedOptions.includes(option)}
+                        onChange={() => toggleOption(option)}
+                      />
                     }
-                  }}
-                />
-              }
-              label={
-                <Typography sx={{ color: '#ffffff', fontSize: '0.9rem' }}>
-                  I agree to the terms and conditions.
-                </Typography>
-              }
-            />
-          </Grid>
-
-          <Grid size={{ xs: 12 }}>
-            <Typography sx={{ color: '#ffffff', fontSize: '0.8rem', opacity: 0.8 }}>
-              By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted by
-              you above as per our{' '}
-              <Link
-                color="primary"
-                href="/privacy-policy"
-                component={NextLink}
-                sx={{ color: '#00C6FF' }}
-              >
-                <Typography variant="body2" component="span">Privacy Policy</Typography>
-              </Link>
-              .
-            </Typography>
+                    label={option}
+                    sx={heroSectionStyle.checkboxLabel}
+                  />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
 
           <Grid size={{ xs: 12 }}>
             <Button
-              type="button"
+              type="submit"
               fullWidth
               variant="contained"
-              onClick={handleClick}
-              disabled={isSubmitting || !isChecked}
-              endIcon={<ArrowForward />}
               sx={heroSectionStyle.button}
+              disabled={loading || selectedOptions.length === 0}
+              disableElevation
             >
-              Get Demo
+              {loading ? 'Submitting...' : 'Book Your Demo'}
             </Button>
           </Grid>
         </Grid>

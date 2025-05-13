@@ -1,20 +1,24 @@
 'use client';
-import React from 'react';
-import { Box, Container, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
 import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import { cmmcData } from '../constants/cmmcData';
+import { FormValues } from './EnhancedHeroSectionForm';
+
+
+const cmmcOptionsArray = ['Level 1 (Foundational)', 'Level 2 (Advanced)', 'Level 3 (Expert)'];
 
 const CmmcHeroSection: React.FC = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([cmmcOptionsArray[0]]);
 
-  const heroContent = cmmcData.sections.find(
-    (section) => section.Sno === '1' && section.blockType === 'Hero'
-  );
+  const handleOptionsChange = (newOptions: string[]) => {
+    setSelectedOptions(newOptions);
+  };
 
-  if (!heroContent) return null;
+  const handleSubmitCallback = (values: FormValues) => {
+    console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+  };
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -27,8 +31,8 @@ const CmmcHeroSection: React.FC = () => {
           </Box>
 
           <Typography variant="h3" sx={heroSectionStyle.mainTitle}>
-            CMMC Compliance—Clear, Quick, <br />
-            <Box component="span" sx={heroSectionStyle.highlightText}>
+            CMMC Compliance—Clear, Quick,
+            <Box component="span" display="block" sx={heroSectionStyle.highlightText}>
               Automated
             </Box>
           </Typography>
@@ -39,72 +43,45 @@ const CmmcHeroSection: React.FC = () => {
             your assessor.
           </Typography>
 
-          {isMobile ? (
-            <Box sx={heroSectionStyle.statsContainer}>
-              <Box sx={heroSectionStyle.statItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Verified sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Typography sx={heroSectionStyle.statValue}>Automated</Typography>
-                <Typography sx={heroSectionStyle.statLabel}>Compliance Monitoring</Typography>
+          <Box sx={heroSectionStyle.featuresContainer}>
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Verified sx={heroSectionStyle.featureIcon} />
               </Box>
-
-              <Box sx={heroSectionStyle.statItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Security sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Typography sx={heroSectionStyle.statValue}>Robust</Typography>
-                <Typography sx={heroSectionStyle.statLabel}>Security Controls</Typography>
-              </Box>
-
-              <Box sx={heroSectionStyle.statItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Policy sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Typography sx={heroSectionStyle.statValue}>Thorough</Typography>
-                <Typography sx={heroSectionStyle.statLabel}>Policy Management</Typography>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Automated</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Compliance Monitoring</Typography>
               </Box>
             </Box>
-          ) : (
-            <Box sx={heroSectionStyle.featuresContainer}>
-              <Box sx={heroSectionStyle.featureItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Verified sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Box sx={heroSectionStyle.featureTextWrapper}>
-                  <Typography sx={heroSectionStyle.featureTitle}>Automated</Typography>
-                  <Typography sx={heroSectionStyle.featureSubtitle}>Compliance Monitoring</Typography>
-                </Box>
+
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Security sx={heroSectionStyle.featureIcon} />
               </Box>
-
-
-              <Box sx={heroSectionStyle.featureItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Security sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Box sx={heroSectionStyle.featureTextWrapper}>
-                  <Typography sx={heroSectionStyle.featureTitle}>Robust</Typography>
-                  <Typography sx={heroSectionStyle.featureSubtitle}>Security Controls</Typography>
-                </Box>
-              </Box>
-
-              <Box sx={heroSectionStyle.featureItem}>
-                <Box sx={heroSectionStyle.iconWrapper}>
-                  <Policy sx={heroSectionStyle.featureIcon} />
-                </Box>
-                <Box sx={heroSectionStyle.featureTextWrapper}>
-                  <Typography sx={heroSectionStyle.featureTitle}>Thorough</Typography>
-                  <Typography sx={heroSectionStyle.featureSubtitle}>Policy Management</Typography>
-                </Box>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Robust</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Security Controls</Typography>
               </Box>
             </Box>
-          )}
 
-
+            <Box sx={heroSectionStyle.featureItem}>
+              <Box sx={heroSectionStyle.iconWrapper}>
+                <Policy sx={heroSectionStyle.featureIcon} />
+              </Box>
+              <Box sx={heroSectionStyle.featureTextWrapper}>
+                <Typography sx={heroSectionStyle.featureTitle}>Thorough</Typography>
+                <Typography sx={heroSectionStyle.featureSubtitle}>Policy Management</Typography>
+              </Box>
+            </Box>
+          </Box>
         </Box>
 
         <Box sx={heroSectionStyle.formBox}>
-          <EnhancedHeroSectionForm />
+          <EnhancedHeroSectionForm
+            selectedOptions={selectedOptions}
+            onOptionsChange={handleOptionsChange}
+            onSubmitCallback={handleSubmitCallback}
+          />
         </Box>
       </Container>
     </Box>

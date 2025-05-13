@@ -208,7 +208,8 @@ export const primaryCompliance = [
 	'PCI DSS',
 	'DORA',
 	'PDPA',
-	'CMMC'
+	'CMMC',
+	'PCIDSS'
 ];
 
 export const complianceOptionsArray = Object.values(ComplianceOptions);

@@ -18,9 +18,13 @@ import { FormValues } from './EnhancedCcpaHeroSectionForm';
 // import { addDataToGoogleSheetRequest } from '../../../../api/googleSheetRequest';
 // import { sheetNameTypes } from '../../../../constants/interfaces';
 // import { getCurrentTime } from '../../../../utils/getCurrentTime';
-import theme from '../../../../theme';
+import { complianceOptionsArray } from '../../../constants/complianceData';
 
-interface CcpaHeroSectionFormProps extends FormikProps<FormValues> {}
+interface CcpaHeroSectionFormProps extends FormikProps<FormValues> {
+  selectedOptions: string[];
+  onOptionsChange: (options: string[]) => void;
+  onSubmitCallback?: (values: FormValues) => void;
+}
 
 const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
   values,
@@ -30,24 +34,42 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
   handleBlur,
   handleSubmit,
   resetForm,
+  selectedOptions,
+  onOptionsChange,
 }) => {
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [loading, setLoading] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+
+  const toggleOption = (option: string) => {
+    onOptionsChange(
+      selectedOptions.includes(option)
+        ? selectedOptions.filter((selected) => selected !== option)
+        : [...selectedOptions, option]
+    );
+  };
 
   // const handleClick = async () => {
   //   if (!isChecked) {
   //     setAlert({ type: 'error', message: 'You must agree to the terms before submitting.' });
   //     return;
   //   }
+
+  //   if (selectedOptions.length === 0) {
+  //     setAlert({ type: 'error', message: 'Please select at least one compliance.' });
+  //     return;
+  //   }
+
   //   if (values.fullName && !errors.fullName && values.email && !errors.email) {
   //     setLoading(true);
   //     const sheetName = sheetNameTypes.ccpaForm;
-  //     const data = [values.fullName, values.email, getCurrentTime()];
+  //     const data = [values.fullName, values.email, getCurrentTime(), selectedOptions.join(', ')];
   //     try {
   //       await addDataToGoogleSheetRequest(sheetName, data);
   //       setAlert({ type: 'success', message: 'Your response has been saved.' });
   //       resetForm();
+  //       setIsChecked(false);
+  //       onOptionsChange([]);
   //     } catch (err: any) {
   //       let errorMessage = 'Network Error';
   //       if (err.response?.data?.message) {
@@ -66,7 +88,7 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
   };
 
   return (
-    <Box>
+    <Box sx={ccpaHeroSectionStyles.formContainer}>
       {alert && (
         <Snackbar
           open={!!alert}
@@ -74,7 +96,7 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
           onClose={handleSnackbarClose}
           anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >
-          <Alert onClose={handleSnackbarClose} severity={alert.type}>
+          <Alert onClose={handleSnackbarClose} severity={alert.type} sx={{ width: '100%' }}>
             {alert.message}
           </Alert>
         </Snackbar>
@@ -82,7 +104,16 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
 
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
-          <Grid size={{ xs: 12 }} sx={ccpaHeroSectionStyles.gridItem}>
+          <Grid size={{ xs: 12 }}>
+            <Typography variant="h4" sx={ccpaHeroSectionStyles.formHeading}>
+              Book Your Demo Today!
+            </Typography>
+            <Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
+              Get answers to all your questions.
+            </Typography>
+          </Grid>
+
+          <Grid size={{ xs: 12 }}>
             <FormControl fullWidth error={touched.fullName && Boolean(errors.fullName)}>
               <Typography sx={ccpaHeroSectionStyles.formLabel}>Full Name</Typography>
               <OutlinedInput
@@ -100,7 +131,7 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
             </FormControl>
           </Grid>
 
-          <Grid size={{ xs: 12 }} sx={ccpaHeroSectionStyles.gridItem}>
+          <Grid size={{ xs: 12 }}>
             <FormControl fullWidth error={touched.email && Boolean(errors.email)}>
               <Typography sx={ccpaHeroSectionStyles.formLabel}>Work Email</Typography>
               <OutlinedInput
@@ -119,6 +150,27 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
           </Grid>
 
           <Grid size={{ xs: 12 }}>
+            <Typography sx={ccpaHeroSectionStyles.compliancesLabel}>Compliances Interested In*</Typography>
+            <Grid container spacing={1}>
+              {complianceOptionsArray.map((option, index) => (
+                <Grid size={{ xs: 6, sm: 4 }} key={index}>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={selectedOptions.includes(option)}
+                        onChange={() => toggleOption(option)}
+                        sx={ccpaHeroSectionStyles.checkbox}
+                      />
+                    }
+                    label={option}
+                    sx={ccpaHeroSectionStyles.checkboxLabel}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+
+          <Grid size={{ xs: 12 }}>
             <FormControlLabel
               control={
                 <Checkbox
@@ -128,7 +180,7 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
                   sx={ccpaHeroSectionStyles.checkbox}
                 />
               }
-              label={<Typography sx={{ color: theme.palette.text.primary }}>I agree to the terms and conditions.</Typography>}
+              label={<Typography sx={{ color: 'text.primary' }}>I agree to the terms and conditions.</Typography>}
             />
           </Grid>
 
@@ -143,15 +195,15 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
 
           <Grid size={{ xs: 12 }}>
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               sx={ccpaHeroSectionStyles.button}
-              // onClick={handleClick}
+              //onClick={handleClick}
               disabled={loading || !isChecked}
               disableElevation
             >
-              {loading ? 'Submitting...' : 'Request Demo'}
+              {loading ? 'Submitting...' : 'Book Your Demo'}
             </Button>
           </Grid>
         </Grid>

@@ -1,12 +1,25 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
 import heroSectionStyles from '../styles/heroSectionStyle';
-import EnhancedHeroSectionForm from '../components/EnhancedCcpaHeroSectionForm';
+import EnhancedCcpaHeroSectionForm from './EnhancedCcpaHeroSectionForm';
 import theme from '../../../../theme';
+import { ComplianceOptions } from '../../../constants/complianceData';
 
 const Iso27018HeroSection: React.FC = () => {
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([
+    ComplianceOptions.ISO27018,
+  ]);
+
+  const handleOptionsChange = (newOptions: string[]) => {
+    setSelectedOptions(newOptions);
+  };
+
+  const handleSubmitCallback = (values: { fullName: string; email: string }) => {
+    console.log('Submitted with Options:', { ...values, selectedOptions });
+  };
+
   return (
     <Box sx={heroSectionStyles.container}>
       <Container sx={heroSectionStyles.containerBox}>
@@ -64,7 +77,11 @@ const Iso27018HeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyles.formBox}>
-          <EnhancedHeroSectionForm />
+          <EnhancedCcpaHeroSectionForm
+            selectedOptions={selectedOptions}
+            onOptionsChange={handleOptionsChange}
+            onSubmitCallback={handleSubmitCallback}
+          />
         </Box>
       </Container>
     </Box>

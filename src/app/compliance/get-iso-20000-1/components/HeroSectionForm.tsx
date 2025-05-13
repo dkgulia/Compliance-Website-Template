@@ -12,7 +12,7 @@ import {
 	Snackbar,
 	Alert,
 } from '@mui/material';
-import heroSectionStyles from '../styles/heroSectionStyle';
+import heroSectionStyle from '../styles/heroSectionStyle';
 import { FormikProps } from 'formik';
 import { FormValues } from './EnhancedHeroSectionForm';
 // import { addDataToGoogleSheetRequest } from '../../../../api/googleSheetRequest';
@@ -54,7 +54,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	// 		}
 
 	// 		setLoading(true);
-	// 		const sheetName = sheetNameTypes.hipaaForm;
+	// 		const sheetName = sheetNameTypes.iso20000Form;
 	// 		const data = [
 	// 			values.fullName,
 	// 			values.email,
@@ -66,7 +66,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	// 			await addDataToGoogleSheetRequest(sheetName, data);
 	// 			setAlert({ type: 'success', message: 'Your response has been saved.' });
 	// 			resetForm();
-	// 			onOptionsChange(['ISO 27001', 'ISO 42001', 'ISO 27018', 'HIPAA']);
+	// 			onOptionsChange(['ISO 27001', 'ISO 42001', 'ISO 20000-1']);
 	// 		} catch (err: any) {
 	// 			let errorMessage = 'Network Error';
 	// 			if (err.response?.data?.message) {
@@ -85,7 +85,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 	};
 
 	return (
-		<Box sx={heroSectionStyles.formContainer}>
+		<Box sx={heroSectionStyle.formContainer}>
 			{alert && (
 				<Snackbar
 					open={!!alert}
@@ -101,17 +101,17 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2}>
 					<Grid size={{ xs: 12 }}>
-						<Typography variant="h4" sx={heroSectionStyles.formHeading}>
-							Book Your HIPAA Demo Today!
+						<Typography variant="h4" sx={heroSectionStyle.formHeading}>
+							Book Your ISO 20000-1 Demo Today!
 						</Typography>
 						<Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
-              Get answers to all your questions about HIPAA compliance.
+              Get answers to all your questions about ISO 20000-1 compliance.
             </Typography>
 					</Grid>
 
-					<Grid size={{ xs: 12 }} sx={heroSectionStyles.gridItem}>
+					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
 						<FormControl fullWidth error={touched.fullName && Boolean(errors.fullName)}>
-							<Typography sx={heroSectionStyles.formLabel}>Full Name</Typography>
+							<Typography sx={heroSectionStyle.formLabel}>Full Name</Typography>
 							<OutlinedInput
 								id="fullName"
 								name="fullName"
@@ -119,17 +119,17 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.fullName}
-								sx={heroSectionStyles.formInput}
+								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyles.formHelperText}>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>
                 {touched.fullName && errors.fullName}
               </FormHelperText>
 						</FormControl>
 					</Grid>
 
-					<Grid size={{ xs: 12 }} sx={heroSectionStyles.gridItem}>
+					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
 						<FormControl fullWidth error={touched.email && Boolean(errors.email)}>
-							<Typography sx={heroSectionStyles.formLabel}>Work Email</Typography>
+							<Typography sx={heroSectionStyle.formLabel}>Work Email</Typography>
 							<OutlinedInput
 								id="email"
 								name="email"
@@ -137,16 +137,16 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.email}
-								sx={heroSectionStyles.formInput}
+								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyles.formHelperText}>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>
                 {touched.email && errors.email}
               </FormHelperText>
 						</FormControl>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
-						<Typography sx={heroSectionStyles.formLabel}>Compliances Interested In*</Typography>
+						<Typography sx={heroSectionStyle.formLabel}>Compliances Interested In*</Typography>
 						<Grid container spacing={1}>
 							<Grid size={{ xs: 6, sm: 4 }}>
 								<FormControlLabel
@@ -154,11 +154,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 27001')}
 											onChange={() => toggleOption('ISO 27001')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 27001"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -167,11 +167,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 42001')}
 											onChange={() => toggleOption('ISO 42001')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 42001"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -180,11 +180,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 27018')}
 											onChange={() => toggleOption('ISO 27018')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 27018"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -193,11 +193,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('SOC 2')}
 											onChange={() => toggleOption('SOC 2')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="SOC 2"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -206,11 +206,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('GDPR')}
 											onChange={() => toggleOption('GDPR')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="GDPR"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -219,11 +219,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('HIPAA')}
 											onChange={() => toggleOption('HIPAA')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="HIPAA"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -232,11 +232,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('CCPA')}
 											onChange={() => toggleOption('CCPA')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="CCPA"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -245,11 +245,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('PCI DSS')}
 											onChange={() => toggleOption('PCI DSS')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="PCI DSS"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -258,11 +258,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('NIST Frameworks')}
 											onChange={() => toggleOption('NIST Frameworks')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="NIST Frameworks"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -271,11 +271,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 22301')}
 											onChange={() => toggleOption('ISO 22301')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 22301"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -284,11 +284,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 20000-1')}
 											onChange={() => toggleOption('ISO 20000-1')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 20000-1"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -297,11 +297,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('ISO 27701')}
 											onChange={() => toggleOption('ISO 27701')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="ISO 27701"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -310,11 +310,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('DORA')}
 											onChange={() => toggleOption('DORA')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="DORA"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -323,11 +323,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('CMMC')}
 											onChange={() => toggleOption('CMMC')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="CMMC"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 							<Grid size={{ xs: 6, sm: 4 }}>
@@ -336,11 +336,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 										<Checkbox
 											checked={selectedOptions.includes('PDPA')}
 											onChange={() => toggleOption('PDPA')}
-											sx={heroSectionStyles.checkbox}
+											sx={heroSectionStyle.checkbox}
 										/>
 									}
 									label="PDPA"
-									sx={heroSectionStyles.checkboxLabel}
+									sx={heroSectionStyle.checkboxLabel}
 								/>
 							</Grid>
 						</Grid>
@@ -351,7 +351,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 							type="button"
 							fullWidth
 							variant="contained"
-							sx={heroSectionStyles.button}
+							sx={heroSectionStyle.button}
 							//onClick={handleClick}
 							disabled={loading}
 							disableElevation

@@ -1,12 +1,13 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import ShieldIcon from '@mui/icons-material/Shield';
 import LockIcon from '@mui/icons-material/Lock';
-import {iso20000Data} from '../constants/iso20000Data';
+import { iso20000Data } from '../constants/iso20000Data';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import Iso20000EnhancedForm from '../components/Iso20000EnhancedForm';
+import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import { FormValues } from './EnhancedHeroSectionForm';
 
 const Iso20000HeroSection: React.FC = () => {
     const heroContent = iso20000Data.sections.find(
@@ -14,6 +15,20 @@ const Iso20000HeroSection: React.FC = () => {
     )?.content;
 
     if (!heroContent) return null;
+
+    const [selectedOptions, setSelectedOptions] = useState<string[]>([
+        'ISO 27001',
+        'ISO 42001',
+        'ISO 20000-1'
+    ]);
+
+    const handleOptionsChange = (newOptions: string[]) => {
+        setSelectedOptions(newOptions);
+    };
+
+    const handleSubmitCallback = (values: FormValues) => {
+        console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+    };
 
     return (
         <Box sx={heroSectionStyle.container}>
@@ -81,7 +96,11 @@ const Iso20000HeroSection: React.FC = () => {
                         </Box>
                     </Box>
                     <Box sx={heroSectionStyle.formBox}>
-                        <Iso20000EnhancedForm />
+                        <EnhancedHeroSectionForm
+                            selectedOptions={selectedOptions}
+                            onOptionsChange={handleOptionsChange}
+                            onSubmitCallback={handleSubmitCallback}
+                        />
                     </Box>
                 </Box>
             </Container>

@@ -80,10 +80,10 @@ const dpdpData = {
     "India data privacy platform",
     "consent management India"
   ],
-  
+
   // For hero section tag
   heroTag: "🔒 DPDP Compliance, Made Easy",
-  
+
   sections: {
     hero: {
       title: "Trim DPDP Audit Prep from Weeks to Hours",
@@ -113,7 +113,7 @@ const dpdpData = {
         },
       ],
     },
-    
+
     benefits: {
       title: "Built for DPDP Teams",
       subtitle: "Comprehensive tools to streamline compliance and protect personal data",
@@ -140,7 +140,7 @@ const dpdpData = {
         }
       ]
     },
-    
+
     metrics: {
       title: "DPDP Compliance in Numbers",
       subtitle: "Measurable impact on your compliance operations",
@@ -150,7 +150,7 @@ const dpdpData = {
         { value: "₹250 cr", label: "Penalty Exposure Tracked" }
       ]
     },
-    
+
     screenshots: {
       title: "HexaFort in Action",
       subtitle: "See how our platform streamlines DPDP compliance",
@@ -177,7 +177,7 @@ const dpdpData = {
         }
       ]
     },
-    
+
     process: {
       title: "Your DPDP Roadmap",
       subtitle: "A clear path to compliance and data protection",
@@ -188,14 +188,14 @@ const dpdpData = {
         { heading: "Prove & Improve", description: "Export audit packs; dashboards update with every release." }
       ]
     },
-    
+
     callToAction: {
       title: "See Your DPDP Score Today",
       subtitle: "Take the first step toward comprehensive compliance",
       description: "Book a 15-minute live demo and watch HexaFort surface your top privacy risks.",
       ctaText: "Schedule Demo"
     },
-    
+
     complianceHub: {
       title: "DPDP Compliance Hub",
       subtitle: "A structured approach to safeguarding personal data & building trust",
@@ -222,7 +222,7 @@ const dpdpData = {
         }
       ]
     },
-    
+
     howHexafortHelps: {
       title: "How Hexafort Helps You Achieve DPDP Compliance",
       subtitle: "Our structured approach streamlines complex DPDP mandates, ensuring personal data protection.",
@@ -267,9 +267,9 @@ const dpdpData = {
           icon: ArticleIcon,
           color: "white"
         }
-      ]
+      ],
     },
-    
+
     faq: {
       title: "DPDP FAQs",
       subtitle: "Common questions about Digital Personal Data Protection",
@@ -308,7 +308,7 @@ const dpdpData = {
         }
       ]
     },
-    
+
     bookDemo: {
       tagline: "Ready for DPDP Compliance?",
       title: "Automate DPDP, Protect User Data",

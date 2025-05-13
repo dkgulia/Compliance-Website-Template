@@ -1,14 +1,29 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import SecurityIcon from '@mui/icons-material/Security';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import EnhancedCcpaHeroSectionForm from './EnhancedCcpaHeroSectionForm';
 import ccpaHeroSectionStyles from '../styles/heroSectionStyle';
-import theme from '../../../../theme';
+import { FormValues } from './EnhancedCcpaHeroSectionForm';
+import { ComplianceOptions } from '../../../constants/complianceData';
 
 const CcpaHeroSection = () => {
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([
+    ComplianceOptions.ISO27001,
+    ComplianceOptions.ISO42001,
+    ComplianceOptions.ISO27018,
+  ]);
+
+  const handleOptionsChange = (newOptions: string[]) => {
+    setSelectedOptions(newOptions);
+  };
+
+  const handleSubmitCallback = (values: FormValues) => {
+    console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+  };
+
   return (
     <Box sx={ccpaHeroSectionStyles.container}>
       <Container sx={ccpaHeroSectionStyles.containerBox}>
@@ -25,7 +40,7 @@ const CcpaHeroSection = () => {
             </Box>
           </Typography>
           <Typography sx={ccpaHeroSectionStyles.description}>
-          HexaFort streamlines your journey to CCPA compliance with automated data inventories, DSAR tracking, and robust security controls. Empower consumers and protect their data while maintaining regulatory compliance.
+            HexaFort streamlines your journey to CCPA compliance with automated data inventories, DSAR tracking, and robust security controls. Empower consumers and protect their data while maintaining regulatory compliance.
           </Typography>
           <Box sx={ccpaHeroSectionStyles.featuresContainer}>
             <Box sx={ccpaHeroSectionStyles.featureItem}>
@@ -58,7 +73,11 @@ const CcpaHeroSection = () => {
           </Box>
         </Box>
         <Box sx={ccpaHeroSectionStyles.formBox}>
-          <EnhancedCcpaHeroSectionForm />
+          <EnhancedCcpaHeroSectionForm
+            selectedOptions={selectedOptions}
+            onOptionsChange={handleOptionsChange}
+            onSubmitCallback={handleSubmitCallback}
+          />
         </Box>
       </Container>
     </Box>
