@@ -32,7 +32,6 @@ const featuresSectionStyle = {
     flexDirection: 'column' as const,
     backgroundColor: '#17171799',
     borderRadius: '1rem',
-
     height: { sm: 'auto', xs: 'auto' },
     minHeight: '210px',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',

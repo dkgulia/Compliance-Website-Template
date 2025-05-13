@@ -34,7 +34,7 @@ const PitfallsSection: React.FC = () => {
                       <IconComponent
                         sx={{
                           ...pitfallsSectionStyle.icon,
-                          color: theme.palette.error.light,
+                          color: 'white',
                         }}
                       />
                     </Box>

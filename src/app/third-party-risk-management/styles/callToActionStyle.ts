@@ -2,23 +2,12 @@ import theme from '../../../theme';
 
 const callToActionStyle = {
   section: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
+
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: '-10%',
-      left: '0',
-      width: '200px',
-      height: '200px',
-      background: `radial-gradient(ellipse at center, ${theme.palette.secondary.main}10, transparent 70%)`,
-      borderRadius: '50%',
-      opacity: 0.5,
-      zIndex: 0,
-    },
+
   },
   container: {
     maxWidth: '1200px',
@@ -36,7 +25,6 @@ const callToActionStyle = {
     flexDirection: { xs: 'column', md: 'row' },
     alignItems: 'center',
     gap: '3rem',
-    boxShadow: theme.customShadows?.card,
     border: `1px solid ${theme.palette.divider}`,
     position: 'relative',
     overflow: 'hidden',
@@ -56,26 +44,17 @@ const callToActionStyle = {
     flex: 1,
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '2.2rem' },
+    fontSize: { xs: '1.8rem', sm: '2.2rem',md:'2rem' },
     fontWeight: 600,
     color: theme.palette.text.primary,
     marginBottom: '1rem',
     position: 'relative',
     paddingBottom: '0.75rem',
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      width: '4rem',
-      height: '3px',
-      background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-      borderRadius: '2px',
-    },
+
   },
   subtitle: {
     fontSize: { xs: '1.1rem', md: '1.2rem' },
-    color: theme.palette.secondary.dark,
+    color: '#115e59',
     marginBottom: '1.5rem',
     fontWeight: 500,
   },
@@ -120,20 +99,21 @@ const callToActionStyle = {
   },
   ctaButton: {
     backgroundColor: '#115e59',
-    color: theme.palette.text.primary,
-    padding: '0.75rem 1.5rem',
-    borderRadius: '0.5rem',
-    fontWeight: 'bold',
-    textTransform: 'none',
-    fontSize: '1rem',
-    transition: 'all 0.3s ease',
-    border: `1px solid #0d4743`,
-    boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-    '&:hover': {
-      backgroundColor: '#0d4743',
-      transform: 'translateY(-2px)',
-      boxShadow: '0 6px 15px rgba(0,0,0,0.25)',
-    },
+		color: '#f9fafb',
+		borderRadius: '0.5rem',
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.25rem 0.5rem',
+		},
+		textTransform: 'none',
+		fontSize: '1rem',
+		whiteSpace: 'nowrap',
+		border: '1px solid #0d9488',
+		transition: 'all 150ms ease',
+		'&:hover': {
+			backgroundColor: '#0f766e',
+		},
   },
 };
 

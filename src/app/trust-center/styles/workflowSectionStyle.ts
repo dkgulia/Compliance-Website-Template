@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const workflowSectionStyle = {
   container: {
     paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
   innerContainer: {
@@ -23,14 +22,14 @@ const workflowSectionStyle = {
   },
   title: {
     fontWeight: '600',
-    fontSize: { xs: '1.8rem', sm: '2.5rem' },
+    fontSize: { xs: '1.8rem', sm: '2.5rem',md:'2rem'},
     color: theme.palette.text.primary,
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
+    paddingBottom: { sm: '1rem', xs: '0.5rem',md:'0.5rem' },
   },
   subtitle: {
     color: theme.palette.text.secondary,
     fontSize: '1.125rem',
-    marginBottom: '2rem',
+    marginBottom: '1rem',
     lineHeight: '1.6',
     maxWidth: '40rem',
     marginX: 'auto',
@@ -49,13 +48,12 @@ const workflowSectionStyle = {
     position: 'relative',
     backgroundColor: theme.palette.background.darkTransparent,
     borderRadius: '1rem',
-
     padding: '1.5rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    height: { sm: '16rem', xs: 'auto', md: '18rem' },
+    height: { sm: '16rem', xs: 'auto', md: '14rem' },
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     justifyContent: 'flex-start',
     '&:hover': {

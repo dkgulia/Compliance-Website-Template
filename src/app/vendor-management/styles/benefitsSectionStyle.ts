@@ -2,9 +2,8 @@ import theme from '../../../theme';
 
 const benefitsSectionStyle = {
   section: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
   },
   container: {
     maxWidth: '1200px',
@@ -16,10 +15,10 @@ const benefitsSectionStyle = {
     textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '2.5rem' },
-    fontWeight: 700,
+    fontSize: { xs: '1.8rem', sm: '2.5rem',md:'2rem' },
+    fontWeight: 600,
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
+    marginBottom: '0.5rem',
     textAlign: 'center',
   },
   subtitle: {
@@ -44,7 +43,7 @@ const benefitsSectionStyle = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-
+    border: `1px solid ${theme.palette.divider}`,
     '&:hover': {
       transform: 'translateY(-4px)',
     },

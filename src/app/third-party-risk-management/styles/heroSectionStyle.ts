@@ -4,7 +4,7 @@ const heroSectionStyle = {
   container: {
     background: theme.palette.background.default,
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
+
   },
   containerBox: {
     display: 'flex',

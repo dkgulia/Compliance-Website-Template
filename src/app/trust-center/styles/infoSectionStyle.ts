@@ -2,8 +2,7 @@ import theme from '../../../theme';
 
 const infoSectionStyle = {
   container: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
+   
   },
   innerBox: {
     maxWidth: '75rem',

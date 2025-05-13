@@ -7,18 +7,6 @@ const createFaqSectionStyle = (theme: Theme) => ({
         backgroundColor: theme.palette.background.default,
         position: 'relative',
         overflow: 'hidden',
-        '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: '10%',
-            right: '-5%',
-            width: '300px',
-            height: '300px',
-            background: `radial-gradient(ellipse at center, ${theme.palette.secondary.main}10, transparent 70%)`,
-            borderRadius: '50%',
-            opacity: 0.5,
-            zIndex: 0,
-        },
     },
     container: {
         maxWidth: '1000px',
@@ -35,22 +23,12 @@ const createFaqSectionStyle = (theme: Theme) => ({
         fontSize: { xs: '1.8rem', sm: '32px' },
         fontWeight: 600,
         textAlign: 'center',
-        marginBottom: '0.75rem',
+        marginBottom: '0.5rem',
         color: theme.palette.text.primary,
         position: 'relative',
-        paddingBottom: '1rem',
+        paddingBottom: '0.5rem',
         display: 'inline-block',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '4rem',
-            height: '4px',
-            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-            borderRadius: '2px',
-        },
+
     },
     subtitle: {
         fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -68,7 +46,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         border: `1px solid ${theme.palette.divider}`,
         borderRadius: '12px',
         overflow: 'hidden',
-        boxShadow: theme.customShadows?.card,
+       
     },
     accordion: {
         backgroundColor: 'rgba(23, 23, 23, 0.6)',

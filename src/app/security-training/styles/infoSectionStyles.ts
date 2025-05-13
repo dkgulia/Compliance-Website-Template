@@ -2,9 +2,7 @@ import theme from '../../../theme';
 
 const infoSectionStyles = {
   root: {
-    paddingTop: { sm: '4rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '1rem' },
-    background: theme.palette.background.paper,
+    background: theme.palette.background.default,
   },
   container: {
     display: 'flex',

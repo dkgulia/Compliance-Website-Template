@@ -8,40 +8,36 @@ import callToActionStyle from '../styles/callToActionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 
 const CallToActionSection: React.FC = () => {
-    const { callToAction } = thirdPartyRiskManagementData;
+	const { callToAction } = thirdPartyRiskManagementData;
 
-    return (
-        <Box component="section" sx={callToActionStyle.section}>
-            <Container sx={callToActionStyle.container}>
-                <Box sx={callToActionStyle.contentWrapper}>
-                    <Box sx={callToActionStyle.textContent}>
-                        <Typography variant="h2" sx={callToActionStyle.title}>
-                            {callToAction.title}
-                        </Typography>
-                        <Typography variant="h5" sx={callToActionStyle.subtitle}>
-                            {callToAction.subtitle}
-                        </Typography>
-                        <Typography variant="body1" sx={callToActionStyle.description}>
-                            {callToAction.description}
-                        </Typography>
-                        <Button 
-                            variant="contained" 
-                            sx={callToActionStyle.ctaButton}
-                            endIcon={<ArrowForwardIcon />}
-                        >
-                            {callToAction.ctaText}
-                        </Button>
-                    </Box>
-                    <Box sx={callToActionStyle.imageContainer}>
-                        <Box sx={callToActionStyle.imagePlaceholder}>
-                            <DateRangeIcon sx={{ fontSize: '2rem', mr: 1 }} />
-                            {callToAction.imagePrompt}
-                        </Box>
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
-    );
+	return (
+		<Box component="section" sx={callToActionStyle.section}>
+			<Container sx={callToActionStyle.container}>
+				<Box sx={callToActionStyle.contentWrapper}>
+					<Box sx={callToActionStyle.textContent}>
+						<Typography variant="h2" sx={callToActionStyle.title}>
+							{callToAction.title}
+						</Typography>
+						<Typography variant="h5" sx={callToActionStyle.subtitle}>
+							{callToAction.subtitle}
+						</Typography>
+						<Typography variant="body1" sx={callToActionStyle.description}>
+							{callToAction.description}
+						</Typography>
+						<Button variant="contained" sx={callToActionStyle.ctaButton} endIcon={<ArrowForwardIcon />}>
+							{callToAction.ctaText}
+						</Button>
+					</Box>
+					<Box sx={callToActionStyle.imageContainer}>
+						<Box sx={callToActionStyle.imagePlaceholder}>
+							<DateRangeIcon sx={{ fontSize: '2rem', mr: 1 }} />
+							{callToAction.imagePrompt}
+						</Box>
+					</Box>
+				</Box>
+			</Container>
+		</Box>
+	);
 };
 
 export default CallToActionSection;

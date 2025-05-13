@@ -2,8 +2,8 @@ import theme from '../../../theme';
 
 const pitfallsSectionStyle = {
   container: {
-    paddingTop: { sm: '3rem', xs: '2rem', md: '4rem' },
-    paddingBottom: { sm: '3rem', xs: '2rem', md: '4rem' },
+    paddingTop: { sm: '3rem', xs: '2rem', md: '3rem' },
+    paddingBottom: { sm: '3rem', xs: '2rem', md: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
   outerContainer: {
@@ -19,13 +19,11 @@ const pitfallsSectionStyle = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    backgroundColor: 'rgba(23, 23, 23, 0.6)',
     borderRadius: '1.5rem',
     width: '100%',
     maxWidth: '75rem',
     marginX: 'auto',
     padding: { xs: '2rem 1rem', sm: '2rem' },
-    border: `1px solid ${theme.palette.divider}`,
   },
   titleSection: {
     display: 'flex',
@@ -48,7 +46,7 @@ const pitfallsSectionStyle = {
     marginBottom: '0.75rem',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2.25rem' },
+    fontSize: { xs: '1.6rem', sm: '2.25rem',md:'2rem' },
     fontWeight: '600',
     marginBottom: '0.75rem',
     color: theme.palette.text.primary,
@@ -131,7 +129,7 @@ const pitfallsSectionStyle = {
     marginBottom: '0.25rem',
   },
   solutionText: {
-    color: theme.palette.success.main,
+    color: theme.palette.text.secondary,
     fontSize: '0.85rem',
     lineHeight: 1.4,
     textAlign: 'center',

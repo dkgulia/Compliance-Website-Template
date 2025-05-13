@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const featuresSectionStyle = {
   container: {
     position: 'relative',
-    padding: { xs: '2rem 1rem', md: '3rem 2rem' },
+    padding: { xs: '2rem 1rem', md: '0rem 2rem' },
     backgroundColor: theme.palette.background.default,
     overflow: 'hidden',
   },
@@ -58,8 +58,8 @@ const featuresSectionStyle = {
     marginBottom: { xs: 3, md: 4 },
   },
   title: {
-    fontSize: { xs: '1.6rem', md: '2.25rem' },
-    fontWeight: 700,
+    fontSize: { xs: '1.6rem', md: '2rem' },
+    fontWeight: 600,
     marginBottom: 1,
     color: theme.palette.text.primary,
     textAlign: 'center',
@@ -81,14 +81,14 @@ const featuresSectionStyle = {
     width: '100%',
   },
   featureCard: {
-    borderRadius: '0.75rem',
+    borderRadius: '1rem',
     padding: '1.5rem',
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     width: '100%',
-    minHeight: '210px',
+    minHeight: '200px',
     border: `1px solid ${theme.palette.divider}`,
     backgroundColor: 'rgba(23, 23, 23, 0.6)',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',

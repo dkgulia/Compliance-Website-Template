@@ -4,7 +4,7 @@ const infoSectionStyle = {
   section: {
     paddingTop: { sm: '2rem', xs: '1rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
   },
   alternateBackground: {
     backgroundColor: theme.palette.background.default,
@@ -52,8 +52,8 @@ const infoSectionStyle = {
     gap: '1rem',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: 600,
+    fontWeight: '600',
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem'},
     color: theme.palette.text.primary,
     marginBottom: '0.5rem',
   },

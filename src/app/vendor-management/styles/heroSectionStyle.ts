@@ -41,7 +41,7 @@ const heroSectionStyle = {
   },
   title: {
     fontWeight: '600',
-    fontSize: { xs: '1.6rem', sm: '2rem' },
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem'},
     color: theme.palette.text.primary,
     lineHeight: 1.3,
   },

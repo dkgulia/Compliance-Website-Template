@@ -29,7 +29,7 @@ const ctaSectionStyle = {
   },
   heading: {
     fontWeight: '600',
-    fontSize: { xs: '1.6rem', sm: '2rem' },
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem' },
     color: theme.palette.text.primary,
   },
   subtitle: {
@@ -54,7 +54,7 @@ const ctaSectionStyle = {
       md: '0.7rem 1rem',
     },
     textTransform: 'none',
-    fontSize: '1rem',
+    fontSize: '0.9rem',
     whiteSpace: 'nowrap',
     border: `1px solid ${theme.palette.secondary.dark}`,
     transition: 'all 150ms ease',

@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const platformHighlightsStyle = {
   section: {
     paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
+  
     backgroundColor: theme.palette.background.default,
   },
   container: {
@@ -16,10 +16,10 @@ const platformHighlightsStyle = {
     textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '2.5rem' },
-    fontWeight: 700,
+    fontWeight: '600',
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem'},
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
+    marginBottom: '0.5rem',
     textAlign: 'center',
   },
   subtitle: {
@@ -37,17 +37,15 @@ const platformHighlightsStyle = {
     gap: '1.5rem',
   },
   feature: {
-    backgroundColor: theme.palette.background.paper,
-    padding: '1.5rem',
-    borderRadius: '1rem',
-    transition: 'transform 0.2s ease-in-out',
-    height: '100%',
     display: 'flex',
-    flexDirection: 'column',
-
-    '&:hover': {
-      transform: 'translateY(-4px)',
-    },
+    flexDirection: 'column' as const,
+    backgroundColor: '#17171799',
+    borderRadius: '1rem',
+    height: { sm: 'auto', xs: 'auto' },
+    minHeight: '210px',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    border: `1px solid ${theme.palette.divider}`,
+    padding: '1rem',
   },
   iconContainer: {
     color: theme.palette.primary.main,

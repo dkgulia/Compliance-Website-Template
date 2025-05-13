@@ -21,13 +21,13 @@ const WorkflowSection: React.FC = () => {
               {data.subtitle}
             </Typography>
           </Box>
-          
+
           <Box sx={workflowSectionStyle.stepsContainer}>
             {data.steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
                 <Box key={index} sx={workflowSectionStyle.stepCard}>
-                  <Box sx={workflowSectionStyle.stepNumber}>{index + 1}</Box>
+                 
                   <Box sx={{
                     ...workflowSectionStyle.iconContainer,
                     backgroundColor: theme.palette.secondary.main,

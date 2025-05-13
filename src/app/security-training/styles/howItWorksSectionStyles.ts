@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const howItWorksSectionStyles = {
   container: {
     paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
     marginTop: '0rem',
     background: theme.palette.background.default,
   },
@@ -12,7 +11,6 @@ const howItWorksSectionStyles = {
     marginX: 'auto',
     marginTop: '1rem',
     textAlign: { xs: 'center', sm: 'center' },
-    background: '#17171799',
     borderRadius: { xs: '0rem', md: '2rem' },
     padding: { xs: '1rem', sm: '2rem' },
   },

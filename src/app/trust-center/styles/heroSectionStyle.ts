@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const heroSectionStyle = {
   container: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '2rem', xs: '1rem' },
     backgroundColor: theme.palette.background.default,
   },
   containerBox: {
@@ -56,7 +55,7 @@ const heroSectionStyle = {
   },
   ctaButton: {
     marginTop: '1.5rem',
-    color: theme.palette.text.primary,
+    color: '#f9fafb',
     fontWeight: 800,
     padding: {
       xs: '0.25rem 0.5rem',
@@ -64,14 +63,16 @@ const heroSectionStyle = {
       md: '0.7rem 1rem',
     },
     borderRadius: '0.5rem',
-    backgroundColor: theme.palette.secondary.main,
-    border: `1px solid ${theme.palette.secondary.dark}`,
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
     textTransform: 'none',
     fontSize: '0.9rem',
     whiteSpace: 'nowrap',
-    transition: 'all 150ms ease',
+    transition: 'background-color 150ms ease',
     '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
+      transform: 'translateY(-2px)',
     },
   },
   imageBox: {

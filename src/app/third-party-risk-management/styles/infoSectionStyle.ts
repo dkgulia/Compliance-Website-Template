@@ -4,7 +4,7 @@ const infoSectionStyle = {
   section: {
     paddingTop: { sm: '2rem', xs: '1rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
   },
   alternateBackground: {
     backgroundColor: theme.palette.background.default,
@@ -59,13 +59,12 @@ const infoSectionStyle = {
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.secondary.main,
+    color: '#115e59',
     marginBottom: '0.5rem',
   },
   highlight: {
     display: 'inline-block',
     padding: '0.5rem 1rem',
-    backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     fontWeight: 600,
     borderRadius: '0.5rem',

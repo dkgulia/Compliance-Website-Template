@@ -2,7 +2,7 @@ import theme from '../../../theme';
 
 const heroSectionStyles = {
   container: {
-    padding: '4rem 1rem',
+    padding: '1rem 1rem',
     background: theme.palette.background.default,
   },
   containerBox: {
@@ -17,7 +17,7 @@ const heroSectionStyles = {
   leftContentBox: {
     flex: 1,
     textAlign: { xs: 'center', md: 'left' },
-    padding: { xs: '1rem', md: '2rem' },
+    padding: { xs: '1rem', md: '2rem' }
   },
   imageBox: {
     marginTop: { xs: '2rem', md: '0' },
@@ -33,6 +33,7 @@ const heroSectionStyles = {
     borderRadius: '1rem',
     background: '#115e59',
     marginBottom: '1rem',
+    border: 'none',
   },
   tagText: {
     color: 'white',
@@ -44,6 +45,7 @@ const heroSectionStyles = {
     fontWeight: '600',
     marginBottom: '1rem',
     color: theme.palette.text.primary,
+
   },
   subtitle: {
     fontSize: { xs: '1.2rem', md: '1.5rem' },

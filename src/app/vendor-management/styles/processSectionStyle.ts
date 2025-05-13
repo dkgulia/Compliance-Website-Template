@@ -2,7 +2,6 @@ import theme from '../../../theme';
 
 const processSectionStyle = {
   section: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
@@ -16,10 +15,10 @@ const processSectionStyle = {
     textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '2.5rem' },
-    fontWeight: 700,
+    fontWeight: '600',
+    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem'},
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
+    marginBottom: '0.5rem',
     textAlign: 'center',
   },
   subtitle: {

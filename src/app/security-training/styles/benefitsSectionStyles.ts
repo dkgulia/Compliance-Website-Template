@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const benefitsSectionStyles = {
   box: {
     paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1.5rem', md: '2rem' },
     marginTop: '0rem',
     backgroundColor: theme.palette.background.default,
   },
@@ -36,27 +35,10 @@ const benefitsSectionStyles = {
     marginBottom: '1rem',
     position: 'relative',
     display: 'inline-block',
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      bottom: '-0.5rem',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      width: '60px',
-      height: '3px',
-      background: theme.palette.secondary.main,
-      borderRadius: '2px',
-    },
   },
   subtitle: {
     color: theme.palette.text.secondary,
     fontSize: '1rem',
-    lineHeight: 1.6,
-    maxWidth: '800px',
-    marginTop: '1.5rem',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginBottom: '2rem',
   },
   heading: {
     fontWeight: '600',
