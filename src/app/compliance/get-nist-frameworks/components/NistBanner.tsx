@@ -7,6 +7,13 @@ import iso22301BannerStyle from '../styles/nistBannerStyle';
 import businessContinuityImg from '../images/nist-cta.png';
 
 const ISO22301Banner = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Box sx={iso22301BannerStyle.box}>
       <Box sx={iso22301BannerStyle.container}>
@@ -17,7 +24,11 @@ const ISO22301Banner = () => {
           <Typography variant="body1" sx={iso22301BannerStyle.description}>
             ISO 22301 is essential for organizations seeking to establish robust business continuity management systems that protect operations during disruptions and maintain critical functions.
           </Typography>
-          <Button variant="contained" sx={iso22301BannerStyle.button} href="/compliance">
+          <Button
+            variant="contained"
+            sx={iso22301BannerStyle.button}
+            onClick={scrollToTop}
+          >
             Book Your Demo <ArrowForwardIcon sx={{ ml: 1 }} />
           </Button>
         </Box>

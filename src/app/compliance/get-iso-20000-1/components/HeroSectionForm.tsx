@@ -105,8 +105,8 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 							Book Your ISO 20000-1 Demo Today!
 						</Typography>
 						<Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
-              Get answers to all your questions about ISO 20000-1 compliance.
-            </Typography>
+							Get answers to all your questions about ISO 20000-1 compliance.
+						</Typography>
 					</Grid>
 
 					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
@@ -122,8 +122,8 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								sx={heroSectionStyle.formInput}
 							/>
 							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                {touched.fullName && errors.fullName}
-              </FormHelperText>
+								{touched.fullName && errors.fullName}
+							</FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -139,9 +139,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								value={values.email}
 								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                {touched.email && errors.email}
-              </FormHelperText>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.email && errors.email}</FormHelperText>
 						</FormControl>
 					</Grid>
 

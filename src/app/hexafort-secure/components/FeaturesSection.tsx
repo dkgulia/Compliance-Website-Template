@@ -21,47 +21,76 @@ const FeaturesSection: React.FC = () => {
           <Typography variant="h2" sx={featuresSectionStyle.heading}>
             {features.title}
           </Typography>
-          {features.subtitle && (
-            <Typography variant="body1" sx={featuresSectionStyle.subheading}>
-              {features.subtitle}
-            </Typography>
-          )}
+      
         </Box>
 
-        {features.steps.map((step, index) => (
-          <Box
-            key={index}
-            sx={{
-              ...featuresSectionStyle.featureStep,
-              ...(index % 2 !== 0 ? featuresSectionStyle.featureStepReverse : {}),
-            }}
-          >
-            <Box sx={featuresSectionStyle.textContainer}>
-              <Box sx={featuresSectionStyle.stepNumber}>{index + 1}</Box>
-              <Typography variant="h3" sx={featuresSectionStyle.stepTitle}>
-                {step.heading}
-              </Typography>
-              <Typography variant="body1" sx={featuresSectionStyle.stepDescription}>
-                {step.description}
-              </Typography>
-            </Box>
+        {features.steps.map((step, index) => {
+          const imageOnLeft = index % 2 === 0;
 
-            <Box sx={featuresSectionStyle.imageContainer}>
-              <Image
-                src={stepImages[index]}
-                alt={step.heading}
-                width={400}
-                height={300}
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  borderRadius: '8px',
-                 
-                }}
-              />
+          return (
+            <Box
+              key={index}
+              sx={{
+                ...featuresSectionStyle.featureStep,
+                ...(imageOnLeft ? {} : featuresSectionStyle.featureStepReverse),
+              }}
+            >
+              {imageOnLeft ? (
+                <>
+                  <Box sx={featuresSectionStyle.imageContainer}>
+                    <Image
+                      src={stepImages[index]}
+                      alt={step.heading}
+                      width={350}
+                      height={220}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                      }}
+                    />
+                  </Box>
+                  <Box sx={featuresSectionStyle.textContainer}>
+                    <Typography variant="subtitle1" sx={featuresSectionStyle.stepNumber}>
+                      Step {index + 1}
+                    </Typography>
+                    <Typography variant="h3" sx={featuresSectionStyle.stepTitle}>
+                      {step.heading}
+                    </Typography>
+                    <Typography variant="body1" sx={featuresSectionStyle.stepDescription}>
+                      {step.description}
+                    </Typography>
+                  </Box>
+                </>
+              ) : (
+                <>
+                  <Box sx={featuresSectionStyle.textContainer}>
+                    <Typography variant="subtitle1" sx={featuresSectionStyle.stepNumber}>
+                      Step {index + 1}
+                    </Typography>
+                    <Typography variant="h3" sx={featuresSectionStyle.stepTitle}>
+                      {step.heading}
+                    </Typography>
+                    <Typography variant="body1" sx={featuresSectionStyle.stepDescription}>
+                      {step.description}
+                    </Typography>
+                  </Box>
+                  <Box sx={featuresSectionStyle.imageContainer}>
+                    <Image
+                      src={stepImages[index]}
+                      alt={step.heading}
+                      width={350}
+                      height={220}
+                      style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                      }}
+                    />
+                  </Box>
+                </>
+              )}
             </Box>
-          </Box>
-        ))}
+          );
+        })}
       </Container>
     </Box>
   );

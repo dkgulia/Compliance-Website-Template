@@ -8,6 +8,13 @@ import { iso42001Data } from '../constants/iso42001Data';
 const CTASection: React.FC = () => {
     const { cta } = iso42001Data.sections;
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <Box sx={ctaSectionStyle.container}>
             <Container maxWidth="lg">
@@ -23,6 +30,7 @@ const CTASection: React.FC = () => {
                     <Button
                         variant="contained"
                         sx={ctaSectionStyle.button}
+                        onClick={scrollToTop}
                         endIcon={<ArrowForwardIcon />}
                     >
                         {cta.ctaText}

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button,useTheme } from '@mui/material';
+import { Box, Typography, Button, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import createBannerStyle from '../styles/bannerStyle';
@@ -9,6 +9,13 @@ import dpdpBannerImg from '../images/dpdp-cta.png';
 const DpdpBanner: React.FC = () => {
   const theme = useTheme();
   const styles = createBannerStyle(theme);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <Box component="section" sx={styles.box}>
@@ -23,7 +30,7 @@ const DpdpBanner: React.FC = () => {
           <Button
             variant="contained"
             sx={styles.button}
-            href="/compliance"
+            onClick={scrollToTop}
             endIcon={<ArrowForwardIcon sx={{ ml: 1 }} />}
           >
             Book Your Demo

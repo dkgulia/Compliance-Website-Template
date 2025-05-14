@@ -10,7 +10,14 @@ const Iso27001Banner = () => {
   const section = iso27001Data.sections.find((sec) => sec.Sno === "8");
   if (!section) return null;
 
-  const { title, description, buttonText, buttonLink, image } = section.content;
+  const { title, description, buttonText, image } = section.content;
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <Box sx={iso27001BannerStyle.box}>
@@ -22,7 +29,11 @@ const Iso27001Banner = () => {
           <Typography variant="body1" sx={iso27001BannerStyle.description}>
             {description}
           </Typography>
-          <Button variant="contained" sx={iso27001BannerStyle.button} href={buttonLink}>
+          <Button
+            variant="contained"
+            sx={iso27001BannerStyle.button}
+            onClick={scrollToTop}
+          >
             {buttonText} <ArrowForwardIcon sx={{ ml: 1 }} />
           </Button>
         </Box>

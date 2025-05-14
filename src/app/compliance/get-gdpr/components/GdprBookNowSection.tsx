@@ -14,6 +14,13 @@ export default function GdprBookNowSection() {
         'Comprehensive security to mitigate breach risk',
     ];
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <Box sx={gdprBookNowStyle.container}>
             <Container maxWidth="lg">
@@ -59,7 +66,7 @@ export default function GdprBookNowSection() {
                             <Button
                                 variant="outlined"
                                 sx={gdprBookNowStyle.button}
-                                href="/compliance"
+                                onClick={scrollToTop}
                             >
                                 Get Started
                             </Button>

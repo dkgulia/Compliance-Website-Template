@@ -6,9 +6,15 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import callToActionStyle from '../styles/callToActionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
+import { useRouter } from 'next/navigation';
 
 const CallToActionSection: React.FC = () => {
 	const { callToAction } = thirdPartyRiskManagementData;
+	const router = useRouter();
+
+	const handleRedirect = () => {
+		router.push('/hexafort-secure');
+	};
 
 	return (
 		<Box component="section" sx={callToActionStyle.section}>
@@ -24,7 +30,12 @@ const CallToActionSection: React.FC = () => {
 						<Typography variant="body1" sx={callToActionStyle.description}>
 							{callToAction.description}
 						</Typography>
-						<Button variant="contained" sx={callToActionStyle.ctaButton} endIcon={<ArrowForwardIcon />}>
+						<Button
+							variant="contained"
+							sx={callToActionStyle.ctaButton}
+							endIcon={<ArrowForwardIcon />}
+							onClick={handleRedirect}
+						>
 							{callToAction.ctaText}
 						</Button>
 					</Box>

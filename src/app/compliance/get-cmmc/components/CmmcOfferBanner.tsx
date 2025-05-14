@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -14,6 +14,13 @@ const CmmcOfferBanner: React.FC = () => {
 
     if (!offerContent) return null;
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <Box sx={offerBannerStyle.box}>
             <Box sx={offerBannerStyle.container}>
@@ -27,7 +34,7 @@ const CmmcOfferBanner: React.FC = () => {
                     <Button
                         variant="contained"
                         sx={offerBannerStyle.button}
-                        href="/compliance"
+                        onClick={scrollToTop}
                         endIcon={<ArrowForwardIcon sx={{ ml: 1 }} />}
                     >
                         Book Your Demo

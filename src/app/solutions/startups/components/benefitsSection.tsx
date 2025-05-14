@@ -8,9 +8,11 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import PersonIcon from '@mui/icons-material/Person';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
 import hexafortData from '../constant/dataFile';
+import { useRouter } from 'next/navigation';
 
 const BenefitsSection: React.FC = () => {
   const { benefits, testimonials } = hexafortData;
+  const router = useRouter();
 
   const getInitials = (name: string) => {
     return name
@@ -20,6 +22,9 @@ const BenefitsSection: React.FC = () => {
       .toUpperCase();
   };
 
+  const handleRedirect = () => {
+    router.push('/hexafort-secure');
+  };
 
   return (
     <Box sx={benefitsSectionStyle.container}>
@@ -76,7 +81,11 @@ const BenefitsSection: React.FC = () => {
               Our experts are ready to help you navigate the complex world of compliance and security.
               Get started today and build a strong foundation for your startup's growth.
             </Typography>
-            <Button variant="contained" sx={benefitsSectionStyle.ctaButton}>
+            <Button
+              variant="contained"
+              sx={benefitsSectionStyle.ctaButton}
+              onClick={handleRedirect}
+            >
               Schedule a Consultation
             </Button>
           </Box>

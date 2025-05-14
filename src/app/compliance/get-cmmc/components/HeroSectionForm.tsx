@@ -37,7 +37,6 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 }) => {
 	const [loading, setLoading] = useState(false);
 	const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-	const [isChecked, setIsChecked] = useState(false);
 
 	const toggleOption = (option: string) => {
 		onOptionsChange(
@@ -47,52 +46,46 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 		);
 	};
 
-// 	const handleClick = async () => {
-// 		if (!isChecked) {
-//       setAlert({ type: 'error', message: 'You must agree to the terms before submitting.' });
-//       return;
-//     }
+	// const handleClick = async () => {
+	// 	if (values.name && !errors.name && values.email && !errors.email) {
+	// 		if (selectedOptions.length === 0) {
+	// 			setAlert({ type: 'error', message: 'Please select at least one compliance option.' });
+	// 			return;
+	// 		}
 
-// 		if (values.name && !errors.name && values.email && !errors.email) {
-// 			if (selectedOptions.length === 0) {
-// 				setAlert({ type: 'error', message: 'Please select at least one compliance option.' });
-// 				return;
-// 			}
+	// 		setLoading(true);
+	// 		const sheetName = sheetNameTypes.cmmcForm;
+	// 		const data = [
+	// 			values.name,
+	// 			values.email,
+	// 			getCurrentTime(),
+	// 			selectedOptions.join(', ')
+	// 		];
 
-// 			setLoading(true);
-// 			const sheetName = sheetNameTypes.cmmcForm;
-// 			const data = [
-// 				values.name,
-// 				values.email,
-// 				getCurrentTime(),
-// 				selectedOptions.join(', ')
-// 			];
-
-// 			try {
-// 				await addDataToGoogleSheetRequest(sheetName, data);
-// 				setAlert({ type: 'success', message: 'Your response has been saved.' });
-// 				resetForm();
-// 				setIsChecked(false);
-// 				onOptionsChange(['ISO 27001', 'ISO 42001', 'ISO 27018']);
-// 			} catch (err: any) {
-// 				let errorMessage = 'Network Error';
-// 				if (err.response?.data?.message) {
-// 					errorMessage = err.response.data.message;
-// 				}
-// 				setAlert({ type: 'error', message: errorMessage });
-// 				console.error(err);
-// 			} finally {
-// 				setLoading(false);
-// 			}
-// 		}
-// 	};
+	// 		try {
+	// 			await addDataToGoogleSheetRequest(sheetName, data);
+	// 			setAlert({ type: 'success', message: 'Your response has been saved.' });
+	// 			resetForm();
+	// 			onOptionsChange(['ISO 27001', 'ISO 42001', 'ISO 27018']);
+	// 		} catch (err: any) {
+	// 			let errorMessage = 'Network Error';
+	// 			if (err.response?.data?.message) {
+	// 				errorMessage = err.response.data.message;
+	// 			}
+	// 			setAlert({ type: 'error', message: errorMessage });
+	// 			console.error(err);
+	// 		} finally {
+	// 			setLoading(false);
+	// 		}
+	// 	}
+	// };
 
 	const handleSnackbarClose = () => {
 		setAlert(null);
 	};
 
 	return (
-		<Box>
+		<Box sx={heroSectionStyle.formContainer}>
 			{alert && (
 				<Snackbar
 					open={!!alert}
@@ -112,11 +105,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 							Book Your CMMC Demo Today!
 						</Typography>
 						<Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
-              Get answers to all your questions about CMMC compliance.
-            </Typography>
+							Get answers to all your questions about CMMC compliance.
+						</Typography>
 					</Grid>
 
-					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
+					<Grid size={{ xs: 12 }}>
 						<FormControl fullWidth error={touched.name && Boolean(errors.name)}>
 							<Typography sx={heroSectionStyle.formLabel}>Full Name</Typography>
 							<OutlinedInput
@@ -128,13 +121,11 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								value={values.name}
 								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                {touched.name && errors.name}
-              </FormHelperText>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.name && errors.name}</FormHelperText>
 						</FormControl>
 					</Grid>
 
-					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
+					<Grid size={{ xs: 12 }}>
 						<FormControl fullWidth error={touched.email && Boolean(errors.email)}>
 							<Typography sx={heroSectionStyle.formLabel}>Work Email</Typography>
 							<OutlinedInput
@@ -146,14 +137,12 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								value={values.email}
 								sx={heroSectionStyle.formInput}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>
-                {touched.email && errors.email}
-              </FormHelperText>
+							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.email && errors.email}</FormHelperText>
 						</FormControl>
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
-						<Typography sx={heroSectionStyle.formLabel}>Compliances Interested In*</Typography>
+						<Typography sx={heroSectionStyle.compliancesLabel}>Compliances Interested In*</Typography>
 						<Grid container spacing={1}>
 							<Grid size={{ xs: 6, sm: 4 }}>
 								<FormControlLabel
@@ -354,36 +343,13 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
-						<FormControlLabel
-							control={
-								<Checkbox
-									checked={isChecked}
-									onChange={(e) => setIsChecked(e.target.checked)}
-									color="primary"
-									sx={heroSectionStyle.checkbox}
-								/>
-							}
-							label={<Typography sx={{ color: 'text.primary' }}>I agree to the terms and conditions.</Typography>}
-						/>
-					</Grid>
-
-					<Grid size={{ xs: 12 }}>
-						<Typography sx={heroSectionStyle.secondaryText}>
-							By clicking submit below, you consent to allow HexaFort to store and process the Personal Data submitted by you above as per our{' '}
-							<a href="/privacy-policy" target="_blank" style={{ color: '#115e59' }}>
-								Privacy Policy
-							</a>.
-						</Typography>
-					</Grid>
-
-					<Grid size={{ xs: 12 }}>
 						<Button
 							type="button"
 							fullWidth
 							variant="contained"
 							sx={heroSectionStyle.button}
 							//onClick={handleClick}
-							disabled={loading || !isChecked}
+							disabled={loading}
 							disableElevation
 						>
 							{loading ? 'Submitting...' : 'Book Your Demo'}

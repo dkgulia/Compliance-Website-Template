@@ -4,11 +4,17 @@ import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import pciDssBookADemoStyle from '../styles/pciDssBookADemoStyle';
-import { COMPLIANCE } from '../../../constants/routes';
 import pciDssData from '../constants/pciDssData';
 import bookDemoImage from '../images/pci-book-a-demo.png';
 
 const PciDssBookADemo = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <Box sx={pciDssBookADemoStyle.box}>
             <Container sx={pciDssBookADemoStyle.container}>
@@ -47,7 +53,7 @@ const PciDssBookADemo = () => {
                         <Button
                             type="button"
                             sx={pciDssBookADemoStyle.button}
-                            href={COMPLIANCE}
+                            onClick={scrollToTop}
                         >
                             {pciDssData.bookADemoButtonLabel}
                         </Button>

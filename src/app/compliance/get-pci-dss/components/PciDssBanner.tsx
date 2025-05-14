@@ -8,6 +8,13 @@ import pciDssLockIcon from '../images/pci-dss-demo.png';
 import Image from 'next/image';
 
 const PciDssBanner: React.FC = () => {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+
 	return (
 		<Box sx={bannerStyle.box}>
 			<Box sx={bannerStyle.bannerContainer}>
@@ -37,7 +44,12 @@ const PciDssBanner: React.FC = () => {
 							</Grid>
 
 							<Grid size={{ xs: 12 }} sx={bannerStyle.buttonSection}>
-								<Button sx={bannerStyle.button} href="/compliance" variant="contained" endIcon={<ArrowForward />}>
+								<Button
+									sx={bannerStyle.button}
+									variant="contained"
+									endIcon={<ArrowForward />}
+									onClick={scrollToTop}
+								>
 									{pciDssData.bannerButtonLabel}
 								</Button>
 							</Grid>

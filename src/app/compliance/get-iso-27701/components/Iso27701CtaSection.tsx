@@ -7,6 +7,13 @@ import iso27701Data from '../constants/iso27701Data';
 import bannerImage from '../images/create-a-professional-illustration-for-an-iso-2000 (3).png'
 
 const Iso27701CtaSection: React.FC = () => {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
+
 	return (
 		<Box sx={ctaSectionStyle.box}>
 			<Box sx={ctaSectionStyle.container}>
@@ -21,9 +28,9 @@ const Iso27701CtaSection: React.FC = () => {
 						<Button
 							variant="contained"
 							sx={ctaSectionStyle.button}
-							href="/compliance"
+							onClick={scrollToTop}
 						>
-							Contact Us
+							Book Your demo
 						</Button>
 					</Grid>
 					<Grid size={{ xs: 12, md: 5 }} sx={ctaSectionStyle.imageContainer}>

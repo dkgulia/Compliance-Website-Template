@@ -39,7 +39,6 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
 }) => {
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [loading, setLoading] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
 
   const toggleOption = (option: string) => {
     onOptionsChange(
@@ -50,11 +49,6 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
   };
 
   // const handleClick = async () => {
-  //   if (!isChecked) {
-  //     setAlert({ type: 'error', message: 'You must agree to the terms before submitting.' });
-  //     return;
-  //   }
-
   //   if (selectedOptions.length === 0) {
   //     setAlert({ type: 'error', message: 'Please select at least one compliance.' });
   //     return;
@@ -68,7 +62,6 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
   //       await addDataToGoogleSheetRequest(sheetName, data);
   //       setAlert({ type: 'success', message: 'Your response has been saved.' });
   //       resetForm();
-  //       setIsChecked(false);
   //       onOptionsChange([]);
   //     } catch (err: any) {
   //       let errorMessage = 'Network Error';
@@ -171,36 +164,13 @@ const CcpaHeroSectionForm: React.FC<CcpaHeroSectionFormProps> = ({
           </Grid>
 
           <Grid size={{ xs: 12 }}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={isChecked}
-                  onChange={(e) => setIsChecked(e.target.checked)}
-                  color="primary"
-                  sx={ccpaHeroSectionStyles.checkbox}
-                />
-              }
-              label={<Typography sx={{ color: 'text.primary' }}>I agree to the terms and conditions.</Typography>}
-            />
-          </Grid>
-
-          <Grid size={{ xs: 12 }}>
-            <Typography sx={ccpaHeroSectionStyles.secondaryText}>
-              By clicking submit below, you consent to allow HexaFort to store and process the Personal Data submitted by you above as per our{' '}
-              <a href="/privacy-policy" target="_blank" style={{ color: '#115e59' }}>
-                Privacy Policy
-              </a>.
-            </Typography>
-          </Grid>
-
-          <Grid size={{ xs: 12 }}>
             <Button
               type="button"
               fullWidth
               variant="contained"
               sx={ccpaHeroSectionStyles.button}
               //onClick={handleClick}
-              disabled={loading || !isChecked}
+              disabled={loading}
               disableElevation
             >
               {loading ? 'Submitting...' : 'Book Your Demo'}

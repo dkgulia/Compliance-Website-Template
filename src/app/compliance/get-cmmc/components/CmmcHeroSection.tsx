@@ -24,8 +24,8 @@ const CmmcHeroSection: React.FC = () => {
     <Box sx={heroSectionStyle.container}>
       <Container sx={heroSectionStyle.containerBox}>
         <Box sx={heroSectionStyle.leftContentBox}>
-          <Box sx={heroSectionStyle.chip}>
-            <Typography variant="body2" sx={heroSectionStyle.chipTypography}>
+          <Box sx={heroSectionStyle.tag}>
+            <Typography variant="body2" sx={heroSectionStyle.tagText}>
               🔒 CMMC compliance made easy
             </Typography>
           </Box>

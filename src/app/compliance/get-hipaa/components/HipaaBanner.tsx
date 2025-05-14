@@ -7,6 +7,13 @@ import hipaaBannerStyle from '../styles/hipaaBannerStyle';
 import healthcareComplianceImg from '../images/ hipaa-banner.png';
 
 const HipaaBanner = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Box sx={hipaaBannerStyle.box}>
       <Box sx={hipaaBannerStyle.container}>
@@ -17,7 +24,11 @@ const HipaaBanner = () => {
           <Typography variant="body1" sx={hipaaBannerStyle.description}>
             HIPAA is required for modern healthcare plans, providers, insurers, and clearinghouses, as well as biotech and pharmaceutical organizations.
           </Typography>
-          <Button variant="contained" sx={hipaaBannerStyle.button} href="/compliance">
+          <Button
+            variant="contained"
+            sx={hipaaBannerStyle.button}
+            onClick={scrollToTop}
+          >
             Book Your Demo <ArrowForwardIcon sx={{ ml: 1 }} />
           </Button>
         </Box>
