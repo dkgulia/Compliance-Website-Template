@@ -44,9 +44,10 @@ const featuresSectionStyle = {
     alignItems: { xs: 'flex-start', md: 'center' },
     justifyContent: 'space-between',
     width: '100%',
-    marginBottom: '3.5rem', // Reduced from 5rem to 3.5rem
+    marginBottom: '3.5rem',
     gap: { xs: '1.5rem', md: '1.5rem' },
     position: 'relative',
+     
   },
   featureStepReverse: {
     flexDirection: { xs: 'column', md: 'row-reverse' },
@@ -58,6 +59,7 @@ const featuresSectionStyle = {
     alignItems: 'flex-start',
     textAlign: 'left',
     maxWidth: { md: '55%' },
+      border:'2px solid red'
   },
   stepNumber: {
     color: '#115e59',
@@ -85,6 +87,7 @@ const featuresSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     maxWidth: { md: '45%' },
+    border:'2px solid red'
   },
 };
 
