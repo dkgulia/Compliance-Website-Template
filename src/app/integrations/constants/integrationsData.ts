@@ -13,6 +13,11 @@ import {
     Storage,
     ApiRounded
 } from '@mui/icons-material';
+import { StaticImageData } from 'next/image';
+import awsLogo from '../images/aws-logo.png';
+import gcpLogo from '../images/google.png';
+import azureLogo from '../images/azure-logo.png';
+import githubLogo from '../images/github-logo.png';
 
 export interface HeroSectionData {
     title: string;
@@ -35,7 +40,7 @@ export interface BenefitData {
 
 export interface IntegrationItem {
     name: string;
-    logo: string;
+    logo: string | StaticImageData;
     description: string;
     category: string;
     comingSoon?: boolean;
@@ -138,25 +143,25 @@ const integrationsData: IntegrationsData = {
         integrations: [
             {
                 name: "AWS",
-                logo: "/images/aws-logo.png",
+                logo: awsLogo,
                 description: "Automatically collect security configurations and compliance evidence from AWS services.",
                 category: "Cloud Infrastructure"
             },
             {
                 name: "Google Cloud Platform",
-                logo: "/images/gcp-logo.png",
+                logo: gcpLogo,
                 description: "Monitor GCP security settings and compliance controls in real-time.",
                 category: "Cloud Infrastructure"
             },
             {
                 name: "Azure",
-                logo: "/images/azure-logo.png",
+                logo: azureLogo,
                 description: "Connect with Microsoft Azure to track compliance and security across your Microsoft cloud resources.",
                 category: "Cloud Infrastructure"
             },
             {
                 name: "GitHub",
-                logo: "/images/github-logo.png",
+                logo: githubLogo,
                 description: "Integrate security checks directly into your code repositories and CI/CD pipelines.",
                 category: "DevOps Tools"
             }

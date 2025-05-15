@@ -2,7 +2,7 @@ import theme from '../../../theme';
 
 const impactSectionStyle = {
 	section: {
-		padding: { xs: '4rem 1rem', md: '6rem 2rem' },
+		padding: { xs: '4rem 1rem', md: '4rem 1rem' },
 		background: '#101010',
 		position: 'relative',
 		overflow: 'hidden',

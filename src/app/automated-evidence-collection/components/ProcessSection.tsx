@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import processSectionStyle from '../styles/processSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 
@@ -12,39 +12,27 @@ const ProcessSection: React.FC = () => {
 		<Box id="how-it-works" sx={processSectionStyle.box}>
 			<Box sx={processSectionStyle.workflowOuterContainer}>
 				<Box sx={processSectionStyle.workflowContainer}>
-					<Grid container spacing={2} sx={processSectionStyle.gridWrapper}>
-						<Grid size={{ xs: 12, md: 5 }} sx={processSectionStyle.leftSection}>
-							<Box sx={processSectionStyle.chip}>Process</Box>
-							<Typography variant="h4" sx={processSectionStyle.title}>
-								{process.title}
-							</Typography>
-						</Grid>
-
-						<Grid size={{ xs: 12, md: 7 }} sx={processSectionStyle.rightSection}>
-							<Typography variant="body1" sx={processSectionStyle.description}>
-								{process.subtitle || 'How our automated evidence collection works'}
-							</Typography>
-						</Grid>
-					</Grid>
+					{/* Centered title */}
+					<Typography variant="h2" sx={processSectionStyle.centeredTitle}>
+						How It Works
+					</Typography>
 
 					<Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-						<Grid container spacing={2} sx={processSectionStyle.gridContainer}>
+						<Box sx={processSectionStyle.gridContainer}>
 							{process.steps.map((step, index) => (
-								<Grid size={{ xs: 12, sm: 6, md: 3 }} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
-									<Box sx={processSectionStyle.card}>
-										<Box sx={processSectionStyle.cardContent}>
-											<Box sx={processSectionStyle.stepNumber}>{index + 1}</Box>
-											<Typography variant="body1" sx={processSectionStyle.cardTitle}>
-												{step.heading}
-											</Typography>
-											<Typography variant="body2" sx={processSectionStyle.stepDescription}>
-												{step.description}
-											</Typography>
-										</Box>
+								<Box key={index} sx={processSectionStyle.card}>
+									<Box sx={processSectionStyle.cardContent}>
+										<Box sx={processSectionStyle.stepNumber}>{index + 1}</Box>
+										<Typography variant="body1" sx={processSectionStyle.cardTitle}>
+											{step.heading}
+										</Typography>
+										<Typography variant="body2" sx={processSectionStyle.stepDescription}>
+											{step.description}
+										</Typography>
 									</Box>
-								</Grid>
+								</Box>
 							))}
-						</Grid>
+						</Box>
 					</Box>
 				</Box>
 			</Box>

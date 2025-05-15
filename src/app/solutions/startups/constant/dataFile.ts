@@ -24,7 +24,7 @@ const hexafortData = {
 	    },
 	    {
 	      "title": "Cost-Effective Solution",
-	      "description": "Total package price of XXXX, strategically allocated across all compliance frameworks"
+	      "description": "Total package price of ????, strategically allocated across all compliance frameworks"
 	    }
 	  ],
 	  "description": "This foundational package is designed to provide startups with the essential security, privacy, and data protection compliance measures needed to build customer confidence and succeed in international markets. Our integrated approach ensures efficiency while maintaining the highest standards of implementation.",
@@ -94,7 +94,7 @@ const hexafortData = {
 		"description": "Information security training for all employees, including specialized department training"
 	      }
 	    ],
-	    "cost": 'xxxx',
+	    "cost": '????',
 	    "imagePrompt": "Pyramid diagram showing ISO 27001 implementation layers, from audit and certification at bottom to continuous improvement at top, with cybersecurity icons and dark background"
 	  },
 	  {
@@ -164,7 +164,7 @@ const hexafortData = {
 		"description": "Consultation, preparation, and artifact collection for the SOC 2 Type I audit conducted by a qualified CPA firm"
 	      }
 	    ],
-	    "cost": 'xxxx',
+	    "cost": '????',
 	    "imagePrompt": "Circular diagram showing the five trust services criteria of SOC 2 (Security, Availability, Processing Integrity, Confidentiality, and Privacy) with connecting nodes, on a dark background with tech elements"
 	  },
 	  {
@@ -186,7 +186,7 @@ const hexafortData = {
 		"description": "Comprehensive guidance during the SOC 2 Type II audit process conducted by a qualified CPA firm"
 	      }
 	    ],
-	    "cost": 'xxxx',
+	    "cost": '????',
 	    "imagePrompt": "Time-based graph showing audit period with monitoring points along a timeline, featuring futuristic digital elements and security monitoring visualization on dark background"
 	  },
 	  {
@@ -248,7 +248,7 @@ const hexafortData = {
 		"description": "Consultation on appropriate data transfer mechanisms for international data flows, including standard contractual clauses"
 	      }
 	    ],
-	    "cost": 'xxxx',
+	    "cost": '????',
 	    "imagePrompt": "EU stars arranged in a circle with 'GDPR' text overlay and a gold padlock, on blue digital background with data protection elements"
 	  }
 	],
@@ -337,23 +337,23 @@ const hexafortData = {
 	},
 	"costBreakdown": {
 	  "title": "Package Cost Breakdown",
-	  "totalCost": 'XXXX',
+	  "totalCost": '????',
 	  "breakdown": [
 	    {
 	      "framework": "ISO 27001",
-	      "amount": 'XXXX',
+	      "amount": '????????',
 	    },
 	    {
 	      "framework": "SOC 2 Type I",
-	      "amount":'XXXX',
+	      "amount":'????',
 	    },
 	    {
 	      "framework": "SOC 2 Type II",
-	      "amount": 'XXXX',
+	      "amount": '????',
 	    },
 	    {
 	      "framework": "GDPR",
-	      "amount": 'XXXX',
+	      "amount": '????',
 	    }
 	  ],
 	  "description": "The total package price of $7,000 is strategically allocated across all compliance frameworks to provide maximum value. The largest portions are dedicated to ISO 27001 implementation ($2,500) and SOC 2 Type I preparation ($2,000), reflecting the comprehensive work required for these foundational certifications. The GDPR compliance foundation receives $1,500, while $1,000 is allocated for SOC 2 Type II consultation and support during the extended audit period.",

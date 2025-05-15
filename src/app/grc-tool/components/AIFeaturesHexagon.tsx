@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Box } from '@mui/material';
+import companyLogo from  '../../compliance/get-pci-dss/images/dual-hex-white.png'
 
 const AIFeaturesHexagon = () => {
   const features = [
@@ -147,7 +148,7 @@ const AIFeaturesHexagon = () => {
             }}
           >
             <Image
-              src="/images/company-logo.png"
+              src={companyLogo} // Use the imported image
               alt="Company Logo"
               width={50}
               height={50}

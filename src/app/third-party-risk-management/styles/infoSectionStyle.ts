@@ -65,7 +65,7 @@ const infoSectionStyle = {
   highlight: {
     display: 'inline-block',
     padding: '0.5rem 1rem',
-    color: theme.palette.primary.contrastText,
+    color:'#115e59',
     fontWeight: 600,
     borderRadius: '0.5rem',
     marginBottom: '1rem',

@@ -117,7 +117,7 @@ const featuredIntegrationsStyle = {
     backgroundColor: theme.palette.background.darkTransparent,
     color: theme.palette.text.primary,
     fontWeight: 'bold',
-    fontSize: '1.5rem',
+    fontSize: '1.rem',
   },
   integrationName: {
     fontSize: '1.1rem',

@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const conclusionStyle = {
   section: {
     paddingBottom: { sm: '6rem', xs: '4rem' },
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: '#115e59',
   },
   container: {
     maxWidth: '900px',
@@ -23,6 +23,7 @@ const conclusionStyle = {
     color: theme.palette.text.primary,
     position: 'relative',
     paddingBottom: '1rem',
+    marginTop:'2rem',
     '&::after': {
       content: '""',
       position: 'absolute',
@@ -36,7 +37,7 @@ const conclusionStyle = {
   },
   description: {
     fontSize: '1.1rem',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
     marginBottom: '2rem',
     lineHeight: 1.6,
   },
@@ -45,22 +46,30 @@ const conclusionStyle = {
     color: theme.palette.secondary.dark,
   },
   ctaButton: {
-    marginTop: '1rem',
-    backgroundColor: '#115e59',
+    marginTop: '0.5rem',
     color: '#f9fafb',
-    borderRadius: '0.5rem',
+    fontWeight: 800,
     padding: {
       xs: '0.25rem 0.5rem',
       sm: '0.375rem 0.75rem',
-      md: '0.25rem 2rem',
+      md: '0.7rem 2rem',
     },
+    borderRadius: '0.5rem',
+    backgroundColor: '#1f2937',
+    border: '1px solid #4b5563',
     textTransform: 'none',
-    fontSize: '1.2rem',
+    fontSize: '0.9rem',
     whiteSpace: 'nowrap',
-    border: '1px solid #0d9488',
-    transition: 'all 150ms ease',
+    transition: 'background-color 150ms ease',
     '&:hover': {
-      backgroundColor: '#0f766e',
+      backgroundColor: '#374151',
+      borderColor: '#4b5563',
+    },
+    '&.Mui-disabled': {
+      color: '#f9fafb',
+      opacity: 0.5,
+      backgroundColor: '#1f2937',
+      border: '1px solid #374151',
     },
   },
 };

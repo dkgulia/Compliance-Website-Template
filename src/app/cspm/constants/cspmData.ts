@@ -63,7 +63,6 @@ export const cspmData = {
         heroTitle: "Cloud Security Posture Management — Security That Feels Effortless",
         heroSubtitle: "Detect. Fix. Comply. All without breaking your DevOps flow.",
         heroDescription: [
-            "Your cloud environment powers your business—but as it grows, so do the risks. Misconfigurations, overlooked permissions, compliance gaps, and ballooning costs can quietly pile up and leave you exposed.",
             "With HexaFort CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."
         ],
         ctaText: "Get Started Free →"
@@ -72,7 +71,7 @@ export const cspmData = {
         title: "What You'll Love About Hexafort CSPM:",
         subtitle: "",
         benefitsList: [
-            
+
                 {
                     title: "Real-Time Risk Detection",
                     muiIcon: ReportProblemIcon,

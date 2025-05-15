@@ -15,7 +15,7 @@ const faqSectionStyle = {
     fontSize: { xs: '1.8rem', sm: '32px' },
     fontWeight: 600,
     textAlign: 'center',
-    marginBottom: '0.75rem',
+    marginBottom: '2rem',
     color: theme.palette.text.primary,
   },
   subtitle: {

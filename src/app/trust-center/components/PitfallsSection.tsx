@@ -7,52 +7,46 @@ import pitfallsSectionStyle from '../styles/pitfallsSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 
 const PitfallsSection: React.FC = () => {
-  const data = trustCenterPageData.sections.pitfalls;
-  const theme = useTheme();
+	const data = trustCenterPageData.sections.pitfalls;
+	return (
+		<Box sx={pitfallsSectionStyle.container}>
+			<Box sx={pitfallsSectionStyle.outerContainer}>
+				<Box sx={pitfallsSectionStyle.innerBox}>
+					<Box sx={pitfallsSectionStyle.titleSection}>
+						<Box sx={pitfallsSectionStyle.chip}>Common Challenges</Box>
+						<Typography variant="h2" sx={pitfallsSectionStyle.title}>
+							{data.title}
+						</Typography>
+						<Typography sx={pitfallsSectionStyle.subtitle}>{data.subtitle}</Typography>
+					</Box>
 
-  return (
-    <Box sx={pitfallsSectionStyle.container}>
-      <Box sx={pitfallsSectionStyle.outerContainer}>
-        <Box sx={pitfallsSectionStyle.innerBox}>
-          <Box sx={pitfallsSectionStyle.titleSection}>
-            <Box sx={pitfallsSectionStyle.chip}>Common Challenges</Box>
-            <Typography variant="h2" sx={pitfallsSectionStyle.title}>
-              {data.title}
-            </Typography>
-            <Typography sx={pitfallsSectionStyle.subtitle}>
-              {data.subtitle}
-            </Typography>
-          </Box>
-
-          <Box sx={pitfallsSectionStyle.gridContainer}>
-            {data.items.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <Box key={index} sx={pitfallsSectionStyle.pitfallCard}>
-                  <Box sx={pitfallsSectionStyle.pitfallContent}>
-                    <Box sx={pitfallsSectionStyle.iconContainer}>
-                      <IconComponent
-                        sx={{
-                          ...pitfallsSectionStyle.icon,
-                          color: 'white',
-                        }}
-                      />
-                    </Box>
-                    <Typography sx={pitfallsSectionStyle.pitfallTitle}>
-                      {item.heading}
-                    </Typography>
-                    <Typography sx={pitfallsSectionStyle.solutionText}>
-                      {item.subheading}
-                    </Typography>
-                  </Box>
-                </Box>
-              );
-            })}
-          </Box>
-        </Box>
-      </Box>
-    </Box>
-  );
+					<Box sx={pitfallsSectionStyle.gridContainer}>
+						{data.items.map((item, index) => {
+							const IconComponent = item.icon;
+							return (
+								<Box key={index} sx={pitfallsSectionStyle.pitfallCard}>
+									<Box sx={pitfallsSectionStyle.iconTopSection}>
+										<Box sx={pitfallsSectionStyle.iconContainer}>
+											<IconComponent
+												sx={{
+													...pitfallsSectionStyle.icon,
+													color: 'white',
+												}}
+											/>
+										</Box>
+									</Box>
+									<Box sx={pitfallsSectionStyle.contentBottomSection}>
+										<Typography sx={pitfallsSectionStyle.pitfallTitle}>{item.heading}</Typography>
+										<Typography sx={pitfallsSectionStyle.solutionText}>{item.subheading}</Typography>
+									</Box>
+								</Box>
+							);
+						})}
+					</Box>
+				</Box>
+			</Box>
+		</Box>
+	);
 };
 
 export default PitfallsSection;

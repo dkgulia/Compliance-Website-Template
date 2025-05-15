@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const heroSectionStyle = {
   section: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '3rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',

@@ -59,7 +59,6 @@ export const controlFrameworkData = {
         'Every organization has different risks, goals, and operational needs',
       description: [
         "At Hexafort, we understand that security and compliance aren't one-size-fits-all. Every organization has different risks, goals, and operational needs. That's why we built our control framework to be flexible, intuitive, and completely customizable.",
-        "Whether you're aligning with ISO 27001, SOC 2, GDPR, or any other standard, Hexafort gives you full control over your controls. You can add, remove, or tailor security controls to match your internal policies, industry demands, and business priorities—all without writing a single line of code.",
       ],
       imageAlt: 'Customizable control interface with drag-and-drop controls',
       ctaText: 'Get Started',

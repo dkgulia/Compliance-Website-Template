@@ -5,7 +5,6 @@ import { Box } from '@mui/material';
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
 import ProcessSection from './components/ProcessSection';
-import InfoSection from './components/InfoSection';
 import CTASection from './components/CTASection';
 import FAQSection from './components/FAQSection';
 
@@ -15,7 +14,6 @@ const AutomatedEvidenceCollectionPage: React.FC = () => {
             <HeroSection />
             <BenefitsSection />
             <ProcessSection />
-            <InfoSection />
             <CTASection />
             <FAQSection />
         </Box>

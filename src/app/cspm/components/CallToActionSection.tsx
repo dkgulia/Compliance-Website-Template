@@ -7,6 +7,7 @@ import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import callToActionSectionStyle from '../styles/callToActionSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import theme from '../../../theme';
+import { useRouter } from 'next/navigation';
 
 const features = [
 	'10-minute tailored demonstration',
@@ -16,11 +17,9 @@ const features = [
 ];
 
 const CallToActionSection: React.FC = () => {
-	const scrollToTop = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth',
-		});
+	const router = useRouter(); 
+	const handleBookDemo = () => {
+		router.push('/get-a-demo');
 	};
 
 	return (
@@ -51,7 +50,7 @@ const CallToActionSection: React.FC = () => {
 							variant="contained"
 							sx={callToActionSectionStyle.button}
 							startIcon={<CalendarMonthIcon />}
-							onClick={scrollToTop}
+							onClick={handleBookDemo}
 						>
 							{cspmData.callToAction.ctaText}
 						</Button>

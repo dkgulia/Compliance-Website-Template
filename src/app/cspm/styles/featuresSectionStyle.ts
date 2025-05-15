@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const featuresSectionStyle = {
 	box: {
 		paddingTop: { sm: '4rem', xs: '2rem' },
-		paddingBottom: { sm: '4rem', xs: '2rem' },
 		backgroundColor: theme.palette.background.default,
 		position: 'relative',
 		overflow: 'hidden',

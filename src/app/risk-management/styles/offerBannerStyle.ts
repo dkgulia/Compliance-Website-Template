@@ -3,7 +3,7 @@ import theme from '../../../theme';
 const offerBannerStyle = {
     container: {
         paddingBottom: { sm: '3rem', xs: '2rem' },
-        backgroundColor: theme.palette.background.default,
+        background: '#115e59',
     },
     innerBox: {
         maxWidth: '75rem',

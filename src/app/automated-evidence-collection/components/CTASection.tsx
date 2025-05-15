@@ -5,9 +5,14 @@ import { Box, Typography, Button, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
+import { useRouter } from 'next/navigation';
 
 const CTASection: React.FC = () => {
   const { cta } = evidenceCollectionData;
+  const router = useRouter();
+  const handleBookDemo = () => {
+    router.push('/get-a-demo');
+  };
 
   return (
     <Box sx={ctaSectionStyle.box}>
@@ -23,13 +28,13 @@ const CTASection: React.FC = () => {
                 variant="contained"
                 endIcon={<ArrowForwardIcon />}
                 sx={ctaSectionStyle.button}
+                onClick={handleBookDemo}
               >
                 {cta.ctaText}
               </Button>
             </Box>
 
             <Box sx={ctaSectionStyle.imageContainer}>
-              {/* This would be replaced with an actual image in production */}
               <Box sx={ctaSectionStyle.illustrationPlaceholder}>
                 <Typography sx={ctaSectionStyle.placeholderText}>
                   {cta.imageAlt || "Illustration of security and compliance"}

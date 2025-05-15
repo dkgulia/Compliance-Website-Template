@@ -3,13 +3,12 @@ import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import bookADemoStyle from '../styles/bookADemoStyle';
+import { useRouter } from 'next/navigation';
 
 const BookADemo = () => {
-    const handleScrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+    const router = useRouter();
+    const handleBookDemo = () => {
+        router.push('/get-a-demo');
     };
 
     return (
@@ -45,7 +44,7 @@ const BookADemo = () => {
                             type="button"
                             fullWidth
                             sx={bookADemoStyle.button}
-                            onClick={handleScrollToTop}
+                            onClick={handleBookDemo}
                         >
                             Book Your Demo
                         </Button>

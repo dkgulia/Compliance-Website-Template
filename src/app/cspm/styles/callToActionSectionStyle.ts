@@ -2,7 +2,7 @@ import theme from '../../../theme';
 
 const callToActionSectionStyle = {
 	box: {
-		paddingTop: { sm: '4rem', xs: '2rem' },
+		
 		paddingBottom: { sm: '4rem', xs: '2rem' },
 		background: theme.palette.background.default,
 		position: 'relative',

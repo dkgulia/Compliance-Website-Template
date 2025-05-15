@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -74,9 +73,24 @@ const HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={styles.rightBox}>
-					<Button variant="contained" endIcon={<ArrowForwardIcon />} sx={styles.ctaButton} fullWidth>
-						{hero.ctaText}
-					</Button>
+                
+                    <Box sx={{
+                        width: '100%',
+                        height: '100%',
+                        backgroundColor: 'rgba(23, 23, 23, 0.5)',
+                        borderRadius: '12px',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '2rem',
+                        color: 'rgba(255, 255, 255, 0.7)',
+                        textAlign: 'center',
+                        fontStyle: 'italic',
+                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)'
+                    }}>
+                        Hero image: HexaFort automated evidence collection dashboard showing compliance status and seamless integration with cloud services
+                    </Box>
 				</Box>
 			</Container>
 		</Box>

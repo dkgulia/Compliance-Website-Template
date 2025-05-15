@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const processSectionStyle = {
   box: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '6rem', xs: '4rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
   },

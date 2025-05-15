@@ -59,17 +59,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         position: 'relative',
         paddingBottom: '1rem',
         display: 'inline-block',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            bottom: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '4rem',
-            height: '4px',
-            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
-            borderRadius: '2px',
-        },
+       
     },
     subtitle: {
         fontSize: { xs: '1rem', sm: '1.1rem' },
