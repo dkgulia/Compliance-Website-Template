@@ -3,3 +3,8 @@ export interface FeatureGRC {
 	description: string;
 	icon: React.ReactNode;
 }
+export enum sheetNameTypes {
+	ccpaForm = 'contactUs',
+	getInTouch = 'getInTouch',
+	demoRequest = 'demoRequest'
+      }

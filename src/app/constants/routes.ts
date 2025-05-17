@@ -33,3 +33,9 @@ export const TRUST_CENTER = '/trust-center';
 export const CUSTOMIZABLE_CONTROL_FRAMEWORK = '/customizable-control-framework';
 export const SECURITY_TRAINING = '/security-training';
 export const INTEGRATIONS = '/integrations';
+
+// API Routes
+export const BASE_API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000/api/v1';
+
+// Google Sheets routes
+export const ADD_DATA_TO_GOOGLE_SHEET_ROUTE = '/google-sheet/add-data';

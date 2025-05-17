@@ -1,18 +1,18 @@
-import iso27001 from '../compliance/images/iso27001.png';
+import iso27001 from '../compliance/images/27001-logo.png';
 import iso27018 from '../compliance/images/ISO-27018.png';
 import soc2 from '../compliance/images/soc2-logo.png';
-import gdpr from '../compliance/images/gdpr logo.png';
-import hipaa from '../compliance/images/hipaa-logo.png';
+import gdpr from '../compliance/images/logo-gdpr.png';
+import hipaa from '../compliance/images/logo-hipaa.png';
 import ccpa from '../compliance/images/CCPA.png';
 import nist from '../compliance/images/NIST-171.png';
-import pcidss from '../compliance/images/pcidss-logo.png';
+import pcidss from '../compliance/images/logo-pcidss.png';
 import iso22301 from '../compliance/images/ISO-20000.png';
 import iso20000 from '../compliance/images/ISO-20000.png';
-import iso27701 from '../compliance/images/iso27701.png';
-import dora from '../compliance/images/dora-logo (1).png';
-import iso42001 from '../compliance/images/iso42001.png'
-import placeholderImage from '../compliance/images/ISO-27701 (1).png';
-
+import iso27701 from '../compliance/images/logo-27701.png';
+import dora from '../compliance/images/logo-dora.png';
+import iso42001 from '../compliance/images/42001-logo.png'
+import placeholderImage from '../compliance/images/logo-27701.png';
+import cmmc from '../compliance/images/logo-cmmc.png'
 import { StaticImageData } from 'next/image';
 
 export interface ComplianceFramework {
@@ -63,7 +63,7 @@ export const primaryFrameworks: ComplianceFramework[] = [
 	{
 		title: 'CMMC',
 		description: 'Cybersecurity Maturity Model Certification for defense contractors.',
-		logo: placeholderImage,
+		logo: cmmc,
 		url: '/compliance/get-cmmc',
 	},
 	{
