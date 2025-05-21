@@ -21,7 +21,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	const [expandedPanels, setExpandedPanels] = useState<string[]>(['primary']);
 	const [activeCategory, setActiveCategory] = useState<'essentials' | 'Others'>('essentials');
 
-	// Display frameworks (9 for each category)
+
 	const displayPrimaryFrameworks = primaryFrameworks.slice(0, 8);
 	const displaySecondaryFrameworks = secondaryFrameworks.slice(0, 9);
 
@@ -98,7 +98,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 												style={{
 													maxWidth: '100%',
 													height: 'auto',
-													filter: 'brightness(0) invert(1)'
+													
 												}}
 											/>
 										</Box>
@@ -250,7 +250,6 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 											style={{
 												maxWidth: '100%',
 												height: 'auto',
-												//filter: 'brightness(0) invert(1)'
 											}}
 										/>
 									</Box>

@@ -1,18 +1,19 @@
 import iso27001 from '../compliance/images/27001.png';
-import iso27018 from '../compliance/images/ISO-27018.png';
-import soc2 from '../compliance/images/soc2-logo.png';
-import gdpr from '../compliance/images/gdpr.png';
+import iso27018 from '../compliance/images/compliance27018.png';
+import soc2 from '../compliance/images/complianceSOC2.png';
+import gdpr from '../compliance/images/complianceGDPR.png';
 import hipaa from '../compliance/images/hipaa.png';
-import ccpa from '../compliance/images/CCPA.png';
+import ccpa from '../compliance/images/complianceCCPA.png';
 import nist from '../compliance/images/NIST-171.png';
-import pcidss from '../compliance/images/pcidss.png';
+import pcidss from '../compliance/images/compliancePCIDSS.png';
 import iso22301 from '../compliance/images/ISO-20000.png';
-import iso20000 from '../compliance/images/ISO-20000.png';
+import iso20000 from '../compliance/images/compliance20000.png';
 import iso27701 from '../compliance/images/27701-logo.png';
 import dora from '../compliance/images/dora.png';
 import iso42001 from '../compliance/images/42001.png'
 import placeholderImage from '../compliance/images/logo-27701.png';
-import cmmc from '../compliance/images/cmmc.png'
+import cmmc from '../compliance/images/cmmc.png';
+import iso27017 from '../compliance/images/compliance27017.png';
 import { StaticImageData } from 'next/image';
 
 export interface ComplianceFramework {
@@ -85,7 +86,7 @@ export const secondaryFrameworks: ComplianceFramework[] = [
 	{
 		title: 'ISO 27017',
 		description: 'Security controls for cloud services.',
-		logo: placeholderImage,
+		logo: iso27017,
 		url: '/compliance/get-iso-27017',
 	},
 	{

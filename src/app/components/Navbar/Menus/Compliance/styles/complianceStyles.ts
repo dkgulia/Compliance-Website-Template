@@ -84,7 +84,7 @@ const complianceStyles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		//backgroundColor: '#115e59',
+		backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
 		marginRight: '1rem',
 		flexShrink: 0,
@@ -108,7 +108,6 @@ const complianceStyles = {
 		lineHeight: 1.4,
 		marginBottom: '0.25rem',
 	},
-	// View Full Button design based on screenshot
 	viewFullButtonContainer: {
 		display: 'flex',
 		alignItems: 'center',
@@ -141,7 +140,6 @@ const complianceStyles = {
 		fontSize: '0.75rem',
 		marginTop: '0.25rem',
 	},
-	// Mobile specific styles
 	mobileContainer: {
 		width: '100%',
 		padding: '0 1rem',
@@ -165,8 +163,8 @@ const complianceStyles = {
 		backgroundColor: '#1f1f1f',
 	},
 	iconContainer: {
-		width: '2.5rem',
-		height: '2.5rem',
+		width: '3.5rem',
+		height: '3.5rem',
 		display: 'flex',
 		backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
@@ -200,8 +198,8 @@ const complianceStyles = {
 		},
 	},
 	viewAllIconContainer: {
-		width: '2.5rem',
-		height: '2.5rem',
+		width: '3.5rem',
+		height: '3.5rem',
 		display: 'flex',
 		backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
