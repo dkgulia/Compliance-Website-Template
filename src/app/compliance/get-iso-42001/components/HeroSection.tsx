@@ -4,8 +4,9 @@ import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/materi
 import { Verified, Security, Policy } from '@mui/icons-material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { iso42001Data } from '../constants/iso42001Data';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
-import { ComplianceOptions } from '../../../constants/complianceData';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
@@ -13,17 +14,22 @@ const HeroSection: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
-    ComplianceOptions.ISO42001,
+    'ISO 42001'
   ]);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
   };
 
-  const handleFormSubmit = (values: any) => {
+  const handleFormSubmit = (values: ComplianceFormValues) => {
     console.log('Form submitted with values:', { ...values, selectedOptions });
-
   };
+
+  const complianceOptions = [
+    'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+    'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+    'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+  ];
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -108,9 +114,15 @@ const HeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyle.formBox}>
-          <EnhancedHeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your ISO 42001 Demo Today!"
+            subtitle="Get answers to all your questions about ISO 42001 compliance."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.iso42001Form}
+            formStyles={heroSectionStyle}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={complianceOptions}
             onSubmitCallback={handleFormSubmit}
           />
         </Box>

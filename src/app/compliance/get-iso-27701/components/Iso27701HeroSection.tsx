@@ -1,23 +1,30 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import EnhancedIso27701HeroSectionForm from './EnhancedIso27701HeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import iso27701Data from '../constants/iso27701Data';
-import { ComplianceOptions } from '../../../constants/complianceData';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const Iso27701HeroSection: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
-    ComplianceOptions.ISO27701,
+    'ISO 27701'
   ]);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
   };
 
-  const handleSubmitCallback = (values: { fullName: string; email: string }) => {
+  const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Options:', { ...values, selectedOptions });
   };
+
+  const complianceOptions = [
+    'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+    'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+    'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+  ];
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -64,9 +71,15 @@ const Iso27701HeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyle.formBox}>
-          <EnhancedIso27701HeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your ISO 27701 Demo Today!"
+            subtitle="Get answers to all your questions about ISO 27701 compliance."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.iso27701Form}
+            formStyles={heroSectionStyle}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={complianceOptions}
             onSubmitCallback={handleSubmitCallback}
           />
         </Box>

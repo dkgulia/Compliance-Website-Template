@@ -2,21 +2,25 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import { FormValues } from './EnhancedHeroSectionForm';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
-
-const cmmcOptionsArray = ['Level 1 (Foundational)', 'Level 2 (Advanced)', 'Level 3 (Expert)'];
+const cmmcComplianceOptions = [
+  'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+  'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+  'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+];
 
 const CmmcHeroSection: React.FC = () => {
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([cmmcOptionsArray[0]]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(['CMMC']);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
   };
 
-  const handleSubmitCallback = (values: FormValues) => {
+  const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Values and Options:', { ...values, selectedOptions });
   };
 
@@ -77,9 +81,15 @@ const CmmcHeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyle.formBox}>
-          <EnhancedHeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your CMMC Demo Today!"
+            subtitle="Get answers to all your questions about CMMC compliance."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.cmmcForm}
+            formStyles={heroSectionStyle}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={cmmcComplianceOptions}
             onSubmitCallback={handleSubmitCallback}
           />
         </Box>

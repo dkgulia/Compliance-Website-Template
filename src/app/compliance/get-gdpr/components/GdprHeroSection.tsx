@@ -7,8 +7,9 @@ import ShieldIcon from '@mui/icons-material/Shield';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import gdprData from '../constants/gdprData';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
-import { FormValues } from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 export default function GdprHeroSection() {
 	const [selectedOptions, setSelectedOptions] = useState<string[]>([
@@ -22,7 +23,7 @@ export default function GdprHeroSection() {
 		setSelectedOptions(newOptions);
 	};
 
-	const handleSubmitCallback = (values: FormValues) => {
+	const handleSubmitCallback = (values: ComplianceFormValues) => {
 		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
 	};
 
@@ -84,9 +85,19 @@ export default function GdprHeroSection() {
 				</Box>
 
 				<Box sx={heroSectionStyle.formBox}>
-					<EnhancedHeroSectionForm
+					<EnhancedComplianceForm
+						title="Book Your GDPR Demo Today!"
+						subtitle="Get answers to all your questions about GDPR compliance."
+						buttonText="Book Your Demo"
+						sheetName={sheetNameTypes.gdprForm}
+						formStyles={heroSectionStyle}
 						selectedOptions={selectedOptions}
 						onOptionsChange={handleOptionsChange}
+						complianceOptions={[
+							'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+							'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+							'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+						]}
 						onSubmitCallback={handleSubmitCallback}
 					/>
 				</Box>

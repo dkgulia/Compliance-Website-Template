@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { ShieldOutlined, VerifiedUser, SecurityOutlined } from '@mui/icons-material';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { iso22301Data } from '../constants/iso22301Data';
-import { FormValues } from './EnhancedHeroSectionForm';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const ISO22301HeroSection: React.FC = () => {
 	const heroBullets = [
@@ -36,9 +37,15 @@ const ISO22301HeroSection: React.FC = () => {
 		setSelectedOptions(newOptions);
 	};
 
-	const handleSubmitCallback = (values: FormValues) => {
+	const handleSubmitCallback = (values: ComplianceFormValues) => {
 		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
 	};
+
+    const complianceOptions = [
+        'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+        'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+        'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+    ];
 
 	return (
 		<Box sx={heroSectionStyle.container}>
@@ -85,9 +92,15 @@ const ISO22301HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={heroSectionStyle.formBox}>
-					<EnhancedHeroSectionForm
+					<EnhancedComplianceForm
+						title="Book Your ISO 22301 Demo Today!"
+						subtitle="Get answers to all your questions about ISO 22301 compliance."
+						buttonText="Book Your Demo"
+						sheetName={sheetNameTypes.iso22301Form}
+						formStyles={heroSectionStyle}
 						selectedOptions={selectedOptions}
 						onOptionsChange={handleOptionsChange}
+						complianceOptions={complianceOptions}
 						onSubmitCallback={handleSubmitCallback}
 					/>
 				</Box>

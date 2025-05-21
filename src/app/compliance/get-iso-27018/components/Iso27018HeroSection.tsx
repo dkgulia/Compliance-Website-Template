@@ -3,22 +3,28 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
 import heroSectionStyles from '../styles/heroSectionStyle';
-import EnhancedCcpaHeroSectionForm from './EnhancedCcpaHeroSectionForm';
-import theme from '../../../../theme';
-import { ComplianceOptions } from '../../../constants/complianceData';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const Iso27018HeroSection: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
-    ComplianceOptions.ISO27018,
+    'ISO 27018'
   ]);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
   };
 
-  const handleSubmitCallback = (values: { fullName: string; email: string }) => {
+  const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Options:', { ...values, selectedOptions });
   };
+
+  const complianceOptions = [
+    'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+    'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+    'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+  ];
 
   return (
     <Box sx={heroSectionStyles.container}>
@@ -77,9 +83,15 @@ const Iso27018HeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyles.formBox}>
-          <EnhancedCcpaHeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your ISO 27018 Demo Today!"
+            subtitle="Get answers to all your questions about ISO 27018 compliance."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.iso27018Form}
+            formStyles={heroSectionStyles}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={complianceOptions}
             onSubmitCallback={handleSubmitCallback}
           />
         </Box>

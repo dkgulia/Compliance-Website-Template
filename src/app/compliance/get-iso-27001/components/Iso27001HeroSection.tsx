@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { iso27001Data } from '../constants/iso27001Data';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
-import { FormValues } from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
 import { ShieldOutlined, VerifiedUser, SecurityOutlined } from '@mui/icons-material';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const Iso27001HeroSection: React.FC = () => {
 	const heroContent = iso27001Data.sections.find((section) => section.Sno === '1' && section.blockType === 'Hero');
@@ -22,9 +23,15 @@ const Iso27001HeroSection: React.FC = () => {
 		setSelectedOptions(newOptions);
 	};
 
-	const handleSubmitCallback = (values: FormValues) => {
+	const handleSubmitCallback = (values: ComplianceFormValues) => {
 		console.log('Submitted with Values and Options:', { ...values, selectedOptions });
 	};
+
+    const complianceOptions = [
+        'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+        'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+        'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+    ];
 
 	const heroBullets = [
 		{
@@ -86,9 +93,15 @@ const Iso27001HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={heroSectionStyle.formBox}>
-					<EnhancedHeroSectionForm
+					<EnhancedComplianceForm
+						title="Book Your ISO 27001 Demo Today!"
+						subtitle="Get answers to all your questions about ISO 27001 compliance."
+						buttonText="Book Your Demo"
+						sheetName={sheetNameTypes.iso27001Form}
+						formStyles={heroSectionStyle}
 						selectedOptions={selectedOptions}
 						onOptionsChange={handleOptionsChange}
+						complianceOptions={complianceOptions}
 						onSubmitCallback={handleSubmitCallback}
 					/>
 				</Box>

@@ -1,23 +1,30 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import pciDssData from '../constants/pciDssData';
-import { ComplianceOptions } from '../../../constants/complianceData';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const PciDssHeroSection: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
-    ComplianceOptions.PCI_DSS,
+    'PCI DSS'
   ]);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
   };
 
-  const handleSubmitCallback = (values: { fullName: string; email: string }) => {
+  const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Options:', { ...values, selectedOptions });
   };
+
+  const complianceOptions = [
+    'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
+    'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
+    'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+  ];
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -63,9 +70,15 @@ const PciDssHeroSection: React.FC = () => {
         </Box>
 
         <Box sx={heroSectionStyle.formBox}>
-          <EnhancedHeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your PCI DSS Demo Today!"
+            subtitle="Get answers to all your questions about PCI DSS compliance."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.pcidssForm}
+            formStyles={heroSectionStyle}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={complianceOptions}
             onSubmitCallback={handleSubmitCallback}
           />
         </Box>
