@@ -19,8 +19,8 @@ export default function SecurityTraining() {
   return (
     <Box>
       <HeroSection />
-      <InfoSection />
       <BenefitsSection />
+      <InfoSection />
       <HowItWorksSection />
       <CallToActionSection />
       <FaqSection />

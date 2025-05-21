@@ -40,18 +40,14 @@ const platformFeaturesStyle = {
     maxWidth: '40rem',
     marginX: 'auto',
   },
-
-  // Updated carousel container with better positioning
   carouselContainer: {
     position: 'relative',
     width: '100%',
     marginTop: '2rem',
-    paddingX: { xs: '2rem', sm: '3rem', md: '4rem' }, // Add padding for button space
+    paddingX: { xs: '2rem', sm: '3rem', md: '4rem' },
     display: 'flex',
     alignItems: 'center',
   },
-
-  // Updated navigation button styles
   navigationButton: {
     position: 'absolute',
     top: '50%',
@@ -62,7 +58,7 @@ const platformFeaturesStyle = {
     borderRadius: '50%',
     width: { xs: 40, sm: 48 },
     height: { xs: 40, sm: 48 },
-    minWidth: { xs: 40, sm: 48 }, // Ensure consistent sizing
+    minWidth: { xs: 40, sm: 48 },
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -77,10 +73,8 @@ const platformFeaturesStyle = {
       color: 'rgba(255, 255, 255, 0.5)',
       cursor: 'not-allowed',
     },
-    padding: 0, // Remove padding that might affect positioning
+    padding: 0,
   },
-
-  // Fixed positioning for prev/next buttons
   prevButton: {
     left: { xs: 0, sm: 0, md: 0 },
   },
@@ -117,11 +111,6 @@ const platformFeaturesStyle = {
     height: '100%',
     minHeight: '220px',
     transition: 'all 0.35s ease',
-    '&:hover': {
-      transform: 'translateY(-8px)',
-      boxShadow: '0rem 0.75rem 1.5rem rgba(0, 0, 0, 0.15)',
-      backgroundColor: theme.palette.background.paper,
-    },
   },
   iconWrapper: {
     width: '50px',

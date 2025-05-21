@@ -45,12 +45,19 @@ const complianceStyles = {
   },
   logoImageWrapper: {
     position: 'relative',
-    width: '4rem',
-    height: '4rem',
+    width: '4rem',  // Fixed at 4rem
+    height: '4rem', // Fixed at 4rem
     marginBottom: '1rem',
-    img: {
-      objectFit: 'contain',
-    },
+    backgroundColor: '#115e59',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: '8px',
+    padding: '0.5rem',  // This controls how much space the icon takes within the 4x4 container
+  },
+  logoImage: {
+    objectFit: 'contain',
+    // Removed the filter to preserve original icon colors
   },
   typography: {
     title: {

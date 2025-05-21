@@ -4,6 +4,19 @@ import { Box, Typography, IconButton } from '@mui/material';
 import { ArrowForwardIos as ArrowForwardIosIcon, ArrowBackIos as ArrowBackIosIcon } from '@mui/icons-material';
 import platformWalkthroughStyle from '../styles/platformWalkthroughStyle';
 import { riskManagementData } from '../constants/riskManagementData';
+import Image from 'next/image';
+import screenshot1 from '../images/risk1.png';
+import screenshot2 from '../images/risk2.png';
+import screenshot3 from '../images/risk3.png';
+import screenshot4 from '../images/risk4.png';
+import screenshot5 from '../images/risk-step-1.png';
+const screenshotImages = [
+    screenshot1,
+    screenshot2,
+    screenshot3,
+    screenshot4,
+    screenshot5
+];
 
 const PlatformWalkthrough: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -58,10 +71,22 @@ const PlatformWalkthrough: React.FC = () => {
                                 >
                                     <Box sx={index % 2 === 0 ? platformWalkthroughStyle.carouselItem : platformWalkthroughStyle.carouselItemReverse}>
                                         <Box sx={platformWalkthroughStyle.imageBox}>
-                                            <Box sx={platformWalkthroughStyle.imagePlaceholder}>
-                                                <Typography variant="body2" color="textSecondary">
-                                                    {screenshot.imagePrompt}
-                                                </Typography>
+                                            <Box sx={platformWalkthroughStyle.imageWrapper}>
+                                                {index < screenshotImages.length ? (
+                                                    <Image
+                                                        src={screenshotImages[index]}
+                                                        alt={screenshot.caption || `Screenshot ${index + 1}`}
+                                                        fill
+                                                        style={platformWalkthroughStyle.screenshotImage}
+                                                        priority={index === 0}
+                                                    />
+                                                ) : (
+                                                    <Box sx={platformWalkthroughStyle.imagePlaceholder}>
+                                                        <Typography variant="body2" color="textSecondary">
+                                                            {screenshot.imagePrompt}
+                                                        </Typography>
+                                                    </Box>
+                                                )}
                                             </Box>
                                         </Box>
                                         <Box sx={platformWalkthroughStyle.contentBox}>

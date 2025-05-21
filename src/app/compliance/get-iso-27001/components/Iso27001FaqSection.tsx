@@ -1,7 +1,3 @@
-/* <ai_context>
-   FAQ section for the new ISO 27001 page
-   Updated: remove the image placeholder and apply PCI DSS styling
-</ai_context> */
 
 "use client";
 import React from "react";

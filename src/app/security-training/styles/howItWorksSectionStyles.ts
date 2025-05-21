@@ -2,7 +2,6 @@ import theme from '../../../theme';
 
 const howItWorksSectionStyles = {
   container: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
     marginTop: '0rem',
     background: theme.palette.background.default,
   },
@@ -17,7 +16,7 @@ const howItWorksSectionStyles = {
   heading: {
     fontSize: { xs: '1.6rem', sm: '2rem' },
     fontWeight: '600',
-    marginBottom: '1.5rem',
+    marginBottom: '3rem',
     color: theme.palette.text.primary,
   },
   subtitle: {

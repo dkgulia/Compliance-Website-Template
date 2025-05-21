@@ -21,7 +21,7 @@ const FeaturesSection: React.FC = () => {
           <Typography variant="h2" sx={featuresSectionStyle.heading}>
             {features.title}
           </Typography>
-      
+
         </Box>
 
         {features.steps.map((step, index) => {

@@ -6,6 +6,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SettingsIcon from '@mui/icons-material/Settings';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
+import Image from 'next/image';
+import controlFrameworkHero from '../images/ccf-hero.png';
 
 const HeroSection: React.FC = () => {
     const { hero } = controlFrameworkData.sections;
@@ -44,8 +46,14 @@ const HeroSection: React.FC = () => {
                     </Box>
 
                     <Box sx={heroSectionStyle.imageContainer}>
-                        <Box sx={heroSectionStyle.imagePlaceholder}>
-                            {hero.imageAlt}
+                        <Box sx={heroSectionStyle.imageWrapper}>
+                            <Image
+                                src={controlFrameworkHero}
+                                alt={hero.imageAlt || "Control Framework Dashboard"}
+                                fill
+                                style={heroSectionStyle.heroImage}
+                                priority
+                            />
                         </Box>
                     </Box>
                 </Box>

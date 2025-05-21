@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const ctaSectionStyle = {
   section: {
     paddingTop: { sm: '4rem', xs: '2rem' },
-    //paddingBottom: { sm: '4rem', xs: '2rem' },
     background: theme.palette.background.default,
     position: 'relative',
   },
@@ -47,21 +46,21 @@ const ctaSectionStyle = {
   },
   ctaButton: {
     backgroundColor: '#115e59',
-		color: '#f9fafb',
-		borderRadius: '0.5rem',
-		padding: {
-			xs: '0.25rem 0.5rem',
-			sm: '0.375rem 0.75rem',
-			md: '0.25rem 0.5rem',
-		},
-		textTransform: 'none',
-		fontSize: '1rem',
-		whiteSpace: 'nowrap',
-		border: '1px solid #0d9488',
-		transition: 'all 150ms ease',
-		'&:hover': {
-			backgroundColor: '#0f766e',
-		},
+    color: '#f9fafb',
+    borderRadius: '0.5rem',
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.25rem 0.5rem',
+    },
+    textTransform: 'none',
+    fontSize: '1rem',
+    whiteSpace: 'nowrap',
+    border: '1px solid #0d9488',
+    transition: 'all 150ms ease',
+    '&:hover': {
+      backgroundColor: '#0f766e',
+    },
   },
   imageContainer: {
     flex: 1,
@@ -69,9 +68,21 @@ const ctaSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageWrapper: {
+    width: '100%',
+    aspectRatio: '18/10',
+    maxWidth: '500px',
+    position: 'relative',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
+  },
+  ctaImage: {
+    objectFit: 'contain' as const,
+    borderRadius: '0.75rem',
+  },
   imagePlaceholder: {
     width: '100%',
-    aspectRatio: '16/9',
+    aspectRatio: '18/9',
     maxWidth: '500px',
     borderRadius: '0.75rem',
     backgroundColor: '#115e5920',

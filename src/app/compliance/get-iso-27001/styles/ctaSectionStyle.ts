@@ -1,9 +1,5 @@
 import themeColors from '../constants/iso27001Data';
 
-/* <ai_context>
-   Style for the CTA (Call to Action) section
-   Updated: unify background to black, add space for an image placeholder
-</ai_context> */
 
 const ctaSectionStyle = {
     box: {
@@ -28,21 +24,21 @@ const ctaSectionStyle = {
         marginBottom: "1rem"
     },
     description: {
-        color: "#E0E0E0", // Could be updated to a theme color if you add a light gray to your theme
+        color: "#E0E0E0",
         marginBottom: "2rem",
         maxWidth: "40rem",
         marginX: "auto",
         lineHeight: "1.6"
     },
     button: {
-        background: "linear-gradient(90deg, #ED005C, #FF6BAD)", // Custom gradient not in theme
+        background: "linear-gradient(90deg, #ED005C, #FF6BAD)",
         color: themeColors.secondary,
         fontWeight: "bold",
         borderRadius: "2.5rem",
         padding: "0.8rem 1.5rem",
         "&:hover": {
-            background: "linear-gradient(90deg, #FF6BAD, #ED005C)", // Custom gradient not in theme
-            boxShadow: "0 4px 10px rgba(255, 107, 173, 0.4)", // Custom shadow not in theme
+            background: "linear-gradient(90deg, #FF6BAD, #ED005C)",
+            boxShadow: "0 4px 10px rgba(255, 107, 173, 0.4)", 
             transform: "translateY(-0.125rem)"
         }
     }

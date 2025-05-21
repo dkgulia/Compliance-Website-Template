@@ -1,13 +1,14 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SpeedIcon from '@mui/icons-material/Speed';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
+import Image from 'next/image';
+import evidenceCollectionDashboard from '../images/hero-image.png';
 
 const HeroSection: React.FC = () => {
 	const theme = useTheme();
@@ -73,24 +74,13 @@ const HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={styles.rightBox}>
-                
-                    <Box sx={{
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(23, 23, 23, 0.5)',
-                        borderRadius: '12px',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        padding: '2rem',
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        textAlign: 'center',
-                        fontStyle: 'italic',
-                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)'
-                    }}>
-                        Hero image: HexaFort automated evidence collection dashboard showing compliance status and seamless integration with cloud services
-                    </Box>
+					<Image
+						src={evidenceCollectionDashboard}
+						alt="HexaFort automated evidence collection dashboard showing compliance status and seamless integration with cloud services"
+						fill
+						style={styles.heroImage}
+						priority
+					/>
 				</Box>
 			</Container>
 		</Box>

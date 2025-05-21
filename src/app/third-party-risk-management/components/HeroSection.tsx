@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Icon } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
+import Image from 'next/image';
+import tprmHeroImage from '../images/third-hero.png';
 
 const HeroSection: React.FC = () => {
 	const { hero } = thirdPartyRiskManagementData;
@@ -33,9 +35,14 @@ const HeroSection: React.FC = () => {
 				</Box>
 
 				<Box sx={heroSectionStyle.imageBox}>
-					<Box>
-						<Icon sx={{ fontSize: '2rem', mr: 1 }}>dashboard</Icon>
-						{hero.imagePrompt}
+					<Box sx={heroSectionStyle.imageWrapper}>
+						<Image
+							src={tprmHeroImage}
+							alt={hero.imagePrompt || "Third-Party Risk Management Dashboard"}
+							fill
+							style={heroSectionStyle.heroImage}
+							priority
+						/>
 					</Box>
 				</Box>
 			</Box>

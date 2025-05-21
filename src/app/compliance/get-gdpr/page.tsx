@@ -1,6 +1,4 @@
-/* <ai_context>
-   GDPR main page referencing all the new sections + new Book Now section
-</ai_context> */
+
 
 import React from 'react';
 import { Metadata } from 'next';

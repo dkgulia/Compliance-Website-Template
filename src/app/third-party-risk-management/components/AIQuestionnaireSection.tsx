@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Icon } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import infoSectionStyle from '../styles/infoSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
+import Image from 'next/image';
+import aiQuestionnaireImage from '../images/third-cta.png';
 
 const AIQuestionnaireSection: React.FC = () => {
   const { aiQuestionnaire } = thirdPartyRiskManagementData;
@@ -28,9 +30,14 @@ const AIQuestionnaireSection: React.FC = () => {
           </Box>
 
           <Box sx={infoSectionStyle.imageContainer}>
-            <Box sx={infoSectionStyle.imagePlaceholder as any}>
-              <Icon sx={{ fontSize: '2rem', mr: 1 }}>smart_toy</Icon>
-              {aiQuestionnaire.imagePrompt}
+            <Box sx={infoSectionStyle.imageWrapper}>
+              <Image
+                src={aiQuestionnaireImage}
+                alt={aiQuestionnaire.imagePrompt || "AI-powered questionnaire assistance"}
+                fill
+                style={infoSectionStyle.sectionImage}
+                priority
+              />
             </Box>
           </Box>
         </Box>

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 import { useRouter } from 'next/navigation';
+import dualHexImage from '../images/bookDemo.png';
 
 const CtaSection: React.FC = () => {
   const data = trustCenterPageData.sections.cta;
@@ -43,13 +44,12 @@ const CtaSection: React.FC = () => {
 
         <Box sx={ctaSectionStyle.imageWrapper}>
           <Image
-            src="/images/dual-hex-white.png" 
+            src={dualHexImage}
             alt="Trust Center Live Demo"
             width={300}
-            height={230}
+            height={250}
             style={{
               borderRadius: '8px',
-              filter: 'drop-shadow(0 8px 16px rgba(94, 234, 212, 0.15))',
             }}
             priority
           />

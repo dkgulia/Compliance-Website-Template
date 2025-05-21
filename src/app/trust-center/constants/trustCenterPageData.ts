@@ -47,7 +47,6 @@ export const trustCenterPageData = {
         'Once a customer signs an NDA, they gain controlled access to the right information, giving them the confidence they need to move forward.',
       ],
       ctaText: 'Book Your Demo',
-      image: '/images/dual-hex-white.png',
     },
     benefits: {
       title: 'Why Your Customers Will Love It (And You Will Too)',

@@ -1,77 +1,93 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-import {
-	CloudUpload as CloudUploadIcon,
-	Settings as SettingsIcon,
-	Assessment as AssessmentIcon,
-	AssignmentTurnedIn as AssignmentTurnedInIcon,
-} from '@mui/icons-material';
+import Image from 'next/image';
 import quickStartOnboardingStyle from '../styles/quickStartOnboardingStyle';
 import { riskManagementData } from '../constants/riskManagementData';
+import rightToKnowImage from '../images/upload (1).png';
+import rightToDeleteImage from '../images/score.png';
+import rightToOptOutImage from '../images/assets.png';
+import noDiscriminationImage from '../images/monitor.png';
+
 interface OnboardingStep {
-	heading: string;
-	description: string;
-	image?: string;
-	imagePrompt?: string;
+    heading: string;
+    description: string;
+    image?: string;
+    imagePrompt?: string;
 }
 
 const QuickStartOnboarding: React.FC = () => {
-	const onboardingContent = riskManagementData.sections.find(
-		(section) => section.Sno === '4' && section.blockType === 'Steps/Process'
-	);
-	if (!onboardingContent || !onboardingContent.content) return null;
-	const steps: OnboardingStep[] = onboardingContent.content.steps || [];
-	if (steps.length === 0) {
-		return (
-			<Box sx={quickStartOnboardingStyle.container}>
-				<Box sx={quickStartOnboardingStyle.innerBox}>
-					<Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
-						{onboardingContent.content.title || 'Quick-Start Onboarding'}
-					</Typography>
-					<Typography variant="body1">No onboarding steps found</Typography>
-				</Box>
-			</Box>
-		);
-	}
-	const iconMap = [
-		<CloudUploadIcon key="import" sx={{ fontSize: '2rem', color: '#FFFFFF' }} />,
-		<SettingsIcon key="customize" sx={{ fontSize: '2rem', color: '#FFFFFF' }} />,
-		<AssessmentIcon key="assess" sx={{ fontSize: '2rem', color: '#FFFFFF' }} />,
-		<AssignmentTurnedInIcon key="mitigate" sx={{ fontSize: '2rem', color: '#FFFFFF' }} />,
-	];
+    const onboardingContent = riskManagementData.sections.find(
+        (section) => section.Sno === '4' && section.blockType === 'Steps/Process'
+    );
 
-	return (
-		<Box sx={quickStartOnboardingStyle.container}>
-			<Box sx={quickStartOnboardingStyle.innerBox}>
-				<Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
-					{onboardingContent.content.title || 'Quick-Start Onboarding'}
-				</Typography>
+    if (!onboardingContent || !onboardingContent.content) return null;
+    const steps: OnboardingStep[] = onboardingContent.content.steps || [];
 
-				{onboardingContent.content.subtitle && (
-					<Typography variant="subtitle1" sx={quickStartOnboardingStyle.subtitle}>
-						{onboardingContent.content.subtitle}
-					</Typography>
-				)}
+    if (steps.length === 0) {
+        return (
+            <Box sx={quickStartOnboardingStyle.container}>
+                <Box sx={quickStartOnboardingStyle.innerBox}>
+                    <Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
+                        {onboardingContent.content.title || 'Quick-Start Onboarding'}
+                    </Typography>
+                    <Typography variant="body1">No onboarding steps found</Typography>
+                </Box>
+            </Box>
+        );
+    }
+    const imageMap = [
+        rightToKnowImage,
+        rightToDeleteImage,
+        rightToOptOutImage,
+        noDiscriminationImage
+    ];
 
-				<Box sx={quickStartOnboardingStyle.stepsContainer}>
-					{steps.map((step, index) => (
-						<Box key={index} sx={quickStartOnboardingStyle.stepCard}>
-							<Box sx={quickStartOnboardingStyle.stepNumber}>{index + 1}</Box>
+    return (
+        <Box sx={quickStartOnboardingStyle.container}>
+            <Box sx={quickStartOnboardingStyle.innerBox}>
+                <Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
+                    {onboardingContent.content.title || 'Quick-Start Onboarding'}
+                </Typography>
 
-							<Box sx={quickStartOnboardingStyle.imagePlaceholder}>
-								{index < iconMap.length ? iconMap[index] : iconMap[0]}
-							</Box>
+                {onboardingContent.content.subtitle && (
+                    <Typography variant="subtitle1" sx={quickStartOnboardingStyle.subtitle}>
+                        {onboardingContent.content.subtitle}
+                    </Typography>
+                )}
 
-							<Typography sx={quickStartOnboardingStyle.stepHeading}>{step.heading}</Typography>
+                <Grid container spacing={3}>
+                    {steps.map((step, index) => (
+                        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                            <Box sx={quickStartOnboardingStyle.stepCard}>
+                                <Box sx={quickStartOnboardingStyle.imageContainer}>
+                                    <Image
+                                        src={imageMap[index % imageMap.length]}
+                                        alt={step.heading}
+                                        width={140}
+                                        height={100}
+                                        style={{
+                                            maxWidth: '100%',
+                                            height: '140px',
+                                        }}
+                                    />
+                                </Box>
 
-							<Typography sx={quickStartOnboardingStyle.stepDescription}>{step.description}</Typography>
-						</Box>
-					))}
-				</Box>
-			</Box>
-		</Box>
-	);
+                                <Box sx={quickStartOnboardingStyle.contentContainer}>
+                                    <Typography sx={quickStartOnboardingStyle.stepHeading}>
+                                        {step.heading}
+                                    </Typography>
+                                    <Typography sx={quickStartOnboardingStyle.stepDescription}>
+                                        {step.description}
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
+        </Box>
+    );
 };
 
 export default QuickStartOnboarding;

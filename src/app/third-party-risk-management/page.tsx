@@ -25,8 +25,8 @@ export default function ThirdPartyRiskManagementPage() {
             <BenefitsSection />
             <ProcessSection />
             <AIQuestionnaireSection />
-            <ContinuousMonitoringSection />
             <PlatformHighlightsSection />
+            <ContinuousMonitoringSection />
             <PitfallsSection />
             <OfferBanner />
             <CallToActionSection />

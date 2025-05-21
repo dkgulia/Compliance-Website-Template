@@ -29,6 +29,17 @@ const infoSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageWrapper: {
+    width: '100%',
+    maxWidth: '500px',
+    height: '400px',
+    position: 'relative',
+    borderRadius: '1rem',
+    overflow: 'hidden',
+  },
+  sectionImage: {
+    objectFit: 'cover'as const,
+  },
   imagePlaceholder: {
     width: '100%',
     maxWidth: '500px',
@@ -39,8 +50,6 @@ const infoSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     color: theme.palette.text.disabled,
-    border: `1px solid ${theme.palette.divider}`,
-
     padding: '1rem',
     fontSize: '0.9rem',
     textAlign: 'center',

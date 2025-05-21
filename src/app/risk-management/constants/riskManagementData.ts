@@ -179,7 +179,7 @@ export const riskManagementData = {
             interactiveElement: "none",
             designGuidelines: "Collapsible Q&A (8 items = even)",
             content: {
-                title: "FAQs",
+                title: "Frequently asked questions",
                 subtitle: "",
                 questions: [
                     {

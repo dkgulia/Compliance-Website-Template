@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Typography, List, ListItem, Icon } from '@mui/material';
+import { Box, Typography, List, ListItem } from '@mui/material';
 import useCasesSectionStyle from '../styles/useCasesSectionStyle';
 import { cspmData } from '../constants/cspmData';
+import Image from 'next/image';
+import useCasesImage from '../images/risk.png'; // Import the image
 
 const UseCasesSection: React.FC = () => {
   return (
@@ -45,10 +47,23 @@ const UseCasesSection: React.FC = () => {
           </Box>
 
           <Box sx={useCasesSectionStyle.imageContainer}>
-            {/* Placeholder for image */}
-            <Box sx={useCasesSectionStyle.placeholderImage}>
-              <Icon sx={{ fontSize: '2rem', mr: 1 }}>people</Icon>
-              {cspmData.useCases.imagePrompt}
+            {/* Actual image instead of placeholder */}
+            <Box sx={{
+              position: 'relative',
+              width: '100%',
+              height: '100%',
+              borderRadius: '12px',
+              overflow: 'hidden',
+            }}>
+              <Image
+                src={useCasesImage}
+                alt={cspmData.useCases.imagePrompt || "CSPM Use Cases Illustration"}
+                fill
+                style={{
+                  objectFit: 'cover',
+                }}
+                priority
+              />
             </Box>
           </Box>
         </Box>

@@ -1,7 +1,4 @@
-/* <ai_context>
-   Constants for the ISO 27001 page (features, workflow, FAQs, etc.)
-   This file houses text and data used throughout the page.
-</ai_context> */
+
 
 import heroImage from '../images/iso27001.png'
 import ciaTriadImage from '../images/dual-hex-white.png'

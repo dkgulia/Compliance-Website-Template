@@ -7,6 +7,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 import { useRouter } from 'next/navigation';
+import trustCenterHeroImage from '../images/trustHero.png';
 
 const HeroSection: React.FC = () => {
 	const data = trustCenterPageData.sections.hero;
@@ -41,7 +42,7 @@ const HeroSection: React.FC = () => {
 				<Box sx={heroSectionStyle.imageBox}>
 					<Box sx={heroSectionStyle.imageContainer}>
 						<Image
-							src={data.image}
+							src={trustCenterHeroImage}
 							alt="Trust Center Dashboard"
 							width={500}
 							height={350}

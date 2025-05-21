@@ -6,6 +6,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import securityComplianceImage from '../images/cta-demo.png';
 
 const CTASection: React.FC = () => {
   const { cta } = evidenceCollectionData;
@@ -34,12 +36,15 @@ const CTASection: React.FC = () => {
               </Button>
             </Box>
 
+            {/* Image container instead of placeholder */}
             <Box sx={ctaSectionStyle.imageContainer}>
-              <Box sx={ctaSectionStyle.illustrationPlaceholder}>
-                <Typography sx={ctaSectionStyle.placeholderText}>
-                  {cta.imageAlt || "Illustration of security and compliance"}
-                </Typography>
-              </Box>
+              <Image
+                src={securityComplianceImage}
+                alt={cta.imageAlt || "Illustration of security and compliance"}
+                fill
+                style={ctaSectionStyle.image}
+                priority
+              />
             </Box>
           </Box>
         </Box>

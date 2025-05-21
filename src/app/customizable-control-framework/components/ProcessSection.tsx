@@ -4,6 +4,14 @@ import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import processSectionStyle from '../styles/processSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
+import Image from 'next/image';
+import step1Image from '../images/process1.png';
+import step2Image from '../images/process3.png';
+import step3Image from '../images/process2.png';
+import step4Image from '../images/process4.png';
+
+
+const stepImages = [step1Image, step2Image, step3Image, step4Image];
 
 const ProcessSection: React.FC = () => {
 	const { process } = controlFrameworkData.sections;
@@ -40,7 +48,15 @@ const ProcessSection: React.FC = () => {
 								</Box>
 
 								<Box sx={processSectionStyle.imageContainer}>
-									<Box sx={processSectionStyle.imagePlaceholder}>{step.imageAlt}</Box>
+									<Box sx={processSectionStyle.imageWrapper}>
+										<Image
+											src={stepImages[index]}
+											alt={step.imageAlt || `Step ${index + 1}: ${step.title}`}
+											fill
+											style={processSectionStyle.stepImage}
+											priority={index < 2} // Prioritizzze loading the first two images
+										/>
+									</Box>
 								</Box>
 							</Box>
 						</React.Fragment>

@@ -23,13 +23,15 @@ const heroSectionStyle = (theme: Theme) => ({
 	rightBox: {
 		marginTop: { xs: '1rem', md: '3' },
 		flex: 1,
-		background: '#17171799',
-		borderRadius: '1.5rem',
 		maxWidth: '600px',
 		width: '100%',
-		padding: '2rem',
-		border: `1px solid ${theme.palette.divider}`,
-		color: theme.palette.text.primary,
+		position: 'relative',
+		borderRadius: '12px',
+		overflow: 'hidden',
+		height: '550px',
+	},
+	heroImage: {
+		objectFit: 'cover'as const,
 	},
 	tag: {
 		display: 'inline-block',

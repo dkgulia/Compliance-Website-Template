@@ -99,7 +99,19 @@ const useCasesSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'relative',
+    width: '100%',
+    maxWidth: '500px',
+    height: '600px',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
+
   },
+  // Style for the Next.js Image component
+  image: {
+
+  },
+  // Keeping the placeholder style for reference
   placeholderImage: {
     width: '100%',
     maxWidth: '500px',

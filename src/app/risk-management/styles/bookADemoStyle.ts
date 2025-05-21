@@ -16,11 +16,13 @@ const bookADemoStyle = {
     marginX: 'auto',
     px: { xs: '1rem', sm: '2rem' },
   },
-  imageBox: {
+  imageContainer: {
     flex: { xs: '1', md: '1 1 50%' },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
+    maxWidth: '500px',
   },
   imagePlaceholder: {
     width: '100%',
@@ -31,7 +33,7 @@ const bookADemoStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: `1px solid ${theme.palette.divider}`,
+   
   },
   textBox: {
     flex: { xs: '1', md: '1 1 50%' },
@@ -81,21 +83,21 @@ const bookADemoStyle = {
   },
   button: {
     backgroundColor: '#115e59',
-		color: '#f9fafb',
-		borderRadius: '1rem',
-		padding: {
-			xs: '0.25rem 0.5rem',
-			sm: '0.375rem 0.75rem',
-			md: '0.25rem 0.5rem',
-		},
-		textTransform: 'none',
-		fontSize: '1.2rem',
-		whiteSpace: 'nowrap',
-		border: '1px solid #0d9488',
-		transition: 'all 150ms ease',
-		'&:hover': {
-			backgroundColor: '#0f766e',
-		},
+    color: '#f9fafb',
+    borderRadius: '1rem',
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.25rem 0.5rem',
+    },
+    textTransform: 'none',
+    fontSize: '1.2rem',
+    whiteSpace: 'nowrap',
+    border: '1px solid #0d9488',
+    transition: 'all 150ms ease',
+    '&:hover': {
+      backgroundColor: '#0f766e',
+    },
   },
   buttonContainer: {
     marginTop: '1rem',

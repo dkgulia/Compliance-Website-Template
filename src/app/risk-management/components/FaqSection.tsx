@@ -45,7 +45,7 @@ const FaqSection: React.FC = () => {
                 <Container sx={faqSectionStyle.container}>
                     <Box sx={faqSectionStyle.header}>
                         <Typography variant="h2" sx={faqSectionStyle.title}>
-                            {faqContent.content.title || "FAQs"}
+                            {faqContent.content.title || "Frequently asked questions"}
                         </Typography>
                         <Typography variant="body1" sx={faqSectionStyle.subtitle}>
                             No frequently asked questions available at this time.

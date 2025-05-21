@@ -27,7 +27,7 @@ export const securityTrainingData = {
       designGuidelines:
         'Bold headline, subheadline, single CTA, background illustration',
       content: {
-        heroTitle: 'Security Awareness Training—Automated',
+        heroTitle: 'Security Awareness Training Automated',
         heroSubtitle: 'Engage. Test. Report. Repeat.',
         heroDescription: [
           'Deliver role-based lessons and phishing simulations that keep risks low and auditors happy—without drowning your team in administration.',

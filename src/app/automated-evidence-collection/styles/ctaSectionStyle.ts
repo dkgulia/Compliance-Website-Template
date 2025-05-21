@@ -54,9 +54,16 @@ const ctaSectionStyle = {
   imageContainer: {
     flex: '1',
     maxWidth: { md: '40%' },
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    position: 'relative',
+    width: '100%',
+    height: { xs: '200px', sm: '250px', md: '300px' },
+    borderRadius: '8px',
+    overflow: 'hidden',
+    border: `1px solid ${theme.palette.divider}`,
+    boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
+  },
+  image: {
+    objectFit: 'contain'as const,
   },
   illustrationPlaceholder: {
     width: '100%',
@@ -65,7 +72,6 @@ const ctaSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: '1px dashed rgba(255, 255, 255, 0.2)',
     borderRadius: '8px',
     padding: '1rem',
   },

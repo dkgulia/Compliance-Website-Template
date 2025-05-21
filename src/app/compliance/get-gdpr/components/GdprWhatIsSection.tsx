@@ -8,7 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import gdprData from '../constants/gdprData';
 import whatIsSectionStyle from '../styles/whatIsSectionStyle';
-import gdprImage from '../images/-create-a-minimalist--professional-icon-representi.png'
+import gdprImage from '../images/dual-hex-white.png'
 
 export default function GdprWhatIsSection() {
     const section = gdprData.sections.find((sec) => sec.Sno === "1");

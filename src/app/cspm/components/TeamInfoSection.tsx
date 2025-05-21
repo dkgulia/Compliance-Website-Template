@@ -1,9 +1,10 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import GroupsIcon from '@mui/icons-material/Groups';
 import teamInfoSectionStyle from '../styles/teamInfoSectionStyle';
 import { cspmData } from '../constants/cspmData';
+import Image from 'next/image';
+import securityTeamImage from '../images/teamCollab.png'; // Import the image
 
 const TeamInfoSection: React.FC = () => {
     return (
@@ -30,10 +31,13 @@ const TeamInfoSection: React.FC = () => {
 
                     <Box sx={teamInfoSectionStyle.imageContainer}>
                         <Box sx={teamInfoSectionStyle.imageCard}>
-                            <GroupsIcon sx={teamInfoSectionStyle.teamIcon} />
-                            <Typography sx={teamInfoSectionStyle.imagePlaceholder}>
-                                {cspmData.teamInfo.imageIdea}
-                            </Typography>
+                            <Image
+                                src={securityTeamImage}
+                                alt={cspmData.teamInfo.imageIdea || "Security team collaboration"}
+                                fill
+                                style={teamInfoSectionStyle.teamImage}
+                                priority
+                            />
                         </Box>
                     </Box>
                 </Box>

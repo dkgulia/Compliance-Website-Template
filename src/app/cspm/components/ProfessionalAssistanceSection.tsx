@@ -1,9 +1,11 @@
+
 'use client';
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
-import SupportIcon from '@mui/icons-material/Support';
 import supportedFrameworksStyle from '../styles/simpleInfoSectionStyle';
 import { cspmData } from '../constants/cspmData';
+import Image from 'next/image';
+import professionalSupportImage from '../images/calltoaction.png';
 
 const ProfessionalAssistanceSection: React.FC = () => {
     return (
@@ -37,10 +39,13 @@ const ProfessionalAssistanceSection: React.FC = () => {
 
                         <Box sx={supportedFrameworksStyle.imageSection}>
                             <Box sx={supportedFrameworksStyle.assistanceImageContainer}>
-                                <SupportIcon sx={supportedFrameworksStyle.assistanceIcon} />
-                                <Typography sx={supportedFrameworksStyle.imagePlaceholder}>
-                                    {cspmData.professionalAssistance.imageIdea}
-                                </Typography>
+                                <Image
+                                    src={professionalSupportImage}
+                                    alt={cspmData.professionalAssistance.imageIdea || "Professional assistance and support team"}
+                                    fill
+                                    style={supportedFrameworksStyle.assistanceImage}
+                                    priority
+                                />
                             </Box>
                         </Box>
                     </Box>

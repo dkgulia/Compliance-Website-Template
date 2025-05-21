@@ -51,6 +51,19 @@ const platformWalkthroughStyle = {
     alignItems: 'center',
     maxWidth: { xs: '100%', md: '50%' },
   },
+  // New style for image wrapper
+  imageWrapper: {
+    width: '100%',
+    maxWidth: '28rem',
+    minHeight: '16rem',
+    position: 'relative',
+    borderRadius: '1rem',
+    overflow: 'hidden',
+   
+  },
+  screenshotImage: {
+    objectFit: 'contain'as const,
+  },
   imagePlaceholder: {
     width: '100%',
     maxWidth: '28rem',
@@ -60,7 +73,6 @@ const platformWalkthroughStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: `1px solid ${theme.palette.divider}`,
   },
   contentBox: {
     flex: 1,
@@ -102,3 +114,4 @@ const platformWalkthroughStyle = {
 };
 
 export default platformWalkthroughStyle;
+

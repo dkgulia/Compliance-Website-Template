@@ -5,6 +5,8 @@ import { Box, Typography, Container, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
+import Image from 'next/image';
+import ctaImage from '../images/bookDemo.png';
 
 const CTASection: React.FC = () => {
     const { callToAction } = controlFrameworkData.sections;
@@ -32,8 +34,14 @@ const CTASection: React.FC = () => {
                     </Box>
 
                     <Box sx={ctaSectionStyle.imageContainer}>
-                        <Box sx={ctaSectionStyle.imagePlaceholder}>
-                            {callToAction.imageAlt}
+                        <Box sx={ctaSectionStyle.imageWrapper}>
+                            <Image
+                                src={ctaImage}
+                                alt={callToAction.imageAlt || "Call to action illustration"}
+                                fill
+                                style={ctaSectionStyle.ctaImage}
+                                priority
+                            />
                         </Box>
                     </Box>
                 </Box>

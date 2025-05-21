@@ -16,9 +16,9 @@ import {
   People as PeopleIcon,
 } from '@mui/icons-material';
 
-import { 
-  WORKSTATION, 
-  HOME, 
+import {
+  WORKSTATION,
+  HOME,
   RISK_MANAGEMENT,
   GRC_TOOL,
   HEXAFORT_SECURE,
@@ -76,10 +76,10 @@ export const platformFeatures: PlatformFeature[] = [
     href: THIRD_PARTY_RISK_MANAGEMENT,
   },
   {
-    title: 'Vulnerability Assessment',
+    title: 'Security Training',
     description: 'Identify, prioritize, and remediate security vulnerabilities',
     icon: <BugReportIcon />,
-    href: VULNERABILITY_ASSESSMENT,
+    href: SECURITY_TRAINING,
   },
   {
     title: 'Automated Evidence Collection',

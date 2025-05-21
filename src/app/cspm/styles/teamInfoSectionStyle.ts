@@ -64,21 +64,23 @@ const teamInfoSectionStyle = {
   imageCard: {
     width: '100%',
     maxWidth: '500px',
-    aspectRatio: '16/9',
-    backgroundColor: '#115e5920',
+    aspectRatio: '16/10',
+    position: 'relative', // Required for Next.js Image with fill
     borderRadius: '0.75rem',
-    border: `1px dashed ${theme.palette.secondary.dark}60`,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '1.5rem',
+    overflow: 'hidden', // Ensure image respects border radius
+    border: `1px solid ${theme.palette.divider}`,
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
     transition: 'all 0.3s ease',
     '&:hover': {
-      backgroundColor: '#115e5930',
-      border: `1px dashed ${theme.palette.secondary.dark}90`,
+      transform: 'translateY(-5px)',
+      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
     },
   },
+  // Style for the Next.js Image
+  teamImage: {
+    objectFit: 'cover'as const,
+  },
+  // Keeping the original placeholder styles for reference
   teamIcon: {
     fontSize: '3rem',
     color: '#115e59',

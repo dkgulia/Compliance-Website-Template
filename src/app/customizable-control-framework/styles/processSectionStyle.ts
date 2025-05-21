@@ -41,16 +41,16 @@ const processSectionStyle = {
   stepsContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
+    gap: '1rem',
     width: '100%',
   },
   stepWrapper: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    gap: '2rem',
+    gap: '1rem',
     alignItems: 'center',
     borderRadius: '1rem',
-    padding: '2rem',
+    padding: '0rem',
     transition: 'all 0.35s ease',
     '&:hover': {
       transform: 'translateY(-8px)',
@@ -90,6 +90,18 @@ const processSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageWrapper: {
+    width: '100%',
+    aspectRatio: '16/12',
+    position: 'relative',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
+  },
+  stepImage: {
+    objectFit: 'contain'as const,
+    borderRadius: '0.75rem',
+  },
+  // Keeping the placeholder style for reference
   imagePlaceholder: {
     width: '100%',
     aspectRatio: '16/9',
@@ -106,7 +118,6 @@ const processSectionStyle = {
     textAlign: 'center',
     fontStyle: 'italic',
   },
-
 };
 
 export default processSectionStyle;

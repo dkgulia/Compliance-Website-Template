@@ -1,6 +1,4 @@
-/* <ai_context>
-   Constants for the PCI DSS page (features, workflow, FAQs, etc.)
-</ai_context> */
+
 
 import { SvgIconComponent } from '@mui/icons-material';
 import SecurityIcon from '@mui/icons-material/Security';

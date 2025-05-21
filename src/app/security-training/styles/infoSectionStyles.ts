@@ -3,6 +3,16 @@ import theme from '../../../theme';
 const infoSectionStyles = {
   root: {
     background: theme.palette.background.default,
+    paddingTop: { xs: '2rem', md: '0rem' },
+    paddingBottom: { xs: '2rem', md: '0rem' },
+    border: 'none !important',
+    borderTop: 'none !important',
+    borderBottom: 'none !important',
+    boxShadow: 'none !important',
+    '&::before, &::after': {
+      display: 'none !important',
+      content: '"none !important"',
+    },
   },
   container: {
     display: 'flex',
@@ -14,6 +24,7 @@ const infoSectionStyles = {
     margin: '0 auto',
     gap: { xs: '2rem', sm: '3rem' },
     padding: { xs: '1rem', sm: '2rem' },
+    border: 'none',
   },
   contentBox: {
     flex: 1,
@@ -47,15 +58,7 @@ const infoSectionStyles = {
     marginBottom: { xs: '1rem', sm: 0 },
     position: 'relative',
     width: '100%',
-    height: { xs: '300px', md: '400px' },
-  },
-  infoImage: {
-    width: '100%',
-    maxWidth: '500px',
     height: 'auto',
-    borderRadius: '1rem',
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
-    objectFit: 'cover',
   },
 };
 

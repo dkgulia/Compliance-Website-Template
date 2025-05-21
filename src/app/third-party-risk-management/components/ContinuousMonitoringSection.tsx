@@ -4,6 +4,7 @@ import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import infoSectionStyle from '../styles/infoSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
+import monitoringGraph from '../images/third-graph.png';
 
 const ContinuousMonitoringSection: React.FC = () => {
 	const { continuousMonitoring } = thirdPartyRiskManagementData;
@@ -34,7 +35,6 @@ const ContinuousMonitoringSection: React.FC = () => {
 							</Typography>
 						)}
 
-
 						<Typography variant="body1" sx={infoSectionStyle.description}>
 							{continuousMonitoring.description}
 						</Typography>
@@ -51,14 +51,14 @@ const ContinuousMonitoringSection: React.FC = () => {
 							sx={{
 								width: '100%',
 								maxWidth: '500px',
-								height: '300px',
+								height: '350px',
 								position: 'relative',
 								borderRadius: '1rem',
 								overflow: 'hidden',
 							}}
 						>
 							<Image
-								src="/images/monitoring-graph.svg"
+								src={monitoringGraph}
 								alt="Live graph with spikes and alert notifications"
 								fill
 								style={{

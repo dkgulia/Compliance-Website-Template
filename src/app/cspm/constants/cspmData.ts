@@ -65,7 +65,8 @@ export const cspmData = {
         heroDescription: [
             "With HexaFort CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."
         ],
-        ctaText: "Get Started Free →"
+        ctaText: "Get Started Free →",
+        imagePrompt: "A clean, modern 2D vector illustration set against a dark background (#171717) with subtle gray grid lines. At the center, feature a glowing AI-powered security core (shield with circuit pattern) surrounded by six floating rectangular dashboard cards, each with rounded corners and teal borders. The cards represent: Real-time Monitoring (with pulse line icon), Cloud Compliance Status (cloud with checkmark), Policy Management (document with gear), Risk Dashboard (bar chart), Cloud Platforms (AWS, Azure, GCP icons), and Automation (gear icon). Each module is connected to the central shield by thin dotted glowing lines in teal (#115e59). All icons use white strokes with soft teal glows for highlights. The layout is symmetrical and designed to feel like an intelligent security operations dashboard."
     },
     benefits: {
         title: "What You'll Love About Hexafort CSPM:",
@@ -175,7 +176,7 @@ export const cspmData = {
         description: "Get tailored guidance from HexaFort specialists—before, during, and after implementation.",
         subheading: "",
         imageIdea: "Consultant speaking with client over dashboard video call",
-        imagePrompt: "Two professionals reviewing compliance metrics on a screen"
+        imagePrompt: "A clean, high-tech 2D vector illustration set against a dark background (#171717) with subtle gray grid lines. The scene shows a glowing dashboard interface with a consultant avatar icon (headset or speech bubble icon) on the left and a client profile icon on the right, both connected by a secure video call line with a glowing teal (#115e59) halo. In the background, soft outlines of charts or compliance panels float subtly to imply real-time collaboration. Use light teal accents for outlines, icons, and connection indicators. No text or human figures. Balanced for right-side layout in a hero-style section."
     },
     efficiencyEnhancements: {
         title: "Efficiency Enhancements",
@@ -207,7 +208,7 @@ export const cspmData = {
         title: "Top Use Cases",
         subtitle: "Where HexaFort delivers instant ROI",
         image: "",
-        imagePrompt: "Collage of compliance, DevOps, finance personas",
+        imagePrompt: 'A clean, high-tech 2D vector illustration of a modular cybersecurity risk dashboard, set against a dark background (#171717) with subtle gray grid lines. The main dashboard panel is floating and well-lit with soft shadows, glowing borders, and teal accents (#115e59). The dashboard includes: A top section showing a cloud account risk assessment: a horizontal bar graph with 3 segments (red, orange, green) labeled "High Risk," "Medium Risk," and "Compliant." A gauge-style meter showing a risk score or compliance percentage with green/teal highlights. A block showing total resources scanned with a magnifying glass icon. Below, a horizontal bar graph titled Cloud Risk by Service with red/orange/yellow stacks per service icon (e.g., compute, storage, identity, networking). The layout is symmetrical and minimal, using glowing white icons, rounded corners, and teal glow effects. No human figures or text. Designed to look like a secure, AI-powered GRC dashboard within the Hexafort platform.',
         list: [
             {
                 heading: "Continuous Compliance",

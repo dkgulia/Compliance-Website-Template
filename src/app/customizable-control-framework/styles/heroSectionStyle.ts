@@ -23,7 +23,6 @@ const heroSectionStyle = {
     backdropFilter: 'blur(6px)',
     borderRadius: '1rem',
     padding: '2.5rem',
-
   },
   textContent: {
     flex: 1,
@@ -38,7 +37,6 @@ const heroSectionStyle = {
     color: 'white',
     fontWeight: 'bold',
     fontSize: '0.9rem',
-
     alignItems: 'center',
     width: { xs: 'auto', sm: 'fit-content' },
   },
@@ -93,6 +91,21 @@ const heroSectionStyle = {
     position: 'relative',
     width: '100%',
     maxWidth: '500px',
+  },
+  imageWrapper: {
+    width: '100%',
+    aspectRatio: '18/14',
+    position: 'relative',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'translateY(-5px)',
+      boxShadow: '0 15px 35px rgba(0, 0, 0, 0.3)',
+    },
+  },
+  heroImage: {
+    objectFit: 'cover'as const,
   },
   imagePlaceholder: {
     width: '100%',

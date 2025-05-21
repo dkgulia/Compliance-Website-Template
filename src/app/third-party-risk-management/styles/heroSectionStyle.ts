@@ -4,7 +4,6 @@ const heroSectionStyle = {
   container: {
     background: theme.palette.background.default,
     paddingTop: { sm: '4rem', xs: '2rem' },
-
   },
   containerBox: {
     display: 'flex',
@@ -85,21 +84,29 @@ const heroSectionStyle = {
     alignItems: 'center',
     marginBottom: { xs: '2rem', sm: '2rem' },
     marginTop: { xs: '1rem', sm: '1rem' },
-    textAlign: 'center',
     width: '100%',
+  },
+  imageWrapper: {
+    width: '100%',
+    maxWidth: '30rem',
+    minHeight: '26rem',
+    position: 'relative',
+    borderRadius: '1rem',
+    overflow: 'hidden',
+
+  },
+  heroImage: {
+    objectFit: 'cover' as const,
   },
   imagePlaceholder: {
     width: '100%',
     maxWidth: '28rem',
-    minHeight: '16rem',
+    minHeight: '20rem',
     borderRadius: '1rem',
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: theme.palette.text.disabled,
-    border: `1px solid ${theme.palette.divider}`,
-
     padding: '1rem',
     fontSize: '0.9rem',
     textAlign: 'center',

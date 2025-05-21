@@ -1,6 +1,3 @@
-/* <ai_context>
-   Constants for the DPDP page (features, workflow, FAQs, etc.)
-</ai_context> */
 
 import { SvgIconComponent } from '@mui/icons-material';
 import SecurityIcon from '@mui/icons-material/Security';

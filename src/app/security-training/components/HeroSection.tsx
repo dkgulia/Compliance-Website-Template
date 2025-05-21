@@ -1,71 +1,53 @@
 'use client';
-
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
-import { securityTrainingData } from '../constants/securityTrainingData';
-import heroSectionStyles from '../styles/heroSectionStyles';
 import Image from 'next/image';
+import heroSectionStyle from '../styles/heroSectionStyles';
+import securityTrainingHero from '../images/security-hero.png';
 
-interface HeroContent {
-	heroTitle: string;
-	heroSubtitle: string;
-	heroDescription: string[];
-	ctaText: string;
-}
-
-const HeroSection: React.FC = () => {
-	const heroSection = securityTrainingData.sections.find(
-		(section) => section.Sno === '1' && section.blockType === 'Hero'
-	);
-
-	if (!heroSection || !heroSection.content) return null;
-
-	const { heroTitle, heroSubtitle, heroDescription, ctaText } = heroSection.content as HeroContent;
-
+const SecurityAwarenessHero: React.FC = () => {
 	return (
-		<Box
-			sx={{
-				...heroSectionStyles.container,
-			}}
-		>
-			<Container sx={heroSectionStyles.containerBox}>
-				<Box sx={heroSectionStyles.leftContentBox}>
-					<Box sx={heroSectionStyles.tag}>
-						<Typography sx={heroSectionStyles.tagText}>Security Awareness Made Easy</Typography>
+		<Box component="section" sx={heroSectionStyle.container}>
+			<Container maxWidth="lg">
+				<Box sx={heroSectionStyle.containerBox}>
+					<Box sx={heroSectionStyle.contentBox}>
+						<Typography variant="body1" sx={heroSectionStyle.tagline}>
+							Security Awareness Made Easy
+						</Typography>
+						<Typography variant="h1" sx={heroSectionStyle.title}>
+							Security Awareness Training Automated
+						</Typography>
+						<Typography variant="h2" sx={heroSectionStyle.subtitle}>
+							Engage. Test. Report. Repeat.
+						</Typography>
+						<Typography variant="body1" sx={heroSectionStyle.description}>
+							Deliver role-based lessons and phishing simulations that keep risks low and
+							auditors happy—without drowning your team in administration.
+						</Typography>
+
+						<Button variant="contained" sx={heroSectionStyle.ctaButton}>
+						Book A Demo
+						</Button>
 					</Box>
 
-					<Typography variant="h1" sx={heroSectionStyles.title}>
-						{heroTitle}
-					</Typography>
-
-					<Typography variant="h5" sx={heroSectionStyles.subtitle}>
-						{heroSubtitle}
-					</Typography>
-
-					<Box sx={heroSectionStyles.listContainer}>
-						{heroDescription.map((desc, index) => (
-							<Typography key={index} sx={heroSectionStyles.listItem}>
-								{desc}
-							</Typography>
-						))}
+					<Box sx={heroSectionStyle.imageBox}>
+						<Image
+							src={securityTrainingHero}
+							alt="Security Awareness Training"
+							width={550}
+							height={450}
+							style={{
+								width: '100%',
+								height: 'auto',
+								maxWidth: '550px'
+							}}
+							priority
+						/>
 					</Box>
-
-					<Button variant="contained" sx={heroSectionStyles.ctaButton}>
-						{ctaText}
-					</Button>
-				</Box>
-				<Box sx={heroSectionStyles.imageBox}>
-					<Image
-						src="/images/security-training-hero.png"
-						alt="Security Training Hero"
-						width={550}
-						height={550}
-						style={{ objectFit: 'cover', maxWidth: '100%', height: 'auto' }}
-					/>
 				</Box>
 			</Container>
 		</Box>
 	);
 };
 
-export default HeroSection;
+export default SecurityAwarenessHero;

@@ -1,6 +1,3 @@
-/* <ai_context>
-   Renders the "Evolution and Background of ISO 20000-1" from iso20000Data.sections[3].content
-</ai_context> */
 
 'use client';
 import React from 'react';

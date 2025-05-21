@@ -8,7 +8,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import gdprData from '../constants/gdprData';
 import scopeSectionStyle from '../styles/scopeSectionStyle';
-import gdprGlobeImage from '../images/create-a-minimalist-digital-illustration-represent.png';
+import gdprGlobeImage from '../images/dual-hex-white.png';
 
 interface SectionContent {
     heading?: string;

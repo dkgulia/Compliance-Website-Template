@@ -22,14 +22,14 @@ const featuresSectionStyle = {
     width: '100%',
     maxWidth: '60rem',
     marginX: 'auto',
-    marginBottom: '2.5rem', // Reduced from 4rem to 2.5rem
+    marginBottom: '2.5rem',
   },
   heading: {
     fontWeight: 600,
     fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.2rem' },
     color: theme.palette.text.primary,
-    marginBottom: '0.5rem',
     position: 'relative',
+    marginTop:'1rem'
   },
   subheading: {
     fontSize: '1rem',
@@ -45,9 +45,8 @@ const featuresSectionStyle = {
     justifyContent: 'space-between',
     width: '100%',
     marginBottom: '3.5rem',
-    gap: { xs: '1.5rem', md: '1.5rem' },
+    gap: { xs: '1.5rem', md: '1rem' },
     position: 'relative',
-     
   },
   featureStepReverse: {
     flexDirection: { xs: 'column', md: 'row-reverse' },
@@ -59,7 +58,6 @@ const featuresSectionStyle = {
     alignItems: 'flex-start',
     textAlign: 'left',
     maxWidth: { md: '55%' },
-      border:'2px solid red'
   },
   stepNumber: {
     color: '#115e59',
@@ -87,7 +85,6 @@ const featuresSectionStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     maxWidth: { md: '45%' },
-    border:'2px solid red'
   },
 };
 

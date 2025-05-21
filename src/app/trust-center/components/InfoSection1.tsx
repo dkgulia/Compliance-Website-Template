@@ -5,6 +5,7 @@ import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
 import infoSectionStyle from '../styles/infoSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
+import dualHexImage from '../images/trustSecurity.png';
 
 const InfoSection1: React.FC = () => {
   const data = trustCenterPageData.sections.infoSection1;
@@ -27,7 +28,7 @@ const InfoSection1: React.FC = () => {
         <Box sx={infoSectionStyle.imageRight}>
           <Box sx={infoSectionStyle.imageContainer}>
             <Image
-              src="/images/dual-hex-white.png" // Fallback to a default image
+              src={dualHexImage}
               alt="Security showcase"
               width={450}
               height={350}
@@ -36,6 +37,7 @@ const InfoSection1: React.FC = () => {
                 height: 'auto',
                 objectFit: 'cover',
               }}
+              priority
             />
           </Box>
         </Box>

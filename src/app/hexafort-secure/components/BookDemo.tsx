@@ -6,8 +6,7 @@ import Image from 'next/image';
 import bookDemoStyle from '../styles/bookDemoStyle';
 import hexafortSecureData from '../constants/hexafortSecureData';
 import { ArrowForward } from '@mui/icons-material';
-
-const demoImage = '/images/compliances/a-shield-icon-with-subtle-digital-circuit-pattern-.png';
+import demoImage from '../images/bookDemo.png';
 
 const BookDemo: React.FC = () => {
     const { bookDemo } = hexafortSecureData;
@@ -22,8 +21,8 @@ const BookDemo: React.FC = () => {
     return (
         <Box sx={bookDemoStyle.box}>
             <Box sx={bookDemoStyle.bannerContainer}>
-                <Grid container spacing={3}>
-                    <Grid size={{ xs: 12, md: 9 }}>
+                <Grid container spacing={3} alignItems="center">
+                    <Grid size={{ xs: 12, md: 7 }}>
                         <Grid container direction="column" spacing={2}>
                             <Grid size={{ xs: 12 }} sx={bookDemoStyle.titleSection}>
                                 {bookDemo.tagline && (
@@ -60,17 +59,15 @@ const BookDemo: React.FC = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid size={{ xs: 12, md: 3 }} sx={bookDemoStyle.imageContainer}>
-                        <Box sx={bookDemoStyle.iconWrapper}>
+                    <Grid size={{ xs: 12, md: 5 }} sx={bookDemoStyle.imageContainer}>
+                        <Box sx={bookDemoStyle.imageWrapper}>
                             <Image
                                 src={demoImage}
                                 alt="Book a Demo"
-                                width={300}
-                                height={300}
                                 style={{
-                                    maxWidth: '100%',
-                                    height: 'auto',
-                                    borderRadius: '8px',
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'contain',
                                 }}
                                 priority
                             />

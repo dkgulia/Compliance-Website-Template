@@ -4,7 +4,7 @@ import { Box, Typography, Button, Container } from '@mui/material';
 import Image from 'next/image';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { hexafortSecureData } from '../constants/hexafortSecureData';
-import heroImage from '../images/hero.png';
+import heroImage from '../images/secure-hero.png';
 
 const HeroSection: React.FC = () => {
 	const { hero } = hexafortSecureData;

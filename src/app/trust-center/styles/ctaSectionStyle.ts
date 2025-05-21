@@ -65,7 +65,7 @@ const ctaSectionStyle = {
   imageWrapper: {
     position: 'relative',
     width: { xs: '100%', sm: '250px', md: '300px' },
-    height: { xs: '200px', sm: '230px' },
+    height: { xs: '200px', sm: '230px',md:'250px' },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

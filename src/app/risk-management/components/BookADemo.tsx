@@ -2,8 +2,10 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Image from 'next/image';
 import bookADemoStyle from '../styles/bookADemoStyle';
 import { useRouter } from 'next/navigation';
+import dashboardPreview from '../images/risk-cta.png';
 
 const BookADemo = () => {
     const router = useRouter();
@@ -14,10 +16,20 @@ const BookADemo = () => {
     return (
         <Box sx={bookADemoStyle.box}>
             <Container sx={bookADemoStyle.container}>
-                <Box sx={bookADemoStyle.imagePlaceholder}>
-                    <Typography variant="body2" color="textSecondary">
-                        Risk Management Dashboard Preview
-                    </Typography>
+                <Box sx={bookADemoStyle.imageContainer}>
+                    <Image
+                        src={dashboardPreview}
+                        alt="Risk Management Dashboard Preview"
+                        width={500}
+                        height={320}
+                        style={{
+                            maxWidth: '100%',
+                            height: 'auto',
+                            borderRadius: '16px',
+                            
+                        }}
+                        priority
+                    />
                 </Box>
                 <Box sx={bookADemoStyle.textBox}>
                     <Typography sx={bookADemoStyle.tagline}>HexaFort Risk Management</Typography>

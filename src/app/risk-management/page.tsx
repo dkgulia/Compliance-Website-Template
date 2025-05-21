@@ -15,8 +15,9 @@ const RiskManagementPage = () => {
         <Box>
             <HeroSection />
             <KeyCapabilitiesLadder />
-            <PlatformWalkthrough />
             <QuickStartOnboarding />
+            <PlatformWalkthrough />
+
             <OfferBanner />
             <BookADemo />
             <FaqSection />

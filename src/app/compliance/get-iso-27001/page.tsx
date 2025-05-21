@@ -1,8 +1,3 @@
-/* <ai_context>
-   Main Page for the new merged ISO 27001 design
-   Updated to remove certain sections and add the banner, compliance hub, and implementation roadmap.
-   Keep black background, unify color scheme.
-</ai_context> */
 
 import React from 'react';
 import { Metadata } from 'next';

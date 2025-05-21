@@ -4,10 +4,12 @@ import { Box, Container, Typography } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import SecurityIcon from '@mui/icons-material/Security';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
-import EnhancedCcpaHeroSectionForm from './EnhancedCcpaHeroSectionForm';
+import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
+import { ComplianceFormValues } from '../../components/ComplianceForm';
+
 import ccpaHeroSectionStyles from '../styles/heroSectionStyle';
-import { FormValues } from './EnhancedCcpaHeroSectionForm';
-import { ComplianceOptions } from '../../../constants/complianceData';
+import { complianceOptionsArray, ComplianceOptions } from '../../../constants/complianceData';
+import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const CcpaHeroSection = () => {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
@@ -20,7 +22,7 @@ const CcpaHeroSection = () => {
     setSelectedOptions(newOptions);
   };
 
-  const handleSubmitCallback = (values: FormValues) => {
+  const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Values and Options:', { ...values, selectedOptions });
   };
 
@@ -73,9 +75,15 @@ const CcpaHeroSection = () => {
           </Box>
         </Box>
         <Box sx={ccpaHeroSectionStyles.formBox}>
-          <EnhancedCcpaHeroSectionForm
+          <EnhancedComplianceForm
+            title="Book Your Demo Today!"
+            subtitle="Get answers to all your questions."
+            buttonText="Book Your Demo"
+            sheetName={sheetNameTypes.ccpaForm}
+            formStyles={ccpaHeroSectionStyles}
             selectedOptions={selectedOptions}
             onOptionsChange={handleOptionsChange}
+            complianceOptions={complianceOptionsArray}
             onSubmitCallback={handleSubmitCallback}
           />
         </Box>

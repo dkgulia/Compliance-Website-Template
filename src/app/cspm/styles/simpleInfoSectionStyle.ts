@@ -134,16 +134,23 @@ const supportedFrameworksStyle = {
   assistanceImageContainer: {
     width: '100%',
     maxWidth: '400px',
-    aspectRatio: '16/9',
-    backgroundColor: '#115e5915',
+    aspectRatio: '17/9',
+    position: 'relative', // Required for Next.js Image with fill
     borderRadius: '0.75rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '1.5rem',
-    border: `1px dashed ${theme.palette.secondary.dark}60`,
+    overflow: 'hidden', // Ensure image respects border radius
+    border: `1px solid ${theme.palette.divider}`,
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'translateY(-5px)',
+      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
+    },
   },
+  // Style for the Next.js Image
+  assistanceImage: {
+    objectFit: 'cover'as const,
+  },
+  // Keeping the original placeholder styles for reference
   assistanceIcon: {
     fontSize: '3rem',
     color: '#115e59',
