@@ -1,13 +1,14 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Icon, Container } from '@mui/material';
+import { Box, Typography, Button, Container } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import callToActionSectionStyle from '../styles/callToActionSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import theme from '../../../theme';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import demoImage from '../images/bookAdemo.png';
 
 const features = [
 	'10-minute tailored demonstration',
@@ -17,7 +18,8 @@ const features = [
 ];
 
 const CallToActionSection: React.FC = () => {
-	const router = useRouter(); 
+	const router = useRouter();
+
 	const handleBookDemo = () => {
 		router.push('/get-a-demo');
 	};
@@ -57,10 +59,17 @@ const CallToActionSection: React.FC = () => {
 					</Box>
 
 					<Box sx={callToActionSectionStyle.imageContainer}>
-						<Box sx={callToActionSectionStyle.placeholderImage}>
-							<PlayCircleFilledIcon sx={{ fontSize: '3rem', mb: 2, color: theme.palette.secondary.main }} />
-							{cspmData.callToAction.imagePrompt}
-						</Box>
+						<Image
+							src={demoImage}
+							alt="Demo visual"
+							style={{
+								width: '100%',
+								maxWidth: '450px',
+								height: 'auto',
+								borderRadius: '1rem',
+
+							}}
+						/>
 					</Box>
 				</Box>
 			</Container>

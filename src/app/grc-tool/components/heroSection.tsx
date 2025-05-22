@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
 					</Typography>
 
 					<Box sx={heroSectionStyle.buttonsContainer}>
-						<Button variant="contained" sx={heroSectionStyle.primaryButton}>
+						<Button variant="contained" sx={heroSectionStyle.primaryButton }onClick={handleBookDemo}>
 							Get Started
 						</Button>
 						<Button variant="outlined" sx={heroSectionStyle.secondaryButton} onClick={handleBookDemo}>

@@ -45,8 +45,8 @@ const scopeSectionStyle = {
     marginTop: '1rem',
   },
   imageWrapper: {
-    width: '300px',
-    height: '300px',
+    width: '350px',
+    height: '350px',
     borderRadius: '50%',
     display: 'flex',
     justifyContent: 'center',
@@ -58,7 +58,6 @@ const scopeSectionStyle = {
   imageStyle: {
     objectFit: 'cover' as const,
     borderRadius: '50%',
-    filter: 'brightness(0) invert(1)',
   },
   iconCaption: {
     color: '#6B7280',

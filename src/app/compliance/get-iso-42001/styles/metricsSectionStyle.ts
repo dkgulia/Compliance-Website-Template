@@ -42,7 +42,7 @@ const metricsSectionStyle = {
     },
   },
   metricValue: {
-    color: '#10B981',
+    color: '#115e59',
     fontWeight: 'bold',
     fontSize: { xs: '2.5rem', md: '3.5rem' },
     marginBottom: '0.5rem',

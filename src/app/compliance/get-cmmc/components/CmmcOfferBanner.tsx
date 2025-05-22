@@ -5,7 +5,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import offerBannerStyle from '../styles/offerBannerStyle';
 import { cmmcData } from '../constants/cmmcData';
-import cmmcBannerImg from '../images/cmmc-demo.png';
+import cmmcBannerImg from '../images/bookAdemo.png';
 
 const CmmcOfferBanner: React.FC = () => {
     const offerContent = cmmcData.sections.find(

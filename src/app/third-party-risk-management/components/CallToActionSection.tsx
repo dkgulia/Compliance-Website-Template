@@ -2,11 +2,11 @@
 import React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import EventAvailableIcon from '@mui/icons-material/EventAvailable';
-import DateRangeIcon from '@mui/icons-material/DateRange';
 import callToActionStyle from '../styles/callToActionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import ctaImage from '../images/bookAdemo.png';
 
 const CallToActionSection: React.FC = () => {
 	const { callToAction } = thirdPartyRiskManagementData;
@@ -39,11 +39,18 @@ const CallToActionSection: React.FC = () => {
 							{callToAction.ctaText}
 						</Button>
 					</Box>
+
 					<Box sx={callToActionStyle.imageContainer}>
-						<Box sx={callToActionStyle.imagePlaceholder}>
-							<DateRangeIcon sx={{ fontSize: '2rem', mr: 1 }} />
-							{callToAction.imagePrompt}
-						</Box>
+						<Image
+							src={ctaImage}
+							alt="Call to action visual"
+							style={{
+								width: '100%',
+								maxWidth: '400px',
+								height: 'auto',
+								borderRadius: '1rem',
+							}}
+						/>
 					</Box>
 				</Box>
 			</Container>

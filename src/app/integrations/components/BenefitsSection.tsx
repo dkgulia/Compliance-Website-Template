@@ -5,6 +5,7 @@ import { Box, Typography, Container } from '@mui/material';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
 import integrationsData from '../constants/integrationsData';
 
+
 const BenefitsSection: React.FC = () => {
     const { benefits } = integrationsData;
 

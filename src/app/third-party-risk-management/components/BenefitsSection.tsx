@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Container, Grid } from '@mui/material';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 
@@ -19,24 +19,26 @@ const BenefitsSection: React.FC = () => {
           </Typography>
         </Box>
 
-        <Box sx={benefitsSectionStyle.grid}>
+        <Grid container spacing={3}>
           {benefits.features.map((benefit, index) => (
-            <Box key={index} sx={benefitsSectionStyle.card as any}>
-              <Box sx={benefitsSectionStyle.iconContainer}>
-                <benefit.muiIcon sx={benefitsSectionStyle.icon} />
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+              <Box sx={benefitsSectionStyle.card as any}>
+                <Box sx={benefitsSectionStyle.iconContainer}>
+                  <benefit.muiIcon sx={benefitsSectionStyle.icon} />
+                </Box>
+                <Typography variant="h6" sx={benefitsSectionStyle.cardTitle}>
+                  {benefit.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={benefitsSectionStyle.cardDescription}
+                >
+                  {benefit.description}
+                </Typography>
               </Box>
-              <Typography variant="h6" sx={benefitsSectionStyle.cardTitle}>
-                {benefit.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={benefitsSectionStyle.cardDescription}
-              >
-                {benefit.description}
-              </Typography>
-            </Box>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );

@@ -1,4 +1,3 @@
-// src/app/demo-page/components/TestimonialSection.tsx
 'use client';
 import React, { useState } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
@@ -29,27 +28,27 @@ const TestimonialSection: React.FC = () => {
     <Box sx={testimonialSectionStyle.box}>
       <Box sx={testimonialSectionStyle.section}>
         <Box sx={testimonialSectionStyle.testimonialContainer}>
-          <Box sx={testimonialSectionStyle.testimonialContent}>
+          <Box sx={testimonialSectionStyle.testimonialGrid}>
+            {/* Image Column - Fixed size */}
             <Box sx={testimonialSectionStyle.imageColumn}>
               <Box sx={testimonialSectionStyle.imageContainer}>
                 <Image
-                  src={activeTestimonial.image}
+                  src={activeTestimonial.image || "/api/placeholder/300/300"}
                   alt={`${activeTestimonial.name || ''} ${activeTestimonial.company || ''}`}
                   width={300}
                   height={300}
-                  style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    height: '100%'
-                  }}
+                  style={testimonialSectionStyle.imageStyle}
                 />
               </Box>
             </Box>
 
+            {/* Content Column - Fixed height with scrollable content */}
             <Box sx={testimonialSectionStyle.contentColumn}>
-              <Typography variant="body1" sx={testimonialSectionStyle.quoteText}>
-                "{activeTestimonial.quote}"
-              </Typography>
+              <Box sx={testimonialSectionStyle.quoteContainer}>
+                <Typography variant="body1" sx={testimonialSectionStyle.quoteText}>
+                  "{activeTestimonial.quote}"
+                </Typography>
+              </Box>
 
               <Box sx={testimonialSectionStyle.authorInfo}>
                 {activeTestimonial.name && (
@@ -76,10 +75,7 @@ const TestimonialSection: React.FC = () => {
               {testimonialData.map((_, index) => (
                 <Box
                   key={index}
-                  sx={{
-                    ...testimonialSectionStyle.dot,
-                    ...(index === activeIndex ? testimonialSectionStyle.activeDot : {}),
-                  }}
+                  sx={index === activeIndex ? testimonialSectionStyle.activeDot : testimonialSectionStyle.dot}
                   onClick={() => handleDotClick(index)}
                 />
               ))}

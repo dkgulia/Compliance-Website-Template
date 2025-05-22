@@ -2,7 +2,7 @@
 
 import heroImage from '../images/iso27001.png'
 import ciaTriadImage from '../images/dual-hex-white.png'
-import BannerImage from '../images/ChatGPT Image Apr 28, 2025, 02_07_38 PM.png'
+import BannerImage from '../images/27001DEMOIMAGE.png'
 import step1 from '../images/planning-and-scope-definition--perhaps-a-document-.png'
 import step2 from'../images/implementation-of-controls--maybe-a-shield-or-lock.png'
 import step3 from '../images/auditing-and-measurement--perhaps-a-magnifying-gla.png'

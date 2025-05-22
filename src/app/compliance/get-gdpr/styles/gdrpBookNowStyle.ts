@@ -3,7 +3,7 @@ import theme from '../../../../theme';
 const gdprBookNowStyle = {
   container: {
     backgroundColor: theme.palette.background.default,
-    padding: '5px',
+    padding: '0px',
   },
   innerContainer: {
     display: 'flex',

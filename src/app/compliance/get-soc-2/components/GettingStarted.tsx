@@ -3,8 +3,8 @@ import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import stepsData from '../../get-soc-2/constants/gettingStartedData';
 import soc2StepsSectionStyle from '../styles/GettingStartedStyles';
-import image1 from '../images/create-a-cybersecurity-themed-illustration-showing.png';
-import image2 from '../images/create-a-professional-cybersecurity-themed-illustr (2).png';
+import image1 from '../images/gettingStartedSoc2.png';
+import image2 from '../images/getstarted2.png';
 import image3 from '../images/create-a-professional-cybersecurity-themed-illustr.png';
 import image4 from '../images/create-a-minimalist-icon-representing-continuous-s.png';
 
@@ -45,8 +45,8 @@ const SOC2StepsSection = () => {
                                     <Image
                                         src={stepImages[index] || "/images/soc2/step-placeholder.png"}
                                         alt={`Step ${index + 1}`}
-                                        width={300}
-                                        height={300}
+                                        width={350}
+                                        height={350}
                                         layout="intrinsic"
                                     />
                                 </Box>

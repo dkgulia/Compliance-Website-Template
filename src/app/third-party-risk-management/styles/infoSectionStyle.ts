@@ -2,8 +2,6 @@ import theme from '../../../theme';
 
 const infoSectionStyle = {
   section: {
-    paddingTop: { sm: '2rem', xs: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
   alternateBackground: {

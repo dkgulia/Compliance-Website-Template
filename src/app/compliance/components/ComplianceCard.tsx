@@ -11,7 +11,13 @@ const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 		<Card variant="outlined" sx={complianceStyles.card}>
 			<Stack direction="column" justifyContent="flex-start" spacing={2.5} sx={complianceStyles.cardStack}>
 				<Box sx={complianceStyles.logoImageWrapper}>
-					<Image src={item.logo} alt={`${item.title} Logo`} fill style={complianceStyles.logoImage} />
+					<Image
+						src={item.logo}
+						alt={`${item.title} Logo`}
+						width={45}
+						height={45}
+						style={complianceStyles.logoImage}
+					/>
 				</Box>
 
 				<Box sx={complianceStyles.contentBox}>
@@ -23,8 +29,15 @@ const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 					</Typography>
 
 					<Box sx={complianceStyles.linkBox}>
-						<Link color="primary" href={`${COMPLIANCE}${item.url}`} component={NextLink} sx={complianceStyles.navLink}>
-							<Typography variant="body2">{'Learn more ->'}</Typography>
+						<Link
+							href={`${item.url}`}
+							component={NextLink}
+							sx={complianceStyles.navLink}
+							underline="none"
+						>
+							<Typography variant="body2" sx={{ fontWeight: 600 }}>
+								Learn more →
+							</Typography>
 						</Link>
 					</Box>
 				</Box>

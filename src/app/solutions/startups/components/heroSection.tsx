@@ -2,14 +2,20 @@
 import React from 'react';
 import { Box, Container, Typography, Button, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import hexafortData from '../constant/dataFile';
 import Image from 'next/image';
-import heroImage from '../images/heroSection-startup.png'
+import heroImage from '../images/startupHero copy.png'
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
+  const router = useRouter();
   const { description, callToAction } = hexafortData.heroSection;
+
+  const handleCtaClick = () => {
+    router.push('/get-a-demo');
+  };
 
   return (
     <Box sx={heroSectionStyle.container}>
@@ -46,6 +52,7 @@ const HeroSection: React.FC = () => {
               variant="contained"
               endIcon={<ArrowForwardIcon />}
               sx={heroSectionStyle.ctaButton}
+              onClick={handleCtaClick}
             >
               {callToAction || 'Schedule a consultation'}
             </Button>
@@ -56,8 +63,8 @@ const HeroSection: React.FC = () => {
               <Image
                 src={heroImage}
                 alt="Compliance certification for startups"
-                layout="fill"
-                objectFit="contain"
+                fill
+                style={{ objectFit: 'contain' }}
                 priority
               />
             </Box>

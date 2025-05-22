@@ -66,15 +66,33 @@ const screenshotsSectionStyle = {
     gap: '1.5rem',
     alignItems: 'center',
   },
-  imagePlaceholder: {
+  slideVisible: {
+    display: 'flex',
+    flexDirection: 'column' as any,
+    gap: '1.5rem',
+    alignItems: 'center',
+  },
+  slideHidden: {
+    display: 'none',
+  },
+
+  imageContainer: {
     width: '100%',
-    height: '350px',
-    backgroundColor: '#17171799',
-    borderRadius: '0.75rem',
+    maxWidth: '500px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    border: `1px solid ${theme.palette.divider}`,
+    backgroundColor: 'transparent',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  },
+
+  imageStyle: {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'contain' as any,
+    borderRadius: '8px',
   },
   captionBox: {
     width: '100%',
@@ -97,6 +115,16 @@ const screenshotsSectionStyle = {
     backgroundColor: theme.palette.divider,
     cursor: 'pointer',
     transition: 'all 0.2s',
+  },
+  // Active dot styling moved from inline
+  dotActive: {
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: 'rgba(16, 185, 129, 0.7)',
+    cursor: 'pointer',
+    transition: 'all 0.2s',
+    transform: 'scale(1.2)',
   },
 };
 

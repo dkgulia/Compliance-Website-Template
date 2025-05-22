@@ -2,6 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import trustedCompaniesSectionStyle from '../styles/trustedCompaniesSectionStyle';
+import Image from 'next/image';
 
 const logos = [
   { src: "/images/finstackk-logo.png", alt: 'Finstackk' },
@@ -27,20 +28,24 @@ const TrustedCompaniesSection: React.FC = () => {
                 <Box sx={trustedCompaniesSectionStyle.marqueeContainer}>
                     {logos.map((logo, index) => (
                         <Box key={index} sx={trustedCompaniesSectionStyle.logoBox}>
-                            <img
+                            <Image
                                 src={logo.src}
                                 alt={logo.alt}
-                                style={trustedCompaniesSectionStyle.logoImage}
+                                width={140}
+                                height={40}
+                                style={trustedCompaniesSectionStyle.logoImageStyle}
                             />
                         </Box>
                     ))}
 
                     {logos.map((logo, index) => (
                         <Box key={`dup-${index}`} sx={trustedCompaniesSectionStyle.logoBox}>
-                            <img
+                            <Image
                                 src={logo.src}
                                 alt={logo.alt}
-                                style={trustedCompaniesSectionStyle.logoImage}
+                                width={140}
+                                height={40}
+                                style={trustedCompaniesSectionStyle.logoImageStyle}
                             />
                         </Box>
                     ))}

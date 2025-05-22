@@ -97,28 +97,28 @@ export const securityTrainingData = {
         subtitle: '',
         steps: [
           {
-            heading: '1. Connect HR Directory',
+            heading: ' Connect HR Directory',
             description:
               'Sync users and roles from Azure AD, Okta, or Google Workspace.',
             image: '',
             imagePrompt: 'Integration icons connecting to Hexafort logo',
           },
           {
-            heading: '2. Assign Lessons',
+            heading: ' Assign Lessons',
             description:
               'Auto-enroll roles into curated curricula or build your own tracks.',
             image: '',
             imagePrompt: 'Drag-and-drop lesson builder UI',
           },
           {
-            heading: '3. Simulate Attacks',
+            heading: ' Simulate Attacks',
             description:
               'Run phishing or USB-bait campaigns, then auto-coach clickers.',
             image: '',
             imagePrompt: 'Email icon morphing into alert badge',
           },
           {
-            heading: '4. Prove Compliance',
+            heading: ' Prove Compliance',
             description:
               'Generate completion certificates and auditor-friendly CSV exports.',
             image: '',
@@ -134,7 +134,7 @@ export const securityTrainingData = {
       designGuidelines: 'Title left, bullet list, CTA button, screenshot right',
       content: {
         title: 'Launch in Under 30 Minutes',
-        subtitle: '',
+        subtitle: 'Get your compliance training program up and running faster than ever',
         image: '',
         imagePrompt: 'GIF placeholder of quick setup wizard',
         description:

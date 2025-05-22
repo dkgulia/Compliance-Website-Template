@@ -135,22 +135,18 @@ const supportedFrameworksStyle = {
     width: '100%',
     maxWidth: '400px',
     aspectRatio: '17/9',
-    position: 'relative', // Required for Next.js Image with fill
+    position: 'relative',
     borderRadius: '0.75rem',
-    overflow: 'hidden', // Ensure image respects border radius
-    border: `1px solid ${theme.palette.divider}`,
-    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+    overflow: 'hidden',
     transition: 'all 0.3s ease',
     '&:hover': {
       transform: 'translateY(-5px)',
       boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
     },
   },
-  // Style for the Next.js Image
   assistanceImage: {
     objectFit: 'cover'as const,
   },
-  // Keeping the original placeholder styles for reference
   assistanceIcon: {
     fontSize: '3rem',
     color: '#115e59',

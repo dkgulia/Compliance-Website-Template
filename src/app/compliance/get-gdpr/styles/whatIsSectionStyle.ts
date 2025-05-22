@@ -42,8 +42,8 @@ const whatIsSectionStyle = {
     height: '100%',
   },
   imageWrapper: {
-    width: '300px',
-    height: '300px',
+    width: '350px',
+    height: '350px',
     borderRadius: '50%',
     display: 'flex',
     justifyContent: 'center',
@@ -55,7 +55,7 @@ const whatIsSectionStyle = {
   imageStyle: {
     objectFit: 'cover' as const,
     borderRadius: '50%',
-    filter: 'brightness(0) invert(1)',
+
   },
   iconCaption: {
     color: '#6B7280',

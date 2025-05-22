@@ -20,9 +20,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useRouter, usePathname } from 'next/navigation';
-import CategorySidebar from './Menus/SolutionMenu/components/CategorySidebar';
-import ServiceList from './Menus/SolutionMenu/components/ServiceList';
-import RightSection from './Menus/SolutionMenu/components/RightSection';
 import AboutMenu from './Menus/AboutMenu/page';
 import ComplianceMenu from './Menus/Compliance/components/complianceMenu';
 import PlatformMenu from './Menus/PlatformMenu/page';
@@ -239,15 +236,7 @@ const AppBarB2B: React.FC = () => {
 					>
 						{activeMenu === 'solutions' && (
 							<>
-								<Box sx={styles.sidebarContainer}>
-									<CategorySidebar selectedItem={selectedItem} onSelectCategory={setSelectedItem} />
-								</Box>
-								<Box sx={styles.contentContainer}>
-									<ServiceList selectedItem={selectedItem} onClose={() => setActiveMenu(null)} />
-								</Box>
-								<Box sx={styles.rightSideContainer}>
-									<RightSection />
-								</Box>
+
 							</>
 						)}
 						{activeMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
@@ -295,14 +284,6 @@ const AppBarB2B: React.FC = () => {
 								</IconButton>
 							</Box>
 
-							{mobileSubMenu === 'solutions' && (
-								<CategorySidebar
-									selectedItem={selectedItem}
-									onSelectCategory={setSelectedItem}
-									isMobile
-									onClose={toggleDrawer(false).handleToggleDrawer}
-								/>
-							)}
 							{mobileSubMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
 							{mobileSubMenu === 'platform' && <PlatformMenu />}
 							{mobileSubMenu === 'compliance' && <ComplianceMenu onClose={toggleDrawer(false).handleToggleDrawer} />}

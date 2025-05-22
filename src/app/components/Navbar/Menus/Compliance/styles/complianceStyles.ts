@@ -71,7 +71,8 @@ const complianceStyles = {
 		display: 'flex',
 		alignItems: 'flex-start',
 		cursor: 'pointer',
-		marginBottom: '1rem',
+		marginBottom: '0.5rem',
+		marginLeft: '1rem',
 		'&:hover': {
 			'& $featureTitle': {
 				color: '#3B82F6',
@@ -79,8 +80,8 @@ const complianceStyles = {
 		},
 	},
 	featureIcon: {
-		width: '2.5rem',
-		height: '2.5rem',
+		width: '3rem',
+		height: '3rem',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -88,6 +89,14 @@ const complianceStyles = {
 		borderRadius: '0.5rem',
 		marginRight: '1rem',
 		flexShrink: 0,
+		padding: '0.5rem',
+		'& img': {
+			maxWidth: '2rem !important',
+			maxHeight: '2rem !important',
+			width: 'auto !important',
+			height: 'auto !important',
+			objectFit: 'contain',
+		},
 	},
 	featureContent: {
 		flex: 1,
@@ -112,13 +121,12 @@ const complianceStyles = {
 		display: 'flex',
 		alignItems: 'center',
 		marginTop: '1rem',
-		padding: '1rem',
+		marginLeft: '1rem',
+		padding: '1.5rem 3rem',
 		borderRadius: '0.5rem',
 		cursor: 'pointer',
 		marginBottom: '1rem',
-		'&:hover': {
-			backgroundColor: 'rgba(49, 46, 46, 0.5)',
-		},
+		
 	},
 	viewButtonIcon: {
 		display: 'flex',
@@ -150,7 +158,9 @@ const complianceStyles = {
 	complianceItem: {
 		display: 'flex',
 		alignItems: 'flex-start',
-		padding: '0.75rem',
+		padding: '0.5rem 0.75rem',
+		marginLeft: '1rem',
+		marginBottom: '0.5rem',
 		borderRadius: '0.5rem',
 		cursor: 'pointer',
 		height: '100%',
@@ -163,8 +173,8 @@ const complianceStyles = {
 		backgroundColor: '#1f1f1f',
 	},
 	iconContainer: {
-		width: '3.5rem',
-		height: '3.5rem',
+		width: '4rem',
+		height: '4rem',
 		display: 'flex',
 		backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
@@ -172,6 +182,14 @@ const complianceStyles = {
 		justifyContent: 'center',
 		marginRight: '0.75rem',
 		flexShrink: 0,
+		padding: '0.75rem',
+		'& img': {
+			maxWidth: '2.5rem !important',
+			maxHeight: '2.5rem !important',
+			width: 'auto !important',
+			height: 'auto !important',
+			objectFit: 'contain',
+		},
 	},
 	itemTitle: {
 		fontSize: '0.875rem',
@@ -188,7 +206,9 @@ const complianceStyles = {
 	viewAllItem: {
 		display: 'flex',
 		alignItems: 'flex-start',
-		padding: '0.75rem',
+		padding: '0.5rem 0.75rem',
+		marginLeft: '1rem',
+		marginBottom: '0.5rem',
 		borderRadius: '0.5rem',
 		cursor: 'pointer',
 		height: '100%',
@@ -198,8 +218,8 @@ const complianceStyles = {
 		},
 	},
 	viewAllIconContainer: {
-		width: '3.5rem',
-		height: '3.5rem',
+		width: '4rem',
+		height: '4rem',
 		display: 'flex',
 		backgroundColor: '#115e59',
 		borderRadius: '0.5rem',
@@ -207,6 +227,7 @@ const complianceStyles = {
 		justifyContent: 'center',
 		marginRight: '0.75rem',
 		flexShrink: 0,
+		padding: '0.75rem',
 	},
 	viewAllTitle: {
 		fontSize: '0.875rem',

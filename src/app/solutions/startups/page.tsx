@@ -12,7 +12,7 @@ const StartupsPage = () => {
     <main>
       <HeroSection />
       <PackageOverview />
-      <ComplianceFrameworks/>
+      <ComplianceFrameworks/>z
       <ImplementationTimeline/>
       <BenefitsSection/>
       {/* <CostBreakdown/> */}

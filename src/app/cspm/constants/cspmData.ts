@@ -65,7 +65,7 @@ export const cspmData = {
         heroDescription: [
             "With HexaFort CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."
         ],
-        ctaText: "Get Started Free →",
+        ctaText: "Get Started Free",
         imagePrompt: "A clean, modern 2D vector illustration set against a dark background (#171717) with subtle gray grid lines. At the center, feature a glowing AI-powered security core (shield with circuit pattern) surrounded by six floating rectangular dashboard cards, each with rounded corners and teal borders. The cards represent: Real-time Monitoring (with pulse line icon), Cloud Compliance Status (cloud with checkmark), Policy Management (document with gear), Risk Dashboard (bar chart), Cloud Platforms (AWS, Azure, GCP icons), and Automation (gear icon). Each module is connected to the central shield by thin dotted glowing lines in teal (#115e59). All icons use white strokes with soft teal glows for highlights. The layout is symmetrical and designed to feel like an intelligent security operations dashboard."
     },
     benefits: {

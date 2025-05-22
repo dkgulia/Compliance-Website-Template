@@ -43,7 +43,7 @@ const ISO22301ImplementationSteps: React.FC = () => {
       <Container>
         <Box sx={implementationStepsStyle.headingContainer}>
           <Typography variant="h4" sx={implementationStepsStyle.sectionTitle}>
-            ISO 22301 Implementation Steps
+            ISO 27018 Implementation Steps
           </Typography>
           <Typography variant="body1" sx={implementationStepsStyle.sectionSubtitle}>
             Follow these key steps to implement an effective Business Continuity Management System

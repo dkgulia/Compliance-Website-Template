@@ -5,10 +5,10 @@ import processSectionStyle from '../styles/processSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import Image from 'next/image';
 
-import step1Image from '../images/visual-control-mapping-between-different-framework.png';
-import step2Image from '../images/an-icon-representing-consumer-data-access-and-dele (1).png';
-import step3Image from '../images/a-clean--vector-style-illustration-of-cybersecurit.png';
-import step4Image from '../images/visual-control-mapping-between-different-framework.png';
+import step1Image from '../images/howitworks1.png';
+import step2Image from '../images/howitworks2.png';
+import step3Image from '../images/howitworks3.png';
+import step4Image from '../images/ChatGPT Image May 22, 2025, 04_18_20 PM.png';
 
 const stepImages = [step1Image, step2Image, step3Image, step4Image];
 
@@ -53,7 +53,7 @@ const ProcessSection: React.FC = () => {
                                             alt={step.imagePrompt || `Step ${index + 1}: ${step.heading}`}
                                             fill
                                             style={processSectionStyle.stepImage}
-                                            priority={index < 2} // Prioritize loading first two images
+                                            priority={index < 2}
                                         />
                                     ) : (
                                         <Box sx={processSectionStyle.stepImagePlaceholder}>
@@ -63,9 +63,7 @@ const ProcessSection: React.FC = () => {
                                 </Box>
                             </Box>
 
-                            {index < process.steps.length - 1 && (
-                                <Box sx={processSectionStyle.connector} />
-                            )}
+
                         </Box>
                     ))}
                 </Box>

@@ -8,9 +8,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { LinkedIn, Twitter, Instagram } from '@mui/icons-material';
-import { ABOUT_US, CONTACT_US, PRIVACY_POLICY, REFUND_POLICY, TERMS_AND_CONDITIONS } from '../constants/routes';
+import { ABOUT_US, CONTACT_US, PRIVACY_POLICY, TERMS_AND_CONDITIONS } from '../constants/routes';
 import { complianceItems } from '../constants/complianceData';
-import { platformFeatures } from './Navbar/constants/platformData'; 
+import { platformFeatures } from './Navbar/constants/platformData';
 import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
 
@@ -87,7 +87,7 @@ export default function Footer() {
 										<Box key={item.title} sx={footerStyles.linkItem}>
 											<Link
 												color="inherit"
-												href={`/compliance${item.url}`}
+												href={item.url}
 												component={NextLink}
 												sx={footerStyles.navLink}
 											>
@@ -137,11 +137,6 @@ export default function Footer() {
 									<Box sx={footerStyles.linkItem}>
 										<Link color="inherit" component={NextLink} href={PRIVACY_POLICY} sx={footerStyles.navLink}>
 											<Typography variant="body2">Privacy Policy</Typography>
-										</Link>
-									</Box>
-									<Box sx={footerStyles.linkItem}>
-										<Link color="inherit" component={NextLink} href={REFUND_POLICY} sx={footerStyles.navLink}>
-											<Typography variant="body2">Refund Policy</Typography>
 										</Link>
 									</Box>
 								</Box>

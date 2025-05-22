@@ -35,7 +35,6 @@ const callToActionStyle = {
       left: 0,
       width: '100%',
       height: '5px',
-      background: `linear-gradient(90deg, ${theme.palette.secondary.main}, ${theme.palette.secondary.dark})`,
       borderTopLeftRadius: '1rem',
       borderTopRightRadius: '1rem',
     },

@@ -4,7 +4,7 @@ import { Box, Typography, Container } from '@mui/material';
 import teamInfoSectionStyle from '../styles/teamInfoSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import Image from 'next/image';
-import securityTeamImage from '../images/teamCollab.png'; // Import the image
+import securityTeamImage from '../images/teamsImage.png';
 
 const TeamInfoSection: React.FC = () => {
     return (

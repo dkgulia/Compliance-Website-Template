@@ -5,11 +5,13 @@ import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstruct
 import PeopleIcon from '@mui/icons-material/People';
 import BuildIcon from '@mui/icons-material/Build';
 import SchoolIcon from '@mui/icons-material/School';
+import { useRouter } from 'next/navigation';
 import implementationMethodologyStyle from '../styles/implementationMethodologyStyle';
 import hexafortData from '../constant/dataFile';
 
 const ImplementationMethodology: React.FC = () => {
   const { implementationMethodology } = hexafortData;
+  const router = useRouter(); // ← hook for routing
 
   const renderIcon = (title: string) => {
     switch (title) {
@@ -24,6 +26,10 @@ const ImplementationMethodology: React.FC = () => {
       default:
         return <IntegrationInstructionsIcon style={{ fontSize: '2.5rem', color: 'white' }} />;
     }
+  };
+
+  const handleRedirect = () => {
+    router.push('/hexafort-secure'); // ← redirect
   };
 
   return (
@@ -71,7 +77,11 @@ const ImplementationMethodology: React.FC = () => {
                   return ` ${word} `;
                 })}
               </Typography>
-              <Button variant="contained" sx={implementationMethodologyStyle.ctaButton}>
+              <Button
+                variant="contained"
+                sx={implementationMethodologyStyle.ctaButton}
+                onClick={handleRedirect} 
+              >
                 Learn About Our Process
               </Button>
             </Box>

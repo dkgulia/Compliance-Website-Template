@@ -5,7 +5,6 @@ const benefitsSectionStyle = {
 		paddingTop: { sm: '4rem', xs: '2rem' },
 		backgroundColor: theme.palette.background.default,
 		position: 'relative',
-
 	},
 	container: {
 		maxWidth: '1200px',
@@ -19,13 +18,12 @@ const benefitsSectionStyle = {
 		textAlign: 'center',
 	},
 	title: {
-		fontSize: { xs: '1.8rem', sm: '2.5rem',md:'2rem' },
+		fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
 		fontWeight: 600,
 		color: theme.palette.text.primary,
 		textAlign: 'center',
 		position: 'relative',
 		paddingBottom: '1rem',
-
 	},
 	subtitle: {
 		fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -37,18 +35,14 @@ const benefitsSectionStyle = {
 		marginRight: 'auto',
 		lineHeight: 1.6,
 	},
-	grid: {
-		display: 'grid',
-		gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(4, 1fr)' },
-		gap: '1.75rem',
-	},
 	card: {
 		backgroundColor: theme.palette.background.darkTransparent,
 		backdropFilter: 'blur(6px)',
 		borderRadius: '1rem',
 		padding: '1.75rem',
 		transition: 'all 0.35s ease',
-		height: { sm: '18rem', xs: 'auto', md: '20rem' },
+		height: '100%',
+		minHeight: { sm: '18rem', xs: 'auto', md: '20rem' },
 		display: 'flex',
 		flexDirection: 'column',
 		border: `1px solid ${theme.palette.divider}`,
@@ -90,11 +84,23 @@ const benefitsSectionStyle = {
 		transition: 'all 0.3s ease',
 		alignSelf: 'flex-start',
 		zIndex: 1,
+		flexShrink: 0,
 	},
 	icon: {
-		fontSize: '2rem',
-		color: theme.palette.text.primary,
+		fontSize: '1.75rem !important',
+		color: '#ffffff !important',
 		transition: 'transform 0.3s ease',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: '1.75rem',
+		height: '1.75rem',
+		'& svg': {
+			fontSize: '1.75rem !important',
+			color: '#ffffff !important',
+			width: '1.75rem !important',
+			height: '1.75rem !important',
+		},
 		'&:hover': {
 			transform: 'scale(1.1)',
 		},

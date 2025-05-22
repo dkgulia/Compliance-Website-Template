@@ -8,7 +8,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import gdprData from '../constants/gdprData';
 import scopeSectionStyle from '../styles/scopeSectionStyle';
-import gdprGlobeImage from '../images/dual-hex-white.png';
+import gdprGlobeImage from '../images/applyGDPR.png'
 
 interface SectionContent {
     heading?: string;
@@ -44,8 +44,8 @@ export default function GdprScopeSection() {
                                     src={gdprGlobeImage}
                                     alt="Global GDPR Impact"
                                     style={scopeSectionStyle.imageStyle}
-                                    width={280}
-                                    height={280}
+                                    width={350}
+                                    height={350}
                                     priority
                                 />
                             </Box>

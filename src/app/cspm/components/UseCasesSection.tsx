@@ -4,7 +4,7 @@ import { Box, Typography, List, ListItem } from '@mui/material';
 import useCasesSectionStyle from '../styles/useCasesSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import Image from 'next/image';
-import useCasesImage from '../images/risk.png'; // Import the image
+import useCasesImage from '../images/usecaseImage.png'
 
 const UseCasesSection: React.FC = () => {
   return (

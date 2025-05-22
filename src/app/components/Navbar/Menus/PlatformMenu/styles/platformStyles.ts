@@ -26,7 +26,7 @@ const platformStyles = {
 	},
 	mainContent: {
 	  flex: 1,
-	  padding: '1.5rem 2rem',
+	  padding: '1.5rem 3rem',
 	  display: 'flex',
 	  flexDirection: 'column',
 	},

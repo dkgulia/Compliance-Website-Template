@@ -12,6 +12,7 @@ import securityComplianceImage from '../images/cta-demo.png';
 const CTASection: React.FC = () => {
   const { cta } = evidenceCollectionData;
   const router = useRouter();
+
   const handleBookDemo = () => {
     router.push('/get-a-demo');
   };
@@ -22,6 +23,16 @@ const CTASection: React.FC = () => {
         <Box sx={ctaSectionStyle.ctaContainer}>
           <Box sx={ctaSectionStyle.contentWrapper}>
             <Box sx={ctaSectionStyle.textContent}>
+              <Typography variant="h2" sx={ctaSectionStyle.title}>
+                {cta.title}
+              </Typography>
+
+              {cta.subtitle && (
+                <Typography variant="h6" sx={ctaSectionStyle.subtitle}>
+                  {cta.subtitle}
+                </Typography>
+              )}
+
               <Typography variant="body1" sx={ctaSectionStyle.description}>
                 {cta.description}
               </Typography>
@@ -36,7 +47,6 @@ const CTASection: React.FC = () => {
               </Button>
             </Box>
 
-            {/* Image container instead of placeholder */}
             <Box sx={ctaSectionStyle.imageContainer}>
               <Image
                 src={securityComplianceImage}

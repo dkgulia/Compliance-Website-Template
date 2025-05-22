@@ -5,7 +5,7 @@ import { Box, Typography, Container } from '@mui/material';
 import supportedFrameworksStyle from '../styles/simpleInfoSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import Image from 'next/image';
-import professionalSupportImage from '../images/calltoaction.png';
+import professionalSupportImage from '../images/professionalAssistance.png';
 
 const ProfessionalAssistanceSection: React.FC = () => {
     return (

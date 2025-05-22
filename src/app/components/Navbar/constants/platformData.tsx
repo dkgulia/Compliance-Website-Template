@@ -115,13 +115,7 @@ export const companySizeOptions = [
     description: 'Fast track compliance with ready tools',
     href: SOLUTIONS_FOR_STARTUPS,
     icon: <StorefrontIcon />,
-  },
-  {
-    title: 'Hexafort For Midmarket',
-    description: 'Achieve GRC excellence with minimal lift',
-    href: SOLUTIONS,
-    icon: <BusinessCenterIcon />,
-  },
+  }
 ];
 
 export const solutionItems = [
@@ -129,10 +123,7 @@ export const solutionItems = [
     title: 'Continuous Compliance',
     href: COMPLIANCE,
   },
-  {
-    title: 'Audit Readiness',
-    href: COMPLIANCE,
-  },
+ 
 ];
 
 export const sidebarCategories = [

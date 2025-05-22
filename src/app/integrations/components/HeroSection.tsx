@@ -3,15 +3,21 @@
 import React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import integrationsData from '../constants/integrationsData';
 
 const HeroSection: React.FC = () => {
     const { hero } = integrationsData;
+    const router = useRouter();
 
     const titleParts = hero.title.split('of');
     const firstPart = titleParts[0];
     const secondPart = titleParts.length > 1 ? titleParts[1] : '';
+
+    const handleBookDemo = () => {
+        router.push('/get-a-demo');
+    };
 
     return (
         <Box component="section" sx={heroSectionStyle.section}>
@@ -39,6 +45,7 @@ const HeroSection: React.FC = () => {
                             variant="contained"
                             endIcon={<ArrowForwardIcon />}
                             sx={heroSectionStyle.button}
+                            onClick={handleBookDemo}
                         >
                             {hero.ctaText}
                         </Button>

@@ -6,7 +6,7 @@ import pageStyles from '../styles/pageStyles';
 import aboutItemStyles from '../styles/aboutItemStyles';
 import { aboutItems, featuredContent } from '../../../constants/aboutData';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import DemoImage from '../../../Images/-create-a-clean--professional-image-showing-an-ope.png';
+
 
 interface AboutSectionProps {
 	onClose?: () => void;
@@ -42,18 +42,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClose }) => {
 
 				<Grid size={{ xs: 12, sm: 6, md: 6 }}>
 					<Box sx={pageStyles.featuredBox}>
-						<Box sx={pageStyles.imageContainer}>
-							<Image
-								src={DemoImage}
-								alt="Book a Demo"
-								style={{
-									width: '100%',
-									height: '160px',
-									borderRadius: '0.5rem',
-									objectFit: 'contain',
-								}}
-							/>
-						</Box>
+
 						<Typography sx={pageStyles.featuredTitle}>{featuredContent.title}</Typography>
 						<Typography sx={pageStyles.featuredDescription}>{featuredContent.description}</Typography>
 

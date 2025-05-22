@@ -59,7 +59,7 @@ const iso27001BannerStyle = {
   },
   imageWrapper: {
     position: "relative",
-    width: { xs: "100%", sm: "250px",md:'300px' },
+    width: { xs: "100%", sm: "250px",md:'400px' },
     height: { xs: "200px", sm: "250px",md:'200px' },
     display: "flex",
     justifyContent: "center",

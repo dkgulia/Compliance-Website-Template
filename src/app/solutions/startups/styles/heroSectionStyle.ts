@@ -5,7 +5,7 @@ import { SxProps } from '@mui/system';
 const heroSectionStyle: Record<string, SxProps<Theme>> = {
 	container: {
 		position: 'relative',
-		padding: { xs: '4rem 1rem', md: '4rem 2rem' },
+		padding: { xs: '4rem 1rem', md: '3rem 5rem' },
 		background: (theme) => theme.palette.background.default,
 		overflow: 'hidden',
 		minHeight: { xs: 'auto', md: '80vh' },
@@ -131,9 +131,6 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		height: '100%',
 		borderRadius: '16px',
 		overflow: 'hidden',
-		background: (theme) => 'rgba(17, 24, 32, 0.5)',
-		border: (theme) => `1px solid ${theme.palette.divider}`,
-		boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',

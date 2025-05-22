@@ -2,12 +2,18 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'; // ✅ Import router
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { hexafortSecureData } from '../constants/hexafortSecureData';
 import heroImage from '../images/secure-hero.png';
 
 const HeroSection: React.FC = () => {
 	const { hero } = hexafortSecureData;
+	const router = useRouter(); // ✅ Initialize router
+
+	const handleRedirect = () => {
+		router.push('/get-a-demo'); // ✅ Redirect on click
+	};
 
 	return (
 		<Box component="section" sx={heroSectionStyle.container}>
@@ -29,7 +35,11 @@ const HeroSection: React.FC = () => {
 							</Typography>
 						)}
 
-						<Button variant="contained" sx={heroSectionStyle.ctaButton}>
+						<Button
+							variant="contained"
+							sx={heroSectionStyle.ctaButton}
+							onClick={handleRedirect} 
+						>
 							{hero.ctaText}
 						</Button>
 					</Box>

@@ -71,7 +71,7 @@ const processSectionStyle = {
 	stepImageWrapper: {
 		width: '100%',
 		maxWidth: '400px',
-		height: '220px',
+		height: '250px',
 		position: 'relative',
 		borderRadius: '1rem',
 		overflow: 'hidden',

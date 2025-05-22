@@ -4,14 +4,11 @@ import soc2 from '../compliance/images/complianceSOC2.png';
 import gdpr from '../compliance/images/complianceGDPR.png';
 import hipaa from '../compliance/images/hipaa.png';
 import ccpa from '../compliance/images/complianceCCPA.png';
-import nist from '../compliance/images/NIST-171.png';
 import pcidss from '../compliance/images/compliancePCIDSS.png';
-import iso22301 from '../compliance/images/ISO-20000.png';
-import iso20000 from '../compliance/images/compliance20000.png';
+import iso20000 from '../compliance/images/iso20000-1.png';
 import iso27701 from '../compliance/images/27701-logo.png';
 import dora from '../compliance/images/dora.png';
 import iso42001 from '../compliance/images/42001.png'
-import placeholderImage from '../compliance/images/logo-27701.png';
 import cmmc from '../compliance/images/cmmc.png';
 import iso27017 from '../compliance/images/compliance27017.png';
 import { StaticImageData } from 'next/image';

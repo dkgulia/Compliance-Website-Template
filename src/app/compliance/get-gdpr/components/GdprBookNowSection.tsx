@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Box, Container, Typography, Button, Stack } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import gdprBookNowStyle from '../styles/gdrpBookNowStyle';
-import demoImage from '../images/gdpr-cta.png'
+import demoImage from '../images/ctaGDPR.png'
 
 export default function GdprBookNowSection() {
     const bulletPoints = [

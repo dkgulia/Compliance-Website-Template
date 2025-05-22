@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const ctaSectionStyle = {
   container: {
-    padding: { xs: '3rem 1rem', md: '5rem 2rem' },
+    padding: { xs: '3rem 1rem', md: '4rem 0rem' },
     backgroundColor: theme.palette.background.default,
   },
   content: {

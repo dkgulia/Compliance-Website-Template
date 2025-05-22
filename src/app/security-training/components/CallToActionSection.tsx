@@ -21,6 +21,11 @@ const CallToActionSection = () => {
               <Typography variant="h4" sx={callToActionSectionStyles.title}>
                 {title}
               </Typography>
+
+            )}{subtitle && (
+              <Typography variant="h4" sx={callToActionSectionStyles.Subtitle}>
+              {subtitle}
+            </Typography>
             )}
             {description && (
               <Typography variant="body1" sx={callToActionSectionStyles.description}>
@@ -41,11 +46,11 @@ const CallToActionSection = () => {
               src={securityTrainingSetup}
               alt="Quick Setup Wizard"
               width={300}
-              height={200}
+              height={250}
               style={{
                 objectFit: 'contain',
                 maxWidth: '100%',
-                height: 'auto'
+                height: '300px'
               }}
               priority
             />

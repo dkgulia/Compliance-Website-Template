@@ -8,7 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import gdprData from '../constants/gdprData';
 import whatIsSectionStyle from '../styles/whatIsSectionStyle';
-import gdprImage from '../images/dual-hex-white.png'
+import gdprImage from '../images/whatisGDPR.png'
 
 export default function GdprWhatIsSection() {
     const section = gdprData.sections.find((sec) => sec.Sno === "1");
@@ -47,8 +47,8 @@ export default function GdprWhatIsSection() {
                                 <Image
                                     src={gdprImage}
                                     alt="Data Protection Shield"
-                                    width={300}
-                                    height={300}
+                                    width={350}
+                                    height={350}
                                     style={whatIsSectionStyle.imageStyle}
                                 />
                             </Box>

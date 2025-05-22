@@ -1,3 +1,4 @@
+import { Subtitles } from '@mui/icons-material';
 import theme from '../../../theme';
 
 const callToActionSectionStyles = {
@@ -20,7 +21,7 @@ const callToActionSectionStyles = {
     marginX: 'auto',
     padding: { xs: '1.5rem', sm: '2rem' },
     border: `1px solid ${theme.palette.divider}`,
-    overflow: 'hidden', 
+    overflow: 'hidden',
   },
   contentGrid: {
     display: 'flex',
@@ -36,6 +37,13 @@ const callToActionSectionStyles = {
     color: theme.palette.text.primary,
     lineHeight: 1.2,
   },
+  Subtitle: {
+    fontSize: { xs: '1.5rem', sm: '1.75rem', md: '1.5rem' },
+    fontWeight: '500',
+    marginBottom: '0.75rem',
+    color: theme.palette.text.secondary,
+    lineHeight: 1.2,
+  },
   description: {
     fontSize: '1rem',
     marginBottom: '1.25rem',
@@ -43,6 +51,7 @@ const callToActionSectionStyles = {
     lineHeight: 1.5,
   },
   ctaButton: {
+    marginTop:'1rem',
     color: '#f9fafb',
     fontWeight: 600,
     padding: {

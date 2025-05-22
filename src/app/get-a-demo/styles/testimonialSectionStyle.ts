@@ -1,4 +1,3 @@
-
 import theme from '../../../theme';
 
 const testimonialSectionStyle = {
@@ -20,23 +19,39 @@ const testimonialSectionStyle = {
     width: '100%',
     margin: '0 auto',
     overflow: 'hidden',
+    minHeight: { xs: '500px', md: '350px' },
   },
-  testimonialContent: {
-    display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
+  testimonialGrid: {
+    display: 'grid',
+    gridTemplateColumns: {
+      xs: '1fr',
+      md: 'minmax(250px, 30%) 1fr'
+    },
+    gridTemplateRows: {
+      xs: 'auto auto',
+      md: '1fr'
+    },
     gap: { xs: '2rem', md: '4rem' },
     alignItems: 'center',
+    height: '100%',
+    minHeight: { xs: '500px', md: '350px' },
   },
   imageColumn: {
-    flex: { md: '0 0 30%', lg: '0 0 25%' },
-    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gridColumn: { xs: '1', md: '1' },
+    gridRow: { xs: '1', md: '1' },
   },
   contentColumn: {
-    flex: '1',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     gap: '1.5rem',
+    gridColumn: { xs: '1', md: '2' },
+    gridRow: { xs: '2', md: '1' },
+    minHeight: { xs: 'auto', md: '300px' },
+    maxHeight: { xs: 'none', md: '350px' },
   },
   imageContainer: {
     position: 'relative',
@@ -44,8 +59,22 @@ const testimonialSectionStyle = {
     overflow: 'hidden',
     width: { xs: '220px', md: '220px' },
     height: { xs: '220px', md: '220px' },
-    border: '5px solid  #115e59',
+    border: '5px solid #115e59',
     boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+    flexShrink: 0,
+  },
+  imageStyle: {
+    objectFit: 'cover'as const,
+    width: '100%',
+    height: '100%',
+  },
+  quoteContainer: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    minHeight: { xs: '120px', md: '150px' },
+    maxHeight: { xs: '200px', md: '250px' },
+    overflow: 'hidden',
   },
   quoteText: {
     fontSize: { xs: '1rem', sm: '1.1rem', md: '1.15rem' },
@@ -53,26 +82,36 @@ const testimonialSectionStyle = {
     color: 'white',
     position: 'relative',
     fontWeight: 400,
+    display: '-webkit-box',
+    WebkitLineClamp: { xs: 8, md: 10 },
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
   },
   authorInfo: {
     display: 'flex',
     flexDirection: 'column',
     marginTop: '0.5rem',
+    flexShrink: 0,
+    minHeight: '60px',
   },
   authorName: {
     fontWeight: 600,
     fontSize: '1.1rem',
-    color:  '#115e59',
+    color: '#115e59',
+    lineHeight: 1.2,
   },
   authorPosition: {
     fontSize: '0.95rem',
     color: 'rgba(255, 255, 255, 0.8)',
     marginTop: '0.2rem',
+    lineHeight: 1.3,
   },
   navigationContainer: {
     display: 'flex',
     justifyContent: 'center',
     marginTop: '2rem',
+    flexShrink: 0,
   },
   navGroup: {
     display: 'flex',
@@ -103,7 +142,13 @@ const testimonialSectionStyle = {
     transition: 'all 0.2s ease',
   },
   activeDot: {
-    backgroundColor:  '#115e59',
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: '#115e59',
+    margin: '0 4px',
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
     transform: 'scale(1.2)',
   },
 };

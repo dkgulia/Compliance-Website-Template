@@ -19,8 +19,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 	const [expandedPanels, setExpandedPanels] = useState<string[]>(['primary']);
-	const [activeCategory, setActiveCategory] = useState<'essentials' | 'Others'>('essentials');
-
+	const [activeCategory, setActiveCategory] = useState<'essential' | 'Other'>('essential');
 
 	const displayPrimaryFrameworks = primaryFrameworks.slice(0, 8);
 	const displaySecondaryFrameworks = secondaryFrameworks.slice(0, 9);
@@ -44,7 +43,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 		return pathname === url;
 	};
 
-	const switchCategory = (category: 'essentials' | 'Others') => {
+	const switchCategory = (category: 'essential' | 'Other') => {
 		setActiveCategory(category);
 	};
 
@@ -76,7 +75,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 							minHeight: '48px',
 						}}
 					>
-						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Essentials FRAMEWORKS</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Essential FRAMEWORKS</Typography>
 					</AccordionSummary>
 					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Grid container spacing={2}>
@@ -93,12 +92,14 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 											<Image
 												src={item.logo}
 												alt={item.title}
-												width={32}
-												height={32}
+												width={40}
+												height={40}
 												style={{
-													maxWidth: '100%',
+													maxWidth: '2.5rem',
+													maxHeight: '2.5rem',
+													width: 'auto',
 													height: 'auto',
-													
+													objectFit: 'contain',
 												}}
 											/>
 										</Box>
@@ -118,7 +119,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
 									</Box>
 									<Box>
-										<Typography sx={styles.viewAllTitle}>View full essentials pages</Typography>
+										<Typography sx={styles.viewAllTitle}>View full essential pages</Typography>
 										<Typography sx={styles.viewAllDescription}>See all our available compliance frameworks</Typography>
 									</Box>
 								</Box>
@@ -128,8 +129,8 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 				</Accordion>
 
 				<Accordion
-					expanded={isPanelExpanded('Others')}
-					onChange={handlePanelToggle('secoOthersndary')}
+					expanded={isPanelExpanded('Other')}
+					onChange={handlePanelToggle('Other')}
 					elevation={0}
 					sx={{
 						border: 'none',
@@ -146,7 +147,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 							minHeight: '48px',
 						}}
 					>
-						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Others FRAMEWORKS</Typography>
+						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>Other FRAMEWORKS</Typography>
 					</AccordionSummary>
 					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Grid container spacing={2}>
@@ -163,12 +164,14 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 											<Image
 												src={item.logo}
 												alt={item.title}
-												width={32}
-												height={32}
+												width={40}
+												height={40}
 												style={{
-													maxWidth: '100%',
+													maxWidth: '2.5rem',
+													maxHeight: '2.5rem',
+													width: 'auto',
 													height: 'auto',
-													filter: 'brightness(0) invert(1)'
+													objectFit: 'contain',
 												}}
 											/>
 										</Box>
@@ -188,7 +191,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<ArrowForwardIcon sx={{ color: 'white', fontSize: '1.5rem' }} />
 									</Box>
 									<Box>
-										<Typography sx={styles.viewAllTitle}>View full Others pages</Typography>
+										<Typography sx={styles.viewAllTitle}>View full Other pages</Typography>
 										<Typography sx={styles.viewAllDescription}>See all our available compliance frameworks</Typography>
 									</Box>
 								</Box>
@@ -201,7 +204,7 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 	};
 
 	const renderDesktopLayout = () => {
-		const frameworks = activeCategory === 'essentials' ? displayPrimaryFrameworks : displaySecondaryFrameworks;
+		const frameworks = activeCategory === 'essential' ? displayPrimaryFrameworks : displaySecondaryFrameworks;
 
 		return (
 			<Box sx={styles.container}>
@@ -211,27 +214,27 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 					<Box
 						sx={{
 							...styles.categoryOption,
-							...(activeCategory === 'essentials' ? styles.activeCategoryOption : {})
+							...(activeCategory === 'essential' ? styles.activeCategoryOption : {})
 						}}
-						onClick={() => switchCategory('essentials')}
+						onClick={() => switchCategory('essential')}
 					>
-						<Typography sx={styles.categoryOptionText}>Essentials Frameworks</Typography>
+						<Typography sx={styles.categoryOptionText}>Essential Frameworks</Typography>
 					</Box>
 
 					<Box
 						sx={{
 							...styles.categoryOption,
-							...(activeCategory === 'Others' ? styles.activeCategoryOption : {})
+							...(activeCategory === 'Other' ? styles.activeCategoryOption : {})
 						}}
-						onClick={() => switchCategory('Others')}
+						onClick={() => switchCategory('Other')}
 					>
-						<Typography sx={styles.categoryOptionText}>Others Frameworks</Typography>
+						<Typography sx={styles.categoryOptionText}>Other Frameworks</Typography>
 					</Box>
 				</Box>
 
 				<Box sx={styles.mainContent}>
 					<Typography sx={styles.sectionTitle}>
-						{activeCategory === 'essentials' ? 'Essentials FRAMEWORKS' : 'Others FRAMEWORKS'}
+						{activeCategory === 'essential' ? 'Essential FRAMEWORKS' : 'Other FRAMEWORKS'}
 					</Typography>
 
 					<Grid container spacing={3}>
@@ -245,11 +248,14 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<Image
 											src={item.logo}
 											alt={item.title}
-											width={52}
-											height={52}
+											width={48}
+											height={48}
 											style={{
-												maxWidth: '100%',
+												maxWidth: '2rem',
+												maxHeight: '2rem',
+												width: 'auto',
 												height: 'auto',
+												objectFit: 'contain',
 											}}
 										/>
 									</Box>
@@ -271,12 +277,14 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 										<Image
 											src={frameworks[8].logo}
 											alt={frameworks[8].title}
-											width={32}
-											height={32}
+											width={48}
+											height={48}
 											style={{
-												maxWidth: '100%',
+												maxWidth: '2rem',
+												maxHeight: '2rem',
+												width: 'auto',
 												height: 'auto',
-												filter: 'brightness(0) invert(1)'
+												objectFit: 'contain',
 											}}
 										/>
 									</Box>
@@ -288,7 +296,6 @@ const ComplianceMenu: React.FC<ComplianceMenuProps> = ({ onClose }) => {
 							</Grid>
 						)}
 
-						{/* View All Button */}
 						<Grid size ={{xs:12}}>
 							<Box sx={styles.viewFullButtonContainer} onClick={viewAllFrameworks}>
 								<Box sx={styles.viewButtonIcon}>

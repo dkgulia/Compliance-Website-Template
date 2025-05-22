@@ -43,7 +43,7 @@ const Iso27001Banner = () => {
             <Image
               src={image.src}
               alt={image.alt}
-              width={300}
+              width={350}
               height={230}
               style={{ borderRadius: "8px" }}
             />

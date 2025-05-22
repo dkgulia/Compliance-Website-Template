@@ -1,9 +1,5 @@
-/* 
-   Constants for the ISO 42001 compliance page
-   This file houses text content, metadata, and other relevant data.
-*/
 
-import { 
+import {
     Psychology as PsychologyIcon,
     Insights as InsightsIcon,
     CheckCircle as CheckCircleIcon,
@@ -129,23 +125,23 @@ export const iso42001Data = {
             title: "Your Path to Certification",
             subtitle: "",
             steps: [
-                { 
-                    heading: "Connect & Import", 
+                {
+                    heading: "Connect & Import",
                     description: "Sync model inventory, data lineage, and existing policy docs.",
                     icon: CloudUploadIcon
                 },
-                { 
-                    heading: "Gap Analysis", 
+                {
+                    heading: "Gap Analysis",
                     description: "HexaFort maps controls and highlights missing practices instantly.",
                     icon: AssessmentIcon
                 },
-                { 
-                    heading: "Remediate & Record", 
+                {
+                    heading: "Remediate & Record",
                     description: "Assign tasks, attach evidence, and monitor real-time completion.",
                     icon: AssignmentIcon
                 },
-                { 
-                    heading: "Audit & Improve", 
+                {
+                    heading: "Audit & Improve",
                     description: "Export certification package; dashboards keep you compliant every release.",
                     icon: ImportContactsIcon
                 }

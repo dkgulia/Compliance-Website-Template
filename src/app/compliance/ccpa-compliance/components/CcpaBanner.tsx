@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import ccpaCtaBannerStyles from '../styles/bannerStyle';
-import ccpaBannerImg from '../images/cta-ccpa.png';
+import ccpaBannerImg from '../images/bookAdemo.png';
 
 const CcpaBookDemo = () => {
   const scrollToTop = () => {

@@ -2,6 +2,7 @@ import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 
 const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
+  /* --- layout --- */
   container: {
     position: 'relative',
     padding: { xs: '2rem 1rem', md: '3rem 2rem' },
@@ -14,6 +15,8 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     mx: 'auto',
     px: { xs: 2, sm: 4, md: 6 },
   },
+
+  /* --- section header --- */
   sectionHeader: {
     textAlign: 'center',
     mb: { xs: 5, md: 6 },
@@ -34,6 +37,8 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
   highlightedText: {
     color: '#115e59',
   },
+
+  /* --- tab bar / select --- */
   tabsContainer: {
     display: 'flex',
     justifyContent: 'center',
@@ -52,33 +57,23 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
       color: (theme) => theme.palette.secondary.main,
     },
   },
-
-  mobileSelectContainer: {
-    mb:0,
-    width: '100%',
-  },
+  mobileSelectContainer: { mb: 0, width: '100%' },
   mobileSelect: {
     color: 'white',
     backgroundColor: 'rgba(23, 23, 23, 0.6)',
     borderRadius: '8px',
-    '.MuiOutlinedInput-notchedOutline': {
-      borderColor: 'rgba(255, 255, 255, 0.2)',
-    },
-    '&:hover .MuiOutlinedInput-notchedOutline': {
-      borderColor: 'rgba(255, 255, 255, 0.3)',
-    },
-    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-      borderColor: '#115e59',
-    },
-    '.MuiSvgIcon-root': {
-      color: 'white',
-    },
+    '.MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255, 255, 255, 0.2)' },
+    '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'rgba(255, 255, 255, 0.3)' },
+    '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#115e59' },
+    '.MuiSvgIcon-root': { color: 'white' },
     '.MuiSelect-select': {
       fontWeight: 600,
       fontSize: '1rem',
       padding: '12px 16px',
     },
   },
+
+  /* --- framework panel --- */
   frameworkContainer: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
@@ -86,14 +81,12 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     alignItems: 'flex-start',
     mb: { xs: 4, md: 6 },
   },
-  frameworkInfo: {
-    flex: '1 1 60%',
-  },
+  frameworkInfo: { flex: '1 1 60%' },
   frameworkTitle: {
     fontSize: { xs: '1.5rem', md: '1.75rem' },
     fontWeight: 700,
     mb: 2,
-    color:'white',
+    color: 'white',
   },
   frameworkDescription: {
     fontSize: '1rem',
@@ -101,42 +94,22 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     mb: 3,
     lineHeight: 1.6,
   },
-  stagesContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 2,
-    mt: 3,
-  },
-  stageItem: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: 2,
-  },
-  stageIcon: {
-    color: 'white',
-    fontSize: '1.5rem',
-    mt: 0.5,
-  },
-  stageContent: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  stageName: {
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    color: 'white'
-  },
-  stageDescription: {
-    fontSize: '0.9rem',
-    color: '#6b7280',
-  },
+
+  /* --- stages / criteria list --- */
+  stagesContainer: { display: 'flex', flexDirection: 'column', gap: 2, mt: 3 },
+  stageItem: { display: 'flex', alignItems: 'flex-start', gap: 2 },
+  stageIcon: { color: 'white', fontSize: '1.5rem', mt: 0.5 },
+  stageContent: { display: 'flex', flexDirection: 'column' },
+  stageName: { fontSize: '1.1rem', fontWeight: 600, color: 'white' },
+  stageDescription: { fontSize: '0.9rem', color: '#6b7280' },
+
+  /* --- pricing card --- */
   pricingCard: {
     flex: '1 1 30%',
     borderRadius: '12px',
     p: 3,
     border: (theme) => `1px solid ${theme.palette.divider}`,
     background: '#17171799',
-    // Make pricing card full width on mobile
     width: { xs: '100%', md: 'auto' },
   },
   pricingHeader: {
@@ -156,39 +129,27 @@ const complianceFrameworksStyle: Record<string, SxProps<Theme>> = {
     color: (theme) => theme.palette.secondary.main,
     mb: 1,
   },
-  featuresList: {
-    listStyle: 'none',
-    padding: 0,
-    margin: 0,
-    mb: 3,
-  },
-  featureItem: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 2,
-    mb: 2,
-  },
-  featureIcon: {
-    color:'white',
-    fontSize: '1.25rem',
-  },
-  featureText: {
-    fontSize: '0.9rem',
-    color: (theme) => theme.palette.text.secondary,
-  },
+  featuresList: { listStyle: 'none', p: 0, m: 0, mb: 3 },
+  featureItem: { display: 'flex', alignItems: 'center', gap: 2, mb: 2 },
+  featureIcon: { color: 'white', fontSize: '1.25rem' },
+  featureText: { fontSize: '0.9rem', color: (theme) => theme.palette.text.secondary },
+
   viewMoreButton: {
+    marginTop: '2rem',
     textTransform: 'none',
-    color: 'white',
-    fontWeight: 600,
-    mt: 2,
+    fontWeight: 700,
+    color: '#115e59',
+    display: 'inline-flex',
+    alignItems: 'center',
     '&:hover': {
       background: 'transparent',
-      color: (theme) => theme.palette.secondary.light,
+      color: '#14806b',
     },
   },
-  tabPanel: {
-    pt: 4,
-  },
+  viewMoreText: { display: 'flex', alignItems: 'center', gap: 0.5,fontSize: '1.2rem' },
+  viewMoreIcon: { fontSize: '1.5rem', ml: 0.25 },
+
+  tabPanel: { pt: 4 },
 };
 
 export default complianceFrameworksStyle;

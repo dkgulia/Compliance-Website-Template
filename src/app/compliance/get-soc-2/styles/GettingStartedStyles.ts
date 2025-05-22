@@ -29,14 +29,11 @@ const soc2StepsSectionStyle = {
 	    textAlign: 'center',
 	},
 	imageContainer: {
-	    maxWidth: '400px',
-	    height: 'auto',
+	    maxWidth: '450px',
+	    height: '350px',
 	    display: 'flex',
 	    justifyContent: 'center',
 	    alignItems: 'center',
-	    '& img': {
-		filter: 'brightness(0) invert(1)',
-	    }
 	},
 	textContainer: {
 	    textAlign: 'left',
