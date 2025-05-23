@@ -1,17 +1,25 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Box, Container, Typography, IconButton, useTheme } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import createScreenshotsSectionStyle from '../styles/screenshotsSectionStyle';
 import dpdpData from '../constants/dpdpData';
 
+// Import all screenshots
+import Screenshot1 from '../images/dpdp1.png';
+import Screenshot2 from '../images/dpdp2.png';
+import Screenshot3 from '../images/dpdp3.png';
+
 const DpdpScreenshotsSection: React.FC = () => {
   const theme = useTheme();
   const styles = createScreenshotsSectionStyle(theme);
   const { screenshots } = dpdpData.sections;
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideCount = screenshots.items.length;
+
+  const imageSources = [Screenshot1, Screenshot2, Screenshot3];
+  const slideCount = imageSources.length;
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
@@ -65,10 +73,12 @@ const DpdpScreenshotsSection: React.FC = () => {
                   display: currentSlide === index ? 'flex' : 'none'
                 }}
               >
-                <Box sx={styles.imagePlaceholder}>
-                  <Typography variant="body2" color="textSecondary">
-                    {screenshot.imagePrompt}
-                  </Typography>
+                <Box >
+                  <Image
+                    src={imageSources[index]}
+                    alt={`Screenshot ${index + 1}`}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
                 </Box>
 
                 <Box sx={styles.captionBox}>

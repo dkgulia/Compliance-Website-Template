@@ -2,10 +2,13 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyles';
 import securityTrainingHero from '../images/security-hero.png';
 
 const SecurityAwarenessHero: React.FC = () => {
+	const router = useRouter();
+
 	return (
 		<Box component="section" sx={heroSectionStyle.container}>
 			<Container maxWidth="lg">
@@ -25,8 +28,12 @@ const SecurityAwarenessHero: React.FC = () => {
 							auditors happy—without drowning your team in administration.
 						</Typography>
 
-						<Button variant="contained" sx={heroSectionStyle.ctaButton}>
-						Book A Demo
+						<Button
+							variant="contained"
+							sx={heroSectionStyle.ctaButton}
+							onClick={() => router.push('/get-a-demo')}
+						>
+							Book A Demo
 						</Button>
 					</Box>
 

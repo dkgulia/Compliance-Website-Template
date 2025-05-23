@@ -5,12 +5,12 @@ import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import {iso22301Data} from '../constants/iso22301Data';
 import iso22301ImplementationStyle from '../styles/stepsProcessBlockStyle';
-import image1 from '../images/analysis.png';
-import image2 from '../images/action-plan.png';
-import image3 from '../images/document-policies.png';
-import image4 from '../images/business-impact-analyis.png'
-import image5 from '../images/plan-making.png';
-import image6 from '../images/review-and-refine.png';
+import image1 from '../images/22301Step1.png';
+import image2 from '../images/22301Step2.png';
+import image3 from '../images/22301Step3.png';
+import image4 from '../images/22301Step4.png'
+import image5 from '../images/22301Step5.png';
+import image6 from '../images/22301Step6.png';
 import theme from '../../../../theme';
 
 export default function ISO22301StepsSection() {

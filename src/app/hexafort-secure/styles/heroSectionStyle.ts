@@ -26,6 +26,7 @@ const heroSectionStyle = {
     alignItems: { xs: 'center', md: 'flex-start' },
   },
   tagline: {
+    marginTop:'2rem',
     display: 'inline-block',
     padding: '0.5rem 1rem',
     borderRadius: '1rem',

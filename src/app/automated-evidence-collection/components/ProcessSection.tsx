@@ -17,18 +17,20 @@ const ProcessSection: React.FC = () => {
 						How It Works
 					</Typography>
 
-					<Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+					<Box sx={processSectionStyle.gridWrapper}>
 						<Box sx={processSectionStyle.gridContainer}>
 							{process.steps.map((step, index) => (
 								<Box key={index} sx={processSectionStyle.card}>
 									<Box sx={processSectionStyle.cardContent}>
 										<Box sx={processSectionStyle.stepNumber}>{index + 1}</Box>
-										<Typography variant="body1" sx={processSectionStyle.cardTitle}>
-											{step.heading}
-										</Typography>
-										<Typography variant="body2" sx={processSectionStyle.stepDescription}>
-											{step.description}
-										</Typography>
+										<Box sx={processSectionStyle.textContainer}>
+											<Typography variant="body1" sx={processSectionStyle.cardTitle}>
+												{step.heading}
+											</Typography>
+											<Typography variant="body2" sx={processSectionStyle.stepDescription}>
+												{step.description}
+											</Typography>
+										</Box>
 									</Box>
 								</Box>
 							))}

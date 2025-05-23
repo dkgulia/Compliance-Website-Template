@@ -30,11 +30,10 @@ const howToComplySectionStyle = {
     margin: '0.5rem auto 0',
   },
   phaseCard: {
-    padding: { xs: '1.25rem', md: '1.75rem' },
+    padding: { xs: '1.1rem', md: '1.75rem' },
     backgroundColor: theme.palette.background.darkTransparent,
     borderRadius: '8px',
     border: `1px solid ${theme.palette.divider}`,
-
     transition: 'all 0.2s ease',
     '&:hover': {
       borderColor: '#115e59',
@@ -46,8 +45,8 @@ const howToComplySectionStyle = {
     },
   },
   phaseNumberContainer: {
-    width: { xs: '40px', md: '44px' },
-    height: { xs: '40px', md: '44px' },
+    width: { xs: '35px', md: '44px' },
+    height: { xs: '35px', md: '44px' },
     borderRadius: '50%',
     backgroundColor: '#115e59',
     display: 'flex',
@@ -58,7 +57,7 @@ const howToComplySectionStyle = {
   },
   phaseNumberIcon: {
     color: 'white',
-    fontSize: { xs: '1.6rem', md: '1.8rem' },
+    fontSize: { xs: '1.rem', md: '1.8rem' },
     fontWeight: 'bold',
   },
   phaseTextContainer: {

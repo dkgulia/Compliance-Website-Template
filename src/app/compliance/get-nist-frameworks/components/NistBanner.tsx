@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import iso22301BannerStyle from '../styles/nistBannerStyle';
-import businessContinuityImg from '../images/nist-cta.png';
+import businessContinuityImg from '../images/bookAdemo.png';
 
 const ISO22301Banner = () => {
   const scrollToTop = () => {
@@ -38,7 +38,7 @@ const ISO22301Banner = () => {
             alt="Business Continuity"
             width={300}
             height={200}
-            style={{ borderRadius: '8px' }}
+            style={{ borderRadius: '8px',marginTop:'1rem' }}
           />
         </Box>
       </Box>

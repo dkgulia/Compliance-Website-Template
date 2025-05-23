@@ -56,7 +56,7 @@ const realWorldSectionStyle = {
 		fontSize: '1.2rem',
 		color: theme.palette.primary.light,
 		marginBottom: '0.75rem',
-		textAlign: 'center',
+		textAlign: 'left',
 	},
 	cardDesc: {
 		fontSize: '0.95rem',

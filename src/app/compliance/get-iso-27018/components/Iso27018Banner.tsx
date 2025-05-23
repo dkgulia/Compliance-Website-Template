@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import iso22301BannerStyle from '../styles/bannerStyle';
-import businessContinuityImg from '../images/iso27018-cta.png';
+import businessContinuityImg from '../images/bookAdemo.png';
 
 const ISO22301Banner = () => {
   const scrollToTop = () => {

@@ -42,7 +42,7 @@ export default function GdprHowToComplySection() {
                     {listItems.map((item, index) => (
                             <Grid size={{ xs: 12 }} key={index}>
                             <Paper elevation={0} sx={howToComplySectionStyle.phaseCard}>
-                                <Grid container alignItems="center" spacing={0}>
+                                <Grid container alignItems="center" spacing={3}>
                                     <Grid size ={{xs:1,md:1}} >
                                         <Box sx={howToComplySectionStyle.phaseNumberContainer}>
                                             {index < 3 && phaseIcons[index]}

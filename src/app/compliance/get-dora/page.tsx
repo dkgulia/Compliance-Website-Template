@@ -1,9 +1,4 @@
-/* <ai_context>
-   This page implements the DORA (Digital Operational Resilience Act) compliance flow,
-   referencing the provided JSON-based content specifically for DORA.
-   We are now shuffling sections, adding a BookNowBanner, and a "How IgniPC Helps with DORA"
-   section, and reordering as per request.
-</ai_context> */
+
 
 import React from 'react';
 import { Metadata } from 'next';

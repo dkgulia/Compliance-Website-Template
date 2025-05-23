@@ -4,7 +4,7 @@ import { Box, Typography, List, ListItem, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import {iso20000Data} from '../constants/iso20000Data';
-import iso20000Image from '../images/demo-iso20000.png';
+import iso20000Image from '../images/bookAdemo.png';
 import imageTextStyle from '../styles/imageRightStyle';
 
 const Iso20000ImageTextSection: React.FC = () => {
@@ -41,8 +41,9 @@ const Iso20000ImageTextSection: React.FC = () => {
 
                     <Button
                         sx={imageTextStyle.button}
-                        href="/talk-to-an-expert"
                         endIcon={<ArrowForwardIcon />}
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+
                     >
                         {sectionData.ctaText || 'Talk to an Expert'}
                     </Button>

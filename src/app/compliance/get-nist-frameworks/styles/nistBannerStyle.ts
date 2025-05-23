@@ -61,7 +61,7 @@ const iso22301BannerStyle = {
   imageWrapper: {
     position: 'relative',
     width: { xs: '100%', sm: '250px', md: '300px' },
-    height: { xs: '200px', sm: '250px', md: '200px' },
+    height: { xs: '220px', sm: '250px', md: '200px' },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

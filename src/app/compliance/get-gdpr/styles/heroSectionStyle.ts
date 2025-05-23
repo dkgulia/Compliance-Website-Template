@@ -37,44 +37,88 @@ const heroSectionStyle = {
 	},
 	formBox: {
 		flex: 1,
-		borderRadius: '1.5rem',
-		maxWidth: '600px',
-		padding: '2rem',
-		marginTop: { xs: '0.5rem', sm: '0.5rem' },
+		borderRadius: { xs: '1rem', md: '1.5rem' },
+		maxWidth: { xs: '100%', md: '600px' },
+		padding: { xs: '1rem', md: '2rem' },
+		marginTop: { xs: '0', sm: '0.5rem' },
 		transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+		width: { xs: '100%', md: 'auto' },
 	},
 	formContainer: {
-		padding: '2rem',
-		borderRadius: '1.5rem',
+		padding: { xs: '1.5rem', md: '2rem' },
+		borderRadius: { xs: '1rem', md: '1.5rem' },
 		background: theme.palette.background.paper,
 		width: '100%',
-		maxWidth: '600px',
-		marginTop: { xs: '2rem', sm: '1.5rem' },
+		maxWidth: { xs: '100%', md: '600px' },
+		marginTop: { xs: '1rem', sm: '1.5rem' },
 		border: `1px solid ${theme.palette.divider}`,
 		boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
 	},
 	formHeading: {
-		fontSize: '1.8rem',
+		fontSize: { xs: '1.4rem', md: '1.8rem' },
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
 		marginBottom: '0.5rem',
+		textAlign: { xs: 'center', md: 'left' },
 	},
 	formLabel: {
 		fontWeight: 'bold',
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
+		fontSize: { xs: '0.9rem', md: '1rem' },
 	},
 	compliancesLabel: {
 		fontWeight: 'bold',
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
+		fontSize: { xs: '0.9rem', md: '1rem' },
+	},
+	formInput: {
+		backgroundColor: 'rgba(38, 38, 38, 0.1)',
+		color: theme.palette.text.primary,
+		'& .MuiOutlinedInput-root': {
+			fontSize: { xs: '0.9rem', md: '1rem' },
+		},
+		'& .MuiInputLabel-root': {
+			fontSize: { xs: '0.9rem', md: '1rem' },
+		},
+		'& .MuiOutlinedInput-notchedOutline': {
+			borderColor: theme.palette.divider,
+		},
+		'&:hover .MuiOutlinedInput-notchedOutline': {
+			borderColor: '#0d9488',
+		},
+		'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+			borderColor: '#115e59',
+		},
+	},
+	checkbox: {
+		color: '#115e59',
+		padding: { xs: '6px', md: '9px' },
+		'&.Mui-checked': {
+			color: '#115e59',
+		},
+	},
+	checkboxLabel: {
+		'& .MuiFormControlLabel-label': {
+			color: theme.palette.text.primary,
+			fontSize: { xs: '0.8rem', md: '0.9rem' },
+		},
+		'& .MuiCheckbox-root': {
+			color: '#115e59',
+		},
+		margin: { xs: '2px 0', md: '4px 0' },
+	},
+	formHelperText: {
+		marginTop: '4px',
+		color: theme.palette.error.main,
+		fontSize: { xs: '0.75rem', md: '0.875rem' },
 	},
 	tag: {
 		display: 'inline-block',
 		padding: '0.5rem 1rem',
 		borderRadius: '2rem',
 		background: '#115e59',
-
 	},
 	tagText: {
 		color: 'white',
@@ -82,25 +126,25 @@ const heroSectionStyle = {
 		fontSize: '0.9rem',
 	},
 	heroTitle: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: '600',
-    marginBottom: '1rem',
-    lineHeight: 1.2,
-    marginTop: '1rem',
-    color: theme.palette.text.primary,
-  },
-  heroSubtitle: {
-    fontSize: { xs: '1.2rem', md: '1.5rem' },
-    fontWeight: 500,
-    marginBottom: '1.5rem',
-    color: '#115e59',
-  },
-  heroDescription: {
-    fontSize: '1rem',
-    marginBottom: '2rem',
-    lineHeight: 1.6,
-    color: '#6B7280',
-  },
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+		fontWeight: '600',
+		marginBottom: '1rem',
+		lineHeight: 1.2,
+		marginTop: '1rem',
+		color: theme.palette.text.primary,
+	},
+	heroSubtitle: {
+		fontSize: { xs: '1.2rem', md: '1.5rem' },
+		fontWeight: 500,
+		marginBottom: '1.5rem',
+		color: '#115e59',
+	},
+	heroDescription: {
+		fontSize: '1rem',
+		marginBottom: '2rem',
+		lineHeight: 1.6,
+		color: '#6B7280',
+	},
 	mainTitle: {
 		fontSize: { xs: '2rem', md: '2.2rem' },
 		fontWeight: '600',
@@ -198,38 +242,6 @@ const heroSectionStyle = {
 			border: '1px solid #0d9488',
 		},
 	},
-	formInput: {
-		backgroundColor: 'rgba(38, 38, 38, 0.1)',
-		color: theme.palette.text.primary,
-		'& .MuiOutlinedInput-notchedOutline': {
-			borderColor: theme.palette.divider,
-		},
-		'&:hover .MuiOutlinedInput-notchedOutline': {
-			borderColor: '#0d9488',
-		},
-		'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-			borderColor: '#115e59',
-		},
-	},
-	checkbox: {
-		color: '#115e59',
-		'&.Mui-checked': {
-			color: '#115e59',
-		},
-	},
-	checkboxLabel: {
-		'& .MuiFormControlLabel-label': {
-			color: theme.palette.text.primary,
-			fontSize: '0.9rem',
-		},
-		'& .MuiCheckbox-root': {
-			color: '#115e59',
-		},
-	},
-	formHelperText: {
-		marginTop: '4px',
-		color: theme.palette.error.main,
-	},
 	secondaryText: {
 		color: theme.palette.text.secondary,
 		fontSize: '0.875rem',
@@ -255,7 +267,6 @@ const heroSectionStyle = {
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
-
 		'&:hover': {
 			borderColor: theme.palette.secondary.main,
 			transform: 'translateY(-5px)',
@@ -271,7 +282,6 @@ const heroSectionStyle = {
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
-
 		'&:hover': {
 			borderColor: theme.palette.secondary.main,
 			transform: 'translateY(-5px)',
@@ -287,7 +297,6 @@ const heroSectionStyle = {
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',
 		border: `1px solid ${theme.palette.divider}`,
-
 		'&:hover': {
 			borderColor: theme.palette.secondary.main,
 			transform: 'translateY(-5px)',

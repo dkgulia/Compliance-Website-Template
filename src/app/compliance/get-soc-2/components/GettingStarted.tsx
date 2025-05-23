@@ -3,10 +3,10 @@ import { Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import stepsData from '../../get-soc-2/constants/gettingStartedData';
 import soc2StepsSectionStyle from '../styles/GettingStartedStyles';
-import image1 from '../images/gettingStartedSoc2.png';
-import image2 from '../images/getstarted2.png';
-import image3 from '../images/create-a-professional-cybersecurity-themed-illustr.png';
-import image4 from '../images/create-a-minimalist-icon-representing-continuous-s.png';
+import image1 from '../images/soc2Step1.png';
+import image2 from '../images/soc2Step2.png';
+import image3 from '../images/soc2Step3.png';
+import image4 from '../images/soc2Step4.png';
 
 const stepImages = [image1, image2, image3, image4];
 

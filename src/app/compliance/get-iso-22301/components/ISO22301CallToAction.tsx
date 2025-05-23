@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { iso22301Data } from '../constants/iso22301Data';
 import callToActionStyle from '../styles/callToActionStyle';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import ctaImage from '../images/demo-iso22301.png';
+import ctaImage from '../images/bookAdemo.png';
 import theme from '../../../../theme';
 
 const ISO22301CallToAction: React.FC = () => {

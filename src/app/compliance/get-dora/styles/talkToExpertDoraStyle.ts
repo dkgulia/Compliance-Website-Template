@@ -1,16 +1,11 @@
-/* <ai_context>
-   Styles for the final CTA or "Talk to an Expert" for DORA
-   Recolored with limited palette
-</ai_context> */
-
-import colors from '../constants/doraData';
+import theme from '../../../../theme';
 
 const talkToExpertDoraStyle = {
 	container: {
 		paddingTop: { sm: '1rem', xs: '0.5rem' },
 		marginTop: '0rem',
-        padding:'2rem',
-		backgroundColor: colors.primary.dark,
+		padding: '2rem',
+		background: theme.palette.background.default,
 	},
 	innerBox: {
 		maxWidth: '75rem',
@@ -20,18 +15,17 @@ const talkToExpertDoraStyle = {
 		flexDirection: 'column',
 		gap: '1rem',
 		padding: { xs: '1rem', sm: '2rem' },
-		background: colors.secondary.gradient,
+		background: '#17171799',
 		borderRadius: { xs: '0rem', md: '2rem' },
 	},
 	title: {
-		fontWeight: '700',
-		color: colors.secondary.contrastText,
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+		fontWeight: '600',
 		marginBottom: '1rem',
-		fontSize: { xs: '1.2rem', sm: '2rem', md: '2.2rem' },
-		textAlign:'center'
+		textAlign: 'center',
 	},
 	subtitle: {
-		color: colors.secondary.contrastText,
+		color: theme.palette.text.secondary,
 		fontSize: { xs: '0.95rem', sm: '1rem' },
 		lineHeight: 1.6,
 		marginBottom: '1.5rem',
@@ -40,9 +34,8 @@ const talkToExpertDoraStyle = {
 		marginTop: '0.5rem',
 	},
 	card: {
-		backgroundColor: colors.background.dark,
+		background: '#17171799',
 		borderRadius: '1rem',
-		boxShadow: '0rem 0.25rem 0.875rem rgba(0,0,0,0.4)',
 		padding: '1rem',
 		display: 'flex',
 		flexDirection: 'column',
@@ -56,42 +49,66 @@ const talkToExpertDoraStyle = {
 	},
 	cardTitle: {
 		fontWeight: 'bold',
-		color: colors.secondary.main,
+		color: 'white',
 		fontSize: '1.2rem',
 		marginBottom: '0.5rem',
 	},
 	divider: {
 		opacity: 0.2,
-		borderColor: '#333333',
+		borderColor: theme.palette.divider,
 		marginY: '0.75rem',
 	},
 	cardDescription: {
-		color: colors.secondary.medium,
+		color: theme.palette.text.muted,
 		fontSize: '0.95rem',
 		lineHeight: 1.6,
 	},
 	button: {
+		marginTop: '1.5rem',
+		backgroundColor: '#115e59',
+		color: '#f9fafb',
+		borderRadius: '0.5rem',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
+		},
 		textTransform: 'none',
-		fontWeight: 'bold',
-		background: colors.secondary.main,
-		color: colors.secondary.contrastText,
-		borderRadius: '2rem',
-		border: `1px solid ${colors.secondary.main} !important`,
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		border: '1px solid #0d9488',
+		transition: 'all 150ms ease',
 		'&:hover': {
-			background: colors.background.dark,
-			borderColor: colors.secondary.main,
-			color: colors.primary.contrastText,
+			backgroundColor: '#0f766e',
 		},
 	},
+
 	buttonOutlined: {
+		marginTop: '1.5rem',
+		color: 'white',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
+		},
+		borderRadius: '0.5rem',
+		backgroundColor: 'transparent',
+		border: '1px solid #374151',
 		textTransform: 'none',
-		fontWeight: 'bold',
-		color: colors.secondary.main,
-		borderColor: colors.secondary.main,
-		borderRadius: '2rem',
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
 		'&:hover': {
-			backgroundColor: 'rgba(255, 204, 0, 0.15)',
-			borderColor: colors.secondary.main,
+			backgroundColor: 'rgba(94, 234, 212, 0.15)',
+			borderColor: '#5eead4',
+		},
+		'&.Mui-disabled': {
+			color: 'white',
+			opacity: 0.5,
+			backgroundColor: 'transparent',
+			border: '1px solid #374151',
 		},
 	},
 };

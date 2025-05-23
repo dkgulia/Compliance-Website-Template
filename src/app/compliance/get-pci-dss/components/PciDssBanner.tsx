@@ -4,7 +4,7 @@ import { Box, Typography, Button, Grid } from '@mui/material';
 import bannerStyle from '../styles/bannerStyle';
 import { ArrowForward } from '@mui/icons-material';
 import pciDssData from '../constants/pciDssData';
-import pciDssLockIcon from '../images/pci-dss-demo.png';
+import pciDssLockIcon from '../images/bookAdemo.png';
 import Image from 'next/image';
 
 const PciDssBanner: React.FC = () => {

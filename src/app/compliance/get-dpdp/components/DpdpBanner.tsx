@@ -4,7 +4,7 @@ import { Box, Typography, Button, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import createBannerStyle from '../styles/bannerStyle';
-import dpdpBannerImg from '../images/dpdp-cta.png';
+import dpdpBannerImg from '../images/dpdpDemo.png';
 
 const DpdpBanner: React.FC = () => {
   const theme = useTheme();

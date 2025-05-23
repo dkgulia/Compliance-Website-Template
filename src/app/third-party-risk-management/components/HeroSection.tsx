@@ -4,10 +4,12 @@ import { Box, Typography, Button } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import tprmHeroImage from '../images/third-hero.png';
 
 const HeroSection: React.FC = () => {
 	const { hero } = thirdPartyRiskManagementData;
+	const router = useRouter();
 
 	return (
 		<Box sx={heroSectionStyle.container}>
@@ -29,7 +31,11 @@ const HeroSection: React.FC = () => {
 						</Typography>
 					))}
 
-					<Button variant="contained" sx={heroSectionStyle.ctaButton}>
+					<Button
+						variant="contained"
+						sx={heroSectionStyle.ctaButton}
+						onClick={() => router.push('/get-a-demo')}
+					>
 						{hero.ctaText}
 					</Button>
 				</Box>

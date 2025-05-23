@@ -4,7 +4,7 @@ import { Box, Typography, Button, Grid } from '@mui/material';
 import Image from 'next/image';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import iso27701Data from '../constants/iso27701Data';
-import bannerImage from '../images/create-a-professional-illustration-for-an-iso-2000 (3).png'
+import bannerImage from '../images/bookAdemo.png'
 
 const Iso27701CtaSection: React.FC = () => {
 	const scrollToTop = () => {

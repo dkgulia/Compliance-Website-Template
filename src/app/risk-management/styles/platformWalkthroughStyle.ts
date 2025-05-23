@@ -15,17 +15,16 @@ const platformWalkthroughStyle = {
     fontSize: { xs: '1.6rem', sm: '2rem' },
     fontWeight: '600',
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
   },
   subtitle: {
     fontSize: { xs: '1rem', md: '1.1rem' },
     color: theme.palette.text.secondary,
     lineHeight: 1.6,
-    marginBottom: '2rem',
+
   },
   carouselContainer: {
     width: '100%',
-    marginTop: '2rem',
+    marginTop: '0rem',
     position: 'relative',
   },
   carouselItem: {
@@ -51,23 +50,23 @@ const platformWalkthroughStyle = {
     alignItems: 'center',
     maxWidth: { xs: '100%', md: '50%' },
   },
-  // New style for image wrapper
   imageWrapper: {
-    width: '100%',
-    maxWidth: '28rem',
-    minHeight: '16rem',
+    width: '80%',
+    maxWidth: '80%',
+    minHeight: { xs: '250px', sm: '350px', md: '400px' },
+    aspectRatio: '16 / 9',
     position: 'relative',
     borderRadius: '1rem',
     overflow: 'hidden',
-   
   },
+
   screenshotImage: {
-    objectFit: 'contain'as const,
+    objectFit: 'contain' as const,
   },
   imagePlaceholder: {
     width: '100%',
     maxWidth: '28rem',
-    minHeight: '16rem',
+    minHeight: { xs: '200px', sm: '300px', md: '350px' },
     borderRadius: '1rem',
     backgroundColor: '#17171799',
     display: 'flex',
@@ -114,4 +113,3 @@ const platformWalkthroughStyle = {
 };
 
 export default platformWalkthroughStyle;
-

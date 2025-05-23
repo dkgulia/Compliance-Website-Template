@@ -17,7 +17,6 @@ const RiskManagementPage = () => {
             <KeyCapabilitiesLadder />
             <QuickStartOnboarding />
             <PlatformWalkthrough />
-
             <OfferBanner />
             <BookADemo />
             <FaqSection />

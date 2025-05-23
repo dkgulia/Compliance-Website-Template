@@ -6,7 +6,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import createBookDemoStyle from '../styles/bookDemoStyle';
 import dpdpData from '../constants/dpdpData';
-import dpdpDemoImg from '../images/dpdp-demo.png';
+import dpdpDemoImg from '../images/bookAdemo.png';
 
 const DpdpBookDemo: React.FC = () => {
   const theme = useTheme();
@@ -36,6 +36,7 @@ const DpdpBookDemo: React.FC = () => {
               variant="contained"
               endIcon={<ArrowForwardIcon />}
               sx={styles.button}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               {bookDemo.buttonLabel}
             </Button>

@@ -26,6 +26,7 @@ const DpdpCtaSection: React.FC = () => {
             variant="contained"
             endIcon={<ArrowForwardIcon />}
             sx={styles.button}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             {callToAction.ctaText}
           </Button>

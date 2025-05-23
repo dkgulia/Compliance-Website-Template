@@ -14,8 +14,6 @@ const Iso20000FeaturesSection: React.FC = () => {
     const featuresSection = iso20000Data.sections.find(
         (section) => section.blockType === 'Features/Benefits'
     )?.content;
-
-    // Define 6 benefits to match request
     const benefits = [
         {
             icon: <PublicIcon />,

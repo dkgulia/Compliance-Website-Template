@@ -51,19 +51,24 @@ const ContinuousMonitoringSection: React.FC = () => {
 							sx={{
 								width: '100%',
 								maxWidth: '500px',
-								height: '350px',
+								height: { xs: '280px', sm: '320px', md: '350px' }, 
+								minHeight: '260px',
 								position: 'relative',
 								borderRadius: '1rem',
 								overflow: 'hidden',
+								flexShrink: 0,
 							}}
 						>
 							<Image
 								src={monitoringGraph}
 								alt="Live graph with spikes and alert notifications"
-								fill
+								width={500}
+								height={350}
 								style={{
-									objectFit: 'cover',
+									width: '100%',
+									height: 'auto',
 									borderRadius: '1rem',
+									objectFit: 'cover',
 								}}
 								priority
 							/>

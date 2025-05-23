@@ -26,15 +26,19 @@ const infoSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    minHeight: '300px',
   },
+
   imageWrapper: {
     width: '100%',
     maxWidth: '500px',
-    height: '400px',
+    height: { xs: '300px', sm: '400px', md: '450px' },
     position: 'relative',
     borderRadius: '1rem',
     overflow: 'hidden',
+    flexShrink: 0,
   },
+
   sectionImage: {
     objectFit: 'cover'as const,
   },

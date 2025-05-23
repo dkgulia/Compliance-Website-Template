@@ -36,6 +36,7 @@ const heroSectionStyle = {
     marginBottom: '1.5rem',
     color: theme.palette.text.primary,
     lineHeight: 1.2,
+    marginTop:{xs:'5rem'}
   },
   highlight: {
     color:'#115e59',

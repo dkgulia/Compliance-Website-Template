@@ -5,7 +5,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import pciDssBookADemoStyle from '../styles/pciDssBookADemoStyle';
 import pciDssData from '../constants/pciDssData';
-import bookDemoImage from '../images/pci-book-a-demo.png';
+import bookDemoImage from '../images/bookDemo.png';
 
 const PciDssBookADemo = () => {
     const scrollToTop = () => {

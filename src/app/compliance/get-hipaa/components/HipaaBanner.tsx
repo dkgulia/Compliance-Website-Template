@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import hipaaBannerStyle from '../styles/hipaaBannerStyle';
-import healthcareComplianceImg from '../images/ hipaa-banner.png';
+import healthcareComplianceImg from '../images/bookAdemo.png';
 
 const HipaaBanner = () => {
   const scrollToTop = () => {

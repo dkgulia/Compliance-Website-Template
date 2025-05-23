@@ -5,7 +5,7 @@ import { Box, Container, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import { iso22301Data } from '../constants/iso22301Data';
 import simpleInfoBlockStyle from '../styles/simpleInfoBlockStyle';
-import isoInfoImage from '../images/iso22301-cta.png';
+import isoInfoImage from '../images/iso22301-iamge.png';
 import theme from '../../../../theme';
 
 interface ISO22301SimpleInfoBlockProps {

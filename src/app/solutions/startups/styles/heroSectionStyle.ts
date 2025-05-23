@@ -1,4 +1,3 @@
-
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 
@@ -11,9 +10,8 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		minHeight: { xs: 'auto', md: '80vh' },
 		display: 'flex',
 		alignItems: 'center',
-		pt: { xs: 3, md: 10},
+		pt: { xs: 3, md: 10 },
 		marginTop: '3rem',
-
 	},
 	contentContainer: {
 		width: '100%',
@@ -42,6 +40,9 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		py: 1,
 		borderRadius: '32px',
 		background: '#115e59',
+		marginTop: {
+			xs: '2rem',
+		},
 	},
 	tagText: {
 		fontSize: '0.9rem',

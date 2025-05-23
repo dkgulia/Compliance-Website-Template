@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { iso22301Data } from '../constants/iso22301Data';
 import * as Icons from '@mui/icons-material';
 import listBlockStyle from '../styles/listBlockStyle';
-import crisisManagementImage from '../images/iso22301-crisis.png';
+import crisisManagementImage from '../images/22301Crisis.png';
 import theme from '../../../../theme';
 
 interface Props {

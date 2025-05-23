@@ -4,7 +4,7 @@ import { Box, Typography, Button, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import iso20000CtaBannerStyles from '../styles/ctaSectionStyle';
-import iso20000ComplianceImg from '../images/iso20000-cta.png';
+import iso20000ComplianceImg from '../images/Demo.png';
 
 const Iso20000CtaBanner = () => {
 	const scrollToTop = () => {
@@ -37,7 +37,7 @@ const Iso20000CtaBanner = () => {
 						<Image
 							src={iso20000ComplianceImg}
 							alt="ISO 20000-1 Compliance"
-							width={300}
+							width={350}
 							height={200}
 							style={{ borderRadius: '8px' }}
 						/>

@@ -5,13 +5,7 @@ const heroSectionStyle = {
     paddingTop: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
-    border: 'none',
-    borderTop: 'none',
-    borderBottom: 'none',
     boxShadow: 'none',
-    '&::before, &::after': {
-      display: 'none',
-    },
   },
   containerBox: {
     display: 'flex',
@@ -20,15 +14,8 @@ const heroSectionStyle = {
     alignItems: 'center',
     maxWidth: '1200px',
     width: '100%',
-    marginBottom:'0rem',
     gap: { xs: '2rem', sm: '3rem' },
     padding: { xs: '1rem', sm: '2rem' },
-    border: 'none',
-    borderTop: 'none',
-    borderBottom: 'none',
-    '&::before, &::after': {
-      display: 'none',
-    },
   },
   contentBox: {
     flex: 1,
@@ -37,7 +24,6 @@ const heroSectionStyle = {
     flexDirection: 'column',
     gap: '1rem',
     alignItems: { xs: 'center', md: 'flex-start' },
-    border: 'none',
   },
   tagline: {
     display: 'inline-block',
@@ -53,6 +39,7 @@ const heroSectionStyle = {
     whiteSpace: 'nowrap',
     position: 'relative',
     zIndex: 2,
+    marginTop:{xs:'3rem'}
   },
   title: {
     fontWeight: '600',

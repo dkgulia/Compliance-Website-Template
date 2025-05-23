@@ -2,8 +2,7 @@ import theme from '../../../theme';
 
 const benefitsSectionStyle = {
 	box: {
-		paddingBottom: { sm: '2rem', xs: '1.5rem' },
-		marginTop: '0rem',
+		paddingBottom: { sm: '1rem', xs: '1.5rem' },
 		backgroundColor: theme.palette.background.default,
 	},
 	container: {
@@ -12,7 +11,7 @@ const benefitsSectionStyle = {
 		alignItems: 'center',
 		marginX: 'auto',
 		maxWidth: '75rem',
-		px: { xs: '1rem', sm: '2rem' },
+		px: { xs: '2rem', sm: '2rem' },
 	},
 	containerBox: {
 		textAlign: 'center',
@@ -25,7 +24,7 @@ const benefitsSectionStyle = {
 		fontWeight: 600,
 		fontSize: { xs: '1.6rem', sm: '2rem' },
 		color: theme.palette.text.primary,
-		paddingBottom: { sm: '1rem', xs: '0.5rem' },
+		paddingBottom: { sm: '0.5rem', xs: '0.5rem' },
 	},
 	subHeading: {
 		color: '#6B7280',

@@ -8,9 +8,11 @@ import heroSectionStyle from '../styles/heroSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 import Image from 'next/image';
 import controlFrameworkHero from '../images/ccf-hero.png';
+import { useRouter } from 'next/navigation';
 
 const HeroSection: React.FC = () => {
     const { hero } = controlFrameworkData.sections;
+    const router = useRouter();
 
     return (
         <Box component="section" sx={heroSectionStyle.section}>
@@ -40,6 +42,7 @@ const HeroSection: React.FC = () => {
                             variant="contained"
                             endIcon={<ArrowForwardIcon />}
                             sx={heroSectionStyle.ctaButton}
+                            onClick={() => router.push('/get-a-demo')}
                         >
                             {hero.ctaText}
                         </Button>

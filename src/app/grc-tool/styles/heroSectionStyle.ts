@@ -48,7 +48,7 @@ const heroSectionStyle = {
 		backgroundColor: '#115e59',
 		color: '#f9fafb',
 		borderRadius: '0.5rem',
-		padding: '0.75rem 2.5rem',
+		padding: '0.75rem 2.3rem',
 		textTransform: 'none',
 		fontSize: '1rem',
 		whiteSpace: 'nowrap',

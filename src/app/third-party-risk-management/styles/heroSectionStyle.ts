@@ -60,7 +60,7 @@ const heroSectionStyle = {
     color: '#f9fafb',
     fontWeight: 800,
     padding: {
-      xs: '0.25rem 0.5rem',
+      xs: '0.5rem 0.8rem',
       sm: '0.375rem 0.75rem',
       md: '0.7rem 1rem',
     },

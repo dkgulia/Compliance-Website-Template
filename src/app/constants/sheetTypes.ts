@@ -8,6 +8,7 @@ export const sheetNameTypes = {
 	pcidssForm: 'pcidssForm',
 	nistForm: 'nistForm',
 	dpdpForm:'dpdpForm',
+	doraForm:'doraForm',
 	iso20000Form:'iso20000Form',
 	iso22301Form:'iso22301Form',
 	iso42001Form:'iso42001Form',

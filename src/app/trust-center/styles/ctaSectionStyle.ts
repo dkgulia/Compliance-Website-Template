@@ -31,6 +31,7 @@ const ctaSectionStyle = {
     fontWeight: '600',
     fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem' },
     color: theme.palette.text.primary,
+    marginTop:{xs:'3rem'}
   },
   subtitle: {
     color: theme.palette.secondary.main,
@@ -58,9 +59,7 @@ const ctaSectionStyle = {
     whiteSpace: 'nowrap',
     border: `1px solid ${theme.palette.secondary.dark}`,
     transition: 'all 150ms ease',
-    '&:hover': {
-      backgroundColor: theme.palette.secondary.dark,
-    },
+
   },
   imageWrapper: {
     position: 'relative',

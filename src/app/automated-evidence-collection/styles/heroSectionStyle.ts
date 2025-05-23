@@ -2,7 +2,7 @@ import { Theme } from '@mui/material/styles';
 
 const heroSectionStyle = (theme: Theme) => ({
 	container: {
-		padding: '4rem 1rem',
+		padding: '3rem 1rem',
 		background: theme.palette.background.default,
 	},
 	containerBox: {
@@ -12,7 +12,7 @@ const heroSectionStyle = (theme: Theme) => ({
 		alignItems: 'center',
 		maxWidth: '1200px',
 		margin: '0 auto',
-		gap: '2rem',
+		gap: '1rem',
 		marginTop: '2rem',
 	},
 	leftContentBox: {
@@ -71,7 +71,7 @@ const heroSectionStyle = (theme: Theme) => ({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'flex-start',
-		gap: { xs: '1rem', md: '1rem' },
+		gap: { xs: '1.5rem', md: '1rem' },
 		marginTop: '2rem',
 		width: '100%',
 		flexWrap: { xs: 'wrap', md: 'nowrap' },
