@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { complianceData } from '../constants/doraData';
 import DoraHeroStyle from '../styles/doraHeroStyle';
 import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
@@ -8,9 +8,21 @@ import { ComplianceFormValues } from '../../components/ComplianceForm';
 import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const doraComplianceOptions = [
-  'ISO 27001', 'ISO 42001', 'ISO 27018', 'SOC 2', 'GDPR', 'HIPAA',
-  'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
-  'ISO 27701', 'DORA', 'CMMC', 'PDPA'
+  'ISO 27001',
+  'ISO 42001',
+  'ISO 27018',
+  'SOC 2',
+  'GDPR',
+  'HIPAA',
+  'CCPA',
+  'PCI DSS',
+  'NIST Frameworks',
+  'ISO 22301',
+  'ISO 20000-1',
+  'ISO 27701',
+  'DORA',
+  'CMMC',
+  'PDPA',
 ];
 
 export default function DoraHeroSection() {
@@ -21,14 +33,19 @@ export default function DoraHeroSection() {
   };
 
   const handleSubmitCallback = (values: ComplianceFormValues) => {
-    console.log('Submitted with Values and Options:', { ...values, selectedOptions });
+    console.log('Submitted with Values and Options:', {
+      ...values,
+      selectedOptions,
+    });
   };
 
   return (
     <Box sx={DoraHeroStyle.container}>
       <Container sx={DoraHeroStyle.containerBox}>
         <Box sx={DoraHeroStyle.contentBox}>
-          <Typography sx={DoraHeroStyle.tagline}>DORA compliance made easy</Typography>
+          <Typography sx={DoraHeroStyle.tagline}>
+            DORA compliance made easy
+          </Typography>
           <Typography variant="h2" sx={DoraHeroStyle.title}>
             {complianceData.heroTitle}
           </Typography>
@@ -43,10 +60,6 @@ export default function DoraHeroSection() {
               </Typography>
             ))}
           </Box>
-
-          <Button variant="contained" sx={DoraHeroStyle.ctaButton} href="/compliance">
-            Request a Free Demo
-          </Button>
         </Box>
 
         <Box sx={DoraHeroStyle.formBox}>

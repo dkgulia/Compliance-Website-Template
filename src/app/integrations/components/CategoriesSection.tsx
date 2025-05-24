@@ -8,6 +8,10 @@ import integrationsData from '../constants/integrationsData';
 const CategoriesSection: React.FC = () => {
     const { categories } = integrationsData;
 
+    if (!categories) {
+        return null;
+    }
+
     return (
         <Box component="section" sx={categoriesStyle.section}>
             <Container sx={categoriesStyle.container}>

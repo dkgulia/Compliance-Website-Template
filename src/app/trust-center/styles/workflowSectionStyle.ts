@@ -46,7 +46,7 @@ const workflowSectionStyle = {
   },
   stepCard: {
     position: 'relative',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
     padding: '1.5rem',
     display: 'flex',

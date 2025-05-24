@@ -34,7 +34,7 @@ const iso27001ComplianceHubStyle = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     padding: '1.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
 
     minHeight: '13.75rem',

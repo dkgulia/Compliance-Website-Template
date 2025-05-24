@@ -41,7 +41,7 @@ const BenefitsSection: React.FC = () => {
         )}
 
         <Box sx={benefitsSectionStyle.gridContainer}>
-          {benefitsContent.content.benefits.map((benefit, index) => (
+          {benefitsContent.content.benefits?.map((benefit, index) => (
             <Card key={index} variant="outlined" sx={benefitsSectionStyle.card}>
               <CardContent>
                 <Stack direction="column" alignItems="center" spacing={2}>

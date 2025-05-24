@@ -58,6 +58,7 @@ export interface IntegrationsData {
     keywords: string[];
     hero: HeroSectionData;
     introduction: SectionData;
+    categories?: IntegrationCategoryData[];
     benefits: {
         title: string;
         description: string;
@@ -101,6 +102,38 @@ const integrationsData: IntegrationsData = {
             "No more switching between systems or manually gathering compliance information. Hexafort brings everything together so you can see more, do more, and secure more—faster."
         ]
     },
+    categories: [
+        {
+            title: "Cloud Infrastructure",
+            icon: Cloud,
+            description: "Connect with AWS, Azure, GCP and other cloud providers for comprehensive security monitoring."
+        },
+        {
+            title: "Identity & Access",
+            icon: AccountCircle,
+            description: "Integrate with identity providers like Okta, Auth0, and Active Directory for access management."
+        },
+        {
+            title: "DevOps & CI/CD",
+            icon: ApiRounded,
+            description: "Embed security into your development pipeline with GitHub, GitLab, and Jenkins integrations."
+        },
+        {
+            title: "HR Systems",
+            icon: People,
+            description: "Sync employee data from BambooHR, Workday, and other HR platforms for compliance tracking."
+        },
+        {
+            title: "Security Tools",
+            icon: Security,
+            description: "Connect vulnerability scanners, SIEM systems, and other security tools for unified monitoring."
+        },
+        {
+            title: "Data Storage",
+            icon: Storage,
+            description: "Monitor data security across databases, file storage systems, and data warehouses."
+        }
+    ],
     benefits: {
         title: "Why Integrations Matter",
         description: "Hexafort's integration engine ensures you don't have to overhaul your setup or compromise your processes. Just plug in, power up, and take control—with confidence and clarity.",

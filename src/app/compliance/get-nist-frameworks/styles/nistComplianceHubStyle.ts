@@ -31,15 +31,14 @@ const nistComplianceHubStyles = {
   subHeading: {
     color: '#6B7280',
     fontSize: '1rem',
-  
   },
   stepContainer: {
     display: 'flex',
     flexDirection: 'column' as const,
     alignItems: 'flex-start',
-    backgroundColor: "#17171799",
+    backgroundColor: '#17171799',
     borderRadius: '1rem',
-    boxShadow: theme.customShadows?.card,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     minHeight: '220px',
     textAlign: 'left' as const,
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -68,7 +67,7 @@ const nistComplianceHubStyles = {
     alignItems: 'flex-start',
     gap: '0.5rem',
     width: '100%',
-    marginTop:'0.2rem'
+    marginTop: '0.2rem',
   },
   title: {
     fontWeight: 'bold' as const,

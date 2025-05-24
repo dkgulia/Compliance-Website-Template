@@ -1,14 +1,17 @@
-import { AlignHorizontalCenter } from '@mui/icons-material';
 import theme from '../../../theme';
 
-const bookDemoStyle = {
+// Standardized CTA styles following CLAUDE.md guidelines
+const standardCtaStyle = {
+  // Main container
   box: {
     paddingTop: { xs: '2rem', sm: '4rem' },
     paddingBottom: { xs: '1rem', sm: '2rem' },
     backgroundColor: theme.palette.background.default,
     px: { xs: 2, sm: 4 },
   },
-  bannerContainer: {
+
+  // CTA banner container
+  ctaContainer: {
     background: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
     width: '100%',
@@ -21,41 +24,75 @@ const bookDemoStyle = {
     flexDirection: { xs: 'column', md: 'row' },
     minHeight: { xs: 'auto', sm: '300px' },
   },
-  bannerContent: {
+
+  // Content section
+  contentSection: {
     padding: { xs: '2rem', sm: '3rem', md: '4rem' },
     flex: '1 1 60%',
-  },
-  imageContainer: {
-    flex: '1 1 40%',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: { xs: '0 2rem 2rem', md: '2rem' },
-    maxWidth: { xs: '300px', md: '400px' },
+    flexDirection: 'column',
+    gap: '1rem',
   },
-  heading: {
+
+  // Typography styles
+  tagline: {
+    display: 'inline-block',
+    padding: '0.4rem 0.8rem',
+    borderRadius: '1rem',
+    background: theme.palette.secondary.dark,
+    marginBottom: '0.75rem',
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    fontSize: '0.9rem',
+    width: 'fit-content',
+  },
+
+  title: {
+    fontSize: { xs: '1.6rem', sm: '2rem' },
     fontWeight: '600',
     color: theme.palette.text.primary,
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    marginBottom: '1rem',
     lineHeight: 1.3,
+    marginBottom: '1rem',
   },
-  points: {
+
+  subtitle: {
+    fontSize: { xs: '1rem', md: '1.1rem' },
+    color: theme.palette.secondary.main,
+    lineHeight: 1.6,
+    marginBottom: '0.5rem',
+  },
+
+  description: {
+    fontSize: '1rem',
+    color: theme.palette.text.secondary,
+    lineHeight: 1.6,
+    marginBottom: '1.5rem',
+  },
+
+  // Points/features list
+  pointsList: {
     display: 'flex',
     flexDirection: 'column',
     gap: '0.75rem',
-    marginTop: '1rem',
     marginBottom: '1.5rem',
   },
-  point: {
+
+  pointItem: {
     display: 'flex',
     alignItems: 'center',
     color: theme.palette.text.secondary,
     fontSize: '1rem',
     lineHeight: 1.6,
   },
+
+  pointIcon: {
+    color: theme.palette.secondary.main,
+    marginRight: '0.75rem',
+    fontSize: '1.2rem',
+  },
+
+  // Button styles
   button: {
-    marginTop: { xs: '1rem', sm: '1.5rem' },
     color: theme.palette.text.primary,
     fontWeight: 800,
     padding: {
@@ -70,6 +107,7 @@ const bookDemoStyle = {
     fontSize: '0.9rem',
     whiteSpace: 'nowrap',
     transition: 'all 0.2s ease',
+    width: 'fit-content',
     '&:hover': {
       backgroundColor: theme.palette.secondary.main,
       borderColor: theme.palette.secondary.main,
@@ -82,22 +120,37 @@ const bookDemoStyle = {
       border: `1px solid ${theme.palette.secondary.main}`,
     },
   },
-  icon: {
-    color: theme.palette.secondary.main,
-    marginRight: '0.75rem',
-    fontSize: '1.2rem',
+
+  // Image section
+  imageSection: {
+    flex: '1 1 40%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: { xs: '0 2rem 2rem', md: '2rem' },
+    maxWidth: { xs: '300px', md: '400px' },
   },
-  tagline: {
-    display: 'inline-block',
-    padding: '0.4rem 0.8rem',
+
+  // For gradient CTA sections
+  gradientContainer: {
+    background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, ${theme.palette.secondary.dark} 100%)`,
     borderRadius: '1rem',
-    background: theme.palette.secondary.dark,
-    marginBottom: '0.75rem',
-    color: theme.palette.text.primary,
-    fontWeight: 'bold',
-    fontSize: '0.9rem',
-    width: 'fit-content',
+    width: '100%',
+    maxWidth: '70rem',
+    marginX: 'auto',
+    padding: { xs: '3rem 2rem', sm: '4rem 3rem' },
+    textAlign: 'center',
+  },
+
+  // For centered CTAs
+  centeredContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '1.5rem',
+    maxWidth: '50rem',
+    marginX: 'auto',
   },
 };
 
-export default bookDemoStyle;
+export default standardCtaStyle;

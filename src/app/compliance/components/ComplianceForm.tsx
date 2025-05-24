@@ -11,11 +11,14 @@ import {
 	Alert,
 	FormControlLabel,
 	Checkbox,
+	SxProps,
+	Theme,
 } from '@mui/material';
 import { FormikProps } from 'formik';
 import { addDataToGoogleSheetRequest } from '../../../api/googleSheetRequest';
 import { getCurrentTime } from '../../../utils/getCurrentTime';
-import { sheetNameTypes } from '../../constants/sheetTypes';
+import { SheetNameType } from '../../constants/sheetTypes';
+
 export interface ComplianceFormValues {
 	fullName: string;
 	email: string;
@@ -24,8 +27,8 @@ interface ComplianceFormProps extends FormikProps<ComplianceFormValues> {
 	title: string;
 	subtitle: string;
 	buttonText?: string;
-	sheetName: string;
-	formStyles: any;
+	sheetName: SheetNameType;
+	formStyles: Record<string, SxProps<Theme>>;
 	selectedOptions: string[];
 	onOptionsChange: (options: string[]) => void;
 	complianceOptions: string[];

@@ -30,7 +30,7 @@ const whyMattersSectionStyle = {
   },
   featureCard: {
     height: '100%',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '8px',
     transition: 'all 0.3s ease',
     border: `1px solid ${theme.palette.divider}`,

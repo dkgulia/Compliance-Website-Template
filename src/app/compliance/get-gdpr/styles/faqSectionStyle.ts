@@ -29,13 +29,13 @@ const faqSectionStyle = {
 		overflow: 'hidden',
     },
     accordionSummary: {
-        backgroundColor: theme.palette.background.darkTransparent,
+        backgroundColor: theme.palette.background.darkTransparent || '#17171799',
 
         padding: { xs: '0.4rem 0.8rem', sm: '0.5rem 1rem' },
         color: theme.palette.text.primary,
     },
     accordionDetails: {
-        backgroundColor: theme.palette.background.darkTransparent,
+        backgroundColor: theme.palette.background.darkTransparent || '#17171799',
         padding: '1rem',
         color: '#6B7280',
         fontSize: '0.95rem',

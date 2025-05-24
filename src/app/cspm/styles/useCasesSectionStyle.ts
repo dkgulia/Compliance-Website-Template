@@ -56,7 +56,7 @@ const useCasesSectionStyle = {
     display: 'flex',
     marginBottom: '2rem',
     padding: '1.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '0.75rem',
     border: `1px solid ${theme.palette.divider}`,
     transition: 'all 0.3s ease',

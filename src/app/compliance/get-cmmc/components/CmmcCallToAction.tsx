@@ -19,16 +19,14 @@ import * as Yup from 'yup';
 import { useFormik } from 'formik';
 
 const CmmcCallToAction: React.FC = () => {
-	const ctaContent = cmmcData.sections.find((section) => section.Sno === '5' && section.blockType === 'Call to Action');
-
-	if (!ctaContent) return null;
-
 	const [alert, setAlert] = useState<{
 		type: 'success' | 'error';
 		message: string;
 	} | null>(null);
 	const [loading, setLoading] = useState(false);
 	const [isChecked, setIsChecked] = useState(false);
+	
+	const ctaContent = cmmcData.sections.find((section) => section.Sno === '5' && section.blockType === 'Call to Action');
 
 	const validationSchema = Yup.object({
 		name: Yup.string().required('Name is required'),
@@ -68,6 +66,8 @@ const CmmcCallToAction: React.FC = () => {
 	const handleSnackbarClose = () => {
 		setAlert(null);
 	};
+
+	if (!ctaContent) return null;
 
 	return (
 		<Box sx={callToActionStyle.container}>

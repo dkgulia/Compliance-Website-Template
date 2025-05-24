@@ -133,7 +133,7 @@ const callToActionSectionStyle = {
 		maxWidth: '400px',
 		height: '280px',
 		borderRadius: '1rem',
-		backgroundColor: `${theme.palette.background.darkPaper}99`,
+		backgroundColor: `${theme.palette.background.darkPaper || theme.palette.background.paper}99`,
 		backdropFilter: 'blur(10px)',
 		display: 'flex',
 		flexDirection: 'column',

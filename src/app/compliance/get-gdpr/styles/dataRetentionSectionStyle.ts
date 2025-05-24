@@ -30,7 +30,7 @@ const dataRetentionSectionStyle = {
   },
   featureCard: {
     height: '100%',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '8px',
     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
     overflow: 'hidden',

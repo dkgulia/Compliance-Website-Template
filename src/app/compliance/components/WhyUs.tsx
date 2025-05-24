@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Card, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import whyUsStyles from '../styles/whyUsStyle';
 import { whyUsItems } from '../../constants/whyUsData';

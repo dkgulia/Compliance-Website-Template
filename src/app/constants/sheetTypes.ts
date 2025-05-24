@@ -14,4 +14,6 @@ export const sheetNameTypes = {
 	iso42001Form:'iso42001Form',
 	iso27018Form:'iso27018Form',
 	iso27701Form:'iso27701Form'
-      } as const;
+} as const;
+
+export type SheetNameType = typeof sheetNameTypes[keyof typeof sheetNameTypes];

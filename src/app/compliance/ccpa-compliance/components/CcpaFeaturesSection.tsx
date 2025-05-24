@@ -3,7 +3,6 @@ import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import { ccpaFeatures } from '../constants/ccpaData';
-import theme from '../../../../theme';
 
 const CcpaFeaturesSection: React.FC = () => {
   return (

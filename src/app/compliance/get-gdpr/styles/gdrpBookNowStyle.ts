@@ -62,7 +62,7 @@ const gdprBookNowStyle = {
     gap: '1rem',
   },
   point: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     padding: '0.75rem 1rem',
     borderRadius: '6px',
     border: `1px solid ${theme.palette.divider}`,

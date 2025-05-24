@@ -11,7 +11,7 @@ const IntroductionSection: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
     const highlightPhrases = (text: string, phrases: string[]) => {
-        let parts = [text];
+        let parts: (string | React.ReactElement)[] = [text];
         let keyCounter = 0;
 
         phrases.forEach(phrase => {

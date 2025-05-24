@@ -3,13 +3,15 @@ import { withFormik } from 'formik';
 import * as Yup from 'yup';
 import ComplianceForm, { ComplianceFormValues } from './ComplianceForm';
 import { FULL_NAME_REQUIRED, EMAIL_REQUIRED, INVALID_EMAIL } from '../../constants/formMessages';
+import { SheetNameType } from '../../constants/sheetTypes';
+import { SxProps, Theme } from '@mui/material';
 
 interface EnhancedComplianceFormProps {
 	title: string;
 	subtitle: string;
 	buttonText?: string;
-	sheetName: string;
-	formStyles: any;
+	sheetName: SheetNameType;
+	formStyles: Record<string, SxProps<Theme>>;
 	selectedOptions: string[];
 	onOptionsChange: (options: string[]) => void;
 	complianceOptions: string[];

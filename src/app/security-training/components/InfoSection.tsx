@@ -30,7 +30,7 @@ const InfoSection = () => {
               {title}
             </Typography>
           )}
-          {description && description.map((desc, index) => (
+          {description && Array.isArray(description) && description.map((desc, index) => (
             <Typography key={index} variant="body1" sx={infoSectionStyles.description}>
               {desc}
             </Typography>

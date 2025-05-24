@@ -104,10 +104,10 @@ const TestimonialsCarousel = () => {
 											{/* Author Section with Teal Background */}
 											<Box sx={testimonialsCarouselStyles.authorContainer}>
 												<Avatar
-													src={testimonial.image || "/api/placeholder/50/50"}
+													src={testimonial.avatar || "/api/placeholder/50/50"}
 													sx={testimonialsCarouselStyles.avatar}
 												>
-													{!testimonial.image && getInitials(testimonial.name)}
+													{!testimonial.avatar && getInitials(testimonial.name)}
 												</Avatar>
 												<Box sx={testimonialsCarouselStyles.authorInfo}>
 													<Typography sx={testimonialsCarouselStyles.authorName}>

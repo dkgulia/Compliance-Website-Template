@@ -14,9 +14,9 @@ const bannerStyle = {
     width: '100%',
     maxWidth: '75rem',
     marginX: 'auto',
-    padding: { xs: '1.5rem', sm: '3rem' },
-    paddingLeft: { xs: '1rem', sm: '3rem' },
-    paddingRight: { xs: '1rem', sm: '3rem' },
+    padding: { xs: '1.5rem', sm: '2rem' },
+    paddingLeft: { xs: '1rem', sm: '2rem' },
+    paddingRight: { xs: '1rem', sm: '2rem' },
 
     overflow: 'hidden',
     border: `1px solid ${theme.palette.divider}`,

@@ -66,7 +66,7 @@ const whatIsSectionStyle = {
     marginTop: { xs: '2.5rem', md: '3.5rem' },
   },
   highlightCard: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     height: '100%',
     borderRadius: '8px',
     transition: 'all 0.3s ease',

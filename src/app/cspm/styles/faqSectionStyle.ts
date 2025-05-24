@@ -59,7 +59,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         position: 'relative',
         paddingBottom: '1rem',
         display: 'inline-block',
-       
+
     },
     subtitle: {
         fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -77,7 +77,7 @@ const createFaqSectionStyle = (theme: Theme) => ({
         border: `1px solid ${theme.palette.divider}`,
         borderRadius: '12px',
         overflow: 'hidden',
-        boxShadow: theme.customShadows?.card,
+        boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     },
     accordion: {
         backgroundColor: 'rgba(23, 23, 23, 0.6)',

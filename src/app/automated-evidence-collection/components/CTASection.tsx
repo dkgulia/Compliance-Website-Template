@@ -23,7 +23,7 @@ const CTASection: React.FC = () => {
         <Box sx={ctaSectionStyle.ctaContainer}>
           <Box sx={ctaSectionStyle.contentWrapper}>
             <Box sx={ctaSectionStyle.textContent}>
-              <Typography variant="h2" sx={ctaSectionStyle.title}>
+              <Typography variant="h4" sx={ctaSectionStyle.title}>
                 {cta.title}
               </Typography>
 
@@ -50,7 +50,7 @@ const CTASection: React.FC = () => {
             <Box sx={ctaSectionStyle.imageContainer}>
               <Image
                 src={securityComplianceImage}
-                alt={cta.imageAlt || "Illustration of security and compliance"}
+                alt={cta.imageAlt || 'Illustration of security and compliance'}
                 fill
                 style={ctaSectionStyle.image}
                 priority

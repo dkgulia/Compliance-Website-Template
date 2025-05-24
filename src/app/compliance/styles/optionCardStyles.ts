@@ -14,7 +14,7 @@ const optionCardStyles = {
 		alignItems: 'center',
 		background: 'rgba(18, 18, 18, 0.6)',
 		borderRadius: '1rem',
-		boxShadow: theme.customShadows?.card || '0rem 0.375rem 1.25rem rgba(0, 0, 0, 0.4)',
+		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'scale(1.02)',

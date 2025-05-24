@@ -45,12 +45,12 @@ const featuresSectionStyle = {
 		width: '100%',
 	},
 	card: {
-		backgroundColor: "#17171799",
+		backgroundColor: theme.palette.background.darkTransparent || theme.palette.background.paper,
 		borderRadius: '0.75rem',
 		boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
 		height: '100%',
 		transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-		border: `1px solid rgba(255, 255, 255, 0.1)`,
+		border: `1px solid ${theme.palette.divider}`,
 		'&:hover': {
 			transform: 'translateY(-3px)',
 			boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -70,7 +70,7 @@ const featuresSectionStyle = {
 		width: '48px',
 		height: '48px',
 		borderRadius: '4px',
-		backgroundColor: '#115e59',
+		backgroundColor: theme.palette.secondary.dark,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -85,12 +85,12 @@ const featuresSectionStyle = {
 	},
 	descText: {
 		fontSize: '0.95rem',
-		color: '#6B7280', // gray-500
+		color: theme.palette.text.secondary,
 		textAlign: 'left' as const,
 		lineHeight: 1.6,
 	},
 	icon: {
-		color: 'white',
+		color: theme.palette.common.white,
 		fontSize: '24px',
 	},
 };

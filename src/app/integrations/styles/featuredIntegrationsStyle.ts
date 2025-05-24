@@ -114,7 +114,7 @@ const featuredIntegrationsStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: '0.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     color: theme.palette.text.primary,
     fontWeight: 'bold',
     fontSize: '1.rem',

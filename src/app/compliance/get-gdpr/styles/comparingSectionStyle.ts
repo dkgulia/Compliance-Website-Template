@@ -35,7 +35,7 @@ const comparingSectionStyle = {
     margin: '0.5rem auto 0',
   },
   comparisonContainer: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '12px',
     border: `1px solid ${theme.palette.divider}`,
     overflow: 'hidden',

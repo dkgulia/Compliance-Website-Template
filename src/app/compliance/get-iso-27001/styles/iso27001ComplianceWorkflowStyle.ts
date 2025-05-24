@@ -34,7 +34,7 @@ const iso27001ComplianceWorkflowStyle = {
     alignItems: 'stretch',
   },
   card: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
     padding: '2rem',
     textAlign: 'center' as const,

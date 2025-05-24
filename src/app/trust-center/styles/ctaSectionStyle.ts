@@ -3,7 +3,6 @@ import theme from '../../../theme';
 const ctaSectionStyle = {
   box: {
     backgroundColor: theme.palette.background.default,
-    paddingY: { xs: '3rem', sm: '4rem' },
     position: 'relative',
   },
   container: {
@@ -29,9 +28,9 @@ const ctaSectionStyle = {
   },
   heading: {
     fontWeight: '600',
-    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem' },
+    fontSize: { xs: '1.6rem', sm: '2rem', md: '2rem' },
     color: theme.palette.text.primary,
-    marginTop:{xs:'3rem'}
+    marginTop: { xs: '3rem' },
   },
   subtitle: {
     color: theme.palette.secondary.main,
@@ -59,12 +58,11 @@ const ctaSectionStyle = {
     whiteSpace: 'nowrap',
     border: `1px solid ${theme.palette.secondary.dark}`,
     transition: 'all 150ms ease',
-
   },
   imageWrapper: {
     position: 'relative',
     width: { xs: '100%', sm: '250px', md: '300px' },
-    height: { xs: '200px', sm: '230px',md:'250px' },
+    height: { xs: '200px', sm: '230px', md: '250px' },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

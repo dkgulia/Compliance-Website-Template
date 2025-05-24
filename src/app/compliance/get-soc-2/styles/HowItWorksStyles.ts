@@ -43,7 +43,7 @@ const howItWorksStyles = {
     border: `1px solid ${theme.palette.divider}`,
     '&:hover': {
       transform: 'translateY(-4px)',
-      background: theme.palette.background.darkTransparent,
+      background: theme.palette.background.darkTransparent || '#17171799',
     },
   },
   cardContent: {

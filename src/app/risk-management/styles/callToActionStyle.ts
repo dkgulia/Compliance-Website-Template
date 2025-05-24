@@ -2,9 +2,10 @@ import theme from '../../../theme';
 
 const callToActionStyle = {
   container: {
-    paddingTop: { sm: '3rem', xs: '2rem' },
-    paddingBottom: { sm: '3rem', xs: '2rem' },
-    background: theme.palette.background.default,
+    paddingTop: { xs: '2rem', sm: '4rem' },
+    paddingBottom: { xs: '1rem', sm: '2rem' },
+    backgroundColor: theme.palette.background.default,
+    px: { xs: 2, sm: 4 },
   },
   innerBox: {
     maxWidth: '75rem',
@@ -39,7 +40,7 @@ const callToActionStyle = {
   formBox: {
     flex: 1,
     maxWidth: { xs: '100%', md: '400px' },
-    background: '#17171799',
+    background: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
     padding: '1.5rem',
     border: `1px solid ${theme.palette.divider}`,
@@ -57,7 +58,7 @@ const callToActionStyle = {
   },
   formButton: {
     marginTop: '1.5rem',
-    color: theme.palette.common.white,
+    color: theme.palette.text.primary,
     fontWeight: 800,
     padding: {
       xs: '0.25rem 0.5rem',
@@ -65,14 +66,15 @@ const callToActionStyle = {
       md: '0.7rem 1rem',
     },
     borderRadius: '0.5rem',
-    backgroundColor: '#1f2937',
-    border: '1px solid #4b5563',
+    backgroundColor: theme.palette.secondary.dark,
+    border: `1px solid ${theme.palette.secondary.main}`,
     textTransform: 'none',
     fontSize: '0.9rem',
-    transition: 'background-color 150ms ease',
+    transition: 'all 0.2s ease',
     '&:hover': {
-      backgroundColor: '#374151',
-      borderColor: '#4b5563',
+      backgroundColor: theme.palette.secondary.main,
+      borderColor: theme.palette.secondary.main,
+      transform: 'translateY(-2px)',
     },
   },
   imagePlaceholder: {

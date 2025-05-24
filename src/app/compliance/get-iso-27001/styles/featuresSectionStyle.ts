@@ -39,7 +39,7 @@ const featuresSectionStyle = {
     display: 'flex',
     flexDirection: 'column' as const,
     alignItems: 'center',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
 
     height: { sm: '16rem', xs: 'auto', md: '19rem' },

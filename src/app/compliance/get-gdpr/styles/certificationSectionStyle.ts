@@ -11,7 +11,7 @@ const certificationSectionStyle = {
     marginX: 'auto',
     padding: { xs: '1rem', sm: '2rem' },
     borderRadius: '1rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
 
     border: `1px solid ${theme.palette.divider}`,
     textAlign: 'center' as const,

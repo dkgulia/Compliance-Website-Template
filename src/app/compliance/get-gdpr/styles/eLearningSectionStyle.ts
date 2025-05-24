@@ -38,7 +38,7 @@ const eLearningSectionStyle = {
     margin: '0 auto',
   },
   learningCard: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '10px',
     padding: { xs: '1rem', md: '1.25rem' },
     display: 'flex',

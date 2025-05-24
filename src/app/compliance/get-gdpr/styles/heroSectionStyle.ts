@@ -262,7 +262,7 @@ const heroSectionStyle = {
 		marginTop: '3rem',
 	},
 	card1: {
-		backgroundColor: theme.palette.background.darkTransparent,
+		backgroundColor: theme.palette.background.darkTransparent || '#17171799',
 		height: '90%',
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',
@@ -277,7 +277,7 @@ const heroSectionStyle = {
 		},
 	},
 	card2: {
-		backgroundColor: theme.palette.background.darkTransparent,
+		backgroundColor: theme.palette.background.darkTransparent || '#17171799',
 		height: '90%',
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',
@@ -292,7 +292,7 @@ const heroSectionStyle = {
 		},
 	},
 	card3: {
-		backgroundColor: theme.palette.background.darkTransparent,
+		backgroundColor: theme.palette.background.darkTransparent || '#17171799',
 		height: '90%',
 		borderRadius: '6px',
 		transition: 'all 0.3s ease',

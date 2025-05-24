@@ -53,7 +53,7 @@ const whyUsStyles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: '#115e59',
+    background: theme.palette.secondary.dark,
   },
   typography: {
     title: {

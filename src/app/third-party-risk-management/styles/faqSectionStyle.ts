@@ -7,7 +7,6 @@ const faqSectionStyle = {
     backgroundColor: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
-
   },
   container: {
     maxWidth: '1000px',
@@ -21,7 +20,7 @@ const faqSectionStyle = {
     textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '32px',md:'2rem' },
+    fontSize: { xs: '1.8rem', sm: '32px', md: '2rem' },
     fontWeight: 600,
     textAlign: 'center',
     marginBottom: '0.5rem',
@@ -29,7 +28,6 @@ const faqSectionStyle = {
     position: 'relative',
     paddingBottom: '0.5rem',
     display: 'inline-block',
-
   },
   subtitle: {
     fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -47,7 +45,7 @@ const faqSectionStyle = {
     border: `1px solid ${theme.palette.divider}`,
     borderRadius: '12px',
     overflow: 'hidden',
-    boxShadow: theme.customShadows?.card,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
   },
   accordion: {
     backgroundColor: '#17171799',

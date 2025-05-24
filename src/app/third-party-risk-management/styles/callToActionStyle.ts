@@ -17,7 +17,7 @@ const callToActionStyle = {
     zIndex: 1,
   },
   contentWrapper: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     backdropFilter: 'blur(10px)',
     borderRadius: '1rem',
     padding: { xs: '2rem', sm: '3rem' },
@@ -74,7 +74,7 @@ const callToActionStyle = {
     maxWidth: '350px',
     height: '200px',
     borderRadius: '1rem',
-    backgroundColor: theme.palette.background.darkPaper,
+    backgroundColor: theme.palette.background.darkPaper || theme.palette.background.paper,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

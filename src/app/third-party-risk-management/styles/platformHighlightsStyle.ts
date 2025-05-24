@@ -44,7 +44,7 @@ const platformHighlightsStyle = {
     gap: '1.75rem',
   },
   feature: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     padding: '1.75rem',
     borderRadius: '1rem',
     transition: 'all 0.3s ease',

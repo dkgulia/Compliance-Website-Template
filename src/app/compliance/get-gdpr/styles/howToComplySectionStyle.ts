@@ -31,7 +31,7 @@ const howToComplySectionStyle = {
   },
   phaseCard: {
     padding: { xs: '1.1rem', md: '1.75rem' },
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '8px',
     border: `1px solid ${theme.palette.divider}`,
     transition: 'all 0.2s ease',

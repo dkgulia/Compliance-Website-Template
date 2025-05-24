@@ -7,7 +7,7 @@ import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import packageOverviewStyle from '../styles/packageOverviewStyle';
 import hexafortData from '../constant/dataFile';
 
-const iconMap = {
+const iconMap: Record<string, React.ReactElement> = {
   "Comprehensive Standards": <SecurityIcon sx={packageOverviewStyle.icon} />,
   "Accelerated Timeline": <SpeedIcon sx={packageOverviewStyle.icon} />,
   "Cost-Effective Solution": <PriceCheckIcon sx={packageOverviewStyle.icon} />

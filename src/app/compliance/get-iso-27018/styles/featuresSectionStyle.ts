@@ -30,7 +30,7 @@ const featuresSectionStyle = {
     flexDirection: 'column' as const,
     backgroundColor: '#17171799',
     borderRadius: '1rem',
-    boxShadow: theme.customShadows?.card,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     height: { sm: 'auto', xs: 'auto' },
     minHeight: '180px',
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',

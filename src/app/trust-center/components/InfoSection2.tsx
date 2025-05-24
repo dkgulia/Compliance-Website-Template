@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import infoSectionStyle from '../styles/infoSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';

@@ -1,4 +1,4 @@
-import { SvgIconComponent } from '@mui/material';
+import { SvgIconComponent } from '@mui/icons-material';
 import SecurityIcon from '@mui/icons-material/Security';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import PolicyIcon from '@mui/icons-material/Policy';

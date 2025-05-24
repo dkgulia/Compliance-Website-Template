@@ -15,7 +15,11 @@ import {
 } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { FormikProps } from 'formik';
-import { FormValues } from './EnhancedCmmcForm';
+
+interface FormValues {
+	fullName: string;
+	email: string;
+}
 
 // Options specific to CMMC
 const cmmcOptionsArray = ['Level 1 (Foundational)', 'Level 2 (Advanced)', 'Level 3 (Expert)'];

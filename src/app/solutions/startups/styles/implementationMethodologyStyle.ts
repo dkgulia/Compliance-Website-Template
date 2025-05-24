@@ -57,7 +57,7 @@ const implementationMethodologyStyle: Record<string, SxProps<Theme>> = {
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {
 			transform: 'translateY(-8px)',
-			boxShadow: (theme) => theme.customShadows?.card,
+			boxShadow: (theme) => theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		},
 	},
 	methodologyIconContainer: {

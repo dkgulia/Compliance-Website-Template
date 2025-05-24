@@ -48,7 +48,7 @@ const packageOverviewStyle: Record<string, SxProps<Theme>> = {
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     '&:hover': {
       transform: 'translateY(-5px)',
-      boxShadow: (theme) => theme.customShadows?.card,
+      boxShadow: (theme) => theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     },
   },
   cardContent: {

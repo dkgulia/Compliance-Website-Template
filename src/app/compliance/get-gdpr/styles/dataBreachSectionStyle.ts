@@ -15,7 +15,7 @@ const dataBreachSectionStyle = {
     display: 'flex',
     flexDirection: 'column' as const,
     gap: '1rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     borderRadius: '1rem',
 
     border: `1px solid ${theme.palette.divider}`,

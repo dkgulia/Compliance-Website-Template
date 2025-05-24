@@ -35,7 +35,7 @@ const comparisonSectionStyle = {
 		padding: '1.5rem',
 		backgroundColor: '#17171799',
 		marginBottom: '0.5rem',
-		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.15)',
+		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		height: '100%',
 	},
 	cardTitle: {

@@ -6,7 +6,6 @@ const pitfallsSectionStyle = {
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
-    
   },
   container: {
     maxWidth: '1200px',
@@ -74,11 +73,11 @@ const pitfallsSectionStyle = {
     gap: '1rem',
     alignItems: 'flex-start',
     padding: '1.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     backdropFilter: 'blur(6px)',
     borderRadius: '1rem',
     border: `1px solid ${theme.palette.divider}`,
-    boxShadow: theme.customShadows?.card,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     transition: 'all 0.3s ease',
     '&:hover': {
       transform: 'translateY(-5px)',

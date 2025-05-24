@@ -4,7 +4,6 @@ import NextLink from 'next/link';
 import complianceStyles from '../styles/complianceStyle';
 import { ComplianceFramework } from '../../constants/complianceData';
 import Image from 'next/image';
-import { COMPLIANCE } from '../../constants/routes';
 
 const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 	return (

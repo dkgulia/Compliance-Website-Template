@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { Box } from '@mui/material';
+
 import Head from 'next/head';
 import { cmmcData } from './constants/cmmcData';
 import CmmcHeroSection from './components/CmmcHeroSection';

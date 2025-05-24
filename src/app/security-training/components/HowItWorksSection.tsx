@@ -22,7 +22,7 @@ const HowItWorksSection = () => {
         )}
 
         <Box sx={howItWorksSectionStyles.gridContainer}>
-          {steps.map((step, index) => (
+          {steps?.map((step, index) => (
             <Card key={index} sx={howItWorksSectionStyles.card}>
               <CardContent>
                 <Typography variant="h5" sx={howItWorksSectionStyles.stepNumber}>

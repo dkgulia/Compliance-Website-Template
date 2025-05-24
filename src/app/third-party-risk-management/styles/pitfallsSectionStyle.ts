@@ -6,7 +6,6 @@ const pitfallsSectionStyle = {
     paddingBottom: { sm: '4rem', xs: '2rem' },
     backgroundColor: theme.palette.background.default,
     position: 'relative',
-   
   },
   container: {
     maxWidth: '1200px',
@@ -24,7 +23,7 @@ const pitfallsSectionStyle = {
     textAlign: { xs: 'center', md: 'left' },
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '2.5rem',md:'2rem' },
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
     fontWeight: 600,
     marginBottom: '1rem',
     color: theme.palette.text.primary,
@@ -40,7 +39,7 @@ const pitfallsSectionStyle = {
   highlightText: {
     fontSize: '1.2rem',
     fontWeight: 600,
-    color:'white',
+    color: 'white',
     marginBottom: '1rem',
     display: 'block',
     backgroundColor: 'rgba(17, 94, 89, 0.1)',
@@ -74,11 +73,11 @@ const pitfallsSectionStyle = {
     gap: '1rem',
     alignItems: 'flex-start',
     padding: '1.5rem',
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     backdropFilter: 'blur(6px)',
     borderRadius: '1rem',
     border: `1px solid ${theme.palette.divider}`,
-    boxShadow: theme.customShadows?.card,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     transition: 'all 0.3s ease',
     '&:hover': {
       transform: 'translateY(-5px)',

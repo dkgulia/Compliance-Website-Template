@@ -59,7 +59,7 @@ const offerBannerStyle = {
     right: 0,
     bottom: 0,
     left: 0,
-    background: `linear-gradient(135deg, ${theme.palette.background.darkPaper} 0%, ${theme.palette.secondary.dark} 100%)`,
+    background: `linear-gradient(135deg, ${theme.palette.background.darkPaper || theme.palette.background.paper} 0%, ${theme.palette.secondary.dark} 100%)`,
     opacity: 0.1,
     zIndex: 0,
   },

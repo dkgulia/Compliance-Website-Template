@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Box, Container, Typography, Button, Stack, Grid } from '@mui/material';
+import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
 import bookADemoStyles from '../styles/bookADemoStyle';
@@ -41,7 +41,6 @@ const BookADemo = () => {
 					<Button
 						variant="contained"
 						type="button"
-						fullWidth
 						sx={bookADemoStyles.button}
 						onClick={handleScrollToTop}
 					>

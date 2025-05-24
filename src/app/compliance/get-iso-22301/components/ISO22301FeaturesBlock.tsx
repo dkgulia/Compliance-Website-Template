@@ -25,14 +25,12 @@ const ISO22301FeaturesBlock: React.FC = () => {
 						return (
 							<Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
 								<Card sx={featuresSectionStyle.card}>
-									<CardContent>
-										<Stack sx={featuresSectionStyle.cardContentStack}>
-											<Box sx={featuresSectionStyle.iconContainer}>
-												<IconComp sx={featuresSectionStyle.icon} />
-											</Box>
-											<Typography sx={featuresSectionStyle.titleText}>{feature.title}</Typography>
-											<Typography sx={featuresSectionStyle.descText}>{feature.description}</Typography>
-										</Stack>
+									<CardContent sx={featuresSectionStyle.cardContent}>
+										<Box sx={featuresSectionStyle.iconContainer}>
+											<IconComp sx={featuresSectionStyle.icon} />
+										</Box>
+										<Typography sx={featuresSectionStyle.titleText}>{feature.title}</Typography>
+										<Typography sx={featuresSectionStyle.descText}>{feature.description}</Typography>
 									</CardContent>
 								</Card>
 							</Grid>

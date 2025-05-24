@@ -2,7 +2,7 @@ import theme from '../../../theme';
 
 const frameworkStyles = {
 	container: {
-		backgroundColor: theme.palette.background.default, 
+		backgroundColor: theme.palette.background.default,
 		color: theme.palette.text.primary,
 		padding: '2rem 0',
 		fontFamily: '"Roboto", sans-serif',
@@ -48,7 +48,7 @@ const frameworkStyles = {
 		backgroundColor: theme.palette.background.paper,
 		padding: '1.5rem',
 		borderRadius: '8px',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
+		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		textAlign: 'center',
 		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -75,7 +75,7 @@ const frameworkStyles = {
 		backgroundColor: theme.palette.background.paper,
 		padding: '1.5rem',
 		borderRadius: '8px',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
+		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		textAlign: 'center',
 		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -101,7 +101,7 @@ const frameworkStyles = {
 		padding: '1.5rem',
 		borderRadius: '8px',
 		textAlign: 'center',
-		boxShadow: theme.customShadows?.card || '0 4px 6px rgba(0, 0, 0, 0.1)',
+		boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 		border: '1px solid #e0e0e0',
 		transition: 'transform 0.3s ease, box-shadow 0.3s ease',
 		'&:hover': {

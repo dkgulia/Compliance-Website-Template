@@ -1,12 +1,6 @@
 'use client';
 import React from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Card,
-} from '@mui/material';
+import { Box, Container, Typography, Grid } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import { cmmcData } from '../constants/cmmcData';
 import * as Icons from '@mui/icons-material';

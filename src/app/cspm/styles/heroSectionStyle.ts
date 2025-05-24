@@ -141,7 +141,7 @@ const heroSectionStyle = {
 		alignItems: 'center',
 		color: theme.palette.text.secondary,
 		border: `1px solid ${theme.palette.divider}`,
-		background: `linear-gradient(135deg, ${theme.palette.background.paper}BB, ${theme.palette.background.darkPaper}99)`,
+		background: `linear-gradient(135deg, ${theme.palette.background.paper}BB, ${theme.palette.background.darkPaper || theme.palette.background.paper}99)`,
 		padding: '1rem',
 		textAlign: 'center',
 		transition: 'all 0.3s ease',

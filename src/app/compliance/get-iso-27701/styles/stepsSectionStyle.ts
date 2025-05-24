@@ -56,7 +56,7 @@ const stepsSectionStyle = {
 		display: 'flex',
 		flexDirection: 'column',
 		border: `1px solid ${theme.palette.divider}`,
-        boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.15)',
+        boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
 	},
 	cardContent: {
 		display: 'flex',

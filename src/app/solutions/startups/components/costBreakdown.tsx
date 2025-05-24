@@ -8,8 +8,8 @@ const CostBreakdown: React.FC = () => {
   const { costBreakdown } = hexafortData;
   const { totalCost, breakdown } = costBreakdown;
   const colors = ['#5EEAD4', '#38B2AC', '#2C7A7B', '#234E52'];
-  const total = breakdown.reduce((sum, item) => sum + item.amount, 0);
-  const percentages = breakdown.map((item) => (item.amount / total) * 100);
+  // For now, use equal percentages since amounts are placeholders
+  const percentages = breakdown.map(() => 100 / breakdown.length);
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
   let cumulativePercentage = 0;
@@ -59,11 +59,10 @@ const CostBreakdown: React.FC = () => {
                     style={{
                       transform: 'rotate(-90deg)',
                       transformOrigin: 'center',
-                      ...costBreakdownStyle.donutSegment,
                     }}
                   />
                 ))}
-                <g sx={costBreakdownStyle.centerText}>
+                <g>
                   <text
                     x="50"
                     y="45"

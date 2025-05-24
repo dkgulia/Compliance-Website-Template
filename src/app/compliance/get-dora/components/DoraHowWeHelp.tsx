@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
-import { complianceData } from '../constants/doraData';
+
 import doraHowWeHelpStyle from '../styles/doraHowWeHelpStyle';
 import PolicyIcon from '@mui/icons-material/Policy';
 import SecurityIcon from '@mui/icons-material/Security';

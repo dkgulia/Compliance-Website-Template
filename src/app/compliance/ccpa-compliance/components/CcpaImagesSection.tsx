@@ -5,7 +5,6 @@ import iso22301ImagesSectionStyles from '../styles/ccpaImagesSectionStyles';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
-import theme from '../../../../theme';
 
 const ISO22301ImagesSection = () => {
   return (

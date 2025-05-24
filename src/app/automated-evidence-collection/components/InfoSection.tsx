@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container, Grid } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import infoSectionStyle from '../styles/infoSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 

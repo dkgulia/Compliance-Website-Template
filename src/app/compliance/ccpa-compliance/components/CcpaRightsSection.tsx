@@ -7,7 +7,6 @@ import knowIcon from '../images/right-to-know.png';
 import deleteIcon from '../images/right-to-delete-.png';
 import optoutIcon from '../images/restrictions.png';
 import nodiscriminationIcon from '../images/no-discrmination.png';
-import theme from '../../../../theme';
 
 const CcpaRightsSection = () => {
   return (

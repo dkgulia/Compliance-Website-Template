@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, useTheme } from '@mui/material';
+import { Container, useTheme } from '@mui/material';
 import Script from 'next/script';
-
 
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';

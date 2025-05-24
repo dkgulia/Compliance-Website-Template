@@ -3,7 +3,6 @@ import React from 'react';
 import { Box, Typography, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Paper } from '@mui/material';
 import implementationFlowStyle from '../styles/implementationFlowStyle';
 import { ccpaTableItems } from '../constants/ccpaData';
-import theme from '../../../../theme';
 
 const CcpaImplementationFlow: React.FC = () => {
   return (

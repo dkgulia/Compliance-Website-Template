@@ -68,7 +68,7 @@ const scopeSectionStyle = {
     marginTop: { xs: '2.5rem', md: '3.5rem' },
   },
   applicabilityCard: {
-    backgroundColor: theme.palette.background.darkTransparent,
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
     height: '90%',
     borderRadius: '6px',
     transition: 'all 0.3s ease',

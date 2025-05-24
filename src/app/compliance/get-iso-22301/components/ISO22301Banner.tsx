@@ -16,29 +16,19 @@ const ISO22301Banner: React.FC = () => {
 						<Grid container direction="column" spacing={2}>
 							<Grid size={{ xs: 12 }} sx={bannerStyle.titleSection}>
 								<Typography variant="h4" sx={bannerStyle.heading}>
-									{iso22301Data.bannerTitle?.split('\n').map((line, index) => (
-										<React.Fragment key={index}>
-											{line}
-											<br />
-										</React.Fragment>
-									))}
+									Take control of your ISO 22301 journey
 								</Typography>
 							</Grid>
 
 							<Grid size={{ xs: 12 }} sx={bannerStyle.descriptionSection}>
 								<Typography variant="body1" sx={bannerStyle.description}>
-									{iso22301Data.bannerDescription?.split('\n').map((line, index) => (
-										<React.Fragment key={index}>
-											{line}
-											<br />
-										</React.Fragment>
-									))}
+									Build organizational resilience with our comprehensive ISO 22301 Business Continuity Management System solutions.
 								</Typography>
 							</Grid>
 
 							<Grid size={{ xs: 12 }} sx={bannerStyle.buttonSection}>
 								<Button sx={bannerStyle.button} href="/compliance" variant="contained" endIcon={<ArrowForward />}>
-									{iso22301Data.bannerButtonLabel || 'Get Started'}
+									Get Started
 								</Button>
 							</Grid>
 						</Grid>

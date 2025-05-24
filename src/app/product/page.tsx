@@ -1,19 +1,11 @@
-import type { Metadata } from "next";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-
-export const metadata: Metadata = {
-    title: 'Product - Hexafort Secure',
-    description: '...',
-  }
-
-export default function Product() {
+export default function ProductPage() {
     return (
-        <>
-        <Navbar />
-        <p className="mt-16">Product</p>
-        <Footer />
-        </>
-    )
+        <Box sx={{ padding: '2rem', textAlign: 'center', marginTop: '5rem' }}>
+            <Typography variant="h1">Product</Typography>
+            <Typography variant="body1">Coming soon...</Typography>
+        </Box>
+    );
 }
