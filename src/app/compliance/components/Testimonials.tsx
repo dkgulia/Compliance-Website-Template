@@ -146,9 +146,7 @@ const TestimonialsCarousel = () => {
 					{selectedTestimonial && (
 						<>
 							<DialogTitle sx={testimonialsCarouselStyles.modalTitle}>
-								<Typography variant="h6" sx={testimonialsCarouselStyles.modalTitleText}>
-									Client Testimonial
-								</Typography>
+								Client Testimonial
 								<IconButton onClick={closeModal} sx={testimonialsCarouselStyles.modalCloseButton}>
 									<Close />
 								</IconButton>
