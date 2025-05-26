@@ -1,0 +1,96 @@
+import theme from '../../../theme';
+
+const heroSectionStyle = {
+  container: {
+    paddingTop: { sm: '4rem', xs: '2rem' },
+    backgroundColor: theme.palette.background.default,
+    position: 'relative',
+    boxShadow: 'none',
+  },
+  containerBox: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: '1200px',
+    width: '100%',
+    gap: { xs: '2rem', sm: '3rem' },
+    padding: { xs: '1rem', sm: '2rem' },
+  },
+  contentBox: {
+    flex: 1,
+    textAlign: { xs: 'center', md: 'left' },
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+    alignItems: { xs: 'center', md: 'flex-start' },
+  },
+  tagline: {
+    display: 'inline-block',
+    padding: '0.5rem 1rem',
+    borderRadius: '1rem',
+    background: '#115e59',
+    marginBottom: '1rem',
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: '0.9rem',
+    width: { xs: 'auto', sm: 'fit-content' },
+    textAlign: 'center',
+    whiteSpace: 'nowrap',
+    position: 'relative',
+    zIndex: 2,
+    marginTop:{xs:'3rem'}
+  },
+  title: {
+    fontWeight: '600',
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2.5rem' },
+    color: theme.palette.text.primary,
+    lineHeight: 1.3,
+    marginBottom: '0.5rem',
+    position: 'relative',
+    zIndex: 2,
+  },
+  subtitle: {
+    fontSize: { xs: '1.1rem', sm: '1.3rem', md: '1.5rem' },
+    color: theme.palette.primary.light,
+    lineHeight: 1.4,
+    marginBottom: '1rem',
+    fontWeight: '500',
+  },
+  description: {
+    fontSize: { xs: '1rem', md: '1.1rem' },
+    color: theme.palette.text.secondary,
+    lineHeight: '1.5',
+    marginBottom: '1.5rem',
+    maxWidth: '600px',
+  },
+  ctaButton: {
+    backgroundColor: '#1f2937',
+    color: '#f9fafb',
+    borderRadius: '0.5rem',
+    padding: {
+      xs: '0.5rem 1rem',
+      sm: '0.675rem 1.5rem',
+      md: '0.75rem 2rem',
+    },
+    textTransform: 'none',
+    fontSize: '1rem',
+    fontWeight: '600',
+    whiteSpace: 'nowrap',
+    border: '1px solid #4b5563',
+    transition: 'all 150ms ease',
+    marginTop: '0.5rem',
+    '&:hover': {
+      backgroundColor: '#374151',
+    },
+  },
+  imageBox: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: { xs: 'center', md: 'flex-end' },
+    alignItems: 'center',
+    border: 'none',
+  },
+};
+
+export default heroSectionStyle;

@@ -1,0 +1,107 @@
+import theme from '../../../theme';
+
+const bookADemoStyle = {
+  box: {
+    padding: { xs: '2rem 0', sm: '3rem 0' },
+    backgroundColor: theme.palette.background.default,
+    paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
+  },
+  container: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: { xs: '2rem', md: '4rem' },
+    maxWidth: '75rem',
+    marginX: 'auto',
+    px: { xs: '1rem', sm: '2rem' },
+  },
+  imageContainer: {
+    flex: { xs: '1', md: '1 1 50%' },
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    maxWidth: '500px',
+  },
+  imagePlaceholder: {
+    width: '100%',
+    maxWidth: '500px',
+    height: '320px',
+    borderRadius: '16px',
+    backgroundColor: '#17171799',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+   
+  },
+  textBox: {
+    flex: { xs: '1', md: '1 1 50%' },
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    padding: { xs: '1rem', md: '2rem' },
+  },
+  tagline: {
+    display: 'inline-block',
+    padding: '0.4rem 0.8rem',
+    borderRadius: '1rem',
+    fontSize: '0.9rem',
+    background: '#115e59',
+    color: theme.palette.common.white,
+    fontWeight: 'bold',
+    boxShadow: '0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.1)',
+    width: 'fit-content',
+    marginBottom: '1rem',
+  },
+  title: {
+    fontWeight: 'bold',
+    color: theme.palette.text.primary,
+    fontSize: { xs: '1.5rem', sm: '2rem' },
+    marginTop: '0.5rem',
+    marginBottom: '1.5rem',
+  },
+  points: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+    marginBottom: '2rem',
+  },
+  point: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+    color: theme.palette.text.secondary,
+    backgroundColor: theme.palette.background.paper,
+    padding: '0.8rem',
+    borderRadius: '0.5rem',
+  },
+  icon: {
+    color: theme.palette.common.white,
+    marginRight: '0.5rem',
+    fontSize: '1.2rem',
+  },
+  button: {
+    backgroundColor: '#115e59',
+    color: '#f9fafb',
+    borderRadius: '1rem',
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.25rem 0.5rem',
+    },
+    textTransform: 'none',
+    fontSize: '1.2rem',
+    whiteSpace: 'nowrap',
+    border: '1px solid #0d9488',
+    transition: 'all 150ms ease',
+    '&:hover': {
+      backgroundColor: '#0f766e',
+    },
+  },
+  buttonContainer: {
+    marginTop: '1rem',
+  },
+};
+
+export default bookADemoStyle;

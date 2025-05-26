@@ -1,0 +1,132 @@
+import theme from '../../../theme';
+
+const featuresSectionStyle = {
+  container: {
+    position: 'relative',
+    padding: { xs: '2rem 1rem', md: '0rem 2rem' },
+    backgroundColor: theme.palette.background.default,
+    overflow: 'hidden',
+  },
+  backgroundElements: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+    zIndex: 1,
+    pointerEvents: 'none',
+  },
+  gridPattern: {
+    position: 'absolute',
+    inset: 0,
+    backgroundImage:
+      'linear-gradient(rgba(94, 234, 212, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(94, 234, 212, 0.025) 1px, transparent 1px)',
+    backgroundSize: '40px 40px',
+    zIndex: 1,
+    opacity: 0.5,
+  },
+  glowEffect1: {
+    position: 'absolute',
+    width: '30%',
+    height: '30%',
+    borderRadius: '50%',
+    background: `radial-gradient(circle, ${theme.palette.secondary.main}15 0%, ${theme.palette.secondary.main}00 70%)`,
+    zIndex: 0,
+    top: '20%',
+    right: '10%',
+  },
+  glowEffect2: {
+    position: 'absolute',
+    width: '30%',
+    height: '30%',
+    borderRadius: '50%',
+    background: `radial-gradient(circle, ${theme.palette.secondary.main}15 0%, ${theme.palette.secondary.main}00 70%)`,
+    zIndex: 0,
+    bottom: '10%',
+    left: '10%',
+  },
+  innerBox: {
+    position: 'relative',
+    zIndex: 2,
+    width: '100%',
+    maxWidth: '1440px',
+    marginX: 'auto',
+    padding: { xs: 1, sm: 2, md: 3 },
+  },
+  header: {
+    textAlign: 'center',
+    marginBottom: { xs: 3, md: 4 },
+  },
+  title: {
+    fontSize: { xs: '1.6rem', md: '2rem' },
+    fontWeight: 600,
+    marginBottom: 1,
+    color: theme.palette.text.primary,
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: { xs: '1rem', md: '1.1rem' },
+    color: theme.palette.text.secondary,
+    marginBottom: '1.5rem',
+    textAlign: 'center',
+    maxWidth: '800px',
+    marginX: 'auto',
+  },
+  gridContainer: {
+    display: 'grid',
+    gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
+    gap: 3,
+    marginTop: '1.5rem',
+    justifyContent: 'center',
+    width: '100%',
+  },
+  featureCard: {
+    borderRadius: '1rem',
+    padding: '1.5rem',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    width: '100%',
+    minHeight: '200px',
+    border: `1px solid ${theme.palette.divider}`,
+    backgroundColor: 'rgba(23, 23, 23, 0.6)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    '&:hover': {
+      transform: 'translateY(-8px)',
+
+      backgroundColor: theme.palette.background.paper,
+    },
+  },
+  iconContainer: {
+    backgroundColor: theme.palette.secondary.main,
+    borderRadius: '8px',
+    padding: '0.5rem',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: '1rem',
+
+    width: '2.75rem',
+    height: '2.75rem',
+  },
+  icon: {
+    color: theme.palette.common.white,
+    fontSize: '1.75rem',
+  },
+  featureTitle: {
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    marginBottom: '0.5rem',
+    color: theme.palette.text.primary,
+    textAlign: 'left',
+  },
+  featureDescription: {
+    color: theme.palette.text.secondary,
+    fontSize: '0.85rem',
+    lineHeight: 1.4,
+    textAlign: 'left',
+  },
+};
+
+export default featuresSectionStyle;

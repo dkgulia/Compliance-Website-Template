@@ -1,0 +1,102 @@
+import theme from '../../../theme';
+
+const ctaSectionStyle = {
+  section: {
+    paddingTop: { sm: '4rem', xs: '2rem' },
+    background: theme.palette.background.default,
+    position: 'relative',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginX: 'auto',
+    maxWidth: '1200px',
+    px: { xs: '1rem', sm: '2rem' },
+    position: 'relative',
+    zIndex: 1,
+  },
+  contentBox: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    gap: '3rem',
+    width: '100%',
+    backgroundColor: '#17171799',
+    backdropFilter: 'blur(6px)',
+    borderRadius: '1rem',
+    padding: '2.5rem',
+    border: `1px solid ${theme.palette.divider}`,
+  },
+  textContent: {
+    flex: 1,
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  title: {
+    fontWeight: '600',
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+    color: theme.palette.text.primary,
+    marginBottom: '1.5rem',
+  },
+  description: {
+    fontSize: { xs: '1rem', md: '1.1rem' },
+    color: theme.palette.text.secondary,
+    lineHeight: '1.5',
+    marginBottom: '1.5rem',
+  },
+  ctaButton: {
+    backgroundColor: '#115e59',
+    color: '#f9fafb',
+    borderRadius: '0.5rem',
+    padding: {
+      xs: '0.25rem 0.5rem',
+      sm: '0.375rem 0.75rem',
+      md: '0.25rem 0.5rem',
+    },
+    textTransform: 'none',
+    fontSize: '1rem',
+    whiteSpace: 'nowrap',
+    border: '1px solid #0d9488',
+    transition: 'all 150ms ease',
+    '&:hover': {
+      backgroundColor: '#0f766e',
+    },
+  },
+  imageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imageWrapper: {
+    width: '100%',
+    aspectRatio: '18/10',
+    maxWidth: '500px',
+    position: 'relative',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
+  },
+  ctaImage: {
+    objectFit: 'contain' as const,
+    borderRadius: '0.75rem',
+  },
+  imagePlaceholder: {
+    width: '100%',
+    aspectRatio: '18/9',
+    maxWidth: '500px',
+    borderRadius: '0.75rem',
+    backgroundColor: '#115e5920',
+    border: `1px dashed ${theme.palette.secondary.dark}60`,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '1.5rem',
+    color: theme.palette.text.secondary,
+    fontSize: '0.9rem',
+    textAlign: 'center',
+    fontStyle: 'italic',
+  },
+};
+
+export default ctaSectionStyle;

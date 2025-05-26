@@ -1,0 +1,117 @@
+import theme from '../../../theme';
+
+const pitfallsSectionStyle = {
+  section: {
+    paddingTop: { sm: '4rem', xs: '2rem' },
+    paddingBottom: { sm: '4rem', xs: '2rem' },
+    backgroundColor: theme.palette.background.default,
+    position: 'relative',
+  },
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: { xs: '0 1rem', sm: '0 2rem' },
+  },
+  contentBox: {
+    display: 'flex',
+    flexDirection: { xs: 'column', md: 'row' },
+    alignItems: 'center',
+    gap: '3rem',
+  },
+  textContent: {
+    flex: 1,
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  title: {
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+    fontWeight: 600,
+    marginBottom: '1rem',
+    color: theme.palette.text.primary,
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  subtitle: {
+    fontSize: { xs: '1.1rem', sm: '1.3rem' },
+    fontWeight: 500,
+    marginBottom: '1rem',
+    color: '#115e59',
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  highlightText: {
+    fontSize: '1.2rem',
+    fontWeight: 600,
+    color: 'white',
+    marginBottom: '1rem',
+    display: 'block',
+    backgroundColor: 'rgba(17, 94, 89, 0.1)',
+    padding: '0.75rem 1.5rem',
+    borderRadius: '0.5rem',
+    borderLeft: `3px solid ${theme.palette.secondary.main}`,
+    width: 'fit-content',
+    textAlign: 'left',
+    marginLeft: { xs: 'auto', md: '0' },
+    marginRight: { xs: 'auto', md: 'auto' },
+  },
+  description: {
+    fontSize: '1rem',
+    color: theme.palette.text.secondary,
+    marginBottom: '1.5rem',
+    lineHeight: 1.6,
+    maxWidth: { md: '600px' },
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  pitfallsContainer: {
+    flex: 1,
+    width: '100%',
+  },
+  pitfallList: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.5rem',
+  },
+  pitfallItem: {
+    display: 'flex',
+    gap: '1rem',
+    alignItems: 'flex-start',
+    padding: '1.5rem',
+    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
+    backdropFilter: 'blur(6px)',
+    borderRadius: '1rem',
+    border: `1px solid ${theme.palette.divider}`,
+    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'translateY(-5px)',
+      boxShadow: '0 0 20px rgba(17, 94, 89, 0.15)',
+    },
+  },
+  numberBox: {
+    minWidth: '2.5rem',
+    height: '2.5rem',
+    borderRadius: '50%',
+    backgroundColor: '#115e59',
+    color: theme.palette.text.primary,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    fontSize: '1.1rem',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+    marginTop: '0.25rem',
+  },
+  pitfallContent: {
+    flex: 1,
+  },
+  pitfallHeading: {
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+    color: theme.palette.text.primary,
+    marginBottom: '0.75rem',
+  },
+  pitfallSubheading: {
+    fontSize: '1rem',
+    color: theme.palette.text.secondary,
+    lineHeight: 1.7,
+  },
+};
+
+export default pitfallsSectionStyle;

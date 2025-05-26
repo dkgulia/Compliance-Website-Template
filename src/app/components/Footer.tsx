@@ -1,105 +1,191 @@
+'use client';
 
-import Image from "next/image";
-import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { TbLocationPin } from "react-icons/tb";
+import * as React from 'react';
+import { Box, Typography, Link } from '@mui/material';
+import MapIcon from '@mui/icons-material/Map';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import Image from 'next/image';
+import NextLink from 'next/link';
+import { LinkedIn, Twitter, Instagram } from '@mui/icons-material';
+import { ABOUT_US, CONTACT_US, PRIVACY_POLICY, TERMS_AND_CONDITIONS } from '../constants/routes';
+import { complianceItems } from '../constants/complianceData';
+import { platformFeatures } from './Navbar/constants/platformData';
+import { usePathname } from 'next/navigation';
+import footerStyles from '../components/styles/footerStyles';
 
+import logo from '../components/Navbar/Images/dual-hex-white.png';
 
 export default function Footer() {
-  return (
-    <>
-      {/* Footer Section */}
-      <section id="footer">
-        <div className="flex flex-col mt-20 bg-kite-dark-2 border-t border-neutral-800 bg-opacity-60 px-4 sm:px-6 md:px-48 2xl:px-72 py-6 sm:py-8 md:py-14">
-          <div className="flex flex-col md:flex-row md:justify-between space-y-6 md:space-y-0">
-            <div className="flex flex-col gap-4 items-center md:items-start">
-              <div>
-                <Image
-                  src="/images/hexafort-white-cropped.png"
-                  alt="Hexafort Logo Full"
-                  // className="h-6 sm:h-8 md:h-6"
-                  width={100}
-                  height={100}
-                />
-              </div>
-              <p className="text-xs sm:text-sm text-center md:text-left max-w-md">
-                Hexafort is a global leader in enterprise security management,
-                with strong presence in the US, UK, and India.
-              </p>
-            </div>
+	const pathname = usePathname();
+	const isAdminRoute = pathname.startsWith('/admin');
 
-            <div className="flex flex-col gap-4 items-center md:items-start">
-              <p className="text-xs sm:text-sm">Follow us on</p>
-              <div className="flex justify-center md:justify-start text-xl sm:text-2xl space-x-4">
-                <a
-                  href="https://www.linkedin.com/company/hexafort"
-                  aria-label="LinkedIn"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://www.instagram.com/hexafort.io/"
-                  aria-label="Instagram"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaInstagramSquare />
-                </a>
-                <a
-                  href="https://x.com/hexafortsecure"
-                  aria-label="Twitter"
-                  className="hover:text-teal-500 transition-colors"
-                >
-                  <FaSquareXTwitter />
-                </a>
-              </div>
-            </div>
-          </div>
+	return (
+		<>
+			{!isAdminRoute && (
+				<Box sx={footerStyles.mainContainer}>
+					<Box sx={footerStyles.container}>
+						<Box sx={footerStyles.topSection}>
+							<Box sx={footerStyles.leftColumn}>
+								<Box sx={footerStyles.logoContainer}>
+									<Image src={logo} alt="logo of Hexafort" width={40} height={40} style={{ height: 'auto' }} />
+									<Typography variant="h6" sx={footerStyles.logoText}>
+										hexafort
+									</Typography>
+								</Box>
 
-          <div className="flex flex-col space-y-4 mt-10 text-sm">
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort, Inc.</p>
-                <p className="text-xs">Newark, Delaware, US, 19713</p>
-              </div>
-            </div>
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort Secure UK Ltd</p>
-                <p className="text-xs">
-                  Old Gloucester Street, London, UK, WC1N 3AX
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-2 items-center">
-              <div>
-                <TbLocationPin />
-              </div>
-              <div>
-                <p>Hexafort Secure Private Limited</p>
-                <p className="text-xs">Idukki, Kerala, IN, 685505</p>
-              </div>
-            </div>
-          </div>
+								<Typography variant="body2" sx={footerStyles.companyDescription}>
+									Hexafort, Inc. is a global leader in enterprise security management, with strong presence in the US,
+									UK, and India.
+								</Typography>
 
-          <div className="flex flex-col md:flex-row items-center md:justify-between mt-14 space-y-4 md:space-y-0">
-            <span className="text-xs">
-              © {new Date().getFullYear()} Hexafort, Inc. All rights reserved.
-            </span>
-            <div className="flex items-center gap-1 text-xs">
-              <MdEmail />
-              <span>hello@hexafort.io</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+								<Box sx={footerStyles.addressesSection}>
+									<Box sx={footerStyles.addressContainer}>
+										<MapIcon sx={footerStyles.addressIcon} />
+										<Box sx={footerStyles.addressContent}>
+											<Typography variant="body2" sx={footerStyles.companyName}>
+												Hexafort, Inc.
+											</Typography>
+											<Typography variant="body2" sx={footerStyles.addressLine}>
+												Newark, Delaware, US, 19713
+											</Typography>
+										</Box>
+									</Box>
+
+									<Box sx={footerStyles.addressContainer}>
+										<MapIcon sx={footerStyles.addressIcon} />
+										<Box sx={footerStyles.addressContent}>
+											<Typography variant="body2" sx={footerStyles.companyName}>
+												Hexafort Secure UK Ltd
+											</Typography>
+											<Typography variant="body2" sx={footerStyles.addressLine}>
+												Old Gloucester Street, London, UK, WC1N 3AX
+											</Typography>
+										</Box>
+									</Box>
+
+									<Box sx={footerStyles.addressContainer}>
+										<MapIcon sx={footerStyles.addressIcon} />
+										<Box sx={footerStyles.addressContent}>
+											<Typography variant="body2" sx={footerStyles.companyName}>
+												Hexafort Secure Private Limited
+											</Typography>
+											<Typography variant="body2" sx={footerStyles.addressLine}>
+												Idukki, Kerala, IN, 685505
+											</Typography>
+										</Box>
+									</Box>
+								</Box>
+							</Box>
+
+							<Box sx={footerStyles.menuColumns}>
+								<Box sx={footerStyles.menuColumn}>
+									<Typography variant="subtitle1" sx={footerStyles.columnTitle}>
+										Compliance
+									</Typography>
+									{complianceItems.map((item) => (
+										<Box key={item.title} sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												href={item.url}
+												component={NextLink}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">{item.title}</Typography>
+											</Link>
+										</Box>
+									))}
+								</Box>
+
+								<Box sx={footerStyles.menuColumn}>
+									<Typography variant="subtitle1" sx={footerStyles.columnTitle}>
+										Platform
+									</Typography>
+									{platformFeatures.map((item) => (
+										<Box key={item.title} sx={footerStyles.linkItem}>
+											<Link
+												color="inherit"
+												href={item.href}
+												component={NextLink}
+												sx={footerStyles.navLink}
+											>
+												<Typography variant="body2">{item.title}</Typography>
+											</Link>
+										</Box>
+									))}
+								</Box>
+
+								<Box sx={footerStyles.menuColumn}>
+									<Typography variant="subtitle1" sx={footerStyles.columnTitle}>
+										About Us
+									</Typography>
+									<Box sx={footerStyles.linkItem}>
+										<Link color="inherit" component={NextLink} href={ABOUT_US} sx={footerStyles.navLink}>
+											<Typography variant="body2">About us</Typography>
+										</Link>
+									</Box>
+									<Box sx={footerStyles.linkItem}>
+										<Link color="inherit" component={NextLink} href={CONTACT_US} sx={footerStyles.navLink}>
+											<Typography variant="body2">Contact Us</Typography>
+										</Link>
+									</Box>
+									<Box sx={footerStyles.linkItem}>
+										<Link color="inherit" component={NextLink} href={TERMS_AND_CONDITIONS} sx={footerStyles.navLink}>
+											<Typography variant="body2">Terms & Conditions</Typography>
+										</Link>
+									</Box>
+									<Box sx={footerStyles.linkItem}>
+										<Link color="inherit" component={NextLink} href={PRIVACY_POLICY} sx={footerStyles.navLink}>
+											<Typography variant="body2">Privacy Policy</Typography>
+										</Link>
+									</Box>
+								</Box>
+							</Box>
+
+							<Box sx={footerStyles.rightColumn}>
+								<Box sx={footerStyles.socialContainer}>
+									<Link
+										href="https://www.linkedin.com/company/hexafort/"
+										target="_blank"
+										aria-label="LinkedIn"
+										sx={footerStyles.socialLink}
+									>
+										<LinkedIn sx={footerStyles.socialIcon} />
+									</Link>
+									<Link
+										href="https://www.instagram.com/hexafort.io/"
+										target="_blank"
+										aria-label="Instagram"
+										sx={footerStyles.socialLink}
+									>
+										<Instagram sx={footerStyles.socialIcon} />
+									</Link>
+									<Link
+										href="https://x.com/hexafortsecure"
+										target="_blank"
+										aria-label="Twitter"
+										sx={footerStyles.socialLink}
+									>
+										<Twitter sx={footerStyles.socialIcon} />
+									</Link>
+								</Box>
+							</Box>
+						</Box>
+
+						<Box sx={footerStyles.footerBottom}>
+							<Typography variant="body2" sx={footerStyles.copyright}>
+								© 2025 Hexafort, Inc. All rights reserved.
+							</Typography>
+
+							<Box sx={footerStyles.emailContainer}>
+								<Link href="mailto:hello@hexafort.io" sx={footerStyles.emailLink}>
+									hello@hexafort.io
+								</Link>
+							</Box>
+						</Box>
+					</Box>
+				</Box>
+			)}
+		</>
+	);
 }

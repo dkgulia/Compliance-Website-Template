@@ -1,0 +1,111 @@
+import theme from '../../../../theme';
+
+const pciDssBookADemoStyle = {
+	box: {
+		padding: { xs: '2rem 0', sm: '3rem 0' },
+		backgroundColor: theme.palette.background.default,
+		paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
+	},
+	container: {
+		display: 'flex',
+		flexDirection: { xs: 'column', md: 'row' },
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		gap: { xs: '2rem', md: '4rem' },
+		maxWidth: '75rem',
+		marginX: 'auto',
+		px: { xs: '1rem', sm: '2rem' },
+	},
+	imageBox: {
+		flex: { xs: '1', md: '1 1 50%' },
+		width: { xs: '100%', md: '50%' },
+		maxWidth: { xs: '400px', md: '500px' },
+		height: 'auto',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderRadius: '1rem',
+		overflow: 'hidden',
+		position: 'relative',
+		margin: '0 auto',
+		filter: 'brightness(0.9) contrast(1.1)',
+	},
+	image: {
+		objectFit: 'contain' as const,
+		width: '100%',
+		height: 'auto',
+		maxHeight: '400px',
+		display: 'block',
+	},
+	textBox: {
+		flex: { xs: '1', md: '1 1 50%' },
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		padding: { xs: '1rem', md: '2rem' },
+	},
+	tagline: {
+		display: 'inline-block',
+		background: '#115e59',
+		color: 'white',
+		fontWeight: 'bold',
+		padding: '0.5rem 1.5rem',
+		borderRadius: '2rem',
+		marginBottom: '1rem',
+		fontSize: '1rem',
+	},
+	title: {
+		color: 'white',
+		fontWeight: 600,
+		marginBottom: '2rem',
+		fontSize: { xs: '1.6rem', sm: '2rem' },
+	},
+	points: {
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '1rem',
+		marginBottom: '2rem',
+	},
+	point: {
+		display: 'flex',
+		alignItems: 'center',
+		gap: '0.75rem',
+		color: '#6B7280',
+	},
+	icon: {
+		color: 'white',
+		fontSize: '1.5rem',
+	},
+	buttonContainer: {
+		marginTop: '1rem',
+	},
+	button: {
+		marginTop: '0.4rem',
+		color: '#f9fafb',
+		fontWeight: 800,
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.7rem 1rem',
+		},
+		borderRadius: '0.5rem',
+		backgroundColor: '#1f2937',
+		border: '1px solid #4b5563',
+		textTransform: 'none',
+		fontSize: '0.9rem',
+		whiteSpace: 'nowrap',
+		transition: 'background-color 150ms ease',
+		'&:hover': {
+			backgroundColor: '#374151',
+			borderColor: '#4b5563',
+		},
+		'&.Mui-disabled': {
+			color: '#f9fafb',
+			opacity: 0.5,
+			backgroundColor: '#1f2937',
+			border: '1px solid #374151',
+		},
+	},
+};
+
+export default pciDssBookADemoStyle;
