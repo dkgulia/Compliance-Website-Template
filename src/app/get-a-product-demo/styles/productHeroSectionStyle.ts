@@ -1,11 +1,11 @@
-import theme from '../../../../theme';
+import theme from '../../../theme';
 
-const heroSectionStyle = {
+const productHeroSectionStyles = {
 	container: {
 		paddingTop: '1rem',
 		paddingBottom: '1rem',
 		background: theme.palette.background.default,
-		padding: { xs: '5rem 1rem', sm: '1rem 1rem' },
+		padding: { xs: '2rem 0.5rem', sm: '1rem 1rem' },
 		position: 'relative',
 		overflow: 'hidden',
 		'&::before': {
@@ -27,11 +27,15 @@ const heroSectionStyle = {
 		width: '100%',
 		maxWidth: '1200px',
 		margin: '0 auto',
-		gap: '2rem',
+		gap: { xs: '1.5rem', md: '2rem' },
 		position: 'relative',
 		zIndex: 2,
 	},
 	leftContentBox: {
+		flex: 1,
+		textAlign: { xs: 'center', md: 'left' },
+	},
+	contentBox: {
 		flex: 1,
 		textAlign: { xs: 'center', md: 'left' },
 	},
@@ -45,18 +49,18 @@ const heroSectionStyle = {
 		width: { xs: '100%', md: 'auto' },
 	},
 	formContainer: {
-		padding: '2rem',
-		borderRadius: '1.5rem',
+		padding: { xs: '1.5rem', md: '2rem' },
+		borderRadius: { xs: '1rem', md: '1.5rem' },
 		background: theme.palette.background.paper,
 		width: '100%',
-		maxWidth: '600px',
-		marginTop: { xs: '2rem', sm: '1.5rem' },
+		maxWidth: { xs: '100%', md: '600px' },
+		marginTop: { xs: '1rem', sm: '1.5rem' },
 		border: `1px solid ${theme.palette.divider}`,
 		boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
 	},
 	formHeading: {
 		fontSize: { xs: '20px', md: '1.8rem' },
-		fontWeight: '600',
+		fontWeight: 'bold',
 		color: theme.palette.text.primary,
 		marginBottom: '0.5rem',
 		textAlign: { xs: 'left', md: 'left' },
@@ -65,30 +69,54 @@ const heroSectionStyle = {
 		fontWeight: 'bold',
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
+		fontSize: { xs: '0.9rem', md: '1rem' },
 	},
 	compliancesLabel: {
 		fontWeight: 'bold',
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
+		fontSize: { xs: '0.9rem', md: '1rem' },
 	},
 	tag: {
 		display: 'inline-block',
-		padding: '0.5rem 1rem',
+		padding: { xs: '0.4rem 0.8rem', md: '0.5rem 1rem' },
 		borderRadius: '2rem',
 		background: '#115e59',
-		marginBottom: '1rem',
+		marginBottom: { xs: '0.8rem', md: '1rem' },
+		marginTop: { xs: '4rem' },
+	},
+	tagline: {
+		display: 'inline-block',
+		padding: { xs: '0.4rem 0.8rem', md: '0.5rem 1rem' },
+		borderRadius: '2rem',
+		background: '#115e59',
+		marginBottom: { xs: '0.8rem', md: '1rem' },
+		marginTop: { xs: '4rem' },
 	},
 	tagText: {
 		color: 'white',
 		fontWeight: 'bold',
-		fontSize: '0.9rem',
+		fontSize: { xs: '0.8rem', md: '0.9rem' },
 	},
-	mainTitle: {
-		fontSize: { xs: '2rem', md: '2.2rem' },
+	title: {
+		fontSize: { xs: '1.6rem', md: '2.2rem' },
 		fontWeight: '600',
-		marginBottom: '1rem',
+		marginBottom: { xs: '0.8rem', md: '1rem' },
 		color: theme.palette.text.primary,
 		lineHeight: 1.2,
+	},
+	mainTitle: {
+		fontSize: { xs: '1.6rem', md: '2.2rem' },
+		fontWeight: '600',
+		marginBottom: { xs: '0.8rem', md: '1rem' },
+		color: theme.palette.text.primary,
+		lineHeight: 1.2,
+	},
+	highlight: {
+		background: theme.customGradients?.primary || 'linear-gradient(90deg, #10b981 0%, #0ea5e9 100%)',
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent',
+		display: 'inline',
 	},
 	highlightText: {
 		background: theme.customGradients?.primary || 'linear-gradient(90deg, #10b981 0%, #0ea5e9 100%)',
@@ -97,10 +125,10 @@ const heroSectionStyle = {
 		display: 'inline',
 	},
 	description: {
-		fontSize: { xs: '1rem', md: '1.1rem' },
+		fontSize: { xs: '0.9rem', md: '1.1rem' },
 		color: theme.palette.text.secondary,
-		lineHeight: '1.7',
-		marginBottom: '1.5rem',
+		lineHeight: '1.6',
+		marginBottom: { xs: '1rem', md: '1.5rem' },
 		maxWidth: '550px',
 	},
 	featuresContainer: {
@@ -108,7 +136,7 @@ const heroSectionStyle = {
 		flexDirection: 'row',
 		justifyContent: { xs: 'space-between', md: 'space-between' },
 		alignItems: 'flex-start',
-		gap: { xs: '1rem', md: '5.5rem' },
+		gap: { xs: '0.5rem', md: '5.5rem' },
 		marginTop: '0.5rem',
 		width: '100%',
 		flexWrap: 'nowrap',
@@ -118,7 +146,7 @@ const heroSectionStyle = {
 		flexDirection: 'column',
 		alignItems: 'center',
 		textAlign: 'center',
-		gap: '0.5rem',
+		gap: { xs: '0.3rem', md: '0.5rem' },
 		flex: '1 1 33%',
 		maxWidth: '33%',
 	},
@@ -127,10 +155,10 @@ const heroSectionStyle = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: '100%',
-		minHeight: '2.5rem',
+		minHeight: { xs: '2rem', md: '2.5rem' },
 	},
 	featureIcon: {
-		fontSize: { xs: '1.8rem', md: '2.5rem' },
+		fontSize: { xs: '1.4rem', md: '2.5rem' },
 		color: '#115e59',
 	},
 	featureTextWrapper: {
@@ -142,13 +170,15 @@ const heroSectionStyle = {
 		width: '100%',
 	},
 	featureTitle: {
-		fontSize: { xs: '0.9rem', md: '1.2rem' },
+		fontSize: { xs: '0.75rem', md: '1.2rem' },
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
+		lineHeight: 1.1,
 	},
 	featureSubtitle: {
-		fontSize: { xs: '0.8rem', md: '0.9rem' },
+		fontSize: { xs: '0.65rem', md: '0.9rem' },
 		color: theme.palette.text.secondary,
+		lineHeight: 1.2,
 	},
 	button: {
 		backgroundColor: '#115e59',
@@ -183,6 +213,12 @@ const heroSectionStyle = {
 	formInput: {
 		backgroundColor: 'rgba(38, 38, 38, 0.1)',
 		color: theme.palette.text.primary,
+		'& .MuiOutlinedInput-root': {
+			fontSize: { xs: '0.9rem', md: '1rem' },
+		},
+		'& .MuiInputLabel-root': {
+			fontSize: { xs: '0.9rem', md: '1rem' },
+		},
 		'& .MuiOutlinedInput-notchedOutline': {
 			borderColor: theme.palette.divider,
 		},
@@ -195,6 +231,7 @@ const heroSectionStyle = {
 	},
 	checkbox: {
 		color: '#115e59',
+		padding: { xs: '6px', md: '9px' },
 		'&.Mui-checked': {
 			color: '#115e59',
 		},
@@ -202,21 +239,39 @@ const heroSectionStyle = {
 	checkboxLabel: {
 		'& .MuiFormControlLabel-label': {
 			color: theme.palette.text.primary,
-			fontSize: '0.9rem',
+			fontSize: { xs: '0.8rem', md: '0.9rem' },
 		},
 		'& .MuiCheckbox-root': {
 			color: '#115e59',
 		},
+		margin: { xs: '2px 0', md: '4px 0' },
 	},
 	formHelperText: {
 		marginTop: '4px',
 		color: theme.palette.error.main,
+		fontSize: { xs: '0.75rem', md: '0.875rem' },
+	},
+	highlightWrapper: {
+		display: 'inline-flex',
+		alignItems: 'center',
+		position: 'relative',
+	},
+	logoWrapper: {
+		display: 'inline-flex',
+		alignItems: 'center',
+		marginBottom: '0.5rem',
+		position: 'relative',
+		top: '3px',
+		'& img': {
+			filter: 'drop-shadow(0 0 8px rgba(0, 0, 0, 0.1))',
+		},
 	},
 	secondaryText: {
 		color: theme.palette.text.secondary,
-		fontSize: '0.875rem',
+		fontSize: { xs: '0.75rem', md: '0.875rem' },
 		marginTop: '8px',
 		marginBottom: '16px',
+		textAlign: { xs: 'center', md: 'left' },
 		'& a': {
 			color: '#115e59',
 			textDecoration: 'none',
@@ -226,8 +281,8 @@ const heroSectionStyle = {
 		},
 	},
 	gridItem: {
-		marginBottom: '16px',
+		marginBottom: { xs: '12px', md: '16px' },
 	},
 };
 
-export default heroSectionStyle;
+export default productHeroSectionStyles;

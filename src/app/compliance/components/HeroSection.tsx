@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
-import EnhancedHeroSectionForm from './EnhancedHeroSectionForm';
+import EnhancedComplianceForm from './EnhancedComplianceForm';
 import heroSectionStyles from '../styles/heroSectionStyle';
-import { ComplianceOptions } from '../../constants/complianceData';
+import { ComplianceOptions, complianceOptionsArray } from '../../constants/complianceData';
+import { sheetNameTypes } from '../../constants/sheetTypes';
 import logo from '../../compliance/get-pci-dss/images/dual-hex-white.png'
 
 const HeroSection = () => {
@@ -17,7 +18,13 @@ const HeroSection = () => {
 		setSelectedOptions(newOptions);
 	};
 
-	const handleSubmitCallback = (values: { fullName: string; email: string }) => {
+	const handleSubmitCallback = (values: {
+		fullName: string;
+		email: string;
+		companyName: string;
+		phoneNumber: string;
+		country: string;
+	}) => {
 		console.log('Submitted with Options:', { ...values, selectedOptions });
 	};
 
@@ -40,7 +47,6 @@ const HeroSection = () => {
 									height={40}
 									priority
 									style={{
-									
 										height: 'auto',
 									}}
 								/>
@@ -53,9 +59,15 @@ const HeroSection = () => {
 					</Typography>
 				</Box>
 				<Box sx={heroSectionStyles.formBox}>
-					<EnhancedHeroSectionForm
+					<EnhancedComplianceForm
+						title="Book Your Demo Today!"
+						subtitle="Get answers to all your questions about compliance."
+						buttonText="Book Your Demo"
+						sheetName={sheetNameTypes.bookDemo}
+						formStyles={heroSectionStyles}
 						selectedOptions={selectedOptions}
 						onOptionsChange={handleOptionsChange}
+						complianceOptions={complianceOptionsArray}
 						onSubmitCallback={handleSubmitCallback}
 					/>
 				</Box>

@@ -39,7 +39,7 @@ const hipaaHeroSectionStyles = {
 		flex: 1,
 		borderRadius: { xs: '1rem', md: '1.5rem' },
 		maxWidth: { xs: '100%', md: '600px' },
-		padding: { xs: '1rem', md: '2rem' },
+		padding: { xs: '0.3rem', md: '2rem' },
 		marginTop: { xs: '0', sm: '0.5rem' },
 		transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
 		width: { xs: '100%', md: 'auto' },
@@ -55,11 +55,11 @@ const hipaaHeroSectionStyles = {
 		boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
 	},
 	formHeading: {
-		fontSize: { xs: '1.4rem', md: '1.8rem' },
+		fontSize: { xs: '24px', md: '1.8rem' },
 		fontWeight: 'bold',
 		color: theme.palette.text.primary,
 		marginBottom: '0.5rem',
-		textAlign: { xs: 'center', md: 'left' },
+		textAlign: { xs: 'left', md: 'left' },
 	},
 	formLabel: {
 		fontWeight: 'bold',
