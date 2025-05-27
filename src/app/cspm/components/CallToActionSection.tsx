@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { Box, Typography, Button } from '@mui/material';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircle';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import callToActionSectionStyle from '../styles/callToActionSectionStyle';
-import { cspmData } from '../constants/cspmData';
-import theme from '../../../theme';
+import ctaSectionStyle from '../styles/callToActionSectionStyle';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import demoImage from '../images/bookAdemo.png';
@@ -17,7 +15,7 @@ const features = [
 	'No sales pressure - just practical insights',
 ];
 
-const CallToActionSection: React.FC = () => {
+const CTASection: React.FC = () => {
 	const router = useRouter();
 
 	const handleBookDemo = () => {
@@ -25,56 +23,63 @@ const CallToActionSection: React.FC = () => {
 	};
 
 	return (
-		<Box component="section" sx={callToActionSectionStyle.box}>
-			<Container sx={callToActionSectionStyle.container}>
-				<Box sx={callToActionSectionStyle.contentWrapper}>
-					<Box sx={callToActionSectionStyle.textContent}>
-						<Typography variant="h2" component="h2" sx={callToActionSectionStyle.title}>
-							{cspmData.callToAction.title}
-						</Typography>
-						<Typography variant="subtitle1" sx={callToActionSectionStyle.subtitle}>
-							{cspmData.callToAction.subtitle}
-						</Typography>
-						<Typography variant="body1" sx={callToActionSectionStyle.description}>
-							{cspmData.callToAction.description}
-						</Typography>
+		<Box sx={ctaSectionStyle.section}>
+			<Box sx={ctaSectionStyle.headerContainer}>
+				<Typography sx={ctaSectionStyle.tagline}>
+					GET STARTED TODAY
+				</Typography>
+				<Typography sx={ctaSectionStyle.title}>
+					Ready to Transform Your Security?
+				</Typography>
+				<Typography sx={ctaSectionStyle.subtitle}>
+					Experience the power of AI-driven GRC in action
+				</Typography>
+			</Box>
 
-						<Box sx={callToActionSectionStyle.featureList}>
-							{features.map((feature, index) => (
-								<Box key={index} sx={callToActionSectionStyle.featureItem}>
-									<CheckCircleOutlineIcon sx={callToActionSectionStyle.featureIcon} />
-									<Typography sx={callToActionSectionStyle.featureText}>{feature}</Typography>
-								</Box>
-							))}
-						</Box>
+			<Box sx={ctaSectionStyle.contentWrapper}>
+				<Box sx={ctaSectionStyle.textContent}>
+					<Typography sx={ctaSectionStyle.ctaTitle}>
+						See HexaFort Live
+					</Typography>
+					<Typography sx={ctaSectionStyle.description}>
+						Get a free cloud security assessment and compliance gap report you can use immediately.
+						No obligations, just actionable insights.
+					</Typography>
 
-						<Button
-							variant="contained"
-							sx={callToActionSectionStyle.button}
-							startIcon={<CalendarMonthIcon />}
-							onClick={handleBookDemo}
-						>
-							{cspmData.callToAction.ctaText}
-						</Button>
+					<Box sx={ctaSectionStyle.featureList}>
+						{features.map((feature, index) => (
+							<Box key={index} sx={ctaSectionStyle.featureItem}>
+								<CheckCircleOutlineIcon sx={ctaSectionStyle.featureIcon} />
+								<Typography sx={ctaSectionStyle.featureText}>{feature}</Typography>
+							</Box>
+						))}
 					</Box>
 
-					<Box sx={callToActionSectionStyle.imageContainer}>
-						<Image
-							src={demoImage}
-							alt="Demo visual"
-							style={{
-								width: '100%',
-								maxWidth: '450px',
-								height: 'auto',
-								borderRadius: '1rem',
-
-							}}
-						/>
-					</Box>
+					<Button
+						variant="contained"
+						sx={ctaSectionStyle.button}
+						startIcon={<CalendarMonthIcon />}
+						onClick={handleBookDemo}
+					>
+						Book My Free Demo Now
+					</Button>
 				</Box>
-			</Container>
+
+				<Box sx={ctaSectionStyle.imageContainer}>
+					<Image
+						src={demoImage}
+						alt="Demo visual"
+						style={{
+							width: '100%',
+							maxWidth: '400px',
+							height: 'auto',
+							borderRadius: '0.5rem',
+						}}
+					/>
+				</Box>
+			</Box>
 		</Box>
 	);
 };
 
-export default CallToActionSection;
+export default CTASection;
