@@ -132,6 +132,12 @@ const AppBarB2B: React.FC = () => {
 		resetMobileMenuState();
 	};
 
+	// Create a function to handle mobile menu close
+	const handleMobileMenuClose = () => {
+		setDrawerOpen(false);
+		resetMobileMenuState();
+	};
+
 	const { handleToggleDrawer, handleDrawerClose } = toggleDrawer(false);
 
 	return (
@@ -279,14 +285,14 @@ const AppBarB2B: React.FC = () => {
 									<ArrowBackIcon />
 								</IconButton>
 								<Box sx={styles.headerSpacer} />
-								<IconButton onClick={toggleDrawer(false).handleToggleDrawer} sx={styles.closeButton}>
+								<IconButton onClick={handleMobileMenuClose} sx={styles.closeButton}>
 									<CloseIcon />
 								</IconButton>
 							</Box>
 
 							{mobileSubMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
-							{mobileSubMenu === 'platform' && <PlatformMenu />}
-							{mobileSubMenu === 'compliance' && <ComplianceMenu onClose={toggleDrawer(false).handleToggleDrawer} />}
+							{mobileSubMenu === 'platform' && <PlatformMenu onClose={handleMobileMenuClose} />}
+							{mobileSubMenu === 'compliance' && <ComplianceMenu onClose={handleMobileMenuClose} />}
 							{mobileSubMenu === 'about' && <AboutMenu />}
 						</>
 					) : (
@@ -305,7 +311,7 @@ const AppBarB2B: React.FC = () => {
 									</Typography>
 								</Box>
 								<Box sx={styles.mobileHeaderActions}>
-									<IconButton onClick={toggleDrawer(false).handleToggleDrawer} sx={styles.closeButton}>
+									<IconButton onClick={handleMobileMenuClose} sx={styles.closeButton}>
 										<CloseIcon />
 									</IconButton>
 								</Box>

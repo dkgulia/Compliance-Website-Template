@@ -2,8 +2,8 @@ import theme from '../../../../theme';
 
 const faqStyle = {
 	box: {
-		paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
-		paddingBottom: { sm: '4rem', xs: '2rem' },
+		paddingTop: { sm: '3rem', xs: '1rem', md: '1rem' },
+		paddingBottom: { sm: '4rem', xs: '1.5rem' },
 		backgroundColor: theme.palette.background.default,
 	},
 	section: {
@@ -12,16 +12,16 @@ const faqStyle = {
 		padding: { xs: '0 1rem', sm: '0 2rem' },
 	},
 	title: {
-		fontSize: { xs: '1.8rem', sm: '32px' },
+		fontSize: { xs: '1.4rem', sm: '32px' },
 		fontWeight: 600,
 		textAlign: 'center',
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
 	},
 	subtitle: {
-		fontSize: { xs: '1rem', sm: '1.1rem' },
+		fontSize: { xs: '0.85rem', sm: '1.1rem' },
 		textAlign: 'center',
-		marginBottom: '2.5rem',
+		marginBottom: { xs: '1.5rem', sm: '2.5rem' },
 		color: '#6B7280',
 	},
 	accordionContainer: {
@@ -29,7 +29,7 @@ const faqStyle = {
 		flexDirection: 'column',
 		backgroundColor: '#17171799',
 		border: `1px solid #333`,
-		borderRadius: '12px',
+		borderRadius: { xs: '10px', sm: '12px' },
 		overflow: 'hidden',
 	},
 	accordion: {
@@ -47,37 +47,37 @@ const faqStyle = {
 		},
 	},
 	accordionSummary: {
-		padding: '1.25rem 1.5rem',
+		padding: { xs: '1rem 1.25rem', sm: '1.25rem 1.5rem' },
 		backgroundColor: '#17171799',
-		minHeight: '64px',
+		minHeight: { xs: '56px', sm: '64px' },
 		'& .MuiAccordionSummary-content': {
 			margin: '0',
 		},
 		'&.Mui-expanded': {
-			minHeight: '64px',
+			minHeight: { xs: '56px', sm: '64px' },
 		},
 	},
 	expandIcon: {
 		color: theme.palette.text.primary,
-		fontSize: '1.25rem',
+		fontSize: { xs: '1.1rem', sm: '1.25rem' },
 		transform: 'rotate(0deg)',
 		'&.Mui-expanded': {
 			transform: 'rotate(45deg)',
 		},
 	},
 	questionTypography: {
-		fontSize: '1rem',
-		fontWeight: 500,
+		fontSize: { xs: '0.9rem', sm: '1rem' },
+		fontWeight: 600,
 		color: theme.palette.text.primary,
 	},
 	accordionDetails: {
-		padding: '1.25rem 1.5rem',
+		padding: { xs: '1rem 1.25rem', sm: '1.25rem 1.5rem' },
 		backgroundColor: '#171717',
 		color: theme.palette.text.secondary,
 		borderTop: '1px solid #333',
 	},
 	answerTypography: {
-		fontSize: '1rem',
+		fontSize: { xs: '0.85rem', sm: '1rem' },
 		lineHeight: 1.6,
 		color: theme.palette.text.secondary,
 	},

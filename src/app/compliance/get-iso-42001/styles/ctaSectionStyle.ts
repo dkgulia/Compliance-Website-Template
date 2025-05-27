@@ -15,7 +15,7 @@ const ctaSectionStyle = {
   },
   title: {
     color: theme.palette.text.primary,
-    fontSize: { xs: '1.875rem', md: '2.25rem' },
+    fontSize: { xs: '1.6rem', md: '2.25rem' },
     fontWeight: '700',
     marginBottom: '1rem',
   },
@@ -29,7 +29,7 @@ const ctaSectionStyle = {
     backgroundColor: '#115e59',
     color: '#f9fafb',
     fontWeight: '600',
-    padding: '0.75rem 2rem',
+    padding: '0.5rem 1.5rem',
     fontSize: '1rem',
     borderRadius: '0.5rem',
     border: '1px solid #0d9488',

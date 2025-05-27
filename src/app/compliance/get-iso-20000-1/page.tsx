@@ -19,19 +19,11 @@ export const metadata: Metadata = {
 const Page = () => {
 	return (
 		<Box sx={{ backgroundColor: '#000000', marginTop: '0rem', marginX: { xs: '0rem', sm: '0rem' } }}>
-
 			<Iso20000HeroSection />
-
 			<Iso20000FeaturesSection />
-
 			<Iso20000ImageRightTextLeftSection />
-
-			<Iso20000ImplementationStepsSection />
-
-			<Iso20000CtaOneSection />
-
 			<Iso20000CompareWith9001Section />
-
+			<Iso20000CtaOneSection />
 			<Iso20000FaqSection />
 		</Box>
 	);

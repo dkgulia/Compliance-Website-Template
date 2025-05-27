@@ -2,32 +2,33 @@ import theme from '../../../../theme';
 
 const iso22301ImagesSectionStyles = {
 	container: {
-		paddingTop: { sm: '1.5rem', xs: '1rem' },
+		paddingTop: { sm: '1.5rem', xs: '0.5rem' },
+		paddingBottom: { xs: '1rem', sm: '1.5rem' },
 		backgroundColor: theme.palette.background.default,
 	},
 	headingContainer: {
 		textAlign: 'center',
-		marginBottom: '3rem',
+		marginBottom: { xs: '1.5rem', sm: '3rem' },
 	},
 	sectionTitle: {
 		fontWeight: 600,
 		marginBottom: '0.5rem',
 		color: theme.palette.text.primary,
-		fontSize: { xs: '1.6rem', sm: '2rem' },
+		fontSize: { xs: '1.4rem', sm: '2rem' },
 	},
 	sectionSubtitle: {
-		fontSize: '1rem',
+		fontSize: { xs: '0.85rem', sm: '1rem' },
 		color: '#6B7280',
 		maxWidth: '800px',
 		margin: '0 auto',
 	},
 	gridContainer: {
-		marginBottom: '4rem',
+		marginBottom: { xs: '2rem', sm: '4rem' },
 	},
 	card: {
 		backgroundColor: '#17171799',
-		borderRadius: '1rem',
-		padding: '1.5rem',
+		borderRadius: { xs: '0.75rem', sm: '1rem' },
+		padding: { xs: '1rem', sm: '1.5rem' },
 		height: '100%',
 		display: 'flex',
 		flexDirection: 'column',
@@ -42,27 +43,29 @@ const iso22301ImagesSectionStyles = {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginBottom: '1.5rem',
+		marginBottom: { xs: '1rem', sm: '1.5rem' },
 		background: '#115e59',
 		borderRadius: '8px',
 		padding: '0.75rem',
-		width: '64px',
-		height: '64px',
+		width: { xs: '56px', sm: '64px' },
+		height: { xs: '56px', sm: '64px' },
 		'& img': {
 			filter: 'brightness(0) invert(1)',
-			width: '32px',
-			height: '32px',
+			width: { xs: '28px', sm: '32px' },
+			height: { xs: '28px', sm: '32px' },
 			objectFit: 'contain'
 		}
 	},
 	cardTitle: {
 		fontWeight: 600,
-		marginBottom: '0.75rem',
+		marginBottom: { xs: '0.5rem', sm: '0.75rem' },
 		color: theme.palette.text.primary,
+		fontSize: { xs: '1rem', sm: '1.1rem' },
 	},
 	cardDescription: {
 		color: '#6B7280',
 		lineHeight: 1.6,
+		fontSize: { xs: '0.8rem', sm: '0.875rem' },
 	},
 };
 

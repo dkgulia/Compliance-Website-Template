@@ -4,6 +4,7 @@ export const hipaaComplianceStyles = {
   section: {
     paddingTop: '1rem',
     paddingBottom: '1rem',
+    background: theme.palette.background.default,
   },
   containerBox: {
     textAlign: 'center',

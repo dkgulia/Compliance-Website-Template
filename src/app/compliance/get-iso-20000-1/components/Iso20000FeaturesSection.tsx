@@ -36,7 +36,7 @@ const Iso20000FeaturesSection: React.FC = () => {
                     )}
                 </Box>
 
-                <Grid container spacing={3}>
+                <Grid container spacing={2}>
                     {featuresSection.features?.map((feature: any, index: number) => {
                         const IconComp = iconMap[feature.muiIcon] || null;
                         return (
