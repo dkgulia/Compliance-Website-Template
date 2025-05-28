@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import bookDemoStyle from '../styles/bookDemoStyle';
 import hexafortSecureData from '../constants/hexafortSecureData';
 import demoImage from '../images/bookDemo.png';
+import HexaButton from '../../Button/HexaFortButton';
 
 const BookDemo: React.FC = () => {
   const { bookDemo } = hexafortSecureData;
@@ -18,14 +19,13 @@ const BookDemo: React.FC = () => {
   return (
     <Box sx={bookDemoStyle.box}>
       <Box sx={bookDemoStyle.bannerContainer}>
-        {/* Content Section */}
         <Box sx={bookDemoStyle.bannerContent}>
           {bookDemo.tagline && (
             <Typography sx={bookDemoStyle.tagline}>
               {bookDemo.tagline}
             </Typography>
           )}
-          
+
           <Typography variant="h4" sx={bookDemoStyle.heading}>
             {bookDemo.title}
           </Typography>
@@ -39,17 +39,11 @@ const BookDemo: React.FC = () => {
             ))}
           </Box>
 
-          <Button
-            variant="contained"
-            sx={bookDemoStyle.button}
-            onClick={handleScrollToTop}
-            endIcon={<ArrowForwardIcon />}
-          >
+          <HexaButton onClick={handleScrollToTop} endIcon={<ArrowForwardIcon />}>
             {bookDemo.buttonText}
-          </Button>
+          </HexaButton>
         </Box>
 
-        {/* Image Section */}
         <Box sx={bookDemoStyle.imageContainer}>
           <Image
             src={demoImage}

@@ -41,19 +41,19 @@ const heroSectionStyle = {
   },
   title: {
     fontWeight: '600',
-    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '36px' },
     color: theme.palette.text.primary,
     lineHeight: 1.3,
     marginBottom: '1rem',
   },
   subtitle: {
-    fontSize: { xs: '1.1rem', sm: '1.3rem' },
+    fontSize: { xs: '1.1rem', sm: '1.3rem',md:'18px' },
     color: theme.palette.primary.light,
     lineHeight: 1.4,
     marginBottom: '1rem',
   },
   description: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
+    fontSize: { xs: '1.1rem', sm: '1.3rem',md:'18px' },
     color: theme.palette.text.secondary,
     lineHeight: '1.5',
     marginBottom: '1.5rem',

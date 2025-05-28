@@ -1,14 +1,17 @@
-
 "use client";
 import React from 'react';
 import { Box } from '@mui/material';
 import AboutSection from './components/AboutSection';
 import pageStyles from './styles/pageStyles';
 
-const AboutMenuPage = () => {
+interface AboutMenuPageProps {
+	onClose?: () => void;
+}
+
+const AboutMenuPage: React.FC<AboutMenuPageProps> = ({ onClose }) => {
   return (
     <Box sx={pageStyles.menuBox}>
-      <AboutSection />
+      <AboutSection onClose={onClose} />
     </Box>
   );
 };

@@ -1,18 +1,19 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'; // ✅ Import router
+import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { hexafortSecureData } from '../constants/hexafortSecureData';
 import heroImage from '../images/secure-hero.png';
+import HexaButton from '../../Button/HexaFortButton';
 
 const HeroSection: React.FC = () => {
 	const { hero } = hexafortSecureData;
-	const router = useRouter(); // ✅ Initialize router
+	const router = useRouter();
 
 	const handleRedirect = () => {
-		router.push('/get-a-demo'); // ✅ Redirect on click
+		router.push('/get-a-demo');
 	};
 
 	return (
@@ -35,13 +36,9 @@ const HeroSection: React.FC = () => {
 							</Typography>
 						)}
 
-						<Button
-							variant="contained"
-							sx={heroSectionStyle.ctaButton}
-							onClick={handleRedirect} 
-						>
+						<HexaButton onClick={handleRedirect}>
 							{hero.ctaText}
-						</Button>
+						</HexaButton>
 					</Box>
 
 					<Box sx={heroSectionStyle.imageBox}>

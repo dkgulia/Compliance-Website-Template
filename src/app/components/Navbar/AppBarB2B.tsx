@@ -27,6 +27,7 @@ import Image from 'next/image';
 import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
 import styles from './appBarB2BStyles';
 import LogoImage from './Images/dual-hex-white.png';
+import HexaButton from '../../Button/HexaFortButton';
 
 type MenuType = 'solutions' | 'industries' | 'platform' | 'compliance' | 'about' | null;
 type SelectedItemType = 'item1' | 'item2' | 'item3' | 'item4';
@@ -76,6 +77,13 @@ const AppBarB2B: React.FC = () => {
 		return () => document.removeEventListener('mousedown', handleClickOutside);
 	}, [activeMenu]);
 
+	// Close menus when route changes
+	useEffect(() => {
+		setActiveMenu(null);
+		setDrawerOpen(false);
+		resetMobileMenuState();
+	}, [pathname]);
+
 	const handleMenuHover = (menu: MenuType) => {
 		if (isMobile) return;
 
@@ -99,6 +107,12 @@ const AppBarB2B: React.FC = () => {
 		if (!isMobile) return;
 
 		setActiveMenu(activeMenu === menu ? null : menu);
+	};
+
+	const closeAllMenus = () => {
+		setActiveMenu(null);
+		setDrawerOpen(false);
+		resetMobileMenuState();
 	};
 
 	const toggleDrawer = (open: boolean) => {
@@ -127,9 +141,7 @@ const AppBarB2B: React.FC = () => {
 
 	const navigateTo = (path: string) => {
 		router.push(path);
-		setActiveMenu(null);
-		setDrawerOpen(false);
-		resetMobileMenuState();
+		closeAllMenus();
 	};
 
 	// Create a function to handle mobile menu close
@@ -211,12 +223,12 @@ const AppBarB2B: React.FC = () => {
 						</Box>
 
 						<Box sx={styles.actionButtons}>
-							<Button variant="outlined" sx={styles.talkButton} onClick={() => navigateTo(TALK_TO_AN_EXPERT)}>
+							<HexaButton onClick={() => navigateTo('/get-a-demo')} sx={styles.talkButton}>
 								Book a Demo
-							</Button>
-							<Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
+							</HexaButton>
+							<HexaButton onClick={() => navigateTo(WORKSTATION)} sx={styles.shopButton}>
 								Login
-							</Button>
+							</HexaButton>
 						</Box>
 
 						<Box sx={styles.mobileMenuContainer}>
@@ -246,9 +258,9 @@ const AppBarB2B: React.FC = () => {
 							</>
 						)}
 						{activeMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
-						{activeMenu === 'platform' && <PlatformMenu />}
-						{activeMenu === 'compliance' && <ComplianceMenu onClose={() => setActiveMenu(null)} />}
-						{activeMenu === 'about' && <AboutMenu />}
+						{activeMenu === 'platform' && <PlatformMenu onClose={closeAllMenus} />}
+						{activeMenu === 'compliance' && <ComplianceMenu onClose={closeAllMenus} />}
+						{activeMenu === 'about' && <AboutMenu onClose={closeAllMenus} />}
 					</Box>
 				)}
 			</AppBar>
@@ -293,7 +305,7 @@ const AppBarB2B: React.FC = () => {
 							{mobileSubMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
 							{mobileSubMenu === 'platform' && <PlatformMenu onClose={handleMobileMenuClose} />}
 							{mobileSubMenu === 'compliance' && <ComplianceMenu onClose={handleMobileMenuClose} />}
-							{mobileSubMenu === 'about' && <AboutMenu />}
+							{mobileSubMenu === 'about' && <AboutMenu onClose={handleMobileMenuClose} />}
 						</>
 					) : (
 						<>
@@ -357,9 +369,9 @@ const AppBarB2B: React.FC = () => {
 							</List>
 
 							<Box sx={styles.mobileLoginButtonContainer}>
-								<Button variant="contained" sx={styles.shopButton} onClick={() => navigateTo(WORKSTATION)}>
+								<HexaButton onClick={() => navigateTo(WORKSTATION)} sx={styles.shopButton}>
 									Login
-								</Button>
+								</HexaButton>
 							</Box>
 						</>
 					)}

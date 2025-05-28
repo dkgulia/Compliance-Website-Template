@@ -43,9 +43,7 @@ export default function Footer() {
 									<Box sx={footerStyles.addressContainer}>
 										<MapIcon sx={footerStyles.addressIcon} />
 										<Box sx={footerStyles.addressContent}>
-											<Typography variant="body2" sx={footerStyles.companyName}>
-												Hexafort, Inc.
-											</Typography>
+
 											<Typography variant="body2" sx={footerStyles.addressLine}>
 												Newark, Delaware, US, 19713
 											</Typography>
@@ -55,9 +53,7 @@ export default function Footer() {
 									<Box sx={footerStyles.addressContainer}>
 										<MapIcon sx={footerStyles.addressIcon} />
 										<Box sx={footerStyles.addressContent}>
-											<Typography variant="body2" sx={footerStyles.companyName}>
-												Hexafort Secure UK Ltd
-											</Typography>
+
 											<Typography variant="body2" sx={footerStyles.addressLine}>
 												Old Gloucester Street, London, UK, WC1N 3AX
 											</Typography>
@@ -67,9 +63,7 @@ export default function Footer() {
 									<Box sx={footerStyles.addressContainer}>
 										<MapIcon sx={footerStyles.addressIcon} />
 										<Box sx={footerStyles.addressContent}>
-											<Typography variant="body2" sx={footerStyles.companyName}>
-												Hexafort Secure Private Limited
-											</Typography>
+											
 											<Typography variant="body2" sx={footerStyles.addressLine}>
 												Idukki, Kerala, IN, 685505
 											</Typography>
