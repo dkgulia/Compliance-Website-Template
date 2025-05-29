@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import hexafortData from '../constant/dataFile';
 import Image from 'next/image';
 import heroImage from '../images/startupHero copy.png'
+import HexaButton from '../../../Button/HexaFortButton';
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
@@ -45,17 +46,15 @@ const HeroSection: React.FC = () => {
             </Box>
 
             <Typography sx={heroSectionStyle.description}>
-              HexaFort Secure presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2 Type I, and SOC 2 Type II, alongside establishing a foundation for GDPR compliance.
+              HexaFort  presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2, alongside establishing a foundation for GDPR compliance.
             </Typography>
 
-            <Button
-              variant="contained"
+            <HexaButton
               endIcon={<ArrowForwardIcon />}
-              sx={heroSectionStyle.ctaButton}
               onClick={handleCtaClick}
             >
               {callToAction || 'Schedule a consultation'}
-            </Button>
+            </HexaButton>
           </Box>
 
           <Box sx={heroSectionStyle.visualContainer}>

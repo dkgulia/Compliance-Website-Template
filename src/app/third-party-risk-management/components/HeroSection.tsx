@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import Button from '../../Button/HexaFortButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import Image from 'next/image';
@@ -31,20 +32,14 @@ const HeroSection: React.FC = () => {
 						</Typography>
 					))}
 
-					<Button
-						variant="contained"
-						sx={heroSectionStyle.ctaButton}
-						onClick={() => router.push('/get-a-demo')}
-					>
-						{hero.ctaText}
-					</Button>
+					<Button onClick={() => router.push('/get-a-demo')}>{hero.ctaText}</Button>
 				</Box>
 
 				<Box sx={heroSectionStyle.imageBox}>
 					<Box sx={heroSectionStyle.imageWrapper}>
 						<Image
 							src={tprmHeroImage}
-							alt={hero.imagePrompt || "Third-Party Risk Management Dashboard"}
+							alt={hero.imagePrompt || 'Third-Party Risk Management Dashboard'}
 							fill
 							style={heroSectionStyle.heroImage}
 							priority

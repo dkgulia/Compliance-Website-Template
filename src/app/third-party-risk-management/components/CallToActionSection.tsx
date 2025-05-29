@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Button from '../../Button/HexaFortButton';
 import callToActionStyle from '../styles/callToActionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import { useRouter } from 'next/navigation';
@@ -13,44 +16,65 @@ const CallToActionSection: React.FC = () => {
 	const router = useRouter();
 
 	const handleRedirect = () => {
-		router.push('/hexafort-secure');
+		router.push('/get-a-demo');
 	};
+
+	const benefits = [
+		'10-minute personalized demo',
+		'Live TPRM assessment walkthrough',
+		'Custom implementation roadmap',
+		'No sales pressure - just insights',
+	];
 
 	return (
 		<Box component="section" sx={callToActionStyle.section}>
 			<Container sx={callToActionStyle.container}>
+				{/* Header */}
+				<Box sx={callToActionStyle.headerContainer}>
+					<Typography sx={callToActionStyle.mainTitle}>{callToAction.title}</Typography>
+					<Typography sx={callToActionStyle.mainSubtitle}>Experience HexaFort in action today.</Typography>
+				</Box>
+
+				{/* Main Content */}
 				<Box sx={callToActionStyle.contentWrapper}>
 					<Box sx={callToActionStyle.textContent}>
-						<Typography variant="h2" sx={callToActionStyle.title}>
-							{callToAction.title}
+						<Typography sx={callToActionStyle.title}>See HexaFort Live</Typography>
+						<Typography sx={callToActionStyle.subtitle}>{callToAction.subtitle}</Typography>
+						<Typography sx={callToActionStyle.description}>
+							Join hundreds of security leaders who automated their TPRM program in weeks, not months.
 						</Typography>
-						<Typography variant="h5" sx={callToActionStyle.subtitle}>
-							{callToAction.subtitle}
-						</Typography>
-						<Typography variant="body1" sx={callToActionStyle.description}>
-							{callToAction.description}
-						</Typography>
-						<Button
-							variant="contained"
-							sx={callToActionStyle.ctaButton}
-							endIcon={<ArrowForwardIcon />}
-							onClick={handleRedirect}
-						>
-							{callToAction.ctaText}
+
+						{/* Benefits List */}
+						<Box sx={callToActionStyle.benefitsList}>
+							{benefits.map((benefit, index) => (
+								<Box key={index} sx={callToActionStyle.benefitItem}>
+									<CheckCircleIcon sx={callToActionStyle.benefitIcon} />
+									<Typography sx={callToActionStyle.benefitText}>{benefit}</Typography>
+								</Box>
+							))}
+						</Box>
+
+						<Button startIcon={<CalendarTodayIcon />} endIcon={<ArrowForwardIcon />} onClick={handleRedirect}>
+							Schedule My Demo
 						</Button>
 					</Box>
 
 					<Box sx={callToActionStyle.imageContainer}>
-						<Image
-							src={ctaImage}
-							alt="Call to action visual"
-							style={{
-								width: '100%',
-								maxWidth: '400px',
-								height: 'auto',
-								borderRadius: '1rem',
-							}}
-						/>
+						<Box sx={callToActionStyle.imageWrapper}>
+							<Box/>
+							<Image
+								src={ctaImage}
+								alt="Schedule a demo with HexaFort"
+								style={{
+									width: '100%',
+									maxWidth: '400px',
+									height: 'auto',
+									borderRadius: '1rem',
+									position: 'relative',
+									zIndex: 2,
+								}}
+							/>
+						</Box>
 					</Box>
 				</Box>
 			</Container>

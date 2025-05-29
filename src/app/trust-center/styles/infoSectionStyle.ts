@@ -1,82 +1,75 @@
+
 import theme from '../../../theme';
 
-const infoSectionStyle = {
-  container: {
-   
-  },
-  innerBox: {
-    maxWidth: '75rem',
-    marginX: 'auto',
-    display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' },
-    alignItems: 'center',
-    gap: { xs: '2rem', md: '4rem' },
-    padding: { xs: '1rem', sm: '2rem' },
-  },
-  contentLeft: {
-    flex: 1,
-    order: { xs: 2, md: 1 },
-    textAlign: { xs: 'center', md: 'left' },
-  },
-  contentRight: {
-    flex: 1,
-    order: { xs: 2, md: 2 },
-    textAlign: { xs: 'center', md: 'left' },
-  },
-  imageLeft: {
-    flex: 1,
-    order: { xs: 1, md: 1 },
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  imageRight: {
-    flex: 1,
-    order: { xs: 1, md: 2 },
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: '600',
-    marginBottom: '1rem',
-    color: theme.palette.text.primary,
-  },
-  subtitle: {
-    fontSize: { xs: '1rem', md: '1.1rem' },
-    color: theme.palette.text.secondary,
-    marginBottom: '1.5rem',
-  },
-  description: {
-    color: theme.palette.text.secondary,
-    fontSize: '1rem',
-    lineHeight: 1.6,
-    marginBottom: '1rem',
-  },
-  imageContainer: {
-    position: 'relative',
-    width: '100%',
-    maxWidth: '450px',
-    height: 'auto',
-    borderRadius: '1rem',
-    overflow: 'hidden',
-  },
-  highlightText: {
-    color: theme.palette.secondary.main,
-    fontWeight: 'bold',
-  },
-  bulletPoint: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    marginBottom: '1rem',
-  },
-  bulletIcon: {
-    color: theme.palette.secondary.main,
-    marginRight: '0.75rem',
-    marginTop: '0.2rem',
-    fontSize: '1.2rem',
-  },
+const styles = {
+ section: {
+   display: 'flex',
+   flexDirection: 'column',
+   px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+   marginTop: { xs: '3.5rem', md: '6rem' },
+   gap: '2rem',
+   alignItems: 'center',
+   background: theme.palette.background.default,
+   position: 'relative',
+   overflow: 'hidden',
+   paddingBottom: { xs: '2rem', sm: '4rem' },
+ },
+ innerBox: {
+   display: 'flex',
+   flexDirection: { xs: 'column', md: 'row' },
+   alignItems: 'center',
+   gap: { xs: '2rem', md: '4rem' },
+   width: '100%',
+   maxWidth: '1200px',
+ },
+ contentLeft: {
+   flex: 1,
+   order: { xs: 2, md: 1 },
+   textAlign: { xs: 'center', md: 'left' },
+   display: 'flex',
+   flexDirection: 'column',
+   gap: '1rem',
+   alignItems: { xs: 'center', md: 'flex-start' },
+ },
+ tagline: {
+   fontFamily: 'monospace',
+   fontSize: '0.875rem',
+   color: '#0d9488',
+   letterSpacing: '0.05em',
+   textTransform: 'uppercase' as const,
+   marginBottom: '0.5rem',
+ },
+ title: {
+   fontSize: { xs: '1.5rem', md: '1.875rem' },
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   marginBottom: '1rem',
+   textAlign: { xs: 'center', md: 'left' },
+ },
+ description: {
+   color: '#6b7280',
+   fontSize: '1rem',
+   lineHeight: 1.6,
+   marginBottom: '1rem',
+   textAlign: { xs: 'center', md: 'left' },
+ },
+ imageRight: {
+   flex: 1,
+   order: { xs: 1, md: 2 },
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   width: '100%',
+ },
+ imageContainer: {
+   position: 'relative',
+   width: '100%',
+   maxWidth: '450px',
+   height: { xs: '250px', sm: '300px', md: '350px' },
+   borderRadius: '1rem',
+   overflow: 'hidden',
+   display: 'block', 
+ },
 };
 
-export default infoSectionStyle;
+export default styles;

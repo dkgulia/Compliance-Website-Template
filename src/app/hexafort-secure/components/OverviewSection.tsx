@@ -1,49 +1,54 @@
 'use client'
 
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import overviewSectionStyle from '../styles/overviewSectionStyle';
 import hexafortSecureData from '../constants/hexafortSecureData';
 
 const OverviewSection = () => {
-    const { overview, keyFeatures } = hexafortSecureData;
+   const { overview, keyFeatures } = hexafortSecureData;
 
-    return (
-        <Box component="section" sx={overviewSectionStyle.section}>
-            <Container sx={overviewSectionStyle.container}>
-                <Typography variant="h2" sx={overviewSectionStyle.title}>
-                    {overview.title}
-                </Typography>
+   return (
+       <Box sx={overviewSectionStyle.section}>
+           <Box sx={overviewSectionStyle.headerContainer}>
+               <Typography sx={overviewSectionStyle.tagline}>
+                   PLATFORM OVERVIEW
+               </Typography>
 
-                <Box sx={overviewSectionStyle.descriptionContainer}>
-                    {overview.description.map((paragraph, index) => (
-                        <Typography key={index} sx={overviewSectionStyle.paragraph}>
-                            {paragraph}
-                        </Typography>
-                    ))}
-                </Box>
+               <Typography sx={overviewSectionStyle.title}>
+                   {overview.title}
+               </Typography>
 
-                <Box sx={overviewSectionStyle.keyFeaturesContainer}>
-                    <Typography variant="h3" sx={overviewSectionStyle.keyFeaturesTitle}>
-                        {keyFeatures.title}
-                    </Typography>
+               {overview.description.map((paragraph, index) => (
+                   <Typography key={index} sx={overviewSectionStyle.description}>
+                       {paragraph}
+                   </Typography>
+               ))}
+           </Box>
 
-                    <Box sx={overviewSectionStyle.featuresGrid}>
-                        {keyFeatures.features.map((feature, index) => (
-                            <Box key={index} sx={overviewSectionStyle.featureCard}>
-                                <Typography variant="h6" sx={overviewSectionStyle.featureTitle}>
-                                    {feature.title}
-                                </Typography>
-                                <Typography sx={overviewSectionStyle.featureDescription}>
-                                    {feature.description}
-                                </Typography>
-                            </Box>
-                        ))}
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
-    );
+           <Box sx={overviewSectionStyle.featuresHeaderContainer}>
+            
+               <Typography sx={overviewSectionStyle.featuresTitle}>
+                   {keyFeatures.title}
+               </Typography>
+           </Box>
+
+           <Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
+               {keyFeatures.features.map((feature, index) => (
+                   <Grid size={{ xs: 12, sm: 6, md: 6 }} key={index}>
+                       <Box sx={overviewSectionStyle.card}>
+                           <Typography sx={overviewSectionStyle.cardTitle}>
+                               {feature.title}
+                           </Typography>
+                           <Typography sx={overviewSectionStyle.cardDescription}>
+                               {feature.description}
+                           </Typography>
+                       </Box>
+                   </Grid>
+               ))}
+           </Grid>
+       </Box>
+   );
 };
 
 export default OverviewSection;

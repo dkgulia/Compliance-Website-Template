@@ -54,7 +54,7 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		mb: { xs: 3, md: 4 },
 	},
 	titleLine: {
-		fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem' },
+		fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem'},
 		fontWeight: 600,
 		lineHeight: 1.1,
 		letterSpacing: '-0.02em',

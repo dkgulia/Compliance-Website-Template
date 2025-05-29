@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import { hexafortSecureData } from '../constants/hexafortSecureData';
 import Image from 'next/image';
@@ -12,59 +12,67 @@ import step4Image from '../images/Grid and Protection in Teal.png';
 const stepImages = [step1Image, step2Image, step3Image, step4Image];
 
 const FeaturesSection: React.FC = () => {
-  const { features } = hexafortSecureData;
+ const { features } = hexafortSecureData;
 
-  return (
-    <Box component="section" sx={featuresSectionStyle.box}>
-      <Container maxWidth="lg" sx={featuresSectionStyle.container}>
-        <Box sx={featuresSectionStyle.containerBox}>
-          <Typography variant="h2" sx={featuresSectionStyle.heading}>
-            {features.title}
-          </Typography>
-        </Box>
+ return (
+   <Box sx={featuresSectionStyle.section}>
+     <Box sx={featuresSectionStyle.headerContainer}>
+       <Typography sx={featuresSectionStyle.tagline}>
+         HOW IT WORKS
+       </Typography>
 
-        {features.steps.map((step, index) => {
-          const imageFirst = index % 2 === 0;
+       <Typography sx={featuresSectionStyle.title}>
+         {features.title}
+       </Typography>
 
-          return (
-            <Box
-              key={index}
-              sx={{
-                ...featuresSectionStyle.featureStep,
-                ...(imageFirst ? {} : featuresSectionStyle.featureStepReverse),
-              }}
-            >
-              {/* On mobile: always image first */}
-              <Box sx={featuresSectionStyle.imageContainer}>
-                <Image
-                  src={stepImages[index]}
-                  alt={step.heading}
-                  width={350}
-                  height={220}
-                  style={{
-                    maxWidth: '100%',
-                    height: 'auto',
-                  }}
-                />
-              </Box>
+       <Typography sx={featuresSectionStyle.subtitle}>
+         Simple steps to secure your enterprise infrastructure
+       </Typography>
+     </Box>
 
-              <Box sx={featuresSectionStyle.textContainer}>
-                <Typography variant="subtitle1" sx={featuresSectionStyle.stepNumber}>
-                  Step {index + 1}
-                </Typography>
-                <Typography variant="h3" sx={featuresSectionStyle.stepTitle}>
-                  {step.heading}
-                </Typography>
-                <Typography variant="body1" sx={featuresSectionStyle.stepDescription}>
-                  {step.description}
-                </Typography>
-              </Box>
-            </Box>
-          );
-        })}
-      </Container>
-    </Box>
-  );
+     <Box sx={featuresSectionStyle.stepsContainer}>
+       {features.steps.map((step, index) => {
+         const imageFirst = index % 2 === 0;
+
+         return (
+           <Box
+             key={index}
+             sx={{
+               ...featuresSectionStyle.stepWrapper,
+               ...(imageFirst ? {} : featuresSectionStyle.stepWrapperReverse),
+             }}
+           >
+             <Box sx={featuresSectionStyle.imageContainer}>
+               <Image
+                 src={stepImages[index]}
+                 alt={step.heading}
+                 width={400}
+                 height={300}
+                 style={{
+                   maxWidth: '100%',
+                   height: 'auto',
+                   borderRadius: '1rem',
+                 }}
+               />
+             </Box>
+
+             <Box sx={featuresSectionStyle.textContainer}>
+               <Typography sx={featuresSectionStyle.stepNumber}>
+                 Step {index + 1}
+               </Typography>
+               <Typography sx={featuresSectionStyle.stepTitle}>
+                 {step.heading}
+               </Typography>
+               <Typography sx={featuresSectionStyle.stepDescription}>
+                 {step.description}
+               </Typography>
+             </Box>
+           </Box>
+         );
+       })}
+     </Box>
+   </Box>
+ );
 };
 
 export default FeaturesSection;

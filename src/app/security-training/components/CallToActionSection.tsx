@@ -1,61 +1,83 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Button, Grid } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import { securityTrainingData } from '../constants/securityTrainingData';
-import callToActionSectionStyles from '../styles/callToActionSectionStyles';
+import theme from '../../../theme';
 import Image from 'next/image';
-import { ArrowForward } from '@mui/icons-material';
+import { ArrowForward, CheckCircle } from '@mui/icons-material';
+import Button from '../../Button/HexaFortButton';
 import securityTrainingSetup from '../images/bookDemo.png';
-
+import ctaStyles from '../styles/callToActionSectionStyles'
 const CallToActionSection = () => {
   const sectionContent = securityTrainingData.sections[4]?.content || {};
-  const { title, subtitle, description, ctaText } = sectionContent;
+  const { title, subtitle, description, ctaText, benefits } = sectionContent;
+
+
 
   return (
-    <Box sx={callToActionSectionStyles.container}>
-      <Box sx={callToActionSectionStyles.bannerContainer}>
-        <Grid container spacing={2} alignItems="center">
-          <Grid size={{ xs: 12, md: 7 }} sx={callToActionSectionStyles.contentGrid}>
-            {title && (
-              <Typography variant="h4" sx={callToActionSectionStyles.title}>
-                {title}
-              </Typography>
+    <Box sx={ctaStyles.section}>
+      <Box sx={ctaStyles.headerContainer}>
+        <Typography sx={ctaStyles.tagline}>GET STARTED</Typography>
+        <Typography sx={ctaStyles.title}>
+          Ready to Transform Your Security Training?
+        </Typography>
+        <Typography sx={ctaStyles.subtitle}>
+          Experience the difference with automated security awareness
+        </Typography>
+      </Box>
 
-            )}{subtitle && (
-              <Typography variant="h4" sx={callToActionSectionStyles.Subtitle}>
+      <Box sx={ctaStyles.ctaWrapper}>
+        <Box sx={ctaStyles.textContent}>
+          {title && (
+            <Typography sx={ctaStyles.ctaTitle}>
+              {title}
+            </Typography>
+          )}
+
+          {subtitle && title !== subtitle && (
+            <Typography sx={ctaStyles.ctaTitle}>
               {subtitle}
             </Typography>
-            )}
-            {description && (
-              <Typography variant="body1" sx={callToActionSectionStyles.description}>
-                {description}
-              </Typography>
-            )}
-            <Button
-              variant="contained"
-              sx={callToActionSectionStyles.ctaButton}
-              endIcon={<ArrowForward />}
-            >
-              {ctaText || "Book My Demo"}
-            </Button>
-          </Grid>
+          )}
 
-          <Grid size={{ xs: 12, md: 5 }} sx={callToActionSectionStyles.imageGrid}>
+          {description && (
+            <Typography sx={ctaStyles.description}>
+              {description}
+            </Typography>
+          )}
+
+          {benefits && Array.isArray(benefits) && (
+            <Box sx={ctaStyles.benefitsList}>
+              {benefits.map((benefit, index) => (
+                <Box key={index} sx={ctaStyles.benefitItem}>
+                  <CheckCircle sx={ctaStyles.benefitIcon} />
+                  <Typography sx={ctaStyles.benefitText}>{benefit}</Typography>
+                </Box>
+              ))}
+            </Box>
+          )}
+
+          <Button
+            endIcon={<ArrowForward />}
+          >
+            {ctaText || "Book My Demo"}
+          </Button>
+        </Box>
+
+        <Box sx={ctaStyles.imageContainer}>
+          <Box sx={ctaStyles.imageWrapper}>
             <Image
               src={securityTrainingSetup}
               alt="Quick Setup Wizard"
-              width={300}
-              height={250}
+              fill
               style={{
-                objectFit: 'contain',
-                maxWidth: '100%',
-                height: '300px'
+                objectFit: 'cover',
               }}
               priority
             />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

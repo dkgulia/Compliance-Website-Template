@@ -1,58 +1,59 @@
 'use client';
+
 import React from 'react';
-import { Box, Typography, Button, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Button from '../../Button/HexaFortButton';
 import { useRouter } from 'next/navigation';
-import heroSectionStyle from '../styles/heroSectionStyles';
+import { securityTrainingData } from '../constants/securityTrainingData';
 import securityTrainingHero from '../images/security-hero.png';
+import heroStyles from '../styles/heroSectionStyles';
 
 const SecurityAwarenessHero: React.FC = () => {
 	const router = useRouter();
-
+	const heroData = securityTrainingData.sections[0].content;
 	return (
-		<Box component="section" sx={heroSectionStyle.container}>
-			<Container maxWidth="lg">
-				<Box sx={heroSectionStyle.containerBox}>
-					<Box sx={heroSectionStyle.contentBox}>
-						<Typography variant="body1" sx={heroSectionStyle.tagline}>
-							Security Awareness Made Easy
-						</Typography>
-						<Typography variant="h1" sx={heroSectionStyle.title}>
-							Security Awareness Training Automated
-						</Typography>
-						<Typography variant="h2" sx={heroSectionStyle.subtitle}>
-							Engage. Test. Report. Repeat.
-						</Typography>
-						<Typography variant="body1" sx={heroSectionStyle.description}>
-							Deliver role-based lessons and phishing simulations that keep risks low and
-							auditors happy—without drowning your team in administration.
-						</Typography>
+		<Box component="section" sx={heroStyles.heroContainer}>
+			<Box sx={heroStyles.contentBox}>
+				<Typography sx={heroStyles.tagline}>{heroData.tagline}</Typography>
 
-						<Button
-							variant="contained"
-							sx={heroSectionStyle.ctaButton}
-							onClick={() => router.push('/get-a-demo')}
-						>
-							Book A Demo
-						</Button>
-					</Box>
+				<Typography sx={heroStyles.title}>{heroData.heroTitle}</Typography>
 
-					<Box sx={heroSectionStyle.imageBox}>
-						<Image
-							src={securityTrainingHero}
-							alt="Security Awareness Training"
-							width={550}
-							height={450}
-							style={{
-								width: '100%',
-								height: 'auto',
-								maxWidth: '550px'
-							}}
-							priority
-						/>
-					</Box>
+				<Typography sx={heroStyles.subtitle}>{heroData.heroSubtitle}</Typography>
+
+				{heroData.heroDescription &&
+					Array.isArray(heroData.heroDescription) &&
+					heroData.heroDescription.map((desc: string, index: number) => (
+						<Typography key={index} sx={heroStyles.description}>
+							{desc}
+						</Typography>
+					))}
+
+				<Button
+
+					onClick={() => router.push('/get-a-demo')}
+					endIcon={<ArrowForwardIcon />}
+					sx={heroStyles.button}
+				>
+					{heroData.ctaText}
+				</Button>
+			</Box>
+
+			<Box sx={heroStyles.imageBox}>
+				<Box sx={heroStyles.imageWrapper}>
+					<Image
+						src={securityTrainingHero}
+						alt="Security Awareness Training"
+						fill
+						style={{
+							objectFit: 'contain',
+						}}
+						priority
+						sizes="(max-width: 600px) 280px, (max-width: 900px) 350px, 500px"
+					/>
 				</Box>
-			</Container>
+			</Box>
 		</Box>
 	);
 };
