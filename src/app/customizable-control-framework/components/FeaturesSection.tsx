@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 
@@ -9,42 +9,43 @@ const FeaturesSection: React.FC = () => {
     const { features } = controlFrameworkData.sections;
 
     return (
-        <Box component="section" sx={featuresSectionStyle.section}>
-            <Container maxWidth="lg" sx={featuresSectionStyle.container}>
-                <Box sx={featuresSectionStyle.header}>
-                    <Typography variant="h2" sx={featuresSectionStyle.title}>
-                        {features.title}
+        <Box sx={featuresSectionStyle.section}>
+            <Box sx={featuresSectionStyle.headerContainer}>
+                <Typography sx={featuresSectionStyle.title}>
+                    {features.title}
+                </Typography>
+                {features.subtitle && (
+                    <Typography sx={featuresSectionStyle.subtitle}>
+                        {features.subtitle}
                     </Typography>
+                )}
+            </Box>
 
-                    {features.subtitle && (
-                        <Typography sx={featuresSectionStyle.subtitle}>
-                            {features.subtitle}
-                        </Typography>
-                    )}
-                </Box>
+            <Grid container spacing={3} sx={{ alignItems: 'stretch', width: '100%' }}>
+                {features.items.map((feature, index) => {
+                    const FeatureIcon = feature.icon;
 
-                <Box sx={featuresSectionStyle.featuresGrid}>
-                    {features.items.map((feature, index) => {
-                        const FeatureIcon = feature.icon;
-
-                        return (
-                            <Box key={index} sx={featuresSectionStyle.featureCard}>
+                    return (
+                        <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                            <Box sx={featuresSectionStyle.card}>
                                 <Box sx={featuresSectionStyle.iconContainer}>
-                                    <FeatureIcon sx={featuresSectionStyle.featureIcon} />
+                                    <FeatureIcon sx={featuresSectionStyle.icon} />
                                 </Box>
 
-                                <Typography sx={featuresSectionStyle.featureTitle}>
+                                <Typography sx={featuresSectionStyle.cardTitle}>
                                     {feature.title}
                                 </Typography>
 
-                                <Typography sx={featuresSectionStyle.featureDescription}>
-                                    {feature.description}
-                                </Typography>
+                                <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                                    <Typography sx={featuresSectionStyle.cardDescription}>
+                                        {feature.description}
+                                    </Typography>
+                                </Box>
                             </Box>
-                        );
-                    })}
-                </Box>
-            </Container>
+                        </Grid>
+                    );
+                })}
+            </Grid>
         </Box>
     );
 };

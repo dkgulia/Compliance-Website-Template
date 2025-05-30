@@ -54,7 +54,7 @@ export const controlFrameworkData = {
   ],
   sections: {
     hero: {
-      title: 'Customizable Control Framework – Compliance That Fits You',
+      title: 'Customizable Control Framework  Compliance That Fits You',
       subtitle:
         'Every organization has different risks, goals, and operational needs',
       description: [
