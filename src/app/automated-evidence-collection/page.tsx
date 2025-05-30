@@ -8,6 +8,7 @@ import ProcessSection from './components/ProcessSection';
 import CTASection from './components/CTASection';
 import FAQSection from './components/FAQSection';
 
+
 const AutomatedEvidenceCollectionPage: React.FC = () => {
     return (
         <Box component="main" sx={{ backgroundColor: theme => theme.palette.background.default }}>
