@@ -23,12 +23,12 @@ export default function ThirdPartyRiskManagementPage() {
         <>
             <HeroSection />
             <BenefitsSection />
-            <ProcessSection />
             <AIQuestionnaireSection />
+            <ProcessSection />
             <PlatformHighlightsSection />
             <ContinuousMonitoringSection />
             <PitfallsSection />
-            <OfferBanner />
+            {/* //<OfferBanner /> */}
             <CallToActionSection />
             <FAQSection />
         </>

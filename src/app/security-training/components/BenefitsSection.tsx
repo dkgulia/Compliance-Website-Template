@@ -3,12 +3,12 @@
 import React from 'react';
 import { Box, Typography, Container, Grid } from '@mui/material';
 import { securityTrainingData } from '../constants/securityTrainingData';
-import benefitsSectionStyles from '../styles/benefitsSectionStyles';
+import theme from '../../../theme';
 import EmailIcon from '@mui/icons-material/Email';
 import InsightsIcon from '@mui/icons-material/Insights';
 import RuleIcon from '@mui/icons-material/Rule';
 import LanguageIcon from '@mui/icons-material/Language';
-
+import standardStyles from '../styles/benefitsSectionStyles'
 interface Feature {
 	title: string;
 	muiIcon: string;
@@ -30,17 +30,20 @@ const BenefitsSection: React.FC = () => {
 
 	const { title, subtitle, features } = benefitsSection.content as BenefitsContent;
 
+
+
 	if (!features || features.length === 0) {
 		return (
-			<Box sx={benefitsSectionStyles.box}>
-				<Container sx={benefitsSectionStyles.container}>
-					<Typography component="h2" variant="h4" sx={benefitsSectionStyles.title}>
+			<Box sx={standardStyles.section}>
+				<Box sx={standardStyles.headerContainer}>
+					<Typography sx={standardStyles.tagline}>KEY ADVANTAGES</Typography>
+					<Typography sx={standardStyles.title}>
 						{title || 'Key Features'}
 					</Typography>
-					<Typography variant="body1" sx={benefitsSectionStyles.subtitle}>
+					<Typography sx={standardStyles.subtitle}>
 						Feature information coming soon.
 					</Typography>
-				</Container>
+				</Box>
 			</Box>
 		);
 	}
@@ -48,52 +51,51 @@ const BenefitsSection: React.FC = () => {
 	const getIcon = (iconName: string) => {
 		switch (iconName) {
 			case 'Email':
-				return <EmailIcon sx={benefitsSectionStyles.featureIcon} />;
+				return <EmailIcon sx={standardStyles.icon} />;
 			case 'Insights':
-				return <InsightsIcon sx={benefitsSectionStyles.featureIcon} />;
+				return <InsightsIcon sx={standardStyles.icon} />;
 			case 'Rule':
-				return <RuleIcon sx={benefitsSectionStyles.featureIcon} />;
+				return <RuleIcon sx={standardStyles.icon} />;
 			case 'Language':
-				return <LanguageIcon sx={benefitsSectionStyles.featureIcon} />;
+				return <LanguageIcon sx={standardStyles.icon} />;
 			default:
-				return <EmailIcon sx={benefitsSectionStyles.featureIcon} />;
+				return <EmailIcon sx={standardStyles.icon} />;
 		}
 	};
 
 	return (
-		<Box sx={benefitsSectionStyles.box}>
-			<Container sx={benefitsSectionStyles.container}>
-				<Box sx={benefitsSectionStyles.containerBox}>
-					<Typography component="h2" variant="h4" sx={benefitsSectionStyles.title}>
-						{title}
+		<Box sx={standardStyles.section}>
+			<Box sx={standardStyles.headerContainer}>
+				<Typography sx={standardStyles.tagline}>KEY ADVANTAGES</Typography>
+				<Typography sx={standardStyles.title}>
+					{title}
+				</Typography>
+				{subtitle && (
+					<Typography sx={standardStyles.subtitle}>
+						{subtitle}
 					</Typography>
+				)}
+			</Box>
 
-					{subtitle && (
-						<Typography variant="body1" sx={benefitsSectionStyles.subtitle}>
-							{subtitle}
-						</Typography>
-					)}
-				</Box>
-
-				<Grid container spacing={2}>
-					{features.map((feature, index) => (
-						<Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
-							<Box sx={benefitsSectionStyles.featureCard}>
-								<Box sx={benefitsSectionStyles.iconContainer}>{getIcon(feature.muiIcon)}</Box>
-
-								<Box sx={benefitsSectionStyles.textContainer}>
-									<Typography variant="body1" sx={benefitsSectionStyles.featureTitle}>
-										{feature.title}
-									</Typography>
-									<Typography variant="body2" sx={benefitsSectionStyles.featureDescription}>
-										{feature.description}
-									</Typography>
-								</Box>
+			<Grid container spacing={3} sx={{ alignItems: 'stretch', width: '100%' }}>
+				{features.map((feature, index) => (
+					<Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+						<Box sx={standardStyles.card}>
+							<Box sx={standardStyles.iconContainer}>
+								{getIcon(feature.muiIcon)}
 							</Box>
-						</Grid>
-					))}
-				</Grid>
-			</Container>
+							<Typography sx={standardStyles.cardTitle}>
+								{feature.title}
+							</Typography>
+							<Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+								<Typography sx={standardStyles.cardDescription}>
+									{feature.description}
+								</Typography>
+							</Box>
+						</Box>
+					</Grid>
+				))}
+			</Grid>
 		</Box>
 	);
 };

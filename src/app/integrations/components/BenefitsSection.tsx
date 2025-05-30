@@ -1,51 +1,54 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
 import integrationsData from '../constants/integrationsData';
 
-
 const BenefitsSection: React.FC = () => {
-    const { benefits } = integrationsData;
+   const { benefits } = integrationsData;
 
-    return (
-        <Box component="section" sx={benefitsSectionStyle.section}>
-            <Container sx={benefitsSectionStyle.container}>
-                <Box sx={benefitsSectionStyle.headerBox}>
-                    <Typography variant="h2" sx={benefitsSectionStyle.title}>
-                        {benefits.title}
-                    </Typography>
+   return (
+       <Box sx={benefitsSectionStyle.section}>
+           <Box sx={benefitsSectionStyle.headerContainer}>
+               <Typography sx={benefitsSectionStyle.tagline}>
+                   KEY BENEFITS
+               </Typography>
 
-                    <Typography sx={benefitsSectionStyle.description}>
-                        {benefits.description}
-                    </Typography>
-                </Box>
+               <Typography sx={benefitsSectionStyle.title}>
+                   {benefits.title}
+               </Typography>
 
-                <Box sx={benefitsSectionStyle.benefitsGrid}>
-                    {benefits.items.map((benefit, index) => {
-                        const BenefitIcon = benefit.icon;
+               <Typography sx={benefitsSectionStyle.subtitle}>
+                   {benefits.description}
+               </Typography>
+           </Box>
 
-                        return (
-                            <Box key={index} sx={benefitsSectionStyle.benefitCard}>
-                                <Box sx={benefitsSectionStyle.iconContainer}>
-                                    <BenefitIcon sx={benefitsSectionStyle.benefitIcon} />
-                                </Box>
+           <Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
+               {benefits.items.map((benefit, index) => {
+                   const BenefitIcon = benefit.icon;
 
-                                <Typography sx={benefitsSectionStyle.benefitTitle}>
-                                    {benefit.title}
-                                </Typography>
+                   return (
+                       <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                           <Box sx={benefitsSectionStyle.card}>
+                               <Box sx={benefitsSectionStyle.iconContainer}>
+                                   <BenefitIcon sx={benefitsSectionStyle.icon} />
+                               </Box>
 
-                                <Typography sx={benefitsSectionStyle.benefitDescription}>
-                                    {benefit.description}
-                                </Typography>
-                            </Box>
-                        );
-                    })}
-                </Box>
-            </Container>
-        </Box>
-    );
+                               <Typography sx={benefitsSectionStyle.cardTitle}>
+                                   {benefit.title}
+                               </Typography>
+
+                               <Typography sx={benefitsSectionStyle.cardDescription}>
+                                   {benefit.description}
+                               </Typography>
+                           </Box>
+                       </Grid>
+                   );
+               })}
+           </Grid>
+       </Box>
+   );
 };
 
 export default BenefitsSection;

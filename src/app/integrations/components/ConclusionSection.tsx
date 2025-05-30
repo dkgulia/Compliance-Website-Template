@@ -1,58 +1,59 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
+import Button from '../../Button/HexaFortButton';
 import conclusionStyle from '../styles/conclusionStyle';
 import integrationsData from '../constants/integrationsData';
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
+
 const ConclusionSection: React.FC = () => {
-    const { conclusion } = integrationsData;
-    const router = useRouter();
-    const highlightClosingLine = (text: string) => {
-        if (text.includes("Smarter security starts with better connections")) {
-            const parts = text.split("Smarter security starts with better connections");
+   const { conclusion } = integrationsData;
+   const router = useRouter();
 
-            return (
-                <>
-                    {parts[0]}
-                    <Box component="span" sx={conclusionStyle.highlightText}>
-                        Smarter security starts with better connections
-                    </Box>
-                    {parts[1]}
-                </>
-            );
-        }
+   const highlightClosingLine = (text: string) => {
+       if (text.includes("Smarter security starts with better connections")) {
+           const parts = text.split("Smarter security starts with better connections");
 
-        return text;
-    };
+           return (
+               <>
+                   {parts[0]}
+                   <Box component="span" sx={conclusionStyle.highlightText}>
+                       Smarter security starts with better connections
+                   </Box>
+                   {parts[1]}
+               </>
+           );
+       }
 
-    return (
-        <Box component="section" sx={conclusionStyle.section}>
-            <Container sx={conclusionStyle.container}>
-                <Box sx={conclusionStyle.contentBox}>
-                    <Typography variant="h2" sx={conclusionStyle.title}>
-                        {conclusion.title}
-                    </Typography>
+       return text;
+   };
 
-                    {conclusion.description.map((paragraph, index) => (
-                        <Typography key={index} sx={conclusionStyle.description}>
-                            {highlightClosingLine(paragraph)}
-                        </Typography>
-                    ))}
+   return (
+       <Box sx={conclusionStyle.section}>
+           <Box sx={conclusionStyle.headerContainer}>
+            
+               <Typography sx={conclusionStyle.title}>
+                   {conclusion.title}
+               </Typography>
 
-                    <Button
-                        variant="contained"
-                        startIcon={<LockIcon />}
-                        sx={conclusionStyle.ctaButton}
-                        onClick={() => router.push('/get-a-demo')}
-                    >
-                        Connect Your Systems Today
-                    </Button>
-                </Box>
-            </Container>
-        </Box>
-    );
+               {conclusion.description.map((paragraph, index) => (
+                   <Typography key={index} sx={conclusionStyle.description}>
+                       {highlightClosingLine(paragraph)}
+                   </Typography>
+               ))}
+
+               <Button
+                   startIcon={<LockIcon />}
+                   onClick={() => router.push('/get-a-demo')}
+                   sx={conclusionStyle.button}
+               >
+                   Connect Your Systems Today
+               </Button>
+           </Box>
+       </Box>
+   );
 };
 
 export default ConclusionSection;

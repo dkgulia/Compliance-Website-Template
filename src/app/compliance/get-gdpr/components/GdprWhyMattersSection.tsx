@@ -31,7 +31,7 @@ export default function GdprWhyMattersSection() {
                     </Typography>
                 </Box>
 
-                <Grid container spacing={4} sx={whyMattersSectionStyle.featuresGrid}>
+                <Grid container spacing={1} sx={whyMattersSectionStyle.featuresGrid}>
                     {features.map((feature, idx) => (
                         <Grid size={{ xs: 12, md: 4 }} key={idx}>
                             <Card elevation={0} sx={whyMattersSectionStyle.featureCard}>

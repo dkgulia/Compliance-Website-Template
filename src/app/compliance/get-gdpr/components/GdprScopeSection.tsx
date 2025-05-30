@@ -72,7 +72,7 @@ export default function GdprScopeSection() {
                 </Grid>
 
                 <Box sx={scopeSectionStyle.applicabilityContainer}>
-                    <Grid container spacing={3}>
+                    <Grid container spacing={1}>
                         <Grid size={{ xs: 12, md: 4 }}>
                             <Card elevation={0} sx={scopeSectionStyle.applicabilityCard}>
                                 <CardContent sx={scopeSectionStyle.cardContent}>

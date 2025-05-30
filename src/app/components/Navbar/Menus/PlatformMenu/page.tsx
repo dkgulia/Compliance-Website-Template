@@ -5,14 +5,16 @@ import { Box } from '@mui/material';
 import PlatformMenuContent from './components/PlatformMenuContent';
 import styles from './styles/platformStyles';
 
-const PlatformMenu = () => {
-  const handleClose = () => {};
+interface PlatformMenuProps {
+	onClose?: () => void;
+}
 
-  return (
-    <Box sx={styles.menuBox}>
-      <PlatformMenuContent onClose={handleClose} />
-    </Box>
-  );
+const PlatformMenu: React.FC<PlatformMenuProps> = ({ onClose }) => {
+	return (
+		<Box sx={styles.menuBox}>
+			<PlatformMenuContent onClose={onClose} />
+		</Box>
+	);
 };
 
 export default PlatformMenu;

@@ -2,53 +2,53 @@ import theme from '../../../theme';
 
 const faqSectionStyle = {
   section: {
-    paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
-    paddingBottom: { sm: '6rem', xs: '4rem' },
-    backgroundColor: theme.palette.background.default,
+    display: 'flex',
+    flexDirection: 'column',
+    px: { xs: '0.5rem', md: '12rem', '2xl': '18rem' },
+    marginTop: { xs: '0rem', md: '6rem' },
+    gap: '2rem',
+    alignItems: 'center',
+    background: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
+    paddingBottom: { xs: '2rem', sm: '4rem' },
   },
   container: {
-    maxWidth: '1000px',
-    margin: '0 auto',
-    padding: { xs: '0 1rem', sm: '0 2rem' },
+    width: '100%',
     position: 'relative',
     zIndex: 1,
   },
   header: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.3rem',
     marginBottom: '3rem',
-    textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.8rem', sm: '32px', md: '2rem' },
+    fontSize: { xs: '1.5rem', md: '1.875rem' },
     fontWeight: 600,
-    textAlign: 'center',
-    marginBottom: '0.5rem',
     color: theme.palette.text.primary,
-    position: 'relative',
-    paddingBottom: '0.5rem',
-    display: 'inline-block',
+    textAlign: 'center',
+    marginTop:{xs:'2rem'}
   },
   subtitle: {
-    fontSize: { xs: '1rem', sm: '1.1rem' },
+    color: '#6b7280',
     textAlign: 'center',
-    marginBottom: '2.5rem',
-    color: theme.palette.text.secondary,
-    maxWidth: '800px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    fontSize: { xs: '1rem', sm: '1.1rem' },
+    lineHeight: 1,
   },
   accordionContainer: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#17171799',
-    border: `1px solid ${theme.palette.divider}`,
-    borderRadius: '12px',
+    backgroundColor: '#171717',
+    border: '1px solid #374151',
+    borderRadius: '0.5rem',
     overflow: 'hidden',
-    boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
   },
   accordion: {
-    backgroundColor: '#17171799',
+    backgroundColor: '#171717',
     boxShadow: 'none',
     '&:before': {
       display: 'none',
@@ -56,14 +56,14 @@ const faqSectionStyle = {
     '&.Mui-expanded': {
       margin: 0,
     },
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: '1px solid #374151',
     '&:last-child': {
       borderBottom: 'none',
     },
   },
   accordionSummary: {
     padding: '1.25rem 1.5rem',
-    backgroundColor: '#17171799',
+    backgroundColor: '#171717',
     minHeight: '64px',
     '& .MuiAccordionSummary-content': {
       margin: '0',
@@ -75,8 +75,8 @@ const faqSectionStyle = {
   accordionDetails: {
     padding: '1.25rem 1.5rem',
     backgroundColor: '#171717',
-    color: theme.palette.text.secondary,
-    borderTop: `1px solid ${theme.palette.divider}`,
+    color: '#6b7280',
+    borderTop: '1px solid #374151',
   },
   question: {
     fontSize: '1rem',
@@ -85,7 +85,7 @@ const faqSectionStyle = {
   },
   answer: {
     fontSize: '1rem',
-    color: theme.palette.text.secondary,
+    color: '#6b7280',
     lineHeight: 1.7,
   },
   expandIcon: {

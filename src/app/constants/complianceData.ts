@@ -76,6 +76,34 @@ export const primaryFrameworks: ComplianceFramework[] = [
     logo: dora,
     url: '/compliance/get-dora',
   },
+  {
+    title: 'ISO 20000-1',
+    description:
+      'International standard for IT service management systems and service delivery.',
+    logo: iso20000,
+    url: '/compliance/get-iso-20000-1',
+  },
+  {
+    title: 'DPDP',
+    description:
+      'Digital Personal Data Protection Act compliance for data privacy in India.',
+    logo: cmmc,
+    url: '/compliance/get-dpdp',
+  },
+  {
+    title: 'NIST',
+    description:
+      'Cybersecurity framework providing guidelines for managing cybersecurity risks.',
+    logo: cmmc,
+    url: '/compliance/get-nist-frameworks',
+  },
+  {
+    title: 'ISO 22301',
+    description:
+      'Business continuity management systems standard for organizational resilience.',
+    logo: cmmc,
+    url: '/compliance/get-iso-22301',
+  },
 ];
 
 export const secondaryFrameworks: ComplianceFramework[] = [

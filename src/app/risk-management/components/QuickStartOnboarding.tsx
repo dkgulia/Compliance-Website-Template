@@ -1,3 +1,4 @@
+
 'use client';
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
@@ -10,84 +11,85 @@ import rightToOptOutImage from '../images/assets.png';
 import noDiscriminationImage from '../images/monitor.png';
 
 interface OnboardingStep {
-    heading: string;
-    description: string;
-    image?: string;
-    imagePrompt?: string;
+   heading: string;
+   description: string;
+   image?: string;
+   imagePrompt?: string;
 }
 
 const QuickStartOnboarding: React.FC = () => {
-    const onboardingContent = riskManagementData.sections.find(
-        (section) => section.Sno === '4' && section.blockType === 'Steps/Process'
-    );
+   const onboardingContent = riskManagementData.sections.find(
+       (section) => section.Sno === '4' && section.blockType === 'Steps/Process'
+   );
 
-    if (!onboardingContent || !onboardingContent.content) return null;
-    const steps: OnboardingStep[] = onboardingContent.content.steps || [];
+   // Default steps that match the image layout
+   const defaultSteps: OnboardingStep[] = [
+       {
+           heading: "Import & Map",
+           description: "Sync assets and existing registers via CSV/API."
+       },
+       {
+           heading: "Customise Scoring",
+           description: "Adjust likelihood, impact and CIA weights."
+       },
+       {
+           heading: "Assess & Prioritise",
+           description: "Run automated assessments; tackle top-impact risks first."
+       },
+       {
+           heading: "Mitigate & Monitor",
+           description: "Assign tasks, track status, export audit PDFs."
+       }
+   ];
 
-    if (steps.length === 0) {
-        return (
-            <Box sx={quickStartOnboardingStyle.container}>
-                <Box sx={quickStartOnboardingStyle.innerBox}>
-                    <Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
-                        {onboardingContent.content.title || 'Quick-Start Onboarding'}
-                    </Typography>
-                    <Typography variant="body1">No onboarding steps found</Typography>
-                </Box>
-            </Box>
-        );
-    }
-    const imageMap = [
-        rightToKnowImage,
-        rightToDeleteImage,
-        rightToOptOutImage,
-        noDiscriminationImage
-    ];
+   const steps: OnboardingStep[] = onboardingContent?.content?.steps || defaultSteps;
 
-    return (
-        <Box sx={quickStartOnboardingStyle.container}>
-            <Box sx={quickStartOnboardingStyle.innerBox}>
-                <Typography variant="h2" sx={quickStartOnboardingStyle.heading}>
-                    {onboardingContent.content.title || 'Quick-Start Onboarding'}
-                </Typography>
+   const imageMap = [
+       rightToKnowImage,
+       rightToDeleteImage,
+       rightToOptOutImage,
+       noDiscriminationImage
+   ];
 
-                {onboardingContent.content.subtitle && (
-                    <Typography variant="subtitle1" sx={quickStartOnboardingStyle.subtitle}>
-                        {onboardingContent.content.subtitle}
-                    </Typography>
-                )}
+   return (
+       <Box sx={quickStartOnboardingStyle.section}>
+           <Box sx={quickStartOnboardingStyle.headerContainer}>
+               <Typography sx={quickStartOnboardingStyle.title}>
+                   Quick-Start Onboarding
+               </Typography>
+           </Box>
 
-                <Grid container spacing={3}>
-                    {steps.map((step, index) => (
-                        <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
-                            <Box sx={quickStartOnboardingStyle.stepCard}>
-                                <Box sx={quickStartOnboardingStyle.imageContainer}>
-                                    <Image
-                                        src={imageMap[index % imageMap.length]}
-                                        alt={step.heading}
-                                        width={140}
-                                        height={100}
-                                        style={{
-                                            maxWidth: '100%',
-                                            height: '140px',
-                                        }}
-                                    />
-                                </Box>
-
-                                <Box sx={quickStartOnboardingStyle.contentContainer}>
-                                    <Typography sx={quickStartOnboardingStyle.stepHeading}>
-                                        {step.heading}
-                                    </Typography>
-                                    <Typography sx={quickStartOnboardingStyle.stepDescription}>
-                                        {step.description}
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Box>
-        </Box>
-    );
+           <Grid container spacing={2} sx={{ alignItems: 'stretch', maxWidth: '1200px', margin: '0 auto' }}>
+               {steps.map((step, index) => (
+                   <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                       <Box sx={quickStartOnboardingStyle.card}>
+                           <Box sx={quickStartOnboardingStyle.imageContainer}>
+                               <Image
+                                   src={imageMap[index % imageMap.length]}
+                                   alt={step.heading}
+                                   width={80}
+                                   height={80}
+                                   style={{
+                                       maxWidth: '100%',
+                                       height: 'auto',
+                                       objectFit: 'contain',
+                                   }}
+                               />
+                           </Box>
+                           <Box sx={quickStartOnboardingStyle.contentContainer}>
+                               <Typography sx={quickStartOnboardingStyle.cardTitle}>
+                                   {step.heading}
+                               </Typography>
+                               <Typography sx={quickStartOnboardingStyle.cardDescription}>
+                                   {step.description}
+                               </Typography>
+                           </Box>
+                       </Box>
+                   </Grid>
+               ))}
+           </Grid>
+       </Box>
+   );
 };
 
 export default QuickStartOnboarding;

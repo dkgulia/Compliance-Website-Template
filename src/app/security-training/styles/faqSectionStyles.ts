@@ -16,7 +16,7 @@ const faqSectionStyles = {
     textAlign: 'center',
   },
   title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
+    fontSize: { xs: '1.5rem', md: '1.875rem' },
     fontWeight: 600,
     textAlign: 'center',
     marginBottom: '0rem',
@@ -24,6 +24,7 @@ const faqSectionStyles = {
     position: 'relative',
     paddingBottom: '1rem',
     display: 'inline-block',
+    marginTop:'1rem'
   },
   subtitle: {
     fontSize: { xs: '1rem', sm: '1.1rem' },
@@ -44,7 +45,7 @@ const faqSectionStyles = {
     overflow: 'hidden',
     maxWidth: '1200px',
     margin: '0 auto',
-    width: '100%',
+    width: '93%',
   },
   accordion: {
     backgroundColor: '#17171799',

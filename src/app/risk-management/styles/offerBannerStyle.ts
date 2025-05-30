@@ -1,46 +1,45 @@
 import theme from '../../../theme';
 
 const offerBannerStyle = {
-    container: {
-        paddingBottom: { sm: '3rem', xs: '2rem' },
-        background: '#115e59',
-    },
-    innerBox: {
-        maxWidth: '75rem',
-        marginX: 'auto',
-        textAlign: 'center',
-        padding: { xs: '1rem', sm: '2rem' },
-    },
-    heading: {
-        fontSize: { xs: '1.6rem', sm: '2rem' },
-        fontWeight: '600',
-        color: theme.palette.text.primary,
-        marginBottom: '0.5rem',
-    },
-    subtitle: {
-        fontSize: { xs: '1rem', md: '1.1rem' },
-        color: theme.palette.text.primary,
-        opacity: 0.9,
-    },
-    highlightText: {
-        fontWeight: 'bold',
-        position: 'relative',
-        display: 'inline-block',
-        '&::after': {
-            content: '""',
-            position: 'absolute',
-            bottom: '-3px',
-            left: '0',
-            width: '100%',
-            height: '2px',
-            backgroundColor: theme.palette.text.primary,
-        },
-    },
-    icon: {
-        fontSize: '2.5rem',
-        color: theme.palette.text.primary,
-        marginBottom: '1rem',
-    },
+ section: {
+   display: 'flex',
+   flexDirection: 'column',
+   px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+   marginTop: { xs: '3.5rem', md: '6rem' },
+   gap: '2rem',
+   alignItems: 'center',
+   background: '#115e59',
+   position: 'relative',
+   overflow: 'hidden',
+   paddingTop: { xs: '2rem', sm: '3rem' },
+   paddingBottom: { xs: '2rem', sm: '3rem' },
+ },
+ headerContainer: {
+   display: 'flex',
+   flexDirection: 'column',
+   alignItems: 'center',
+   justifyContent: 'center',
+   gap: '0.5rem',
+   textAlign: 'center',
+ },
+ icon: {
+   fontSize: '2.5rem',
+   color: theme.palette.text.primary,
+   marginBottom: '1rem',
+ },
+ title: {
+   fontSize: { xs: '1.5rem', md: '1.875rem' },
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   textAlign: 'center',
+   marginBottom: '0.5rem',
+ },
+ subtitle: {
+   fontSize: { xs: '1rem', sm: '1.1rem' },
+   color: theme.palette.text.primary,
+   opacity: 0.9,
+   textAlign: 'center',
+ },
 };
 
 export default offerBannerStyle;

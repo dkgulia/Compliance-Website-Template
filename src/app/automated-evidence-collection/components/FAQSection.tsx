@@ -15,41 +15,43 @@ const FAQSection: React.FC = () => {
   const { faq } = evidenceCollectionData;
 
   return (
-    <Box sx={faqSectionStyle.box}>
-      <Box sx={faqSectionStyle.section}>
+    <Box sx={faqSectionStyle.section}>
+      <Box sx={faqSectionStyle.headerContainer}>
+        <Typography sx={faqSectionStyle.tagline}>
+          FREQUENTLY ASKED QUESTIONS
+        </Typography>
         <Typography component="h2" variant="h4" sx={faqSectionStyle.title}>
           {faq.title}
         </Typography>
-
         {faq.subtitle && (
           <Typography variant="subtitle1" sx={faqSectionStyle.subtitle}>
             {faq.subtitle}
           </Typography>
         )}
+      </Box>
 
-        <Box sx={faqSectionStyle.accordionContainer}>
-          {faq.questions.map((item, index) => (
-            <Accordion
-              key={index}
-              disableGutters
-              elevation={0}
-              sx={faqSectionStyle.accordion}
+      <Box sx={faqSectionStyle.accordionContainer}>
+        {faq.questions.map((item, index) => (
+          <Accordion
+            key={index}
+            disableGutters
+            elevation={0}
+            sx={faqSectionStyle.accordion}
+          >
+            <AccordionSummary
+              expandIcon={<AddIcon sx={faqSectionStyle.expandIcon} />}
+              aria-controls={`panel${index}-content`}
+              id={`panel${index}-header`}
+              sx={faqSectionStyle.accordionSummary}
             >
-              <AccordionSummary
-                expandIcon={<AddIcon sx={faqSectionStyle.expandIcon} />}
-                aria-controls={`panel${index}-content`}
-                id={`panel${index}-header`}
-                sx={faqSectionStyle.accordionSummary}
-              >
-                <Typography sx={faqSectionStyle.questionTypography}>{item.question}</Typography>
-              </AccordionSummary>
+              <Typography sx={faqSectionStyle.questionTypography}>{item.question}</Typography>
+            </AccordionSummary>
 
-              <AccordionDetails sx={faqSectionStyle.accordionDetails}>
-                <Typography sx={faqSectionStyle.answerTypography}>{item.answer}</Typography>
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </Box>
+            <AccordionDetails sx={faqSectionStyle.accordionDetails}>
+              <Typography sx={faqSectionStyle.answerTypography}>{item.answer}</Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
       </Box>
     </Box>
   );

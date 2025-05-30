@@ -5,7 +5,7 @@ const ccpaHeroSectionStyles = {
 		paddingTop: '1rem',
 		paddingBottom: '1rem',
 		background: theme.palette.background.default,
-		padding: { xs: '2rem 0.5rem', sm: '1rem 1rem' },
+		padding: { xs: '1rem 0.5rem', sm: '1rem 1rem' },
 		position: 'relative',
 		overflow: 'hidden',
 		'&::before': {
@@ -27,7 +27,7 @@ const ccpaHeroSectionStyles = {
 		width: '100%',
 		maxWidth: '1200px',
 		margin: '0 auto',
-		gap: { xs: '1.5rem', md: '2rem' },
+		gap: { xs: '1rem', md: '2rem' },
 		position: 'relative',
 		zIndex: 2,
 	},
@@ -39,7 +39,7 @@ const ccpaHeroSectionStyles = {
 		flex: 1,
 		borderRadius: { xs: '1rem', md: '1.5rem' },
 		maxWidth: { xs: '100%', md: '600px' },
-		padding: { xs: '1rem', md: '2rem' },
+		padding: { xs: '0.3rem', md: '2rem' },
 		marginTop: { xs: '0', sm: '0.5rem' },
 		transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
 		width: { xs: '100%', md: 'auto' },
@@ -55,11 +55,11 @@ const ccpaHeroSectionStyles = {
 		boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
 	},
 	formHeading: {
-		fontSize: { xs: '1.4rem', md: '1.8rem' },
-		fontWeight: 'bold',
+		fontSize: { xs: '1.5rem', md: '1.8rem' },
+		fontWeight: 600,
 		color: theme.palette.text.primary,
 		marginBottom: '0.5rem',
-		textAlign: { xs: 'center', md: 'left' },
+		textAlign: { xs: 'left', md: 'left' },
 	},
 	formLabel: {
 		fontWeight: 'bold',
@@ -78,8 +78,8 @@ const ccpaHeroSectionStyles = {
 		padding: { xs: '0.4rem 0.8rem', md: '0.5rem 1rem' },
 		borderRadius: '2rem',
 		background: '#115e59',
-		marginBottom: { xs: '0.8rem', md: '1rem' },
-		marginTop:{xs:'4rem'}
+		marginBottom: { xs: '0.5rem', md: '1rem' },
+		marginTop:{xs:'5rem'}
 	},
 	tagText: {
 		color: 'white',
@@ -87,9 +87,9 @@ const ccpaHeroSectionStyles = {
 		fontSize: { xs: '0.8rem', md: '0.9rem' },
 	},
 	mainTitle: {
-		fontSize: { xs: '1.6rem', md: '2.2rem' },
-		fontWeight: '600',
-		marginBottom: { xs: '0.8rem', md: '1rem' },
+		fontSize: { xs: '1.5rem', md: '2.2rem' },
+		fontWeight: 600,
+		marginBottom: { xs: '0.5rem', md: '1rem' },
 		color: theme.palette.text.primary,
 		lineHeight: 1.2,
 	},
@@ -100,10 +100,10 @@ const ccpaHeroSectionStyles = {
 		display: 'inline',
 	},
 	description: {
-		fontSize: { xs: '0.9rem', md: '1.1rem' },
+		fontSize: { xs: '0.85rem', md: '1.1rem' },
 		color: theme.palette.text.secondary,
 		lineHeight: '1.6',
-		marginBottom: { xs: '1rem', md: '1.5rem' },
+		marginBottom: { xs: '0.75rem', md: '1.5rem' },
 		maxWidth: '550px',
 	},
 	featuresContainer: {
@@ -146,7 +146,7 @@ const ccpaHeroSectionStyles = {
 	},
 	featureTitle: {
 		fontSize: { xs: '0.75rem', md: '1.2rem' },
-		fontWeight: 'bold',
+		fontWeight: 600,
 		color: theme.palette.text.primary,
 		lineHeight: 1.1,
 	},

@@ -12,14 +12,20 @@ const CcpaFeaturesSection: React.FC = () => {
           <Typography sx={featuresSectionStyle.heading}>Key CCPA Compliance Features</Typography>
         </Box>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={{ xs: 2, sm: 3 }}>
           {ccpaFeatures.map((feature) => {
             const IconComp = feature.icon;
             return (
               <Grid size={{ xs: 12, sm: 6, md: 4 }} key={feature.id}>
                 <Card variant="elevation" sx={featuresSectionStyle.card}>
                   <CardContent sx={{ padding: 0 }}>
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', padding: '0.8rem' }}>
+                    <Box sx={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'flex-start',
+                      padding: { xs: '0rem', sm: '0.8rem' },
+                      height: '100%'
+                    }}>
                       <Box sx={featuresSectionStyle.iconBox}>
                         <IconComp sx={featuresSectionStyle.icon} />
                       </Box>

@@ -1,40 +1,43 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
 import { cspmData } from '../constants/cspmData';
 
 const BenefitsSection: React.FC = () => {
     return (
-        <Box component="section" sx={benefitsSectionStyle.box}>
-            <Container sx={benefitsSectionStyle.container}>
-                <Box sx={benefitsSectionStyle.containerBox}>
-                    <Typography variant="h2" sx={benefitsSectionStyle.heading}>
-                        {cspmData.benefits.title}
+        <Box sx={benefitsSectionStyle.section}>
+            <Box sx={benefitsSectionStyle.headerContainer}>
+                <Typography sx={benefitsSectionStyle.tagline}>KEY ADVANTAGES</Typography>
+                <Typography sx={benefitsSectionStyle.title}>
+                    {cspmData.benefits.title}
+                </Typography>
+                {cspmData.benefits.subtitle && (
+                    <Typography sx={benefitsSectionStyle.subtitle}>
+                        {cspmData.benefits.subtitle}
                     </Typography>
-                    {cspmData.benefits.subtitle && (
-                        <Typography variant="body1" sx={benefitsSectionStyle.subheading}>
-                            {cspmData.benefits.subtitle}
-                        </Typography>
-                    )}
-                </Box>
-                
-                <Box sx={benefitsSectionStyle.benefitsGrid}>
-                    {cspmData.benefits.benefitsList.map((benefit, index) => (
-                        <Box key={index} sx={benefitsSectionStyle.benefitCard}>
+                )}
+            </Box>
+
+            <Grid container spacing={3} sx={{ alignItems: 'stretch', width: '100%' }}>
+                {cspmData.benefits.benefitsList.map((benefit, index) => (
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                        <Box sx={benefitsSectionStyle.card}>
                             <Box sx={benefitsSectionStyle.iconContainer}>
                                 <benefit.muiIcon sx={benefitsSectionStyle.icon} />
                             </Box>
-                            <Typography variant="h3" sx={benefitsSectionStyle.benefitTitle}>
+                            <Typography sx={benefitsSectionStyle.cardTitle}>
                                 {benefit.title}
                             </Typography>
-                            <Typography variant="body1" sx={benefitsSectionStyle.benefitDescription}>
-                                {benefit.description}
-                            </Typography>
+                            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                                <Typography sx={benefitsSectionStyle.cardDescription}>
+                                    {benefit.description}
+                                </Typography>
+                            </Box>
                         </Box>
-                    ))}
-                </Box>
-            </Container>
+                    </Grid>
+                ))}
+            </Grid>
         </Box>
     );
 };

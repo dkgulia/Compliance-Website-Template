@@ -1,42 +1,45 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { securityTrainingData } from '../constants/securityTrainingData';
-import infoSectionStyles from '../styles/infoSectionStyles';
+import theme from '../../../theme';
 import Image from 'next/image';
 import securityTrainingLessons from '../images/security-cta.png';
-
+import infoStyles from '../styles/infoSectionStyles';
 const InfoSection = () => {
   const sectionContent = securityTrainingData.sections[1]?.content || {};
   const { title, description = [], imageIdea } = sectionContent;
 
+
   return (
-    <Box sx={infoSectionStyles.root}>
-      <Container sx={infoSectionStyles.container}>
-        <Box sx={infoSectionStyles.imageBox}>
-          <Image
-            src={securityTrainingLessons}
-            alt={imageIdea || "Security Training Lessons"}
-            width={500}
-            height={400}
-            style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }}
-            priority
-          />
+    <Box sx={infoStyles.section}>
+      <Box sx={infoStyles.contentWrapper}>
+        <Box sx={infoStyles.imageBox}>
+          <Box sx={infoStyles.imageWrapper}>
+            <Image
+              src={securityTrainingLessons}
+              alt={imageIdea || "Security Training Lessons"}
+              fill
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </Box>
         </Box>
-        <Box sx={infoSectionStyles.contentBox}>
+        <Box sx={infoStyles.contentBox}>
+          <Typography sx={infoStyles.tagline}>BUILT FOR TEAMS</Typography>
           {title && (
-            <Typography variant="h3" sx={infoSectionStyles.title}>
+            <Typography sx={infoStyles.title}>
               {title}
             </Typography>
           )}
           {description && Array.isArray(description) && description.map((desc, index) => (
-            <Typography key={index} variant="body1" sx={infoSectionStyles.description}>
+            <Typography key={index} sx={infoStyles.description}>
               {desc}
             </Typography>
           ))}
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };

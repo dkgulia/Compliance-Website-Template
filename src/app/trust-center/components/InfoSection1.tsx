@@ -3,47 +3,48 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import infoSectionStyle from '../styles/infoSectionStyle';
+import styles from '../styles/infoSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 import dualHexImage from '../images/trustSecurity.png';
 
 const InfoSection1: React.FC = () => {
-  const data = trustCenterPageData.sections.infoSection1;
+ const data = trustCenterPageData.sections.infoSection1;
 
-  return (
-    <Box sx={infoSectionStyle.container}>
-      <Box sx={infoSectionStyle.innerBox}>
-        <Box sx={infoSectionStyle.contentLeft}>
-          <Typography variant="h4" sx={infoSectionStyle.title}>
-            {data.title}
-          </Typography>
+ return (
+   <Box sx={styles.section}>
+     <Box sx={styles.innerBox}>
+       <Box sx={styles.contentLeft}>
+         <Typography sx={styles.tagline}>
+           {data.tagline}
+         </Typography>
 
-          {data.description.map((desc, index) => (
-            <Typography key={index} variant="body1" sx={infoSectionStyle.description}>
-              {desc}
-            </Typography>
-          ))}
-        </Box>
+         <Typography sx={styles.title}>
+           {data.title}
+         </Typography>
 
-        <Box sx={infoSectionStyle.imageRight}>
-          <Box sx={infoSectionStyle.imageContainer}>
-            <Image
-              src={dualHexImage}
-              alt="Security showcase"
-              width={450}
-              height={350}
-              style={{
-                width: '100%',
-                height: 'auto',
-                objectFit: 'cover',
-              }}
-              priority
-            />
-          </Box>
-        </Box>
-      </Box>
-    </Box>
-  );
+         {data.description.map((desc, index) => (
+           <Typography key={index} sx={styles.description}>
+             {desc}
+           </Typography>
+         ))}
+       </Box>
+
+       <Box sx={styles.imageRight}>
+         <Box sx={styles.imageContainer}>
+           <Image
+             src={dualHexImage}
+             alt="Security showcase"
+             fill
+             style={{
+               objectFit: 'contain',
+             }}
+             priority
+           />
+         </Box>
+       </Box>
+     </Box>
+   </Box>
+ );
 };
 
 export default InfoSection1;

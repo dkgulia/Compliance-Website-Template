@@ -1,77 +1,88 @@
 import theme from '../../../theme';
 
 const categoriesStyle = {
-  section: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor:
-      theme.palette.background.darkPaper || theme.palette.background.default,
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: { xs: '0 1rem', sm: '0 2rem' },
-  },
-  title: {
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    fontWeight: 600,
-    marginBottom: '1.5rem',
-    color: theme.palette.text.primary,
-    textAlign: 'center',
-  },
-  categoriesGrid: {
-    display: 'grid',
-    gridTemplateColumns: {
-      xs: '1fr',
-      sm: 'repeat(2, 1fr)',
-      md: 'repeat(3, 1fr)',
-    },
-    gap: '1.5rem',
-    width: '100%',
-  },
-  categoryCard: {
-    padding: '1.5rem',
-    borderRadius: '1rem',
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    gap: '1rem',
-    alignItems: 'flex-start',
-
-    border: `1px solid ${theme.palette.divider}`,
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-    '&:hover': {
-      transform: 'translateY(-5px)',
-      boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
-    },
-  },
-  iconContainer: {
-    backgroundColor: '#115e59', // teal color from theme
-    color: theme.palette.common.white,
-    borderRadius: '0.5rem',
-    width: '2.5rem',
-    height: '2.5rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexShrink: 0,
-  },
-  categoryIcon: {
-    fontSize: '1.25rem',
-  },
-  categoryContent: {
-    flex: 1,
-  },
-  categoryTitle: {
-    fontSize: '1.1rem',
-    fontWeight: 600,
-    marginBottom: '0.5rem',
-    color: theme.palette.text.primary,
-  },
-  categoryDescription: {
-    fontSize: '0.9rem',
-    color: theme.palette.text.secondary,
-    lineHeight: 1.5,
-  },
+ section: {
+   display: 'flex',
+   flexDirection: 'column',
+   px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+   marginTop: { xs: '3.5rem', md: '6rem' },
+   gap: '2rem',
+   alignItems: 'center',
+   background: theme.palette.background.default,
+   position: 'relative',
+   overflow: 'hidden',
+   paddingBottom: { xs: '2rem', sm: '4rem' },
+ },
+ headerContainer: {
+   display: 'flex',
+   flexDirection: 'column',
+   alignItems: 'center',
+   justifyContent: 'center',
+   gap: '0.5rem',
+   marginBottom: '3rem',
+   textAlign: 'center',
+ },
+ tagline: {
+   fontFamily: 'monospace',
+   fontSize: '0.875rem',
+   color: '#0d9488',
+   letterSpacing: '0.05em',
+   textAlign: 'center',
+   textTransform: 'uppercase',
+ },
+ title: {
+   fontSize: { xs: '1.5rem', md: '1.875rem' },
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   textAlign: 'center',
+ },
+ subtitle: {
+   fontSize: { xs: '1rem', sm: '1.1rem' },
+   color: '#6b7280',
+   lineHeight: 1.6,
+   textAlign: 'center',
+ },
+ card: {
+   display: 'flex',
+   flexDirection: 'column',
+   gap: '1rem',
+   padding: { xs: '1.5rem', sm: '2rem' },
+   borderRadius: '0.5rem',
+   backgroundColor: '#171717',
+   border: '1px solid #374151',
+   transition: 'transform 0.3s ease, border-color 0.3s ease',
+   height: '100%',
+   '&:hover': {
+     transform: 'translateY(-5px)',
+     borderColor: '#0d9488',
+   },
+ },
+ iconContainer: {
+   display: 'flex',
+   alignItems: 'center',
+   justifyContent: 'center',
+   width: '60px',
+   height: '60px',
+   borderRadius: '12px',
+   backgroundColor: '#115e59',
+   flexShrink: 0,
+ },
+ icon: {
+   fontSize: '24px',
+   color: 'white',
+ },
+ cardTitle: {
+   fontSize: '1.125rem',
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   marginBottom: '0.5rem',
+ },
+ cardDescription: {
+   fontSize: '0.875rem',
+   color: '#6b7280',
+   lineHeight: 1.7,
+   flex: 1,
+ },
 };
 
 export default categoriesStyle;

@@ -1,3 +1,9 @@
-export const FULL_NAME_REQUIRED = 'Full Name is required';
+export const FULL_NAME_REQUIRED = 'Full name is required';
 export const EMAIL_REQUIRED = 'Email is required';
-export const INVALID_EMAIL = 'Invalid email';
+export const INVALID_EMAIL = 'Invalid email format';
+export const COMPANY_NAME_REQUIRED = 'Company name is required';
+export const PHONE_REQUIRED = 'Phone number is required';
+export const COUNTRY_REQUIRED = 'Country is required';
+export const JOB_TITLE_REQUIRED = 'Job title is required';
+export const COMPANY_SIZE_REQUIRED = 'Company size is required';
+export const EMPLOYEES_REQUIRED = 'Number of employees is required';

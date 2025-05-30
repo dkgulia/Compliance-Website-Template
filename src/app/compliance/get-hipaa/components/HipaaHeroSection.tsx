@@ -1,4 +1,4 @@
-// HIPAAHeroSection.tsx
+
 'use client';
 import React, { useState } from 'react';
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
@@ -55,61 +55,36 @@ const HIPAAHeroSection: React.FC = () => {
             help organizations maintain compliance effortlessly, reduce risks, and safeguard patient data.
           </Typography>
 
-          {isMobile ? (
-            <Box>
-              <Box sx={hipaaHeroSectionStyles.statItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Verified sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Typography sx={hipaaHeroSectionStyles.statValue}>Automated</Typography>
-                <Typography sx={hipaaHeroSectionStyles.statLabel}>Compliance Monitoring</Typography>
+          {/* Use the same horizontal layout for both mobile and desktop */}
+          <Box sx={hipaaHeroSectionStyles.featuresContainer}>
+            <Box sx={hipaaHeroSectionStyles.featureItem}>
+              <Box sx={hipaaHeroSectionStyles.iconWrapper}>
+                <Verified sx={hipaaHeroSectionStyles.featureIcon} />
               </Box>
-              <Box sx={hipaaHeroSectionStyles.statItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Security sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Typography sx={hipaaHeroSectionStyles.statValue}>Robust</Typography>
-                <Typography sx={hipaaHeroSectionStyles.statLabel}>Security Controls</Typography>
-              </Box>
-              <Box sx={hipaaHeroSectionStyles.statItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Policy sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Typography sx={hipaaHeroSectionStyles.statValue}>Thorough</Typography>
-                <Typography sx={hipaaHeroSectionStyles.statLabel}>Policy Management</Typography>
+              <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
+                <Typography sx={hipaaHeroSectionStyles.featureTitle}>Automated</Typography>
+                <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Compliance Monitoring</Typography>
               </Box>
             </Box>
-          ) : (
-            <Box sx={hipaaHeroSectionStyles.featuresContainer}>
-              <Box sx={hipaaHeroSectionStyles.featureItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Verified sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
-                  <Typography sx={hipaaHeroSectionStyles.featureTitle}>Automated</Typography>
-                  <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Compliance Monitoring</Typography>
-                </Box>
+            <Box sx={hipaaHeroSectionStyles.featureItem}>
+              <Box sx={hipaaHeroSectionStyles.iconWrapper}>
+                <Security sx={hipaaHeroSectionStyles.featureIcon} />
               </Box>
-              <Box sx={hipaaHeroSectionStyles.featureItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Security sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
-                  <Typography sx={hipaaHeroSectionStyles.featureTitle}>Robust</Typography>
-                  <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Security Controls</Typography>
-                </Box>
-              </Box>
-              <Box sx={hipaaHeroSectionStyles.featureItem}>
-                <Box sx={hipaaHeroSectionStyles.iconWrapper}>
-                  <Policy sx={hipaaHeroSectionStyles.featureIcon} />
-                </Box>
-                <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
-                  <Typography sx={hipaaHeroSectionStyles.featureTitle}>Thorough</Typography>
-                  <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Policy Management</Typography>
-                </Box>
+              <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
+                <Typography sx={hipaaHeroSectionStyles.featureTitle}>Robust</Typography>
+                <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Security Controls</Typography>
               </Box>
             </Box>
-          )}
+            <Box sx={hipaaHeroSectionStyles.featureItem}>
+              <Box sx={hipaaHeroSectionStyles.iconWrapper}>
+                <Policy sx={hipaaHeroSectionStyles.featureIcon} />
+              </Box>
+              <Box sx={hipaaHeroSectionStyles.featureTextWrapper}>
+                <Typography sx={hipaaHeroSectionStyles.featureTitle}>Thorough</Typography>
+                <Typography sx={hipaaHeroSectionStyles.featureSubtitle}>Policy Management</Typography>
+              </Box>
+            </Box>
+          </Box>
         </Box>
 
         <Box sx={hipaaHeroSectionStyles.formBox}>

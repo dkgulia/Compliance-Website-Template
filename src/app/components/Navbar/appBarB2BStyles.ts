@@ -85,6 +85,25 @@ const appBarB2BStyles = {
 		flex: '0 0 auto',
 	},
 	talkButton: {
+		backgroundColor: '#115e59',
+		color: '#f9fafb',
+		borderRadius: '0.5rem',
+		padding: {
+			xs: '0.25rem 0.5rem',
+			sm: '0.375rem 0.75rem',
+			md: '0.25rem 0.5rem',
+		},
+		textTransform: 'none',
+		fontSize: '0.75rem',
+		whiteSpace: 'nowrap',
+		border: '1px solid #0d9488',
+		transition: 'all 150ms ease',
+		'&:hover': {
+			backgroundColor: '#0f766e',
+		},
+
+	},
+	shopButton: {
 		color: '#f9fafb',
 		borderRadius: '0.5rem',
 		padding: {
@@ -101,24 +120,6 @@ const appBarB2BStyles = {
 		'&:hover': {
 			backgroundColor: '#374151',
 			borderColor: '#4b5563',
-		},
-	},
-	shopButton: {
-		backgroundColor: '#115e59',
-		color: '#f9fafb',
-		borderRadius: '0.5rem',
-		padding: {
-			xs: '0.25rem 0.5rem',
-			sm: '0.375rem 0.75rem',
-			md: '0.25rem 0.5rem',
-		},
-		textTransform: 'none',
-		fontSize: '0.75rem',
-		whiteSpace: 'nowrap',
-		border: '1px solid #0d9488',
-		transition: 'all 150ms ease',
-		'&:hover': {
-			backgroundColor: '#0f766e',
 		},
 	},
 	mobileMenuContainer: {

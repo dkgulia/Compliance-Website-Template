@@ -4,7 +4,7 @@ const implementationFlowStyle = {
   outerBox: {
     paddingTop: { sm: '1rem', xs: '0.5rem' },
     paddingBottom: { sm: '1rem', xs: '0.5rem' },
-    marginTop: '2rem',
+    marginTop: { xs: '1rem', sm: '2rem' },
     backgroundColor: theme.palette.background.default,
   },
   container: {
@@ -13,16 +13,16 @@ const implementationFlowStyle = {
     px: { xs: '1rem', sm: '2rem' },
   },
   heading: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
+    fontSize: { xs: '1.4rem', sm: '2rem' },
+    fontWeight: 600,
     textAlign: 'center' as const,
     color: theme.palette.text.primary,
-    marginBottom: '1rem',
+    marginBottom: { xs: '0.5rem', sm: '1rem' },
   },
   subheading: {
-    fontSize: '1rem',
+    fontSize: { xs: '0.85rem', sm: '1rem' },
     color: '#6B7280',
-    marginBottom: '1rem',
+    marginBottom: { xs: '1rem', sm: '1rem' },
     textAlign: 'center' as const,
     maxWidth: '700px',
     marginX: 'auto',
@@ -43,7 +43,8 @@ const implementationFlowStyle = {
   },
   th: {
     color: theme.palette.text.primary,
-    fontWeight: 'bold',
+    fontWeight: 600,
+    fontSize: { xs: '0.85rem', sm: '1rem' },
     borderBottom: '1px solid #3a3a3a',
   },
   tableBodyRow: {
@@ -53,10 +54,11 @@ const implementationFlowStyle = {
   },
   td: {
     color: '#6B7280',
+    fontSize: { xs: '0.8rem', sm: '0.875rem' },
     borderBottom: '1px solid #3a3a3a',
     verticalAlign: 'top' as const,
-    paddingTop: '1rem',
-    paddingBottom: '1rem',
+    paddingTop: { xs: '0.75rem', sm: '1rem' },
+    paddingBottom: { xs: '0.75rem', sm: '1rem' },
   },
 };
 
