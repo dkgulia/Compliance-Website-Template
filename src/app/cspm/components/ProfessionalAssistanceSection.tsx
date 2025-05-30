@@ -1,58 +1,73 @@
-
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Button from '../../Button/HexaFortButton';
 import supportedFrameworksStyle from '../styles/simpleInfoSectionStyle';
 import { cspmData } from '../constants/cspmData';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import professionalSupportImage from '../images/professionalAssistance.png';
 
 const ProfessionalAssistanceSection: React.FC = () => {
-    return (
-        <Box component="section" sx={supportedFrameworksStyle.box}>
-            <Container maxWidth="lg" sx={supportedFrameworksStyle.container}>
-                <Box sx={supportedFrameworksStyle.assistanceContainer}>
-                    <Box sx={supportedFrameworksStyle.assistanceContent}>
-                        <Box sx={supportedFrameworksStyle.textSection}>
-                            {cspmData.professionalAssistance.highlightText && (
-                                <Box sx={supportedFrameworksStyle.tag}>
-                                    <Typography variant="body2" sx={supportedFrameworksStyle.tagText}>
-                                        {cspmData.professionalAssistance.highlightText}
-                                    </Typography>
-                                </Box>
-                            )}
+   const router = useRouter();
 
-                            <Typography variant="h2" sx={supportedFrameworksStyle.assistanceTitle}>
-                                {cspmData.professionalAssistance.title}
-                            </Typography>
+   const handleGetDemo = () => {
+       router.push('/get-a-demo');
+   };
 
-                            {cspmData.professionalAssistance.subtitle && (
-                                <Typography variant="subtitle1" sx={supportedFrameworksStyle.assistanceSubtitle}>
-                                    {cspmData.professionalAssistance.subtitle}
-                                </Typography>
-                            )}
+   return (
+       <Box sx={supportedFrameworksStyle.section}>
+           <Box sx={supportedFrameworksStyle.headerContainer}>
+               <Typography sx={supportedFrameworksStyle.tagline}>EXPERT SUPPORT</Typography>
+               <Typography sx={supportedFrameworksStyle.title}>
+                   {cspmData.professionalAssistance.title}
+               </Typography>
+           </Box>
 
-                            <Typography variant="body1" sx={supportedFrameworksStyle.assistanceDescription}>
-                                {cspmData.professionalAssistance.description}
-                            </Typography>
-                        </Box>
+           <Box sx={supportedFrameworksStyle.contentWrapper}>
+               <Box sx={supportedFrameworksStyle.textContent}>
+                   {cspmData.professionalAssistance.highlightText && (
+                       <Box sx={supportedFrameworksStyle.tag}>
+                           <Typography sx={supportedFrameworksStyle.tagText}>
+                               {cspmData.professionalAssistance.highlightText}
+                           </Typography>
+                       </Box>
+                   )}
 
-                        <Box sx={supportedFrameworksStyle.imageSection}>
-                            <Box sx={supportedFrameworksStyle.assistanceImageContainer}>
-                                <Image
-                                    src={professionalSupportImage}
-                                    alt={cspmData.professionalAssistance.imageIdea || "Professional assistance and support team"}
-                                    fill
-                                    style={supportedFrameworksStyle.assistanceImage}
-                                    priority
-                                />
-                            </Box>
-                        </Box>
-                    </Box>
-                </Box>
-            </Container>
-        </Box>
-    );
+                   {cspmData.professionalAssistance.subtitle && (
+                       <Typography sx={supportedFrameworksStyle.subtitle}>
+                           {cspmData.professionalAssistance.subtitle}
+                       </Typography>
+                   )}
+
+                   <Typography sx={supportedFrameworksStyle.description}>
+                       {cspmData.professionalAssistance.description}
+                   </Typography>
+
+                   <Button
+                       endIcon={<ArrowForwardIcon />}
+                       onClick={handleGetDemo}
+                   >
+                       Get Expert Support
+                   </Button>
+               </Box>
+
+               <Box sx={supportedFrameworksStyle.imageContainer}>
+                   <Box sx={supportedFrameworksStyle.imageWrapper}>
+                       <Image
+                           src={professionalSupportImage}
+                           alt={cspmData.professionalAssistance.imageIdea || "Professional assistance and support team"}
+                           fill
+                           style={supportedFrameworksStyle.assistanceImage}
+                           priority
+                           sizes="(max-width: 600px) 280px, (max-width: 900px) 350px, 400px"
+                       />
+                   </Box>
+               </Box>
+           </Box>
+       </Box>
+   );
 };
 
 export default ProfessionalAssistanceSection;

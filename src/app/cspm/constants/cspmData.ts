@@ -60,7 +60,7 @@ export const cspmData = {
         "cloud cost optimization security"
     ],
     hero: {
-        heroTitle: "Cloud Security Posture Management — Security That Feels Effortless",
+        heroTitle: "Cloud Security Management Security That Feels Effortless",
         heroSubtitle: "Detect. Fix. Comply. All without breaking your DevOps flow.",
         heroDescription: [
             "With HexaFort CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."

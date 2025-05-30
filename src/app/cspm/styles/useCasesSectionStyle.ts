@@ -1,51 +1,49 @@
 import theme from '../../../theme';
 
 const useCasesSectionStyle = {
-  box: {
-    paddingTop: { sm: '1rem', xs: '0.5rem' },
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
-    backgroundColor: theme.palette.background.default,
+  section: {
+    display: 'flex',
+    flexDirection: 'column',
+    px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+    marginTop: { xs: '0rem', md: '0rem' },
+    gap: '2rem',
+    alignItems: 'center',
+    background: theme.palette.background.default,
+    position: 'relative',
+    overflow: 'hidden',
   },
-  container: {
+  headerContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginX: 'auto',
-    maxWidth: '75rem',
-    px: { xs: '1rem', sm: '2rem' },
+    justifyContent: 'center',
+    gap: '0.5rem',
+    marginBottom: '1rem',
+    textAlign: 'center',
+  },
+  title: {
+    marginTop: { xs: '3rem', md: '3rem' },
+    fontSize: { xs: '1.5rem', md: '1.875rem' },
+    fontWeight: 600,
+    color: theme.palette.text.primary,
+    textAlign: 'center',
+  },
+  subtitle: {
+    color: '#6b7280',
+    fontSize: { xs: '1rem', sm: '1.1rem' },
+    lineHeight: 1.6,
+    textAlign: 'center',
   },
   contentWrapper: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
     alignItems: 'center',
-    gap: '3rem',
+    gap: { xs: '2rem', md: '4rem' },
     width: '100%',
+    maxWidth: '1200px',
   },
   textContent: {
     flex: 1,
-  },
-  containerBox: {
-    textAlign: 'center',
-    width: '100%',
-    maxWidth: '60rem',
-    marginX: 'auto',
-    marginBottom: '1rem',
-  },
-  heading: {
-    fontWeight: '600',
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    color: theme.palette.text.primary,
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
-    textAlign: 'center',
-  },
-  subheading: {
-    color: theme.palette.text.secondary,
-    fontSize: '1rem',
-    marginBottom: '2rem',
-    lineHeight: '1.6',
-    maxWidth: '40rem',
-    marginX: 'auto',
-    textAlign: 'center',
   },
   list: {
     listStyle: 'none',
@@ -56,20 +54,20 @@ const useCasesSectionStyle = {
     display: 'flex',
     marginBottom: '2rem',
     padding: '1.5rem',
-    backgroundColor: theme.palette.background.darkTransparent || '#17171799',
+    backgroundColor: '#171717',
     borderRadius: '0.75rem',
-    border: `1px solid ${theme.palette.divider}`,
-    transition: 'all 0.3s ease',
+    border: '1px solid #374151',
+    transition: 'transform 0.3s ease, border-color 0.3s ease',
     '&:hover': {
       transform: 'translateX(5px)',
-      borderColor: theme.palette.primary.main,
+      borderColor: '#0d9488',
     },
   },
   numberContainer: {
     width: '2.5rem',
     height: '2.5rem',
     borderRadius: '50%',
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: '#115e59',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -90,7 +88,7 @@ const useCasesSectionStyle = {
     marginBottom: '0.5rem',
   },
   itemSubheading: {
-    color: theme.palette.text.secondary,
+    color: '#6b7280',
     fontSize: '1rem',
     lineHeight: 1.6,
   },
@@ -99,31 +97,19 @@ const useCasesSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'relative',
     width: '100%',
-    maxWidth: '500px',
-    height: '600px',
+    minHeight: { xs: '300px', sm: '400px', md: 'auto' },
+  },
+  imageWrapper: {
+    width: '100%',
+    maxWidth: { xs: '280px', sm: '350px', md: '500px' },
+    height: { xs: '300px', sm: '400px', md: '500px' },
+    position: 'relative',
     borderRadius: '0.75rem',
     overflow: 'hidden',
-
   },
-  // Style for the Next.js Image component
   image: {
-
-  },
-  // Keeping the placeholder style for reference
-  placeholderImage: {
-    width: '100%',
-    maxWidth: '500px',
-    height: '400px',
-    borderRadius: '0.75rem',
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: theme.palette.text.disabled,
-    fontSize: '1rem',
-    border: `1px solid ${theme.palette.divider}`,
+    objectFit: 'contain' as const,
   },
 };
 

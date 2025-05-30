@@ -6,7 +6,7 @@ const ctaSectionStyle = {
 		display: 'flex',
 		flexDirection: 'column',
 		px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
-		marginTop: { xs: '3.5rem', md: '6rem' },
+		marginTop: { xs: '0rem', md: '0rem' },
 		gap: '2rem',
 		alignItems: 'center',
 		background: theme.palette.background.default,
@@ -30,6 +30,7 @@ const ctaSectionStyle = {
 		textTransform: 'uppercase',
 	},
 	title: {
+		marginTop: { xs: '3rem', md: '3rem' },
 		fontSize: { xs: '1.5rem', md: '1.875rem' },
 		textAlign: 'center',
 		color: 'white',

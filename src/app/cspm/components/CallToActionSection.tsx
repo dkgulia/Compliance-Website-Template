@@ -25,9 +25,6 @@ const CTASection: React.FC = () => {
 	return (
 		<Box sx={ctaSectionStyle.section}>
 			<Box sx={ctaSectionStyle.headerContainer}>
-				<Typography sx={ctaSectionStyle.tagline}>
-					GET STARTED TODAY
-				</Typography>
 				<Typography sx={ctaSectionStyle.title}>
 					Ready to Transform Your Security?
 				</Typography>
