@@ -10,11 +10,13 @@ import heroSectionStyle from '../styles/heroSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 import Image from 'next/image';
 import evidenceCollectionDashboard from '../images/hero-image.png';
+import { useRouter } from 'next/navigation';
 
 const HeroSection: React.FC = () => {
 	const theme = useTheme();
 	const styles = heroSectionStyle(theme);
 	const { hero } = evidenceCollectionData;
+	const router = useRouter();
 	const featureItems = [
 		{
 			icon: AccessTimeIcon,
@@ -34,7 +36,7 @@ const HeroSection: React.FC = () => {
 	];
 
 	const handleBookDemo = () => {
-		// Navigate to demo booking
+		router.push('/get-a-demo');
 	};
 
 	return (
