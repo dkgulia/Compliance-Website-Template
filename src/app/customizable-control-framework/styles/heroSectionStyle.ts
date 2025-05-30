@@ -7,7 +7,7 @@ const heroSectionStyle = {
     alignItems: 'center',
     gap: { xs: '2rem', md: '4rem' },
     px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
-    paddingTop: { xs: '8rem', sm: '8rem', md: '12rem' },
+    paddingTop: { xs: '8rem', sm: '8rem', md: '8rem' },
     paddingBottom: { xs: '2.5rem', sm: '2rem', md: '6rem' },
     background: theme.palette.background.default,
     position: 'relative',
