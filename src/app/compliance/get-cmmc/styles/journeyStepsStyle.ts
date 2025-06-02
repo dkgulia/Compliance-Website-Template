@@ -3,7 +3,7 @@ import theme from '../../../../theme';
 const journeyStepsStyle = {
  box: {
    paddingTop: { xs: '0.5rem', sm: '1rem' },
-   paddingBottom: { xs: '0.5rem', sm: '1rem' },
+   paddingBottom: { xs: '0.5rem', sm: '1rem',md:'5rem' },
    backgroundColor: theme.palette.background.default,
  },
  containerBox: {

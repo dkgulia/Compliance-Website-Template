@@ -41,5 +41,5 @@ export const featuredContent = {
   description:
     'Experience the power of Hexafort firsthand with our personalized demo',
   buttonText: 'Schedule Now',
-  href: '/book-demo',
+  href: '/get-a-demo',
 };

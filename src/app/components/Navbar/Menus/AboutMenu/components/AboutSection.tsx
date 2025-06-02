@@ -19,6 +19,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClose }) => {
 		if (onClose) onClose();
 	};
 
+	const handleDemoClick = () => {
+		router.push('/get-a-demo');
+		if (onClose) onClose();
+	};
+
 	return (
 		<>
 			<Grid container spacing={3}>
@@ -61,7 +66,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClose }) => {
 									backgroundColor: '#0f766e',
 								},
 							}}
-							onClick={() => handleNavigate(featuredContent.href)}
+							onClick={featuredContent.buttonText?.toLowerCase().includes('demo') ? handleDemoClick : () => handleNavigate(featuredContent.href)}
 						>
 							{featuredContent.buttonText}
 						</Button>

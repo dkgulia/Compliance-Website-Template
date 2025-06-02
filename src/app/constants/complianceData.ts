@@ -10,9 +10,10 @@ import iso27701 from '../compliance/images/27701-logo.png';
 import dora from '../compliance/images/dora.png';
 import iso42001 from '../compliance/images/42001.png';
 import cmmc from '../compliance/images/cmmc.png';
-import iso27017 from '../compliance/images/compliance27017.png';
+import iso22301 from '../compliance/images/ISO22301.png';
 import { StaticImageData } from 'next/image';
-
+import nist from '../compliance/images/NIST.png'
+import dpdp from '../compliance/images/DPDP copy.png'
 export interface ComplianceFramework {
   title: string;
   description: string;
@@ -87,21 +88,21 @@ export const primaryFrameworks: ComplianceFramework[] = [
     title: 'DPDP',
     description:
       'Digital Personal Data Protection Act compliance for data privacy in India.',
-    logo: cmmc,
+    logo: dpdp,
     url: '/compliance/get-dpdp',
   },
   {
     title: 'NIST',
     description:
       'Cybersecurity framework providing guidelines for managing cybersecurity risks.',
-    logo: cmmc,
+    logo: nist,
     url: '/compliance/get-nist-frameworks',
   },
   {
     title: 'ISO 22301',
     description:
       'Business continuity management systems standard for organizational resilience.',
-    logo: cmmc,
+    logo: iso22301,
     url: '/compliance/get-iso-22301',
   },
 ];

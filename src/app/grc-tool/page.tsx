@@ -6,7 +6,7 @@ import SolutionsSection from './components/solutionsSection';
 import AIFeaturesSection from './components/aiFeaturesSection';
 import ImpactSection from './components/impactSection';
 import { hexafortData } from './constant/dataFile';
-import CallToActionSection from '../cspm/components/CallToActionSection';
+import CallToActionSection from '../components/CallToActionSection';
 
 export const metadata: Metadata = {
 	title: 'HexaFort - Revolutionizing GRC for Sustainable Growth',

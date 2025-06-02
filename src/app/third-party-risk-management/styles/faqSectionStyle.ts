@@ -5,7 +5,7 @@ const faqSectionStyle = {
     display: 'flex',
     flexDirection: 'column',
     px: { xs: '0.5rem', md: '12rem', '2xl': '18rem' },
-    marginTop: { xs: '0rem', md: '6rem' },
+    marginTop: { xs: '0rem', md: '2rem' },
     gap: '2rem',
     alignItems: 'center',
     background: theme.palette.background.default,

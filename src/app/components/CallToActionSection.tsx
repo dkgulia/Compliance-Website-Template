@@ -3,10 +3,10 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircle';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import ctaSectionStyle from '../styles/callToActionSectionStyle';
+import ctaSectionStyle from './styles/callToActionSectionStyle';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import demoImage from '../images/bookAdemo.png';
+import demoImage from '../cspm/images/bookAdemo.png';
 
 const features = [
 	'10-minute tailored demonstration',

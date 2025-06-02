@@ -9,6 +9,7 @@ import Iso20000ImplementationStepsSection from './components/Iso20000Implementat
 import Iso20000CompareWith9001Section from './components/Iso20000CompareWith9001Section';
 import Iso20000CtaOneSection from './components/Iso20000CtaOneSection';
 import Iso20000FaqSection from './components/Iso20000FaqSection';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
 	title: iso20000Data.pageTitle,
@@ -23,7 +24,7 @@ const Page = () => {
 			<Iso20000FeaturesSection />
 			<Iso20000ImageRightTextLeftSection />
 			<Iso20000CompareWith9001Section />
-			<Iso20000CtaOneSection />
+			<BookADemo/>
 			<Iso20000FaqSection />
 		</Box>
 	);

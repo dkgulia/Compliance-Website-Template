@@ -11,8 +11,6 @@ import GdprHowToComplySection from './components/GdprHowToComplySection';
 import GdprLegalBasisSection from './components/GdprLegalBasisSection';
 import GdprDataRetentionSection from './components/GdprDataRetentionSection';
 import GdprELearningSection from './components/GdprELearningSection';
-import GdprDataBreachSection from './components/GdprDataBreachSection';
-import GdprCertificationSection from './components/GdprCertificationSection';
 import GdprComparingSection from './components/GdprComparingSection';
 import GdprPitfallsSection from './components/GdprPitfallsSection';
 import GdprBookNowSection from './components/GdprBookNowSection';

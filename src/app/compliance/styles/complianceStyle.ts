@@ -60,9 +60,9 @@ const complianceStyles = {
    	flexShrink: 0,
    },
    logoImage: {
-   	objectFit: 'contain' as const,
-   	width: { xs: '2.5rem', sm: '4.5rem',md:'4rem'},
-   	height: { xs: '2.5rem', sm: '4.5rem',md:'4rem'},
+   	objectFit: 'contain'as const,
+   	width: { xs: '2.5rem', sm: '4.5rem',md:'5rem'},
+   	height: { xs: '2.5rem', sm: '4.5rem',md:'5rem'},
    },
    contentBox: {
    	flex: 1,

@@ -8,6 +8,7 @@ import CcpaBanner from './components/CcpaBanner';
 import CcpaFaqSection from './components/CcpaFaqSection';
 import CcpaImagesSection from './components/CcpaImagesSection';
 import CcpaRightsSection from './components/CcpaRightsSection';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
   title: 'CCPA Compliance | HexaFort',
@@ -23,7 +24,7 @@ const Page = () => {
       <CcpaFeaturesSection />
       <CcpaImplementationFlow />
       <CcpaImagesSection />
-      <CcpaBanner />
+      <BookADemo/>
 			<CcpaRightsSection />
       <CcpaFaqSection />
     </>

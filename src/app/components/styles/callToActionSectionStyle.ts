@@ -12,7 +12,7 @@ const ctaSectionStyle = {
 		background: theme.palette.background.default,
 		position: 'relative',
 		overflow: 'hidden',
-		paddingBottom: { xs: '2rem', sm: '4rem' },
+		paddingBottom: { xs: '2rem', sm: '4rem',md:'2rem' },
 	},
 	headerContainer: {
 		display: 'flex',

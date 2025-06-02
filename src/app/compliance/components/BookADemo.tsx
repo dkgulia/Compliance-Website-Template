@@ -1,8 +1,9 @@
-'use client'
+'use client';
 import React from 'react';
-import { Box, Container, Typography, Button, Grid } from '@mui/material';
+import { Box, Container, Typography, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
+import HexaButton from '../../Button/HexaFortButton';
 import bookADemoStyles from '../styles/bookADemoStyle';
 import demoImage from '../images/complianceDemo.png';
 
@@ -38,14 +39,7 @@ const BookADemo = () => {
 							<Typography component="span">Achieve continuous compliance and unlock new business</Typography>
 						</Box>
 					</Box>
-					<Button
-						variant="contained"
-						type="button"
-						sx={bookADemoStyles.button}
-						onClick={handleScrollToTop}
-					>
-						Book Your Demo
-					</Button>
+					<HexaButton onClick={handleScrollToTop}>Book Your Demo</HexaButton>
 				</Box>
 				<Box sx={bookADemoStyles.imageBox}>
 					<Image

@@ -7,8 +7,8 @@ import AIQuestionnaireSection from './components/AIQuestionnaireSection';
 import ContinuousMonitoringSection from './components/ContinuousMonitoringSection';
 import PlatformHighlightsSection from './components/PlatformHighlightsSection';
 import PitfallsSection from './components/PitfallsSection';
-import CallToActionSection from './components/CallToActionSection';
-import OfferBanner from './components/OfferBanner';
+import CallToActionSection from '../components/CallToActionSection';
+
 import FAQSection from './components/FAQSection';
 import { thirdPartyRiskManagementData } from './constants/thirdPartyRiskManagementData';
 
@@ -28,8 +28,7 @@ export default function ThirdPartyRiskManagementPage() {
             <PlatformHighlightsSection />
             <ContinuousMonitoringSection />
             <PitfallsSection />
-            {/* //<OfferBanner /> */}
-            <CallToActionSection />
+             <CallToActionSection/>
             <FAQSection />
         </>
     );

@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const complianceHubStyle = {
  box: {
-   paddingTop: { sm: '3rem', xs: '1rem', md: '1rem' },
+   paddingTop: { sm: '3rem', xs: '1rem', md: '3rem' },
    paddingBottom: { sm: '2rem', xs: '1rem', md: '2rem' },
    marginTop: '0rem',
    backgroundColor: theme.palette.background.default,

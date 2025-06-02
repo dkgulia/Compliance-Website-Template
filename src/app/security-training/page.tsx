@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection';
 import InfoSection from './components/InfoSection';
 import BenefitsSection from './components/BenefitsSection';
 import HowItWorksSection from './components/HowItWorksSection';
-import CallToActionSection from './components/CallToActionSection';
+import CallToActionSection from '../components/CallToActionSection';
 import FaqSection from './components/FaqSection';
 import { securityTrainingData } from './constants/securityTrainingData';
 
@@ -29,7 +29,7 @@ export default function SecurityTraining() {
 			<BenefitsSection />
 			<InfoSection />
 			<HowItWorksSection />
-			<CallToActionSection />
+			<CallToActionSection/>
 			<FaqSection />
 		</main>
 	);
