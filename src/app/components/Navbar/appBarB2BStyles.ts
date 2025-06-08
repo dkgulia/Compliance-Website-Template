@@ -2,7 +2,7 @@ const appBarB2BStyles = {
 	appBar: {
 		backgroundColor: '#101010',
 		position: 'fixed',
-		zIndex: 10,
+		zIndex: 100,
 		boxShadow: 'none',
 		borderBottom: '1px solid rgba(38, 38, 38, 0.6)',
 	},

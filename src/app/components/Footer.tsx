@@ -14,7 +14,7 @@ import { platformFeatures } from './Navbar/constants/platformData';
 import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
 
-import logo from '../components/Navbar/Images/dual-hex-white.png';
+import logo from '../components/Navbar/Images/hexafort-white-cropped.png';
 
 export default function Footer() {
 	const pathname = usePathname();
@@ -28,10 +28,7 @@ export default function Footer() {
 						<Box sx={footerStyles.topSection}>
 							<Box sx={footerStyles.leftColumn}>
 								<Box sx={footerStyles.logoContainer}>
-									<Image src={logo} alt="logo of Hexafort" width={40} height={40} style={{ height: 'auto' }} />
-									<Typography variant="h6" sx={footerStyles.logoText}>
-										hexafort
-									</Typography>
+									<Image src={logo} alt="logo of Hexafort" width={140} />
 								</Box>
 
 								<Typography variant="body2" sx={footerStyles.companyDescription}>

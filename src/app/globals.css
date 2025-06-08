@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #101010;
+    --foreground: #ededed;
 }
 
 @theme {
@@ -21,12 +21,12 @@
   --font-mono: var(--font-atkinson-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #101010;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
