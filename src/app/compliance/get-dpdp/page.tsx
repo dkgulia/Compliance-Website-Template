@@ -12,27 +12,28 @@ import DpdpComplianceHub from './components/DpdpComplianceHub';
 import DpdpHowHexafortHelps from './components/DpdpHowHexafortHelps';
 import DpdpBookDemo from './components/DpdpBookDemo';
 import DpdpBanner from './components/DpdpBanner';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-    title: dpdpData.pageTitle,
-    description: dpdpData.pageDescription[0],
-    keywords: dpdpData.keywords,
+	title: dpdpData.pageTitle,
+	description: dpdpData.pageDescription[0],
+	keywords: dpdpData.keywords,
 };
 
 export default function Page() {
-    return (
-        <>
-            <DpdpHeroSection />
-            <DpdpBenefitsSection />
-            <DpdpHowHexafortHelps />
-            <DpdpBanner />
-            <DpdpComplianceHub />
-            <DpdpMetricsSection />
-            <DpdpProcessSection />
-            <DpdpScreenshotsSection />
-            <DpdpBookDemo />
-            <DpdpFaqSection />
-            <DpdpCtaSection />
-        </>
-    );
+	return (
+		<>
+			<DpdpHeroSection />
+			<DpdpBenefitsSection />
+			<DpdpHowHexafortHelps />
+			<DpdpBanner />
+			<DpdpComplianceHub />
+			<DpdpMetricsSection />
+			<DpdpProcessSection />
+			<DpdpScreenshotsSection />
+			<BookADemo />
+			<DpdpFaqSection />
+			<DpdpCtaSection />
+		</>
+	);
 }

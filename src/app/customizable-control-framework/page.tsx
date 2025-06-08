@@ -4,8 +4,8 @@ import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
 import FeaturesSection from './components/FeaturesSection';
 import ProcessSection from './components/ProcessSection';
-import CTASection from './components/CTASection';
 import FAQSection from './components/FAQSection';
+import CallToActionSection from '../components/CallToActionSection';
 
 const ControlFrameworkPage: React.FC = () => {
     return (
@@ -14,7 +14,7 @@ const ControlFrameworkPage: React.FC = () => {
             <BenefitsSection />
             <FeaturesSection />
             <ProcessSection />
-            <CTASection />
+            <CallToActionSection />
             <FAQSection />
         </Box>
     );

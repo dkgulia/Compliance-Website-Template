@@ -6,7 +6,7 @@ import HeroSection from './components/HeroSection';
 import KeyCapabilitiesLadder from './components/KeyCapabilitiesLadder';
 import PlatformWalkthrough from './components/PlatformWalkthrough';
 import QuickStartOnboarding from './components/QuickStartOnboarding';
-import BookADemo from './components/BookADemo';
+import CallToActionSection from '../components/CallToActionSection';
 import OfferBanner from './components/OfferBanner';
 import FaqSection from './components/FaqSection';
 
@@ -18,7 +18,7 @@ const RiskManagementPage = () => {
             <QuickStartOnboarding />
             <PlatformWalkthrough />
             <OfferBanner />
-            <BookADemo />
+            <CallToActionSection />
             <FaqSection />
         </Box>
     );

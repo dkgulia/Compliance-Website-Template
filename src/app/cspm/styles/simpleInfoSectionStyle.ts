@@ -1,36 +1,53 @@
 import theme from '../../../theme';
 
 const supportedFrameworksStyle = {
-  // Common section styling
-  box: {
-    paddingTop: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.default,
+  section: {
+    display: 'flex',
+    flexDirection: 'column',
+    px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+    marginTop: { xs: '0rem', md: '0rem' },
+    gap: '2rem',
+    alignItems: 'center',
+    background: theme.palette.background.default,
     position: 'relative',
+    overflow: 'hidden',
   },
-  container: {
+  headerContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginX: 'auto',
-    position: 'relative',
-    zIndex: 1,
-  },
-  containerBox: {
+    justifyContent: 'center',
+    gap: '0.5rem',
+    marginBottom: '1rem',
     textAlign: 'center',
-    width: '100%',
-    maxWidth: '60rem',
-    marginX: 'auto',
-    marginBottom: '3rem',
   },
-  heading: {
-    fontWeight: '600',
-    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+  tagline: {
+    marginTop: { xs: '3rem', md: '3rem' },
+    fontFamily: 'monospace',
+    fontSize: '0.875rem',
+    color: '#0d9488',
+    letterSpacing: '0.05em',
+    textTransform: 'uppercase',
+  },
+  title: {
+    
+    fontSize: { xs: '1.5rem', md: '1.875rem' },
+    fontWeight: 600,
     color: theme.palette.text.primary,
-    paddingBottom: { sm: '1rem', xs: '0.75rem' },
-    position: 'relative',
+    textAlign: 'center',
   },
-
-  // Frameworks Section styling
+  subtitle: {
+    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
+    color: '#0d9488',
+    lineHeight: 1.6,
+    marginBottom: '1rem',
+  },
+  description: {
+    fontSize: '1rem',
+    color: '#6b7280',
+    lineHeight: 1.6,
+    marginBottom: '1rem',
+  },
   frameworksContainer: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -38,20 +55,19 @@ const supportedFrameworksStyle = {
     gap: '1.5rem',
     marginBottom: '1.5rem',
     maxWidth: '1100px',
+    width: '100%',
   },
   frameworkItem: {
-    backgroundColor: '#17171799',
-    backdropFilter: 'blur(6px)',
-    borderRadius: '1rem',
+    backgroundColor: '#171717',
+    borderRadius: '0.5rem',
     padding: '1rem 1.5rem',
     display: 'flex',
     alignItems: 'center',
-    border: `1px solid ${theme.palette.divider}`,
-    transition: 'all 0.3s ease',
+    border: '1px solid #374151',
+    transition: 'transform 0.3s ease, border-color 0.3s ease',
     '&:hover': {
       transform: 'translateY(-5px)',
-      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-      backgroundColor: theme.palette.background.paper,
+      borderColor: '#0d9488',
     },
   },
   iconContainer: {
@@ -61,7 +77,7 @@ const supportedFrameworksStyle = {
     marginRight: '0.75rem',
   },
   checkIcon: {
-    color: '#115e59',
+    color: '#0d9488',
     fontSize: '1.5rem',
   },
   frameworkName: {
@@ -70,37 +86,42 @@ const supportedFrameworksStyle = {
     fontSize: '1rem',
   },
   note: {
-    color: theme.palette.text.secondary,
+    color: '#6b7280',
     fontSize: '0.9rem',
     marginTop: '1rem',
     fontStyle: 'italic',
   },
-
-  // Professional Assistance Section styling
-  assistanceContainer: {
-    width: '100%',
-    backgroundColor: '#17171799',
-    backdropFilter: 'blur(6px)',
-    borderRadius: '1rem',
-    border: `1px solid ${theme.palette.divider}`,
-    overflow: 'hidden',
-  },
-  assistanceContent: {
+  contentWrapper: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    justifyContent: 'space-between',
-    padding: '2.5rem',
-  },
-  textSection: {
-    flex: '1',
-    paddingRight: { xs: '0', md: '2rem' },
-    marginBottom: { xs: '2rem', md: '0' },
-  },
-  imageSection: {
-    flex: '1',
-    display: 'flex',
-    justifyContent: { xs: 'center', md: 'flex-end' },
     alignItems: 'center',
+    gap: { xs: '2rem', md: '6rem' },
+    backgroundColor: '#171717',
+    borderRadius: '1rem',
+    padding: { xs: '2rem', md: '2rem' },
+    border: '1px solid #374151',
+    width: '100%',
+    maxWidth: '1000px',
+  },
+  textContent: {
+    flex: 1,
+    textAlign: { xs: 'center', md: 'left' },
+  },
+  imageContainer: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    minHeight: { xs: '200px', sm: '250px', md: 'auto' },
+  },
+  imageWrapper: {
+    width: '100%',
+    maxWidth: { xs: '280px', sm: '350px', md: '400px' },
+    height: { xs: '200px', sm: '250px', md: '300px' },
+    position: 'relative',
+    borderRadius: '0.75rem',
+    overflow: 'hidden',
   },
   tag: {
     display: 'inline-block',
@@ -112,51 +133,10 @@ const supportedFrameworksStyle = {
   tagText: {
     color: 'white',
     fontWeight: 'bold',
-  },
-  assistanceTitle: {
-    fontWeight: '600',
-    fontSize: { xs: '1.6rem', sm: '2rem' },
-    color: theme.palette.text.primary,
-    marginBottom: '1rem',
-  },
-  assistanceSubtitle: {
-    fontSize: { xs: '1.1rem', sm: '1.2rem' },
-    color: theme.palette.secondary.main,
-    marginBottom: '1rem',
-    fontWeight: 500,
-  },
-  assistanceDescription: {
-    color: theme.palette.text.secondary,
-    fontSize: '1rem',
-    lineHeight: 1.6,
-    marginBottom: '1rem',
-  },
-  assistanceImageContainer: {
-    width: '100%',
-    maxWidth: '400px',
-    aspectRatio: '17/9',
-    position: 'relative',
-    borderRadius: '0.75rem',
-    overflow: 'hidden',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      transform: 'translateY(-5px)',
-      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
-    },
+    fontSize: '0.875rem',
   },
   assistanceImage: {
-    objectFit: 'cover'as const,
-  },
-  assistanceIcon: {
-    fontSize: '3rem',
-    color: '#115e59',
-    marginBottom: '1rem',
-  },
-  imagePlaceholder: {
-    color: theme.palette.text.secondary,
-    fontSize: '0.9rem',
-    textAlign: 'center',
-    fontStyle: 'italic',
+    objectFit: 'contain' as const,
   },
 };
 

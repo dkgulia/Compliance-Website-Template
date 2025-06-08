@@ -9,6 +9,7 @@ import ProcessSection from './components/ProcessSection';
 import CTASection from './components/CTASection';
 import FAQSection from './components/FAQSection';
 import { iso42001Data } from './constants/iso42001Data';
+import BookADemo from '../components/BookADemo';
 
 const Page = () => {
   const structuredData = {
@@ -38,7 +39,7 @@ const Page = () => {
         <MetricsSection />
         <ScreenshotsSection />
         <ProcessSection />
-        <CTASection />
+        <BookADemo/>
         <FAQSection />
       </main>
     </>

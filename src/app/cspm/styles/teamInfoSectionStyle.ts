@@ -1,55 +1,60 @@
 import theme from '../../../theme';
 
 const teamInfoSectionStyle = {
-  box: {
-    paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.default,
+  section: {
+    display: 'flex',
+    flexDirection: 'column',
+    px: { xs: '1rem', md: '12rem', '2xl': '18rem' },
+    marginTop: { xs: '0rem', md: '0rem' },
+    gap: '2rem',
+    alignItems: 'center',
+    background: theme.palette.background.default,
     position: 'relative',
+    overflow: 'hidden',
   },
-  container: {
+  headerContainer: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginX: 'auto',
-    position: 'relative',
-    zIndex: 1,
-  },
-  containerBox: {
+    justifyContent: 'center',
+    gap: '1rem',
+    marginBottom: '1rem',
     textAlign: 'center',
-    width: '100%',
-    maxWidth: '60rem',
-    marginX: 'auto',
-    marginBottom: '3rem',
   },
-  heading: {
-    fontWeight: '600',
-    fontSize: { xs: '1.8rem', sm: '2.5rem', md: '2rem' },
+  tagline: {
+    fontFamily: 'monospace',
+    fontSize: '0.875rem',
+    color: '#0d9488',
+    letterSpacing: '0.05em',
+    textTransform: 'uppercase',
+  },
+  title: {
+    fontSize: { xs: '1.5rem', md: '1.875rem' },
+    fontWeight: 600,
     color: theme.palette.text.primary,
-    paddingBottom: { sm: '1rem', xs: '0.75rem' },
-    position: 'relative',
+    textAlign: 'center',
   },
-  contentBox: {
+  contentWrapper: {
     display: 'flex',
     flexDirection: { xs: 'column', md: 'row' },
-    alignItems: { xs: 'center', md: 'flex-start' },
-    justifyContent: 'space-between',
-    gap: '3rem',
-    width: '100%',
-    backgroundColor: '#17171799',
-    backdropFilter: 'blur(6px)',
+    alignItems: 'center',
+    gap: { xs: '2rem', md: '4rem' },
+    backgroundColor: '#171717',
     borderRadius: '1rem',
-    padding: '2.5rem',
-    border: `1px solid ${theme.palette.divider}`,
+    padding: { xs: '2rem', md: '1rem' },
+    border: '1px solid #374151',
+    width: '100%',
+    maxWidth: '1100px',
   },
   textContent: {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
+    textAlign: { xs: 'center', md: 'left' },
   },
   description: {
-    marginTop:'1.5rem',
-    color: theme.palette.text.secondary,
     fontSize: '1rem',
+    color: '#6b7280',
     lineHeight: 1.6,
     marginBottom: '1.5rem',
     '&:last-child': {
@@ -61,44 +66,19 @@ const teamInfoSectionStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  imageCard: {
     width: '100%',
-    maxWidth: '500px',
-    aspectRatio: '17/12',
+    minHeight: { xs: '250px', sm: '300px', md: 'auto' },
+  },
+  imageWrapper: {
+    width: '100%',
+    maxWidth: { xs: '280px', sm: '350px', md: '400px' },
+    height: { xs: '250px', sm: '300px', md: '350px' },
     position: 'relative',
     borderRadius: '0.75rem',
     overflow: 'hidden',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      transform: 'translateY(-5px)',
-      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
-    },
   },
   teamImage: {
-    objectFit: 'contain'as const,
-  },
-  teamIcon: {
-    fontSize: '3rem',
-    color: '#115e59',
-    marginBottom: '1rem',
-  },
-  imagePlaceholder: {
-    color: theme.palette.text.secondary,
-    fontSize: '0.9rem',
-    textAlign: 'center',
-    fontStyle: 'italic',
-  },
-  tag: {
-    display: 'inline-block',
-    padding: '0.5rem 1rem',
-    borderRadius: '1rem',
-    background: '#115e59',
-    marginBottom: '1rem',
-  },
-  tagText: {
-    color: 'white',
-    fontWeight: 'bold',
+    objectFit: 'contain' as const,
   },
 };
 

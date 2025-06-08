@@ -3,7 +3,8 @@ import theme from '../../../../theme';
 export const hipaaComplianceStyles = {
   section: {
     paddingTop: '1rem',
-    paddingBottom: '1rem',
+    paddingBottom: '6rem',
+    background: theme.palette.background.default,
   },
   containerBox: {
     textAlign: 'center',

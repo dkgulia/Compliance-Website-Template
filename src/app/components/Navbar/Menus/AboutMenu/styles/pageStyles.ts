@@ -22,7 +22,7 @@ const pageStyles = {
 	},
 	description: {
 		fontSize: '0.875rem',
-		color: 'white',
+		color: '#6b7280',
 		marginBottom: '1.5rem',
 		lineHeight: 1.5,
 	},
@@ -71,7 +71,7 @@ const pageStyles = {
 		marginBottom: '0.5rem',
 		borderRadius: '0.5rem',
 		overflow: 'hidden',
-		
+
 	},
 };
 

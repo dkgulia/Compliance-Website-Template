@@ -14,142 +14,113 @@ import screenshot5 from '../images/risk-step-1.png';
 const screenshotImages = [screenshot1, screenshot2, screenshot3, screenshot4, screenshot5];
 
 const PlatformWalkthrough: React.FC = () => {
-	const [currentSlide, setCurrentSlide] = useState(0);
+   const [currentSlide, setCurrentSlide] = useState(0);
 
-	const carouselContent = riskManagementData.sections.find(
-		(section) => section.Sno === '3' && section.blockType === 'Screenshots'
-	);
+   const carouselContent = riskManagementData.sections.find(
+   	(section) => section.Sno === '3' && section.blockType === 'Screenshots'
+   );
 
-	if (!carouselContent || !carouselContent.content.screenshots || carouselContent.content.screenshots.length === 0) {
-		return null;
-	}
+   if (!carouselContent || !carouselContent.content.screenshots || carouselContent.content.screenshots.length === 0) {
+   	return null;
+   }
 
-	const screenshots = carouselContent.content.screenshots;
-	const slideCount = screenshots.length;
+   const screenshots = carouselContent.content.screenshots;
+   const slideCount = screenshots.length;
 
-	const nextSlide = () => {
-		setCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
-	};
+   const nextSlide = () => {
+   	setCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
+   };
 
-	const prevSlide = () => {
-		setCurrentSlide((prev) => (prev === 0 ? slideCount - 1 : prev - 1));
-	};
+   const prevSlide = () => {
+   	setCurrentSlide((prev) => (prev === 0 ? slideCount - 1 : prev - 1));
+   };
 
-	const goToSlide = (index: number) => {
-		setCurrentSlide(index);
-	};
+   const goToSlide = (index: number) => {
+   	setCurrentSlide(index);
+   };
 
-	return (
-		<Box sx={platformWalkthroughStyle.container}>
-			<Box sx={platformWalkthroughStyle.innerBox}>
-				<Typography variant="h2" sx={platformWalkthroughStyle.heading}>
-					{carouselContent.content.title}
-				</Typography>
+   return (
+   	<Box sx={platformWalkthroughStyle.section}>
+   		<Box sx={platformWalkthroughStyle.headerContainer}>
+   			
+   			<Typography sx={platformWalkthroughStyle.title}>
+   				{carouselContent.content.title}
+   			</Typography>
+   			{carouselContent.content.subtitle && (
+   				<Typography sx={platformWalkthroughStyle.subtitle}>
+   					{carouselContent.content.subtitle}
+   				</Typography>
+   			)}
+   		</Box>
 
-				{carouselContent.content.subtitle && (
-					<Typography variant="subtitle1" sx={platformWalkthroughStyle.subtitle}>
-						{carouselContent.content.subtitle}
-					</Typography>
-				)}
+   		<Box sx={platformWalkthroughStyle.carouselContainer}>
+   			<Box sx={platformWalkthroughStyle.carouselWrapper}>
+   				<IconButton
+   					onClick={prevSlide}
+   					sx={platformWalkthroughStyle.arrowButton}
+   				>
+   					<ArrowBackIosIcon />
+   				</IconButton>
 
-				<Box sx={platformWalkthroughStyle.carouselContainer}>
-					<Box
-						display="flex"
-						alignItems="center"
-						justifyContent="center"
-						sx={{
-							px: { xs: '0.5rem', sm: '1rem', md: 0 },
-							position: 'relative',
-							overflow: 'hidden',
-						}}
-					>
-						{/* Left Arrow */}
-						<IconButton
-							onClick={prevSlide}
-							sx={{
-								color: '#fff',
-								position: 'absolute',
-								left: { xs: 0, sm: 10 },
-								zIndex: 1,
-							}}
-						>
-							<ArrowBackIosIcon />
-						</IconButton>
+   				<Box sx={platformWalkthroughStyle.slideContainer}>
+   					{screenshots.map((screenshot, index) => (
+   						<Box
+   							key={index}
+   							sx={{
+   								...platformWalkthroughStyle.slide,
+   								display: currentSlide === index ? 'flex' : 'none',
+   							}}
+   						>
+   							<Box sx={platformWalkthroughStyle.imageBox}>
+   								{index < screenshotImages.length ? (
+   									<Image
+   										src={screenshotImages[index]}
+   										alt={screenshot.caption || `Screenshot ${index + 1}`}
+   										width={600}
+   										height={400}
+   										style={platformWalkthroughStyle.image}
+   										priority={index === 0}
+   									/>
+   								) : (
+   									<Box sx={platformWalkthroughStyle.imagePlaceholder}>
+   										<Typography variant="body2" color="textSecondary">
+   											{screenshot.imagePrompt}
+   										</Typography>
+   									</Box>
+   								)}
+   							</Box>
+   							<Box sx={platformWalkthroughStyle.contentBox}>
+   								<Typography sx={platformWalkthroughStyle.caption}>
+   									{screenshot.caption}
+   								</Typography>
+   							</Box>
+   						</Box>
+   					))}
+   				</Box>
 
-						{/* Main Content */}
-						<Box sx={{ flex: 1, width: '100%' }}>
-							{screenshots.map((screenshot, index) => (
-								<Box
-									key={index}
-									sx={{
-										display: currentSlide === index ? 'block' : 'none',
-										width: '100%',
-									}}
-								>
-									<Box
-										sx={
-											index % 2 === 0
-												? platformWalkthroughStyle.carouselItem
-												: platformWalkthroughStyle.carouselItemReverse
-										}
-									>
-										<Box sx={platformWalkthroughStyle.imageBox}>
-											<Box sx={platformWalkthroughStyle.imageWrapper}>
-												{index < screenshotImages.length ? (
-													<Image
-														src={screenshotImages[index]}
-														alt={screenshot.caption || `Screenshot ${index + 1}`}
-														layout="responsive"
-														width={1200}
-														height={720}
-														style={platformWalkthroughStyle.screenshotImage}
-														priority={index === 0}
-													/>
-												) : (
-													<Box sx={platformWalkthroughStyle.imagePlaceholder}>
-														<Typography variant="body2" color="textSecondary">
-															{screenshot.imagePrompt}
-														</Typography>
-													</Box>
-												)}
-											</Box>
-										</Box>
-										<Box sx={platformWalkthroughStyle.contentBox}>
-											<Typography sx={platformWalkthroughStyle.caption}>{screenshot.caption}</Typography>
-										</Box>
-									</Box>
-								</Box>
-							))}
-						</Box>
-						<IconButton
-							onClick={nextSlide}
-							sx={{
-								color: '#fff',
-								position: 'absolute',
-								right: { xs: 0, sm: 10 },
-								zIndex: 1,
-							}}
-						>
-							<ArrowForwardIosIcon />
-						</IconButton>
-					</Box>
+   				<IconButton
+   					onClick={nextSlide}
+   					sx={platformWalkthroughStyle.arrowButton}
+   				>
+   					<ArrowForwardIosIcon />
+   				</IconButton>
+   			</Box>
 
-					<Box sx={platformWalkthroughStyle.navigationDots}>
-						{screenshots.map((_, index) => (
-							<Box
-								key={index}
-								onClick={() => goToSlide(index)}
-								sx={{
-									...platformWalkthroughStyle.dot,
-									...(currentSlide === index ? platformWalkthroughStyle.activeDot : {}),
-								}}
-							/>
-						))}
-					</Box>
-				</Box>
-			</Box>
-		</Box>
-	);
+   			<Box sx={platformWalkthroughStyle.navigationDots}>
+   				{screenshots.map((_, index) => (
+   					<Box
+   						key={index}
+   						onClick={() => goToSlide(index)}
+   						sx={{
+   							...platformWalkthroughStyle.dot,
+   							...(currentSlide === index ? platformWalkthroughStyle.activeDot : {}),
+   						}}
+   					/>
+   				))}
+   			</Box>
+   		</Box>
+   	</Box>
+   );
 };
 
 export default PlatformWalkthrough;

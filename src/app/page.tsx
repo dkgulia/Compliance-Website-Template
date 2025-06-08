@@ -92,7 +92,7 @@ export default function Home() {
 					</div>
 					<div className="md:text-3xl text-2xl mt-4 flex md:justify-between justify-center text-center md:text-left md:flex-row flex-col md:space-y-0 space-y-4">
 						<div>
-							<p>Cyber security isn’t just a checklist,</p>
+							<p>Cybersecurity isn’t just a checklist,</p>
 							<p>It’s a race against time.</p>
 						</div>
 						<div className="flex items-end md:justify-start justify-end">
@@ -307,7 +307,7 @@ export default function Home() {
 					</div>
 					<div className="flex items-center md:space-x-4 justify-center flex-col md:flex-row md:space-y-0 space-y-4">
 						<span className="text-sm rounded-lg px-4 py-1 border-neutral-700 text-gray-500 bg-neutral-800">
-							Sounds too much work?
+							Sounds Hectic?
 						</span>
 						<div className="text-gray-500 border w-4 h-0.5 border-gray-200 dark:border-gray-700 dark:text-gray-400 rounded-lg"></div>
 						<span className="text-sm rounded-lg px-4 py-1 border-neutral-700 text-gray-500 bg-neutral-800">
@@ -700,6 +700,7 @@ export default function Home() {
 							<Image src="/images/world-map-hexagon.svg" height={100} width={1000} alt="world-map" />
 						</div>
 					</div>
+
 					<div className="grid md:grid-cols-3 gap-2">
 						<div className="flex flex-col border rounded-lg p-4 bg-kite-dark-2 border-neutral-800 bg-opacity-60 space-y-4">
 							<div className="flex gap-2 text-lg items-center">
@@ -709,8 +710,8 @@ export default function Home() {
 								<span>Footprint</span>
 							</div>
 							<p className="text-sm text-gray-400">
-								Hexafort is an emerging global leader in enterprise security, with a strong presence in the US, UK, and
-								India.
+								Hexafort is an emerging global leader in enterprise security, with a strong presence in the North
+								American region , Europe , UK , Middle East , India , Singapore , Vietnam and Malaysia.
 							</p>
 						</div>
 						<div className="flex flex-col border rounded-lg p-4 bg-kite-dark-2 border-neutral-800 bg-opacity-60 space-y-4">
@@ -752,7 +753,10 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="grid md:grid-cols-3 gap-4">
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -764,7 +768,10 @@ export default function Home() {
 							</p>
 							<p className="text-sm text-gray-500 text-right">- CEO, Whizphys.ai</p>
 						</div>
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -777,7 +784,10 @@ export default function Home() {
 							</p>
 							<p className="text-sm text-gray-500 text-right">- CFO, Dartle</p>
 						</div>
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -787,7 +797,10 @@ export default function Home() {
 							</p>
 							<p className="text-sm text-gray-500 text-right">- CTO, Economize.cloud</p>
 						</div>
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -800,7 +813,10 @@ export default function Home() {
 							</p>
 							<p className="text-sm text-gray-500 text-right">- Clair Phelps, CISO</p>
 						</div>
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -810,9 +826,12 @@ export default function Home() {
 								dedication to customer satisfaction make them a reliable partner. We truly appreciate their efforts and
 								look forward to continuing our collaboration.&quot;
 							</p>
-							<p className="text-sm text-gray-500 text-right">- Intain</p>
+							<p className="text-sm text-gray-500 text-right">- Team Lead, Intain</p>
 						</div>
-						<div className="px-4 py-2 space-y-4 rounded-lg">
+						<div
+							className="px-4 py-2 space-y-4 rounded-lg border border-neutral-800 bg-opacity-60"
+							style={{ backgroundColor: '#171717' }}
+						>
 							<p className="text-3xl opacity-15">
 								<FaQuoteLeft />
 							</p>
@@ -821,7 +840,7 @@ export default function Home() {
 								compliance processes but also safeguarded our platform against potential cyber threats. Their team is
 								responsive, knowledgeable, and committed to providing top-tier security solutions.&quot;
 							</p>
-							<p className="text-sm text-gray-500 text-right">- Dartle</p>
+							<p className="text-sm text-gray-500 text-right">- Security Team, Dartle</p>
 						</div>
 					</div>
 				</div>

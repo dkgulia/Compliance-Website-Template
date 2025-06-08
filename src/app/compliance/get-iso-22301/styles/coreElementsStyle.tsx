@@ -2,18 +2,18 @@ import theme from '../../../../theme';
 
 const coreElementsStyle = {
   box: {
-    paddingTop: { sm: '1rem', xs: '0.5rem' },
-    paddingBottom: { sm: '1rem', xs: '0.5rem' },
-    marginX: { xs: '1rem', sm: '0rem' },
+    paddingTop: { xs: '0.5rem', sm: '1rem' },
+    paddingBottom: { xs: '0.5rem', sm: '1rem' },
+    marginX: { xs: '0.5rem', sm: '0rem' },
   },
   container: {
     maxWidth: '1200px',
     marginX: 'auto',
-    px: { xs: '1.5rem', sm: '2rem' },
+    px: { xs: '1rem', sm: '2rem' },
   },
   heading: {
     fontWeight: '600',
-    fontSize: { xs: '1.2rem', sm: '2rem', md: '2.2rem' },
+    fontSize: { xs: '1.4rem', sm: '2rem', md: '2.2rem' },
     color: theme.palette.text.primary,
     marginBottom: '0.5rem',
     textAlign: 'center',
@@ -21,8 +21,8 @@ const coreElementsStyle = {
   },
   subtitle: {
     color: '#6B7280',
-    fontSize: '1.2rem',
-    marginBottom: '2rem',
+    fontSize: { xs: '0.85rem', sm: '1.2rem' },
+    marginBottom: { xs: '1rem', sm: '2rem' },
     textAlign: 'center',
     fontWeight: '400',
     maxWidth: '700px',
@@ -30,14 +30,16 @@ const coreElementsStyle = {
   },
   grid: {
     marginTop: '1rem',
+    gap: { xs: 2, sm: 3 },
   },
   card: {
-    padding: '1.75rem',
+    padding: { xs: '1rem', sm: '1.75rem' },
     backgroundColor: '#17171799',
     backdropFilter: 'blur(8px)',
-    borderRadius: '1rem',
+    borderRadius: { xs: '0.75rem', sm: '1rem' },
     boxShadow: theme.customShadows?.card || '0 4px 12px rgba(0, 0, 0, 0.4)',
     height: '100%',
+    minHeight: { xs: '120px', sm: 'auto' },
     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
     border: `1px solid ${theme.palette.divider}`,
     '&:hover': {
@@ -50,26 +52,26 @@ const coreElementsStyle = {
     alignItems: 'flex-start',
   },
   iconBox: {
-    marginRight: '1rem',
+    marginRight: { xs: '0.75rem', sm: '1rem' },
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
   icon: {
-    fontSize: '2rem',
+    fontSize: { xs: '1.5rem', sm: '2rem' },
     color: '#115e59',
   },
   text: {
     color: '#6B7280',
-    fontSize: '1rem',
+    fontSize: { xs: '12px', sm: '1rem' },
     lineHeight: 1.6,
     fontWeight: '400',
   },
   cardTitle: {
     color: theme.palette.text.primary,
-    fontSize: '1.125rem',
+    fontSize: { xs: '14px', sm: '1.125rem' },
     fontWeight: '600',
-    marginBottom: '0.75rem',
+    marginBottom: { xs: '0.5rem', sm: '0.75rem' },
     lineHeight: 1.3,
   },
   cardContent: {

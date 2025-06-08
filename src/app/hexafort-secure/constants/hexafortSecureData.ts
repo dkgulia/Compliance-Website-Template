@@ -1,4 +1,4 @@
-// src/app/hexafort-secure/constants/hexafortSecureData.ts
+
 import { StaticImageData } from 'next/image';
 
 // Types
@@ -31,7 +31,7 @@ export const hexafortSecureData = {
         "HexaFort Secure"
     ],
     hero: {
-        title: "HexaFort Secure — Enterprise Security, Re-imagined",
+        title: "HexaFort Secure Enterprise Security, Re-imagined",
         subtitle: "In today's threat landscape, cybersecurity is a business priority.",
         description: [
             "HexaFort Secure is a comprehensive Enterprise Security Management solution designed to give organizations complete control, visibility, and automation across every area of their security infrastructure."
@@ -94,9 +94,9 @@ export const hexafortSecureData = {
         tagline: "HexaFort Advantage",
         title: "Automate Security, Unlock Business",
         points: [
-            "Automate security and compliance to save Time, Dollars, Effort",
-            "Handle complex security challenges and solve for custom requirements",
-            "Achieve continuous security posture and unlock new business opportunities"
+            "Automate compliance and save time, reduce costs, and minimize effort.",
+            "Tackle complex challenges and meet custom compliance requirements with ease.",
+            "Achieve continuous security posture and unlock new business opportunities."
         ],
         buttonText: "Book Your Demo"
     },
@@ -161,7 +161,7 @@ export const hexafortSecureData = {
             icon: 'link',
             href: '/integrations',
         },
-        
+
     ]
 };
 

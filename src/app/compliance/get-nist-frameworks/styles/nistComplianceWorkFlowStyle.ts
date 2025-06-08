@@ -3,7 +3,7 @@ import theme from '../../../../theme';
 const nistComplianceWorkFlowStyles = {
   box: {
     paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1.5rem' },
+    paddingBottom: { sm: '2rem', xs: '1.5rem',md:'5rem'},
     marginTop: '0rem',
     backgroundColor: theme.palette.background.default,
   },
@@ -27,7 +27,7 @@ const nistComplianceWorkFlowStyles = {
     marginX: 'auto',
     padding: { xs: '2rem', sm: '3rem' },
     border: `1px solid ${theme.palette.divider}`,
-    
+
   },
   gridWrapper: {
     display: 'flex',

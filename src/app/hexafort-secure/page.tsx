@@ -4,8 +4,8 @@ import HeroSection from './components/HeroSection';
 import OverviewSection from './components/OverviewSection';
 import FeaturesSection from './components/FeaturesSection';
 import PlatformFeaturesCarousel from './components/PlatformFeaturesCarousel';
-import BookDemo from './components/BookDemo';
 import { hexafortSecureData } from './constants/hexafortSecureData';
+import CallToActionSection from '../components/CallToActionSection';
 
 export const metadata: Metadata = {
     title: hexafortSecureData.pageTitle,
@@ -19,11 +19,11 @@ export default function HexafortSecurePage() {
             <HeroSection />
             <OverviewSection />
             <FeaturesSection />
-            <BookDemo />
-            <PlatformFeaturesCarousel 
-                title="Explore HexaFort Security Platform" 
+            <CallToActionSection/>
+            <PlatformFeaturesCarousel
+                title="Explore HexaFort Security Platform"
                 subtitle="Discover our full suite of security solutions designed to protect your business"
-                features={hexafortSecureData.platformFeatures} 
+                features={hexafortSecureData.platformFeatures}
             />
         </>
     );

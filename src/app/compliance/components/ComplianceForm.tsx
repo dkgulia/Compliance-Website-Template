@@ -13,6 +13,8 @@ import {
 	Checkbox,
 	SxProps,
 	Theme,
+	Autocomplete,
+	TextField,
 } from '@mui/material';
 import { FormikProps } from 'formik';
 import { addDataToGoogleSheetRequest } from '../../../api/googleSheetRequest';
@@ -22,7 +24,11 @@ import { SheetNameType } from '../../constants/sheetTypes';
 export interface ComplianceFormValues {
 	fullName: string;
 	email: string;
+	companyName: string;
+	phoneNumber: string;
+	country: string;
 }
+
 interface ComplianceFormProps extends FormikProps<ComplianceFormValues> {
 	title: string;
 	subtitle: string;
@@ -34,6 +40,72 @@ interface ComplianceFormProps extends FormikProps<ComplianceFormValues> {
 	complianceOptions: string[];
 }
 
+// Countries list for autocomplete
+const countries = [
+	'United States',
+	'United Kingdom',
+	'India',
+	'Germany',
+	'France',
+	'China',
+	'Japan',
+	'South Korea',
+	'Australia',
+	'Brazil',
+	'Russia',
+	'Italy',
+	'Spain',
+	'Netherlands',
+	'Sweden',
+	'Norway',
+	'Denmark',
+	'Switzerland',
+	'Austria',
+	'Belgium',
+	'Canada',
+	'Mexico',
+	'Argentina',
+	'Chile',
+	'Colombia',
+	'Peru',
+	'Venezuela',
+	'South Africa',
+	'Egypt',
+	'Nigeria',
+	'Kenya',
+	'Morocco',
+	'Turkey',
+	'Saudi Arabia',
+	'UAE',
+	'Israel',
+	'Thailand',
+	'Singapore',
+	'Malaysia',
+	'Indonesia',
+	'Philippines',
+	'Vietnam',
+	'New Zealand',
+	'Ireland',
+	'Portugal',
+	'Greece',
+	'Poland',
+	'Czech Republic',
+	'Hungary',
+	'Romania',
+	'Bulgaria',
+	'Croatia',
+	'Slovenia',
+	'Slovakia',
+	'Estonia',
+	'Latvia',
+	'Lithuania',
+	'Finland',
+	'Iceland',
+	'Luxembourg',
+	'Malta',
+	'Cyprus',
+];
+
 const ComplianceForm: React.FC<ComplianceFormProps> = ({
 	values,
 	touched,
@@ -42,6 +114,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 	handleBlur,
 	handleSubmit,
 	resetForm,
+	setFieldValue,
 	selectedOptions,
 	onOptionsChange,
 	title,
@@ -69,9 +142,21 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 			return;
 		}
 
-		if (values.fullName && !errors.fullName && values.email && !errors.email) {
+		if (values.fullName && !errors.fullName &&
+			values.email && !errors.email &&
+			values.companyName && !errors.companyName &&
+			values.phoneNumber && !errors.phoneNumber &&
+			values.country && !errors.country) {
 			setLoading(true);
-			const data = [values.fullName, values.email, getCurrentTime(), selectedOptions.join(', ')];
+			const data = [
+				values.fullName,
+				values.email,
+				values.companyName,
+				values.phoneNumber,
+				values.country,
+				getCurrentTime(),
+				selectedOptions.join(', ')
+			];
 			try {
 				await addDataToGoogleSheetRequest(sheetName, data);
 				setAlert({ type: 'success', message: 'Your response has been saved.' });
@@ -102,6 +187,10 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 		return buttonText;
 	};
 
+	const handleCountryChange = (event: any, newValue: string | null) => {
+		setFieldValue('country', newValue || '');
+	};
+
 	return (
 		<Box sx={formStyles.formContainer}>
 			{alert && (
@@ -118,17 +207,19 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 			)}
 
 			<form onSubmit={handleSubmit}>
-				<Grid container spacing={2}>
+				<Grid container spacing={1.5}>
+					{/* Header */}
 					<Grid size={{ xs: 12 }}>
 						<Typography variant="h4" sx={formStyles.formHeading}>
 							{title}
 						</Typography>
-						<Typography sx={{ marginBottom: '1rem', color: 'text.primary' }}>
+						<Typography sx={{ marginBottom: '1rem', color: 'text.secondary', fontSize: '0.9rem' }}>
 							{subtitle}
 						</Typography>
 					</Grid>
 
-					<Grid size={{ xs: 12 }}>
+					{/* Row 1: Full Name & Email */}
+					<Grid size={{ xs: 12, sm: 6 }}>
 						<FormControl fullWidth error={touched.fullName && Boolean(errors.fullName)}>
 							<Typography sx={formStyles.formLabel}>Full Name</Typography>
 							<OutlinedInput
@@ -146,7 +237,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 						</FormControl>
 					</Grid>
 
-					<Grid size={{ xs: 12 }}>
+					<Grid size={{ xs: 12, sm: 6 }}>
 						<FormControl fullWidth error={touched.email && Boolean(errors.email)}>
 							<Typography sx={formStyles.formLabel}>Work Email</Typography>
 							<OutlinedInput
@@ -162,9 +253,73 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 						</FormControl>
 					</Grid>
 
+					{/* Row 2: Company Name & Phone Number */}
+					<Grid size={{ xs: 12, sm: 6 }}>
+						<FormControl fullWidth error={touched.companyName && Boolean(errors.companyName)}>
+							<Typography sx={formStyles.formLabel}>Company Name</Typography>
+							<OutlinedInput
+								id="companyName"
+								name="companyName"
+								placeholder="Enter your company name"
+								onChange={handleChange}
+								onBlur={handleBlur}
+								value={values.companyName}
+								sx={formStyles.formInput}
+							/>
+							<FormHelperText sx={formStyles.formHelperText}>
+								{touched.companyName && errors.companyName}
+							</FormHelperText>
+						</FormControl>
+					</Grid>
+
+					<Grid size={{ xs: 12, sm: 6 }}>
+						<FormControl fullWidth error={touched.phoneNumber && Boolean(errors.phoneNumber)}>
+							<Typography sx={formStyles.formLabel}>Phone Number</Typography>
+							<OutlinedInput
+								id="phoneNumber"
+								name="phoneNumber"
+								placeholder="Enter your phone number"
+								onChange={handleChange}
+								onBlur={handleBlur}
+								value={values.phoneNumber}
+								sx={formStyles.formInput}
+							/>
+							<FormHelperText sx={formStyles.formHelperText}>
+								{touched.phoneNumber && errors.phoneNumber}
+							</FormHelperText>
+						</FormControl>
+					</Grid>
+
+					{/* Row 3: Country (Full Width) */}
+					<Grid size={{ xs: 12 }}>
+						<FormControl fullWidth error={touched.country && Boolean(errors.country)}>
+							<Typography sx={formStyles.formLabel}>Country</Typography>
+							<Autocomplete
+								id="country"
+								options={countries}
+								value={values.country}
+								onChange={handleCountryChange}
+								onBlur={handleBlur}
+								renderInput={(params) => (
+									<TextField
+										{...params}
+										placeholder="Select or type your country"
+										variant="outlined"
+										sx={formStyles.formInput}
+									/>
+								)}
+								freeSolo
+							/>
+							<FormHelperText sx={formStyles.formHelperText}>
+								{touched.country && errors.country}
+							</FormHelperText>
+						</FormControl>
+					</Grid>
+
+					{/* Compliances Section */}
 					<Grid size={{ xs: 12 }}>
 						<Typography sx={formStyles.compliancesLabel}>Compliances Interested In*</Typography>
-						<Grid container spacing={1}>
+						<Grid container spacing={0.5}>
 							{complianceOptions.map((option, index) => (
 								<Grid size={{ xs: 6, sm: 4 }} key={index}>
 									<FormControlLabel
@@ -183,6 +338,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 						</Grid>
 					</Grid>
 
+					{/* Submit Button */}
 					<Grid size={{ xs: 12 }}>
 						<Button
 							type="button"

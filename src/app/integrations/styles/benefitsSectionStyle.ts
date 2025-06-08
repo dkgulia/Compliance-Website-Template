@@ -1,90 +1,90 @@
 import theme from '../../../theme';
 
 const benefitsSectionStyle = {
-  section: {
-
-    paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.default,
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: { xs: '0 1rem', sm: '0 2rem' },
-  },
-  headerBox: {
-    textAlign: 'center',
-    width: '100%',
-    maxWidth: '800px',
-    marginX: 'auto',
-    marginBottom: '3rem',
-  },
-  title: {
-    fontSize: { xs: '1.6rem', sm: '2rem',md:'2rem' },
-    fontWeight: 600,
-    marginBottom: '1rem',
-    color: theme.palette.text.primary,
-  },
-  description: {
-    fontSize: '1.1rem',
-    color: theme.palette.text.secondary,
-    maxWidth: '700px',
-    margin: '0 auto',
-    lineHeight: 1.6,
-  },
-  benefitsGrid: {
-    display: 'grid',
-    gridTemplateColumns: {
-      xs: '1fr',
-      sm: 'repeat(2, 1fr)',
-      md: 'repeat(3, 1fr)',
-    },
-    gap: '2rem',
-    width: '100%',
-  },
-  benefitCard: {
-    padding: '2rem',
-    borderRadius: '1rem',
-    backgroundColor:
-      theme.palette.background.darkTransparent || 'rgba(23, 23, 23, 0.6)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    height: '100%',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-
-    border: `1px solid ${theme.palette.divider}`,
-    '&:hover': {
-      transform: 'translateY(-5px)',
-
-      backgroundColor: theme.palette.background.paper,
-    },
-  },
-  iconContainer: {
-    width: '3.5rem',
-    height: '3.5rem',
-    borderRadius: '0.75rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#115e59', // teal color from theme
-
-    marginBottom: '1.5rem',
-  },
-  benefitIcon: {
-    color: theme.palette.common.white,
-    fontSize: '1.5rem',
-  },
-  benefitTitle: {
-    fontWeight: 'bold',
-    color: theme.palette.text.primary,
-    fontSize: '1.25rem',
-    marginBottom: '1rem',
-  },
-  benefitDescription: {
-    color: theme.palette.text.secondary,
-    lineHeight: 1.6,
-    fontSize: '1rem',
-  },
+ section: {
+   display: 'flex',
+   flexDirection: 'column',
+   px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+   marginTop: { xs: '0rem', md: '0rem' },
+   gap: '2rem',
+   alignItems: 'center',
+   background: theme.palette.background.default,
+   position: 'relative',
+   overflow: 'hidden',
+   paddingBottom: { xs: '2rem', sm: '4rem' },
+ },
+ headerContainer: {
+   display: 'flex',
+   flexDirection: 'column',
+   alignItems: 'center',
+   justifyContent: 'center',
+   gap: '0.5rem',
+   marginBottom: '1rem',
+   textAlign: 'center',
+ },
+ tagline: {
+   fontFamily: 'monospace',
+   fontSize: '0.875rem',
+   color: '#0d9488',
+   letterSpacing: '0.05em',
+   textAlign: 'center',
+   textTransform: 'uppercase',
+ },
+ title: {
+   fontSize: { xs: '1.5rem', md: '1.875rem' },
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   textAlign: 'center',
+ },
+ subtitle: {
+   fontSize: { xs: '1rem', sm: '1.1rem' },
+   color: '#6b7280',
+   lineHeight: 1.6,
+   textAlign: 'center',
+   maxWidth: '700px',
+ },
+ card: {
+   display: 'flex',
+   flexDirection: 'column',
+   gap: '1rem',
+   padding: { xs: '1.5rem', sm: '2rem' },
+   borderRadius: '0.5rem',
+   backgroundColor: '#171717',
+   border: '1px solid #374151',
+   transition: 'transform 0.3s ease, border-color 0.3s ease',
+   height: '100%',
+   minHeight: { xs: '200px', sm: '220px', md: '240px' },
+   '&:hover': {
+     transform: 'translateY(-5px)',
+     borderColor: '#0d9488',
+   },
+ },
+ iconContainer: {
+   display: 'flex',
+   alignItems: 'center',
+   justifyContent: 'center',
+   width: '60px',
+   height: '60px',
+   borderRadius: '12px',
+   backgroundColor: '#115e59',
+   flexShrink: 0,
+ },
+ icon: {
+   fontSize: '30px',
+   color: 'white',
+ },
+ cardTitle: {
+   fontWeight: 'bold',
+   color: theme.palette.text.primary,
+   fontSize: '1.125rem',
+   marginBottom: '0.5rem',
+ },
+ cardDescription: {
+   color: '#6b7280',
+   fontSize: '0.875rem',
+   lineHeight: 1.7,
+   flex: 1,
+ },
 };
 
 export default benefitsSectionStyle;

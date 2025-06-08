@@ -1,80 +1,93 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Box, Typography, Container, Button, Grid } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
+import Button from '../../Button/HexaFortButton';
 import Image from 'next/image';
 import featuredIntegrationsStyle from '../styles/featuredIntegrationsStyle';
 import integrationsData from '../constants/integrationsData';
 
 const FeaturedIntegrationsSection: React.FC = () => {
-	const { featured } = integrationsData;
+   const { featured } = integrationsData;
 
-	const [activeCategory, setActiveCategory] = useState<string>('All');
-	const categories = ['All', ...new Set(featured.integrations.map((int) => int.category))];
-	const filteredIntegrations =
-		activeCategory === 'All'
-			? featured.integrations
-			: featured.integrations.filter((int) => int.category === activeCategory);
+   const [activeCategory, setActiveCategory] = useState<string>('All');
+   const categories = ['All', ...new Set(featured.integrations.map((int) => int.category))];
+   const filteredIntegrations =
+   	activeCategory === 'All'
+   		? featured.integrations
+   		: featured.integrations.filter((int) => int.category === activeCategory);
 
-	return (
-		<Box component="section" sx={featuredIntegrationsStyle.section}>
-			<Container sx={featuredIntegrationsStyle.container}>
-				<Box sx={featuredIntegrationsStyle.header}>
-					<Typography variant="h2" sx={featuredIntegrationsStyle.title}>
-						{featured.title}
-					</Typography>
+   return (
+   	<Box sx={featuredIntegrationsStyle.section}>
+   		<Box sx={featuredIntegrationsStyle.headerContainer}>
+   			<Typography sx={featuredIntegrationsStyle.tagline}>
+   				FEATURED INTEGRATIONS
+   			</Typography>
 
-					<Typography sx={featuredIntegrationsStyle.description}>{featured.description}</Typography>
-				</Box>
+   			<Typography sx={featuredIntegrationsStyle.title}>
+   				{featured.title}
+   			</Typography>
 
-				<Box sx={featuredIntegrationsStyle.integrationButtons}>
-					{categories.map((category, index) => (
-						<Button
-							key={index}
-							variant="outlined"
-							sx={{
-								...featuredIntegrationsStyle.filterButton,
-							}}
-							onClick={() => setActiveCategory(category)}
-						>
-							{category}
-						</Button>
-					))}
-				</Box>
+   			<Typography sx={featuredIntegrationsStyle.subtitle}>
+   				{featured.description}
+   			</Typography>
+   		</Box>
 
-				<Box sx={featuredIntegrationsStyle.integrationsGrid}>
-					{filteredIntegrations.map((integration, index) => (
-						<Box key={index} sx={featuredIntegrationsStyle.integrationCard}>
-							{integration.isNew && <Box sx={featuredIntegrationsStyle.newBadge}>New</Box>}
+   		<Box sx={featuredIntegrationsStyle.filterContainer}>
+   			{categories.map((category, index) => (
+   				<Button
+   					key={index}
+   					onClick={() => setActiveCategory(category)}
+   					sx={featuredIntegrationsStyle.filterButton}
+   				>
+   					{category}
+   				</Button>
+   			))}
+   		</Box>
 
-							{integration.comingSoon && <Box sx={featuredIntegrationsStyle.comingSoonBadge}>Coming Soon</Box>}
+   		<Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
+   			{filteredIntegrations.map((integration, index) => (
+   				<Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
+   					<Box sx={featuredIntegrationsStyle.card}>
+   						{integration.isNew && (
+   							<Box sx={featuredIntegrationsStyle.newBadge}>New</Box>
+   						)}
 
-							<Box sx={featuredIntegrationsStyle.logoContainer}>
-								{/* Use the Image component with the imported image */}
-								<Image
-									src={integration.logo}
-									alt={`${integration.name} logo`}
-									width={70}
-									height={70}
-									style={{
-										objectFit: 'contain',
-										maxWidth: '100%',
-										maxHeight: '100%',
-									}}
-								/>
-							</Box>
+   						{integration.comingSoon && (
+   							<Box sx={featuredIntegrationsStyle.comingSoonBadge}>Coming Soon</Box>
+   						)}
 
-							<Typography sx={featuredIntegrationsStyle.integrationName}>{integration.name}</Typography>
+   						<Box sx={featuredIntegrationsStyle.logoContainer}>
+   							<Image
+   								src={integration.logo}
+   								alt={`${integration.name} logo`}
+   								width={60}
+   								height={60}
+   								style={{
+   									objectFit: 'contain',
+   									maxWidth: '100%',
+   									maxHeight: '100%',
+   								}}
+   							/>
+   						</Box>
 
-							<Typography sx={featuredIntegrationsStyle.integrationDescription}>{integration.description}</Typography>
+   						<Typography sx={featuredIntegrationsStyle.cardTitle}>
+   							{integration.name}
+   						</Typography>
 
-							<Box sx={featuredIntegrationsStyle.categoryChip}>{integration.category}</Box>
-						</Box>
-					))}
-				</Box>
-			</Container>
-		</Box>
-	);
+   						<Typography sx={featuredIntegrationsStyle.cardDescription}>
+   							{integration.description}
+   						</Typography>
+
+   						<Box sx={featuredIntegrationsStyle.categoryChip}>
+   							{integration.category}
+   						</Box>
+   					</Box>
+   				</Grid>
+   			))}
+   		</Grid>
+   	</Box>
+   );
 };
 
 export default FeaturedIntegrationsSection;

@@ -51,7 +51,7 @@ export interface ThirdPartyRiskManagementQuestion {
 export const thirdPartyRiskManagementData = {
     pageTitle: "Hexafort Third-Party Risk Management Module | AI-Driven Third-Party Risk Management",
     pageSubTitle: "Simplify third-party evaluation, assessment, and continuous monitoring with real-time risk insights.",
-    pageDescription: 
+    pageDescription:
         "Hexafort's Third-Party Risk Management Module simplifies the process of evaluating, assessing, and monitoring your vendors and third parties. With AI-powered automated questionnaire answering, real-time risk assessments, and actionable insights, you can ensure strong, secure, and compliant vendor relationships—all from one easy-to-use platform.",
     keywords: [
         "vendor management",
@@ -77,25 +77,26 @@ export const thirdPartyRiskManagementData = {
         subtitle: "Four key advantages your security & compliance teams will love",
         features: [
             {
-                title: "Effortless Third-Party Evaluation",
+                title: "Vendor Scoring",
                 muiIcon: CheckCircleIcon,
                 description: "Score vendors across security, compliance, and operational criteria in minutes."
             },
             {
-                title: "Real-Time Risk Assessment",
+                title: "Live Risk Insights",
                 muiIcon: SpeedIcon,
                 description: "Instantly identify red flags and prioritize remediation with live risk scores."
             },
             {
-                title: "AI-Driven Questionnaire Answering",
+                title: "AI Auto-Fill",
                 muiIcon: AutoFixHighIcon,
                 description: "Automate tedious questionnaires and eliminate human error with Hexafort AI."
             },
             {
-                title: "Continuous Monitoring",
+                title: "24/7 Monitoring",
                 muiIcon: RadarIcon,
                 description: "Stay updated on policy changes, compliance status, and emerging threats 24/7."
             }
+
         ]
     },
     process: {

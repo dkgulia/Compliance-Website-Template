@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import SavingsIcon from '@mui/icons-material/Savings';
 import SpeedIcon from '@mui/icons-material/Speed';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -24,29 +24,38 @@ const ImpactSection: React.FC = () => {
 			icon: SecurityIcon,
 		},
 	];
+
 	return (
 		<Box sx={impactSectionStyle.section}>
-			<Container sx={impactSectionStyle.container}>
-				<Typography variant="h2" sx={impactSectionStyle.title}>
-					HexaFort's Impact: Measurable Value for Businesses
+			<Box sx={impactSectionStyle.headerContainer}>
+				<Typography sx={impactSectionStyle.tagline}>
+					MEASURABLE IMPACT
 				</Typography>
+				<Typography sx={impactSectionStyle.title}>
+					Value for Your Business
+				</Typography>
+				<Typography sx={impactSectionStyle.subtitle}>
+					Deliver tangible results that drive organizational success
+				</Typography>
+			</Box>
 
-				<Box sx={impactSectionStyle.impactGrid}>
-					{impacts.map((impact, index) => (
-						<Box key={index} sx={impactSectionStyle.impactItem}>
-							<Box sx={impactSectionStyle.iconContainer}>
-								<impact.icon sx={impactSectionStyle.icon} />
-							</Box>
-							<Typography variant="h6" sx={impactSectionStyle.impactTitle}>
+			<Box sx={impactSectionStyle.impactGrid}>
+				{impacts.map((impact, index) => (
+					<Box key={index} sx={impactSectionStyle.impactItem}>
+						<Box sx={impactSectionStyle.iconContainer}>
+							<impact.icon sx={impactSectionStyle.icon} />
+						</Box>
+						<Box sx={impactSectionStyle.textContainer}>
+							<Typography sx={impactSectionStyle.impactTitle}>
 								{impact.title}
 							</Typography>
-							<Typography variant="body2" sx={impactSectionStyle.impactDescription}>
+							<Typography sx={impactSectionStyle.impactDescription}>
 								{impact.description}
 							</Typography>
 						</Box>
-					))}
-				</Box>
-			</Container>
+					</Box>
+				))}
+			</Box>
 		</Box>
 	);
 };

@@ -17,6 +17,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React, { useState } from 'react';
 
 import contactStyle from '../components/styles/contactUsStyle';
+import { addDataToGoogleSheetRequest } from '../../api/googleSheetRequest';
+import { getCurrentTime } from '../../utils/getCurrentTime';
 
 const ContactUsComponent = () => {
 	const [formData, setFormData] = useState({
@@ -30,6 +32,8 @@ const ContactUsComponent = () => {
 	});
 
 	const [openSnackbar, setOpenSnackbar] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target;
@@ -39,24 +43,65 @@ const ContactUsComponent = () => {
 		}));
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log('Form submitted:', formData);
-		setOpenSnackbar(true);
 
-		setFormData({
-			firstName: '',
-			lastName: '',
-			email: '',
-			company: '',
-			phone: '',
-			inquiryType: '',
-			message: '',
-		});
+		// Basic validation
+		if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+			setAlert({ type: 'error', message: 'Please fill in all required fields.' });
+			setOpenSnackbar(true);
+			return;
+		}
+
+		setLoading(true);
+
+		// Prepare data array for Google Sheets
+		const data = [
+			formData.firstName,
+			formData.lastName,
+			formData.email,
+			formData.company || 'Not provided',
+			formData.phone || 'Not provided',
+			formData.inquiryType || 'General Inquiry',
+			formData.message,
+			getCurrentTime(),
+		];
+
+		try {
+			// Save to Google Sheets - using 'contactUs' as the sheet name
+			await addDataToGoogleSheetRequest('contactUs', data);
+
+			setAlert({
+				type: 'success',
+				message: "Your message has been sent successfully! We'll be in touch soon.",
+			});
+
+			// Reset form
+			setFormData({
+				firstName: '',
+				lastName: '',
+				email: '',
+				company: '',
+				phone: '',
+				inquiryType: '',
+				message: '',
+			});
+		} catch (err: any) {
+			console.error('Form submission error:', err);
+			let errorMessage = 'Failed to send message. Please try again later.';
+			if (err.response?.data?.message) {
+				errorMessage = err.response.data.message;
+			}
+			setAlert({ type: 'error', message: errorMessage });
+		} finally {
+			setLoading(false);
+			setOpenSnackbar(true);
+		}
 	};
 
 	const handleCloseSnackbar = () => {
 		setOpenSnackbar(false);
+		setAlert(null);
 	};
 
 	const inquiryTypes = [
@@ -131,9 +176,9 @@ const ContactUsComponent = () => {
 									<Typography variant="body2" sx={contactStyle.reachOutText}>
 										Our support team is available Monday through Friday, 8am-6pm PT.
 									</Typography>
-									<Link href="/support" passHref legacyBehavior>
+									<Link href="/get-a-demo" passHref legacyBehavior>
 										<Button endIcon={<ArrowForwardIcon />} sx={contactStyle.outlinedButton}>
-											Visit Support Center
+											Book A Demo
 										</Button>
 									</Link>
 								</Box>
@@ -154,7 +199,7 @@ const ContactUsComponent = () => {
 										{ name: 'company', label: 'Company Name' },
 										{ name: 'phone', label: 'Phone Number' },
 									].map((field) => (
-										<Grid size={{xs:12,sm:6}}  key={field.name}>
+										<Grid size={{ xs: 12, sm: 6 }} key={field.name}>
 											<TextField
 												{...field}
 												fullWidth
@@ -162,11 +207,12 @@ const ContactUsComponent = () => {
 												value={formData[field.name as keyof typeof formData]}
 												onChange={handleChange}
 												sx={contactStyle.textField}
+												disabled={loading}
 											/>
 										</Grid>
 									))}
 
-									<Grid size={{xs:12,sm:6}}>
+									<Grid size={{ xs: 12, sm: 6 }}>
 										<TextField
 											select
 											fullWidth
@@ -176,6 +222,7 @@ const ContactUsComponent = () => {
 											value={formData.inquiryType}
 											onChange={handleChange}
 											sx={contactStyle.textField}
+											disabled={loading}
 										>
 											{inquiryTypes.map((option) => (
 												<MenuItem key={option.value} value={option.value}>
@@ -185,7 +232,7 @@ const ContactUsComponent = () => {
 										</TextField>
 									</Grid>
 
-									<Grid size={{xs:12}}>
+									<Grid size={{ xs: 12 }}>
 										<TextField
 											required
 											fullWidth
@@ -197,12 +244,13 @@ const ContactUsComponent = () => {
 											value={formData.message}
 											onChange={handleChange}
 											sx={contactStyle.textField}
+											disabled={loading}
 										/>
 									</Grid>
 								</Grid>
 
-								<Button type="submit" variant="contained" sx={contactStyle.primaryButton}>
-									Send Message
+								<Button type="submit" variant="contained" sx={contactStyle.primaryButton} disabled={loading}>
+									{loading ? 'Sending...' : 'Send Message'}
 								</Button>
 							</Box>
 						</Grid>
@@ -225,8 +273,13 @@ const ContactUsComponent = () => {
 				onClose={handleCloseSnackbar}
 				anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
 			>
-				<Alert onClose={handleCloseSnackbar} severity="success" variant="filled" sx={contactStyle.alertStyle}>
-					Your message has been sent successfully! We'll be in touch soon.
+				<Alert
+					onClose={handleCloseSnackbar}
+					severity={alert?.type || 'success'}
+					variant="filled"
+					sx={contactStyle.alertStyle}
+				>
+					{alert?.message || "Your message has been sent successfully! We'll be in touch soon."}
 				</Alert>
 			</Snackbar>
 		</Box>

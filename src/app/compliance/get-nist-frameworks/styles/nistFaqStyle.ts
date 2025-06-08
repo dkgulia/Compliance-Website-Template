@@ -2,7 +2,7 @@ import theme from '../../../../theme';
 
 const nistFaqStyles = {
 	box: {
-		paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
+		paddingTop: { sm: '3rem', xs: '2rem', md: '3rem' },
 		paddingBottom: { sm: '4rem', xs: '2rem' },
 		backgroundColor: theme.palette.background.default,
 	},

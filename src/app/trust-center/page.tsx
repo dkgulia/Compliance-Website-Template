@@ -12,6 +12,7 @@ import FeaturesSection from './components/FeaturesSection';
 import PitfallsSection from './components/PitfallsSection';
 import CtaSection from './components/CtaSection';
 import FaqSection from './components/FaqSection';
+import CallToActionSection from '../components/CallToActionSection';
 
 import { trustCenterPageData } from './constants/trustCenterPageData';
 
@@ -39,7 +40,7 @@ const TrustCenterPage = () => {
           <InfoSection1 />
           <FeaturesSection />
           <PitfallsSection />
-          <CtaSection />
+          <CallToActionSection />
           <FaqSection />
         </Container>
       </main>

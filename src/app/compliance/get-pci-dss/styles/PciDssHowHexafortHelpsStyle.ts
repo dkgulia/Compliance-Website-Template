@@ -4,7 +4,7 @@ import { monoTextStyle } from '../../../../theme';
 const PciDssHowHexafortHelpsStyle = {
   box: {
     paddingTop: { sm: '1.5rem', xs: '1rem' },
-    paddingBottom: { sm: '2rem', xs: '1.5rem' },
+    paddingBottom: { sm: '2rem', xs: '1.5rem',md:'3rem' },
     backgroundColor: theme.palette.background.default,
   },
   container: {

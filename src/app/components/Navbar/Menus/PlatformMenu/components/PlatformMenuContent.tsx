@@ -25,6 +25,7 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 	const [expandedPanels, setExpandedPanels] = useState<string[]>(['features']);
 
 	const handlePanelToggle = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+		event.stopPropagation();
 		if (isExpanded) {
 			setExpandedPanels([...expandedPanels, panel]);
 		} else {
@@ -36,7 +37,9 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 
 	const handleNavigate = (href: string) => {
 		router.push(href);
-		if (onClose) onClose();
+		if (onClose) {
+			onClose();
+		}
 	};
 
 	const renderMobileLayout = () => {
@@ -64,7 +67,7 @@ const PlatformMenuContent: React.FC<PlatformMenuContentProps> = ({ onClose }) =>
 					>
 						<Typography sx={{ fontWeight: 600, color: '#f9fafb' }}>ALL FEATURES</Typography>
 					</AccordionSummary>
-					<AccordionDetails sx={{ padding: '2.5rem 2' }}>
+					<AccordionDetails sx={{ padding: '0.5rem 0' }}>
 						<Box sx={styles.mobileFeaturesList}>
 							{platformFeatures.map((feature, index) => (
 								<Box

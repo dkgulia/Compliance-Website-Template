@@ -8,6 +8,7 @@ import PciDssWorkflowSection from './components/PciDssWorkflowSection';
 import PciDssFaqSection from './components/PciDssFaqSection';
 import PciDssHowHexafortHelpsStyle from './components/PciDssHowHexafortHelps';
 import PciDssBookADemo from './components/PciDssBookADemo';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
 	title: 'PCI DSS Compliance | Hexafort',
@@ -33,7 +34,7 @@ const Page = () => {
 
 			<PciDssHowHexafortHelpsStyle />
 
-			<PciDssBanner />
+			<BookADemo/>
 
 			<PciDssComplianceHub />
 

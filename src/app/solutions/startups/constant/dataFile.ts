@@ -7,7 +7,7 @@ const hexafortData = {
 	"heroSection": {
 	  "title": "Comprehensive Compliance Package for Startups",
 	  "subtitle": "Complete security, privacy, and data protection in one integrated solution",
-	  "description": "HexaFort Secure presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2 Type I, and SOC 2 Type II, alongside establishing a foundation for GDPR compliance. This structured approach leverages our expertise to build robust security, privacy, and data protection practices essential for your startup's success and customer trust.",
+	  "description": "HexaFort presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2 Type I, and SOC 2 Type II, alongside establishing a foundation for GDPR compliance. This structured approach leverages our expertise to build robust security, privacy, and data protection practices essential for your startup's success and customer trust.",
 	  "callToAction": "Schedule a consultation",
 	  "imagePrompt": "Modern digital security shield or padlock icon with blue glowing cybersecurity elements and digital interface in the background, professional corporate style"
 	},

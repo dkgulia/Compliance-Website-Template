@@ -10,6 +10,7 @@ import Iso27701ComparisonSection from './components/Iso27701ComparisonSection';
 import Iso27701CtaSection from './components/Iso27701CtaSection';
 import Iso27701FaqSection from './components/Iso27701FaqSection';
 import iso27701Data from './constants/iso27701Data';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
 	title: 'ISO 27701 | Hexafort',
@@ -40,7 +41,7 @@ const Page = () => {
 			<Iso27701RealWorldSection />
 
 			{/* CTA */}
-			<Iso27701CtaSection />
+			<BookADemo/>
 
 			{/* Comparison near the bottom */}
 			<Iso27701ComparisonSection />

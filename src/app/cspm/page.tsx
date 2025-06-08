@@ -8,7 +8,7 @@ import SupportedFrameworksSection from './components/SupportedFrameworksSection'
 import ProfessionalAssistanceSection from './components/ProfessionalAssistanceSection';
 import EfficiencyEnhancementsSection from './components/EfficiencyEnhancementsSection';
 import UseCasesSection from './components/UseCasesSection';
-import CallToActionSection from './components/CallToActionSection';
+import CallToActionSection from '../components/CallToActionSection';
 import TeamInfoSection from './components/TeamInfoSection';
 import FAQSection from './components/FAQSection';
 import { cspmData } from './constants/cspmData';

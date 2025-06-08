@@ -14,6 +14,7 @@ import DoraBookNowBanner from './components/DoraBookNowBanner';
 import DoraFaqSection from './components/DoraFaqSection';
 import TalkToAnExpertDora from './components/TalkToAnExpertDora';
 import DoraFivePillars from './components/DoraFivePillars';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
 	title: complianceData.pageTitle,
@@ -31,7 +32,7 @@ export default function Page() {
 			<DoraHowWeHelp />
 			<DoraRoadmap />
 			<DoraFeaturesSection />
-			<DoraBookNowBanner />
+			<BookADemo/>
 			<DoraFaqSection />
 			<TalkToAnExpertDora />
 		</Box>

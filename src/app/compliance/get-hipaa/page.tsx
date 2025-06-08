@@ -6,6 +6,7 @@ import HipaaComplianceHub from './components/HipaaComplianceHub';
 import FaqHipaa from './components/HipaaFaqSection';
 import HipaaComplianceWorkFlow from './components/HipaaComplianceWorkflow';
 import HIPAACOST from './components/HipaaCost';
+import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
 	title: 'HIPAA Compliance | Simplified Solutions',
@@ -22,6 +23,7 @@ const Page = () => {
 			<HipaaComplianceHub/>
 			<HipaaComplianceWorkFlow/>
 			<HIPAACOST/>
+			<BookADemo/>
 			<FaqHipaa/>
 
 		</>

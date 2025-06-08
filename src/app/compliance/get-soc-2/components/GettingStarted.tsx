@@ -45,8 +45,8 @@ const SOC2StepsSection = () => {
                                     <Image
                                         src={stepImages[index] || "/images/soc2/step-placeholder.png"}
                                         alt={`Step ${index + 1}`}
-                                        width={350}
-                                        height={350}
+                                        width={300}
+                                        height={300}
                                         layout="intrinsic"
                                     />
                                 </Box>

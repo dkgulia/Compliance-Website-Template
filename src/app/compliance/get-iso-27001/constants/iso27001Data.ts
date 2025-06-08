@@ -324,19 +324,19 @@ export const iso27001Data = {
                   title: "ISO 27001 Implementation Roadmap",
                   subtitle: "Follow a structured Plan-Do-Check-Act approach. Define your context, implement security controls, and continually refine your ISMS to meet the latest requirements.",
                   steps: [
-                    { title: "Plan: Define Scope & Objectives",
+                    { title: " Define Scope & Objectives",
                       image: step1,
                       imagePrompt:'A compliance-focused icon featuring a shield with a checklist and magnifying glass, symbolizing defining scope, organizational boundaries, and security objectives.'
                     },
-                    { title: "Do: Implement Controls & Policies",
+                    { title: " Implement Controls & Policies",
                       image: step2,
                       imagePrompt:'An icon of a checklist and a pencil overlayed on a security badge, representing implementing security controls and writing policies for organizational compliance'
                     },
-                    { title: "Check: Audit & Measure Effectiveness",
+                    { title: " Audit & Measure Effectiveness",
                       image: step3,
                       iamgePrompt:'An icon of a clipboard with audit details, a magnifying glass, and a bar chart, symbolizing auditing and evaluating the effectiveness of security measures.'
                     },
-                    { title: "Act: Address Nonconformities",
+                    { title: " Address Nonconformities",
                       image: step4,
                       imagePrompt:'An issue resolution icon featuring a warning symbol and gear, illustrating identifying and addressing nonconformities in compliance processes.'
                     },

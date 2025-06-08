@@ -1,98 +1,118 @@
 import theme from '../../../theme';
 
 const faqSectionStyle = {
-  box: {
-    paddingTop: { sm: '3rem', xs: '2rem', md: '1rem' },
-    paddingBottom: { sm: '4rem', xs: '2rem' },
-    backgroundColor: theme.palette.background.default,
-  },
-  section: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: { xs: '0 1rem', sm: '0 2rem' },
-  },
-  title: {
-    fontSize: { xs: '1.8rem', sm: '32px' },
-    fontWeight: 600,
-    textAlign: 'center',
-    marginBottom: '0.75rem',
-    color: theme.palette.text.primary,
-  },
-  subtitle: {
-    fontSize: { xs: '1rem', sm: '1.1rem' },
-    textAlign: 'center',
-    marginBottom: '2.5rem',
-    color: '#6B7280',
-  },
-  categoryContainer: {
-    marginBottom: '3rem',
-  },
-  categoryTitle: {
-    fontSize: '1.3rem',
-    fontWeight: 600,
-    marginBottom: '1.5rem',
-    color: '#115e59', 
-    paddingBottom: '0.5rem',
-    borderBottom: '1px solid #333',
-  },
-  accordionContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: '#17171799',
-    border: `1px solid #333`,
-    borderRadius: '12px',
-    overflow: 'hidden',
-    marginBottom: '2rem',
-  },
-  accordion: {
-    backgroundColor: '#17171799',
-    boxShadow: 'none',
-    '&:before': {
-      display: 'none',
-    },
-    '&.Mui-expanded': {
-      margin: 0,
-    },
-    borderBottom: '1px solid #333',
-    '&:last-child': {
-      borderBottom: 'none',
-    },
-  },
-  accordionSummary: {
-    padding: '1.25rem 1.5rem',
-    backgroundColor: '#17171799',
-    minHeight: '64px',
-    '& .MuiAccordionSummary-content': {
-      margin: '0',
-    },
-    '&.Mui-expanded': {
-      minHeight: '64px',
-    },
-  },
-  expandIcon: {
-    color: theme.palette.text.primary,
-    fontSize: '1.25rem',
-    transform: 'rotate(0deg)',
-    '&.Mui-expanded': {
-      transform: 'rotate(45deg)',
-    },
-  },
-  questionTypography: {
-    fontSize: '1rem',
-    fontWeight: 500,
-    color: theme.palette.text.primary,
-  },
-  accordionDetails: {
-    padding: '1.25rem 1.5rem',
-    backgroundColor: '#171717',
-    color: theme.palette.text.secondary,
-    borderTop: '1px solid #333',
-  },
-  answerTypography: {
-    fontSize: '1rem',
-    lineHeight: 1.6,
-    color: theme.palette.text.secondary,
-  },
+ section: {
+   display: 'flex',
+   flexDirection: 'column',
+   px: { xs: '1.5rem', md: '12rem', '2xl': '18rem' },
+   marginTop: { xs: '3.5rem', md: '6rem' },
+   paddingBottom: { xs: '1rem', md: '2rem' },
+   gap: '2rem',
+   alignItems: 'center',
+   background: theme.palette.background.default,
+   position: 'relative',
+   overflow: 'hidden',
+ },
+ headerContainer: {
+   display: 'flex',
+   flexDirection: 'column',
+   alignItems: 'center',
+   justifyContent: 'center',
+   gap: '0.5rem',
+   marginBottom: '1rem',
+   textAlign: 'center',
+ },
+ tagline: {
+   fontFamily: 'monospace',
+   fontSize: '0.875rem',
+   color: '#0d9488',
+   letterSpacing: '0.05em',
+   textTransform: 'uppercase',
+ },
+ title: {
+   fontSize: { xs: '1.5rem', md: '1.875rem' },
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   textAlign: 'center',
+ },
+ subtitle: {
+   color: '#6b7280',
+   fontSize: { xs: '1rem', sm: '1.1rem' },
+   lineHeight: 1.6,
+   textAlign: 'center',
+ },
+ categoryContainer: {
+   marginBottom: '3rem',
+   width: '100%',
+   maxWidth: '1000px',
+ },
+ categoryTitle: {
+   fontSize: '1.3rem',
+   fontWeight: 600,
+   marginBottom: '1.5rem',
+   color: '#0d9488',
+   paddingBottom: '0.5rem',
+   borderBottom: '1px solid #374151',
+ },
+ accordionContainer: {
+   display: 'flex',
+   flexDirection: 'column',
+   backgroundColor: '#171717',
+   border: '1px solid #374151',
+   borderRadius: '12px',
+   overflow: 'hidden',
+   marginBottom: '2rem',
+ },
+ accordion: {
+   backgroundColor: '#171717',
+   boxShadow: 'none',
+   '&:before': {
+     display: 'none',
+   },
+   '&.Mui-expanded': {
+     margin: 0,
+   },
+   borderBottom: '1px solid #374151',
+   '&:last-child': {
+     borderBottom: 'none',
+   },
+ },
+ accordionSummary: {
+   padding: '1.25rem 1.5rem',
+   backgroundColor: '#171717',
+   minHeight: '64px',
+   '& .MuiAccordionSummary-content': {
+     margin: '0',
+   },
+   '&.Mui-expanded': {
+     minHeight: '64px',
+   },
+ },
+ expandIcon: {
+   color: theme.palette.text.primary,
+   fontSize: '1.25rem',
+   transition: 'transform 0.3s ease',
+   '&.Mui-expanded': {
+     transform: 'rotate(45deg)',
+   },
+ },
+ questionTypography: {
+   fontSize: '1rem',
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+ },
+ accordionDetails: {
+   padding: '1.25rem 1.5rem',
+   backgroundColor: 'rgba(23, 23, 23, 1)',
+   color: '#6b7280',
+   borderTop: '1px solid #374151',
+ },
+ answerTypography: {
+   fontSize: '1rem',
+   color: '#6b7280',
+   lineHeight: 1.7,
+   textAlign: 'left',
+ },
 };
 
 export default faqSectionStyle;

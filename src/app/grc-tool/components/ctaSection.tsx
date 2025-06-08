@@ -1,89 +1,83 @@
-'use client';
+'use client'
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { Box, Typography, Button } from '@mui/material';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircle';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+
+
+const features = [
+	'10-minute tailored demonstration',
+	'Live cloud security assessment',
+	'Compliance gap report to keep',
+	'No sales pressure - just practical insights',
+];
 
 const CTASection: React.FC = () => {
-	const formFeatures = ['No credit card required', 'Full-featured 14-day trial', 'Cancel anytime'];
+	const router = useRouter();
+
+	const handleBookDemo = () => {
+		router.push('/get-a-demo');
+	};
 
 	return (
 		<Box sx={ctaSectionStyle.section}>
-			<Container sx={ctaSectionStyle.container}>
-				<Box sx={ctaSectionStyle.content}>
-					<Box sx={ctaSectionStyle.textContent}>
-						<Typography variant="h2" sx={ctaSectionStyle.title}>
-							Ready to Revolutionize Your GRC Strategy?
-						</Typography>
-						<Typography variant="body1" sx={ctaSectionStyle.description}>
-							Join forward-thinking organizations that are transforming their security posture with HexaFort's
-							AI-powered platform.
-						</Typography>
+			<Box sx={ctaSectionStyle.headerContainer}>
+				<Typography sx={ctaSectionStyle.tagline}>
+					GET STARTED TODAY
+				</Typography>
+				<Typography sx={ctaSectionStyle.title}>
+					Ready to Transform Your Security?
+				</Typography>
+				<Typography sx={ctaSectionStyle.subtitle}>
+					Experience the power of AI-driven GRC in action
+				</Typography>
+			</Box>
+
+			<Box sx={ctaSectionStyle.contentWrapper}>
+				<Box sx={ctaSectionStyle.textContent}>
+					<Typography sx={ctaSectionStyle.ctaTitle}>
+						See HexaFort Live
+					</Typography>
+					<Typography sx={ctaSectionStyle.description}>
+						Get a free cloud security assessment and compliance gap report you can use immediately.
+						No obligations, just actionable insights.
+					</Typography>
+
+					<Box sx={ctaSectionStyle.featureList}>
+						{features.map((feature, index) => (
+							<Box key={index} sx={ctaSectionStyle.featureItem}>
+								<CheckCircleOutlineIcon sx={ctaSectionStyle.featureIcon} />
+								<Typography sx={ctaSectionStyle.featureText}>{feature}</Typography>
+							</Box>
+						))}
 					</Box>
 
-					<Box sx={ctaSectionStyle.formContainer}>
-						<Typography variant="h5" sx={ctaSectionStyle.formTitle}>
-							Get Started with HexaFort
-						</Typography>
-						<Typography variant="body2" sx={ctaSectionStyle.formDescription}>
-							Fill out the form below to create your account and access the platform.
-						</Typography>
-
-						<form>
-							<Box sx={ctaSectionStyle.inputContainer}>
-								<label htmlFor="fullName" style={ctaSectionStyle.inputLabel as React.CSSProperties}>
-									Full Name
-								</label>
-								<input
-									type="text"
-									id="fullName"
-									placeholder="John Doe"
-									style={ctaSectionStyle.input as React.CSSProperties}
-								/>
-							</Box>
-
-							<Box sx={ctaSectionStyle.inputContainer}>
-								<label htmlFor="workEmail" style={ctaSectionStyle.inputLabel as React.CSSProperties}>
-									Work Email
-								</label>
-								<input
-									type="email"
-									id="workEmail"
-									placeholder="john@company.com"
-									style={ctaSectionStyle.input as React.CSSProperties}
-								/>
-							</Box>
-
-							<Box sx={ctaSectionStyle.inputContainer}>
-								<label htmlFor="company" style={ctaSectionStyle.inputLabel as React.CSSProperties}>
-									Company
-								</label>
-								<input
-									type="text"
-									id="company"
-									placeholder="Your Company, Inc."
-									style={ctaSectionStyle.input as React.CSSProperties}
-								/>
-							</Box>
-
-							<Button type="submit" sx={ctaSectionStyle.formButton}>
-								Get Started
-							</Button>
-						</form>
-
-						<Box sx={ctaSectionStyle.featuresContainer}>
-							{formFeatures.map((feature, index) => (
-								<Box key={index} sx={ctaSectionStyle.featureItem}>
-									<CheckCircleOutlineIcon sx={ctaSectionStyle.featureIcon} />
-									<Typography variant="body2" sx={ctaSectionStyle.featureText}>
-										{feature}
-									</Typography>
-								</Box>
-							))}
-						</Box>
-					</Box>
+					<Button
+						variant="contained"
+						sx={ctaSectionStyle.button}
+						startIcon={<CalendarMonthIcon />}
+						onClick={handleBookDemo}
+					>
+						Book My Free Demo Now
+					</Button>
 				</Box>
-			</Container>
+
+				<Box sx={ctaSectionStyle.imageContainer}>
+					<Image
+						src={demoImage}
+						alt="Demo visual"
+						style={{
+							width: '100%',
+							maxWidth: '400px',
+							height: 'auto',
+							borderRadius: '0.5rem',
+						}}
+					/>
+				</Box>
+			</Box>
 		</Box>
 	);
 };

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import SecurityIcon from '@mui/icons-material/Security';
 import AssignmentLateIcon from '@mui/icons-material/AssignmentLate';
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
@@ -11,49 +11,57 @@ const ChallengesSection: React.FC = () => {
 	const challenges = [
 		{
 			title: "Data Breaches & Fines",
-			description: "Data breaches are on the rise, leading to significant financial and reputational damage.",
+			description: "Data breaches are rising rapidly, leading to significant financial losses and lasting reputational damage for organizations.",
 			icon: SecurityIcon
 		},
 		{
 			title: "Compliance Fatigue",
-			description: "Businesses struggle to keep up with the ever-changing regulatory landscape.",
+			description: "Businesses struggle to keep up with constantly evolving regulatory landscape and complex compliance requirements.",
 			icon: AssignmentLateIcon
 		},
 		{
 			title: "Inefficient Processes",
-			description: "Manual GRC processes are time-consuming, error-prone, and lack visibility.",
+			description: "Manual GRC processes consume valuable time, introduce human errors, and provide limited operational visibility.",
 			icon: PendingActionsIcon
 		},
 		{
-			title: "Managing Complex IT Infrastructures",
-			description: "Modern IT environments are increasingly complex, with hybrid clouds, mobile devices, and a growing number of applications.",
+			title: "Complex IT Infrastructure",
+			description: "Modern IT environments involve hybrid clouds, mobile devices, and numerous applications requiring comprehensive management.",
 			icon: CloudSyncIcon
 		}
 	];
 
 	return (
 		<Box sx={challengesSectionStyle.section}>
-			<Container sx={challengesSectionStyle.container}>
-				<Typography variant="h2" sx={challengesSectionStyle.title}>
-					The Challenge: Unmanageable Compliance
+			<Box sx={challengesSectionStyle.headerContainer}>
+				<Typography sx={challengesSectionStyle.tagline}>
+					THE CHALLENGE
 				</Typography>
+				<Typography sx={challengesSectionStyle.title}>
+					Unmanageable Compliance
+				</Typography>
+				<Typography sx={challengesSectionStyle.subtitle}>
+					Modern organizations face unprecedented compliance challenges
+				</Typography>
+			</Box>
 
-				<Box sx={challengesSectionStyle.grid}>
-					{challenges.map((challenge, index) => (
-						<Box key={index} sx={challengesSectionStyle.challengeItem}>
-							<Box sx={challengesSectionStyle.iconContainer}>
-								<challenge.icon sx={challengesSectionStyle.icon} />
-							</Box>
-							<Typography variant="h6" sx={challengesSectionStyle.challengeTitle}>
+			<Box sx={challengesSectionStyle.grid}>
+				{challenges.map((challenge, index) => (
+					<Box key={index} sx={challengesSectionStyle.challengeItem}>
+						<Box sx={challengesSectionStyle.iconContainer}>
+							<challenge.icon />
+						</Box>
+						<Box sx={challengesSectionStyle.textContainer}>
+							<Typography sx={challengesSectionStyle.challengeTitle}>
 								{challenge.title}
 							</Typography>
-							<Typography variant="body2" sx={challengesSectionStyle.challengeDescription}>
+							<Typography sx={challengesSectionStyle.challengeDescription}>
 								{challenge.description}
 							</Typography>
 						</Box>
-					))}
-				</Box>
-			</Container>
+					</Box>
+				))}
+			</Box>
 		</Box>
 	);
 };

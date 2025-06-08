@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography } from '@mui/material';
-import pitfallsSectionStyle from '../styles/pitfallsSectionStyle';
+import { Box, Typography,Grid } from '@mui/material';
+import styles from '../styles/pitfallsSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 import Image from 'next/image';
 import icon1 from '../images/pdf.png';
@@ -18,44 +18,45 @@ const patchedItems = trustCenterPageData.sections.pitfalls.items.map((item, inde
 
 const PitfallsSection: React.FC = () => {
 	const data = trustCenterPageData.sections.pitfalls;
-
 	return (
-		<Box sx={pitfallsSectionStyle.container}>
-			<Box sx={pitfallsSectionStyle.outerContainer}>
-				<Box sx={pitfallsSectionStyle.innerBox}>
-					<Box sx={pitfallsSectionStyle.titleSection}>
-						<Box sx={pitfallsSectionStyle.chip}>Common Challenges</Box>
-						<Typography variant="h2" sx={pitfallsSectionStyle.title}>
-							{data.title}
-						</Typography>
-						<Typography sx={pitfallsSectionStyle.subtitle}>{data.subtitle}</Typography>
-					</Box>
+		<Box sx={styles.section}>
+		  <Box sx={styles.headerContainer}>
+		    <Box sx={styles.chip}>{data.tagline}</Box>
+		    <Typography sx={styles.title}>
+		      {data.title}
+		    </Typography>
+		    <Typography sx={styles.subtitle}>
+		      {data.subtitle}
+		    </Typography>
+		  </Box>
 
-					<Box sx={pitfallsSectionStyle.gridContainer}>
-						{patchedItems.map((item, index) => (
-							<Box key={index} sx={pitfallsSectionStyle.pitfallCard}>
-								<Box sx={pitfallsSectionStyle.iconTopSection}>
-									<Box sx={pitfallsSectionStyle.iconContainer}>
-										<Image
-											src={item.icon}
-											alt={item.heading}
-											width={80}
-											height={60}
-											style={pitfallsSectionStyle.icon}
-										/>
-									</Box>
-								</Box>
-								<Box sx={pitfallsSectionStyle.contentBottomSection}>
-									<Typography sx={pitfallsSectionStyle.pitfallTitle}>{item.heading}</Typography>
-									<Typography sx={pitfallsSectionStyle.solutionText}>{item.subheading}</Typography>
-								</Box>
-							</Box>
-						))}
-					</Box>
-				</Box>
-			</Box>
+		  <Box sx={styles.gridContainer}>
+		    <Grid container spacing={3} sx={{ alignItems: 'stretch' }}>
+		      {patchedItems.map((item, index) => (
+			<Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+			  <Box sx={styles.card}>
+			    <Box sx={styles.iconTopSection}>
+			      <Box sx={styles.iconContainer}>
+				<Image
+				  src={item.icon}
+				  alt={item.heading}
+				  width={80}
+				  height={60}
+				  style={{ color: 'white', maxWidth: '100%', height: 'auto' }}
+				/>
+			      </Box>
+			    </Box>
+			    <Box sx={styles.contentBottomSection}>
+			      <Typography sx={styles.cardTitle}>{item.heading}</Typography>
+			      <Typography sx={styles.cardDescription}>{item.subheading}</Typography>
+			    </Box>
+			  </Box>
+			</Grid>
+		      ))}
+		    </Grid>
+		  </Box>
 		</Box>
-	);
-};
+	      );
+	     };
 
-export default PitfallsSection;
+	     export default PitfallsSection;

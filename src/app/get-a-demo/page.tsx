@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import TrustedCompaniesSection from './components/TrustedCompaniesSection';
 import FAQSection from './components/FAQSection';
 import TestimonialSection from './components/TestimonialSection';
-import CallToActionSection from '../cspm/components/CallToActionSection';
+import CallToActionSection from '../components/CallToActionSection';
 
 export const metadata: Metadata = {
 	title: 'Compliance | HexaFort',

@@ -5,15 +5,18 @@ import { useTheme } from '@mui/material/styles';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SpeedIcon from '@mui/icons-material/Speed';
 import VerifiedIcon from '@mui/icons-material/Verified';
+import Button from '../../Button/HexaFortButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 import Image from 'next/image';
 import evidenceCollectionDashboard from '../images/hero-image.png';
+import { useRouter } from 'next/navigation';
 
 const HeroSection: React.FC = () => {
 	const theme = useTheme();
 	const styles = heroSectionStyle(theme);
 	const { hero } = evidenceCollectionData;
+	const router = useRouter();
 	const featureItems = [
 		{
 			icon: AccessTimeIcon,
@@ -32,13 +35,17 @@ const HeroSection: React.FC = () => {
 		},
 	];
 
+	const handleBookDemo = () => {
+		router.push('/get-a-demo');
+	};
+
 	return (
 		<Box component="section" sx={styles.container}>
 			<Container sx={styles.containerBox}>
 				<Box sx={styles.leftContentBox}>
 					<Box sx={styles.tag}>
 						<Typography variant="body2" sx={styles.tagText}>
-							Evidence Collection
+							EVIDENCE COLLECTION
 						</Typography>
 					</Box>
 
@@ -54,6 +61,8 @@ const HeroSection: React.FC = () => {
 							{paragraph}
 						</Typography>
 					))}
+
+
 
 					<Box sx={styles.featuresContainer}>
 						{featureItems.map((item, index) => {
@@ -71,6 +80,7 @@ const HeroSection: React.FC = () => {
 							);
 						})}
 					</Box>
+					<Button onClick={handleBookDemo}>{hero.ctaText}</Button>
 				</Box>
 
 				<Box sx={styles.rightBox}>

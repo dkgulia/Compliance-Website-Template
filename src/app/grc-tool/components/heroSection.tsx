@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Container, Button } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { useRouter } from 'next/navigation';
 
@@ -12,30 +12,47 @@ const HeroSection: React.FC = () => {
 
 	return (
 		<Box sx={heroSectionStyle.section}>
-			<Container maxWidth="lg" sx={heroSectionStyle.container}>
-				<Box sx={heroSectionStyle.content}>
-					<Typography variant="h1" sx={heroSectionStyle.title}>
-						HexaFort: Revolutionizing
-						<br />
-						GRC for Sustainable Growth
-					</Typography>
+			<Box sx={heroSectionStyle.container}>
+				<Box sx={heroSectionStyle.leftContent}>
+					<Box sx={heroSectionStyle.titleSection}>
+						<Box sx={heroSectionStyle.tag}>
+							<Typography component="span">✨</Typography>
+							<Typography component="p">Introducing HexaFort GRC</Typography>
+						</Box>
+						<Typography sx={heroSectionStyle.titlePrimary}>
+							HexaFort Revolutionizing
+						</Typography>
+						<Typography sx={heroSectionStyle.titleSecondary}>
+							GRC for Sustainable Growth
+						</Typography>
+						<Typography sx={heroSectionStyle.gradientTitle}>
+							AI-Powered. Intelligent.
+						</Typography>
+					</Box>
 
-					<Typography variant="body1" sx={heroSectionStyle.description}>
-						HexaFort is an AI-powered platform that provides a comprehensive suite of tools for managing all aspects of
-						Information Security and Data Privacy. From risk assessments and compliance audits to incident response and
-						data breach notification.
-					</Typography>
+					<Box sx={heroSectionStyle.descriptionContainer}>
+						<Typography sx={heroSectionStyle.descriptionPrimary}>
+							AI-powered platform for comprehensive security management.
+						</Typography>
+						<Typography sx={heroSectionStyle.descriptionSecondary}>
+							From risk assessments to compliance audits.
+						</Typography>
+						<Typography sx={heroSectionStyle.descriptionTertiary}>
+							We've got you covered. 24x7.
+						</Typography>
+					</Box>
 
-					<Box sx={heroSectionStyle.buttonsContainer}>
-						<Button variant="contained" sx={heroSectionStyle.primaryButton }onClick={handleBookDemo}>
+					<Box sx={heroSectionStyle.buttonContainer}>
+						<Box
+							component="button"
+							sx={heroSectionStyle.getStartedButton}
+							onClick={handleBookDemo}
+						>
 							Get Started
-						</Button>
-						<Button variant="outlined" sx={heroSectionStyle.secondaryButton} onClick={handleBookDemo}>
-							Book a Demo
-						</Button>
+						</Box>
 					</Box>
 				</Box>
-			</Container>
+			</Box>
 		</Box>
 	);
 };
