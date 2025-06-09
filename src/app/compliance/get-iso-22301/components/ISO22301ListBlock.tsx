@@ -58,7 +58,7 @@ const ISO22301ListBlock: React.FC<Props> = ({ sectionId }) => {
 								placeholder="blur"
 								width={350}
 								height={350}
-								style={listBlockStyle.imageStyle}
+								style={{ maxWidth: '80%', height: 'auto', objectFit: 'contain' }}
 							/>
 						</Box>
 					</Grid>

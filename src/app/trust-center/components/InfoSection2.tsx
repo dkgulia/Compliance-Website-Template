@@ -23,7 +23,7 @@ const InfoSection2: React.FC = () => {
   });
 
   return (
-    <Box sx={infoSectionStyle.container}>
+    <Box sx={infoSectionStyle.section}>
       <Box sx={infoSectionStyle.innerBox}>
         <Box sx={infoSectionStyle.imageLeft}>
           <Box sx={infoSectionStyle.imageContainer}>

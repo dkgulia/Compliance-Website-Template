@@ -258,9 +258,9 @@ const AppBarB2B: React.FC = () => {
 							</>
 						)}
 						{activeMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
-						{activeMenu === 'platform' && <PlatformMenu onClose={closeAllMenus} />}
-						{activeMenu === 'compliance' && <ComplianceMenu onClose={closeAllMenus} />}
-						{activeMenu === 'about' && <AboutMenu onClose={closeAllMenus} />}
+						{activeMenu === 'platform' && <PlatformMenu />}
+						{activeMenu === 'compliance' && <ComplianceMenu />}
+						{activeMenu === 'about' && <AboutMenu />}
 					</Box>
 				)}
 			</AppBar>
@@ -303,9 +303,9 @@ const AppBarB2B: React.FC = () => {
 							</Box>
 
 							{mobileSubMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
-							{mobileSubMenu === 'platform' && <PlatformMenu onClose={handleMobileMenuClose} />}
-							{mobileSubMenu === 'compliance' && <ComplianceMenu onClose={handleMobileMenuClose} />}
-							{mobileSubMenu === 'about' && <AboutMenu onClose={handleMobileMenuClose} />}
+							{mobileSubMenu === 'platform' && <PlatformMenu />}
+							{mobileSubMenu === 'compliance' && <ComplianceMenu />}
+							{mobileSubMenu === 'about' && <AboutMenu />}
 						</>
 					) : (
 						<>

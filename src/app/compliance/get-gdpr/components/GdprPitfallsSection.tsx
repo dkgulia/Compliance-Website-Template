@@ -58,7 +58,7 @@ export default function GdprPitfallsSection() {
                                             <img
                                                 src={pitfallIcons[index]?.src || pitfallIcons[0].src}
                                                 alt={`Pitfall ${index + 1}`}
-                                                style={pitfallsSectionStyle.warningIcon}
+                                                style={{ width: '48px', height: '48px' }}
                                             />
                                         </Box>
                                         <Box sx={pitfallsSectionStyle.pitfallContent}>

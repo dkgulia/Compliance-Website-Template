@@ -65,17 +65,9 @@ const CTASection: React.FC = () => {
 					</Button>
 				</Box>
 
+				{/* Image placeholder - demoImage import missing */}
 				<Box sx={ctaSectionStyle.imageContainer}>
-					<Image
-						src={demoImage}
-						alt="Demo visual"
-						style={{
-							width: '100%',
-							maxWidth: '400px',
-							height: 'auto',
-							borderRadius: '0.5rem',
-						}}
-					/>
+					{/* TODO: Add demo image when available */}
 				</Box>
 			</Box>
 		</Box>

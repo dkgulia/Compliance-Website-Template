@@ -27,7 +27,7 @@ const PciDssFeaturesSection: React.FC = () => {
                        alt={feature.title}
                        width={32}
                        height={32}
-                       style={featuresSectionStyle.iconImage}
+                       style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
                      />
                    </Box>
 

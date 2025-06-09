@@ -70,6 +70,39 @@ const styles = {
    overflow: 'hidden',
    display: 'block', 
  },
+ contentRight: {
+   flex: 1,
+   order: { xs: 2, md: 2 },
+   textAlign: { xs: 'center', md: 'left' },
+   display: 'flex',
+   flexDirection: 'column',
+   gap: '1rem',
+   alignItems: { xs: 'center', md: 'flex-start' },
+ },
+ imageLeft: {
+   flex: 1,
+   order: { xs: 1, md: 1 },
+   display: 'flex',
+   justifyContent: 'center',
+   alignItems: 'center',
+   width: '100%',
+ },
+ bulletPoint: {
+   display: 'flex',
+   alignItems: 'flex-start',
+   gap: '0.5rem',
+   marginBottom: '0.75rem',
+ },
+ bulletIcon: {
+   color: theme.palette.secondary.main,
+   fontSize: '0.5rem',
+   marginTop: '0.5rem',
+ },
+ highlightText: {
+   fontWeight: 600,
+   color: theme.palette.text.primary,
+   fontSize: '1rem',
+ },
 };
 
 export default styles;

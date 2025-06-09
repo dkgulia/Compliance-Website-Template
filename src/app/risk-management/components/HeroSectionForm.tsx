@@ -78,9 +78,9 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={2}>
-					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
+					<Grid size={{ xs: 12 }}>
 						<FormControl fullWidth error={touched.name && Boolean(errors.name)}>
-							<Typography sx={heroSectionStyle.formLabel}>Full Name</Typography>
+							<Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: theme.palette.text.primary, marginBottom: '0.5rem' }}>Full Name</Typography>
 							<OutlinedInput
 								id="name"
 								name="name"
@@ -88,15 +88,15 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.name}
-								sx={heroSectionStyle.formInput}
+								sx={{ backgroundColor: theme.palette.background.paper, borderRadius: '0.5rem', '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.palette.divider } }}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.name && errors.name}</FormHelperText>
+							<FormHelperText sx={{ color: theme.palette.error.main }}>{touched.name && errors.name}</FormHelperText>
 						</FormControl>
 					</Grid>
 
-					<Grid size={{ xs: 12 }} sx={heroSectionStyle.gridItem}>
+					<Grid size={{ xs: 12 }}>
 						<FormControl fullWidth error={touched.email && Boolean(errors.email)}>
-							<Typography sx={heroSectionStyle.formLabel}>Work Email</Typography>
+							<Typography sx={{ fontSize: '0.9rem', fontWeight: 600, color: theme.palette.text.primary, marginBottom: '0.5rem' }}>Work Email</Typography>
 							<OutlinedInput
 								id="email"
 								name="email"
@@ -104,9 +104,9 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 								onChange={handleChange}
 								onBlur={handleBlur}
 								value={values.email}
-								sx={heroSectionStyle.formInput}
+								sx={{ backgroundColor: theme.palette.background.paper, borderRadius: '0.5rem', '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.palette.divider } }}
 							/>
-							<FormHelperText sx={heroSectionStyle.formHelperText}>{touched.email && errors.email}</FormHelperText>
+							<FormHelperText sx={{ color: theme.palette.error.main }}>{touched.email && errors.email}</FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -117,7 +117,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 									checked={isChecked}
 									onChange={(e) => setIsChecked(e.target.checked)}
 									color="primary"
-									sx={heroSectionStyle.checkbox}
+									sx={{ color: theme.palette.primary.main }}
 								/>
 							}
 							label={
@@ -127,7 +127,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 					</Grid>
 
 					<Grid size={{ xs: 12 }}>
-						<Typography sx={heroSectionStyle.secondaryText}>
+						<Typography sx={{ fontSize: '0.8rem', color: theme.palette.text.secondary, textAlign: 'center' }}>
 							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted
 							by you above as per our Privacy Policy
 						</Typography>

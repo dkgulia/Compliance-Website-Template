@@ -32,7 +32,7 @@ export default function GdprBookNowSection() {
                                 alt="GDPR Demo"
                                 width={420}
                                 height={300}
-                                style={gdprBookNowStyle.imageStyle}
+                                style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                                 priority
                             />
                         </Box>

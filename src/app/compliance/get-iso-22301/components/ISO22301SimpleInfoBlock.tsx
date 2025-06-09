@@ -40,7 +40,7 @@ const ISO22301SimpleInfoBlock: React.FC<ISO22301SimpleInfoBlockProps> = ({ secti
 									placeholder="blur"
 									width={300}
 									height={240}
-									style={simpleInfoBlockStyle.imageStyle}
+									style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
 								/>
 							</Box>
 						</Grid>

@@ -15,7 +15,7 @@ const ComplianceCard = ({ item }: { item: ComplianceFramework }) => {
 						alt={`${item.title} Logo`}
 						width={60}
 						height={55}
-						style={complianceStyles.logoImage}
+						style={{ objectFit: 'contain' }}
 					/>
 				</Box>
 
