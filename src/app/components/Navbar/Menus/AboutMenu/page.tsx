@@ -4,16 +4,17 @@ import { Box } from '@mui/material';
 import AboutSection from './components/AboutSection';
 import pageStyles from './styles/pageStyles';
 
-interface AboutMenuPageProps {
-	onClose?: () => void;
-}
 
-const AboutMenuPage: React.FC<AboutMenuPageProps> = ({ onClose }) => {
+const AboutMenuContent: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
   return (
     <Box sx={pageStyles.menuBox}>
       <AboutSection onClose={onClose} />
     </Box>
   );
+};
+
+const AboutMenuPage = () => {
+  return <AboutMenuContent />;
 };
 
 export default AboutMenuPage;
