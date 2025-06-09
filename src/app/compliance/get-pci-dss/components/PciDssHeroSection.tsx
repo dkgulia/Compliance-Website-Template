@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
 import { ComplianceFormValues } from '../../components/ComplianceForm';
@@ -8,9 +8,16 @@ import pciDssData from '../constants/pciDssData';
 import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const PciDssHeroSection: React.FC = () => {
+  // Add mounted state to prevent hydration errors
+  const [mounted, setMounted] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
     'PCI DSS'
   ]);
+
+  // Ensure component is mounted on client before full rendering
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
@@ -25,6 +32,24 @@ const PciDssHeroSection: React.FC = () => {
     'CCPA', 'PCI DSS', 'NIST Frameworks', 'ISO 22301', 'ISO 20000-1',
     'ISO 27701', 'DORA', 'CMMC', 'PDPA'
   ];
+
+  // Render simple version until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <Box sx={heroSectionStyle.container}>
+        <Container sx={heroSectionStyle.containerBox}>
+          <Box sx={heroSectionStyle.contentBox}>
+            <Typography variant="h3" sx={heroSectionStyle.mainTitle}>
+              PCI DSS Compliance
+            </Typography>
+            <Typography sx={heroSectionStyle.description}>
+              Loading...
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={heroSectionStyle.container}>

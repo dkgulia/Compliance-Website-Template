@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -12,11 +12,16 @@ import { complianceOptionsArray, ComplianceOptions } from '../../../constants/co
 import { sheetNameTypes } from '../../../constants/sheetTypes';
 
 const CcpaHeroSection = () => {
+  const [mounted, setMounted] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
     ComplianceOptions.ISO27001,
     ComplianceOptions.ISO42001,
     ComplianceOptions.ISO27018,
   ]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
@@ -25,6 +30,23 @@ const CcpaHeroSection = () => {
   const handleSubmitCallback = (values: ComplianceFormValues) => {
     console.log('Submitted with Values and Options:', { ...values, selectedOptions });
   };
+
+  if (!mounted) {
+    return (
+      <Box sx={ccpaHeroSectionStyles.container}>
+        <Container sx={ccpaHeroSectionStyles.containerBox}>
+          <Box sx={ccpaHeroSectionStyles.leftContentBox}>
+            <Typography variant="h3" sx={ccpaHeroSectionStyles.mainTitle}>
+              California Consumer Privacy Act
+            </Typography>
+            <Typography sx={ccpaHeroSectionStyles.description}>
+              Loading...
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={ccpaHeroSectionStyles.container}>

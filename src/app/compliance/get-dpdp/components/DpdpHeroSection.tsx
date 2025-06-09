@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { Verified, Security, Policy } from '@mui/icons-material';
 import EnhancedComplianceForm from '../../components/EnhancedComplianceForm';
@@ -17,12 +17,19 @@ const dpdpComplianceOptions = [
 const DpdpHeroSection: React.FC = () => {
   const { hero } = dpdpData.sections;
 
+  // Add mounted state to prevent hydration errors
+  const [mounted, setMounted] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([
     'ISO 27001',
     'ISO 42001',
     'ISO 27018',
     'DPDP'
   ]);
+
+  // Ensure component is mounted on client before full rendering
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleOptionsChange = (newOptions: string[]) => {
     setSelectedOptions(newOptions);
@@ -34,6 +41,24 @@ const DpdpHeroSection: React.FC = () => {
       complianceOptions: selectedOptions
     });
   };
+
+  // Render simple version until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <Box sx={heroSectionStyle.container}>
+        <Container sx={heroSectionStyle.containerBox}>
+          <Box sx={heroSectionStyle.leftContentBox}>
+            <Typography variant="h3" sx={heroSectionStyle.mainTitle}>
+              DPDP Compliance
+            </Typography>
+            <Typography sx={heroSectionStyle.description}>
+              Loading...
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={heroSectionStyle.container}>

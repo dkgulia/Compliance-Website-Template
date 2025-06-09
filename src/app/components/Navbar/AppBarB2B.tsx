@@ -36,6 +36,9 @@ const AppBarB2B: React.FC = () => {
 	const router = useRouter();
 	const pathname = usePathname();
 	const theme = useTheme();
+
+	// Add mounted state to prevent hydration errors
+	const [mounted, setMounted] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 	const [selectedItem, setSelectedItem] = useState<SelectedItemType>('item1');
 	const [activeMenu, setActiveMenu] = useState<MenuType>(null);
@@ -50,7 +53,14 @@ const AppBarB2B: React.FC = () => {
 		return pathname.startsWith(`/${section}`);
 	};
 
+	// Fix hydration issue: only run client-side code after mount
 	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	useEffect(() => {
+		if (!mounted) return; // Don't run until mounted on client
+
 		const handleResize = () => {
 			setIsMobile(window.matchMedia(theme.breakpoints.down('md')).matches);
 		};
@@ -58,7 +68,7 @@ const AppBarB2B: React.FC = () => {
 		handleResize();
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
-	}, [theme.breakpoints]);
+	}, [theme.breakpoints, mounted]);
 
 	useEffect(() => {
 		if (isMobile && activeMenu) {
@@ -67,6 +77,8 @@ const AppBarB2B: React.FC = () => {
 	}, [isMobile, activeMenu]);
 
 	useEffect(() => {
+		if (!mounted) return; // Don't run until mounted
+
 		const handleClickOutside = (event: MouseEvent) => {
 			if (menuRef.current && !menuRef.current.contains(event.target as Node) && activeMenu) {
 				setActiveMenu(null);
@@ -75,7 +87,7 @@ const AppBarB2B: React.FC = () => {
 
 		document.addEventListener('mousedown', handleClickOutside);
 		return () => document.removeEventListener('mousedown', handleClickOutside);
-	}, [activeMenu]);
+	}, [activeMenu, mounted]);
 
 	// Close menus when route changes
 	useEffect(() => {
@@ -151,6 +163,11 @@ const AppBarB2B: React.FC = () => {
 	};
 
 	const { handleToggleDrawer, handleDrawerClose } = toggleDrawer(false);
+
+	// Don't render until mounted to prevent hydration errors
+	if (!mounted) {
+		return null;
+	}
 
 	return (
 		<>
