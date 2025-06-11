@@ -45,7 +45,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="hello@hexafort.io"
+                 href="support@hexafort.io"
                  sx={talkToExpertDoraStyle.buttonOutlined}
                >
                  Email Us
@@ -73,7 +73,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="tel:9380027079"
+                 href="https://cal.com/hexafort-security-advisory/30min"
                  sx={talkToExpertDoraStyle.button}
                >
                  Book a Call
@@ -101,7 +101,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="#"
+                 href="https://cal.com/hexafort-security-advisory/30min"
                  sx={talkToExpertDoraStyle.buttonOutlined}
                >
                  Chat Now

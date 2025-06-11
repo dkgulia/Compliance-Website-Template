@@ -33,6 +33,7 @@ const ProductHeroSection = () => {
 		howDidYouHear: string;
 	}) => {
 		console.log('Submitted with Products:', { ...values, selectedProducts });
+		console.log('Using sheet name:', sheetNameTypes.getAProductDemo);
 	};
 
 	return (
@@ -72,7 +73,7 @@ const ProductHeroSection = () => {
 						title="Get a Demo"
 						subtitle="Get a personalized walkthrough of our platform and features."
 						buttonText="Get Started"
-						sheetName={sheetNameTypes.productDemo}
+						sheetName={sheetNameTypes.getAProductDemo}
 						formStyles={productHeroSectionStyles}
 						selectedProducts={selectedProducts}
 						onProductsChange={handleProductsChange}

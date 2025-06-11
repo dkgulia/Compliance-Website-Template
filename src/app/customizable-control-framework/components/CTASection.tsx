@@ -38,7 +38,7 @@ const CTASection: React.FC = () => {
 
 					<Button
 						endIcon={<ArrowForwardIcon />}
-						onClick={() => router.push('/get-a-demo')}
+						onClick={() => router.push('/get-a-product-demo')}
 					>
 						{callToAction.ctaText}
 					</Button>

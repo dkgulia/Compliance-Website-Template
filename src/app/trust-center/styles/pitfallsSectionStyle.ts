@@ -11,6 +11,7 @@ const styles = {
 	  background: theme.palette.background.default,
 	  position: 'relative',
 	  overflow: 'hidden',
+	  marginBottom: '3rem',
 	},
 	headerContainer: {
 	  display: 'flex',

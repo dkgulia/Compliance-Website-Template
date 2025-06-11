@@ -8,6 +8,8 @@ const packageOverviewStyle: Record<string, SxProps<Theme>> = {
     padding: { xs: '0rem 1rem', md: '4rem 2rem' },
     background: (theme) => theme.palette.background.default,
     overflow: 'hidden',
+    marginTop: {xs:'0rem',lg:'0rem',xl:'0rem'},
+
   },
   contentContainer: {
     width: '100%',
@@ -21,7 +23,7 @@ const packageOverviewStyle: Record<string, SxProps<Theme>> = {
   },
   title: {
     fontSize: { xs: '1.8rem', md: '2.5rem' },
-    fontWeight: 700,
+    fontWeight: 600,
     mb: 2,
     color: (theme) => theme.palette.text.primary,
   },

@@ -13,6 +13,7 @@ const offerBannerStyle = {
    overflow: 'hidden',
    paddingTop: { xs: '2rem', sm: '3rem' },
    paddingBottom: { xs: '2rem', sm: '3rem' },
+   marginBottom: '3rem',
  },
  headerContainer: {
    display: 'flex',

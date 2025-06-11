@@ -40,7 +40,6 @@ interface ComplianceFormProps extends FormikProps<ComplianceFormValues> {
 	complianceOptions: string[];
 }
 
-// Countries list for autocomplete
 const countries = [
 	'United States',
 	'United Kingdom',
@@ -142,11 +141,18 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 			return;
 		}
 
-		if (values.fullName && !errors.fullName &&
-			values.email && !errors.email &&
-			values.companyName && !errors.companyName &&
-			values.phoneNumber && !errors.phoneNumber &&
-			values.country && !errors.country) {
+		if (
+			values.fullName &&
+			!errors.fullName &&
+			values.email &&
+			!errors.email &&
+			values.companyName &&
+			!errors.companyName &&
+			values.phoneNumber &&
+			!errors.phoneNumber &&
+			values.country &&
+			!errors.country
+		) {
 			setLoading(true);
 			const data = [
 				values.fullName,
@@ -155,7 +161,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 				values.phoneNumber,
 				values.country,
 				getCurrentTime(),
-				selectedOptions.join(', ')
+				selectedOptions.join(', '),
 			];
 			try {
 				await addDataToGoogleSheetRequest(sheetName, data);
@@ -163,6 +169,9 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 				setSubmitted(true);
 				resetForm();
 				onOptionsChange([]);
+				setTimeout(() => {
+					window.open('https://cal.com/hexafort-security-advisory/30min', '_blank');
+				}, 1500);
 			} catch (err: any) {
 				let errorMessage = 'Network Error';
 				if (err.response?.data?.message) {
@@ -179,8 +188,6 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 	const handleSnackbarClose = () => {
 		setAlert(null);
 	};
-
-	// Determine button text based on loading and submitted states
 	const getButtonText = () => {
 		if (loading) return 'Submitting...';
 		if (submitted) return 'Request Sent';
@@ -193,19 +200,6 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 
 	return (
 		<Box sx={formStyles.formContainer}>
-			{alert && (
-				<Snackbar
-					open={!!alert}
-					autoHideDuration={6000}
-					onClose={handleSnackbarClose}
-					anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-				>
-					<Alert onClose={handleSnackbarClose} severity={alert.type} sx={{ width: '100%' }}>
-						{alert.message}
-					</Alert>
-				</Snackbar>
-			)}
-
 			<form onSubmit={handleSubmit}>
 				<Grid container spacing={1.5}>
 					{/* Header */}
@@ -231,9 +225,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 								value={values.fullName}
 								sx={formStyles.formInput}
 							/>
-							<FormHelperText sx={formStyles.formHelperText}>
-								{touched.fullName && errors.fullName}
-							</FormHelperText>
+							<FormHelperText sx={formStyles.formHelperText}>{touched.fullName && errors.fullName}</FormHelperText>
 						</FormControl>
 					</Grid>
 
@@ -310,9 +302,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 								)}
 								freeSolo
 							/>
-							<FormHelperText sx={formStyles.formHelperText}>
-								{touched.country && errors.country}
-							</FormHelperText>
+							<FormHelperText sx={formStyles.formHelperText}>{touched.country && errors.country}</FormHelperText>
 						</FormControl>
 					</Grid>
 

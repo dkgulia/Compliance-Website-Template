@@ -4,13 +4,22 @@ const teamInfoSectionStyle = {
   section: {
     display: 'flex',
     flexDirection: 'column',
-    px: { xs: '1rem', md: '12rem', '2xl': '18rem' },
-    marginTop: { xs: '0rem', md: '0rem' },
-    gap: '2rem',
+    px: {
+      xs: '1.5rem',
+      sm: '2rem',
+      md: '4rem',
+      lg: '8rem',
+      xl: '12rem',
+      '2xl': '16rem'
+    },
+    marginTop: { xs: '0rem', md: '0rem', lg: '0rem', xl: '0rem' },
+    gap: { xs: '2rem', lg: '3rem', xl: '4rem' },
     alignItems: 'center',
     background: theme.palette.background.default,
     position: 'relative',
     overflow: 'hidden',
+    paddingBottom: { xs: '2rem', sm: '4rem', md: '2rem', lg: '2rem', xl: '2rem' },
+    width: '100%',
   },
   headerContainer: {
     display: 'flex',

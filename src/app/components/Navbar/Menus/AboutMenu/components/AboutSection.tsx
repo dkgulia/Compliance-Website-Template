@@ -20,7 +20,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClose }) => {
 	};
 
 	const handleDemoClick = () => {
-		router.push('/get-a-demo');
+		router.push('/get-a-product-demo');
 		if (onClose) onClose();
 	};
 

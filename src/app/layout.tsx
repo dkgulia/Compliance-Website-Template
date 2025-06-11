@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Figtree, Atkinson_Hyperlegible } from 'next/font/google';
 import './globals.css';
@@ -6,6 +5,7 @@ import ThemeRegistry from '../themeRegistry';
 import Footer from './components/Footer';
 import AppBarB2B from './components/Navbar/AppBarB2B';
 import CookieBanner from './components/CookieBanner';
+import GTM from './components/Gtm';
 
 const figtree = Figtree({
   variable: '--font-figtree-sans',
@@ -30,15 +30,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${figtree.variable} ${atkinsonMono.variable}`}>
+      <head>
+        <meta name="emotion-insertion-point" content="" />
+      </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KR6FJCG6"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <ThemeRegistry>
+          <GTM />
           <AppBarB2B />
           {children}
-         <CookieBanner/>
+          <CookieBanner/>
           <Footer />
         </ThemeRegistry>
       </body>
     </html>
   );
 }
-

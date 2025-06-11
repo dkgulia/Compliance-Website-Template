@@ -240,10 +240,16 @@ const AppBarB2B: React.FC = () => {
 						</Box>
 
 						<Box sx={styles.actionButtons}>
-							<HexaButton onClick={() => navigateTo('/get-a-demo')} sx={styles.talkButton}>
+							<HexaButton
+								onClick={() => window.open('https://cal.com/hexafort-security-advisory/30min', '_blank')}
+								sx={styles.talkButton}
+							>
 								Book a Demo
 							</HexaButton>
-							<HexaButton onClick={() => navigateTo(WORKSTATION)} sx={styles.shopButton}>
+							<HexaButton
+								onClick={() => (window.location.href = 'https://secure.hexafort.io/login')}
+								sx={styles.shopButton}
+							>
 								Login
 							</HexaButton>
 						</Box>
@@ -269,11 +275,7 @@ const AppBarB2B: React.FC = () => {
 						onMouseEnter={() => hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)}
 						onMouseLeave={handleMenuLeave}
 					>
-						{activeMenu === 'solutions' && (
-							<>
-
-							</>
-						)}
+						{activeMenu === 'solutions' && <></>}
 						{activeMenu === 'industries' && <Box sx={styles.menuBox}>Industry content</Box>}
 						{activeMenu === 'platform' && <PlatformMenu />}
 						{activeMenu === 'compliance' && <ComplianceMenu />}

@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
                 <Button
                     endIcon={<ArrowForwardIcon />}
                     sx={heroSectionStyle.button}
-                    onClick={() => router.push('/get-a-demo')}
+                    onClick={() => router.push('/get-a-product-demo')}
                 >
                     {hero.ctaText}
                 </Button>

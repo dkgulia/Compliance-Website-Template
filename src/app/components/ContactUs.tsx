@@ -176,7 +176,7 @@ const ContactUsComponent = () => {
 									<Typography variant="body2" sx={contactStyle.reachOutText}>
 										Our support team is available Monday through Friday, 8am-6pm PT.
 									</Typography>
-									<Link href="/get-a-demo" passHref legacyBehavior>
+									<Link href="/get-a-product-demo" passHref legacyBehavior>
 										<Button endIcon={<ArrowForwardIcon />} sx={contactStyle.outlinedButton}>
 											Book A Demo
 										</Button>

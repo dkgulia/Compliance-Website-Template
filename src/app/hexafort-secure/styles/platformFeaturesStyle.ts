@@ -90,12 +90,6 @@ const platformFeaturesStyle = {
    boxSizing: 'border-box',
    position: 'relative',
    flexShrink: 0,
-   '&:hover': {
-     transform: 'translateY(-5px)',
-     borderColor: '#0d9488',
-     borderStyle: 'solid',
-     borderWidth: '1px',
-   },
  },
  iconContainer: {
    display: 'flex',

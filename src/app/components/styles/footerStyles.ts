@@ -42,6 +42,14 @@ const footerStyles = {
 		alignItems: { xs: 'flex-start', md: 'flex-end' },
 		justifyContent: 'flex-start',
 	},
+	// New container for proper alignment
+	topRightSection: {
+		display: 'flex',
+		flexDirection: { xs: 'column', md: 'row' },
+		alignItems: { xs: 'flex-start', md: 'flex-start' },
+		gap: { xs: 3, md: 4 },
+		width: '100%',
+	},
 	logoContainer: {
 		mb: 3,
 		display: 'flex',
@@ -98,13 +106,14 @@ const footerStyles = {
 	},
 	socialContainer: {
 		display: 'flex',
-		gap: 2,
-		mb: { xs: 4, md: 0 },
+		gap: 3,
+		mb: 2,
+		flexShrink: 0,
 	},
 	socialLink: {
 		color: 'white',
 		backgroundColor: 'rgba(255, 255, 255, 0.1)',
-		padding: 1,
+		padding: 2,
 		borderRadius: '6px',
 		display: 'flex',
 		alignItems: 'center',
@@ -117,6 +126,74 @@ const footerStyles = {
 	},
 	socialIcon: {
 		fontSize: '1.7rem',
+	},
+	certificationWrapper: {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: { xs: 'flex-start', md: 'flex-start' },
+		maxWidth: '260px',
+	},
+	certificationHeader: {
+		color: '#0d9488',
+		fontSize: '0.875rem',
+		fontWeight: 600,
+		marginBottom: 2,
+		textAlign: { xs: 'left', md: 'left' },
+		width: '100%',
+	},
+	certificationsGrid: {
+		display: 'flex',
+		flexDirection: 'column',
+		gap: 1.5,
+		width: '100%',
+	},
+	certificationBadge: {
+		display: 'flex',
+		alignItems: 'center',
+		gap: 1.5,
+		borderRadius: '12px',
+		padding: '12px 0px',
+		transition: 'all 0.3s ease',
+		width: '100%',
+	},
+	badgeIcon: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderRadius: '8px',
+		padding: '8px',
+		flexShrink: 0,
+	},
+	badgeContent: {
+		display: 'flex',
+		flexDirection: 'column',
+		gap: 0.5,
+		flex: 1,
+		minWidth: 0,
+	},
+	badgeTitle: {
+		color: theme.palette.text.primary,
+		fontSize: '0.875rem',
+		fontWeight: 600,
+		lineHeight: 1.2,
+	},
+	badgeStatus: {
+		display: 'flex',
+		alignItems: 'center',
+		gap: 0.5,
+	},
+	verifiedIcon: {
+		fontSize: '0.875rem',
+		color: '#0d9488',
+	},
+	badgeStatusText: {
+		color: '#0d9488',
+		fontSize: '0.75rem',
+		fontWeight: 500,
+		lineHeight: 1,
+	},
+	badgeLogoImage: {
+		objectFit: 'contain' as const,
 	},
 	divider: {
 		width: '100%',

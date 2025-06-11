@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
 	);
 
 	const handleBookDemo = () => {
-		router.push('/get-a-demo');
+		router.push('/get-a-product-demo');
 	};
 
 	if (!heroContent) return null;

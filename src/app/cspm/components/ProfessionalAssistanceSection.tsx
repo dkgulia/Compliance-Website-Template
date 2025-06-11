@@ -13,7 +13,7 @@ const ProfessionalAssistanceSection: React.FC = () => {
    const router = useRouter();
 
    const handleGetDemo = () => {
-       router.push('/get-a-demo');
+       router.push('/get-a-product-demo');
    };
 
    return (

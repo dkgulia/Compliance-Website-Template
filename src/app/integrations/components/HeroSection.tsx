@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
    const firstPart = titleParts[0];
 
    const handleBookDemo = () => {
-       router.push('/get-a-demo');
+       router.push('/get-a-product-demo');
    };
 
    return (

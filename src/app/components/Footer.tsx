@@ -3,8 +3,6 @@
 import * as React from 'react';
 import { Box, Typography, Link } from '@mui/material';
 import MapIcon from '@mui/icons-material/Map';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { LinkedIn, Twitter, Instagram } from '@mui/icons-material';
@@ -13,8 +11,10 @@ import { complianceItems } from '../constants/complianceData';
 import { platformFeatures } from './Navbar/constants/platformData';
 import { usePathname } from 'next/navigation';
 import footerStyles from '../components/styles/footerStyles';
-
+import VerifiedIcon from '@mui/icons-material/Verified';
 import logo from '../components/Navbar/Images/hexafort-white-cropped.png';
+import iso27001Logo from './Images/ISOlogo.webp';
+import gdprLogo from './Images/GDPR-hexafort.png';
 
 export default function Footer() {
 	const pathname = usePathname();
@@ -60,7 +60,7 @@ export default function Footer() {
 									<Box sx={footerStyles.addressContainer}>
 										<MapIcon sx={footerStyles.addressIcon} />
 										<Box sx={footerStyles.addressContent}>
-											
+
 											<Typography variant="body2" sx={footerStyles.addressLine}>
 												Idukki, Kerala, IN, 685505
 											</Typography>
@@ -134,6 +134,7 @@ export default function Footer() {
 							</Box>
 
 							<Box sx={footerStyles.rightColumn}>
+								{/* Social Icons */}
 								<Box sx={footerStyles.socialContainer}>
 									<Link
 										href="https://www.linkedin.com/company/hexafort/"
@@ -159,6 +160,59 @@ export default function Footer() {
 									>
 										<Twitter sx={footerStyles.socialIcon} />
 									</Link>
+								</Box>
+
+								{/* Certification Section */}
+								<Box sx={footerStyles.certificationWrapper}>
+									<Box sx={footerStyles.certificationsGrid}>
+										{/* ISO 27001:2022 Badge */}
+										<Box sx={footerStyles.certificationBadge}>
+											<Box sx={footerStyles.badgeIcon}>
+												<Image
+													src={iso27001Logo}
+													alt="ISO 27001"
+													width={38}
+													height={38}
+													style={footerStyles.badgeLogoImage}
+												/>
+											</Box>
+											<Box sx={footerStyles.badgeContent}>
+												<Typography sx={footerStyles.badgeTitle}>
+													ISO 27001:2022
+												</Typography>
+												<Box sx={footerStyles.badgeStatus}>
+													<VerifiedIcon sx={footerStyles.verifiedIcon} />
+													<Typography sx={footerStyles.badgeStatusText}>
+														Certified
+													</Typography>
+												</Box>
+											</Box>
+										</Box>
+
+										{/* GDPR Badge */}
+										<Box sx={footerStyles.certificationBadge}>
+											<Box sx={footerStyles.badgeIcon}>
+												<Image
+													src={gdprLogo}
+													alt="GDPR"
+													width={38}
+													height={38}
+													style={footerStyles.badgeLogoImage}
+												/>
+											</Box>
+											<Box sx={footerStyles.badgeContent}>
+												<Typography sx={footerStyles.badgeTitle}>
+													GDPR
+												</Typography>
+												<Box sx={footerStyles.badgeStatus}>
+													<VerifiedIcon sx={footerStyles.verifiedIcon} />
+													<Typography sx={footerStyles.badgeStatusText}>
+														Compliant
+													</Typography>
+												</Box>
+											</Box>
+										</Box>
+									</Box>
 								</Box>
 							</Box>
 						</Box>

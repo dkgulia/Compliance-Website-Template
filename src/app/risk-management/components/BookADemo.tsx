@@ -11,7 +11,7 @@ import Button from '../../Button/HexaFortButton';
 const BookADemo = () => {
 	const router = useRouter();
 	const handleBookDemo = () => {
-		router.push('/get-a-demo');
+		router.push('/get-a-product-demo');
 	};
 
 	const benefits = [

@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
 	const router = useRouter();
 
 	const handleBookDemo = () => {
-		router.push('/get-a-demo');
+		router.push('/get-a-product-demo');
 	};
 
 	return (

@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
   const { description, callToAction } = hexafortData.heroSection;
 
   const handleCtaClick = () => {
-    router.push('/get-a-demo');
+    router.push('/get-a-product-demo');
   };
 
   return (

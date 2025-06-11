@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
 						</Typography>
 					))}
 
-					<Button onClick={() => router.push('/get-a-demo')}>{hero.ctaText}</Button>
+					<Button onClick={() => router.push('/get-a-product-demo')}>{hero.ctaText}</Button>
 				</Box>
 
 				<Box sx={heroSectionStyle.imageBox}>

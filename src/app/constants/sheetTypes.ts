@@ -15,7 +15,7 @@ export const sheetNameTypes = {
 	iso27018Form:'iso27018Form',
 	iso27701Form:'iso27701Form',
 	bookDemo:'bookDemo',
-	productDemo:'productDemo',
+	getAProductDemo:'getAProductDemo',
 	contactUs:'contactUs',
 } as const;
 

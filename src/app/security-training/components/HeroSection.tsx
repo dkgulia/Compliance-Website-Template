@@ -32,7 +32,7 @@ const SecurityAwarenessHero: React.FC = () => {
 
 				<Button
 
-					onClick={() => router.push('/get-a-demo')}
+					onClick={() => router.push('/get-a-product-demo')}
 					endIcon={<ArrowForwardIcon />}
 					sx={heroStyles.button}
 				>

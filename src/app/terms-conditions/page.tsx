@@ -145,12 +145,12 @@ const TermsAndConditionsPage = () => {
             All activities conducted under your account will be considered
             authorized by you, and you must immediately notify Hexafort at{' '}
             <Link
-              href="mailto:support@hexafort.com"
+              href="mailto:Support@hexafort.com"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              support@hexafort.com
+              Support@hexafort.com
             </Link>{' '}
             if you become aware of any actual or suspected unauthorized use or
             any other security breach.
@@ -524,16 +524,16 @@ const TermsAndConditionsPage = () => {
             If you have any questions, concerns, or inquiries regarding these
             Terms and Conditions or the use of our Service, you are welcome to
             contact us. Our team is available to assist you and provide further
-            clarification as needed. You can reach us via email at{' '}
+            clarification as needed. You can reach us via email at {}
             <Link
               href="mailto:legal@hexafort.com"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              legal@hexafort.com
+            Support@hexafort.io
             </Link>{' '}
-            or by phone at +91-XXXXXXXXXX during our standard business hours. We
+            or by phone at +91 99008 32864 during our standard business hours. We
             are committed to providing timely and transparent support to all our
             users.
           </Typography>

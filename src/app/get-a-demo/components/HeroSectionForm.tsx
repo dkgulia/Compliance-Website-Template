@@ -10,12 +10,15 @@ import {
    Checkbox,
    Snackbar,
    Alert,
+   Button,
 } from '@mui/material';
-import Button from '../../Button/HexaFortButton';
 import heroSectionStyles from '../styles/heroSectionStyle';
 import { complianceOptionsArray } from '../../constants/complianceData';
 import { FormikProps } from 'formik';
 import { FormValues } from './EnhancedHeroSectionForm';
+import { addDataToGoogleSheetRequest } from '../../../api/googleSheetRequest';
+import { getCurrentTime } from '../../../utils/getCurrentTime';
+import { sheetNameTypes } from '../../constants/sheetTypes';
 
 interface HeroSectionFormProps extends FormikProps<FormValues> {
    selectedOptions: string[];
@@ -35,6 +38,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 }) => {
    const [loading, setLoading] = useState(false);
    const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+   const [submitted, setSubmitted] = useState(false);
 
    const toggleOption = (option: string) => {
    	onOptionsChange(
@@ -46,6 +50,47 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
    const handleSnackbarClose = () => {
    	setAlert(null);
+   };
+
+   const handleClick = async () => {
+      if (selectedOptions.length === 0) {
+         setAlert({ type: 'error', message: 'Please select at least one compliance.' });
+         return;
+      }
+
+      if (values.fullName && !errors.fullName &&
+          values.email && !errors.email) {
+         setLoading(true);
+         const data = [
+            values.fullName,
+            values.email,
+            getCurrentTime(),
+            selectedOptions.join(', ')
+         ];
+         try {
+            await addDataToGoogleSheetRequest(sheetNameTypes.bookDemo, data);
+            setAlert({ type: 'success', message: 'Your response has been saved.' });
+            setSubmitted(true);
+            resetForm();
+            onOptionsChange([]);
+         } catch (err: any) {
+            let errorMessage = 'Network Error';
+            if (err.response?.data?.message) {
+               errorMessage = err.response.data.message;
+            }
+            setAlert({ type: 'error', message: errorMessage });
+            console.error(err);
+         } finally {
+            setLoading(false);
+         }
+      }
+   };
+
+   // Determine button text based on loading and submitted states
+   const getButtonText = () => {
+      if (loading) return 'Submitting...';
+      if (submitted) return 'Request Sent';
+      return 'Book Your Demo';
    };
 
    return (
@@ -127,12 +172,15 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
    				<Grid size={{ xs: 12 }}>
    					<Button
-   						
    						type="button"
+                     fullWidth
+                     variant="contained"
    						sx={heroSectionStyles.button}
-   						disabled={loading}
+                     onClick={handleClick}
+   						disabled={loading || submitted}
+                     disableElevation
    					>
-   						{loading ? 'Submitting...' : 'Book Your Demo'}
+   						{getButtonText()}
    					</Button>
    				</Grid>
    			</Grid>

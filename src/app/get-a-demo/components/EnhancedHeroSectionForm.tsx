@@ -16,7 +16,7 @@ interface FormProps {
 	onSubmitCallback?: (values: FormValues) => void;
 	fullName?: string;
 	email?: string;
-    }
+}
 
 const EnhancedHeroSectionForm = withFormik<FormProps, FormValues>({
 	mapPropsToValues: (props) => ({
@@ -27,26 +27,20 @@ const EnhancedHeroSectionForm = withFormik<FormProps, FormValues>({
 		fullName: Yup.string().required(FULL_NAME_REQUIRED),
 		email: Yup.string().email(INVALID_EMAIL).required(EMAIL_REQUIRED),
 	}),
-	handleSubmit: (values, { props, setSubmitting }) => {
+	handleSubmit: (values, { props, setSubmitting, resetForm }) => {
 		setSubmitting(false);
 		if (props.onSubmitCallback) {
 			props.onSubmitCallback(values);
 		}
 		console.log('Submitted Values:', values);
+		resetForm();
 	},
 })((props) => {
-
-	const [selectedOptions, setSelectedOptions] = useState<string[]>(
-		complianceOptionsArray.slice(0, 3)
-	);
-
-	const handleOptionsChange = (options: string[]) => setSelectedOptions(options);
-
 	return (
 		<HeroSectionForm
 			{...props}
-			selectedOptions={selectedOptions}
-			onOptionsChange={handleOptionsChange}
+			selectedOptions={props.selectedOptions}
+			onOptionsChange={props.onOptionsChange}
 		/>
 	);
 });

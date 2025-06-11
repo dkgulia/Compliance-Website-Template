@@ -74,7 +74,7 @@ const ComplianceFrameworks: React.FC = () => {
   };
 
   const handleGetStarted = () => {
-    router.push('/get-a-demo');
+    router.push('/get-a-product-demo');
   };
 
   const handleChange = (_: React.SyntheticEvent, newValue: number) => {

@@ -1,43 +1,45 @@
+
 import { Theme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 
 const heroSectionStyle: Record<string, SxProps<Theme>> = {
 	container: {
 		position: 'relative',
-		padding: { xs: '4rem 1rem', md: '3rem 5rem' },
+		padding: { xs: '4rem 1rem', md: '3rem 5rem', lg: '3rem 2rem', xl: '2rem 6rem' },
 		background: (theme) => theme.palette.background.default,
 		overflow: 'hidden',
-		minHeight: { xs: 'auto', md: '80vh' },
+		minHeight: { xs: 'auto', md: '80vh', lg: '85vh', xl: '90vh' },
 		display: 'flex',
 		alignItems: 'center',
-		pt: { xs: 3, md: 10 },
-		marginTop: '3rem',
+		pt: { xs: 3, md: 10, lg: 6, xl: 6 },
+		marginTop: {xs:'3rem',lg:'3rem',xl:'0rem'},
+		marginBottom: {xs:'0rem',lg:'0rem',xl:'0rem'},
 	},
 	contentContainer: {
 		width: '100%',
-		maxWidth: '1440px',
+		maxWidth: { xs: '1440px', lg: '1600px', xl: '1800px' },
 		mx: 'auto',
-		px: { xs: 2, sm: 4, md: 6 },
+		px: { xs: 2, sm: 4, md: 6, lg: 8, xl: 10 },
 		display: 'flex',
 		flexDirection: { xs: 'column', lg: 'row' },
 		alignItems: 'flex-start',
 		justifyContent: 'space-between',
-		gap: { xs: 6, md: 4 },
+		gap: { xs: 6, md: 4, lg: 6, xl: 8 },
 	},
 	textContent: {
-		maxWidth: { xs: '100%', lg: '50%' },
+		maxWidth: { xs: '100%', lg: '50%', xl: '55%' },
 		textAlign: { xs: 'left', lg: 'left' },
 	},
 	tagWrapper: {
 		display: 'flex',
 		justifyContent: 'flex-start',
-		mb: 3,
+		mb: { xs: 3, lg: 4, xl: 5 },
 	},
 	tag: {
 		display: 'inline-flex',
 		alignItems: 'center',
-		px: 2.5,
-		py: 1,
+		px: { xs: 2.5, lg: 3, xl: 3.5 },
+		py: { xs: 1, lg: 1.2, xl: 1.5 },
 		borderRadius: '32px',
 		background: '#115e59',
 		marginTop: {
@@ -45,16 +47,16 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		},
 	},
 	tagText: {
-		fontSize: '0.9rem',
+		fontSize: { xs: '0.9rem', lg: '0.95rem', xl: '1rem' },
 		fontWeight: 600,
 		color: '#fffff',
 		letterSpacing: '0.5px',
 	},
 	titleWrapper: {
-		mb: { xs: 3, md: 4 },
+		mb: { xs: 3, md: 4, lg: 5, xl: 6 },
 	},
 	titleLine: {
-		fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem'},
+		fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '3.5rem', xl: '3.5rem' },
 		fontWeight: 600,
 		lineHeight: 1.1,
 		letterSpacing: '-0.02em',
@@ -62,11 +64,11 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		mb: 0.5,
 	},
 	description: {
-		fontSize: { xs: '1rem', md: '1.1rem' },
-		lineHeight: 1.6,
+		fontSize: { xs: '1rem', md: '1.1rem', lg: '1.15rem', xl: '1.2rem' },
+		lineHeight: { xs: 1.6, lg: 1.65, xl: 1.7 },
 		color: '#6b7280',
-		maxWidth: { xs: '100%', lg: '90%' },
-		mb: { xs: 4, md: 5 },
+		maxWidth: { xs: '100%', lg: '90%', xl: '85%' },
+		mb: { xs: 4, md: 5, lg: 6, xl: 7 },
 		opacity: 0.9,
 	},
 	ctaButton: {
@@ -77,12 +79,14 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 			xs: '0.25rem 0.5rem',
 			sm: '0.375rem 0.75rem',
 			md: '0.7rem 1rem',
+			lg: '0.8rem 1.2rem',
+			xl: '1rem 1.5rem',
 		},
 		borderRadius: '0.5rem',
 		backgroundColor: '#1f2937',
 		border: '1px solid #4b5563',
 		textTransform: 'none',
-		fontSize: '0.9rem',
+		fontSize: { xs: '0.9rem', lg: '1rem', xl: '1.1rem' },
 		whiteSpace: 'nowrap',
 		transition: 'background-color 150ms ease',
 		'&:hover': {
@@ -99,9 +103,9 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 	metricsContainer: {
 		display: 'flex',
 		flexWrap: 'wrap',
-		gap: { xs: 4, md: 5 },
+		gap: { xs: 4, md: 5, lg: 6, xl: 7 },
 		justifyContent: 'flex-start',
-		mt: { xs: 5, md: 6 },
+		mt: { xs: 5, md: 6, lg: 7, xl: 8 },
 	},
 	metricItem: {
 		display: 'flex',
@@ -109,28 +113,28 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		alignItems: 'flex-start',
 	},
 	metricValue: {
-		fontSize: { xs: '2.5rem', md: '2.75rem' },
+		fontSize: { xs: '2.5rem', md: '2.75rem', lg: '3rem', xl: '3.25rem' },
 		fontWeight: 700,
 		color: (theme) => theme.palette.secondary.main,
 		lineHeight: 1,
 		mb: 1,
 	},
 	metricLabel: {
-		fontSize: { xs: '1rem', md: '1.125rem' },
+		fontSize: { xs: '1rem', md: '1.125rem', lg: '1.2rem', xl: '1.25rem' },
 		color: (theme) => theme.palette.text.secondary,
 		fontWeight: 500,
 	},
 	visualContainer: {
 		position: 'relative',
 		width: '100%',
-		maxWidth: { xs: '400px', md: '500px' },
+		maxWidth: { xs: '400px', md: '500px', lg: '550px', xl: '600px' },
 		aspectRatio: '1',
 	},
 	coreVisual: {
 		position: 'relative',
 		width: '100%',
 		height: '100%',
-		borderRadius: '16px',
+		borderRadius: { xs: '16px', lg: '20px', xl: '24px' },
 		overflow: 'hidden',
 		display: 'flex',
 		alignItems: 'center',
@@ -145,13 +149,13 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 		bottom: 0,
 		backgroundImage:
 			'linear-gradient(rgba(94, 234, 212, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(94, 234, 212, 0.05) 1px, transparent 1px)',
-		backgroundSize: '40px 40px',
+		backgroundSize: { xs: '40px 40px', lg: '45px 45px', xl: '50px 50px' },
 		zIndex: 1,
 	},
 	certIcons: {
 		position: 'absolute',
 		display: 'flex',
-		gap: 2,
+		gap: { xs: 2, lg: 2.5, xl: 3 },
 		opacity: 0.7,
 	},
 	certIcon1: {
@@ -169,7 +173,8 @@ const heroSectionStyle: Record<string, SxProps<Theme>> = {
 	placeholderText: {
 		textAlign: 'center',
 		color: (theme) => theme.palette.text.secondary,
-		px: 4,
+		px: { xs: 4, lg: 5, xl: 6 },
+		fontSize: { lg: '1.05rem', xl: '1.1rem' },
 	},
 };
 

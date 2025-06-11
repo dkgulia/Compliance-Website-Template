@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { Box } from '@mui/material';
 import HeroSection from './components/HeroSection';
 import BenefitsSection from './components/BenefitsSection';
 import FeaturesSection from './components/FeaturesSection';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function CSPMPage() {
     return (
-        <main style={{ backgroundColor: '#000000' }}>
+        <Box component="main" sx={{ backgroundColor: '#000000' }}>
             <HeroSection />
             <BenefitsSection />
             <FeaturesSection />
@@ -33,6 +34,6 @@ export default function CSPMPage() {
             <CallToActionSection />
             <TeamInfoSection />
             <FAQSection />
-        </main>
+        </Box>
     );
 }

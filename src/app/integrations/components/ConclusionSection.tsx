@@ -33,7 +33,7 @@ const ConclusionSection: React.FC = () => {
    return (
        <Box sx={conclusionStyle.section}>
            <Box sx={conclusionStyle.headerContainer}>
-            
+
                <Typography sx={conclusionStyle.title}>
                    {conclusion.title}
                </Typography>
@@ -46,7 +46,7 @@ const ConclusionSection: React.FC = () => {
 
                <Button
                    startIcon={<LockIcon />}
-                   onClick={() => router.push('/get-a-demo')}
+                   onClick={() => router.push('/get-a-product-demo')}
                    sx={conclusionStyle.button}
                >
                    Connect Your Systems Today

@@ -124,12 +124,12 @@ const PrivacyPolicyPage = () => {
             or concerns regarding your data, we encourage you to reach out to
             our privacy team at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
             .
           </Typography>
@@ -162,12 +162,12 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Email:{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -193,12 +193,12 @@ const PrivacyPolicyPage = () => {
             wish to exercise any of your rights under applicable data protection
             laws, please contact our privacy team at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
             .
           </Typography>
@@ -228,12 +228,12 @@ const PrivacyPolicyPage = () => {
             <Typography sx={styles.paragraphStyle}>
               Email:{' '}
               <Link
-                href="mailto:privacy@hexafort.io"
+                href="mailto:Privacy@hexafort.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={styles.linkStyle}
               >
-                privacy@hexafort.io
+                Privacy@hexafort.io
               </Link>
             </Typography>
             <Typography sx={styles.paragraphStyle}>
@@ -266,12 +266,12 @@ const PrivacyPolicyPage = () => {
             <Typography sx={styles.paragraphStyle}>
               Email:{' '}
               <Link
-                href="mailto:privacy@hexafort.io"
+                href="mailto:Privacy@hexafort.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={styles.linkStyle}
               >
-                privacy@hexafort.io
+                Privacy@hexafort.io
               </Link>
             </Typography>
             <Typography sx={styles.paragraphStyle}>
@@ -1969,12 +1969,12 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Email: Send your request to our designated privacy team at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
             .
           </Typography>
@@ -2202,12 +2202,12 @@ const PrivacyPolicyPage = () => {
             For general consent: You can contact us directly through our privacy
             team at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>{' '}
             or use our platform's settings to manage your preferences.
           </Typography>
@@ -2318,12 +2318,12 @@ const PrivacyPolicyPage = () => {
             information from a child under the age of 16, please contact us
             immediately at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
             . We will take prompt action to investigate and remove such data as
             necessary.
@@ -2504,12 +2504,12 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Email:{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:Privacy@hexafort.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -2591,7 +2591,7 @@ const PrivacyPolicyPage = () => {
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              privacy@hexafort.io
+              Privacy@hexafort.io
             </Link>
             .
           </Typography>
