@@ -1,3 +1,4 @@
+
 import theme from '../../../../theme';
 
 const controlSectionStyle = {
@@ -63,6 +64,14 @@ const controlSectionStyle = {
 		backgroundColor: theme.palette.secondary.light,
 		marginBottom: { xs: '0.75rem', sm: '1rem' },
 		alignSelf: { xs: 'flex-start', sm: 'center' },
+		// Add these properties to ensure consistent icon sizing
+		minWidth: { xs: '2.5rem', sm: '3rem' },
+		minHeight: { xs: '2.5rem', sm: '3rem' },
+		'& > svg': {
+			width: { xs: '1.25rem', sm: '1.5rem' },
+			height: { xs: '1.25rem', sm: '1.5rem' },
+			color: "#FFFFFF"
+		}
 	},
 	typography: {
 		container: {

@@ -228,6 +228,7 @@ const appBarB2BStyles = {
 		backgroundColor: '#0a0a0a',
 		display: 'flex',
 		justifyContent: 'center',
+		gap:'1rem'
 	},
 	mobileTalkButton: {
 		borderColor: '#262626',

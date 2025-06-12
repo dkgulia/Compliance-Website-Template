@@ -388,7 +388,16 @@ const AppBarB2B: React.FC = () => {
 							</List>
 
 							<Box sx={styles.mobileLoginButtonContainer}>
-								<HexaButton onClick={() => navigateTo(WORKSTATION)} sx={styles.shopButton}>
+								<HexaButton
+									onClick={() => window.open('https://cal.com/hexafort-security-advisory/30min', '_blank')}
+									sx={styles.talkButton}
+								>
+									Book a Demo
+								</HexaButton>
+								<HexaButton
+									onClick={() => (window.location.href = 'https://secure.hexafort.io/login')}
+									sx={styles.shopButton}
+								>
 									Login
 								</HexaButton>
 							</Box>

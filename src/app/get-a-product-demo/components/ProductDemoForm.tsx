@@ -159,21 +159,26 @@ const ProductDemoForm: React.FC<ProductDemoFormProps> = ({
    			selectedProducts.join(', ')
    		];
    		try {
-   			await addDataToGoogleSheetRequest(sheetName, data);
-   			setAlert({ type: 'success', message: 'Demo request submitted successfully!' });
-   			setSubmitted(true);
-   			resetForm();
-   			onProductsChange([]);
-   		} catch (err: any) {
-   			let errorMessage = 'Network Error';
-   			if (err.response?.data?.message) {
-   				errorMessage = err.response.data.message;
-   			}
-   			setAlert({ type: 'error', message: errorMessage });
-   			console.error(err);
-   		} finally {
-   			setLoading(false);
-   		}
+			await addDataToGoogleSheetRequest(sheetName, data);
+			setAlert({ type: 'success', message: 'Demo request submitted successfully! Redirecting...' });
+			setSubmitted(true);
+			resetForm();
+			onProductsChange([]);
+
+			setTimeout(() => {
+			    window.open('https://cal.com/hexafort-security-advisory/30min', '_blank');
+			}, 1500);
+
+		    } catch (err: any) {
+			let errorMessage = 'Network Error';
+			if (err.response?.data?.message) {
+			    errorMessage = err.response.data.message;
+			}
+			setAlert({ type: 'error', message: errorMessage });
+			console.error(err);
+		    } finally {
+			setLoading(false);
+		    }
    	}
    };
 
