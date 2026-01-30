@@ -19,7 +19,7 @@ const SOC2StepsSection = () => {
                 <Typography variant="h1" sx={styles.title}>
                     Getting started with{' '}
                     <Box component="span" sx={styles.highlight}>
-                        HexaFort
+                        ComplianceHub
                     </Box>{' '}
                     is easy
                 </Typography>

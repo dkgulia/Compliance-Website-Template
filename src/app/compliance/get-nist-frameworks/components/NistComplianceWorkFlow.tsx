@@ -11,7 +11,7 @@ const NistComplianceWorkFlow = () => {
         <Box sx={nistComplianceWorkFlowStyles.workflowContainer}>
           <Grid container spacing={4} sx={nistComplianceWorkFlowStyles.gridWrapper}>
             <Grid size={{ xs: 12, md: 5 }} sx={nistComplianceWorkFlowStyles.leftSection}>
-              <Box sx={nistComplianceWorkFlowStyles.chip}>Succeed with HexaFort</Box>
+              <Box sx={nistComplianceWorkFlowStyles.chip}>Succeed with ComplianceHub</Box>
               <Typography variant="h4" sx={nistComplianceWorkFlowStyles.title}>
                 Take the Complexity out of NIST CSF
               </Typography>
@@ -19,7 +19,7 @@ const NistComplianceWorkFlow = () => {
 
             <Grid size={{ xs: 12, md: 7 }} sx={nistComplianceWorkFlowStyles.rightSection}>
               <Typography variant="body1" sx={nistComplianceWorkFlowStyles.description}>
-                Implementing NIST can feel daunting. HexaFort breaks it down into actionable steps, eliminating guesswork
+                Implementing NIST can feel daunting. ComplianceHub breaks it down into actionable steps, eliminating guesswork
                 and manual checklists. With automated evidence collection and real-time reporting, you can confidently
                 maintain compliance and quickly respond to new threats.
               </Typography>

@@ -46,7 +46,7 @@ export const ccpaTableItems: CcpaTableItem[] = [
   {
     right: 'Right to Know',
     definition: 'Users can request what personal data is collected, used, or sold.',
-    approach: 'HexaFort logs data assets, making them easily retrievable for DSAR (Data Subject Access Requests).',
+    approach: 'ComplianceHub logs data assets, making them easily retrievable for DSAR (Data Subject Access Requests).',
   },
   {
     right: 'Right to Delete',
@@ -61,7 +61,7 @@ export const ccpaTableItems: CcpaTableItem[] = [
   {
     right: 'Right to Non-Discrimination',
     definition: 'Ensures equal service quality even after opting out or exercising CCPA rights.',
-    approach: 'HexaFort monitors service policies to ensure consistent experiences for all users, no paywalls or blocking.',
+    approach: 'ComplianceHub monitors service policies to ensure consistent experiences for all users, no paywalls or blocking.',
   },
 ];
 
@@ -77,19 +77,19 @@ export const ccpaFaq: CcpaFaqItem[] = [
       'Businesses operating in California, meeting certain revenue or data-processing thresholds, must comply. This includes companies outside of California that handle California residents’ personal data.',
   },
   {
-    question: 'How does HexaFort help with DSARs?',
+    question: 'How does ComplianceHub help with DSARs?',
     answer:
-      'HexaFort automatically logs data usage and location, easing the burden of Data Subject Access Requests (DSARs). Our tool quickly compiles data for user requests.',
+      'ComplianceHub automatically logs data usage and location, easing the burden of Data Subject Access Requests (DSARs). Our tool quickly compiles data for user requests.',
   },
   {
     question: 'What if I already comply with GDPR?',
     answer:
-      'CCPA has unique requirements, especially around “sale” of data and opt-out rights. HexaFort unifies compliance needs so you can tackle both GDPR and CCPA simultaneously.',
+      'CCPA has unique requirements, especially around “sale” of data and opt-out rights. ComplianceHub unifies compliance needs so you can tackle both GDPR and CCPA simultaneously.',
   },
   {
     question: 'Is there any difference between CPRA and CCPA?',
     answer:
-      'CPRA is an amendment to CCPA that expands some consumer rights and business obligations. HexaFort continuously updates to reflect the latest California privacy laws, including CPRA changes.',
+      'CPRA is an amendment to CCPA that expands some consumer rights and business obligations. ComplianceHub continuously updates to reflect the latest California privacy laws, including CPRA changes.',
   },
 ];
 

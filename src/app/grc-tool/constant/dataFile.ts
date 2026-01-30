@@ -81,12 +81,12 @@ export interface GoToMarketStrategy {
 }
 
 // Main data export
-export const hexafortData = {
+export const complianceData = {
   company: {
-    name: "HexaFort",
+    name: "ComplianceHub",
     tagline: "Revolutionizing GRC for Sustainable Growth",
-    description: "HexaFort is an AI-powered platform that provides a comprehensive suite of tools for managing all aspects of Information Security and Data Privacy. From risk assessments and compliance audits to incident response and data breach notification, HexaFort empowers businesses to navigate the evolving threat landscape and ensure the confidentiality, integrity, and availability of their critical data.",
-    logo: "/images/hexafort-logo.svg", // Placeholder path
+    description: "ComplianceHub is an AI-powered platform that provides a comprehensive suite of tools for managing all aspects of Information Security and Data Privacy. From risk assessments and compliance audits to incident response and data breach notification, ComplianceHub empowers businesses to navigate the evolving threat landscape and ensure the confidentiality, integrity, and availability of their critical data.",
+    logo: "/images/compliancehub-logo.svg", // Placeholder path
   },
 
   challenges: [
@@ -194,7 +194,7 @@ export const hexafortData = {
     metrics: [
       {
         value: "September 25th, 2024",
-        label: "HexaFort Genesis",
+        label: "ComplianceHub Genesis",
         description: "A journey of growth begins.",
       },
       {
@@ -215,7 +215,7 @@ export const hexafortData = {
       {
         value: "32",
         label: "Certifications and Compliances",
-        description: "HexaFort handles 32 certifications and compliance across geographies and industries. Expanding to more in the coming months.",
+        description: "ComplianceHub handles 32 certifications and compliance across geographies and industries. Expanding to more in the coming months.",
       },
     ],
     dashboardImages: [
@@ -228,19 +228,19 @@ export const hexafortData = {
     {
       name: "Sreerag",
       role: "Founder and CEO",
-      bio: "Sreerag, a seasoned leader with a decade of experience in delivering secure solutions, championing customer success, and driving compliance, founded and leads HexaFort.",
+      bio: "Sreerag, a seasoned leader with a decade of experience in delivering secure solutions, championing customer success, and driving compliance, founded and leads ComplianceHub.",
       image: "/images/team/sreerag.jpg",
     },
     {
       name: "Tony",
       role: "Co-Founder and CTO",
-      bio: "Tony, a seasoned technologist with a proven track record of delivering innovative and customer-centric security solutions, drives technology at HexaFort.",
+      bio: "Tony, a seasoned technologist with a proven track record of delivering innovative and customer-centric security solutions, drives technology at ComplianceHub.",
       image: "/images/team/tony.jpg",
     },
     {
       name: "Siddharth",
       role: "Co-Founder and COO",
-      bio: "Siddharth, a results-oriented leader with expertise in operational excellence and customer satisfaction, drives efficient and secure operations at HexaFort.",
+      bio: "Siddharth, a results-oriented leader with expertise in operational excellence and customer satisfaction, drives efficient and secure operations at ComplianceHub.",
       image: "/images/team/siddharth.jpg",
     },
   ],
@@ -342,7 +342,7 @@ export const hexafortData = {
     },
   ],
 
-  whyHexafort: [
+  whyComplianceHub: [
     {
       id: 1,
       title: "Proven Team",
@@ -404,4 +404,4 @@ export const hexafortData = {
   },
 };
 
-export default hexafortData;
+export default complianceData;

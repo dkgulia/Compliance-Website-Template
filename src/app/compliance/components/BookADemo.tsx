@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from 'next/image';
-import HexaButton from '../../Button/HexaFortButton';
+import ComplianceHubBtn from '../../Button/ComplianceHubButton';
 import bookADemoStyles from '../styles/bookADemoStyle';
 import demoImage from '../images/complianceDemo.png';
 
@@ -20,7 +20,7 @@ const BookADemo = () => {
 			<Container sx={bookADemoStyles.container}>
 				<Box sx={bookADemoStyles.textBox}>
 					<Grid>
-						<Typography sx={bookADemoStyles.tagline}>HexaFort Advantage</Typography>
+						<Typography sx={bookADemoStyles.tagline}>ComplianceHub Advantage</Typography>
 					</Grid>
 					<Typography variant="h4" sx={bookADemoStyles.title}>
 						Automate Compliance, Unlock Business
@@ -39,7 +39,7 @@ const BookADemo = () => {
 							<Typography component="span">Achieve continuous compliance and unlock new business</Typography>
 						</Box>
 					</Box>
-					<HexaButton onClick={handleScrollToTop}>Book Your Demo</HexaButton>
+					<ComplianceHubBtn onClick={handleScrollToTop}>Book Your Demo</ComplianceHubBtn>
 				</Box>
 				<Box sx={bookADemoStyles.imageBox}>
 					<Image

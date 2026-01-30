@@ -3,7 +3,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import controlFrameworkData from '../constants/controlFrameworkData';
 import Image from 'next/image';

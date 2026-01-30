@@ -2,10 +2,10 @@
 import React from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import costBreakdownStyle from '../styles/costBreakdownStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 
 const CostBreakdown: React.FC = () => {
-  const { costBreakdown } = hexafortData;
+  const { costBreakdown } = complianceData;
   const { totalCost, breakdown } = costBreakdown;
   const colors = ['#5EEAD4', '#38B2AC', '#2C7A7B', '#234E52'];
   // For now, use equal percentages since amounts are placeholders

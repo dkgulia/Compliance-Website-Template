@@ -128,7 +128,7 @@ const HeroSectionForm: React.FC<HeroSectionFormProps> = ({
 
 					<Grid size={{ xs: 12 }}>
 						<Typography sx={{ fontSize: '0.8rem', color: theme.palette.text.secondary, textAlign: 'center' }}>
-							By clicking submit below, you consent to allow Hexafort to store and process the Personal Data submitted
+							By clicking submit below, you consent to allow ComplianceHub to store and process the Personal Data submitted
 							by you above as per our Privacy Policy
 						</Typography>
 					</Grid>

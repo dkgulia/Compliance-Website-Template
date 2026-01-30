@@ -166,7 +166,7 @@ const ProductDemoForm: React.FC<ProductDemoFormProps> = ({
 			onProductsChange([]);
 
 			setTimeout(() => {
-			    window.open('https://cal.com/hexafort-security-advisory/30min', '_blank');
+			    window.open('https://cal.com/compliancehub/demo', '_blank');
 			}, 1500);
 
 		    } catch (err: any) {
@@ -327,7 +327,7 @@ const ProductDemoForm: React.FC<ProductDemoFormProps> = ({
    				{/* Row 4: How did you hear about us (Full Width) */}
    				<Grid size={{ xs: 12 }}>
    					<FormControl fullWidth>
-   						<Typography sx={formStyles.formLabel}>How did you hear about HexaFort?*</Typography>
+   						<Typography sx={formStyles.formLabel}>How did you hear about ComplianceHub?*</Typography>
    						<OutlinedInput
    							id="howDidYouHear"
    							name="howDidYouHear"
@@ -380,7 +380,7 @@ const ProductDemoForm: React.FC<ProductDemoFormProps> = ({
    				{/* Privacy Notice */}
    				<Grid size={{ xs: 12 }}>
    					<Typography sx={formStyles.secondaryText}>
-   						By submitting this form I agree to receive communications (including emails) from HexaFort. See our{' '}
+   						By submitting this form I agree to receive communications (including emails) from ComplianceHub. See our{' '}
    						<a href="/privacy" target="_blank" rel="noopener noreferrer">
    							Privacy Notice
    						</a>{' '}

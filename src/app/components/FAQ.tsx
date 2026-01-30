@@ -11,54 +11,54 @@ const FAQ: React.FC = () => {
 
   const faqs = [
     {
-      question: "What is Hexafort?",
+      question: "What is ComplianceHub?",
       answer:
-        "Hexafort is a comprehensive enterprise security management platform designed to automate and streamline security and privacy processes.",
+        "ComplianceHub is a comprehensive enterprise security management platform designed to automate and streamline security and privacy processes.",
     },
     {
-      question: "Who is Hexafort for?",
+      question: "Who is ComplianceHub for?",
       answer:
-        "Hexafort is suitable for organizations of all sizes and industries that need to manage compliance with various regulations.",
+        "ComplianceHub is suitable for organizations of all sizes and industries that need to manage compliance with various regulations.",
     },
     {
-      question: "What kind of compliances does Hexafort support?",
+      question: "What kind of compliances does ComplianceHub support?",
       answer:
-        "Hexafort supports a wide range of compliances, including ISO 27001, HIPAA, GDPR, PCI DSS, and more.",
+        "ComplianceHub supports a wide range of compliances, including ISO 27001, HIPAA, GDPR, PCI DSS, and more.",
     },
     {
-      question: "How does Hexafort help automate compliance processes?",
+      question: "How does ComplianceHub help automate compliance processes?",
       answer:
-        "Hexafort automates tasks such as policy management, risk assessments, and evidence collection, saving time and reducing errors.",
+        "ComplianceHub automates tasks such as policy management, risk assessments, and evidence collection, saving time and reducing errors.",
     },
     {
-      question: "What is the risk assessment feature in Hexafort?",
+      question: "What is the risk assessment feature in ComplianceHub?",
       answer:
         "The risk assessment feature allows you to identify and prioritize potential risks to your organization, helping you focus on the most critical areas.",
     },
     {
-      question: "Can Hexafort integrate with other systems?",
+      question: "Can ComplianceHub integrate with other systems?",
       answer:
-        "Yes, Hexafort can integrate with various systems, including HR, IT, and financial systems, to provide a more comprehensive compliance solution.",
+        "Yes, ComplianceHub can integrate with various systems, including HR, IT, and financial systems, to provide a more comprehensive compliance solution.",
     },
     {
-      question: "How long does it take to implement Hexafort?",
+      question: "How long does it take to implement ComplianceHub?",
       answer:
         "The implementation time depends on factors such as the size of your organization and the complexity of your compliance requirements. However, we strive to make the process as smooth and efficient as possible.",
     },
     {
       question: "What kind of support is available after implementation?",
       answer:
-        "We offer ongoing support, including training, troubleshooting, and updates to ensure you get the most out of Hexafort.",
+        "We offer ongoing support, including training, troubleshooting, and updates to ensure you get the most out of ComplianceHub.",
     },
     {
-      question: "How is Hexafort priced?",
+      question: "How is ComplianceHub priced?",
       answer:
         "Our pricing is based on a subscription model, taking into account factors such as the number of users, features required, and compliance scope.",
     },
     {
       question: "Do you offer a free trial or demo?",
       answer:
-        "Yes, we offer a free trial or demo to allow you to experience Hexafort firsthand and see how it can benefit your organization.",
+        "Yes, we offer a free trial or demo to allow you to experience ComplianceHub firsthand and see how it can benefit your organization.",
     },
   ];
 

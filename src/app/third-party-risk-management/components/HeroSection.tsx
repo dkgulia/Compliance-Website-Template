@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import Image from 'next/image';

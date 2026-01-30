@@ -28,9 +28,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onClose }) => {
 		<>
 			<Grid container spacing={3}>
 				<Grid size={{ xs: 12, sm: 6, md: 6 }}>
-					<Typography sx={pageStyles.title}>About HexaFort</Typography>
+					<Typography sx={pageStyles.title}>About ComplianceHub</Typography>
 					<Typography sx={pageStyles.description}>
-						Empowering Your Workflow with High-Performance Computing. At Hexafort, we specialize in building top-tier
+						Empowering Your Workflow with High-Performance Computing. At ComplianceHub, we specialize in building top-tier
 						workstations tailored to your needs. Whether you're a business, a creator, or a professional, we ensure you
 						get the best computing solution with expert guidance and exceptional support.
 					</Typography>

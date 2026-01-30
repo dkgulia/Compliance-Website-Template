@@ -13,20 +13,20 @@ import {
 } from '@mui/icons-material';
 
 export const riskManagementData = {
-    pageTitle: "HexaFort Risk Management | Complete Control & Visibility",
+    pageTitle: "ComplianceHub Risk Management | Complete Control & Visibility",
     pageSubTitle: "Custom scoring • CIA lens • Actionable dashboards",
     pageDescription: [
-        "HexaFort's Risk Management module lets you tailor risk-scoring models, assess threats by Confidentiality-Integrity-Availability (CIA), assign mitigation owners, and keep audit-ready records—no spreadsheets, no bolt-ons."
+        "ComplianceHub's Risk Management module lets you tailor risk-scoring models, assess threats by Confidentiality-Integrity-Availability (CIA), assign mitigation owners, and keep audit-ready records—no spreadsheets, no bolt-ons."
     ],
     keywords: [
-        "HexaFort risk management",
+        "ComplianceHub risk management",
         "custom risk scoring",
         "CIA risk evaluation",
         "risk mitigation tracking",
         "audit ready risk docs"
     ],
     imageIdeasForPage: [
-        "Hero banner: HexaFort risk heat-map with form on right",
+        "Hero banner: ComplianceHub risk heat-map with form on right",
         "CIA triad overlay on assets",
         "4-step onboarding timeline",
         "Kanban board of mitigation tasks"
@@ -39,7 +39,7 @@ export const riskManagementData = {
             designGuidelines: "Headline + copy left; 3-field form (Name, Work Email, Submit) right; product screenshot background",
             content: {
                 heroTitle: "Master Your Risk Landscape in Minutes",
-                heroSubtitle: "Flexible scoring, CIA insights, real-time tasks—all inside HexaFort.",
+                heroSubtitle: "Flexible scoring, CIA insights, real-time tasks—all inside ComplianceHub.",
                 heroDescription: [
                     "Define likelihood-and-impact maths, see instant dashboards, assign fixes, and export audit packs with one click."
                 ],
@@ -94,7 +94,7 @@ export const riskManagementData = {
                     {
                         image: "",
                         caption: "Custom risk-scoring matrix with editable fields.",
-                        imagePrompt: "HexaFort scoring settings panel"
+                        imagePrompt: "ComplianceHub scoring settings panel"
                     },
                     {
                         image: "",
@@ -109,7 +109,7 @@ export const riskManagementData = {
                     {
                         image: "",
                         caption: "Kanban board of mitigation tasks and status chips.",
-                        imagePrompt: "Task board in HexaFort"
+                        imagePrompt: "Task board in ComplianceHub"
                     }
                 ]
             }
@@ -127,7 +127,7 @@ export const riskManagementData = {
                         heading: "Import & Map",
                         description: "Sync assets and existing registers via CSV/API.",
                         image: "",
-                        imagePrompt: "CSV upload into HexaFort"
+                        imagePrompt: "CSV upload into ComplianceHub"
                     },
                     {
                         heading: "Customise Scoring",
@@ -159,7 +159,7 @@ export const riskManagementData = {
                 title: "See Your First Dashboard Today",
                 subtitle: "15-minute personalised demo",
                 image: "",
-                imagePrompt: "Video-call snapshot of HexaFort demo",
+                imagePrompt: "Video-call snapshot of ComplianceHub demo",
                 description: "We'll import one of your risk registers live and walk you through the insights."
             }
         },
@@ -187,7 +187,7 @@ export const riskManagementData = {
                         answer: "Yes—create any scoring formula and qualitative labels you need."
                     },
                     {
-                        question: "Does HexaFort support CIA scoring out-of-the-box?",
+                        question: "Does ComplianceHub support CIA scoring out-of-the-box?",
                         answer: "Confidentiality, Integrity and Availability dimensions are built-in and fully weightable."
                     },
                     {

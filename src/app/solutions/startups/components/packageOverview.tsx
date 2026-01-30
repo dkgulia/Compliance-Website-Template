@@ -5,7 +5,7 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import SecurityIcon from '@mui/icons-material/Security';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
 import packageOverviewStyle from '../styles/packageOverviewStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 
 const iconMap: Record<string, React.ReactElement> = {
   "Comprehensive Standards": <SecurityIcon sx={packageOverviewStyle.icon} />,
@@ -14,7 +14,7 @@ const iconMap: Record<string, React.ReactElement> = {
 };
 
 const PackageOverview: React.FC = () => {
-  const { title, description, highlights } = hexafortData.packageOverview;
+  const { title, description, highlights } = complianceData.packageOverview;
 
   return (
     <Box sx={packageOverviewStyle.container}>

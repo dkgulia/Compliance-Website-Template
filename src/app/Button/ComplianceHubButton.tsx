@@ -2,11 +2,11 @@
 import React from 'react';
 import { Button, ButtonProps } from '@mui/material';
 
-interface HexaButtonProps extends ButtonProps {
+interface ComplianceHubBtnProps extends ButtonProps {
   children: React.ReactNode;
 }
 
-const HexaButton: React.FC<HexaButtonProps> = ({ children, sx, ...props }) => {
+const ComplianceHubBtn: React.FC<ComplianceHubBtnProps> = ({ children, sx, ...props }) => {
   return (
     <Button
       variant="contained"
@@ -41,4 +41,4 @@ const HexaButton: React.FC<HexaButtonProps> = ({ children, sx, ...props }) => {
   );
 };
 
-export default HexaButton;
+export default ComplianceHubBtn;

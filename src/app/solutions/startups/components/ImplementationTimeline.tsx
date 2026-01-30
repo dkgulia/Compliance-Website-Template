@@ -5,10 +5,10 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import implementationTimelineStyle from '../styles/implementationTimelineStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 
 const ImplementationTimeline: React.FC = () => {
-  const { implementationTimeline } = hexafortData;
+  const { implementationTimeline } = complianceData;
 
   return (
     <Box sx={implementationTimelineStyle.container}>

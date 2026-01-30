@@ -46,7 +46,7 @@ const SolutionsSection: React.FC = () => {
 					<Box sx={solutionsSectionStyle.dashboardWrapper}>
 						<Box sx={solutionsSectionStyle.dashboardHeader}>
 							<Typography variant="h6" sx={solutionsSectionStyle.dashboardTitle}>
-								HexaFort Dashboard
+								ComplianceHub Dashboard
 							</Typography>
 							<Box sx={solutionsSectionStyle.windowControls}>
 								<Box sx={{...solutionsSectionStyle.windowControl, ...solutionsSectionStyle.windowControlRed}} />

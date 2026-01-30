@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-8">
               <Image
                 src="/images/dual-hex-white.png"
-                alt="Hexafort Logo"
+                alt="ComplianceHub Logo"
                 width={32}
                 height={0}
                 onClick={() => router.push("/")}
@@ -30,14 +30,14 @@ export default function Navbar() {
             </div>
             <div className="flex space-x-1 sm:space-x-2 md:space-x-4">
               <a
-                href="https://cal.com/hexafort-security-advisory/30min"
+                href="https://cal.com/compliancehub/demo"
                 target="_blank"
                 className="py-1 px-2 sm:px-3 sm:py-1.5 md:px-2 md:py-1 text-xs rounded-lg bg-gray-800 hover:bg-gray-700 transition border border-gray-600"
               >
                 Book a Demo
               </a>
               <a
-                href="https://secure.hexafort.io"
+                href="https://secure.compliancehub.io"
                 className="py-1 px-2 sm:px-3 sm:py-1.5 md:px-2 md:py-1 text-xs rounded-lg bg-teal-800 hover:bg-teal-700 transition-all border border-teal-600"
               >
                 Login

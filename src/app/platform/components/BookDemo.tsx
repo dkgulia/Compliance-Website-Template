@@ -3,14 +3,14 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import Image from 'next/image';
 import bookDemoStyle from '../styles/bookDemoStyle';
-import hexafortSecureData from '../constants/hexafortSecureData';
+import platformData from '../constants/platformData';
 import demoImage from '../images/bookDemo.png';
 
 const BookDemo: React.FC = () => {
-	const { bookDemo } = hexafortSecureData;
+	const { bookDemo } = platformData;
 
 	const handleScrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -22,12 +22,12 @@ const BookDemo: React.FC = () => {
 
 				<Typography sx={bookDemoStyle.title}>{bookDemo.title}</Typography>
 
-				<Typography sx={bookDemoStyle.subtitle}>Experience the power of HexaFort Secure in action</Typography>
+				<Typography sx={bookDemoStyle.subtitle}>Experience the power of ComplianceHub Secure in action</Typography>
 			</Box>
 
 			<Box sx={bookDemoStyle.contentWrapper}>
 				<Box sx={bookDemoStyle.textContent}>
-					<Typography sx={bookDemoStyle.ctaTitle}>See HexaFort Secure Live</Typography>
+					<Typography sx={bookDemoStyle.ctaTitle}>See ComplianceHub Secure Live</Typography>
 
 					<Typography sx={bookDemoStyle.description}>
 						Get a comprehensive security assessment and see how our platform can transform your enterprise security

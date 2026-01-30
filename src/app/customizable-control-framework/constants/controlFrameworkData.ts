@@ -36,10 +36,10 @@ export type Question = {
 };
 
 export const controlFrameworkData = {
-  pageTitle: 'Customizable Control Framework | Hexafort',
+  pageTitle: 'Customizable Control Framework | ComplianceHub',
   pageSubTitle: 'Compliance That Fits You: Tailored, Adaptable, Future-Ready',
   pageDescription: [
-    "Hexafort's flexible control framework allows organizations to add, modify, and tailor security controls across any compliance standard without code. Adapt to your business needs, industry specifics, and operational reality.",
+    "ComplianceHub's flexible control framework allows organizations to add, modify, and tailor security controls across any compliance standard without code. Adapt to your business needs, industry specifics, and operational reality.",
   ],
   keywords: [
     'customizable compliance controls',
@@ -49,7 +49,7 @@ export const controlFrameworkData = {
     'framework-agnostic controls',
     'control mapping',
     'security control customization',
-    'Hexafort control framework',
+    'ComplianceHub control framework',
     'control management platform',
   ],
   sections: {
@@ -58,7 +58,7 @@ export const controlFrameworkData = {
       subtitle:
         'Every organization has different risks, goals, and operational needs',
       description: [
-        "At Hexafort, we understand that security and compliance aren't one-size-fits-all. Every organization has different risks, goals, and operational needs. That's why we built our control framework to be flexible, intuitive, and completely customizable.",
+        "At ComplianceHub, we understand that security and compliance aren't one-size-fits-all. Every organization has different risks, goals, and operational needs. That's why we built our control framework to be flexible, intuitive, and completely customizable.",
       ],
       imageAlt: 'Customizable control interface with drag-and-drop controls',
       ctaText: 'Get Started',
@@ -184,7 +184,7 @@ export const controlFrameworkData = {
       description:
         'Take control of your compliance program with a framework that adapts to your business—not the other way around.',
       ctaText: 'Book a Demo',
-      imageAlt: 'User customizing controls on the Hexafort platform',
+      imageAlt: 'User customizing controls on the ComplianceHub platform',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -193,7 +193,7 @@ export const controlFrameworkData = {
         {
           question: 'Can I import my existing controls from another system?',
           answer:
-            'Yes. Hexafort supports importing controls from spreadsheets, JSON files, and directly from other GRC platforms to minimize duplicate work.',
+            'Yes. ComplianceHub supports importing controls from spreadsheets, JSON files, and directly from other GRC platforms to minimize duplicate work.',
         },
         {
           question: 'How does control mapping work across multiple frameworks?',
@@ -208,7 +208,7 @@ export const controlFrameworkData = {
         {
           question: 'How do you handle framework updates?',
           answer:
-            'When standards are updated (e.g., ISO 27001:2022), Hexafort provides migration tools to compare changes, map existing controls to new requirements, and identify gaps requiring attention.',
+            'When standards are updated (e.g., ISO 27001:2022), ComplianceHub provides migration tools to compare changes, map existing controls to new requirements, and identify gaps requiring attention.',
         },
         {
           question:
@@ -219,7 +219,7 @@ export const controlFrameworkData = {
         {
           question: 'What happens to my customizations during audits?',
           answer:
-            'Hexafort maintains a complete audit trail of all control customizations, providing clear documentation of what was changed, why, and how it maps to standard requirements—making auditor reviews seamless.',
+            'ComplianceHub maintains a complete audit trail of all control customizations, providing clear documentation of what was changed, why, and how it maps to standard requirements—making auditor reviews seamless.',
         },
       ],
     },

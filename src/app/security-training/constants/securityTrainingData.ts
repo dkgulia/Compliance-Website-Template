@@ -1,9 +1,9 @@
 export const securityTrainingData = {
-  pageTitle: 'Hexafort Security Training Module | Empower Your Human Firewall',
+  pageTitle: 'ComplianceHub Security Training Module | Empower Your Human Firewall',
   pageSubTitle:
     'Deliver engaging security-awareness lessons, phishing simulations, and audit-ready reports—all in one place.',
   pageDescription: [
-    "Hexafort's Security Training Module turns every employee into a proactive line of defense. Launch bite-sized lessons, run real-world phishing drills, and track compliance with zero manual effort.",
+    "ComplianceHub's Security Training Module turns every employee into a proactive line of defense. Launch bite-sized lessons, run real-world phishing drills, and track compliance with zero manual effort.",
   ],
   keywords: [
     'security awareness training',
@@ -60,7 +60,7 @@ export const securityTrainingData = {
       designGuidelines: 'Four icon cards in two columns',
       content: {
         tagline: 'KEY ADVANTAGES',
-        title: 'Why Hexafort Training?',
+        title: 'Why ComplianceHub Training?',
         subtitle: 'Four powerful features that set your security program apart',
         features: [
           {
@@ -105,7 +105,7 @@ export const securityTrainingData = {
             description:
               'Sync users and roles from Azure AD, Okta, or Google Workspace.',
             image: '',
-            imagePrompt: 'Integration icons connecting to Hexafort logo',
+            imagePrompt: 'Integration icons connecting to ComplianceHub logo',
           },
           {
             heading: 'Assign Lessons',
@@ -173,7 +173,7 @@ export const securityTrainingData = {
             answer: 'Yes—SCORM, video, and PDF uploads are fully supported with custom branding options.',
           },
           {
-            question: 'Does Hexafort support phishing simulations?',
+            question: 'Does ComplianceHub support phishing simulations?',
             answer:
               'Absolutely. Choose from our template library or craft custom campaigns with advanced targeting and scheduling.',
           },

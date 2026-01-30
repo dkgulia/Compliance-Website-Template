@@ -46,11 +46,11 @@ export interface FAQ {
 }
 
 export const cspmData = {
-    pageTitle: "HexaFort CSPM | Cloud Security Posture Management — Security That Feels Effortless",
+    pageTitle: "ComplianceHub CSPM | Cloud Security Posture Management — Security That Feels Effortless",
     pageSubTitle: "Automate compliance, slash risk, and control cloud costs from one unified platform.",
-    pageDescription: "HexaFort's Cloud Security Posture Management (CSPM) gives growing teams enterprise-grade protection without the enterprise complexity. Continuous scans, smart remediation, and audit-ready evidence—all in minutes.",
+    pageDescription: "ComplianceHub's Cloud Security Posture Management (CSPM) gives growing teams enterprise-grade protection without the enterprise complexity. Continuous scans, smart remediation, and audit-ready evidence—all in minutes.",
     keywords: [
-        "HexaFort CSPM",
+        "ComplianceHub CSPM",
         "cloud security posture management",
         "automated cloud compliance",
         "CSPM tool",
@@ -63,13 +63,13 @@ export const cspmData = {
         heroTitle: "Cloud Security Management Security That Feels Effortless",
         heroSubtitle: "Detect. Fix. Comply. All without breaking your DevOps flow.",
         heroDescription: [
-            "With HexaFort CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."
+            "With ComplianceHub CSPM, securely connect your cloud infrastructure (AWS, Azure, GCP) in minutes. Our platform automatically detects misconfigurations, vulnerabilities, and policy violations—and provides clear, actionable remediation steps for immediate implementation."
         ],
         ctaText: "Get Started Free",
         imagePrompt: "A clean, modern 2D vector illustration set against a dark background (#171717) with subtle gray grid lines. At the center, feature a glowing AI-powered security core (shield with circuit pattern) surrounded by six floating rectangular dashboard cards, each with rounded corners and teal borders. The cards represent: Real-time Monitoring (with pulse line icon), Cloud Compliance Status (cloud with checkmark), Policy Management (document with gear), Risk Dashboard (bar chart), Cloud Platforms (AWS, Azure, GCP icons), and Automation (gear icon). Each module is connected to the central shield by thin dotted glowing lines in teal (#115e59). All icons use white strokes with soft teal glows for highlights. The layout is symmetrical and designed to feel like an intelligent security operations dashboard."
     },
     benefits: {
-        title: "What You'll Love About Hexafort CSPM:",
+        title: "What You'll Love About ComplianceHub CSPM:",
         subtitle: "",
         benefitsList: [
 
@@ -96,7 +96,7 @@ export const cspmData = {
                 {
                     title: "One Unified Experience",
                     muiIcon: DashboardIcon,
-                    description: "No switching between tools or fragmented views. CSPM is fully integrated into Hexafort Secure—your security, risk, and compliance connected."
+                    description: "No switching between tools or fragmented views. CSPM is fully integrated into ComplianceHub Secure—your security, risk, and compliance connected."
                 },
                 {
                     title: "Automated Threat Intelligence",
@@ -106,7 +106,7 @@ export const cspmData = {
         ]
     },
     features: {
-        title: "Why HexaFort?",
+        title: "Why ComplianceHub?",
         subtitle: "Four pillars that set us apart",
         featuresList: [
             {
@@ -139,7 +139,7 @@ export const cspmData = {
                 heading: "Connect",
                 description: "Securely link AWS, Azure, and GCP via read-only APIs.",
                 image: "",
-                imagePrompt: "Icons of AWS, Azure, GCP pointing to HexaFort logo"
+                imagePrompt: "Icons of AWS, Azure, GCP pointing to ComplianceHub logo"
             },
             {
                 heading: "Scan",
@@ -173,7 +173,7 @@ export const cspmData = {
         title: "Professional Assistance Included",
         subtitle: "Compliance experts on call",
         highlightText: "24×7 Advisory",
-        description: "Get tailored guidance from HexaFort specialists—before, during, and after implementation.",
+        description: "Get tailored guidance from ComplianceHub specialists—before, during, and after implementation.",
         subheading: "",
         imageIdea: "Consultant speaking with client over dashboard video call",
         imagePrompt: "A clean, high-tech 2D vector illustration set against a dark background (#171717) with subtle gray grid lines. The scene shows a glowing dashboard interface with a consultant avatar icon (headset or speech bubble icon) on the left and a client profile icon on the right, both connected by a secure video call line with a glowing teal (#115e59) halo. In the background, soft outlines of charts or compliance panels float subtly to imply real-time collaboration. Use light teal accents for outlines, icons, and connection indicators. No text or human figures. Balanced for right-side layout in a hero-style section."
@@ -206,9 +206,9 @@ export const cspmData = {
     },
     useCases: {
         title: "Top Use Cases",
-        subtitle: "Where HexaFort delivers instant ROI",
+        subtitle: "Where ComplianceHub delivers instant ROI",
         image: "",
-        imagePrompt: 'A clean, high-tech 2D vector illustration of a modular cybersecurity risk dashboard, set against a dark background (#171717) with subtle gray grid lines. The main dashboard panel is floating and well-lit with soft shadows, glowing borders, and teal accents (#115e59). The dashboard includes: A top section showing a cloud account risk assessment: a horizontal bar graph with 3 segments (red, orange, green) labeled "High Risk," "Medium Risk," and "Compliant." A gauge-style meter showing a risk score or compliance percentage with green/teal highlights. A block showing total resources scanned with a magnifying glass icon. Below, a horizontal bar graph titled Cloud Risk by Service with red/orange/yellow stacks per service icon (e.g., compute, storage, identity, networking). The layout is symmetrical and minimal, using glowing white icons, rounded corners, and teal glow effects. No human figures or text. Designed to look like a secure, AI-powered GRC dashboard within the Hexafort platform.',
+        imagePrompt: 'A clean, high-tech 2D vector illustration of a modular cybersecurity risk dashboard, set against a dark background (#171717) with subtle gray grid lines. The main dashboard panel is floating and well-lit with soft shadows, glowing borders, and teal accents (#115e59). The dashboard includes: A top section showing a cloud account risk assessment: a horizontal bar graph with 3 segments (red, orange, green) labeled "High Risk," "Medium Risk," and "Compliant." A gauge-style meter showing a risk score or compliance percentage with green/teal highlights. A block showing total resources scanned with a magnifying glass icon. Below, a horizontal bar graph titled Cloud Risk by Service with red/orange/yellow stacks per service icon (e.g., compute, storage, identity, networking). The layout is symmetrical and minimal, using glowing white icons, rounded corners, and teal glow effects. No human figures or text. Designed to look like a secure, AI-powered GRC dashboard within the ComplianceHub platform.',
         list: [
             {
                 heading: "Continuous Compliance",
@@ -229,7 +229,7 @@ export const cspmData = {
         ]
     },
     callToAction: {
-        title: "See HexaFort Live",
+        title: "See ComplianceHub Live",
         subtitle: "10-minute guided demo • Customized to your stack",
         image: "",
         imagePrompt: "Live demo video thumbnail with play button",
@@ -240,22 +240,22 @@ export const cspmData = {
         title: "Built for Teams Who Care About Doing Things Right",
         imageIdea: "Team collaborating over secure cloud diagram",
         description: [
-            "We know how hard it is to stay on top of cloud security—especially when you're growing fast, wearing multiple hats, and trying to keep costs under control. That's why we designed Hexafort CSPM to be simple, powerful, and human.",
+            "We know how hard it is to stay on top of cloud security—especially when you're growing fast, wearing multiple hats, and trying to keep costs under control. That's why we designed ComplianceHub CSPM to be simple, powerful, and human.",
             "You don't need to be a cloud security expert to stay protected. You just need the right partner.",
-            "🔒 Let Hexafort CSPM give you the confidence to scale securely—without surprises."
+            "🔒 Let ComplianceHub CSPM give you the confidence to scale securely—without surprises."
         ],
-        imagePrompt: "Friendly team high-fiving in front of HexaFort dashboard"
+        imagePrompt: "Friendly team high-fiving in front of ComplianceHub dashboard"
     },
     faq: {
         title: "Frequently Asked Questions",
-        subtitle: "Answers to common HexaFort queries",
+        subtitle: "Answers to common ComplianceHub queries",
         questions: [
             {
-                question: "What makes HexaFort different from other GRC tools?",
+                question: "What makes ComplianceHub different from other GRC tools?",
                 answer: "We combine full-stack CSPM, AI-driven risk scoring, and built-in advisory services—all in one subscription."
             },
             {
-                question: "Does HexaFort support on-premise environments?",
+                question: "Does ComplianceHub support on-premise environments?",
                 answer: "Our primary focus is cloud and SaaS, but on-prem assets can be mapped via API connectors."
             },
             {
@@ -267,15 +267,15 @@ export const cspmData = {
                 answer: "ISO 27001, SOC 2, GDPR, HIPAA, PCI-DSS, NIST CSF, and dozens more—with regular updates."
             },
             {
-                question: "Is HexaFort agent-less?",
+                question: "Is ComplianceHub agent-less?",
                 answer: "Yes. We integrate via read-only APIs—no agents, no performance impact."
             },
             {
-                question: "Can HexaFort optimize my cloud spend?",
+                question: "Can ComplianceHub optimize my cloud spend?",
                 answer: "Absolutely. Our CSPM module surfaces unused or oversized resources and recommends right-sizing."
             },
             {
-                question: "Does HexaFort provide remediation guidance?",
+                question: "Does ComplianceHub provide remediation guidance?",
                 answer: "Every finding is paired with clear, step-by-step fixes your engineers can apply immediately."
             },
             {

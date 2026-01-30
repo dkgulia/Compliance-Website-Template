@@ -21,7 +21,7 @@ const Iso27018ComplianceWorkFlow: React.FC = () => {
             <Grid size={{ xs: 12, md: 7 }} sx={iso27018ComplianceWorkFlowStyles.rightSection}>
               <Typography variant="body1" sx={iso27018ComplianceWorkFlowStyles.description}>
                 Our guided approach ensures you implement and maintain the necessary privacy controls in your cloud environment.
-                From PII identification to breach response, HexaFort covers your complete lifecycle.
+                From PII identification to breach response, ComplianceHub covers your complete lifecycle.
               </Typography>
             </Grid>
           </Grid>

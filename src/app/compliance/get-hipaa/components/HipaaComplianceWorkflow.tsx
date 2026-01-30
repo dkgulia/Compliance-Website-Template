@@ -18,7 +18,7 @@ const HipaaComplianceWorkFlow = () => {
              sx={hipaaComplianceWorkFlowStyles.leftSection}
            >
              <Box sx={hipaaComplianceWorkFlowStyles.chip}>
-               Succeed with Hexafort
+               Succeed with ComplianceHub
              </Box>
              <Typography variant="h4" sx={hipaaComplianceWorkFlowStyles.title}>
                Do work that translates into true HIPAA compliance
@@ -32,10 +32,10 @@ const HipaaComplianceWorkFlow = () => {
                variant="body1"
                sx={hipaaComplianceWorkFlowStyles.description}
              >
-               Leverage Hexafort to seamlessly implement HIPAA essentials in a
+               Leverage ComplianceHub to seamlessly implement HIPAA essentials in a
                structured and business-specific approach. Our experts will
                guide you every step of the way, eliminating the need for
-               complex checklists. With Hexafort, you can ensure a thorough
+               complex checklists. With ComplianceHub, you can ensure a thorough
                compliance program backed by continuous monitoring, helping you
                mitigate risks and avoid penalties.
              </Typography>

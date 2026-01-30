@@ -16,8 +16,8 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import LinkIcon from '@mui/icons-material/Link';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
-import Button from '../../Button/HexaFortButton';
-import { PlatformFeature } from '../constants/hexafortSecureData';
+import Button from '../../Button/ComplianceHubButton';
+import { PlatformFeature } from '../constants/platformData';
 import platformFeaturesStyle from '../styles/platformFeaturesStyle';
 
 interface PlatformFeaturesCarouselProps {

@@ -32,12 +32,12 @@ const HeroSection = () => {
    				Automate Compliance and Simplify Security with{' '}
    				<Box sx={heroSectionStyles.highlightWrapper}>
    					<Box component="span" sx={heroSectionStyles.highlight}>
-   						HexaFort
+   						ComplianceHub
    					</Box>
    					<Box sx={heroSectionStyles.logoWrapper}>
    						<Image
    							src={logo}
-   							alt="HexaFort Logo"
+   							alt="ComplianceHub Logo"
    							width={40}
    							height={40}
    							priority
@@ -50,7 +50,7 @@ const HeroSection = () => {
    			</Typography>
 
    			<Typography sx={heroSectionStyles.description}>
-   				HexaFort is your trusted compliance partner. Our GRC platform automates compliance, risk management, and
+   				ComplianceHub is your trusted compliance partner. Our GRC platform automates compliance, risk management, and
    				incident response to simplify security for growing businesses.
    			</Typography>
    		</Box>

@@ -41,18 +41,18 @@ const ProductHeroSection = () => {
 			<Container sx={productHeroSectionStyles.containerBox}>
 				<Box sx={productHeroSectionStyles.leftContentBox}>
 					<Box sx={productHeroSectionStyles.tag}>
-						<Typography sx={productHeroSectionStyles.tagText}>🚀 Experience HexaFort Live</Typography>
+						<Typography sx={productHeroSectionStyles.tagText}>🚀 Experience ComplianceHub Live</Typography>
 					</Box>
 					<Typography variant="h3" sx={productHeroSectionStyles.mainTitle}>
 						Get a Personalized Product Demo of{' '}
 						<Box sx={productHeroSectionStyles.highlightWrapper}>
 							<Box component="span" sx={productHeroSectionStyles.highlightText}>
-								HexaFort
+								ComplianceHub
 							</Box>
 							<Box sx={productHeroSectionStyles.logoWrapper}>
 								<Image
 									src={logo}
-									alt="HexaFort Logo"
+									alt="ComplianceHub Logo"
 									width={40}
 									height={40}
 									priority
@@ -64,7 +64,7 @@ const ProductHeroSection = () => {
 						</Box>
 					</Typography>
 					<Typography sx={productHeroSectionStyles.description}>
-						See how HexaFort's comprehensive GRC platform can transform your compliance journey. Schedule a personalized
+						See how ComplianceHub's comprehensive GRC platform can transform your compliance journey. Schedule a personalized
 						demo to discover features tailored to your specific needs and industry requirements.
 					</Typography>
 				</Box>

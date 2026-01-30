@@ -17,10 +17,10 @@ const HeroSection: React.FC = () => {
 					<Box sx={heroSectionStyle.titleSection}>
 						<Box sx={heroSectionStyle.tag}>
 							<Typography component="span">✨</Typography>
-							<Typography component="p">Introducing HexaFort GRC</Typography>
+							<Typography component="p">Introducing ComplianceHub GRC</Typography>
 						</Box>
 						<Typography sx={heroSectionStyle.titlePrimary}>
-							HexaFort Revolutionizing
+							ComplianceHub Revolutionizing
 						</Typography>
 						<Typography sx={heroSectionStyle.titleSecondary}>
 							GRC for Sustainable Growth

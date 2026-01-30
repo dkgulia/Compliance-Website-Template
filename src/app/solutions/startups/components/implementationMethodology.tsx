@@ -7,10 +7,10 @@ import BuildIcon from '@mui/icons-material/Build';
 import SchoolIcon from '@mui/icons-material/School';
 import { useRouter } from 'next/navigation';
 import implementationMethodologyStyle from '../styles/implementationMethodologyStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 
 const ImplementationMethodology: React.FC = () => {
-  const { implementationMethodology } = hexafortData;
+  const { implementationMethodology } = complianceData;
   const router = useRouter(); // ← hook for routing
 
   const renderIcon = (title: string) => {
@@ -29,7 +29,7 @@ const ImplementationMethodology: React.FC = () => {
   };
 
   const handleRedirect = () => {
-    router.push('/hexafort-secure'); // ← redirect
+    router.push('/platform'); // ← redirect
   };
 
   return (

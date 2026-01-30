@@ -7,7 +7,7 @@ const stepsData = [
   {
     icon: IntegrationInstructionsIcon,
     stepNumber: 'STEP 1',
-    title: 'Plug Hexafort into your tech stack with easy integrations',
+    title: 'Plug ComplianceHub into your tech stack with easy integrations',
   },
   {
     icon: EditNoteIcon,

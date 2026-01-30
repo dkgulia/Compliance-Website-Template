@@ -121,7 +121,7 @@ const ContactUsComponent = () => {
 					<Typography variant="h1" sx={contactStyle.title}>
 						Contact{' '}
 						<Box component="span" sx={contactStyle.highlightText}>
-							Hexafort
+							ComplianceHub
 						</Box>
 					</Typography>
 
@@ -143,7 +143,7 @@ const ContactUsComponent = () => {
 										<Typography variant="body2" sx={contactStyle.contactLabel}>
 											Email Us
 										</Typography>
-										<Typography sx={contactStyle.contactValue}>hello@hexafort.io</Typography>
+										<Typography sx={contactStyle.contactValue}>hello@compliancehub.io</Typography>
 									</Box>
 								</Box>
 

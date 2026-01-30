@@ -115,13 +115,13 @@ export const nistFaq: NistFaqItem[] = [
       'While originally designed for critical infrastructure, organizations in various industries adopt the NIST CSF because of its best practices, flexible approach, and global recognition.',
   },
   {
-    question: 'How does HexaFort streamline NIST implementation?',
+    question: 'How does ComplianceHub streamline NIST implementation?',
     answer:
-      'HexaFort automates key security controls, centralizes documentation, and provides continuous monitoring to ensure you stay aligned with all five core NIST CSF functions.',
+      'ComplianceHub automates key security controls, centralizes documentation, and provides continuous monitoring to ensure you stay aligned with all five core NIST CSF functions.',
   },
   {
     question: 'How long does it take to adopt NIST CSF?',
     answer:
-      'The timeline varies depending on organizational complexity, existing security posture, and resource allocation. HexaFort can significantly reduce the time needed by automating many manual tasks.',
+      'The timeline varies depending on organizational complexity, existing security posture, and resource allocation. ComplianceHub can significantly reduce the time needed by automating many manual tasks.',
   },
 ];

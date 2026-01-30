@@ -2,15 +2,15 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import { hexafortSecureData } from '../constants/hexafortSecureData';
+import { platformData } from '../constants/platformData';
 import heroImage from '../images/secure-hero.png';
 
 const HeroSection: React.FC = () => {
-	const { hero } = hexafortSecureData;
+	const { hero } = platformData;
 	const router = useRouter();
 
 	const handleRedirect = () => {
@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
 				<Box sx={heroSectionStyle.imageWrapper}>
 					<Image
 						src={heroImage}
-						alt="HexaFort Secure Platform"
+						alt="ComplianceHub Secure Platform"
 						fill
 						style={{
 							objectFit: 'cover',

@@ -32,7 +32,7 @@ const TestimonialSection: React.FC = () => {
          What Our Clients Say
        </Typography>
        <Typography sx={testimonialSectionStyle.subtitle}>
-         Real feedback from companies who trust HexaFort
+         Real feedback from companies who trust ComplianceHub
        </Typography>
      </Box>
 

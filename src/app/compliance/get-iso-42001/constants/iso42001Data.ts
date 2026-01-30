@@ -37,10 +37,10 @@ export type Question = {
 };
 
 export const iso42001Data = {
-    pageTitle: "HexaFort for ISO 42001 | Responsible AI, Certified Fast",
+    pageTitle: "ComplianceHub for ISO 42001 | Responsible AI, Certified Fast",
     pageSubTitle: "Automated gap analysis • Bias & risk controls • Audit-ready evidence",
     pageDescription: [
-        "HexaFort streamlines ISO / IEC 42001 certification—the world's first AI Management System (AIMS) standard. Map AI risks to mandated controls in minutes, track bias-mitigation tasks, and export auditor-ready packages so you can innovate with confidence."
+        "ComplianceHub streamlines ISO / IEC 42001 certification—the world's first AI Management System (AIMS) standard. Map AI risks to mandated controls in minutes, track bias-mitigation tasks, and export auditor-ready packages so you can innovate with confidence."
     ],
     keywords: [
         "ISO 42001",
@@ -50,7 +50,7 @@ export const iso42001Data = {
         "ISO 42001 automation"
     ],
     imageIdeasForPage: [
-        "Hero: HexaFort AI-risk dashboard with form on right",
+        "Hero: ComplianceHub AI-risk dashboard with form on right",
         "Infographic: Three-phase ISO 42001 cycle—Plan, Operate, Improve",
         "Carousel: control-mapping matrix auto-filled, bias heat-map, audit-export modal",
         "Metric card: 4× faster compliance, 90 % workload automated"
@@ -60,12 +60,12 @@ export const iso42001Data = {
             title: "ISO / IEC 42001 Compliance—Automated & Continuous",
             subtitle: "Prove your AI is safe, fair, and trustworthy.",
             description: [
-                "HexaFort pinpoints every ISO 42001 gap, assigns fixes, and keeps real-time evidence so audits never slow your roadmap."
+                "ComplianceHub pinpoints every ISO 42001 gap, assigns fixes, and keeps real-time evidence so audits never slow your roadmap."
             ],
             buttonText: "Explore ISO 42001"
         },
         benefits: {
-            title: "Why HexaFort Beats Manual Playbooks",
+            title: "Why ComplianceHub Beats Manual Playbooks",
             subtitle: "",
             items: [
                 {
@@ -100,7 +100,7 @@ export const iso42001Data = {
             ]
         },
         screenshots: {
-            title: "HexaFort in Action",
+            title: "ComplianceHub in Action",
             subtitle: "",
             items: [
                 {
@@ -132,7 +132,7 @@ export const iso42001Data = {
                 },
                 {
                     heading: "Gap Analysis",
-                    description: "HexaFort maps controls and highlights missing practices instantly.",
+                    description: "ComplianceHub maps controls and highlights missing practices instantly.",
                     icon: AssessmentIcon
                 },
                 {
@@ -166,16 +166,16 @@ export const iso42001Data = {
                     answer: "Any organisation that designs, develops or operates AI and wants to prove governance, risk, and bias controls to customers or regulators."
                 },
                 {
-                    question: "How does HexaFort accelerate certification?",
+                    question: "How does ComplianceHub accelerate certification?",
                     answer: "Automated control mapping, gap detection, remediation tracking, and evidence export reduce manual effort by up to 90%."
                 },
                 {
-                    question: "Does HexaFort cover data-set bias controls?",
+                    question: "Does ComplianceHub cover data-set bias controls?",
                     answer: "Yes—bias identification and mitigation tasks are part of the built-in control library."
                 },
                 {
                     question: "Can we integrate existing risk registers?",
-                    answer: "Upload via CSV or API; HexaFort auto-links them to ISO 42001 clauses."
+                    answer: "Upload via CSV or API; ComplianceHub auto-links them to ISO 42001 clauses."
                 },
                 {
                     question: "Is ongoing monitoring included?",

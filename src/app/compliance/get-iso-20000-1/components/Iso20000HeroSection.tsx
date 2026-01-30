@@ -56,7 +56,7 @@ const Iso20000HeroSection: React.FC = () => {
                             </Typography>
                         ))}
                         <Typography sx={heroSectionStyle.description}>
-                            Protect your service delivery and enhance reliability by complying with ISO 20000-1. HexaFort helps automate tasks, track processes, and streamline your path to certification.
+                            Protect your service delivery and enhance reliability by complying with ISO 20000-1. ComplianceHub helps automate tasks, track processes, and streamline your path to certification.
                         </Typography>
                         <Box sx={heroSectionStyle.featuresContainer}>
                             <Box sx={heroSectionStyle.featureItem}>

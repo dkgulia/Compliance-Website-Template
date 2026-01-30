@@ -21,7 +21,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useRouter } from 'next/navigation';
 import complianceFrameworksStyle from '../styles/complianceFrameworksStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -53,7 +53,7 @@ function a11yProps(index: number) {
 
 const ComplianceFrameworks: React.FC = () => {
   const [value, setValue] = useState(0);
-  const { complianceFrameworks } = hexafortData;
+  const { complianceFrameworks } = complianceData;
   const theme = useTheme();
   const router = useRouter();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

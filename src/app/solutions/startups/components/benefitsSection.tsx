@@ -7,11 +7,11 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import PersonIcon from '@mui/icons-material/Person';
 import benefitsSectionStyle from '../styles/benefitsSectionStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 import { useRouter } from 'next/navigation';
 
 const BenefitsSection: React.FC = () => {
-  const { benefits, testimonials } = hexafortData;
+  const { benefits, testimonials } = complianceData;
   const router = useRouter();
 
   const getInitials = (name: string) => {
@@ -23,7 +23,7 @@ const BenefitsSection: React.FC = () => {
   };
 
   const handleRedirect = () => {
-    router.push('/hexafort-secure');
+    router.push('/platform');
   };
 
   return (

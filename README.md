@@ -1,2 +1,2 @@
-# hexafort-kite
-The Hexafort landing webapp built in Next.js
+# hexashield-kite
+The HexaShield landing webapp built in Next.js

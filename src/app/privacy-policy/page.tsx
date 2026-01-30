@@ -34,7 +34,7 @@ const PrivacyPolicyPage = () => {
             Effective Date: April 6, 2025 | Last Updated: April 6, 2025
           </Typography>
           <Typography sx={styles.headerDescriptionStyle}>
-            At Hexafort, we value your privacy and are committed to protecting
+            At ComplianceHub, we value your privacy and are committed to protecting
             your personal data. This comprehensive privacy policy outlines how
             we collect, use, and safeguard your information.
           </Typography>
@@ -95,7 +95,7 @@ const PrivacyPolicyPage = () => {
             Introduction
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort Secure, we are committed to protecting your privacy and
+            At ComplianceHub Secure, we are committed to protecting your privacy and
             ensuring the security of your personal data. As a trusted
             enterprise-level cybersecurity solution, we recognize the critical
             importance of data confidentiality, integrity, and transparency in
@@ -110,7 +110,7 @@ const PrivacyPolicyPage = () => {
             those rights.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort Secure provides cybersecurity and compliance solutions to
+            ComplianceHub Secure provides cybersecurity and compliance solutions to
             organizations around the world, and we take our responsibility as a
             data processor and controller seriously. Whether you're browsing our
             website, engaging with our platform, or receiving our security
@@ -124,12 +124,12 @@ const PrivacyPolicyPage = () => {
             or concerns regarding your data, we encourage you to reach out to
             our privacy team at{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
             .
           </Typography>
@@ -146,28 +146,28 @@ const PrivacyPolicyPage = () => {
             processing of your personal data (the "Data Controller") is:
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort Inc and its other subsidiaries
+            ComplianceHub Inc and its other subsidiaries
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Official Website:{' '}
             <Link
-              href="https://hexafort.io"
+              href="https://compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              https://hexafort.io
+              https://compliancehub.io
             </Link>
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Email:{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -175,7 +175,7 @@ const PrivacyPolicyPage = () => {
             international service scope)
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort Secure Private Limited ("Hexafort", "we", "us", or "our")
+            ComplianceHub Secure Private Limited ("ComplianceHub", "we", "us", or "our")
             provides enterprise-grade cybersecurity and compliance services to
             organizations globally. In the course of delivering our services and
             operating our platform and website, we may collect, process, and
@@ -193,12 +193,12 @@ const PrivacyPolicyPage = () => {
             wish to exercise any of your rights under applicable data protection
             laws, please contact our privacy team at{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
             .
           </Typography>
@@ -209,7 +209,7 @@ const PrivacyPolicyPage = () => {
             3. Contact Information
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort is committed to maintaining the highest standards of
+            ComplianceHub is committed to maintaining the highest standards of
             transparency, accountability, and compliance in handling personal
             data. If you have any questions, concerns, or requests regarding
             this Privacy Policy or your personal data, you are welcome to
@@ -228,23 +228,23 @@ const PrivacyPolicyPage = () => {
             <Typography sx={styles.paragraphStyle}>
               Email:{' '}
               <Link
-                href="mailto:Privacy@hexafort.io"
+                href="mailto:Privacy@compliancehub.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={styles.linkStyle}
               >
-                Privacy@hexafort.io
+                Privacy@compliancehub.io
               </Link>
             </Typography>
             <Typography sx={styles.paragraphStyle}>
               Website:{' '}
               <Link
-                href="https://hexafort.io"
+                href="https://compliancehub.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={styles.linkStyle}
               >
-                https://hexafort.io
+                https://compliancehub.io
               </Link>
             </Typography>
             <Typography sx={styles.paragraphStyle}>
@@ -266,12 +266,12 @@ const PrivacyPolicyPage = () => {
             <Typography sx={styles.paragraphStyle}>
               Email:{' '}
               <Link
-                href="mailto:Privacy@hexafort.io"
+                href="mailto:Privacy@compliancehub.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={styles.linkStyle}
               >
-                Privacy@hexafort.io
+                Privacy@compliancehub.io
               </Link>
             </Typography>
             <Typography sx={styles.paragraphStyle}>
@@ -289,7 +289,7 @@ const PrivacyPolicyPage = () => {
             </Typography>
             <Typography sx={styles.paragraphStyle}>
               If your concern requires escalation or review by a privacy or
-              compliance officer within Hexafort, our team will ensure your
+              compliance officer within ComplianceHub, our team will ensure your
               communication reaches the appropriate person or department.
             </Typography>
           </Box>
@@ -300,7 +300,7 @@ const PrivacyPolicyPage = () => {
             4. What Personal Data is Collected
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to ensuring that any personal data we
+            At ComplianceHub, we are committed to ensuring that any personal data we
             collect is done so with your consent and in compliance with
             applicable data protection laws, such as the General Data Protection
             Regulation (GDPR), the UK GDPR, and India's Digital Personal Data
@@ -338,7 +338,7 @@ const PrivacyPolicyPage = () => {
             4.2. Personal Data Collected on the Platform
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            If you use Hexafort's platform, we collect additional personal data
+            If you use ComplianceHub's platform, we collect additional personal data
             necessary for the functioning of our cybersecurity and compliance
             services. This may include, but is not limited to:
           </Typography>
@@ -378,7 +378,7 @@ const PrivacyPolicyPage = () => {
             4.4. Special Categories of Data
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort does not collect or process any special categories of
+            ComplianceHub does not collect or process any special categories of
             personal data (e.g., sensitive data related to race, religion,
             health, or political opinions) unless explicitly required for
             specific service engagements or legal obligations, and always with
@@ -411,7 +411,7 @@ const PrivacyPolicyPage = () => {
             5. How Personal Data is Collected
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we value transparency and accountability in how we
+            At ComplianceHub, we value transparency and accountability in how we
             collect and process personal data. We only collect personal data in
             ways that are lawful, fair, and in accordance with the principles
             outlined in the General Data Protection Regulation (GDPR), the UK
@@ -456,7 +456,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             If you create an account or subscribe to our services on the
-            Hexafort platform, we collect personal data such as your username,
+            ComplianceHub platform, we collect personal data such as your username,
             password, and other necessary account-related information to ensure
             your access and security on the platform.
           </Typography>
@@ -503,7 +503,7 @@ const PrivacyPolicyPage = () => {
             A. Technical Data
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            When you use the Hexafort platform or interact with our website, we
+            When you use the ComplianceHub platform or interact with our website, we
             automatically collect technical data to ensure the proper
             functioning of the services, improve the user experience, and
             enhance platform security. This data may include:
@@ -556,14 +556,14 @@ const PrivacyPolicyPage = () => {
             5.3. Third-Party Data Collection
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            In some cases, Hexafort may receive personal data from third-party
+            In some cases, ComplianceHub may receive personal data from third-party
             sources, including:
           </Typography>
           <Typography variant="h6" sx={styles.letterHeadingStyle}>
             A. Third-Party Integrations
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            If you use third-party services that integrate with Hexafort's
+            If you use third-party services that integrate with ComplianceHub's
             platform (such as cloud service providers, HR platforms, or other
             enterprise tools), we may collect personal data related to your
             account with those third-party services. This data is collected
@@ -607,7 +607,7 @@ const PrivacyPolicyPage = () => {
             5.5. Automated Decision-Making and Profiling
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we do not engage in any automated decision-making
+            At ComplianceHub, we do not engage in any automated decision-making
             processes, including profiling, that significantly affect you.
             However, we may use automated tools and algorithms to analyze data
             to improve our services, detect anomalies, or identify security
@@ -621,7 +621,7 @@ const PrivacyPolicyPage = () => {
             6. Purpose of Data Collection
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we prioritize transparency and accountability in how we
+            At ComplianceHub, we prioritize transparency and accountability in how we
             handle your personal data. The collection of personal data is
             essential to enable us to deliver high-quality services, ensure the
             safety and security of our platform, and meet our legal obligations.
@@ -643,7 +643,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Service Customization: To tailor our services based on your
-            preferences, service inquiries, and engagement with Hexafort,
+            preferences, service inquiries, and engagement with ComplianceHub,
             ensuring we meet your specific needs.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -768,7 +768,7 @@ const PrivacyPolicyPage = () => {
             7. Legal Basis for Processing
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to processing personal data lawfully,
+            At ComplianceHub, we are committed to processing personal data lawfully,
             transparently, and fairly. In accordance with the General Data
             Protection Regulation (GDPR) and other applicable data protection
             laws, we rely on specific legal bases to collect and process your
@@ -782,7 +782,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             We process personal data based on the necessity of fulfilling our
-            contractual obligations to you. When you engage with Hexafort to
+            contractual obligations to you. When you engage with ComplianceHub to
             access our services, we need to collect and process your personal
             data to:
           </Typography>
@@ -801,7 +801,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             This legal basis is relevant when we need your personal data to
-            perform a contract between you and Hexafort, such as providing you
+            perform a contract between you and ComplianceHub, such as providing you
             with access to our platform and services.
           </Typography>
 
@@ -859,7 +859,7 @@ const PrivacyPolicyPage = () => {
             7.4. Legal Obligations
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort may also process personal data to comply with our legal
+            ComplianceHub may also process personal data to comply with our legal
             obligations. This includes:
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -892,7 +892,7 @@ const PrivacyPolicyPage = () => {
             7.6. Storage Location
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort securely stores personal data in a specific location to
+            ComplianceHub securely stores personal data in a specific location to
             ensure compliance with data protection laws and maintain the
             integrity and confidentiality of the data. The data is securely
             stored in data centers where appropriate security measures are in
@@ -908,7 +908,7 @@ const PrivacyPolicyPage = () => {
             8. How Data is Used
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to using your personal data
+            At ComplianceHub, we are committed to using your personal data
             responsibly and transparently. We use the personal data we collect
             for a variety of legitimate purposes to ensure the delivery,
             optimization, and security of our services. Below, we outline how
@@ -925,14 +925,14 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Account Creation and Access: To create and manage your account on
-            Hexafort's platform, assign appropriate user roles, and facilitate
+            ComplianceHub's platform, assign appropriate user roles, and facilitate
             secure access.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Service Delivery: To provide the cybersecurity services that you
             have requested, including risk assessments, vulnerability
             management, security audits, and other cybersecurity features
-            offered by Hexafort Secure.
+            offered by ComplianceHub Secure.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Platform Customization: To personalize and tailor the user
@@ -958,7 +958,7 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Notifications: To send notifications or alerts related to security
             issues, updates to your account, or other important information
-            regarding your use of Hexafort services.
+            regarding your use of ComplianceHub services.
           </Typography>
 
           <Typography variant="h3" sx={styles.subheadingStyle}>
@@ -1092,7 +1092,7 @@ const PrivacyPolicyPage = () => {
             9. Sharing of Personal Data
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we respect the confidentiality of your personal data
+            At ComplianceHub, we respect the confidentiality of your personal data
             and take measures to ensure that it is shared only in specific,
             legitimate circumstances. We will not sell, lease, or trade your
             personal data to third parties. However, there are instances where
@@ -1108,7 +1108,7 @@ const PrivacyPolicyPage = () => {
             providers who help us operate, improve, and deliver our services.
             These third-party providers are obligated to keep your data
             confidential and secure, and they are only allowed to use your
-            personal data to perform services for Hexafort. These service
+            personal data to perform services for ComplianceHub. These service
             providers may include:
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -1190,7 +1190,7 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             As part of our services, we may transfer your personal data to
             locations outside the country in which it was originally collected.
-            Hexafort is a global company, and data may be processed in different
+            ComplianceHub is a global company, and data may be processed in different
             regions such as the United States, United Kingdom, India, or other
             jurisdictions where our infrastructure or service providers are
             located.
@@ -1222,7 +1222,7 @@ const PrivacyPolicyPage = () => {
             10. International Data Transfers
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to protecting the privacy and security
+            At ComplianceHub, we are committed to protecting the privacy and security
             of your personal data. Due to the global nature of our services,
             personal data collected from you may be transferred, stored, and
             processed in countries other than your country of residence,
@@ -1253,7 +1253,7 @@ const PrivacyPolicyPage = () => {
             10.2. Safeguards for International Transfers
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort ensures that any personal data transferred internationally
+            ComplianceHub ensures that any personal data transferred internationally
             is done so in compliance with applicable data protection laws,
             including the General Data Protection Regulation (GDPR) for
             residents of the European Union. We implement various safeguards to
@@ -1358,7 +1358,7 @@ const PrivacyPolicyPage = () => {
             11. Data Retention Policy
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we prioritize data privacy and security, and part of
+            At ComplianceHub, we prioritize data privacy and security, and part of
             this commitment involves managing your personal data in a
             responsible manner. We retain personal data only for as long as it
             is necessary to fulfill the purposes outlined in this Privacy
@@ -1502,7 +1502,7 @@ const PrivacyPolicyPage = () => {
             12. Data Security Measures
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, the security of your personal data is our top priority.
+            At ComplianceHub, the security of your personal data is our top priority.
             We are committed to implementing robust data security measures to
             protect your information from unauthorized access, disclosure,
             alteration, or destruction. Our security practices are continuously
@@ -1676,7 +1676,7 @@ const PrivacyPolicyPage = () => {
             13. Cookies and Tracking Technologies
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we prioritize your privacy and ensure that your
+            At ComplianceHub, we prioritize your privacy and ensure that your
             experience on our platform is both secure and efficient. Our website
             and application do not use cookies for advertisement, targeted
             marketing, or tracking user behavior. However, we do use a single
@@ -1938,7 +1938,7 @@ const PrivacyPolicyPage = () => {
             the request you've made.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort is committed to processing your data with transparency and
+            ComplianceHub is committed to processing your data with transparency and
             in compliance with GDPR. If you have any concerns or questions
             regarding how we handle your personal data, we encourage you to
             reach out to us directly.
@@ -1950,7 +1950,7 @@ const PrivacyPolicyPage = () => {
             15. How to Exercise Your Rights
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we respect your rights under GDPR and are committed to
+            At ComplianceHub, we respect your rights under GDPR and are committed to
             making the process of exercising these rights as simple and
             straightforward as possible. If you wish to exercise any of the
             rights listed in this Privacy Policy, such as accessing, correcting,
@@ -1969,12 +1969,12 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Email: Send your request to our designated privacy team at{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
             .
           </Typography>
@@ -2121,7 +2121,7 @@ const PrivacyPolicyPage = () => {
             16. Consent and Withdrawal of Consent
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to maintaining transparency and
+            At ComplianceHub, we are committed to maintaining transparency and
             ensuring that our users' personal data is handled with care and in
             compliance with data protection regulations such as the GDPR. One of
             the core principles of the GDPR is that personal data should only be
@@ -2202,12 +2202,12 @@ const PrivacyPolicyPage = () => {
             For general consent: You can contact us directly through our privacy
             team at{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>{' '}
             or use our platform's settings to manage your preferences.
           </Typography>
@@ -2246,7 +2246,7 @@ const PrivacyPolicyPage = () => {
             16.5. Consent for Children
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort's services are not intended for use by individuals under
+            ComplianceHub's services are not intended for use by individuals under
             the age of 16. We do not knowingly collect personal data from
             individuals under 16. If we learn that we have inadvertently
             collected personal data from a child under the age of 16, we will
@@ -2271,7 +2271,7 @@ const PrivacyPolicyPage = () => {
             17. Children's Privacy
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we take privacy and data security seriously, and we are
+            At ComplianceHub, we take privacy and data security seriously, and we are
             committed to protecting the personal information of all users. As
             part of this commitment, we adhere to strict privacy practices
             regarding children's data.
@@ -2281,7 +2281,7 @@ const PrivacyPolicyPage = () => {
             17.1. No Collection of Children's Data
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort's services are not intended for use by individuals under
+            ComplianceHub's services are not intended for use by individuals under
             the age of 16. We do not knowingly collect or process personal data
             from children or minors. Our services and platforms are designed for
             use by businesses and individuals who are of legal age to enter into
@@ -2318,12 +2318,12 @@ const PrivacyPolicyPage = () => {
             information from a child under the age of 16, please contact us
             immediately at{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
             . We will take prompt action to investigate and remove such data as
             necessary.
@@ -2335,7 +2335,7 @@ const PrivacyPolicyPage = () => {
             18. Third-Party Websites/Links
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we may provide links or references to third-party
+            At ComplianceHub, we may provide links or references to third-party
             websites, services, or resources in order to offer you additional
             information, tools, or services that may be useful to you. These
             links are provided for convenience and informational purposes only.
@@ -2354,7 +2354,7 @@ const PrivacyPolicyPage = () => {
             have their own privacy policies that are different from ours. We
             strongly encourage you to review the privacy policies of any
             third-party websites or services before providing them with any
-            personal data. Hexafort is not responsible for the privacy practices
+            personal data. ComplianceHub is not responsible for the privacy practices
             or the content of third-party websites, including those linked to
             from our platform.
           </Typography>
@@ -2364,7 +2364,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             By clicking on third-party links, you acknowledge and agree that
-            Hexafort is not responsible for any damages or losses incurred as a
+            ComplianceHub is not responsible for any damages or losses incurred as a
             result of using these external websites or services. We recommend
             exercising caution and taking appropriate measures to protect your
             personal information when interacting with third-party sites. This
@@ -2401,7 +2401,7 @@ const PrivacyPolicyPage = () => {
           </Typography>
           <Typography sx={styles.paragraphStyle}>
             Any information, content, or material obtained from third-party
-            websites is done at your own discretion and risk. Hexafort is not
+            websites is done at your own discretion and risk. ComplianceHub is not
             liable for any damages or loss caused by relying on third-party
             content or services. We recommend that you verify the reliability
             and security of third-party services before sharing any personal
@@ -2426,7 +2426,7 @@ const PrivacyPolicyPage = () => {
             19. Policy Updates and Notification
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to keeping our users informed about
+            At ComplianceHub, we are committed to keeping our users informed about
             how we handle their personal data. As part of our ongoing efforts to
             ensure transparency and compliance with data protection laws, we may
             update or modify this Privacy Policy from time to time. These
@@ -2484,7 +2484,7 @@ const PrivacyPolicyPage = () => {
             20. Complaints and Supervisory Authority
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            At Hexafort, we are committed to ensuring that your personal data is
+            At ComplianceHub, we are committed to ensuring that your personal data is
             handled in accordance with applicable data protection laws,
             including the General Data Protection Regulation (GDPR). If you have
             any concerns or complaints about how we process your personal data,
@@ -2504,12 +2504,12 @@ const PrivacyPolicyPage = () => {
           <Typography sx={styles.paragraphStyle}>
             Email:{' '}
             <Link
-              href="mailto:Privacy@hexafort.io"
+              href="mailto:Privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
           </Typography>
           <Typography sx={styles.paragraphStyle}>
@@ -2528,7 +2528,7 @@ const PrivacyPolicyPage = () => {
             region.
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            As Hexafort operates globally, we respect the authority of various
+            As ComplianceHub operates globally, we respect the authority of various
             data protection regulators, and you can reach out to the appropriate
             supervisory body based on your location.
           </Typography>
@@ -2570,7 +2570,7 @@ const PrivacyPolicyPage = () => {
             21. Data Processing Agreements (DPAs)
           </Typography>
           <Typography sx={styles.paragraphStyle}>
-            Hexafort is committed to complying with applicable data protection
+            ComplianceHub is committed to complying with applicable data protection
             laws, including the GDPR, by establishing legally binding Data
             Processing Agreements (DPAs) with all vendors and service providers
             who process personal data on our behalf.
@@ -2586,12 +2586,12 @@ const PrivacyPolicyPage = () => {
             Clients and partners may request a copy of our standard DPA by
             contacting our privacy team at{' '}
             <Link
-              href="mailto:privacy@hexafort.io"
+              href="mailto:privacy@compliancehub.io"
               target="_blank"
               rel="noopener noreferrer"
               sx={styles.linkStyle}
             >
-              Privacy@hexafort.io
+              Privacy@compliancehub.io
             </Link>
             .
           </Typography>

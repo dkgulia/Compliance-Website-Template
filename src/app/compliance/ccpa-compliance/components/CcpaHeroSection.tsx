@@ -64,7 +64,7 @@ const CcpaHeroSection = () => {
             </Box>
           </Typography>
           <Typography sx={ccpaHeroSectionStyles.description}>
-            HexaFort streamlines your journey to CCPA compliance with automated data inventories, DSAR tracking, and robust security controls. Empower consumers and protect their data while maintaining regulatory compliance.
+            ComplianceHub streamlines your journey to CCPA compliance with automated data inventories, DSAR tracking, and robust security controls. Empower consumers and protect their data while maintaining regulatory compliance.
           </Typography>
           <Box sx={ccpaHeroSectionStyles.featuresContainer}>
             <Box sx={ccpaHeroSectionStyles.featureItem}>

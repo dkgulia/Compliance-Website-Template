@@ -15,9 +15,9 @@ import { Box } from '@mui/material';
 import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-	title: 'ISO 22301 – Building Organizational Resilience | HexaFort',
+	title: 'ISO 22301 – Building Organizational Resilience | ComplianceHub',
 	description:
-		'Discover how HexaFort can help your business implement ISO 22301:2019 for business continuity management. Stay operational through disruptive incidents.',
+		'Discover how ComplianceHub can help your business implement ISO 22301:2019 for business continuity management. Stay operational through disruptive incidents.',
 	keywords: iso22301Data.keywords,
 };
 

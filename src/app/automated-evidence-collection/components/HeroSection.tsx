@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SpeedIcon from '@mui/icons-material/Speed';
 import VerifiedIcon from '@mui/icons-material/Verified';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 import Image from 'next/image';
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
 				<Box sx={styles.rightBox}>
 					<Image
 						src={evidenceCollectionDashboard}
-						alt="HexaFort automated evidence collection dashboard showing compliance status and seamless integration with cloud services"
+						alt="ComplianceHub automated evidence collection dashboard showing compliance status and seamless integration with cloud services"
 						fill
 						style={styles.heroImage}
 						priority

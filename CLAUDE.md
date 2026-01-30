@@ -1,4 +1,4 @@
-# Hexafort Kite Development Guide
+# HexaShield Kite Development Guide
 
 ## Implementation Notes
 

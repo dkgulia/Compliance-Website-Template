@@ -17,7 +17,7 @@ const Page = () => {
     '@type': 'Product',
     name: 'ISO 42001 Compliance Services',
     description: iso42001Data.pageDescription.join(' '),
-    brand: 'Hexafort',
+    brand: 'ComplianceHub',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',

@@ -14,7 +14,7 @@ import Iso27001ComplianceWorkflow from './components/Iso27001ComplianceWorkflow'
 import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-	title: `${iso27001Data.pageTitle} | Hexafort`,
+	title: `${iso27001Data.pageTitle} | ComplianceHub`,
 	description: iso27001Data.pageDescription.join(' '),
 	keywords: iso27001Data.keywords,
 };
@@ -25,7 +25,7 @@ const Page = () => {
 		'@type': 'Product',
 		name: 'ISO 27001 Compliance Services',
 		description: iso27001Data.pageDescription.join(' '),
-		brand: 'Hexafort',
+		brand: 'ComplianceHub',
 		aggregateRating: {
 			'@type': 'AggregateRating',
 			ratingValue: '5',

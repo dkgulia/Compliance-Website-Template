@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { cspmData } from '../constants/cspmData';
 import { useRouter } from 'next/navigation';
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
 				<Box sx={heroSectionStyle.imageWrapper}>
 					<Image
 						src={cspmDashboardImage}
-						alt="HexaFort dashboard showing zero critical misconfigurations with real-time monitoring and compliance status"
+						alt="ComplianceHub dashboard showing zero critical misconfigurations with real-time monitoring and compliance status"
 						fill
 						sizes="(max-width: 600px) 280px, (max-width: 900px) 350px, 500px"
 						style={heroSectionStyle.heroImage}

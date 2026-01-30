@@ -8,7 +8,7 @@ const RiskManagementLayout = ({ children }: { children: React.ReactNode }) => {
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'HexaFort Risk Management',
+        name: 'ComplianceHub Risk Management',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web-based',
         description: riskManagementData.pageDescription.join(' '),

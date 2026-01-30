@@ -170,7 +170,7 @@ const ComplianceForm: React.FC<ComplianceFormProps> = ({
 				resetForm();
 				onOptionsChange([]);
 				setTimeout(() => {
-					window.open('https://cal.com/hexafort-security-advisory/30min', '_blank');
+					window.open('https://cal.com/compliancehub/demo', '_blank');
 				}, 1500);
 			} catch (err: any) {
 				let errorMessage = 'Network Error';

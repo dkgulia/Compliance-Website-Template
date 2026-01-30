@@ -15,7 +15,7 @@ export const metadata: Metadata = {
                 url: '/images/og-integrations.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Hexafort Integrations',
+                alt: 'ComplianceHub Integrations',
             },
         ],
         type: 'website',

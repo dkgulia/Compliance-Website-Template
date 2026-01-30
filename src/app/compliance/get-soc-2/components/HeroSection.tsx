@@ -46,7 +46,7 @@ const Soc2HeroSection = () => {
           </Typography>
 
           <Typography sx={soc2HeroSectionStyles.description}>
-            Use HexaFort to map risks to the SOC 2 controls and run a fully-automated SOC 2 compliance checklist to ensure
+            Use ComplianceHub to map risks to the SOC 2 controls and run a fully-automated SOC 2 compliance checklist to ensure
             continuous compliance and a smooth SOC 2 audit report.
           </Typography>
 

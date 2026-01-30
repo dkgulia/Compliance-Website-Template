@@ -39,7 +39,7 @@ const CTASection: React.FC = () => {
 			<Box sx={ctaSectionStyle.contentWrapper}>
 				<Box sx={ctaSectionStyle.textContent}>
 					<Typography sx={ctaSectionStyle.ctaTitle}>
-						See HexaFort Live
+						See ComplianceHub Live
 					</Typography>
 					<Typography sx={ctaSectionStyle.description}>
 						Get a free cloud security assessment and compliance gap report you can use immediately.

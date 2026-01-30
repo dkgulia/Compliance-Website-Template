@@ -12,7 +12,7 @@ const ISO22301ImagesSection = () => {
       <Container maxWidth="lg">
         <Box sx={iso22301ImagesSectionStyles.headingContainer}>
           <Typography variant="h4" sx={iso22301ImagesSectionStyles.sectionTitle}>
-            How HexaFort Simplifies ISO 22301 Implementation
+            How ComplianceHub Simplifies ISO 22301 Implementation
           </Typography>
           <Typography variant="body1" sx={iso22301ImagesSectionStyles.sectionSubtitle}>
             Our platform streamlines business continuity management with comprehensive tools and features

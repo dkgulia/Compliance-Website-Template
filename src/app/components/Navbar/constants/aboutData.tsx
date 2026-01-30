@@ -39,7 +39,7 @@ export const aboutItems: AboutItem[] = [
 export const featuredContent = {
   title: 'Book a Demo',
   description:
-    'Experience the power of Hexafort firsthand with our personalized demo',
+    'Experience the power of ComplianceHub firsthand with our personalized demo',
   buttonText: 'Schedule Now',
   href: '/get-a-product-demo',
 };

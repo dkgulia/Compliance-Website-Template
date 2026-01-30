@@ -17,10 +17,10 @@ import {
 } from '@mui/icons-material';
 
 export const cmmcData = {
-    pageTitle: "HexaFort for CMMC | Faster Path to DoD Readiness",
+    pageTitle: "ComplianceHub for CMMC | Faster Path to DoD Readiness",
     pageSubTitle: "Automated gap analysis • Task tracking • Audit-ready evidence",
     pageDescription: [
-        "HexaFort accelerates Cybersecurity Maturity Model Certification (CMMC) readiness for defense contractors. Map NIST 800-171 controls in minutes, see level-specific gaps, assign fixes, and export assessment evidence—so you win (and keep) DoD contracts without spreadsheet chaos."
+        "ComplianceHub accelerates Cybersecurity Maturity Model Certification (CMMC) readiness for defense contractors. Map NIST 800-171 controls in minutes, see level-specific gaps, assign fixes, and export assessment evidence—so you win (and keep) DoD contracts without spreadsheet chaos."
     ],
     keywords: [
         "cybersecurity maturity model certification",
@@ -30,7 +30,7 @@ export const cmmcData = {
         "CMMC compliance software"
     ],
     imageIdeasForPage: [
-        "Hero banner: HexaFort CMMC dashboard with self-assessment score and form on right",
+        "Hero banner: ComplianceHub CMMC dashboard with self-assessment score and form on right",
         "Infographic: three CMMC 2.0 levels—Foundational, Advanced, Expert",
         "Carousel shot: control-mapping matrix auto-filled from NIST 800-171",
         "Timeline: four-phase DoD implementation plan"
@@ -45,7 +45,7 @@ export const cmmcData = {
                 heroTitle: "CMMC Compliance—Clear, Quick, Automated",
                 heroSubtitle: "Win DoD work with confidence.",
                 heroDescription: [
-                    "Set your target level (Foundational 1, Advanced 2, or Expert 3), let HexaFort surface every gap, and generate evidence packs ready for your assessor."
+                    "Set your target level (Foundational 1, Advanced 2, or Expert 3), let ComplianceHub surface every gap, and generate evidence packs ready for your assessor."
                 ],
                 formFields: [
                     { label: "Name", type: "text", placeholder: "Dana Smith" },
@@ -66,7 +66,7 @@ export const cmmcData = {
                     {
                         title: "Tiered-Level Mapping",
                         muiIcon: "Layers",
-                        description: "HexaFort aligns controls to CMMC's tiered model—only the practices your level requires."
+                        description: "ComplianceHub aligns controls to CMMC's tiered model—only the practices your level requires."
                     },
                     {
                         title: "Verified Assessments",
@@ -92,7 +92,7 @@ export const cmmcData = {
             interactiveElement: "carousel",
             designGuidelines: "Four items, alternating image/text sides",
             content: {
-                title: "HexaFort in Action",
+                title: "ComplianceHub in Action",
                 subtitle: "",
                 screenshots: [
                     {
@@ -133,7 +133,7 @@ export const cmmcData = {
                     },
                     {
                         heading: "Select Level",
-                        description: "Choose Foundational 1, Advanced 2, or Expert 3—HexaFort scopes controls instantly."
+                        description: "Choose Foundational 1, Advanced 2, or Expert 3—ComplianceHub scopes controls instantly."
                     },
                     {
                         heading: "Remediate Gaps",
@@ -194,11 +194,11 @@ export const cmmcData = {
                         answer: "Only those handling DoD-provided FCI/CUI will need to meet a specified level as a contract condition."
                     },
                     {
-                        question: "What does HexaFort automate?",
+                        question: "What does ComplianceHub automate?",
                         answer: "Control mapping, gap detection, task assignment, progress tracking, and evidence generation."
                     },
                     {
-                        question: "Can HexaFort support self-assessments?",
+                        question: "Can ComplianceHub support self-assessments?",
                         answer: "Yes—generate and store self-assessment results, then prep for third-party review."
                     },
                     {
@@ -283,7 +283,7 @@ export const cmmcData = {
         {
             icon: "ViewModuleIcon",
             title: "Select Level",
-            description: "Choose Foundational 1, Advanced 2, or Expert 3—HexaFort scopes controls instantly."
+            description: "Choose Foundational 1, Advanced 2, or Expert 3—ComplianceHub scopes controls instantly."
         },
         {
             icon: "AssignmentTurnedInIcon",

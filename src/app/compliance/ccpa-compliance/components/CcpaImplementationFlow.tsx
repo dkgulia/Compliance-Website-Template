@@ -9,10 +9,10 @@ const CcpaImplementationFlow: React.FC = () => {
     <Box sx={implementationFlowStyle.outerBox}>
       <Box sx={implementationFlowStyle.container}>
         <Typography sx={implementationFlowStyle.heading}>
-          CCPA Rights & HexaFort Approach
+          CCPA Rights & ComplianceHub Approach
         </Typography>
         <Typography sx={implementationFlowStyle.subheading}>
-          Understand each right guaranteed by CCPA, and see how HexaFort helps you address it seamlessly.
+          Understand each right guaranteed by CCPA, and see how ComplianceHub helps you address it seamlessly.
         </Typography>
 
         <TableContainer component={Paper} sx={implementationFlowStyle.tableContainer}>
@@ -21,7 +21,7 @@ const CcpaImplementationFlow: React.FC = () => {
               <TableRow sx={implementationFlowStyle.tableHeadRow}>
                 <TableCell sx={implementationFlowStyle.th}>CCPA Right</TableCell>
                 <TableCell sx={implementationFlowStyle.th}>Definition</TableCell>
-                <TableCell sx={implementationFlowStyle.th}>HexaFort Approach</TableCell>
+                <TableCell sx={implementationFlowStyle.th}>ComplianceHub Approach</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

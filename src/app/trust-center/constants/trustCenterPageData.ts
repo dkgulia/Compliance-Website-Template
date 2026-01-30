@@ -17,13 +17,13 @@ import ShieldIcon from '@mui/icons-material/Shield';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 
 export const trustCenterPageData = {
- pageTitle: 'Hexafort Trust Center | Turn Transparency into Trust',
+ pageTitle: 'ComplianceHub Trust Center | Turn Transparency into Trust',
  pageSubTitle:
    'Real-time security & compliance portal that accelerates vendor reviews and wins confidence instantly.',
  pageDescription: [
    'Trust Center – Turn Transparency into Trust',
    "In today's digital world, trust is everything. Your customers and partners want to know they're working with an organization that takes security seriously. But showing that—without overwhelming your team or exposing sensitive details—can be a challenge.",
-   "That's where Hexafort's Trust Center comes in.",
+   "That's where ComplianceHub's Trust Center comes in.",
  ],
  keywords: [
    'trust center',
@@ -93,7 +93,7 @@ export const trustCenterPageData = {
        {
          heading: '1. Connect & Import',
          description:
-           'Sync policies, reports, and control data from Hexafort or your GRC.',
+           'Sync policies, reports, and control data from ComplianceHub or your GRC.',
          icon: CheckCircleIcon,
          image: '/images/trust-center/connect-import.png',
        },
@@ -125,7 +125,7 @@ export const trustCenterPageData = {
      title: 'Show the World You Care About Security',
      description: [
        "Your security journey is something to be proud of, and your customers want to know they're in good hands.",
-       "With Hexafort's Trust Center, you don't just say you're secure—you show it.",
+       "With ComplianceHub's Trust Center, you don't just say you're secure—you show it.",
      ],
      image: '/images/trust-center/security-showcase.png',
    },
@@ -138,7 +138,7 @@ export const trustCenterPageData = {
        'Save Your Team Time — No more manually responding to endless security questionnaires. Let your Trust Center do the talking—automatically.',
        'Customizable & Branded — Make it yours. Add your logo, brand colors, and messaging to give clients a seamless, white-labeled experience right from your own website.',
        'Continuously Updated — As your compliance posture improves, your Trust Center updates in real time—keeping everyone aligned without extra effort.',
-       'Showcase your trust. Strengthen your relationships. Let your security speak for itself—with Hexafort.',
+       'Showcase your trust. Strengthen your relationships. Let your security speak for itself—with ComplianceHub.',
      ],
      image: '/images/trust-center/tablet-trust-portal.png',
    },
@@ -157,7 +157,7 @@ export const trustCenterPageData = {
          title: 'Live Control Sync',
          icon: CheckCircleIcon,
          description:
-           'Stream control status from Hexafort evidence store in real time.',
+           'Stream control status from ComplianceHub evidence store in real time.',
        },
        {
          title: 'Audit-Ready Logs',
@@ -202,7 +202,7 @@ export const trustCenterPageData = {
    },
    cta: {
      tagline: 'GET STARTED',
-     title: 'See Hexafort Trust Center Live',
+     title: 'See ComplianceHub Trust Center Live',
      subtitle: 'Experience real-time security transparency in action',
      description:
        'Close deals faster and reduce friction with vendors by letting your security speak for itself.',
@@ -235,10 +235,10 @@ export const trustCenterPageData = {
        {
          question: 'Do you provide a Trust Center solution?',
          answer:
-           'Yes—the Hexafort Trust Center module is turnkey and integrates with the rest of our GRC suite.',
+           'Yes—the ComplianceHub Trust Center module is turnkey and integrates with the rest of our GRC suite.',
        },
        {
-         question: 'How do I get started with Hexafort Trust Center?',
+         question: 'How do I get started with ComplianceHub Trust Center?',
          answer:
            "Click 'Book Your Demo' above—our team will spin up a sandbox Trust Center in minutes.",
        },
@@ -259,15 +259,15 @@ export const trustCenterPageData = {
        {
          question: 'Which compliance frameworks can I display?',
          answer:
-           'Any frameworks monitored in Hexafort—SOC 2, ISO 27001, GDPR, HIPAA, and custom controls.',
+           'Any frameworks monitored in ComplianceHub—SOC 2, ISO 27001, GDPR, HIPAA, and custom controls.',
        },
        {
          question: 'Is the NDA template customizable?',
          answer:
-           "Upload your own NDA or use Hexafort's default template; signatures are automated either way.",
+           "Upload your own NDA or use ComplianceHub's default template; signatures are automated either way.",
        },
        {
-         question: 'How secure is Hexafort Trust Center?',
+         question: 'How secure is ComplianceHub Trust Center?',
          answer:
            'The platform is SOC 2 Type II certified and follows industry-standard encryption.',
        },

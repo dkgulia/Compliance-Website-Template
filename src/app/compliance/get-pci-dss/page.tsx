@@ -6,14 +6,14 @@ import PciDssBanner from './components/PciDssBanner';
 import PciDssComplianceHub from './components/PciDssComplianceHub';
 import PciDssWorkflowSection from './components/PciDssWorkflowSection';
 import PciDssFaqSection from './components/PciDssFaqSection';
-import PciDssHowHexafortHelpsStyle from './components/PciDssHowHexafortHelps';
+import PciDssHowComplianceHubHelpsStyle from './components/PciDssHowComplianceHubHelps';
 import PciDssBookADemo from './components/PciDssBookADemo';
 import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-	title: 'PCI DSS Compliance | Hexafort',
+	title: 'PCI DSS Compliance | ComplianceHub',
 	description:
-		'Learn how Hexafort can streamline PCI DSS compliance, secure payment card data, and protect customer trust through an automated platform.',
+		'Learn how ComplianceHub can streamline PCI DSS compliance, secure payment card data, and protect customer trust through an automated platform.',
 	keywords: [
 		'pci dss compliance',
 		'payment card industry data security standard',
@@ -32,7 +32,7 @@ const Page = () => {
 
 			<PciDssFeaturesSection />
 
-			<PciDssHowHexafortHelpsStyle />
+			<PciDssHowComplianceHubHelpsStyle />
 
 			<BookADemo/>
 

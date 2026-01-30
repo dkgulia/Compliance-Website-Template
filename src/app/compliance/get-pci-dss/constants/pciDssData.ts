@@ -51,7 +51,7 @@ interface PciDssHeroBullet {
 	title?: string;
 }
 
-interface PciDssHowHexafortHelpsStep {
+interface PciDssHowComplianceHubHelpsStep {
 	text: string;
 	icon: SvgIconComponent;
 	color: string;
@@ -70,7 +70,7 @@ const pciDssData = {
 	highlightText: 'Protect Cardholder Data',
 	heroDescription: [
 		'Payment Card Industry Data Security Standard (PCI DSS) sets the requirements for securely storing, processing, and transmitting cardholder data.',
-		'Protect your reputation and reduce data breach risks by complying with PCI DSS. Hexafort helps automate tasks, track controls, and streamline your path to certification.',
+		'Protect your reputation and reduce data breach risks by complying with PCI DSS. ComplianceHub helps automate tasks, track controls, and streamline your path to certification.',
 	],
 
 	heroBullets: [
@@ -99,10 +99,10 @@ const pciDssData = {
 
 	featuresHeading: 'Key Benefits of PCI DSS Compliance',
 
-	PciDssHowHexafortHelps: 'How Hexafort Helps You Get PCI DSS Compliant',
-	howHexafortHelpsSubtitle:
+	PciDssHowComplianceHubHelps: 'How ComplianceHub Helps You Get PCI DSS Compliant',
+	howComplianceHubHelpsSubtitle:
 		'Our structured approach streamlines complex PCI DSS mandates, ensuring a secure environment for handling payment data.',
-		howHexafortHelpsSteps: [
+		howComplianceHubHelpsSteps: [
 		{
 			text: 'Identify and scope your cardholder data environment',
 			icon: CreditCardIcon,
@@ -170,7 +170,7 @@ const pciDssData = {
 		},
 	],
 
-	workflowChip: 'Succeed with Hexafort',
+	workflowChip: 'Succeed with ComplianceHub',
 	workflowTitle: 'PCI DSS Roadmap',
 	workflowDescription:
 		'Achieve PCI DSS compliance by following a structured path—scope your environment, close security gaps, strengthen controls, and complete the required self-assessment or external audit.',

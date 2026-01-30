@@ -2,7 +2,7 @@
 import { StaticImageData } from 'next/image';
 
 // Types
-export interface HexafortSecureStep {
+export interface ComplianceHubSecureStep {
     heading: string;
     description: string;
     image?: string | StaticImageData;
@@ -18,32 +18,32 @@ export interface PlatformFeature {
 }
 
 // Data
-export const hexafortSecureData = {
-    pageTitle: "HexaFort Secure — Enterprise Security, Re-imagined",
+export const platformData = {
+    pageTitle: "ComplianceHub Secure — Enterprise Security, Re-imagined",
     pageSubTitle: "Unified risk, compliance, threat and user-awareness in one AI-driven platform",
     pageDescription:
-        "HexaFort Secure unifies governance, risk management, real-time threat detection, asset monitoring, compliance automation, and user awareness into a single command center—giving leadership complete visibility and control while slashing overhead.",
+        "ComplianceHub Secure unifies governance, risk management, real-time threat detection, asset monitoring, compliance automation, and user awareness into a single command center—giving leadership complete visibility and control while slashing overhead.",
     keywords: [
         "enterprise security platform",
         "AI-driven security management",
         "security compliance automation",
         "risk and threat visibility",
-        "HexaFort Secure"
+        "ComplianceHub Secure"
     ],
     hero: {
-        title: "HexaFort Secure Enterprise Security, Re-imagined",
+        title: "ComplianceHub Secure Enterprise Security, Re-imagined",
         subtitle: "In today's threat landscape, cybersecurity is a business priority.",
         description: [
-            "HexaFort Secure is a comprehensive Enterprise Security Management solution designed to give organizations complete control, visibility, and automation across every area of their security infrastructure."
+            "ComplianceHub Secure is a comprehensive Enterprise Security Management solution designed to give organizations complete control, visibility, and automation across every area of their security infrastructure."
         ],
         image: "",
-        imagePrompt: "HexaFort Secure unified dashboard with widgets for risk, threat alerts, asset inventory and compliance status",
+        imagePrompt: "ComplianceHub Secure unified dashboard with widgets for risk, threat alerts, asset inventory and compliance status",
         ctaText: "Request Demo"
     },
     overview: {
         title: "Complete Security Management",
         description: [
-            "Built for modern enterprises, HexaFort Secure unifies governance, risk management, real-time threat detection, asset monitoring, compliance automation, and user awareness into one seamless, AI-driven platform.",
+            "Built for modern enterprises, ComplianceHub Secure unifies governance, risk management, real-time threat detection, asset monitoring, compliance automation, and user awareness into one seamless, AI-driven platform.",
             "It isn't just a tool; it's a virtual security command center—simplifying audits, strengthening defenses, reducing overhead, and giving leadership confidence that security is under control every single day."
         ]
     },
@@ -56,12 +56,12 @@ export const hexafortSecureData = {
             },
             {
                 title: "Built for Scale & Simplicity",
-                description: "Whether you're a startup scaling fast or an enterprise managing global operations, HexaFort Secure grows with you—securely, efficiently, and intelligently."
+                description: "Whether you're a startup scaling fast or an enterprise managing global operations, ComplianceHub Secure grows with you—securely, efficiently, and intelligently."
             }
         ]
     },
     features: {
-        title: "Why Choose HexaFort Secure?",
+        title: "Why Choose ComplianceHub Secure?",
         subtitle: "",
         steps: [
             {
@@ -91,7 +91,7 @@ export const hexafortSecureData = {
         ]
     },
     bookDemo: {
-        tagline: "HexaFort Advantage",
+        tagline: "ComplianceHub Advantage",
         title: "Automate Security, Unlock Business",
         points: [
             "Automate compliance and save time, reduce costs, and minimize effort.",
@@ -165,4 +165,4 @@ export const hexafortSecureData = {
     ]
 };
 
-export default hexafortSecureData;
+export default platformData;

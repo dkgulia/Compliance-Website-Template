@@ -24,7 +24,7 @@ export const SOLUTIONS_FOR_STARTUPS = '/solutions/startups';
 
 export const RISK_MANAGEMENT = '/risk-management';
 export const GRC_TOOL = '/grc-tool';
-export const HEXAFORT_SECURE = '/hexafort-secure';
+export const PLATFORM = '/platform';
 export const CLOUD_SECURITY_POSTURE_MANAGEMENT = '/cspm';
 export const THIRD_PARTY_RISK_MANAGEMENT = '/third-party-risk-management';
 export const VULNERABILITY_ASSESSMENT = '/vulnerability-assessment';

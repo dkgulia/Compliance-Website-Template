@@ -4,7 +4,7 @@ import { Box, Typography, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import callToActionStyle from '../styles/callToActionStyle';
 import { thirdPartyRiskManagementData } from '../constants/thirdPartyRiskManagementData';
 import { useRouter } from 'next/navigation';
@@ -32,13 +32,13 @@ const CallToActionSection: React.FC = () => {
 				{/* Header */}
 				<Box sx={callToActionStyle.headerContainer}>
 					<Typography sx={callToActionStyle.mainTitle}>{callToAction.title}</Typography>
-					<Typography sx={callToActionStyle.mainSubtitle}>Experience HexaFort in action today.</Typography>
+					<Typography sx={callToActionStyle.mainSubtitle}>Experience ComplianceHub in action today.</Typography>
 				</Box>
 
 				{/* Main Content */}
 				<Box sx={callToActionStyle.contentWrapper}>
 					<Box sx={callToActionStyle.textContent}>
-						<Typography sx={callToActionStyle.title}>See HexaFort Live</Typography>
+						<Typography sx={callToActionStyle.title}>See ComplianceHub Live</Typography>
 						<Typography sx={callToActionStyle.subtitle}>{callToAction.subtitle}</Typography>
 						<Typography sx={callToActionStyle.description}>
 							Join hundreds of security leaders who automated their TPRM program in weeks, not months.
@@ -64,7 +64,7 @@ const CallToActionSection: React.FC = () => {
 							<Box/>
 							<Image
 								src={ctaImage}
-								alt="Schedule a demo with HexaFort"
+								alt="Schedule a demo with ComplianceHub"
 								style={{
 									width: '100%',
 									maxWidth: '400px',

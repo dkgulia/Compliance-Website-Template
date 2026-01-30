@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import { useRouter } from 'next/navigation';
 import { securityTrainingData } from '../constants/securityTrainingData';
 import securityTrainingHero from '../images/security-hero.png';

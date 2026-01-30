@@ -118,7 +118,7 @@ const Hexagon: React.FC = () => {
 
           {/* Central Logo Div with Glowing Border */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 bg-kite-dark-2 rounded-full flex items-center justify-center animate-glow">
-            <Image src="/images/dual-hex-white.png" alt="Hexafort Logo" width={40} height={40} />
+            <Image src="/images/dual-hex-white.png" alt="ComplianceHub Logo" width={40} height={40} />
           </div>
 
           {/* Feature Text Boxes with Icons */}

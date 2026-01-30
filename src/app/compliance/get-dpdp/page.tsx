@@ -9,7 +9,7 @@ import DpdpProcessSection from './components/DpdpProcessSection';
 import DpdpCtaSection from './components/DpdpCtaSection';
 import DpdpFaqSection from './components/DpdpFaqSection';
 import DpdpComplianceHub from './components/DpdpComplianceHub';
-import DpdpHowHexafortHelps from './components/DpdpHowHexafortHelps';
+import DpdpHowComplianceHubHelps from './components/DpdpHowComplianceHubHelps';
 import DpdpBookDemo from './components/DpdpBookDemo';
 import DpdpBanner from './components/DpdpBanner';
 import BookADemo from '../components/BookADemo';
@@ -25,7 +25,7 @@ export default function Page() {
 		<>
 			<DpdpHeroSection />
 			<DpdpBenefitsSection />
-			<DpdpHowHexafortHelps />
+			<DpdpHowComplianceHubHelps />
 			<DpdpBanner />
 			<DpdpComplianceHub />
 			<DpdpMetricsSection />

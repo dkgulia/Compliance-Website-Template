@@ -1,13 +1,13 @@
-const hexafortData = {
+const complianceData = {
 	"companyInfo": {
-	  "name": "HexaFort Secure",
-	  "fullName": "HexaFort Secure Private Limited",
+	  "name": "ComplianceHub Secure",
+	  "fullName": "ComplianceHub Secure Private Limited",
 	  "tagline": "Building trust through comprehensive compliance"
 	},
 	"heroSection": {
 	  "title": "Comprehensive Compliance Package for Startups",
 	  "subtitle": "Complete security, privacy, and data protection in one integrated solution",
-	  "description": "HexaFort presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2 Type I, and SOC 2 Type II, alongside establishing a foundation for GDPR compliance. This structured approach leverages our expertise to build robust security, privacy, and data protection practices essential for your startup's success and customer trust.",
+	  "description": "ComplianceHub presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2 Type I, and SOC 2 Type II, alongside establishing a foundation for GDPR compliance. This structured approach leverages our expertise to build robust security, privacy, and data protection practices essential for your startup's success and customer trust.",
 	  "callToAction": "Schedule a consultation",
 	  "imagePrompt": "Modern digital security shield or padlock icon with blue glowing cybersecurity elements and digital interface in the background, professional corporate style"
 	},
@@ -55,7 +55,7 @@ const hexafortData = {
 	      },
 	      {
 		"name": "Audit and Certification",
-		"description": "Certification via HexaFort preferred Audit body"
+		"description": "Certification via ComplianceHub preferred Audit body"
 	      }
 	    ],
 	    "timeline": [
@@ -310,7 +310,7 @@ const hexafortData = {
 	      "description": "Complete Type II audit by month 9"
 	    }
 	  ],
-	  "description": "Following the initial implementation, Phase 2 provides ongoing compliance monitoring and support for ISO 27001 and SOC 2 controls. This includes quarterly internal audits, vendor risk management consultation, and refinement of GDPR compliance processes. Phase 3 focuses specifically on the SOC 2 Type II audit process, which begins approximately 6 months after implementation and continues through month 12. HexaFort provides consultation and support throughout this critical attestation period.",
+	  "description": "Following the initial implementation, Phase 2 provides ongoing compliance monitoring and support for ISO 27001 and SOC 2 controls. This includes quarterly internal audits, vendor risk management consultation, and refinement of GDPR compliance processes. Phase 3 focuses specifically on the SOC 2 Type II audit process, which begins approximately 6 months after implementation and continues through month 12. ComplianceHub provides consultation and support throughout this critical attestation period.",
 	  "imagePrompt": "Timeline visualization with connected nodes showing implementation phases over 9 months, with milestone markers and progress indicators on a dark background with subtle wave pattern"
 	},
 	"valueProposition": {
@@ -332,7 +332,7 @@ const hexafortData = {
 	      "description": "Cost-effective solution providing exceptional value compared to individual implementations"
 	    }
 	  ],
-	  "description": "HexaFort's startup package offers exceptional value by combining multiple compliance frameworks into a single, efficient implementation. This integrated approach reduces redundancy, minimizes disruption to your business, and accelerates time-to-certification compared to addressing each framework separately.",
+	  "description": "ComplianceHub's startup package offers exceptional value by combining multiple compliance frameworks into a single, efficient implementation. This integrated approach reduces redundancy, minimizes disruption to your business, and accelerates time-to-certification compared to addressing each framework separately.",
 	  "imagePrompt": "Business growth chart with upward trend and progress bars showing increasing percentages, with a gold certification seal, on a professional dark background"
 	},
 	"costBreakdown": {
@@ -379,7 +379,7 @@ const hexafortData = {
 	      "description": "Comprehensive training and documentation ensuring your team can maintain compliance long-term"
 	    }
 	  ],
-	  "description": "HexaFort's implementation methodology focuses on practical, sustainable compliance that becomes integrated into your business operations. Our approach emphasizes knowledge transfer and building internal capability, ensuring your team can maintain compliance effectively after implementation.",
+	  "description": "ComplianceHub's implementation methodology focuses on practical, sustainable compliance that becomes integrated into your business operations. Our approach emphasizes knowledge transfer and building internal capability, ensuring your team can maintain compliance effectively after implementation.",
 	  "imagePrompt": "Team of professionals analyzing a large compliance flowchart diagram displayed on a wall screen in a modern meeting room with blue lighting"
 	},
 	"benefits": {
@@ -436,13 +436,13 @@ const hexafortData = {
 	      "description": "Commence the 7-8 week implementation journey"
 	    }
 	  ],
-	  "callToAction": "HexaFort is ready to begin your compliance journey immediately. Our team of experts will guide you through each step of the process, from initial consultation through successful certification and attestation. Contact us today to schedule your initial consultation and take the first step toward comprehensive compliance.",
+	  "callToAction": "ComplianceHub is ready to begin your compliance journey immediately. Our team of experts will guide you through each step of the process, from initial consultation through successful certification and attestation. Contact us today to schedule your initial consultation and take the first step toward comprehensive compliance.",
 	  "note": "The above costing is only applicable signed as a package.",
 	  "imagePrompt": "Professional handshake between business partners with futuristic digital security elements in background, symbolizing partnership and trust"
 	},
 	"testimonials": [
 	  {
-	    "quote": "HexaFort's integrated approach saved us months of work and allowed us to achieve multiple certifications simultaneously. Their expertise was invaluable.",
+	    "quote": "ComplianceHub's integrated approach saved us months of work and allowed us to achieve multiple certifications simultaneously. Their expertise was invaluable.",
 	    "author": "CTO, Fintech Startup",
 	    "company": ""
 	  },
@@ -481,4 +481,4 @@ const hexafortData = {
 	]
       };
 
-      export default hexafortData;
+      export default complianceData;

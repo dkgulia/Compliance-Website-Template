@@ -21,9 +21,9 @@ const TrustCenterPage = () => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Hexafort Trust Center',
+    name: 'ComplianceHub Trust Center',
     description: trustCenterPageData.pageDescription.join(' '),
-    brand: 'Hexafort',
+    brand: 'ComplianceHub',
   };
 
   return (

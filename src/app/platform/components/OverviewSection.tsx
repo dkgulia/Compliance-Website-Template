@@ -3,10 +3,10 @@
 import React from 'react';
 import { Box, Typography, Grid } from '@mui/material';
 import overviewSectionStyle from '../styles/overviewSectionStyle';
-import hexafortSecureData from '../constants/hexafortSecureData';
+import platformData from '../constants/platformData';
 
 const OverviewSection = () => {
-   const { overview, keyFeatures } = hexafortSecureData;
+   const { overview, keyFeatures } = platformData;
 
    return (
        <Box sx={overviewSectionStyle.section}>

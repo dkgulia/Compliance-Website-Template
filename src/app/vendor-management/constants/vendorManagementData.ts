@@ -33,10 +33,10 @@ export interface VendorManagementQuestion {
 
 // Data
 export const vendorManagementData = {
-    pageTitle: "Hexafort Vendor Management Module | AI-Driven Third-Party Risk Management",
+    pageTitle: "ComplianceHub Vendor Management Module | AI-Driven Third-Party Risk Management",
     pageSubTitle: "Simplify vendor evaluation, assessment, and continuous monitoring with real-time risk insights.",
     pageDescription: 
-        "Hexafort's Vendor Management Module simplifies the process of evaluating, assessing, and monitoring your vendors. With AI-powered automated questionnaire answering, real-time risk assessments, and actionable insights, you can ensure strong, secure, and compliant vendor relationships—all from one easy-to-use platform.",
+        "ComplianceHub's Vendor Management Module simplifies the process of evaluating, assessing, and monitoring your vendors. With AI-powered automated questionnaire answering, real-time risk assessments, and actionable insights, you can ensure strong, secure, and compliant vendor relationships—all from one easy-to-use platform.",
     keywords: [
         "vendor management",
         "vendor risk management",
@@ -47,9 +47,9 @@ export const vendorManagementData = {
     ],
     hero: {
         title: "AI-Driven Vendor Management Module",
-        subtitle: "Automate Third-Party Risk Management with Hexafort",
+        subtitle: "Automate Third-Party Risk Management with ComplianceHub",
         description: [
-            "Hexafort's Vendor Management Module simplifies the process of evaluating, assessing, and monitoring your vendors.",
+            "ComplianceHub's Vendor Management Module simplifies the process of evaluating, assessing, and monitoring your vendors.",
             "With AI-powered automated questionnaire answering, real-time risk assessments, and actionable insights, you can ensure strong, secure, and compliant vendor relationships—all from one easy-to-use platform."
         ],
         image: "",
@@ -57,7 +57,7 @@ export const vendorManagementData = {
         ctaText: "Book Your Demo"
     },
     benefits: {
-        title: "Why Hexafort Vendor Management?",
+        title: "Why ComplianceHub Vendor Management?",
         subtitle: "Four key advantages your security & compliance teams will love",
         features: [
             {
@@ -73,7 +73,7 @@ export const vendorManagementData = {
             {
                 title: "AI-Driven Questionnaire Answering",
                 muiIcon: "auto_fix_high",
-                description: "Automate tedious questionnaires and eliminate human error with Hexafort AI."
+                description: "Automate tedious questionnaires and eliminate human error with ComplianceHub AI."
             },
             {
                 title: "Continuous Monitoring",
@@ -94,7 +94,7 @@ export const vendorManagementData = {
             },
             {
                 heading: "2. AI Questionnaire Automation",
-                description: "Hexafort AI answers standard security questionnaires on your behalf, slashing turnaround time.",
+                description: "ComplianceHub AI answers standard security questionnaires on your behalf, slashing turnaround time.",
                 image: "",
                 imagePrompt: "Animated mock-up of AI autofilling questionnaire fields"
             },
@@ -106,7 +106,7 @@ export const vendorManagementData = {
             },
             {
                 heading: "4. Collaborate & Remediate",
-                description: "Track corrective actions, share evidence, and maintain an audit trail—all inside Hexafort.",
+                description: "Track corrective actions, share evidence, and maintain an audit trail—all inside ComplianceHub.",
                 image: "",
                 imagePrompt: "Graphic of two users co-editing a remediation task list"
             }
@@ -115,7 +115,7 @@ export const vendorManagementData = {
     aiQuestionnaire: {
         title: "AI-Powered Questionnaire Answering",
         description: [
-            "Say goodbye to manual responses. Hexafort's AI engine generates precise answers instantly, freeing your team for higher-value work.",
+            "Say goodbye to manual responses. ComplianceHub's AI engine generates precise answers instantly, freeing your team for higher-value work.",
             "Consistent, audit-ready answers every time."
         ],
         imagePrompt: "Friendly AI bot filling forms on a laptop"
@@ -124,7 +124,7 @@ export const vendorManagementData = {
         title: "Continuous Vendor Monitoring",
         subtitle: "Risk never sleeps—and neither do we",
         highlightText: "24/7 alerts on compliance drift",
-        description: "Hexafort tracks policy updates, breach disclosures, and compliance expirations in real-time so you can act fast.",
+        description: "ComplianceHub tracks policy updates, breach disclosures, and compliance expirations in real-time so you can act fast.",
         subheading: "Stay one step ahead of emerging threats.",
         imagePrompt: "Live graph with spikes and alert notifications"
     },
@@ -161,7 +161,7 @@ export const vendorManagementData = {
         list: [
             {
                 heading: "Siloed Data",
-                subheading: "Hexafort centralizes vendor records for single-source truth."
+                subheading: "ComplianceHub centralizes vendor records for single-source truth."
             },
             {
                 heading: "Reactive Risk Reviews",
@@ -179,7 +179,7 @@ export const vendorManagementData = {
     },
     callToAction: {
         title: "Ready to Transform Vendor Management?",
-        subtitle: "Experience Hexafort in action today.",
+        subtitle: "Experience ComplianceHub in action today.",
         imagePrompt: "Laptop screen with 'Schedule Demo' calendar invite",
         description: "Join hundreds of security leaders who automated their TPRM program in weeks, not months.",
         ctaText: "Schedule My Demo"
@@ -197,35 +197,35 @@ export const vendorManagementData = {
                 answer: "It mitigates security, compliance, and operational risks introduced by third-party vendors."
             },
             {
-                question: "Does Hexafort provide vendor management solutions?",
-                answer: "Yes. Hexafort's Vendor Management Module offers end-to-end vendor evaluation, risk assessment, and monitoring."
+                question: "Does ComplianceHub provide vendor management solutions?",
+                answer: "Yes. ComplianceHub's Vendor Management Module offers end-to-end vendor evaluation, risk assessment, and monitoring."
             },
             {
-                question: "How do I get started with Hexafort Vendor Management?",
+                question: "How do I get started with ComplianceHub Vendor Management?",
                 answer: "Simply book a demo and our team will guide you through onboarding and best practices."
             },
             {
-                question: "How much does Hexafort cost?",
+                question: "How much does ComplianceHub cost?",
                 answer: "Pricing depends on vendor volume and feature needs. Contact us for a tailored quote."
             },
             {
-                question: "Can Hexafort automate security questionnaires?",
+                question: "Can ComplianceHub automate security questionnaires?",
                 answer: "Yes. Our AI answers standard questionnaires, reducing manual effort up to 80%."
             },
             {
                 question: "Is continuous vendor monitoring included?",
-                answer: "Absolutely. Hexafort provides 24/7 monitoring with real-time alerts."
+                answer: "Absolutely. ComplianceHub provides 24/7 monitoring with real-time alerts."
             },
             {
                 question: "Which compliance frameworks are supported?",
                 answer: "SOC 2, ISO 27001, GDPR, HIPAA, and more."
             },
             {
-                question: "Does Hexafort integrate with my existing tools?",
+                question: "Does ComplianceHub integrate with my existing tools?",
                 answer: "We offer integrations via REST API and popular GRC, ticketing, and SIEM platforms."
             },
             {
-                question: "How secure is Hexafort?",
+                question: "How secure is ComplianceHub?",
                 answer: "The platform is SOC 2 Type II certified and follows industry-standard encryption."
             },
             {

@@ -4,15 +4,15 @@ import { Box, Container, Typography, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useRouter } from 'next/navigation';
 import heroSectionStyle from '../styles/heroSectionStyle';
-import hexafortData from '../constant/dataFile';
+import complianceData from '../constant/dataFile';
 import Image from 'next/image';
 import heroImage from '../images/startupHero copy.png'
-import HexaButton from '../../../Button/HexaFortButton';
+import ComplianceHubBtn from '../../../Button/ComplianceHubButton';
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
   const router = useRouter();
-  const { description, callToAction } = hexafortData.heroSection;
+  const { description, callToAction } = complianceData.heroSection;
 
   const handleCtaClick = () => {
     router.push('/get-a-product-demo');
@@ -46,15 +46,15 @@ const HeroSection: React.FC = () => {
             </Box>
 
             <Typography sx={heroSectionStyle.description}>
-              HexaFort  presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2, alongside establishing a foundation for GDPR compliance.
+              ComplianceHub  presents a comprehensive startup package designed to implement and achieve certification for ISO 27001, SOC 2, alongside establishing a foundation for GDPR compliance.
             </Typography>
 
-            <HexaButton
+            <ComplianceHubBtn
               endIcon={<ArrowForwardIcon />}
               onClick={handleCtaClick}
             >
               {callToAction || 'Schedule a consultation'}
-            </HexaButton>
+            </ComplianceHubBtn>
           </Box>
 
           <Box sx={heroSectionStyle.visualContainer}>

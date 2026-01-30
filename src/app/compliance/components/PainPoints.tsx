@@ -39,7 +39,7 @@ const PainPoints = () => (
 				</Box>
 			</Stack>
 			<Typography variant="body1" sx={painPointStyle.solutionStatement}>
-				HexaFort simplifies compliance, minimizes errors, and ensures businesses stay secure and audit-ready with
+				ComplianceHub simplifies compliance, minimizes errors, and ensures businesses stay secure and audit-ready with
 				automated workflows.
 			</Typography>
 		</Box>

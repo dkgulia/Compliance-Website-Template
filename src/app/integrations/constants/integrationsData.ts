@@ -73,8 +73,8 @@ export interface IntegrationsData {
 }
 
 const integrationsData: IntegrationsData = {
-    pageTitle: "Integrations | Hexafort",
-    pageDescription: "Connect Hexafort with your existing tools and systems to streamline compliance and security operations.",
+    pageTitle: "Integrations | ComplianceHub",
+    pageDescription: "Connect ComplianceHub with your existing tools and systems to streamline compliance and security operations.",
     keywords: [
         "security integrations",
         "compliance automation",
@@ -89,17 +89,17 @@ const integrationsData: IntegrationsData = {
     ],
     hero: {
         title: "Unlock the Power of Integration",
-        subtitle: "Seamlessly connect Hexafort with your existing tools and workflows",
+        subtitle: "Seamlessly connect ComplianceHub with your existing tools and workflows",
         description: [
-            "Integrate Hexafort with your tech stack, and gain the ability to continuously monitor controls and collect evidence automatically."
+            "Integrate ComplianceHub with your tech stack, and gain the ability to continuously monitor controls and collect evidence automatically."
         ],
         ctaText: "Explore Integrations"
     },
     introduction: {
         title: "Connect Once, Secure Everything",
         description: [
-            "Your business is already running on powerful tools—and Hexafort is built to enhance them, not replace them. With our seamless integration capabilities, you can connect Hexafort to your existing cloud infrastructure, HR systems, identity providers, and more to bring all your security data under one intelligent roof.",
-            "No more switching between systems or manually gathering compliance information. Hexafort brings everything together so you can see more, do more, and secure more—faster."
+            "Your business is already running on powerful tools—and ComplianceHub is built to enhance them, not replace them. With our seamless integration capabilities, you can connect ComplianceHub to your existing cloud infrastructure, HR systems, identity providers, and more to bring all your security data under one intelligent roof.",
+            "No more switching between systems or manually gathering compliance information. ComplianceHub brings everything together so you can see more, do more, and secure more—faster."
         ]
     },
     categories: [
@@ -136,7 +136,7 @@ const integrationsData: IntegrationsData = {
     ],
     benefits: {
         title: "Why Integrations Matter",
-        description: "Hexafort's integration engine ensures you don't have to overhaul your setup or compromise your processes. Just plug in, power up, and take control—with confidence and clarity.",
+        description: "ComplianceHub's integration engine ensures you don't have to overhaul your setup or compromise your processes. Just plug in, power up, and take control—with confidence and clarity.",
         items: [
             {
                 title: "Unified Security View",
@@ -145,7 +145,7 @@ const integrationsData: IntegrationsData = {
             },
             {
                 title: "No Disruptions to Workflow",
-                description: "Continue using your existing tools while Hexafort works quietly in the background, pulling in the data that matters and automating what used to be manual.",
+                description: "Continue using your existing tools while ComplianceHub works quietly in the background, pulling in the data that matters and automating what used to be manual.",
                 icon: Settings
             },
             {
@@ -160,7 +160,7 @@ const integrationsData: IntegrationsData = {
             },
             {
                 title: "Better Decision-Making",
-                description: "With everything connected, Hexafort empowers you to act quickly, fix what matters, and maintain a strong, informed security posture.",
+                description: "With everything connected, ComplianceHub empowers you to act quickly, fix what matters, and maintain a strong, informed security posture.",
                 icon: BarChart
             },
             {
@@ -172,7 +172,7 @@ const integrationsData: IntegrationsData = {
     },
     featured: {
         title: "Popular Integrations",
-        description: "Hexafort connects with dozens of popular business tools and services. Here are some of our most-used integrations:",
+        description: "ComplianceHub connects with dozens of popular business tools and services. Here are some of our most-used integrations:",
         integrations: [
             {
                 name: "AWS",
@@ -203,8 +203,8 @@ const integrationsData: IntegrationsData = {
     conclusion: {
         title: "Smarter Security Through Better Connections",
         description: [
-            "At Hexafort, we believe security should meet you where you are. Our integration engine ensures you don't have to overhaul your setup or compromise your processes. Just plug in, power up, and take control—with confidence and clarity.",
-            "Smarter security starts with better connections—let Hexafort bring it all together."
+            "At ComplianceHub, we believe security should meet you where you are. Our integration engine ensures you don't have to overhaul your setup or compromise your processes. Just plug in, power up, and take control—with confidence and clarity.",
+            "Smarter security starts with better connections—let ComplianceHub bring it all together."
         ]
     }
 };

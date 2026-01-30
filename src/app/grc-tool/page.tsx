@@ -5,12 +5,12 @@ import ChallengesSection from './components/challengesSection';
 import SolutionsSection from './components/solutionsSection';
 import AIFeaturesSection from './components/aiFeaturesSection';
 import ImpactSection from './components/impactSection';
-import { hexafortData } from './constant/dataFile';
+import { complianceData } from './constant/dataFile';
 import CallToActionSection from '../components/CallToActionSection';
 
 export const metadata: Metadata = {
-	title: 'HexaFort - Revolutionizing GRC for Sustainable Growth',
-	description: hexafortData.company.description,
+	title: 'ComplianceHub - Revolutionizing GRC for Sustainable Growth',
+	description: complianceData.company.description,
 };
 
 export default function Home() {

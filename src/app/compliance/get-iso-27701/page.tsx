@@ -13,9 +13,9 @@ import iso27701Data from './constants/iso27701Data';
 import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-	title: 'ISO 27701 | Hexafort',
+	title: 'ISO 27701 | ComplianceHub',
 	description:
-		'Explore how Hexafort can help you extend your ISMS with ISO 27701 for robust data privacy and security compliance.',
+		'Explore how ComplianceHub can help you extend your ISMS with ISO 27701 for robust data privacy and security compliance.',
 	keywords: iso27701Data.keywords,
 };
 

@@ -15,7 +15,7 @@ const MetricsSection: React.FC = () => {
                         Streamlined ISO 42001 Compliance
                     </Typography>
                     <Typography variant="h6" sx={metricsSectionStyle.subtitle}>
-                        HexaFort delivers unmatched efficiency for AI Management System certification
+                        ComplianceHub delivers unmatched efficiency for AI Management System certification
                     </Typography>
                 </Box>
                 <Grid container spacing={4} justifyContent="center">

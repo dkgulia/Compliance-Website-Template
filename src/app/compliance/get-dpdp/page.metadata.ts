@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'DPDP Compliance | Hexafort',
+  title: 'DPDP Compliance | ComplianceHub',
   description:
-    'HexaFort helps data-driven businesses comply with India\'s Digital Personal Data Protection Act (2023) and Draft Rules 2025.',
+    'ComplianceHub helps data-driven businesses comply with India\'s Digital Personal Data Protection Act (2023) and Draft Rules 2025.',
   keywords: [
     'DPDP compliance software',
     'Digital Personal Data Protection Act',

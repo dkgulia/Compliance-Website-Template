@@ -33,7 +33,7 @@ export const whyUsItems = [
 		logo: scalabilityLogo,
 		title: 'Scalability & Flexibility',
 		description:
-			'Scale your compliance solution with your business and customize HexaFort to meet evolving compliance needs.',
+			'Scale your compliance solution with your business and customize ComplianceHub to meet evolving compliance needs.',
 	},
 	{
 		logo: supportLogo,

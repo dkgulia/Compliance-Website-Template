@@ -3,7 +3,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import conclusionStyle from '../styles/conclusionStyle';
 import integrationsData from '../constants/integrationsData';
 import { useRouter } from 'next/navigation';

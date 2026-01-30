@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import Image from 'next/image';
 import featuredIntegrationsStyle from '../styles/featuredIntegrationsStyle';
 import integrationsData from '../constants/integrationsData';

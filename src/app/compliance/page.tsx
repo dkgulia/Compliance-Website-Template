@@ -10,7 +10,7 @@ import BookADemo from './components/BookADemo';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-	title: 'Compliance | HexaFort',
+	title: 'Compliance | ComplianceHub',
 	description:
 		'A comprehensive Governance, Risk, and Compliance tool designed to streamline compliance tracking and enhance risk management.',
 	keywords:

@@ -45,7 +45,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="support@hexafort.io"
+                 href="support@compliancehub.io"
                  sx={talkToExpertDoraStyle.buttonOutlined}
                >
                  Email Us
@@ -73,7 +73,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="https://cal.com/hexafort-security-advisory/30min"
+                 href="https://cal.com/compliancehub/demo"
                  sx={talkToExpertDoraStyle.button}
                >
                  Book a Call
@@ -101,7 +101,7 @@ export default function TalkToAnExpertDora() {
                <Button
                  variant="outlined"
                  fullWidth
-                 href="https://cal.com/hexafort-security-advisory/30min"
+                 href="https://cal.com/compliancehub/demo"
                  sx={talkToExpertDoraStyle.buttonOutlined}
                >
                  Chat Now

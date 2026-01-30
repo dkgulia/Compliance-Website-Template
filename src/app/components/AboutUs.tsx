@@ -17,7 +17,7 @@ const AboutUsComponent = () => {
 					<Typography variant="h1" sx={aboutUsStyle.mainTitle}>
 						About{' '}
 						<Box component="span" sx={aboutUsStyle.highlightText}>
-							Hexafort
+							ComplianceHub
 						</Box>
 					</Typography>
 					<Typography variant="body1" sx={aboutUsStyle.subtitle}>

@@ -8,7 +8,7 @@ import {
 	VerifiedUser as VerifiedUserIcon,
 	ArrowForward as ArrowForwardIcon,
 } from '@mui/icons-material';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import Image from 'next/image';
 import heroSectionStyle from '../styles/heroSectionStyle';
 import { riskManagementData } from '../constants/riskManagementData';

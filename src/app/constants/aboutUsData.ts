@@ -8,14 +8,14 @@ import InsightsIcon from '@mui/icons-material/Insights';
 
 const aboutUsData = {
   hero: {
-    title: "About Hexafort",
+    title: "About ComplianceHub",
     subtitle: "Transforming Security from a Compliance Necessity to a Business Advantage"
   },
 
   mission: {
     title: "Our Mission",
     paragraphs: [
-      "At Hexafort, our mission is to simplify, automate, and strengthen security operations so businesses can innovate fearlessly.",
+      "At ComplianceHub, our mission is to simplify, automate, and strengthen security operations so businesses can innovate fearlessly.",
       "We want to make advanced cybersecurity accessible, affordable, and easy for every company, so they can grow without fear of security gaps or regulatory penalties.",
       "Unlike traditional GRC solutions that focus solely on compliance, we integrate AI-driven security insights and real-time risk assessment, making security a business enabler rather than just a checkbox exercise."
     ]
@@ -26,13 +26,13 @@ const aboutUsData = {
     paragraphs: [
       "We aim to redefine security and compliance by integrating AI-driven automation, real-time risk management, and proactive threat intelligence into a seamless platform.",
       "In the coming years, we envision transforming compliance from a periodic checkbox exercise to continuous, real-time monitoring, leveraging AI to automate risk assessments, threat detection, and audits.",
-      "Hexafort will become the backbone of modern, agile businesses by embedding security and compliance as seamless business enablers, not blockers. We see a future where companies rely on Hexafort for continuous risk posture monitoring, AI-powered decision-making, and faster market access through instant compliance scalability."
+      "ComplianceHub will become the backbone of modern, agile businesses by embedding security and compliance as seamless business enablers, not blockers. We see a future where companies rely on ComplianceHub for continuous risk posture monitoring, AI-powered decision-making, and faster market access through instant compliance scalability."
     ]
   },
 
   values: {
     title: "Our Values",
-    description: "These core principles guide everything we do at Hexafort",
+    description: "These core principles guide everything we do at ComplianceHub",
     items: [
       {
         title: "Trustworthy",
@@ -58,7 +58,7 @@ const aboutUsData = {
   },
 
   differentiators: {
-    title: "Why Choose Hexafort",
+    title: "Why Choose ComplianceHub",
     description: "What sets us apart from traditional compliance solutions",
     items: [
       {
@@ -87,11 +87,11 @@ const aboutUsData = {
   story: {
     title: "Our Story",
     paragraphs: [
-      "Hexafort was born from a clear gap we noticed in the cybersecurity space – too many tools created noise without offering actionable clarity. With our background in information security and data privacy, we saw firsthand how teams struggle to make sense of fragmented security insights.",
+      "ComplianceHub was born from a clear gap we noticed in the cybersecurity space – too many tools created noise without offering actionable clarity. With our background in information security and data privacy, we saw firsthand how teams struggle to make sense of fragmented security insights.",
       "While many GRC solutions focus on certifications and audits, they often overlook continuous security monitoring and proactive risk management. Small and mid-sized companies, due to lack of proper guidance, often treat compliance as a one-time checklist rather than an ongoing security process.",
-      "We created Hexafort to bridge this gap, unifying posture management, risk mitigation, and real-time decision making. Our platform blends AI-driven risk intelligence, real-time security monitoring, and automated compliance management to help businesses stay both compliant and truly secure.",
-      "At Hexafort, we position ourselves as a next-generation cybersecurity platform that bridges the gap between feasibility and action. While traditional tools focus on detection, Hexafort goes further – offering intelligent cloud-native remediation and strategic insights tailored for modern hybrid environments.",
-      "In a market crowded with tools that alert, we stand out by empowering teams to act – with speed, precision, and context. Hexafort isn't just another security tool – it's the strategic core of secure operations."
+      "We created ComplianceHub to bridge this gap, unifying posture management, risk mitigation, and real-time decision making. Our platform blends AI-driven risk intelligence, real-time security monitoring, and automated compliance management to help businesses stay both compliant and truly secure.",
+      "At ComplianceHub, we position ourselves as a next-generation cybersecurity platform that bridges the gap between feasibility and action. While traditional tools focus on detection, ComplianceHub goes further – offering intelligent cloud-native remediation and strategic insights tailored for modern hybrid environments.",
+      "In a market crowded with tools that alert, we stand out by empowering teams to act – with speed, precision, and context. ComplianceHub isn't just another security tool – it's the strategic core of secure operations."
     ]
   },
 
@@ -111,10 +111,10 @@ const aboutUsData = {
   impact: {
     title: "Our Impact & Legacy",
     paragraphs: [
-      "We want Hexafort to be remembered as the platform that transformed security from a compliance necessity to a business advantage, making trust and resilience foundational to every organization's success.",
+      "We want ComplianceHub to be remembered as the platform that transformed security from a compliance necessity to a business advantage, making trust and resilience foundational to every organization's success.",
       "Our aim is to become the industry standard for proactive security automation and risk management, helping businesses thrive securely in an increasingly complex digital world.",
-      "In 10 years, we see Hexafort as the dominant market leader for AI-powered, security-first compliance automation globally, trusted by enterprises and startups alike.",
-      "We want to be known for making compliance effortless, security proactive, and AI governance seamless, ensuring businesses stay ahead of threats without unnecessary complexity. As our customers say, 'We don't just comply—we secure and lead with Hexafort.'"
+      "In 10 years, we see ComplianceHub as the dominant market leader for AI-powered, security-first compliance automation globally, trusted by enterprises and startups alike.",
+      "We want to be known for making compliance effortless, security proactive, and AI governance seamless, ensuring businesses stay ahead of threats without unnecessary complexity. As our customers say, 'We don't just comply—we secure and lead with ComplianceHub.'"
     ]
   }
 };

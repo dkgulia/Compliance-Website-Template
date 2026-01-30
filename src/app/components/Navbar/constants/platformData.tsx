@@ -21,7 +21,7 @@ import {
   HOME,
   RISK_MANAGEMENT,
   GRC_TOOL,
-  HEXAFORT_SECURE,
+  PLATFORM,
   CLOUD_SECURITY_POSTURE_MANAGEMENT,
   THIRD_PARTY_RISK_MANAGEMENT,
   VULNERABILITY_ASSESSMENT,
@@ -58,10 +58,10 @@ export const platformFeatures: PlatformFeature[] = [
     href: GRC_TOOL,
   },
   {
-    title: 'Hexafort Secure',
+    title: 'ComplianceHub Platform',
     description: 'Comprehensive security solution for your enterprise',
     icon: <ShieldIcon />,
-    href: HEXAFORT_SECURE,
+    href: PLATFORM,
   },
   {
     title: 'Cloud Security Posture Management',
@@ -111,7 +111,7 @@ export const platformFeatures: PlatformFeature[] = [
 
 export const companySizeOptions = [
   {
-    title: 'Hexafort For Startups',
+    title: 'ComplianceHub For Startups',
     description: 'Fast track compliance with ready tools',
     href: SOLUTIONS_FOR_STARTUPS,
     icon: <StorefrontIcon />,

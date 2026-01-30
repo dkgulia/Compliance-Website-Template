@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import ctaSectionStyle from '../styles/ctaSectionStyle';
 import { evidenceCollectionData } from '../constants/evidenceCollectionData';
 import { useRouter } from 'next/navigation';

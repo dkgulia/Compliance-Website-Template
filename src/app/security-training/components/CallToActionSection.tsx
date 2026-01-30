@@ -6,7 +6,7 @@ import { securityTrainingData } from '../constants/securityTrainingData';
 import theme from '../../../theme';
 import Image from 'next/image';
 import { ArrowForward, CheckCircle } from '@mui/icons-material';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 import securityTrainingSetup from '../images/bookDemo.png';
 import ctaStyles from '../styles/callToActionSectionStyles'
 const CallToActionSection = () => {

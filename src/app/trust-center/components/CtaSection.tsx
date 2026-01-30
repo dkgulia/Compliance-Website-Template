@@ -9,14 +9,14 @@ import styles from '../styles/ctaSectionStyle';
 import { trustCenterPageData } from '../constants/trustCenterPageData';
 import { useRouter } from 'next/navigation';
 import dualHexImage from '../images/bookDemo.png';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 
 const CtaSection: React.FC = () => {
 	const data = trustCenterPageData.sections.cta;
 	const router = useRouter();
 
 	const handleRedirect = () => {
-		router.push('/hexafort-secure');
+		router.push('/platform');
 	};
 
 	return (

@@ -1,6 +1,6 @@
 import { Theme } from '@mui/material';
 
-const createHowHexafortHelpsStyle = (theme: Theme) => ({
+const createHowComplianceHubHelpsStyle = (theme: Theme) => ({
  section: {
    padding: { xs: '1rem 0.5rem', md: '4rem 2rem' },
    background: theme.palette.background.default,
@@ -67,4 +67,4 @@ const createHowHexafortHelpsStyle = (theme: Theme) => ({
  },
 });
 
-export default createHowHexafortHelpsStyle;
+export default createHowComplianceHubHelpsStyle;

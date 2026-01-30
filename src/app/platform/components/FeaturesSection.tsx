@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import featuresSectionStyle from '../styles/featuresSectionStyle';
-import { hexafortSecureData } from '../constants/hexafortSecureData';
+import { platformData } from '../constants/platformData';
 import Image from 'next/image';
 import step1Image from '../images/Dashboard Interface with Security Icons.png';
 import step2Image from '../images/AI Automation and Suggestions Icon.png';
@@ -12,7 +12,7 @@ import step4Image from '../images/Grid and Protection in Teal.png';
 const stepImages = [step1Image, step2Image, step3Image, step4Image];
 
 const FeaturesSection: React.FC = () => {
- const { features } = hexafortSecureData;
+ const { features } = platformData;
 
  return (
    <Box sx={featuresSectionStyle.section}>

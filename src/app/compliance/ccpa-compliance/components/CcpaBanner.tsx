@@ -22,7 +22,7 @@ const CcpaBookDemo = () => {
             Take control of your CCPA compliance journey.
           </Typography>
           <Typography variant="body1" sx={ccpaCtaBannerStyles.description}>
-            Get in touch to discover how HexaFort can streamline your CCPA compliance process and help protect consumer data while managing privacy requirements.
+            Get in touch to discover how ComplianceHub can streamline your CCPA compliance process and help protect consumer data while managing privacy requirements.
           </Typography>
           <Button
             variant="contained"

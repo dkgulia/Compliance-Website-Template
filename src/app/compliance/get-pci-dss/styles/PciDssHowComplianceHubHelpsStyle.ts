@@ -1,7 +1,7 @@
 import theme from '../../../../theme';
 import { monoTextStyle } from '../../../../theme';
 
-const PciDssHowHexafortHelpsStyle = {
+const PciDssHowComplianceHubHelpsStyle = {
   box: {
     paddingTop: { sm: '1.5rem', xs: '1rem' },
     paddingBottom: { sm: '2rem', xs: '1.5rem',md:'3rem' },
@@ -73,4 +73,4 @@ const PciDssHowHexafortHelpsStyle = {
   },
 };
 
-export default PciDssHowHexafortHelpsStyle;
+export default PciDssHowComplianceHubHelpsStyle;

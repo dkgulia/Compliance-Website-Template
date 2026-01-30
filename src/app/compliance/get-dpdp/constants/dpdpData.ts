@@ -65,10 +65,10 @@ interface DpdpHubItem {
 }
 
 const dpdpData = {
-  pageTitle: "HexaFort for India DPDP | Close Privacy Gaps Before They Cost Crores",
+  pageTitle: "ComplianceHub for India DPDP | Close Privacy Gaps Before They Cost Crores",
   pageSubTitle: "Granular consent • Breach-alert playbooks • Real-time penalty dashboard",
   pageDescription: [
-    "HexaFort helps data-driven businesses comply with India's Digital Personal Data Protection Act (2023) and Draft Rules 2025. Import data flows, surface consent gaps, automate breach reporting, and export audit-ready evidence—without spreadsheet bloat or project overruns."
+    "ComplianceHub helps data-driven businesses comply with India's Digital Personal Data Protection Act (2023) and Draft Rules 2025. Import data flows, surface consent gaps, automate breach reporting, and export audit-ready evidence—without spreadsheet bloat or project overruns."
   ],
   keywords: [
     "DPDP compliance software",
@@ -85,7 +85,7 @@ const dpdpData = {
     hero: {
       title: "Trim DPDP Audit Prep from Weeks to Hours",
       subtitle: "Find and fix consent, breach, and children's-data gaps—fast.",
-      description: "HexaFort's automated control matrix shows exactly where you stand, assigns owners, and tracks evidence in real time so finance, legal, and engineering stay aligned.",
+      description: "ComplianceHub's automated control matrix shows exactly where you stand, assigns owners, and tracks evidence in real time so finance, legal, and engineering stay aligned.",
       highlightText: "Compliance, Automated",
       formFields: [
         { label: "Name", type: "text", placeholder: "Aditi Verma" },
@@ -149,7 +149,7 @@ const dpdpData = {
     },
 
     screenshots: {
-      title: "HexaFort in Action",
+      title: "ComplianceHub in Action",
       subtitle: "See how our platform streamlines DPDP compliance",
       items: [
         {
@@ -189,7 +189,7 @@ const dpdpData = {
     callToAction: {
       title: "See Your DPDP Score Today",
       subtitle: "Take the first step toward comprehensive compliance",
-      description: "Book a 15-minute live demo and watch HexaFort surface your top privacy risks.",
+      description: "Book a 15-minute live demo and watch ComplianceHub surface your top privacy risks.",
       ctaText: "Schedule Demo"
     },
 
@@ -220,8 +220,8 @@ const dpdpData = {
       ]
     },
 
-    howHexafortHelps: {
-      title: "How Hexafort Helps You Achieve DPDP Compliance",
+    howComplianceHubHelps: {
+      title: "How ComplianceHub Helps You Achieve DPDP Compliance",
       subtitle: "Our structured approach streamlines complex DPDP mandates, ensuring personal data protection.",
       steps: [
         {
@@ -284,15 +284,15 @@ const dpdpData = {
           answer: "Organisations processing high-volume or sensitive data, or posing elevated risk to individuals or national interest, face extra duties."
         },
         {
-          question: "How does HexaFort handle 22-language consent?",
+          question: "How does ComplianceHub handle 22-language consent?",
           answer: "Built-in templates generate notices and capture affirmative consent in every Eighth-Schedule language."
         },
         {
-          question: "Can HexaFort manage children's-data safeguards?",
+          question: "Can ComplianceHub manage children's-data safeguards?",
           answer: "Yes—parental-consent flows and policy checks block behavioural ads targeting minors."
         },
         {
-          question: "Does HexaFort automate breach notifications?",
+          question: "Does ComplianceHub automate breach notifications?",
           answer: "A pre-configured playbook drafts and dispatches Board and user notices within required timelines."
         },
         {

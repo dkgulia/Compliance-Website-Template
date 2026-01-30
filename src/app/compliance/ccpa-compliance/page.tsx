@@ -11,9 +11,9 @@ import CcpaRightsSection from './components/CcpaRightsSection';
 import BookADemo from '../components/BookADemo';
 
 export const metadata: Metadata = {
-  title: 'CCPA Compliance | HexaFort',
+  title: 'CCPA Compliance | ComplianceHub',
   description:
-    'Comply with the California Consumer Privacy Act (CCPA) by leveraging HexaFort automation to handle DSARs, opt-outs, and data mapping.',
+    'Comply with the California Consumer Privacy Act (CCPA) by leveraging ComplianceHub automation to handle DSARs, opt-outs, and data mapping.',
   keywords: ['ccpa', 'california consumer privacy act', 'compliance', 'privacy', 'dsar', 'data protection'],
 };
 

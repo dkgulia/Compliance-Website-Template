@@ -6,14 +6,14 @@ import {
 } from '@mui/icons-material';
 
 export const evidenceCollectionData = {
-	pageTitle: 'Automated Evidence Collection | Hexafort',
+	pageTitle: 'Automated Evidence Collection | ComplianceHub',
 	pageDescription:
-		'Automate compliance evidence collection for SOC 2, ISO 27001, GDPR and more with Hexafort. Continuous monitoring and real-time proof for all your audit needs.',
-	pageMetaTitle: 'Hexafort Automated Evidence Collection | Compliance Proof on Autopilot',
+		'Automate compliance evidence collection for SOC 2, ISO 27001, GDPR and more with ComplianceHub. Continuous monitoring and real-time proof for all your audit needs.',
+	pageMetaTitle: 'ComplianceHub Automated Evidence Collection | Compliance Proof on Autopilot',
 	pageMetaSubTitle: 'Gather, map, and monitor audit evidence—without spreadsheets or manual uploads.',
 	pageMetaDescription: [
 		'Automated Evidence Collection – Compliance Made Effortless',
-		"Collecting audit evidence shouldn't drain resources or slow projects. Hexafort's Automated Evidence Collection pulls the right artifacts from your tech stack in real time, maps them to every control, and keeps you perpetually audit-ready.",
+		"Collecting audit evidence shouldn't drain resources or slow projects. ComplianceHub's Automated Evidence Collection pulls the right artifacts from your tech stack in real time, maps them to every control, and keeps you perpetually audit-ready.",
 	],
 	keywords: [
 		'automated evidence collection',
@@ -27,12 +27,12 @@ export const evidenceCollectionData = {
 		title: 'Automate Every Evidence Pull',
 		subtitle: 'Real-time proof for SOC 2, ISO 27001, GDPR, and more.',
 		description: [
-			'Hexafort connects to your cloud, code, and identity providers to fetch audit artifacts continuously—so you never scramble before an audit again.',
+			'ComplianceHub connects to your cloud, code, and identity providers to fetch audit artifacts continuously—so you never scramble before an audit again.',
 		],
 		ctaText: 'Book Your Demo',
 	},
 	benefits: {
-		title: 'Why Hexafort Evidence Collection?',
+		title: 'Why ComplianceHub Evidence Collection?',
 		subtitle: '',
 		features: [
 			{
@@ -68,7 +68,7 @@ export const evidenceCollectionData = {
 			},
 			{
 				heading: 'Collect',
-				description: 'Hexafort fetches logs, configs, user lists, and security settings automatically.',
+				description: 'ComplianceHub fetches logs, configs, user lists, and security settings automatically.',
 				imageAlt: 'API pipes streaming artifacts into dashboard',
 			},
 			{
@@ -86,7 +86,7 @@ export const evidenceCollectionData = {
 	infoSection: {
 		title: 'Instant Gap Flags',
 		description: [
-			"If a required artifact can't be fetched or drifts out of compliance, Hexafort flags it instantly—turning blind spots into actionable tasks.",
+			"If a required artifact can't be fetched or drifts out of compliance, ComplianceHub flags it instantly—turning blind spots into actionable tasks.",
 		],
 		imageAlt: 'Red badge on missing evidence row in table',
 	},
@@ -110,7 +110,7 @@ export const evidenceCollectionData = {
 				answer: 'Continuously—most integrations sync every few minutes, ensuring real-time accuracy.',
 			},
 			{
-				question: 'Does Hexafort store my credentials?',
+				question: 'Does ComplianceHub store my credentials?',
 				answer: 'No. We use secure, short-lived tokens and encrypt all data in transit and at rest.',
 			},
 			{
@@ -124,7 +124,7 @@ export const evidenceCollectionData = {
 			},
 			{
 				question: 'Is manual upload still possible?',
-				answer: "Absolutely. Drag-and-drop any artifact Hexafort can't pull automatically.",
+				answer: "Absolutely. Drag-and-drop any artifact ComplianceHub can't pull automatically.",
 			},
 		],
 	},

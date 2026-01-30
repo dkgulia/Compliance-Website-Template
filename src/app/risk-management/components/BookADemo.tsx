@@ -7,7 +7,7 @@ import Image from 'next/image';
 import bookADemoStyle from '../styles/bookADemoStyle';
 import { useRouter } from 'next/navigation';
 import dashboardPreview from '../images/risk-cta.png';
-import Button from '../../Button/HexaFortButton';
+import Button from '../../Button/ComplianceHubButton';
 const BookADemo = () => {
 	const router = useRouter();
 	const handleBookDemo = () => {
@@ -29,7 +29,7 @@ const BookADemo = () => {
 
 			<Box sx={bookADemoStyle.contentWrapper}>
 				<Box sx={bookADemoStyle.textContent}>
-					<Typography sx={bookADemoStyle.ctaTitle}>See HexaFort Risk Management Live</Typography>
+					<Typography sx={bookADemoStyle.ctaTitle}>See ComplianceHub Risk Management Live</Typography>
 					<Typography sx={bookADemoStyle.description}>
 						Get a comprehensive risk assessment and see how our platform can transform your security posture.
 					</Typography>

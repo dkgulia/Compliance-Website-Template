@@ -23,11 +23,9 @@ import { useRouter, usePathname } from 'next/navigation';
 import AboutMenu from './Menus/AboutMenu/page';
 import ComplianceMenu from './Menus/Compliance/components/complianceMenu';
 import PlatformMenu from './Menus/PlatformMenu/page';
-import Image from 'next/image';
 import { WORKSTATION, TALK_TO_AN_EXPERT } from '../../constants/routes';
 import styles from './appBarB2BStyles';
-import LogoImage from './Images/dual-hex-white.png';
-import HexaButton from '../../Button/HexaFortButton';
+import ComplianceHubBtn from '../../Button/ComplianceHubButton';
 
 type MenuType = 'solutions' | 'industries' | 'platform' | 'compliance' | 'about' | null;
 type SelectedItemType = 'item1' | 'item2' | 'item3' | 'item4';
@@ -175,7 +173,8 @@ const AppBarB2B: React.FC = () => {
 				<Toolbar sx={styles.toolbar}>
 					<Box sx={styles.navContainer}>
 						<Box sx={styles.logoContainer} onClick={() => navigateTo('/')} style={{ cursor: 'pointer' }}>
-							<Image src={LogoImage} alt="hexafort Logo" width={32} height={32} style={styles.logoImage} priority />
+							{/* eslint-disable-next-line @next/next/no-img-element */}
+							<img src="/images/compliancehub-icon.svg" alt="ComplianceHub Logo" width={36} height={36} style={styles.logoImage} />
 						</Box>
 
 						<Box sx={styles.navItems}>
@@ -240,18 +239,18 @@ const AppBarB2B: React.FC = () => {
 						</Box>
 
 						<Box sx={styles.actionButtons}>
-							<HexaButton
-								onClick={() => window.open('https://cal.com/hexafort-security-advisory/30min', '_blank')}
+							<ComplianceHubBtn
+								onClick={() => window.open('https://cal.com/compliancehub/demo', '_blank')}
 								sx={styles.talkButton}
 							>
 								Book a Demo
-							</HexaButton>
-							<HexaButton
-								onClick={() => (window.location.href = 'https://secure.hexafort.io/login')}
+							</ComplianceHubBtn>
+							<ComplianceHubBtn
+								onClick={() => (window.location.href = '#')}
 								sx={styles.shopButton}
 							>
 								Login
-							</HexaButton>
+							</ComplianceHubBtn>
 						</Box>
 
 						<Box sx={styles.mobileMenuContainer}>
@@ -330,17 +329,17 @@ const AppBarB2B: React.FC = () => {
 						<>
 							<Box sx={styles.mobileMenuHeader}>
 								<Box sx={styles.mobileLogoContainer}>
-									<Typography sx={styles.mobileLogo}>
-										<Image
-											src={LogoImage}
-											alt="hexafort Logo"
-											width={60}
-											height={30}
-											style={styles.mobileLogoImage}
-											priority
-										/>
-									</Typography>
-								</Box>
+								<Typography sx={styles.mobileLogo}>
+									{/* eslint-disable-next-line @next/next/no-img-element */}
+									<img
+										src="/images/compliancehub-icon.svg"
+										alt="ComplianceHub Logo"
+										width={40}
+										height={40}
+										style={styles.mobileLogoImage}
+									/>
+								</Typography>
+							</Box>
 								<Box sx={styles.mobileHeaderActions}>
 									<IconButton onClick={handleMobileMenuClose} sx={styles.closeButton}>
 										<CloseIcon />
@@ -388,18 +387,18 @@ const AppBarB2B: React.FC = () => {
 							</List>
 
 							<Box sx={styles.mobileLoginButtonContainer}>
-								<HexaButton
-									onClick={() => window.open('https://cal.com/hexafort-security-advisory/30min', '_blank')}
+								<ComplianceHubBtn
+									onClick={() => window.open('https://cal.com/compliancehub/demo', '_blank')}
 									sx={styles.talkButton}
 								>
 									Book a Demo
-								</HexaButton>
-								<HexaButton
-									onClick={() => (window.location.href = 'https://secure.hexafort.io/login')}
+								</ComplianceHubBtn>
+								<ComplianceHubBtn
+									onClick={() => (window.location.href = '#')}
 									sx={styles.shopButton}
 								>
 									Login
-								</HexaButton>
+								</ComplianceHubBtn>
 							</Box>
 						</>
 					)}

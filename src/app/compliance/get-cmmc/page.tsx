@@ -23,7 +23,7 @@ const CmmcPage = () => {
 		'@type': 'Product',
 		name: 'CMMC Compliance Services',
 		description: cmmcData.pageDescription.join(' '),
-		brand: 'Hexafort',
+		brand: 'ComplianceHub',
 	};
 
 	return (

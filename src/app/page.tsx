@@ -34,7 +34,7 @@ import { TbAutomation, TbChartInfographic } from "react-icons/tb";
 import { FaBolt } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Hexafort Secure",
+  title: "ComplianceHub Secure",
   description: "...",
 };
 
@@ -49,7 +49,7 @@ export default function Home() {
               <div className="md:space-y-4 space-y-1">
                 <div className="inline-flex items-center font-mono text-xs sm:text-sm text-teal-600 tracking-wider uppercase rounded-lg px-2 gap-2">
                   <HiOutlineSparkles />
-                  <p>Introducing Hexafort Secure</p>
+                  <p>Introducing ComplianceHub Secure</p>
                 </div>
                 <h1 className="text-base sm:text-xl md:text-2xl">
                   Enterprise-grade security management.
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
               <div className="mt-6 sm:mt-8 md:mt-10 w-fit justify-center space-y-2">
                 <p className="text-gray-300 text-base sm:text-lg md:text-xl">
-                  Hexafort Secure is more than just a security solution.
+                  ComplianceHub Secure is more than just a security solution.
                 </p>
                 <p className="text-gray-300 text-xs sm:text-base md:text-lg">
                   It&apos;s a trusted partner that helps you navigate the
@@ -75,7 +75,7 @@ export default function Home() {
               </div>
               <div className="mt-6 sm:mt-8 md:mt-10 items-center">
                 <a
-                  href="https://cal.com/hexafort-security-advisory/30min"
+                  href="https://cal.com/compliancehub/demo"
                   target="_blank"
                   className="inline-flex px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 bg-teal-800 hover:bg-teal-700 text-white text-sm rounded-lg transition border border-teal-600"
                 >
@@ -361,12 +361,12 @@ export default function Home() {
             </span>
             <div className="text-gray-500 border w-4 h-0.5 border-gray-200 dark:border-gray-700 dark:text-gray-400 rounded-lg"></div>
             <span className="text-sm rounded-lg px-4 py-1 border-neutral-700 text-gray-500 bg-neutral-800">
-              Let Hexafort handle this for you
+              Let ComplianceHub handle this for you
             </span>
             <div className="text-gray-500 border w-4 h-0.5 border-gray-200 dark:border-gray-700 dark:text-gray-400 rounded-lg"></div>
             <span className="text-sm cursor-pointer rounded-lg px-4 py-1 bg-teal-800 hover:bg-teal-700 transition-all border border-teal-600">
               <a
-                href="https://cal.com/hexafort-security-advisory/30min"
+                href="https://cal.com/compliancehub/demo"
                 target="_blank"
               >
                 Talk to us now
@@ -384,11 +384,11 @@ export default function Home() {
               TOWARDS CYBER RESILIENCE
             </p>
             <p className="md:text-3xl text-2xl text-center">
-              One platform. Enterprise-grade. Hexafort Secure.
+              One platform. Enterprise-grade. ComplianceHub Secure.
             </p>
             <p className="text-gray-500 text-center">
               Manage your end-to-end security posture from a single platform,
-              Hexafort Secure
+              ComplianceHub Secure
             </p>
           </div>
           <div className="grid md:grid-cols-2 md:gap-10">
@@ -628,7 +628,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row px-6 md:px-48 md:mt-40 space-x-8 items-center mt-14 2xl:px-72">
           <div className="flex flex-col md:flex-1 justify-center space-y-2">
             <p className="font-mono text-sm text-teal-600 tracking-wider text-center md:text-left">
-              HOW HEXAFORT OPERATES
+              HOW HEXASHIELD OPERATES
             </p>
             <p className="md:text-3xl text-2xl text-center md:text-left">
               Clear Steps, No Surprises
@@ -660,7 +660,7 @@ export default function Home() {
                 <div>
                   <p>Implementation</p>
                   <p className="text-sm text-gray-500">
-                    We implement Hexafort Secure, tailoring the solution to meet
+                    We implement ComplianceHub Secure, tailoring the solution to meet
                     your specific security needs and compliance requirements.
                   </p>
                 </div>
@@ -701,7 +701,7 @@ export default function Home() {
         <div className="flex flex-col px-6 md:px-48 md:mt-40 space-y-8 items-center mt-14 2xl:px-72">
           <div className="flex flex-col items-center justify-center space-y-2">
             <p className="font-mono text-sm text-teal-600 tracking-wider text-center">
-              BUILD WITH HEXAFORT
+              BUILD WITH HEXASHIELD
             </p>
             <p className="md:text-3xl text-2xl text-center">
               We are your Cyber Security Ally
@@ -823,7 +823,7 @@ export default function Home() {
                 <span>Footprint</span>
               </div>
               <p className="text-sm text-gray-400">
-                Hexafort is an emerging global leader in enterprise security,
+                ComplianceHub is an emerging global leader in enterprise security,
                 with a strong presence in the North American region , Europe ,
                 UK , Middle East , India , Singapore , Vietnam and Malaysia.
               </p>
@@ -901,7 +901,7 @@ export default function Home() {
               <p className="text-sm italic text-gray-300">
                 &quot;As the CFO of Dartle, a SaaS analytics platform
                 revolutionizing sports academies, data security and compliance
-                are critical to our operations. Hexafort has been a game-changer
+                are critical to our operations. ComplianceHub has been a game-changer
                 in ensuring our financial and athlete performance data remain
                 secure and compliant with industry standards. Their robust
                 security infrastructure and proactive threat management have
@@ -919,7 +919,7 @@ export default function Home() {
               </p>
               <p className="text-sm italic text-gray-300">
                 &quot;Team was swift and helpful with the communication. Got the
-                certifications done, and appreciate the effort Hexafort team has
+                certifications done, and appreciate the effort ComplianceHub team has
                 put. User friendly pricing and I recommend it.&quot;
               </p>
               <p className="text-sm text-gray-500 text-right">
@@ -934,12 +934,12 @@ export default function Home() {
                 <FaQuoteLeft />
               </p>
               <p className="text-sm italic text-gray-300">
-                &quot;As a virtual CISO and DPO I have relied on Hexafort to
+                &quot;As a virtual CISO and DPO I have relied on ComplianceHub to
                 deliver support with ISO 27001 compliance. They completed a very
                 detailed and useful internal audit prior to the external
                 certification audit which ensured we had zero findings on the
-                external certification audit report. The Hexafort team have a
-                number of SMEs and nothing is too much trouble. I find Hexafort
+                external certification audit report. The ComplianceHub team have a
+                number of SMEs and nothing is too much trouble. I find ComplianceHub
                 a pleasure to work with and am looking forward to working with
                 them further on other projects.&quot;
               </p>
@@ -955,7 +955,7 @@ export default function Home() {
                 <FaQuoteLeft />
               </p>
               <p className="text-sm italic text-gray-300">
-                &quot;In a short span of time, the Hexafort team really
+                &quot;In a short span of time, the ComplianceHub team really
                 understood the requirements of our organization and provided
                 excellent support and assistance. The team&apos;s proactive
                 approach, responsiveness, and dedication to customer
@@ -975,7 +975,7 @@ export default function Home() {
                 <FaQuoteLeft />
               </p>
               <p className="text-sm italic text-gray-300">
-                &quot;Hexafort&apos;s expertise in cloud security and risk
+                &quot;ComplianceHub&apos;s expertise in cloud security and risk
                 management has not only streamlined our compliance processes but
                 also safeguarded our platform against potential cyber threats.
                 Their team is responsive, knowledgeable, and committed to

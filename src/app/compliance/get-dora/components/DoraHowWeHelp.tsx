@@ -54,10 +54,10 @@ export default function DoraHowWeHelp() {
    <Box sx={doraHowWeHelpStyle.container}>
      <Container sx={doraHowWeHelpStyle.innerContainer}>
        <Typography variant="h4" sx={doraHowWeHelpStyle.title}>
-         How Hexafort Can Help with DORA Implementation
+         How ComplianceHub Can Help with DORA Implementation
        </Typography>
        <Typography variant="body1" sx={doraHowWeHelpStyle.subtitle}>
-         From risk assessments to full-scale incident response, Hexafort has you covered for all aspects of DORA
+         From risk assessments to full-scale incident response, ComplianceHub has you covered for all aspects of DORA
          compliance and beyond.
        </Typography>
 

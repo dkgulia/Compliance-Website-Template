@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64">
+  <defs>
+    <!-- Gradient for main shield -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#115e59;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow effect -->
+    <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      @keyframes rotate {
+        from { transform: rotate(0deg); transform-origin: 32px 32px; }
+        to { transform: rotate(360deg); transform-origin: 32px 32px; }
+      }
+      .orbit { animation: rotate 20s linear infinite; }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- ICON SECTION -->
+  <g transform="translate(0, 0)">
+    <!-- Outer orbit ring -->
+    <circle class="orbit" cx="32" cy="32" r="28" fill="none" stroke="#115e59" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+
+    <!-- Main shield shape -->
+    <path d="M32 6 L50 15 L50 32 C50 43 43 50 32 56 C21 50 14 43 14 32 L14 15 Z"
+          fill="url(#shieldGrad)"
+          filter="url(#glowEffect)"
+          opacity="0.9"/>
+
+    <!-- Hub center circle -->
+    <circle cx="32" cy="29" r="7" fill="#0d4744" stroke="#14b8a6" stroke-width="1.5"/>
+
+    <!-- Checkmark inside hub -->
+    <path class="pulse" d="M28 29 L31 32 L37 25"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- Connection nodes -->
+    <circle class="pulse" cx="32" cy="14" r="2" fill="#14b8a6"/>
+    <circle class="pulse" cx="43" cy="24" r="1.5" fill="#14b8a6" style="animation-delay: 0.4s;"/>
+    <circle class="pulse" cx="21" cy="24" r="1.5" fill="#14b8a6" style="animation-delay: 0.8s;"/>
+  </g>
+
+  <!-- TEXT SECTION -->
+  <g transform="translate(68, 0)">
+    <!-- ComplianceHub text -->
+    <text x="0" y="38" font-family="Figtree, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="600" fill="url(#textGradient)">
+      <tspan fill="#ffffff">Compliance</tspan><tspan fill="#14b8a6">Hub</tspan>
+    </text>
+
+    <!-- Subtle underline accent -->
+    <rect x="0" y="46" width="140" height="1" fill="#115e59" opacity="0.4"/>
+    <rect x="0" y="46" width="40" height="1" fill="#14b8a6" opacity="0.8"/>
+  </g>
+</svg>

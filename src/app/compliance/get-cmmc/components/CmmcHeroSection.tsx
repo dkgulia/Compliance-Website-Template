@@ -43,7 +43,7 @@ const CmmcHeroSection: React.FC = () => {
 
           <Typography sx={heroSectionStyle.description}>
             Set your target level (Foundational 1, Advanced 2, or Expert 3), let
-            HexaFort surface every gap, and generate evidence packs ready for
+            ComplianceHub surface every gap, and generate evidence packs ready for
             your assessor.
           </Typography>
 
